@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Date</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/date_rb.html.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/date.rb">lib/date.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Object.html">Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000096">::between</a></li>
+					
+					<li><a href="#M000098">#age_days</a></li>
+					
+					<li><a href="#M000097">#age_years</a></li>
+					
+					<li><a href="#M000093">#to_sql</a></li>
+					
+					<li><a href="#M000094">#weekday?</a></li>
+					
+					<li><a href="#M000095">#weekend?</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./README.html">README</a></li>
+				
+					<li class="file"><a href="./ramp_gemspec.html">ramp.gemspec</a></li>
+				
+					<li class="file"><a href="./test/unit/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
+				
+					<li class="file"><a href="./test/unit/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
+				
+					<li class="file"><a href="./webget_ruby_ramp_sha512_txt.html">webget_ruby_ramp.sha512.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./EnumerableTest.html">EnumerableTest</a></li>
+				
+					<li><a href="./EnumerableTest/Mock.html">EnumerableTest::Mock</a></li>
+				
+					<li><a href="./FooModule.html">FooModule</a></li>
+				
+					<li><a href="./FooModule/FooClass.html">FooModule::FooClass</a></li>
+				
+					<li><a href="./Array.html">Array</a></li>
+				
+					<li><a href="./ArrayTest.html">ArrayTest</a></li>
+				
+					<li><a href="./Date.html">Date</a></li>
+				
+					<li><a href="./DateTest.html">DateTest</a></li>
+				
+					<li><a href="./Enumerable.html">Enumerable</a></li>
+				
+					<li><a href="./Hash.html">Hash</a></li>
+				
+					<li><a href="./HashTest.html">HashTest</a></li>
+				
+					<li><a href="./Kernel.html">Kernel</a></li>
+				
+					<li><a href="./KernelTest.html">KernelTest</a></li>
+				
+					<li><a href="./NilClass.html">NilClass</a></li>
+				
+					<li><a href="./NilTest.html">NilTest</a></li>
+				
+					<li><a href="./Numeric.html">Numeric</a></li>
+				
+					<li><a href="./NumericTest.html">NumericTest</a></li>
+				
+					<li><a href="./Object.html">Object</a></li>
+				
+					<li><a href="./ObjectTest.html">ObjectTest</a></li>
+				
+					<li><a href="./Process.html">Process</a></li>
+				
+					<li><a href="./ProcessTest.html">ProcessTest</a></li>
+				
+					<li><a href="./RampTest.html">RampTest</a></li>
+				
+					<li><a href="./String.html">String</a></li>
+				
+					<li><a href="./StringTest.html">StringTest</a></li>
+				
+					<li><a href="./Time.html">Time</a></li>
+				
+					<li><a href="./TimeTest.html">TimeTest</a></li>
+				
+					<li><a href="./YAML.html">YAML</a></li>
+				
+					<li><a href="./YAMLTest.html">YAMLTest</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Date</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="between-method" class="method-detail ">
+				<a name="M000096"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">between</span><span
+						class="method-args">(min,max)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return a random date between min &amp; max
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="between-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/date.rb, line 33</span>
+33:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">between</span>(<span class="ruby-identifier">min</span>,<span class="ruby-identifier">max</span>)
+34:     <span class="ruby-identifier">min</span><span class="ruby-operator">+</span><span class="ruby-identifier">rand</span>(<span class="ruby-identifier">max</span><span class="ruby-operator">-</span><span class="ruby-identifier">min</span>)
+35:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="age-days-method" class="method-detail ">
+				<a name="M000098"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">age_days</span><span
+						class="method-args">(compare_to_date=Date.today)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the age in days for a given date.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="age-days-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/date.rb, line 67</span>
+67:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">age_days</span>(<span class="ruby-identifier">compare_to_date</span>=<span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>)
+68:     (<span class="ruby-identifier">compare_to_date</span><span class="ruby-operator">-</span><span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">to_i</span>
+69:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="age-years-method" class="method-detail ">
+				<a name="M000097"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">age_years</span><span
+						class="method-args">(compare_date=Date.today)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the age in years for a given date.
+</p>
+<h2>Example</h2>
+<pre>
+  birthdate=Date.new(1980,10,31)
+  birthdate.age_years =&gt; 28 (where 28 is the correct age for today)
+</pre>
+<h2>Example of custom dates</h2>
+<pre>
+  birthdate=Date.new(1980,10,31)
+
+  valentines = Date.new(2008,02,14)
+  birthdate.age_years(valentines) =&gt; 27  # before the birthday
+
+  halloween = Date.new(2008,10,31)
+  birthdate.age_years(halloween) =&gt; 28   # on the birthday
+
+  new_years_eve = Date.new(2008,12,31)
+  birthdate.age_years(new_years_eve) =&gt; 28  # after the birthday
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="age-years-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/date.rb, line 58</span>
+58:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">age_years</span>(<span class="ruby-identifier">compare_date</span>=<span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>)
+59:     <span class="ruby-identifier">age</span>=<span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">year</span><span class="ruby-operator">-</span><span class="ruby-identifier">year</span>
+60:     <span class="ruby-identifier">age</span><span class="ruby-operator">-=</span><span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">month</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">month</span> <span class="ruby-keyword kw">or</span> (<span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">month</span><span class="ruby-operator">==</span><span class="ruby-identifier">month</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">day</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">day</span>)
+61:     <span class="ruby-identifier">age</span>
+62:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="to-sql-method" class="method-detail ">
+				<a name="M000093"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_sql</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return date in a sql format: YYYY-MM-DD
+</p>
+<p>
+Example:
+</p>
+<pre>
+ d=Date.today
+ d.to_sql =&gt; &quot;2007-12-31&quot;
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="to-sql-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/date.rb, line 12</span>
+12:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_sql</span>
+13:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_time</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-value str">&quot;%Y-%m-%d&quot;</span>)
+14:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="weekday--method" class="method-detail ">
+				<a name="M000094"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">weekday?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return true if the date is a weekday (Mon/Tue/Wed/Thu/Fri)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="weekday--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/date.rb, line 19</span>
+19:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">weekday?</span>
+20:     <span class="ruby-identifier">wday</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">wday</span><span class="ruby-operator">&lt;</span><span class="ruby-value">6</span>
+21:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="weekend--method" class="method-detail ">
+				<a name="M000095"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">weekend?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return true if the date is a weekend (Sat/Sun)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="weekend--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/date.rb, line 26</span>
+26:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">weekend?</span>
+27:     <span class="ruby-identifier">wday</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">wday</span><span class="ruby-operator">==</span><span class="ruby-value">6</span>
+28:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+</body>
+</html>
+
