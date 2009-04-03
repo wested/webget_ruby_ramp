@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>test_increment (StringTest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 33</span>
+33:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_increment</span>
+34:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'5'</span>,<span class="ruby-value str">'4'</span>.<span class="ruby-identifier">increment</span>,               <span class="ruby-value str">'number is entire string'</span>)
+35:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'5foo'</span>,<span class="ruby-value str">'4foo'</span>.<span class="ruby-identifier">increment</span>,         <span class="ruby-value str">'number is leftmost'</span>)
+36:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo5'</span>,<span class="ruby-value str">'foo4'</span>.<span class="ruby-identifier">increment</span>,         <span class="ruby-value str">'number is rightmost'</span>)
+37:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo10'</span>,<span class="ruby-value str">'foo9'</span>.<span class="ruby-identifier">increment</span>,        <span class="ruby-value str">'number is rightmost with carry'</span>)
+38:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo5bar'</span>,<span class="ruby-value str">'foo4bar'</span>.<span class="ruby-identifier">increment</span>,   <span class="ruby-value str">'number is in then middle'</span>)
+39:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foobar'</span>,<span class="ruby-value str">'foobar'</span>.<span class="ruby-identifier">increment</span>,     <span class="ruby-value str">'no number, so should be unchanged'</span>)
+40:   <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

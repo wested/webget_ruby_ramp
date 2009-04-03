@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!--
+
+    Methods [ramp]
+
+  -->
+<head>
+  <title>Methods [ramp]</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="rdoc-style.css" type="text/css" />
+  <base target="docwin" />
+</head>
+<body>
+<div class="index">
+  <h1 class="section-bar">Methods</h1>
+  <div id="index-entries">
+
+    <a href="classes/Date.html#M000087">age_days (Date)</a><br />
+
+    <a href="classes/Date.html#M000086">age_years (Date)</a><br />
+
+    <a href="classes/Date.html#M000085">between (Date)</a><br />
+
+    <a href="classes/String.html#M000072">capitalize_words (String)</a><br />
+
+    <a href="classes/Enumerable.html#M000096">cat (Enumerable)</a><br />
+
+    <a href="classes/Array.html#M000056">choice (Array)</a><br />
+
+    <a href="classes/Array.html#M000057">choices (Array)</a><br />
+
+    <a href="classes/String.html#M000075">decrement (String)</a><br />
+
+    <a href="classes/Array.html#M000059">divvy (Array)</a><br />
+
+    <a href="classes/Hash.html#M000066">each_value! (Hash)</a><br />
+
+    <a href="classes/Numeric.html#M000063">if (Numeric)</a><br />
+
+    <a href="classes/Numeric.html#M000064">if_not (Numeric)</a><br />
+
+    <a href="classes/Object.html#M000053">in? (Object)</a><br />
+
+    <a href="classes/String.html#M000074">increment (String)</a><br />
+
+    <a href="classes/Array.html#M000061">intersect (Array)</a><br />
+
+    <a href="classes/YAML.html#M000101">load_dir (YAML)</a><br />
+
+    <a href="classes/YAML.html#M000102">load_dir_pairs (YAML)</a><br />
+
+    <a href="classes/Enumerable.html#M000088">map_id (Enumerable)</a><br />
+
+    <a href="classes/Enumerable.html#M000089">map_to_sym (Enumerable)</a><br />
+
+    <a href="classes/Kernel.html#M000103">method_name (Kernel)</a><br />
+
+    <a href="classes/Kernel.html#M000104">method_name_of_caller (Kernel)</a><br />
+
+    <a href="classes/Enumerable.html#M000094">nitems_until (Enumerable)</a><br />
+
+    <a href="classes/Enumerable.html#M000093">nitems_while (Enumerable)</a><br />
+
+    <a href="classes/Enumerable.html#M000095">nitems_with_index (Enumerable)</a><br />
+
+    <a href="classes/String.html#M000079">pred (String)</a><br />
+
+    <a href="classes/String.html#M000080">pred! (String)</a><br />
+
+    <a href="classes/String.html#M000077">prev (String)</a><br />
+
+    <a href="classes/String.html#M000078">prev! (String)</a><br />
+
+    <a href="classes/String.html#M000076">prev_char (String)</a><br />
+
+    <a href="classes/Process.html#M000097">ps (Process)</a><br />
+
+    <a href="classes/Process.html#M000098">ps_hash (Process)</a><br />
+
+    <a href="classes/Process.html#M000099">ps_tdf (Process)</a><br />
+
+    <a href="classes/Process.html#M000100">ps_text (Process)</a><br />
+
+    <a href="classes/HashTest.html#M000048">rollable (HashTest)</a><br />
+
+    <a href="classes/Hash.html#M000068">rolldown (Hash)</a><br />
+
+    <a href="classes/Hash.html#M000069">rollup (Hash)</a><br />
+
+    <a href="classes/Array.html#M000055">rotate! (Array)</a><br />
+
+    <a href="classes/Enumerable.html#M000091">select_until (Enumerable)</a><br />
+
+    <a href="classes/Enumerable.html#M000090">select_while (Enumerable)</a><br />
+
+    <a href="classes/Enumerable.html#M000092">select_with_index (Enumerable)</a><br />
+
+    <a href="classes/Array.html#M000054">size? (Array)</a><br />
+
+    <a href="classes/Hash.html#M000065">size? (Hash)</a><br />
+
+    <a href="classes/NilClass.html#M000081">size? (NilClass)</a><br />
+
+    <a href="classes/Array.html#M000058">slices (Array)</a><br />
+
+    <a href="classes/String.html#M000071">split_tab (String)</a><br />
+
+    <a href="classes/Time.html#M000062">stamp (Time)</a><br />
+
+    <a href="classes/RampTest.html#M000028">test_ (RampTest)</a><br />
+
+    <a href="classes/DateTest.html#M000008">test_age_days (DateTest)</a><br />
+
+    <a href="classes/DateTest.html#M000007">test_age_years (DateTest)</a><br />
+
+    <a href="classes/StringTest.html#M000039">test_capitalize_words (StringTest)</a><br />
+
+    <a href="classes/EnumerableTest.html#M000025">test_cat (EnumerableTest)</a><br />
+
+    <a href="classes/ArrayTest.html#M000031">test_choice (ArrayTest)</a><br />
+
+    <a href="classes/ArrayTest.html#M000032">test_choices (ArrayTest)</a><br />
+
+    <a href="classes/StringTest.html#M000043">test_decrement (StringTest)</a><br />
+
+    <a href="classes/ArrayTest.html#M000034">test_divvy_evenly_divisible (ArrayTest)</a><br />
+
+    <a href="classes/HashTest.html#M000047">test_each_value (HashTest)</a><br />
+
+    <a href="classes/NumericTest.html#M000012">test_if_not_with_false (NumericTest)</a><br />
+
+    <a href="classes/NumericTest.html#M000011">test_if_not_with_true (NumericTest)</a><br />
+
+    <a href="classes/NumericTest.html#M000010">test_if_with_false (NumericTest)</a><br />
+
+    <a href="classes/NumericTest.html#M000009">test_if_with_true (NumericTest)</a><br />
+
+    <a href="classes/ObjectTest.html#M000002">test_in_array (ObjectTest)</a><br />
+
+    <a href="classes/StringTest.html#M000042">test_increment (StringTest)</a><br />
+
+    <a href="classes/ArrayTest.html#M000036">test_intersect (ArrayTest)</a><br />
+
+    <a href="classes/YAMLTest.html#M000003">test_load_dir_pairs (YAMLTest)</a><br />
+
+    <a href="classes/TimeTest.html#M000027">test_log (TimeTest)</a><br />
+
+    <a href="classes/EnumerableTest.html#M000017">test_map_id (EnumerableTest)</a><br />
+
+    <a href="classes/EnumerableTest.html#M000018">test_map_to_sym (EnumerableTest)</a><br />
+
+    <a href="classes/KernelTest.html#M000026">test_method_name (KernelTest)</a><br />
+
+    <a href="classes/EnumerableTest.html#M000023">test_nitems_until (EnumerableTest)</a><br />
+
+    <a href="classes/EnumerableTest.html#M000022">test_nitems_while (EnumerableTest)</a><br />
+
+    <a href="classes/EnumerableTest.html#M000024">test_nitems_with_index (EnumerableTest)</a><br />
+
+    <a href="classes/StringTest.html#M000045">test_prev (StringTest)</a><br />
+
+    <a href="classes/StringTest.html#M000044">test_prev_char (StringTest)</a><br />
+
+    <a href="classes/ProcessTest.html#M000016">test_ps (ProcessTest)</a><br />
+
+    <a href="classes/ProcessTest.html#M000015">test_ps_hash (ProcessTest)</a><br />
+
+    <a href="classes/ProcessTest.html#M000014">test_ps_tdf (ProcessTest)</a><br />
+
+    <a href="classes/ProcessTest.html#M000013">test_ps_text (ProcessTest)</a><br />
+
+    <a href="classes/HashTest.html#M000049">test_rolldown (HashTest)</a><br />
+
+    <a href="classes/HashTest.html#M000050">test_rolldown_with_block (HashTest)</a><br />
+
+    <a href="classes/HashTest.html#M000051">test_rollup (HashTest)</a><br />
+
+    <a href="classes/HashTest.html#M000052">test_rollup_with_block (HashTest)</a><br />
+
+    <a href="classes/ArrayTest.html#M000030">test_rotate (ArrayTest)</a><br />
+
+    <a href="classes/EnumerableTest.html#M000020">test_select_until_condition (EnumerableTest)</a><br />
+
+    <a href="classes/EnumerableTest.html#M000019">test_select_while (EnumerableTest)</a><br />
+
+    <a href="classes/EnumerableTest.html#M000021">test_select_with_index (EnumerableTest)</a><br />
+
+    <a href="classes/HashTest.html#M000046">test_size (HashTest)</a><br />
+
+    <a href="classes/ArrayTest.html#M000029">test_size (ArrayTest)</a><br />
+
+    <a href="classes/NilTest.html#M000001">test_size (NilTest)</a><br />
+
+    <a href="classes/ArrayTest.html#M000033">test_slices (ArrayTest)</a><br />
+
+    <a href="classes/StringTest.html#M000038">test_split_tab (StringTest)</a><br />
+
+    <a href="classes/StringTest.html#M000040">test_to_class (StringTest)</a><br />
+
+    <a href="classes/StringTest.html#M000041">test_to_class_nested (StringTest)</a><br />
+
+    <a href="classes/DateTest.html#M000006">test_to_sql (DateTest)</a><br />
+
+    <a href="classes/ArrayTest.html#M000035">test_union (ArrayTest)</a><br />
+
+    <a href="classes/DateTest.html#M000004">test_weekday (DateTest)</a><br />
+
+    <a href="classes/DateTest.html#M000005">test_weekend (DateTest)</a><br />
+
+    <a href="classes/StringTest.html#M000037">test_words (StringTest)</a><br />
+
+    <a href="classes/String.html#M000073">to_class (String)</a><br />
+
+    <a href="classes/Date.html#M000082">to_sql (Date)</a><br />
+
+    <a href="classes/Hash.html#M000067">to_yaml_sort (Hash)</a><br />
+
+    <a href="classes/Array.html#M000060">union (Array)</a><br />
+
+    <a href="classes/Date.html#M000083">weekday? (Date)</a><br />
+
+    <a href="classes/Date.html#M000084">weekend? (Date)</a><br />
+
+    <a href="classes/String.html#M000070">words (String)</a><br />
+
+  </div>
+</div>
+</body>
+</html>

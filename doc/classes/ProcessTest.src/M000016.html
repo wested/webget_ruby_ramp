@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>test_ps (ProcessTest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>    <span class="ruby-comment cmt"># File test/unit/process_test.rb, line 28</span>
+28:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_ps</span>
+29:   <span class="ruby-identifier">p</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">ps</span>
+30:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p!</span>=<span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">&quot;ps != nil&quot;</span>)
+31:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>),<span class="ruby-value str">&quot;ps is a hash&quot;</span>)
+32:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>[<span class="ruby-value str">'pcpu'</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">&quot;ps pcpu != nil&quot;</span>)
+33:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>[<span class="ruby-value str">'pcpu'</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Float</span>),<span class="ruby-value str">&quot;ps pcpu is a float&quot;</span>)
+34:  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

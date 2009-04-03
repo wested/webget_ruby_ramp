@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>test_each_value (HashTest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>    <span class="ruby-comment cmt"># File test/unit/hash_test.rb, line 15</span>
+15:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_each_value</span>
+16:     <span class="ruby-identifier">h</span> = { <span class="ruby-value str">&quot;a&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">100</span>, <span class="ruby-value str">&quot;b&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">200</span> }
+17:     <span class="ruby-identifier">h</span>.<span class="ruby-identifier">each_value!</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">value</span><span class="ruby-operator">+</span><span class="ruby-value">5</span> }
+18:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">105</span>,<span class="ruby-identifier">h</span>[<span class="ruby-value str">'a'</span>])
+19:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">205</span>,<span class="ruby-identifier">h</span>[<span class="ruby-value str">'b'</span>])
+20:   <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

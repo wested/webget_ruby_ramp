@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>load_dir_pairs (YAML)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>    <span class="ruby-comment cmt"># File lib/ramp/yaml.rb, line 45</span>
+45:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_dir_pairs</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">dirpaths</span>)
+46:     <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-identifier">dirpaths</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span>
+47:       <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+48:         <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">key</span>,<span class="ruby-identifier">doc</span>[<span class="ruby-identifier">key</span>]
+49:       }
+50:     }
+51:   <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>nitems_until (Enumerable)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 91</span>
+ 91:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nitems_until</span>
+ 92:     <span class="ruby-identifier">n</span> = <span class="ruby-value">0</span>
+ 93:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+ 94:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">x</span>) 
+ 95:         <span class="ruby-keyword kw">break</span>
+ 96:       <span class="ruby-keyword kw">else</span>
+ 97:         <span class="ruby-identifier">n</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+ 98:       <span class="ruby-keyword kw">end</span>
+ 99:     }
+100:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">n</span>
+101:     <span class="ruby-identifier">irb</span>
+102:   <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

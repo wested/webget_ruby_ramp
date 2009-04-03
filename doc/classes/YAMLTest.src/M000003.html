@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>test_load_dir_pairs (YAMLTest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>    <span class="ruby-comment cmt"># File test/unit/yaml_test.rb, line 6</span>
+ 6:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_load_dir_pairs</span>
+ 7:   <span class="ruby-identifier">dirpath</span>=<span class="ruby-value str">'test/unit/yaml_test_*.yml'</span>
+ 8: 
+ 9:   <span class="ruby-comment cmt"># Ensure the test files are available</span>
+10:   <span class="ruby-identifier">expect_filenames</span>=[<span class="ruby-value str">&quot;test/unit/yaml_test_1.yml&quot;</span>,<span class="ruby-value str">&quot;test/unit/yaml_test_2.yml&quot;</span>]
+11:   <span class="ruby-identifier">actual_filenames</span>=<span class="ruby-constant">Dir</span>[<span class="ruby-identifier">dirpath</span>].<span class="ruby-identifier">sort</span>
+12:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect_filenames</span>,<span class="ruby-identifier">actual_filenames</span>,<span class="ruby-node">&quot;Dir[#{dirpath}] expects test data files&quot;</span>)
+13: 
+14:   <span class="ruby-comment cmt"># Load the test files</span>
+15:   <span class="ruby-identifier">expect_out</span>=<span class="ruby-value str">'abcdefghijklmnopqr'</span>
+16:   <span class="ruby-identifier">actual_out</span>=<span class="ruby-value str">''</span>
+17:   <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_dir_pairs</span>(<span class="ruby-identifier">dirpath</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">actual_out</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;#{k}&quot;</span> }
+18:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect_out</span>,<span class="ruby-identifier">actual_out</span>,<span class="ruby-value str">'YAML.load_dir_pairs'</span>)
+19:  <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>

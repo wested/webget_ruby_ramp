@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Hash [ramp]</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }<\/style>" )
+
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Hash</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+
+
+                <a href="../files/lib/ramp/hash_rb.html">
+
+                lib/ramp/hash.rb
+
+                </a>
+
+
+        <br />
+
+            </td>
+        </tr>
+
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+
+                <a href="Object.html">
+
+                Object
+
+               </a>
+
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+  <div id="contextContent">
+
+   </div>
+
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+
+        <a href="#M000066">each_value!</a>&nbsp;&nbsp;
+
+        <a href="#M000068">rolldown</a>&nbsp;&nbsp;
+
+        <a href="#M000069">rollup</a>&nbsp;&nbsp;
+
+        <a href="#M000065">size?</a>&nbsp;&nbsp;
+
+        <a href="#M000067">to_yaml_sort</a>&nbsp;&nbsp;
+
+      </div>
+    </div>
+
+  </div>
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+    <!-- if method_list -->
+
+    <div id="methods">
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+
+      <div id="method-M000066" class="method-detail">
+        <a name="M000066"></a>
+
+        <div class="method-heading">
+
+          <a href="Hash.src/M000066.html" target="Code" class="method-signature"
+            onclick="popupCode('Hash.src/M000066.html');return false;">
+
+          <span class="method-name">each_value!</span><span class="method-args">() {|value| ...}</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Calls block once for each key in hsh, passing the value as a parameter, and
+updating it in place.
+</p>
+<pre>
+  h = { &quot;a&quot; =&gt; 100, &quot;b&quot; =&gt; 200 }
+  h.each_value! {|value| value+5 }
+  =&gt;
+  { &quot;a&quot; =&gt; 105, &quot;b&quot; =&gt; 205 }
+</pre>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000068" class="method-detail">
+        <a name="M000068"></a>
+
+        <div class="method-heading">
+
+          <a href="Hash.src/M000068.html" target="Code" class="method-signature"
+            onclick="popupCode('Hash.src/M000068.html');return false;">
+
+          <span class="method-name">rolldown</span><span class="method-args">() {|v)| ...}</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+<a href="Hash.html#M000068">Hash#rolldown</a> aggregates value for a hash
+of hashes, for example to help calculate subtotals grouped by key.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  h={'a'=&gt;{},'b'=&gt;{},'c'=&gt;{}}
+  h['a']['x']=1
+  h['a']['y']=2
+  h['a']['z']=3
+  h['b']['x']=4
+  h['b']['y']=5
+  h['b']['z']=6
+  h['c']['x']=7
+  h['c']['y']=8
+  h['c']['z']=9
+  h.rolldown =&gt; {&quot;x&quot;=&gt;[1,4,7],&quot;y&quot;=&gt;[2,5,8],&quot;z&quot;=&gt;[3,6,9]}
+</pre>
+<h1>Calculating subtotals</h1>
+<p>
+The rolldown method is especially useful for calculating subtotals by key.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  r=h.rolldown
+  r['x'].sum =&gt; 12
+  r['y'].sum =&gt; 15
+  r['z'].sum =&gt; 18
+</pre>
+<h1>Block customization</h1>
+<p>
+You can provide a block that will be called for the rolldown items.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  h.rolldown{|items| items.max } =&gt; {&quot;a&quot;=&gt;7,&quot;b&quot;=&gt;8,&quot;c&quot;=&gt;9}
+  h.rolldown{|items| items.join(&quot;-&quot;) } =&gt; {&quot;a&quot;=&gt;&quot;1-4-7&quot;,&quot;b&quot;=&gt;&quot;2-5-8&quot;,&quot;c&quot;=&gt;&quot;3-6-9&quot;}
+  h.rolldown{|items| items.inject{|sum,x| sum+=x } } =&gt; {&quot;a&quot;=&gt;12,&quot;b&quot;=&gt;15,&quot;c&quot;=&gt;18}
+</pre>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000069" class="method-detail">
+        <a name="M000069"></a>
+
+        <div class="method-heading">
+
+          <a href="Hash.src/M000069.html" target="Code" class="method-signature"
+            onclick="popupCode('Hash.src/M000069.html');return false;">
+
+          <span class="method-name">rollup</span><span class="method-args">() {|v)| ...}</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+<a href="Hash.html#M000069">Hash#rollup</a> aggregates value for a hash of
+hashes, for example to help calculate subtotals grouped by key.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  h={'a'=&gt;{},'b'=&gt;{},'c'=&gt;{}}
+  h['a']['x']=1
+  h['a']['y']=2
+  h['a']['z']=3
+  h['b']['x']=4
+  h['b']['y']=5
+  h['b']['z']=6
+  h['c']['x']=7
+  h['c']['y']=8
+  h['c']['z']=9
+  h.rollup =&gt; {&quot;a&quot;=&gt;[1,2,3],&quot;b&quot;=&gt;[4,5,6],&quot;c&quot;=&gt;[7,8,9]}
+</pre>
+<h1>Calculating subtotals</h1>
+<p>
+The rollup method is especially useful for calculating subtotals by key.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  r = h.rollup
+  r['a'].sum =&gt; 6
+  r['b'].sum =&gt; 15
+  r['c'].sum =&gt; 24
+</pre>
+<h1>Block customization</h1>
+<p>
+You can provide a block that will be called for the rollup items.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  h.rollup{|items| items.max } =&gt; {&quot;a&quot;=&gt;3,&quot;b&quot;=&gt;6,&quot;c&quot;=&gt;9}
+  h.rollup{|items| items.join(&quot;/&quot;) } =&gt; {&quot;a&quot;=&gt;&quot;1/2/3&quot;,&quot;b&quot;=&gt;&quot;4/5/6&quot;,&quot;c&quot;=&gt;&quot;7/8/9&quot;}
+  h.rollup{|items| items.inject{|sum,x| sum+=x } } =&gt; {&quot;a&quot;=&gt;6,&quot;b&quot;=&gt;15,&quot;c&quot;=&gt;24}
+</pre>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000065" class="method-detail">
+        <a name="M000065"></a>
+
+        <div class="method-heading">
+
+          <a href="Hash.src/M000065.html" target="Code" class="method-signature"
+            onclick="popupCode('Hash.src/M000065.html');return false;">
+
+          <span class="method-name">size?</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Return true if size > 0
+</p>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000067" class="method-detail">
+        <a name="M000067"></a>
+
+        <div class="method-heading">
+
+          <a href="Hash.src/M000067.html" target="Code" class="method-signature"
+            onclick="popupCode('Hash.src/M000067.html');return false;">
+
+          <span class="method-name">to_yaml_sort</span><span class="method-args">( opts = {} )</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Hash#to_yaml with sort
+</p>
+<p>
+From <a
+href="http://snippets.dzone.com/tag/yaml">snippets.dzone.com/tag/yaml</a>
+</p>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

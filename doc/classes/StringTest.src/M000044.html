@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>test_prev_char (StringTest)</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
+</head>
+<body class="standalone-code">
+  <pre>    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 53</span>
+53:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_prev_char</span>
+54:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;-&quot;</span>,<span class="ruby-keyword kw">false</span>,<span class="ruby-keyword kw">false</span>] ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;-&quot;</span>))  <span class="ruby-comment cmt">#unchanged</span>
+55:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;5&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">false</span>]  ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;6&quot;</span>))  <span class="ruby-comment cmt">#numeric typical</span>
+56:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;9&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">true</span>]   ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;0&quot;</span>))  <span class="ruby-comment cmt">#numeric carry</span>
+57:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;m&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">false</span>]  ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;n&quot;</span>))  <span class="ruby-comment cmt">#lowercase typical</span>
+58:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;z&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">true</span>]   ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;a&quot;</span>))  <span class="ruby-comment cmt">#lowercase carry</span>
+59:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;M&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">false</span>]  ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;N&quot;</span>))  <span class="ruby-comment cmt">#uppercase typical</span>
+60:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;Z&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">true</span>]   ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;A&quot;</span>))  <span class="ruby-comment cmt">#uppercase carry</span>
+61:   <span class="ruby-keyword kw">end</span></pre>
+</body>
+</html>
