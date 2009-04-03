@@ -75,16 +75,17 @@ class StringTest < Test::Unit::TestCase
   end
 
 
-end
+  private
 
-
-
-
-# For testing #to_class
-module FooModule
-  class FooClass
+  # For testing #to_class
+  module FooModule
+    class FooClass
+    end
   end
+
 end
+
+
 
 
 
