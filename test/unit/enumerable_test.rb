@@ -13,7 +13,7 @@ class EnumerableTest < Test::Unit::TestCase
   ########################################################################
 
 
-  class Mock
+  class Mock #:nodoc: all
     attr_accessor :id
     def initialize(id)
       @id=id
@@ -21,9 +21,9 @@ class EnumerableTest < Test::Unit::TestCase
   end
 
 
-  A = Mock.new('a')
-  B = Mock.new('b')
-  C = Mock.new('c')
+  A = Mock.new('a') 
+  B = Mock.new('b') 
+  C = Mock.new('c') 
 
 
   def test_map_id

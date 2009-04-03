@@ -77,13 +77,15 @@ class StringTest < Test::Unit::TestCase
 end
 
 
-protected
-
 # For testing #to_class
-module FooModule
+module FooModule #:nodoc: all
   class FooClass
   end
 end
+
+
+
+
 
 
 
