@@ -74,15 +74,15 @@ class StringTest < Test::Unit::TestCase
     assert_equal('MZZZ','NAAA'.prev) # uppercase carries
   end
 
+end
 
-  private
 
-  # For testing #to_class
-  module FooModule
-    class FooClass
-    end
+protected
+
+# For testing #to_class
+module FooModule
+  class FooClass
   end
-
 end
 
 
