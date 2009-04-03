@@ -129,8 +129,7 @@
 
         <div class="method-heading">
 
-          <a href="Hash.src/M000066.html" target="Code" class="method-signature"
-            onclick="popupCode('Hash.src/M000066.html');return false;">
+          <a href="#M000066" class="method-signature">
 
           <span class="method-name">each_value!</span><span class="method-args">() {|value| ...}</span>
 
@@ -151,6 +150,18 @@ updating it in place.
   { &quot;a&quot; =&gt; 105, &quot;b&quot; =&gt; 205 }
 </pre>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000066-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000066-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 21</span>
+21:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each_value!</span>
+22:     <span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>]=<span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">value</span>) }
+23:     <span class="ruby-keyword kw">self</span>
+24:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -160,8 +171,7 @@ updating it in place.
 
         <div class="method-heading">
 
-          <a href="Hash.src/M000068.html" target="Code" class="method-signature"
-            onclick="popupCode('Hash.src/M000068.html');return false;">
+          <a href="#M000068" class="method-signature">
 
           <span class="method-name">rolldown</span><span class="method-args">() {|v)| ...}</span>
 
@@ -217,6 +227,27 @@ Example:
   h.rolldown{|items| items.inject{|sum,x| sum+=x } } =&gt; {&quot;a&quot;=&gt;12,&quot;b&quot;=&gt;15,&quot;c&quot;=&gt;18}
 </pre>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000068-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000068-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 77</span>
+77:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rolldown</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+78:     <span class="ruby-identifier">a</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>
+79:     <span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k1</span>,<span class="ruby-identifier">v1</span><span class="ruby-operator">|</span>
+80:       <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k2</span>,<span class="ruby-identifier">v2</span><span class="ruby-operator">|</span>
+81:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k2</span>]=[] <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">a</span>[<span class="ruby-identifier">k2</span>]<span class="ruby-operator">==</span><span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k2</span>]<span class="ruby-operator">==</span>{})
+82:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k2</span>]<span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">v2</span>)
+83:       }
+84:     }
+85:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span> 
+86:       <span class="ruby-identifier">a</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]=(<span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">v</span>)}
+87:     <span class="ruby-keyword kw">end</span>
+88:     <span class="ruby-identifier">a</span>
+89:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -226,8 +257,7 @@ Example:
 
         <div class="method-heading">
 
-          <a href="Hash.src/M000069.html" target="Code" class="method-signature"
-            onclick="popupCode('Hash.src/M000069.html');return false;">
+          <a href="#M000069" class="method-signature">
 
           <span class="method-name">rollup</span><span class="method-args">() {|v)| ...}</span>
 
@@ -283,6 +313,27 @@ Example:
   h.rollup{|items| items.inject{|sum,x| sum+=x } } =&gt; {&quot;a&quot;=&gt;6,&quot;b&quot;=&gt;15,&quot;c&quot;=&gt;24}
 </pre>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000069-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000069-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 127</span>
+127:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rollup</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+128:     <span class="ruby-identifier">a</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>
+129:     <span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k1</span>,<span class="ruby-identifier">v1</span><span class="ruby-operator">|</span>
+130:       <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k2</span>,<span class="ruby-identifier">v2</span><span class="ruby-operator">|</span>
+131:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k1</span>]=[] <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">a</span>[<span class="ruby-identifier">k1</span>]<span class="ruby-operator">==</span><span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k1</span>]<span class="ruby-operator">==</span>{})
+132:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k1</span>]<span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">v2</span>)
+133:       }
+134:     }
+135:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+136:       <span class="ruby-identifier">a</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]=(<span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">v</span>)}
+137:     <span class="ruby-keyword kw">end</span>
+138:     <span class="ruby-identifier">a</span>
+139:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -292,8 +343,7 @@ Example:
 
         <div class="method-heading">
 
-          <a href="Hash.src/M000065.html" target="Code" class="method-signature"
-            onclick="popupCode('Hash.src/M000065.html');return false;">
+          <a href="#M000065" class="method-signature">
 
           <span class="method-name">size?</span><span class="method-args">()</span>
 
@@ -307,6 +357,17 @@ Example:
 Return true if size > 0
 </p>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000065-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000065-source">
+<pre>
+   <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 7</span>
+7:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">size?</span>
+8:     <span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>
+9:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -316,8 +377,7 @@ Return true if size > 0
 
         <div class="method-heading">
 
-          <a href="Hash.src/M000067.html" target="Code" class="method-signature"
-            onclick="popupCode('Hash.src/M000067.html');return false;">
+          <a href="#M000067" class="method-signature">
 
           <span class="method-name">to_yaml_sort</span><span class="method-args">( opts = {} )</span>
 
@@ -334,6 +394,23 @@ Hash#to_yaml with sort
 From <a
 href="http://snippets.dzone.com/tag/yaml">snippets.dzone.com/tag/yaml</a>
 </p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000067-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000067-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 31</span>
+31:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_yaml_sort</span>( <span class="ruby-identifier">opts</span> = {} )
+32:     <span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-identifier">quick_emit</span>( <span class="ruby-identifier">object_id</span>, <span class="ruby-identifier">opts</span> ) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">out</span><span class="ruby-operator">|</span>
+33:       <span class="ruby-identifier">out</span>.<span class="ruby-identifier">map</span>( <span class="ruby-identifier">taguri</span>, <span class="ruby-identifier">to_yaml_style</span> ) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">map</span><span class="ruby-operator">|</span>
+34:         <span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>   <span class="ruby-comment cmt"># &lt;-- here's my addition (the 'sort')</span>
+35:           <span class="ruby-identifier">map</span>.<span class="ruby-identifier">add</span>( <span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span> )
+36:         <span class="ruby-keyword kw">end</span>
+37:       <span class="ruby-keyword kw">end</span>
+38:     <span class="ruby-keyword kw">end</span>
+39:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
 
         </div>
       </div>

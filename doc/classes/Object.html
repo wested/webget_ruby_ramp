@@ -121,8 +121,7 @@
 
         <div class="method-heading">
 
-          <a href="Object.src/M000053.html" target="Code" class="method-signature"
-            onclick="popupCode('Object.src/M000053.html');return false;">
+          <a href="#M000053" class="method-signature">
 
           <span class="method-name">in?</span><span class="method-args">(array)</span>
 
@@ -146,6 +145,17 @@ Syntactic sugar for arrays
   object.in? array
   =&gt; true
 </pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000053-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000053-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/object.rb, line 13</span>
+13:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">in?</span>(<span class="ruby-identifier">array</span>)
+14:     <span class="ruby-identifier">array</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-keyword kw">self</span>)
+15:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
 
         </div>
       </div>

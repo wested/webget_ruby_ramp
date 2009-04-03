@@ -124,8 +124,7 @@
 
         <div class="method-heading">
 
-          <a href="Enumerable.src/M000096.html" target="Code" class="method-signature"
-            onclick="popupCode('Enumerable.src/M000096.html');return false;">
+          <a href="#M000096" class="method-signature">
 
           <span class="method-name">cat</span><span class="method-args">(prefix=nil,suffix=nil)</span>
 
@@ -164,6 +163,25 @@ You can easily wrap items in HTML tags.
   &lt;li&gt;cate&lt;/li&gt;
 </pre>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000096-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000096-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 138</span>
+138:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cat</span>(<span class="ruby-identifier">prefix</span>=<span class="ruby-keyword kw">nil</span>,<span class="ruby-identifier">suffix</span>=<span class="ruby-keyword kw">nil</span>)
+139:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">prefix</span>
+140:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">suffix</span>
+141:         <span class="ruby-identifier">inject</span>(<span class="ruby-value str">&quot;&quot;</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>,<span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">suffix</span>}
+142:       <span class="ruby-keyword kw">else</span>
+143:         <span class="ruby-identifier">inject</span>(<span class="ruby-value str">&quot;&quot;</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>,<span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_s</span> }
+144:       <span class="ruby-keyword kw">end</span>
+145:     <span class="ruby-keyword kw">else</span>
+146:       <span class="ruby-identifier">inject</span>(<span class="ruby-value str">&quot;&quot;</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>,<span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_s</span> }
+147:     <span class="ruby-keyword kw">end</span>
+148:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -173,8 +191,7 @@ You can easily wrap items in HTML tags.
 
         <div class="method-heading">
 
-          <a href="Enumerable.src/M000088.html" target="Code" class="method-signature"
-            onclick="popupCode('Enumerable.src/M000088.html');return false;">
+          <a href="#M000088" class="method-signature">
 
           <span class="method-name">map_id</span><span class="method-args">()</span>
 
@@ -188,6 +205,17 @@ You can easily wrap items in HTML tags.
 map item => item.id
 </p>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000088-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000088-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 13</span>
+13:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map_id</span>
+14:     <span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">id</span>}
+15:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -197,8 +225,7 @@ map item => item.id
 
         <div class="method-heading">
 
-          <a href="Enumerable.src/M000089.html" target="Code" class="method-signature"
-            onclick="popupCode('Enumerable.src/M000089.html');return false;">
+          <a href="#M000089" class="method-signature">
 
           <span class="method-name">map_to_sym</span><span class="method-args">()</span>
 
@@ -212,6 +239,17 @@ map item => item.id
 map item => item.to_sym
 </p>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000089-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000089-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 20</span>
+20:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map_to_sym</span>
+21:     <span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_sym</span>}
+22:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -221,8 +259,7 @@ map item => item.to_sym
 
         <div class="method-heading">
 
-          <a href="Enumerable.src/M000094.html" target="Code" class="method-signature"
-            onclick="popupCode('Enumerable.src/M000094.html');return false;">
+          <a href="#M000094" class="method-signature">
 
           <span class="method-name">nitems_until</span><span class="method-args">() {|x| ...}</span>
 
@@ -237,6 +274,26 @@ enum.nitems_until {| obj | block } => number of items Returns the number of
 leading elements for which block is false.
 </p>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000094-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000094-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 91</span>
+ 91:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nitems_until</span>
+ 92:     <span class="ruby-identifier">n</span> = <span class="ruby-value">0</span>
+ 93:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+ 94:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">x</span>) 
+ 95:         <span class="ruby-keyword kw">break</span>
+ 96:       <span class="ruby-keyword kw">else</span>
+ 97:         <span class="ruby-identifier">n</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+ 98:       <span class="ruby-keyword kw">end</span>
+ 99:     }
+100:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">n</span>
+101:     <span class="ruby-identifier">irb</span>
+102:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -246,8 +303,7 @@ leading elements for which block is false.
 
         <div class="method-heading">
 
-          <a href="Enumerable.src/M000093.html" target="Code" class="method-signature"
-            onclick="popupCode('Enumerable.src/M000093.html');return false;">
+          <a href="#M000093" class="method-signature">
 
           <span class="method-name">nitems_while</span><span class="method-args">() {|x| ...}</span>
 
@@ -262,6 +318,19 @@ enum.nitems_while {| obj | block } => number of items Returns the number of
 leading elements for which block is not false or nil.
 </p>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000093-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000093-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 81</span>
+81:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nitems_while</span>
+82:     <span class="ruby-identifier">n</span> = <span class="ruby-value">0</span>
+83:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">x</span>) <span class="ruby-operator">?</span> (<span class="ruby-identifier">n</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword kw">break</span>}
+84:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">n</span>
+85:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -271,8 +340,7 @@ leading elements for which block is not false or nil.
 
         <div class="method-heading">
 
-          <a href="Enumerable.src/M000095.html" target="Code" class="method-signature"
-            onclick="popupCode('Enumerable.src/M000095.html');return false;">
+          <a href="#M000095" class="method-signature">
 
           <span class="method-name">nitems_with_index</span><span class="method-args">() {|x,i| ...}</span>
 
@@ -288,6 +356,19 @@ two arguments, the item and its index, for each item in enum. Returns the
 number of leading elements for which block is true.
 </p>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000095-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000095-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 109</span>
+109:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nitems_with_index</span>
+110:     <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+111:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span>) <span class="ruby-operator">?</span> (<span class="ruby-identifier">i</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword kw">break</span>}
+112:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">i</span>
+113:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -297,8 +378,7 @@ number of leading elements for which block is true.
 
         <div class="method-heading">
 
-          <a href="Enumerable.src/M000091.html" target="Code" class="method-signature"
-            onclick="popupCode('Enumerable.src/M000091.html');return false;">
+          <a href="#M000091" class="method-signature">
 
           <span class="method-name">select_until</span><span class="method-args">() {|x| ...}</span>
 
@@ -313,6 +393,19 @@ enum.select_until {|obj| block } => array Returns an array containing the
 leading elements for which block is false or nil.
 </p>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000091-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000091-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 45</span>
+45:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">select_until</span>
+46:     <span class="ruby-identifier">a</span> = []
+47:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">x</span>) <span class="ruby-operator">?</span> <span class="ruby-keyword kw">break</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">x</span>)}
+48:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">a</span>
+49:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -322,8 +415,7 @@ leading elements for which block is false or nil.
 
         <div class="method-heading">
 
-          <a href="Enumerable.src/M000090.html" target="Code" class="method-signature"
-            onclick="popupCode('Enumerable.src/M000090.html');return false;">
+          <a href="#M000090" class="method-signature">
 
           <span class="method-name">select_while</span><span class="method-args">() {|x| ...}</span>
 
@@ -338,6 +430,19 @@ enum.select_while {|obj| block } => array Returns an array containing the
 leading elements for which block is not false or nil.
 </p>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000090-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000090-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 35</span>
+35:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">select_while</span>
+36:     <span class="ruby-identifier">a</span> = []
+37:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">x</span>) <span class="ruby-operator">?</span> (<span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">x</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword kw">break</span>}
+38:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">a</span>
+39:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -347,8 +452,7 @@ leading elements for which block is not false or nil.
 
         <div class="method-heading">
 
-          <a href="Enumerable.src/M000092.html" target="Code" class="method-signature"
-            onclick="popupCode('Enumerable.src/M000092.html');return false;">
+          <a href="#M000092" class="method-signature">
 
           <span class="method-name">select_with_index</span><span class="method-args">() {|x,i| ...}</span>
 
@@ -363,6 +467,27 @@ enum.select_with_index {|obj,i| block } => array Calls block with two
 arguments, the item and its index, for each item in enum. Returns an array
 containing the leading elements for which block is not false or nil.
 </p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000092-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000092-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 56</span>
+56:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">select_with_index</span>
+57:     <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+58:     <span class="ruby-identifier">a</span> = []
+59:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> 
+60:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span>)
+61:         <span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">x</span>
+62:         <span class="ruby-identifier">i</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+63:       <span class="ruby-keyword kw">else</span>
+64:         <span class="ruby-keyword kw">break</span>
+65:       <span class="ruby-keyword kw">end</span>
+66:     }
+67:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">a</span>
+68:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
 
         </div>
       </div>

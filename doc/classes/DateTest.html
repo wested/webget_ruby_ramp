@@ -170,8 +170,7 @@ href="DateTest.html#M000008">test_age_days</a>
 
         <div class="method-heading">
 
-          <a href="DateTest.src/M000008.html" target="Code" class="method-signature"
-            onclick="popupCode('DateTest.src/M000008.html');return false;">
+          <a href="#M000008" class="method-signature">
 
           <span class="method-name">test_age_days</span><span class="method-args">()</span>
 
@@ -180,6 +179,19 @@ href="DateTest.html#M000008">test_age_days</a>
         </div>
 
         <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000008-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000008-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/unit/date_test.rb, line 52</span>
+52:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_age_days</span>
+53:     <span class="ruby-identifier">assert_equal</span>( <span class="ruby-value">9967</span>,<span class="ruby-constant">BIRTHDATE</span>.<span class="ruby-identifier">age_days</span>(<span class="ruby-constant">VALENTINES</span>),     <span class="ruby-value str">'&lt; birthday'</span>)
+54:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">10227</span>,<span class="ruby-constant">BIRTHDATE</span>.<span class="ruby-identifier">age_days</span>(<span class="ruby-constant">HALLOWEEN</span>),      <span class="ruby-value str">'= birthday'</span>)
+55:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">10288</span>,<span class="ruby-constant">BIRTHDATE</span>.<span class="ruby-identifier">age_days</span>(<span class="ruby-constant">NEW_YEARS_EVE</span>),  <span class="ruby-value str">'&gt; birthday'</span>)
+56:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
 
         </div>
       </div>
@@ -190,8 +202,7 @@ href="DateTest.html#M000008">test_age_days</a>
 
         <div class="method-heading">
 
-          <a href="DateTest.src/M000007.html" target="Code" class="method-signature"
-            onclick="popupCode('DateTest.src/M000007.html');return false;">
+          <a href="#M000007" class="method-signature">
 
           <span class="method-name">test_age_years</span><span class="method-args">()</span>
 
@@ -200,6 +211,19 @@ href="DateTest.html#M000008">test_age_days</a>
         </div>
 
         <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000007-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000007-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/unit/date_test.rb, line 45</span>
+45:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_age_years</span>
+46:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">27</span>,<span class="ruby-constant">BIRTHDATE</span>.<span class="ruby-identifier">age_years</span>(<span class="ruby-constant">VALENTINES</span>),    <span class="ruby-value str">'&lt; birthday'</span>)
+47:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">28</span>,<span class="ruby-constant">BIRTHDATE</span>.<span class="ruby-identifier">age_years</span>(<span class="ruby-constant">HALLOWEEN</span>),     <span class="ruby-value str">'= birthday'</span>)
+48:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">28</span>,<span class="ruby-constant">BIRTHDATE</span>.<span class="ruby-identifier">age_years</span>(<span class="ruby-constant">NEW_YEARS_EVE</span>), <span class="ruby-value str">'&gt; birthday'</span>)
+49:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
 
         </div>
       </div>
@@ -210,8 +234,7 @@ href="DateTest.html#M000008">test_age_days</a>
 
         <div class="method-heading">
 
-          <a href="DateTest.src/M000006.html" target="Code" class="method-signature"
-            onclick="popupCode('DateTest.src/M000006.html');return false;">
+          <a href="#M000006" class="method-signature">
 
           <span class="method-name">test_to_sql</span><span class="method-args">()</span>
 
@@ -220,6 +243,17 @@ href="DateTest.html#M000008">test_age_days</a>
         </div>
 
         <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000006-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000006-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/unit/date_test.rb, line 33</span>
+33:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_to_sql</span>
+34:     <span class="ruby-identifier">assert</span>(<span class="ruby-value str">'2007-12-31'</span>,<span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2008</span>,<span class="ruby-value">12</span>,<span class="ruby-value">31</span>))
+35:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
 
         </div>
       </div>
@@ -230,8 +264,7 @@ href="DateTest.html#M000008">test_age_days</a>
 
         <div class="method-heading">
 
-          <a href="DateTest.src/M000004.html" target="Code" class="method-signature"
-            onclick="popupCode('DateTest.src/M000004.html');return false;">
+          <a href="#M000004" class="method-signature">
 
           <span class="method-name">test_weekday</span><span class="method-args">()</span>
 
@@ -240,6 +273,25 @@ href="DateTest.html#M000008">test_age_days</a>
         </div>
 
         <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000004-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000004-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/unit/date_test.rb, line 7</span>
+ 7:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_weekday</span>
+ 8:     <span class="ruby-comment cmt"># Start on Monday, January 1, 2007</span>
+ 9:     <span class="ruby-identifier">assert</span>( <span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2007</span>,<span class="ruby-value">1</span>,<span class="ruby-value">1</span>).<span class="ruby-identifier">weekday?</span>) 
+10:     <span class="ruby-identifier">assert</span>( <span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2007</span>,<span class="ruby-value">1</span>,<span class="ruby-value">2</span>).<span class="ruby-identifier">weekday?</span>)
+11:     <span class="ruby-identifier">assert</span>( <span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2007</span>,<span class="ruby-value">1</span>,<span class="ruby-value">3</span>).<span class="ruby-identifier">weekday?</span>)
+12:     <span class="ruby-identifier">assert</span>( <span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2007</span>,<span class="ruby-value">1</span>,<span class="ruby-value">4</span>).<span class="ruby-identifier">weekday?</span>)
+13:     <span class="ruby-identifier">assert</span>( <span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2007</span>,<span class="ruby-value">1</span>,<span class="ruby-value">5</span>).<span class="ruby-identifier">weekday?</span>)
+14:     <span class="ruby-identifier">assert</span>(<span class="ruby-operator">!</span><span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2007</span>,<span class="ruby-value">1</span>,<span class="ruby-value">6</span>).<span class="ruby-identifier">weekday?</span>)
+15:     <span class="ruby-identifier">assert</span>(<span class="ruby-operator">!</span><span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2007</span>,<span class="ruby-value">1</span>,<span class="ruby-value">7</span>).<span class="ruby-identifier">weekday?</span>)
+16:     <span class="ruby-identifier">assert</span>( <span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2007</span>,<span class="ruby-value">1</span>,<span class="ruby-value">8</span>).<span class="ruby-identifier">weekday?</span>)
+17:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
 
         </div>
       </div>
@@ -250,8 +302,7 @@ href="DateTest.html#M000008">test_age_days</a>
 
         <div class="method-heading">
 
-          <a href="DateTest.src/M000005.html" target="Code" class="method-signature"
-            onclick="popupCode('DateTest.src/M000005.html');return false;">
+          <a href="#M000005" class="method-signature">
 
           <span class="method-name">test_weekend</span><span class="method-args">()</span>
 
@@ -260,6 +311,25 @@ href="DateTest.html#M000008">test_age_days</a>
         </div>
 
         <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000005-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000005-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/unit/date_test.rb, line 20</span>
+20:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_weekend</span>
+21:     <span class="ruby-comment cmt"># Start on Monday, January 1, 2007</span>
+22:     <span class="ruby-identifier">assert</span>(<span class="ruby-operator">!</span><span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2007</span>,<span class="ruby-value">1</span>,<span class="ruby-value">1</span>).<span class="ruby-identifier">weekend?</span>) 
+23:     <span class="ruby-identifier">assert</span>(<span class="ruby-operator">!</span><span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2007</span>,<span class="ruby-value">1</span>,<span class="ruby-value">2</span>).<span class="ruby-identifier">weekend?</span>) 
+24:     <span class="ruby-identifier">assert</span>(<span class="ruby-operator">!</span><span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2007</span>,<span class="ruby-value">1</span>,<span class="ruby-value">3</span>).<span class="ruby-identifier">weekend?</span>) 
+25:     <span class="ruby-identifier">assert</span>(<span class="ruby-operator">!</span><span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2007</span>,<span class="ruby-value">1</span>,<span class="ruby-value">4</span>).<span class="ruby-identifier">weekend?</span>) 
+26:     <span class="ruby-identifier">assert</span>(<span class="ruby-operator">!</span><span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2007</span>,<span class="ruby-value">1</span>,<span class="ruby-value">5</span>).<span class="ruby-identifier">weekend?</span>) 
+27:     <span class="ruby-identifier">assert</span>( <span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2007</span>,<span class="ruby-value">1</span>,<span class="ruby-value">6</span>).<span class="ruby-identifier">weekend?</span>) 
+28:     <span class="ruby-identifier">assert</span>( <span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2007</span>,<span class="ruby-value">1</span>,<span class="ruby-value">7</span>).<span class="ruby-identifier">weekend?</span>) 
+29:     <span class="ruby-identifier">assert</span>(<span class="ruby-operator">!</span><span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">2007</span>,<span class="ruby-value">1</span>,<span class="ruby-value">8</span>).<span class="ruby-identifier">weekend?</span>) 
+30:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
 
         </div>
       </div>

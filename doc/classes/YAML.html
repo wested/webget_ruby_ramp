@@ -110,8 +110,7 @@
 
         <div class="method-heading">
 
-          <a href="YAML.src/M000101.html" target="Code" class="method-signature"
-            onclick="popupCode('YAML.src/M000101.html');return false;">
+          <a href="#M000101" class="method-signature">
 
           <span class="method-name">load_dir</span><span class="method-args">(*dirpaths) {|doc| ...}</span>
 
@@ -137,6 +136,26 @@ Load yaml documents from a directory
   }
 </pre>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000101-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000101-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/yaml.rb, line 17</span>
+17:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">dirpaths</span>)
+18:     <span class="ruby-identifier">dirpaths</span>=[<span class="ruby-operator">*</span><span class="ruby-identifier">dirpaths</span>.<span class="ruby-identifier">flatten</span>]
+19:     <span class="ruby-identifier">dirpaths</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dirpath</span><span class="ruby-operator">|</span>
+20:       <span class="ruby-constant">Dir</span>[<span class="ruby-identifier">dirpath</span>].<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">filename</span><span class="ruby-operator">|</span>
+21:         <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+22:           <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_documents</span>(<span class="ruby-identifier">file</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span>
+23:             <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">doc</span>
+24:           <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#load</span>
+25:         <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#file</span>
+26:       <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#dir</span>
+27:     <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#each</span>
+28:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -146,8 +165,7 @@ Load yaml documents from a directory
 
         <div class="method-heading">
 
-          <a href="YAML.src/M000102.html" target="Code" class="method-signature"
-            onclick="popupCode('YAML.src/M000102.html');return false;">
+          <a href="#M000102" class="method-signature">
 
           <span class="method-name">load_dir_pairs</span><span class="method-args">(*dirpaths) {|key,doc[key]| ...}</span>
 
@@ -175,6 +193,21 @@ href="YAML.html#M000102">YAML.load_dir_pairs</a>.
 <p>
 This method sorts the keys for you.
 </p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000102-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000102-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/yaml.rb, line 45</span>
+45:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_dir_pairs</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">dirpaths</span>)
+46:     <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-identifier">dirpaths</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span>
+47:       <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+48:         <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">key</span>,<span class="ruby-identifier">doc</span>[<span class="ruby-identifier">key</span>]
+49:       }
+50:     }
+51:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
 
         </div>
       </div>

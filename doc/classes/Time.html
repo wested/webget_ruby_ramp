@@ -145,8 +145,7 @@
 
         <div class="method-heading">
 
-          <a href="Time.src/M000062.html" target="Code" class="method-signature"
-            onclick="popupCode('Time.src/M000062.html');return false;">
+          <a href="#M000062" class="method-signature">
 
           <span class="method-name">stamp</span><span class="method-args">()</span>
 
@@ -160,6 +159,17 @@
 Return current time in UTC as a timestamp string
 &#8220;YYYYMMDDHHMMSS&#8220;
 </p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000062-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000062-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/time.rb, line 18</span>
+18:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">stamp</span>
+19:     <span class="ruby-identifier">now</span>.<span class="ruby-identifier">utc</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-value str">'%Y%m%d%H%M%S'</span>)
+20:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
 
         </div>
       </div>

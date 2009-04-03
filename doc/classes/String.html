@@ -157,8 +157,7 @@
 
         <div class="method-heading">
 
-          <a href="String.src/M000076.html" target="Code" class="method-signature"
-            onclick="popupCode('String.src/M000076.html');return false;">
+          <a href="#M000076" class="method-signature">
 
           <span class="method-name">prev_char</span><span class="method-args">(c)</span>
 
@@ -180,6 +179,29 @@ Return the previous character, with a changed flag and carry flag
   String.prev_char('-') =&gt; '-', false, false  # unchanged
 </pre>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000076-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000076-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 63</span>
+63:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-identifier">c</span>) <span class="ruby-comment cmt">#=&gt; prev_char, changed_flag, carry_flag</span>
+64:   <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">c</span>
+65:   <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'1'</span><span class="ruby-operator">..</span><span class="ruby-value str">'9'</span>, <span class="ruby-value str">'B'</span><span class="ruby-operator">..</span><span class="ruby-value str">'Z'</span>, <span class="ruby-value str">'b'</span><span class="ruby-operator">..</span><span class="ruby-value str">'z'</span>
+66:     <span class="ruby-identifier">i</span>=(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">:ord</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">ord</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">c</span>[<span class="ruby-value">0</span>])
+67:     <span class="ruby-keyword kw">return</span> (<span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>).<span class="ruby-identifier">chr</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">false</span>
+68:   <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'0'</span>
+69:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'9'</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">true</span>
+70:   <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'A'</span>
+71:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'Z'</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">true</span>
+72:   <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'a'</span>
+73:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'z'</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">true</span>
+74:   <span class="ruby-keyword kw">else</span>
+75:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">c</span>, <span class="ruby-keyword kw">false</span>, <span class="ruby-keyword kw">false</span>
+76:   <span class="ruby-keyword kw">end</span>
+77:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -192,8 +214,7 @@ Return the previous character, with a changed flag and carry flag
 
         <div class="method-heading">
 
-          <a href="String.src/M000072.html" target="Code" class="method-signature"
-            onclick="popupCode('String.src/M000072.html');return false;">
+          <a href="#M000072" class="method-signature">
 
           <span class="method-name">capitalize_words</span><span class="method-args">()</span>
 
@@ -202,6 +223,17 @@ Return the previous character, with a changed flag and carry flag
         </div>
 
         <div class="method-description">
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000072-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000072-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 14</span>
+14:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">capitalize_words</span>
+15:   <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\b/</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">capitalize</span> }.<span class="ruby-identifier">join</span>
+16:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
 
         </div>
       </div>
@@ -212,8 +244,7 @@ Return the previous character, with a changed flag and carry flag
 
         <div class="method-heading">
 
-          <a href="String.src/M000075.html" target="Code" class="method-signature"
-            onclick="popupCode('String.src/M000075.html');return false;">
+          <a href="#M000075" class="method-signature">
 
           <span class="method-name">decrement</span><span class="method-args">(step=1)</span>
 
@@ -238,6 +269,17 @@ Decrement the rightmost natural number
 </li>
 </ul>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000075-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000075-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 49</span>
+49:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">decrement</span>(<span class="ruby-identifier">step</span>=<span class="ruby-value">1</span>)
+50:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">=~</span><span class="ruby-regexp re">/\d+/</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">$`</span><span class="ruby-operator">+</span>(<span class="ruby-identifier">$&amp;</span>.<span class="ruby-identifier">to_i</span><span class="ruby-operator">-</span><span class="ruby-identifier">step</span>).<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-identifier">$'</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">self</span>
+51:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -247,8 +289,7 @@ Decrement the rightmost natural number
 
         <div class="method-heading">
 
-          <a href="String.src/M000074.html" target="Code" class="method-signature"
-            onclick="popupCode('String.src/M000074.html');return false;">
+          <a href="#M000074" class="method-signature">
 
           <span class="method-name">increment</span><span class="method-args">(step=1)</span>
 
@@ -272,6 +313,17 @@ Increment the rightmost natural number
 
 </li>
 </ul>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000074-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000074-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 35</span>
+35:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">increment</span>(<span class="ruby-identifier">step</span>=<span class="ruby-value">1</span>)
+36:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">=~</span><span class="ruby-regexp re">/\d+/</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">$`</span><span class="ruby-operator">+</span>(<span class="ruby-identifier">$&amp;</span>.<span class="ruby-identifier">to_i</span><span class="ruby-operator">+</span><span class="ruby-identifier">step</span>).<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-identifier">$'</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">self</span>
+37:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
 
         </div>
       </div>
@@ -320,8 +372,7 @@ Alias for <a href="String.html#M000078">prev!</a>
 
         <div class="method-heading">
 
-          <a href="String.src/M000077.html" target="Code" class="method-signature"
-            onclick="popupCode('String.src/M000077.html');return false;">
+          <a href="#M000077" class="method-signature">
 
           <span class="method-name">prev</span><span class="method-args">()</span>
 
@@ -351,6 +402,17 @@ Return the previous string
   'nn0aA'.prev =&gt; 'nm9zZ'
 </pre>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000077-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000077-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 94</span>
+94:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">prev</span>
+95:   <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">clone</span>.<span class="ruby-identifier">prev!</span>
+96:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -360,8 +422,7 @@ Return the previous string
 
         <div class="method-heading">
 
-          <a href="String.src/M000078.html" target="Code" class="method-signature"
-            onclick="popupCode('String.src/M000078.html');return false;">
+          <a href="#M000078" class="method-signature">
 
           <span class="method-name">prev!</span><span class="method-args">()</span>
 
@@ -375,6 +436,27 @@ Return the previous string
 Do <a href="String.html#M000077">String#prev</a> in place
 </p>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000078-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000078-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 99</span>
+ 99:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">prev!</span>
+100:   <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">length</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>
+101:   <span class="ruby-identifier">i</span>=<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span> <span class="ruby-comment cmt"># rightmost</span>
+102:   <span class="ruby-keyword kw">while</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">do</span>
+103:    <span class="ruby-identifier">c</span>=<span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">chr</span>
+104:    <span class="ruby-identifier">prev_c</span>,<span class="ruby-identifier">changed_flag</span>,<span class="ruby-identifier">carry_flag</span>=<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-identifier">c</span>)
+105:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">changed_flag</span>
+106:    <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">i</span>]=<span class="ruby-identifier">prev_c</span>
+107:    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">carry_flag</span>
+108:    <span class="ruby-identifier">i</span><span class="ruby-operator">-=</span><span class="ruby-value">1</span>
+109:    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">i</span><span class="ruby-operator">&lt;</span><span class="ruby-value">0</span>
+110:   <span class="ruby-keyword kw">end</span>
+111:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -384,8 +466,7 @@ Do <a href="String.html#M000077">String#prev</a> in place
 
         <div class="method-heading">
 
-          <a href="String.src/M000071.html" target="Code" class="method-signature"
-            onclick="popupCode('String.src/M000071.html');return false;">
+          <a href="#M000071" class="method-signature">
 
           <span class="method-name">split_tab</span><span class="method-args">()</span>
 
@@ -399,6 +480,17 @@ Do <a href="String.html#M000077">String#prev</a> in place
 Return the string split at tabs, i.e. split(/t/)
 </p>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000071-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000071-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 10</span>
+10:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">split_tab</span>
+11:   <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\t/</span>)
+12:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -408,8 +500,7 @@ Return the string split at tabs, i.e. split(/t/)
 
         <div class="method-heading">
 
-          <a href="String.src/M000073.html" target="Code" class="method-signature"
-            onclick="popupCode('String.src/M000073.html');return false;">
+          <a href="#M000073" class="method-signature">
 
           <span class="method-name">to_class</span><span class="method-args">()</span>
 
@@ -428,6 +519,17 @@ From Mirage at <a
 href="http://infovore.org/archives/2006/08/02/getting-a-class-object-in-ruby-from-a-string-containing-that-classes-name">infovore.org/archives/2006/08/02/getting-a-class-object-in-ruby-from-a-string-containing-that-classes-name</a>/
 </p>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000073-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000073-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 21</span>
+21:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_class</span>
+22:   <span class="ruby-identifier">split</span>(<span class="ruby-value str">'::'</span>).<span class="ruby-identifier">inject</span>(<span class="ruby-constant">Kernel</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">scope</span>, <span class="ruby-identifier">const_name</span><span class="ruby-operator">|</span> <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">const_name</span>)}
+23:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -437,8 +539,7 @@ href="http://infovore.org/archives/2006/08/02/getting-a-class-object-in-ruby-fro
 
         <div class="method-heading">
 
-          <a href="String.src/M000070.html" target="Code" class="method-signature"
-            onclick="popupCode('String.src/M000070.html');return false;">
+          <a href="#M000070" class="method-signature">
 
           <span class="method-name">words</span><span class="method-args">()</span>
 
@@ -451,6 +552,17 @@ href="http://infovore.org/archives/2006/08/02/getting-a-class-object-in-ruby-fro
           <p>
 Return the string split into words, i.e. split(W*b*)
 </p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000070-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000070-source">
+<pre>
+   <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 5</span>
+5:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">words</span>
+6:   <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\W*\b\W*/</span>)
+7:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
 
         </div>
       </div>

@@ -135,8 +135,7 @@
 
         <div class="method-heading">
 
-          <a href="Array.src/M000056.html" target="Code" class="method-signature"
-            onclick="popupCode('Array.src/M000056.html');return false;">
+          <a href="#M000056" class="method-signature">
 
           <span class="method-name">choice</span><span class="method-args">()</span>
 
@@ -159,6 +158,17 @@ Return a random item from the array
 Implemented in Ruby 1.9
 </p>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000056-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000056-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 37</span>
+37:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">choice</span>
+38:     <span class="ruby-keyword kw">self</span>[<span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">size</span>)]
+39:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -168,8 +178,7 @@ Implemented in Ruby 1.9
 
         <div class="method-heading">
 
-          <a href="Array.src/M000057.html" target="Code" class="method-signature"
-            onclick="popupCode('Array.src/M000057.html');return false;">
+          <a href="#M000057" class="method-signature">
 
           <span class="method-name">choices</span><span class="method-args">(n)</span>
 
@@ -188,6 +197,19 @@ Return a new array filled with <em>n</em> calls to choice
   [1,2,3,4].choices(3) =&gt; [4,2,3]
 </pre>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000057-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000057-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 48</span>
+48:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">choices</span>(<span class="ruby-identifier">n</span>)
+49:     <span class="ruby-identifier">a</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+50:     <span class="ruby-identifier">n</span>.<span class="ruby-identifier">times</span> { <span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">choice</span> }
+51:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">a</span>
+52:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -197,8 +219,7 @@ Return a new array filled with <em>n</em> calls to choice
 
         <div class="method-heading">
 
-          <a href="Array.src/M000059.html" target="Code" class="method-signature"
-            onclick="popupCode('Array.src/M000059.html');return false;">
+          <a href="#M000059" class="method-signature">
 
           <span class="method-name">divvy</span><span class="method-args">(number_of_slices)</span>
 
@@ -233,6 +254,17 @@ slices as it can.
   [1,2,3,4,5,6].divvy(4) =&gt; [[1,2],[3,4],[5,6]]
 </pre>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000059-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000059-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 103</span>
+103:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">divvy</span>(<span class="ruby-identifier">number_of_slices</span>)
+104:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">slices</span>((<span class="ruby-identifier">length</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-identifier">number_of_slices</span>.<span class="ruby-identifier">to_f</span>).<span class="ruby-identifier">ceil</span>)
+105:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -242,8 +274,7 @@ slices as it can.
 
         <div class="method-heading">
 
-          <a href="Array.src/M000061.html" target="Code" class="method-signature"
-            onclick="popupCode('Array.src/M000061.html');return false;">
+          <a href="#M000061" class="method-signature">
 
           <span class="method-name">intersect</span><span class="method-args">()</span>
 
@@ -269,6 +300,17 @@ item is an array.
   =&gt; foos that are in all of the array items
 </pre>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000061-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000061-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 144</span>
+144:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">intersect</span>
+145:     <span class="ruby-identifier">inject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">inj</span>,<span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">inj</span> <span class="ruby-operator">&amp;</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_a</span> }
+146:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -278,8 +320,7 @@ item is an array.
 
         <div class="method-heading">
 
-          <a href="Array.src/M000055.html" target="Code" class="method-signature"
-            onclick="popupCode('Array.src/M000055.html');return false;">
+          <a href="#M000055" class="method-signature">
 
           <span class="method-name">rotate!</span><span class="method-args">()</span>
 
@@ -301,6 +342,18 @@ Move the first item to the last by using Array#shift and Array#push
 Return self
 </p>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000055-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000055-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 22</span>
+22:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rotate!</span>
+23:     <span class="ruby-identifier">push</span> <span class="ruby-identifier">x</span>=<span class="ruby-identifier">shift</span>
+24:     <span class="ruby-keyword kw">self</span>
+25:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -310,8 +363,7 @@ Return self
 
         <div class="method-heading">
 
-          <a href="Array.src/M000054.html" target="Code" class="method-signature"
-            onclick="popupCode('Array.src/M000054.html');return false;">
+          <a href="#M000054" class="method-signature">
 
           <span class="method-name">size?</span><span class="method-args">()</span>
 
@@ -330,6 +382,17 @@ Return true if size > 0
   [].size? =&gt; false
 </pre>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000054-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000054-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 9</span>
+ 9:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">size?</span>
+10:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>
+11:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -339,8 +402,7 @@ Return true if size > 0
 
         <div class="method-heading">
 
-          <a href="Array.src/M000058.html" target="Code" class="method-signature"
-            onclick="popupCode('Array.src/M000058.html');return false;">
+          <a href="#M000058" class="method-signature">
 
           <span class="method-name">slices</span><span class="method-args">(slice_length)</span>
 
@@ -367,6 +429,23 @@ If the slices don&#8217;t divide evenly, then the last is smaller.
   [1,2,3,4,5,6,7,8].slices(5) =&gt; [[1,2,3,4,5],[6,7,8]]
 </pre>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000058-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000058-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 74</span>
+74:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">slices</span>(<span class="ruby-identifier">slice_length</span>)
+75:     <span class="ruby-identifier">a</span>=[]
+76:     <span class="ruby-identifier">i</span>=<span class="ruby-value">0</span>
+77:     <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">i</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">length</span>
+78:       <span class="ruby-identifier">a</span>.<span class="ruby-identifier">push</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">...</span>(<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-identifier">slice_length</span>)]
+79:       <span class="ruby-identifier">i</span><span class="ruby-operator">+=</span><span class="ruby-identifier">slice_length</span>
+80:     <span class="ruby-keyword kw">end</span>
+81:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">a</span>
+82:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -376,8 +455,7 @@ If the slices don&#8217;t divide evenly, then the last is smaller.
 
         <div class="method-heading">
 
-          <a href="Array.src/M000060.html" target="Code" class="method-signature"
-            onclick="popupCode('Array.src/M000060.html');return false;">
+          <a href="#M000060" class="method-signature">
 
           <span class="method-name">union</span><span class="method-args">()</span>
 
@@ -402,6 +480,17 @@ an array.
   arr.map(&amp;:foo).union
   =&gt; foos that are in any of the array items
 </pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000060-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000060-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 127</span>
+127:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">union</span>
+128:     <span class="ruby-identifier">inject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">inj</span>,<span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">inj</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_a</span> }
+129:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
 
         </div>
       </div>

@@ -123,8 +123,7 @@
 
         <div class="method-heading">
 
-          <a href="Numeric.src/M000063.html" target="Code" class="method-signature"
-            onclick="popupCode('Numeric.src/M000063.html');return false;">
+          <a href="#M000063" class="method-signature">
 
           <span class="method-name">if</span><span class="method-args">(flag)</span>
 
@@ -145,6 +144,17 @@ This is useful for multiplying a number if and only if a flag is set.
   sum = x.if(foo) + y.if(bar)
 </pre>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000063-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000063-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/numeric.rb, line 11</span>
+11:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">if</span>(<span class="ruby-identifier">flag</span>)
+12:   (<span class="ruby-identifier">flag</span><span class="ruby-operator">==</span><span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">flag</span><span class="ruby-operator">==</span><span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">flag</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">flag</span><span class="ruby-operator">==</span>[] <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">flag</span><span class="ruby-operator">==</span>{}) <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">self</span>
+13:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -154,8 +164,7 @@ This is useful for multiplying a number if and only if a flag is set.
 
         <div class="method-heading">
 
-          <a href="Numeric.src/M000064.html" target="Code" class="method-signature"
-            onclick="popupCode('Numeric.src/M000064.html');return false;">
+          <a href="#M000064" class="method-signature">
 
           <span class="method-name">if_not</span><span class="method-args">(flag)</span>
 
@@ -175,6 +184,17 @@ This is useful for multiplying a number if and only if a flag is unset.
 <pre>
   sum = w.if_not(foo) +y.if_not(bar)
 </pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000064-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000064-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/numeric.rb, line 23</span>
+23:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">if_not</span>(<span class="ruby-identifier">flag</span>)
+24:   (<span class="ruby-identifier">flag</span><span class="ruby-operator">==</span><span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">flag</span><span class="ruby-operator">==</span><span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">flag</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">flag</span><span class="ruby-operator">==</span>[] <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">flag</span><span class="ruby-operator">==</span>{}) <span class="ruby-operator">?</span> <span class="ruby-keyword kw">self</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+25:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
 
         </div>
       </div>

@@ -131,8 +131,7 @@
 
         <div class="method-heading">
 
-          <a href="Date.src/M000085.html" target="Code" class="method-signature"
-            onclick="popupCode('Date.src/M000085.html');return false;">
+          <a href="#M000085" class="method-signature">
 
           <span class="method-name">between</span><span class="method-args">(min,max)</span>
 
@@ -146,6 +145,17 @@
 Return a random date between min &amp; max
 </p>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000085-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000085-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/date.rb, line 33</span>
+33:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">between</span>(<span class="ruby-identifier">min</span>,<span class="ruby-identifier">max</span>)
+34:     <span class="ruby-identifier">min</span><span class="ruby-operator">+</span><span class="ruby-identifier">rand</span>(<span class="ruby-identifier">max</span><span class="ruby-operator">-</span><span class="ruby-identifier">min</span>)
+35:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -158,8 +168,7 @@ Return a random date between min &amp; max
 
         <div class="method-heading">
 
-          <a href="Date.src/M000087.html" target="Code" class="method-signature"
-            onclick="popupCode('Date.src/M000087.html');return false;">
+          <a href="#M000087" class="method-signature">
 
           <span class="method-name">age_days</span><span class="method-args">(compare_to_date=Date.today)</span>
 
@@ -173,6 +182,17 @@ Return a random date between min &amp; max
 Return the age in days for a given date.
 </p>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000087-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000087-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/date.rb, line 67</span>
+67:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">age_days</span>(<span class="ruby-identifier">compare_to_date</span>=<span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>)
+68:     (<span class="ruby-identifier">compare_to_date</span><span class="ruby-operator">-</span><span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">to_i</span>
+69:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -182,8 +202,7 @@ Return the age in days for a given date.
 
         <div class="method-heading">
 
-          <a href="Date.src/M000086.html" target="Code" class="method-signature"
-            onclick="popupCode('Date.src/M000086.html');return false;">
+          <a href="#M000086" class="method-signature">
 
           <span class="method-name">age_years</span><span class="method-args">(compare_date=Date.today)</span>
 
@@ -215,6 +234,19 @@ Return the age in years for a given date.
   birthdate.age_years(new_years_eve) =&gt; 28  # after the birthday
 </pre>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000086-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000086-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/date.rb, line 58</span>
+58:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">age_years</span>(<span class="ruby-identifier">compare_date</span>=<span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>)
+59:     <span class="ruby-identifier">age</span>=<span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">year</span><span class="ruby-operator">-</span><span class="ruby-identifier">year</span>
+60:     <span class="ruby-identifier">age</span><span class="ruby-operator">-=</span><span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">month</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">month</span> <span class="ruby-keyword kw">or</span> (<span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">month</span><span class="ruby-operator">==</span><span class="ruby-identifier">month</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">day</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">day</span>)
+61:     <span class="ruby-identifier">age</span>
+62:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -224,8 +256,7 @@ Return the age in years for a given date.
 
         <div class="method-heading">
 
-          <a href="Date.src/M000082.html" target="Code" class="method-signature"
-            onclick="popupCode('Date.src/M000082.html');return false;">
+          <a href="#M000082" class="method-signature">
 
           <span class="method-name">to_sql</span><span class="method-args">()</span>
 
@@ -246,6 +277,17 @@ Example:
  d.to_sql =&gt; &quot;2007-12-31&quot;
 </pre>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000082-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000082-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/date.rb, line 12</span>
+12:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_sql</span>
+13:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_time</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-value str">&quot;%Y-%m-%d&quot;</span>)
+14:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -255,8 +297,7 @@ Example:
 
         <div class="method-heading">
 
-          <a href="Date.src/M000083.html" target="Code" class="method-signature"
-            onclick="popupCode('Date.src/M000083.html');return false;">
+          <a href="#M000083" class="method-signature">
 
           <span class="method-name">weekday?</span><span class="method-args">()</span>
 
@@ -270,6 +311,17 @@ Example:
 Return true if the date is a weekday (Mon/Tue/Wed/Thu/Fri)
 </p>
 
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000083-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000083-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/date.rb, line 19</span>
+19:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">weekday?</span>
+20:     <span class="ruby-identifier">wday</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">wday</span><span class="ruby-operator">&lt;</span><span class="ruby-value">6</span>
+21:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
         </div>
       </div>
 
@@ -279,8 +331,7 @@ Return true if the date is a weekday (Mon/Tue/Wed/Thu/Fri)
 
         <div class="method-heading">
 
-          <a href="Date.src/M000084.html" target="Code" class="method-signature"
-            onclick="popupCode('Date.src/M000084.html');return false;">
+          <a href="#M000084" class="method-signature">
 
           <span class="method-name">weekend?</span><span class="method-args">()</span>
 
@@ -293,6 +344,17 @@ Return true if the date is a weekday (Mon/Tue/Wed/Thu/Fri)
           <p>
 Return true if the date is a weekend (Sat/Sun)
 </p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000084-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000084-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/date.rb, line 26</span>
+26:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">weekend?</span>
+27:     <span class="ruby-identifier">wday</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">wday</span><span class="ruby-operator">==</span><span class="ruby-value">6</span>
+28:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
 
         </div>
       </div>
