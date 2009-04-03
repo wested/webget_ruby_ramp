@@ -33,7 +33,7 @@ class String
  # - see String#decrement
 
  def increment(step=1)
-  s=~/\d+/ ? $`+($&.to_i+step).to_s+$' : s
+  /\d+/ ? $`+($&.to_i+step).to_s+$' : self
  end
 
 
@@ -47,7 +47,7 @@ class String
  # - see String#increment
 
  def decrement(step=1)
-  s=~/\d+/ ? $`+($&.to_i-step).to_s+$' : s
+  /\d+/ ? $`+($&.to_i-step).to_s+$' : self
  end
 
 

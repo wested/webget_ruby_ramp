@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
   s.require_path      = 'lib'
   s.has_rdoc          = true
   s.files             = ['lib/ramp.rb'] + CLASSES.map{|c| "lib/ramp/#{c}.rb"}
-  s.test_files        = CLASSES.map{|c| "test/unit/#{c}_test.rb"}
+  s.test_files        = CLASSES.map{|c| "test/unit/#{c}_test.rb"} + ['test/unit/yaml_test_1.yml','test/unit/yaml_test_2.yml']
+
 
 end
