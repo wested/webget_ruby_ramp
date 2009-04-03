@@ -34,7 +34,7 @@ class StringTest < Test::Unit::TestCase
     assert_equal('5','4'.increment,               'number is entire string')
     assert_equal('5foo','4foo'.increment,         'number is leftmost')
     assert_equal('foo5','foo4'.increment,         'number is rightmost')
-    assert_equal('foo9','foo10'.increment,        'number is rightmost with carry')
+    assert_equal('foo10','foo9'.increment,        'number is rightmost with carry')
     assert_equal('foo5bar','foo4bar'.increment,   'number is in then middle')
     assert_equal('foobar','foobar'.increment,     'no number, so should be unchanged')
   end
@@ -44,7 +44,7 @@ class StringTest < Test::Unit::TestCase
     assert_equal('3','4'.decrement,               'number is entire string')
     assert_equal('3foo','4foo'.decrement,         'number is leftmost')
     assert_equal('foo3','foo4'.decrement,         'number is rightmost')
-    assert_equal('foo10','foo9'.decrement,        'number is rightmost with carry')
+    assert_equal('foo9','foo10'.decrement,        'number is rightmost with carry')
     assert_equal('foo3bar','foo4bar'.decrement,   'number is in then middle')
     assert_equal('foobar','foobar'.decrement,     'no number, so should be unchanged')
   end
