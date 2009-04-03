@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.require_path      = 'lib'
   s.has_rdoc          = true
-  s.files             = CLASSES.map{|c| "lib/#{c}.rb"}
+  s.files             = ['lib/ramp.rb'] + CLASSES.map{|c| "lib/ramp/#{c}.rb"}
   s.test_files        = CLASSES.map{|c| "test/unit/#{c}_test.rb"}
 
 end
