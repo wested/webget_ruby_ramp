@@ -50,18 +50,4 @@ module YAML
     }
   end
 
-
-  # Map filepaths to their YAML.load equivalents.
-  #
-  # The filepaths can be strings or files, 
-  # because this method will call File.open on strings.
-
-  def YAML.load_files(*filepaths)
-    filepaths.map{|filepath| 
-      file = (filepath.is_a? File) ? filepath : File.open(filepath.to_s)
-      YAML.load(file)
-    }
-  end
-
-
 end

@@ -19,9 +19,5 @@ class YAMLTest < Test::Unit::TestCase
  end
 
 
- def test_load_files_empty
-  assert([],YAML.load_files())
- end
-
 end
 

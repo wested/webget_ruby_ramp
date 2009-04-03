@@ -1,5 +1,7 @@
 Gem::Specification.new do |s|
 
+  CLASSES             = %w'array date enumerable hash kernel nil numeric object process string time yaml'
+
   s.name              = "ramp"
   s.summary           = "ramp"
   s.version           = "1.5.0"
@@ -12,22 +14,7 @@ Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.require_path      = 'lib'
   s.has_rdoc          = true
-  s.files             = [
-  'lib/array.rb',
-  'lib/date.rb',
-  'lib/enumerable.rb',
-  'lib/hash.rb',
-  'lib/kernel.rb',
-  'lib/nil.rb',
-  'lib/numeric.rb',
-  'lib/object.rb',
-  'lib/process.rb',
-  'lib/string.rb',
-  'lib/time.rb',
-  'lib/yaml.rb',
-  ]
-  s.test_files        = ['test/unit/hash_test.rb']
-
-  #s.add_dependency('foo', '>=0.0.0')
+  s.files             = CLASSES.map{|c| "lib/#{c}.rb"}
+  s.test_files        = CLASSES.map{|c| "test/unit/#{c}_test.rb"}
 
 end
