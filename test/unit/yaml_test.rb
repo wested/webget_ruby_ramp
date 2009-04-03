@@ -4,7 +4,7 @@ require 'ramp'
 class YAMLTest < Test::Unit::TestCase
 
  def test_load_dir_pairs
-  dirpath='test/unit/*.yaml'
+  dirpath='test/unit/yaml_test_*.yml'
 
   # Ensure the test files are available
   expect_filenames=["test/unit/yaml_test_1.yml","test/unit/yaml_test_2.yml"]

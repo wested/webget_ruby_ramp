@@ -20,26 +20,26 @@ class HashTest < Test::Unit::TestCase
   end
 
 
-  def setup_rollable
-    @h=Hash.new
-    @h['a']=Hash.new
-    @h['b']=Hash.new
-    @h['c']=Hash.new
-    @h['a']['x']='m'
-    @h['a']['y']='n'
-    @h['a']['z']='o'
-    @h['b']['x']='p'
-    @h['b']['y']='q'
-    @h['b']['z']='r'
-    @h['c']['x']='s'
-    @h['c']['y']='t'
-    @h['c']['z']='u'
+  def rollable
+    h=Hash.new
+    h['a']=Hash.new
+    h['b']=Hash.new
+    h['c']=Hash.new
+    h['a']['x']='m'
+    h['a']['y']='n'
+    h['a']['z']='o'
+    h['b']['x']='p'
+    h['b']['y']='q'
+    h['b']['z']='r'
+    h['c']['x']='s'
+    h['c']['y']='t'
+    h['c']['z']='u'
+    return h
   end  
 
 
   def test_rolldown
-    setup_rollable
-    r=@h.rolldown
+    r=rollable.rolldown
     assert_equal(['x','y','z'], r.keys.sort)
     assert_equal(['m','p','s'], r['x'].sort)
     assert_equal(['n','q','t'], r['y'].sort)
@@ -48,8 +48,7 @@ class HashTest < Test::Unit::TestCase
 
 
   def test_rolldown_with_block
-    setup_rollable
-    r = @h.rolldown{|items| items.sort.inject{|sum,x| sum+=x}}
+    r=rollable.rolldown{|items| items.sort.inject{|sum,x| sum+=x}}
     assert_equal(['x','y','z'], r.keys.sort)
     assert_equal('mps', r['x'])
     assert_equal('nqt', r['y'])
@@ -58,8 +57,7 @@ class HashTest < Test::Unit::TestCase
 
 
   def test_rollup
-    setup_rollable
-    r=@h.rollup
+    r=rollable.rollup
     assert_equal(['a','b','c'], r.keys.sort)
     assert_equal(['m','n','o'], r['a'].sort)
     assert_equal(['p','q','r'], r['b'].sort)
@@ -68,7 +66,7 @@ class HashTest < Test::Unit::TestCase
 
 
   def test_rollup_with_block
-    r = @h.rollup{|items| items.sort.inject{|sum,x| sum+=x}}
+    r=rollable.rollup{|items| items.sort.inject{|sum,x| sum+=x}}
     assert_equal(['a','b','c'], r.keys.sort)
     assert_equal('mno', r['a'])
     assert_equal('pqr', r['b'])

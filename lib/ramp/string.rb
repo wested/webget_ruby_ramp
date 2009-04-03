@@ -33,7 +33,7 @@ class String
  # - see String#decrement
 
  def increment(step=1)
-   sub(/(\d+)(.*?)$/){|s|(($1.to_i)+step).to_s+$2}
+  s=~/\d+/ ? $`+($&.to_i+step).to_s+$' : s
  end
 
 
@@ -47,7 +47,7 @@ class String
  # - see String#increment
 
  def decrement(step=1)
-  sub(/(\d+)(.*?$)/){|s| $1+((($2.to_i)-step).to_s) }
+  s=~/\d+/ ? $`+($&.to_i-step).to_s+$' : s
  end
 
 
@@ -63,7 +63,8 @@ class String
  def self.prev_char(c) #=> prev_char, changed_flag, carry_flag
   case c
   when '1'..'9', 'B'..'Z', 'b'..'z'
-    return (c[0]-1).chr, true, false
+    i=(c.respond_to?(:ord) ? c.ord : c[0])
+    return (i-1).chr, true, false
   when '0'
     return '9', true, true
   when 'A'
