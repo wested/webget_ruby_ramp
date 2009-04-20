@@ -20,7 +20,7 @@ class HashTest < Test::Unit::TestCase
   end
 
 
-  def rollable
+  def pivotable
     h=Hash.new
     h['a']=Hash.new
     h['b']=Hash.new
@@ -38,39 +38,39 @@ class HashTest < Test::Unit::TestCase
   end  
 
 
-  def test_rolldown
-    r=rollable.rolldown
-    assert_equal(['x','y','z'], r.keys.sort)
-    assert_equal(['m','p','s'], r['x'].sort)
-    assert_equal(['n','q','t'], r['y'].sort)
-    assert_equal(['o','r','u'], r['z'].sort)
+  def test_pivot_vals
+    p=pivotable.pivot(:vals)
+    assert_equal(['x','y','z'], p.keys.sort)
+    assert_equal(['m','p','s'], p['x'].sort)
+    assert_equal(['n','q','t'], p['y'].sort)
+    assert_equal(['o','r','u'], p['z'].sort)
   end
 
 
-  def test_rolldown_with_block
-    r=rollable.rolldown{|items| items.sort.inject{|sum,x| sum+=x}}
-    assert_equal(['x','y','z'], r.keys.sort)
-    assert_equal('mps', r['x'])
-    assert_equal('nqt', r['y'])
-    assert_equal('oru', r['z'])
+  def test_pivot_vals_with_block
+    p=pivotable.pivot(:vals){|items| items.sort.inject{|sum,x| sum+=x}}
+    assert_equal(['x','y','z'], p.keys.sort)
+    assert_equal('mps', p['x'])
+    assert_equal('nqt', p['y'])
+    assert_equal('oru', p['z'])
   end
 
 
-  def test_rollup
-    r=rollable.rollup
-    assert_equal(['a','b','c'], r.keys.sort)
-    assert_equal(['m','n','o'], r['a'].sort)
-    assert_equal(['p','q','r'], r['b'].sort)
-    assert_equal(['s','t','u'], r['c'].sort)
+  def test_pivot_keys
+    p=pivotable.pivot(:keys)
+    assert_equal(['a','b','c'], p.keys.sort)
+    assert_equal(['m','n','o'], p['a'].sort)
+    assert_equal(['p','q','r'], p['b'].sort)
+    assert_equal(['s','t','u'], p['c'].sort)
   end
 
 
-  def test_rollup_with_block
-    r=rollable.rollup{|items| items.sort.inject{|sum,x| sum+=x}}
-    assert_equal(['a','b','c'], r.keys.sort)
-    assert_equal('mno', r['a'])
-    assert_equal('pqr', r['b'])
-    assert_equal('stu', r['c'])
+  def test_pivot_keys_with_block
+    p=pivot.pivot(:keys){|items| items.sort.inject{|sum,x| sum+=x}}
+    assert_equal(['a','b','c'], p.keys.sort)
+    assert_equal('mno', p['a'])
+    assert_equal('pqr', p['b'])
+    assert_equal('stu', p['c'])
   end
 
 

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Process</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/ramp/process_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ramp/process.rb">lib/ramp/process.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000069">::ps</a></li>
+					
+					<li><a href="#M000073">::ps_hash</a></li>
+					
+					<li><a href="#M000074">::ps_tdf</a></li>
+					
+					<li><a href="#M000075">::ps_text</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
+				
+					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+				
+					<li class="file"><a href="./ramp_gemspec.html">ramp.gemspec</a></li>
+				
+					<li class="file"><a href="./ramp_sha512_txt.html">ramp.sha512.txt</a></li>
+				
+					<li class="file"><a href="./test/unit/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
+				
+					<li class="file"><a href="./test/unit/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./EnumerableTest.html">EnumerableTest</a></li>
+				
+					<li><a href="./Array.html">Array</a></li>
+				
+					<li><a href="./ArrayTest.html">ArrayTest</a></li>
+				
+					<li><a href="./Date.html">Date</a></li>
+				
+					<li><a href="./DateTest.html">DateTest</a></li>
+				
+					<li><a href="./Enumerable.html">Enumerable</a></li>
+				
+					<li><a href="./Hash.html">Hash</a></li>
+				
+					<li><a href="./HashTest.html">HashTest</a></li>
+				
+					<li><a href="./Kernel.html">Kernel</a></li>
+				
+					<li><a href="./KernelTest.html">KernelTest</a></li>
+				
+					<li><a href="./NilClass.html">NilClass</a></li>
+				
+					<li><a href="./NilTest.html">NilTest</a></li>
+				
+					<li><a href="./Numeric.html">Numeric</a></li>
+				
+					<li><a href="./NumericTest.html">NumericTest</a></li>
+				
+					<li><a href="./Object.html">Object</a></li>
+				
+					<li><a href="./ObjectTest.html">ObjectTest</a></li>
+				
+					<li><a href="./Process.html">Process</a></li>
+				
+					<li><a href="./ProcessTest.html">ProcessTest</a></li>
+				
+					<li><a href="./RampTest.html">RampTest</a></li>
+				
+					<li><a href="./String.html">String</a></li>
+				
+					<li><a href="./StringTest.html">StringTest</a></li>
+				
+					<li><a href="./Time.html">Time</a></li>
+				
+					<li><a href="./TimeTest.html">TimeTest</a></li>
+				
+					<li><a href="./YAML.html">YAML</a></li>
+				
+					<li><a href="./YAMLTest.html">YAMLTest</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Process</h1>
+
+		<div id="description">
+			<p>
+<a href="Process.html">Process</a> extensions to help debug Ruby programs.
+</p>
+<h2>Examples</h2>
+<pre>
+  puts Process.ps_text
+  =&gt; print the raw ps text
+
+  hash = Process.ps_hash
+  =&gt; each key is a ps field name, each value is the string value
+
+  hash = Process.ps
+  =&gt; same as ps_hash, with typecasting and aliases
+
+  Process.ps['pcpu']
+  =&gt; percentage of cpu use, as a float
+
+  Process.ps['pmem']
+  =&gt; percentage of memory use, as a float
+</pre>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="PS_KEYS">PS_KEYS</a></dt>
+				
+				<dd class="description missing-docs">(Not documented)</dd>
+				
+			
+				<dt><a name="PS_COMMAND">PS_COMMAND</a></dt>
+				
+				<dd class="description missing-docs">(Not documented)</dd>
+				
+			
+				<dt><a name="PS_ALIASES">PS_ALIASES</a></dt>
+				
+				<dd class="description missing-docs">(Not documented)</dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="ps-method" class="method-detail ">
+				<a name="M000069"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ps</span><span
+						class="method-args">(pid=Process.pid)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the &#8216;ps&#8217; method parsed into integers, floats, etc., also
+including aliases. OPTIMIZE: add dates, times
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ps-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 67</span>
+67:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps</span>(<span class="ruby-identifier">pid</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>)
+68:    <span class="ruby-identifier">ps</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_hash</span>(<span class="ruby-identifier">pid</span>)
+69:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'c'</span>]      =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'c'</span>].<span class="ruby-identifier">to_i</span>
+70:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'cp'</span>]     =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'cp'</span>].<span class="ruby-identifier">to_f</span>
+71:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'egid'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'egid'</span>].<span class="ruby-identifier">to_i</span>
+72:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'egroup'</span>] =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'egroup'</span>].<span class="ruby-identifier">to_i</span>
+73:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'uid'</span>]    =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'uid'</span>].<span class="ruby-identifier">to_i</span>
+74:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'fgid'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'fgid'</span>].<span class="ruby-identifier">to_i</span>
+75:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'lwp'</span>]    =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'lwp'</span>].<span class="ruby-identifier">to_i</span>
+76:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'ni'</span>]     =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'ni'</span>].<span class="ruby-identifier">to_i</span>
+77:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'nlwp'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'nlwp'</span>].<span class="ruby-identifier">to_i</span>
+78:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'pcpu'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'pcpu'</span>].<span class="ruby-identifier">to_f</span>
+79:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'pgid'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'pgid'</span>].<span class="ruby-identifier">to_i</span>
+80:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'pid'</span>]    =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'pid'</span>].<span class="ruby-identifier">to_i</span>
+81:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'pmem'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'pmem'</span>].<span class="ruby-identifier">to_f</span>
+82:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'ppid'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'ppid'</span>].<span class="ruby-identifier">to_i</span>
+83:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'rgid'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'rgid'</span>].<span class="ruby-identifier">to_i</span>
+84:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'rss'</span>]    =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'rss'</span>].<span class="ruby-identifier">to_i</span>
+85:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'ruid'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'ruid'</span>].<span class="ruby-identifier">to_i</span>  
+86:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'sid'</span>]    =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'sid'</span>].<span class="ruby-identifier">to_i</span>  
+87:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'sgid'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'sgid'</span>].<span class="ruby-identifier">to_i</span>  
+88:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'suid'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'suid'</span>].<span class="ruby-identifier">to_i</span>  
+89:    <span class="ruby-constant">PS_ALIASES</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">ps</span>[<span class="ruby-identifier">k</span>]=<span class="ruby-identifier">ps</span>[<span class="ruby-identifier">v</span>]}
+90:   <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">ps</span>
+91:  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="ps-hash-method" class="method-detail ">
+				<a name="M000073"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ps_hash</span><span
+						class="method-args">(pid=Process.pid)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the &#8216;ps&#8217; command as a hash of column name keys and
+values. This is particularly useful to skip the time cost of typecasting.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ps-hash-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 97</span>
+97:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_hash</span>(<span class="ruby-identifier">pid</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>)
+98:    <span class="ruby-constant">Hash</span>[<span class="ruby-constant">PS_KEYS</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">ps_text</span>(<span class="ruby-identifier">pid</span>).<span class="ruby-identifier">split</span>)]
+99:  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="ps-tdf-method" class="method-detail ">
+				<a name="M000074"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ps_tdf</span><span
+						class="method-args">(pid=Process.pid)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the &#8216;ps&#8217; command in tab delimited format (tdf). This is
+particularly useful for logging to a spreadsheet.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ps-tdf-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 105</span>
+105:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_tdf</span>(<span class="ruby-identifier">pid</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>)
+106:    <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_text</span>.<span class="ruby-identifier">split</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\t&quot;</span>)
+107:  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="ps-text-method" class="method-detail ">
+				<a name="M000075"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ps_text</span><span
+						class="method-args">(pid=Process.pid)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the &#8216;ps&#8217; command as one long text string. This is
+particularly useful for logging to a text file.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ps-text-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 113</span>
+113:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_text</span>(<span class="ruby-identifier">pid</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>)
+114:    <span class="ruby-node">`#{PS_COMMAND} #{pid.to_i}`</span>
+115:  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

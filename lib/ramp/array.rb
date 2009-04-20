@@ -1,5 +1,42 @@
 class Array
 
+  alias :ruby_join :join
+
+  # Improved join to concatenate the items into a string
+  #
+  # ==Typical Array#join
+  #   list=['anne','beth','cate']
+  #   list.join
+  #    =>
+  #   "annebethcate"
+  #
+  # ==Typical Array#join with separator
+  #   list=['anne','beth','cate']
+  #   list.join("+") 
+  #   =>
+  #   "anne+beth+cate"
+  #
+  # ==Improved join with prefix and suffix
+  #   list=['anne','beth','cate']
+  #   list.join("+","-")
+  #    =>
+  #    "+anne-+beth-+cate-"
+  #
+  # ==Example of wrapping items in HTML tags
+  #   list=['anne','beth','cate']
+  #   list.join("<li>","</li>\n")
+  #   =>
+  #   <li>anne</li>
+  #   <li>beth</li>
+  #   <li>cate</li>
+
+  def join(prefix=nil,suffix=nil)
+    return (prefix and suffix) \
+    ? inject(""){|sum,s| sum += prefix + s.to_s + suffix}
+    : ruby_join(prefix)
+  end
+
+
   # Return true if size > 0
   #
   # ==Examples
@@ -115,11 +152,17 @@ class Array
   # Return the union of the array's items.
   # In typical use, each item is an array.
   #
-  # ==Examples
-  #   arr=[[1,2,3,4],[2,3,4,5],[3,4,5,6]]
-  #   arr.union
-  #   => [1,2,3,4,5,6]
+  # ==Example using Ruby Array pipe
+  #   a=[1,2,3]
+  #   b=[2,3,4]
+  #   a | b => [1,2,3,4]
   #
+  # ==Example using union method
+  #   arr=[a,b]
+  #   => [1,2,3,4]
+  #
+  # This is identical to 
+  
   # ==Examples with proc
   #   arr.map(&:foo).union
   #   => foos that are in any of the array items

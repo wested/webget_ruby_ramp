@@ -113,38 +113,11 @@ module Enumerable
   end
 
 
-  # Concatenate the items into a string.
+  # Shortcut to Array#join to concatenate the items into a string
   #
-  # ==Example
-  #   arr=['anne','beth','cate']
-  #   arr.cat => "annebethcate"
-  #
-  # You can optionally provide a prefix and suffix.
-  #
-  # ==Example
-  #   arr.cat("+") => "+anne+beth+cate"
-  #   arr.cat("+","-") => "+anne-+beth-+cate-"
-  #
-  # You can easily wrap items in HTML tags.
-  #
-  # ==Example
-  #   arr=['anne','beth','cate']
-  #   arr.cat("<li>","</li>\n")
-  #   =>
-  #   <li>anne</li>
-  #   <li>beth</li>
-  #   <li>cate</li>
 
-  def cat(prefix=nil,suffix=nil)
-    if prefix
-      if suffix
-        inject(""){|sum,s| sum += prefix + s.to_s + suffix}
-      else
-        inject(""){|sum,s| sum += prefix + s.to_s }
-      end
-    else
-      inject(""){|sum,s| sum += s.to_s }
-    end
+  def join(prefix=nil,suffix=nil)
+   to_a.join(prefix,suffix)
   end
 
 
