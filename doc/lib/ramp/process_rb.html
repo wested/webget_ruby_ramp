@@ -24,7 +24,7 @@
 	<div id="metadata">
 		<dl>
 			<dt class="modified-date">Last Modified</dt>
-			<dd class="modified-date">Wed Apr 01 21:39:14 -0700 2009</dd>
+			<dd class="modified-date">Mon Apr 20 15:34:07 -0700 2009</dd>
 
 			
 			<dt class="requires">Requires</dt>
@@ -49,20 +49,17 @@ programs.
 </p>
 <h2>Examples</h2>
 <pre>
-  puts Process.ps_text
-  =&gt; print the raw ps text
+  p = Process.ps
+  puts p
+  =&gt; the results of the 'ps' command for the current process id
 
-  hash = Process.ps_hash
-  =&gt; each key is a ps field name, each value is the string value
+  p = Process.ps(1234)
+  puts p
+  =&gt; the results of the 'ps' command for process id 1234
 
-  hash = Process.ps
-  =&gt; same as ps_hash, with typecasting and aliases
-
-  Process.ps['pcpu']
-  =&gt; percentage of cpu use, as a float
-
-  Process.ps['pmem']
-  =&gt; percentage of memory use, as a float
+  p = Process.pss
+  p['%cpu'] =&gt; percentage of cpu use, as a float
+  p['%mem'] =&gt; percentage of memory use, as a float
 </pre>
 
 		</div>

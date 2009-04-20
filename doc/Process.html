@@ -52,13 +52,21 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000069">::ps</a></li>
+					<li><a href="#M000064">::ps</a></li>
 					
-					<li><a href="#M000073">::ps_hash</a></li>
+					<li><a href="#M000071">::ps_aliases</a></li>
 					
-					<li><a href="#M000074">::ps_tdf</a></li>
+					<li><a href="#M000072">::ps_aliases</a></li>
 					
-					<li><a href="#M000075">::ps_text</a></li>
+					<li><a href="#M000076">::ps_command</a></li>
+					
+					<li><a href="#M000077">::ps_command=</a></li>
+					
+					<li><a href="#M000073">::ps_keys</a></li>
+					
+					<li><a href="#M000075">::ps_keys=</a></li>
+					
+					<li><a href="#M000065">::pss</a></li>
 					
 				</ul>
 			</div>
@@ -173,47 +181,22 @@
 </p>
 <h2>Examples</h2>
 <pre>
-  puts Process.ps_text
-  =&gt; print the raw ps text
+  p = Process.ps
+  puts p
+  =&gt; the results of the 'ps' command for the current process id
 
-  hash = Process.ps_hash
-  =&gt; each key is a ps field name, each value is the string value
+  p = Process.ps(1234)
+  puts p
+  =&gt; the results of the 'ps' command for process id 1234
 
-  hash = Process.ps
-  =&gt; same as ps_hash, with typecasting and aliases
-
-  Process.ps['pcpu']
-  =&gt; percentage of cpu use, as a float
-
-  Process.ps['pmem']
-  =&gt; percentage of memory use, as a float
+  p = Process.pss
+  p['%cpu'] =&gt; percentage of cpu use, as a float
+  p['%mem'] =&gt; percentage of memory use, as a float
 </pre>
 
 		</div>
 
 		<!-- Constants -->
-		
-		<div id="constants-list" class="section">
-			<h3 class="section-header">Constants</h3>
-			<dl>
-			
-				<dt><a name="PS_KEYS">PS_KEYS</a></dt>
-				
-				<dd class="description missing-docs">(Not documented)</dd>
-				
-			
-				<dt><a name="PS_COMMAND">PS_COMMAND</a></dt>
-				
-				<dd class="description missing-docs">(Not documented)</dd>
-				
-			
-				<dt><a name="PS_ALIASES">PS_ALIASES</a></dt>
-				
-				<dd class="description missing-docs">(Not documented)</dd>
-				
-			
-			</dl>
-		</div>
 		
 
 		<!-- Attributes -->
@@ -226,7 +209,7 @@
 
 		
 			<div id="ps-method" class="method-detail ">
-				<a name="M000069"></a>
+				<a name="M000064"></a>
 
 				<div class="method-heading">
 				
@@ -239,8 +222,8 @@
 				<div class="method-description">
 					
 					<p>
-Return the &#8216;ps&#8217; method parsed into integers, floats, etc., also
-including aliases. OPTIMIZE: add dates, times
+Return the &#8216;ps&#8217; command as one long text string. This is
+typically useful for logging to a text file.
 </p>
 					
 
@@ -248,32 +231,10 @@ including aliases. OPTIMIZE: add dates, times
 					<div class="method-source-code"
 						id="ps-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 67</span>
-67:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps</span>(<span class="ruby-identifier">pid</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>)
-68:    <span class="ruby-identifier">ps</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_hash</span>(<span class="ruby-identifier">pid</span>)
-69:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'c'</span>]      =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'c'</span>].<span class="ruby-identifier">to_i</span>
-70:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'cp'</span>]     =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'cp'</span>].<span class="ruby-identifier">to_f</span>
-71:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'egid'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'egid'</span>].<span class="ruby-identifier">to_i</span>
-72:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'egroup'</span>] =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'egroup'</span>].<span class="ruby-identifier">to_i</span>
-73:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'uid'</span>]    =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'uid'</span>].<span class="ruby-identifier">to_i</span>
-74:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'fgid'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'fgid'</span>].<span class="ruby-identifier">to_i</span>
-75:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'lwp'</span>]    =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'lwp'</span>].<span class="ruby-identifier">to_i</span>
-76:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'ni'</span>]     =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'ni'</span>].<span class="ruby-identifier">to_i</span>
-77:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'nlwp'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'nlwp'</span>].<span class="ruby-identifier">to_i</span>
-78:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'pcpu'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'pcpu'</span>].<span class="ruby-identifier">to_f</span>
-79:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'pgid'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'pgid'</span>].<span class="ruby-identifier">to_i</span>
-80:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'pid'</span>]    =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'pid'</span>].<span class="ruby-identifier">to_i</span>
-81:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'pmem'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'pmem'</span>].<span class="ruby-identifier">to_f</span>
-82:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'ppid'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'ppid'</span>].<span class="ruby-identifier">to_i</span>
-83:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'rgid'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'rgid'</span>].<span class="ruby-identifier">to_i</span>
-84:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'rss'</span>]    =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'rss'</span>].<span class="ruby-identifier">to_i</span>
-85:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'ruid'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'ruid'</span>].<span class="ruby-identifier">to_i</span>  
-86:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'sid'</span>]    =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'sid'</span>].<span class="ruby-identifier">to_i</span>  
-87:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'sgid'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'sgid'</span>].<span class="ruby-identifier">to_i</span>  
-88:    <span class="ruby-identifier">ps</span>[<span class="ruby-value str">'suid'</span>]   =<span class="ruby-identifier">ps</span>[<span class="ruby-value str">'suid'</span>].<span class="ruby-identifier">to_i</span>  
-89:    <span class="ruby-constant">PS_ALIASES</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">ps</span>[<span class="ruby-identifier">k</span>]=<span class="ruby-identifier">ps</span>[<span class="ruby-identifier">v</span>]}
-90:   <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">ps</span>
-91:  <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 24</span>
+24:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps</span>(<span class="ruby-identifier">pid</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>)
+25:    <span class="ruby-node">`#{self.ps_command} #{pid.to_i}`</span>
+26:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -282,32 +243,124 @@ including aliases. OPTIMIZE: add dates, times
 			</div>
 
 		
-			<div id="ps-hash-method" class="method-detail ">
-				<a name="M000073"></a>
+			<div id="ps-aliases-method" class="method-detail ">
+				<a name="M000071"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">ps_hash</span><span
-						class="method-args">(pid=Process.pid)</span>
+					<span class="method-name">ps_aliases</span><span
+						class="method-args">()</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
 
 				<div class="method-description">
 					
-					<p>
-Return the &#8216;ps&#8217; command as a hash of column name keys and
-values. This is particularly useful to skip the time cost of typecasting.
-</p>
+					<p class="missing-docs">(Not documented)</p>
 					
 
 					
 					<div class="method-source-code"
-						id="ps-hash-source">
+						id="ps-aliases-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 57</span>
+ 57:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_aliases</span>
+ 58:     <span class="ruby-ivar">@@ps_aliases</span><span class="ruby-operator">||=</span><span class="ruby-constant">Hash</span>[<span class="ruby-node">%w'
+ 59:     %cpu pcpu
+ 60:     %mem pmem
+ 61:     sig_block blocked
+ 62:     sigmask blocked
+ 63:     sig_catch caught
+ 64:     sigcatch caught
+ 65:     cls class
+ 66:     cls policy
+ 67:     cputime time
+ 68:     gid egid 
+ 69:     group egroup
+ 70:     uid euid 
+ 71:     uname euser
+ 72:     user euser 
+ 73:     flag f
+ 74:     flags f
+ 75:     fsuid fuid
+ 76:     sig_ignore ignored
+ 77:     sigignore ignored
+ 78:     spid lwp 
+ 79:     tid lwp 
+ 80:     nice ni
+ 81:     thcount nlwp
+ 82:     sig pending 
+ 83:     sig_pend pending
+ 84:     pgrp pgid 
+ 85:     rssize rss
+ 86:     rsz rss
+ 87:     state s
+ 88:     sess sid
+ 89:     session sid
+ 90:     svgid sgid
+ 91:     tt tname 
+ 92:     tty tname 
+ 93:     vsz vsize
+ 94:   '</span>]
+ 95: 
+ 96: 
+ 97:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_aliases</span>(=<span class="ruby-identifier">aliases</span>)
+ 98:   <span class="ruby-ivar">@@ps_aliases</span>=<span class="ruby-identifier">aliases</span>
+ 99:  <span class="ruby-keyword kw">end</span>
+100: 
+101: 
+102:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_keys</span>
+103:   <span class="ruby-ivar">@@ps_keys</span>=<span class="ruby-node">%w'blocked bsdtime c caught class cp egid egroup eip esp etime euid euser f fgid fgroup fuid fuser group ignored label lwp ni nlwp nwchan pending pcpu pgid pid pmem ppid pri psr rgid rgroup rss rtprio ruid ruser s sched sgi_p sgid sgroup sid sig size stackp start_time stat suid suser sz time tname tpgid vsize wchan'</span>
+104: 
+105: 
+106:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_keys=</span>(<span class="ruby-identifier">keys</span>)
+107:   <span class="ruby-ivar">@@ps_keys</span>=<span class="ruby-identifier">keys</span>
+108:  <span class="ruby-keyword kw">end</span>
+109: 
+110: 
+111:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_command</span>
+112:   <span class="ruby-ivar">@@ps_command</span><span class="ruby-operator">||=</span><span class="ruby-value str">'ps h ww -o '</span><span class="ruby-operator">+</span><span class="ruby-constant">PS_KEYS</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>)
+113:  <span class="ruby-keyword kw">end</span>
+114: 
+115: 
+116:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_command=</span>(<span class="ruby-identifier">command</span>)
+117:   <span class="ruby-ivar">@@ps_comannd</span>=<span class="ruby-identifier">command</span>
+118:  <span class="ruby-keyword kw">end</span>
+119: 
+120: 
+121: <span class="ruby-keyword kw">end</span>
+</pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="ps-aliases-method" class="method-detail ">
+				<a name="M000072"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ps_aliases</span><span
+						class="method-args">(=aliases)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ps-aliases-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 97</span>
-97:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_hash</span>(<span class="ruby-identifier">pid</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>)
-98:    <span class="ruby-constant">Hash</span>[<span class="ruby-constant">PS_KEYS</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">ps_text</span>(<span class="ruby-identifier">pid</span>).<span class="ruby-identifier">split</span>)]
+97:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_aliases</span>(=<span class="ruby-identifier">aliases</span>)
+98:   <span class="ruby-ivar">@@ps_aliases</span>=<span class="ruby-identifier">aliases</span>
 99:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
@@ -317,33 +370,30 @@ values. This is particularly useful to skip the time cost of typecasting.
 			</div>
 
 		
-			<div id="ps-tdf-method" class="method-detail ">
-				<a name="M000074"></a>
+			<div id="ps-command-method" class="method-detail ">
+				<a name="M000076"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">ps_tdf</span><span
-						class="method-args">(pid=Process.pid)</span>
+					<span class="method-name">ps_command</span><span
+						class="method-args">()</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
 
 				<div class="method-description">
 					
-					<p>
-Return the &#8216;ps&#8217; command in tab delimited format (tdf). This is
-particularly useful for logging to a spreadsheet.
-</p>
+					<p class="missing-docs">(Not documented)</p>
 					
 
 					
 					<div class="method-source-code"
-						id="ps-tdf-source">
+						id="ps-command-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 105</span>
-105:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_tdf</span>(<span class="ruby-identifier">pid</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>)
-106:    <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_text</span>.<span class="ruby-identifier">split</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\t&quot;</span>)
-107:  <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 111</span>
+111:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_command</span>
+112:   <span class="ruby-ivar">@@ps_command</span><span class="ruby-operator">||=</span><span class="ruby-value str">'ps h ww -o '</span><span class="ruby-operator">+</span><span class="ruby-constant">PS_KEYS</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>)
+113:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -352,12 +402,125 @@ particularly useful for logging to a spreadsheet.
 			</div>
 
 		
-			<div id="ps-text-method" class="method-detail ">
+			<div id="ps-command--method" class="method-detail ">
+				<a name="M000077"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ps_command=</span><span
+						class="method-args">(command)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ps-command--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 116</span>
+116:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_command=</span>(<span class="ruby-identifier">command</span>)
+117:   <span class="ruby-ivar">@@ps_comannd</span>=<span class="ruby-identifier">command</span>
+118:  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="ps-keys-method" class="method-detail ">
+				<a name="M000073"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ps_keys</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ps-keys-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 102</span>
+102:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_keys</span>
+103:   <span class="ruby-ivar">@@ps_keys</span>=<span class="ruby-node">%w'blocked bsdtime c caught class cp egid egroup eip esp etime euid euser f fgid fgroup fuid fuser group ignored label lwp ni nlwp nwchan pending pcpu pgid pid pmem ppid pri psr rgid rgroup rss rtprio ruid ruser s sched sgi_p sgid sgroup sid sig size stackp start_time stat suid suser sz time tname tpgid vsize wchan'</span>
+104: 
+105: 
+106:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_keys=</span>(<span class="ruby-identifier">keys</span>)
+107:   <span class="ruby-ivar">@@ps_keys</span>=<span class="ruby-identifier">keys</span>
+108:  <span class="ruby-keyword kw">end</span>
+109: 
+110: 
+111:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_command</span>
+112:   <span class="ruby-ivar">@@ps_command</span><span class="ruby-operator">||=</span><span class="ruby-value str">'ps h ww -o '</span><span class="ruby-operator">+</span><span class="ruby-constant">PS_KEYS</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>)
+113:  <span class="ruby-keyword kw">end</span>
+114: 
+115: 
+116:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_command=</span>(<span class="ruby-identifier">command</span>)
+117:   <span class="ruby-ivar">@@ps_comannd</span>=<span class="ruby-identifier">command</span>
+118:  <span class="ruby-keyword kw">end</span>
+119: 
+120: 
+121: <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="ps-keys--method" class="method-detail ">
 				<a name="M000075"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">ps_text</span><span
+					<span class="method-name">ps_keys=</span><span
+						class="method-args">(keys)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ps-keys--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 106</span>
+106:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_keys=</span>(<span class="ruby-identifier">keys</span>)
+107:   <span class="ruby-ivar">@@ps_keys</span>=<span class="ruby-identifier">keys</span>
+108:  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="pss-method" class="method-detail ">
+				<a name="M000065"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pss</span><span
 						class="method-args">(pid=Process.pid)</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
@@ -366,19 +529,42 @@ particularly useful for logging to a spreadsheet.
 				<div class="method-description">
 					
 					<p>
-Return the &#8216;ps&#8217; command as one long text string. This is
-particularly useful for logging to a text file.
+Return the &#8216;ps&#8217; command as a hash of keys and values. OPTIMIZE:
+add dates, times
 </p>
 					
 
 					
 					<div class="method-source-code"
-						id="ps-text-source">
+						id="pss-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 113</span>
-113:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_text</span>(<span class="ruby-identifier">pid</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>)
-114:    <span class="ruby-node">`#{PS_COMMAND} #{pid.to_i}`</span>
-115:  <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 30</span>
+30:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">pss</span>(<span class="ruby-identifier">pid</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>)
+31:    <span class="ruby-identifier">ps</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps</span>(<span class="ruby-identifier">pid</span>)
+32:    <span class="ruby-identifier">h</span>=<span class="ruby-constant">Hash</span>[<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_keys</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">ps</span>.<span class="ruby-identifier">split</span>)]
+33:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'c'</span>]      =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'c'</span>].<span class="ruby-identifier">to_i</span>
+34:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'cp'</span>]     =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'cp'</span>].<span class="ruby-identifier">to_f</span>
+35:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'egid'</span>]   =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'egid'</span>].<span class="ruby-identifier">to_i</span>
+36:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'egroup'</span>] =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'egroup'</span>].<span class="ruby-identifier">to_i</span>
+37:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'uid'</span>]    =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'uid'</span>].<span class="ruby-identifier">to_i</span>
+38:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'fgid'</span>]   =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'fgid'</span>].<span class="ruby-identifier">to_i</span>
+39:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'lwp'</span>]    =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'lwp'</span>].<span class="ruby-identifier">to_i</span>
+40:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'ni'</span>]     =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'ni'</span>].<span class="ruby-identifier">to_i</span>
+41:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'nlwp'</span>]   =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'nlwp'</span>].<span class="ruby-identifier">to_i</span>
+42:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'pcpu'</span>]   =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'pcpu'</span>].<span class="ruby-identifier">to_f</span>
+43:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'pgid'</span>]   =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'pgid'</span>].<span class="ruby-identifier">to_i</span>
+44:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'pid'</span>]    =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'pid'</span>].<span class="ruby-identifier">to_i</span>
+45:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'pmem'</span>]   =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'pmem'</span>].<span class="ruby-identifier">to_f</span>
+46:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'ppid'</span>]   =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'ppid'</span>].<span class="ruby-identifier">to_i</span>
+47:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'rgid'</span>]   =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'rgid'</span>].<span class="ruby-identifier">to_i</span>
+48:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'rss'</span>]    =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'rss'</span>].<span class="ruby-identifier">to_i</span>
+49:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'ruid'</span>]   =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'ruid'</span>].<span class="ruby-identifier">to_i</span>  
+50:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'sid'</span>]    =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'sid'</span>].<span class="ruby-identifier">to_i</span>  
+51:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'sgid'</span>]   =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'sgid'</span>].<span class="ruby-identifier">to_i</span>  
+52:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'suid'</span>]   =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'suid'</span>].<span class="ruby-identifier">to_i</span>  
+53:    <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_aliases</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>]=<span class="ruby-identifier">h</span>[<span class="ruby-identifier">v</span>]}
+54:   <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">h</span>
+55:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
