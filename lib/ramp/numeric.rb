@@ -18,9 +18,9 @@ class Numeric
  # This is useful for multiplying a number if and only if a flag is unset.
  #
  # ==Example
- #   sum = w.if_not(foo) +y.if_not(bar)
+ #   sum = w.unless(foo) +y.unless(bar)
 
- def if_not(flag)
+ def unless(flag)
   (flag==nil or flag==false or flag==0 or flag==[] or flag=={}) ? self : 0
  end
 

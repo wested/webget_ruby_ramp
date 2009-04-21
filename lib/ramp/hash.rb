@@ -8,6 +8,12 @@ class Hash
     size>0
   end
 
+  # Calls block once for each key in hsh, passing the key and value to the block as a two-element array.
+  # The keys are sorted.
+  def each_sort
+   keys.sort.each{|key| yield key,self[key] }
+  end
+
 
   # Calls block once for each key in hsh,
   # passing the value as a parameter, 

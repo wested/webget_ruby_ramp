@@ -27,27 +27,4 @@ module YAML
     end #each
   end #def
 
-
-  # Load yaml documents from a directory, and process the key/value pairs
-  #
-  # ==Example
-  #   YAML.load_dir_pairs('/tmp/*.yaml'){|key,val|
-  #     puts "This key is #{key}, val is #{val}"
-  #   }
-  #
-  # This method wraps the YAML.load_dir method,
-  # so if you choose to override YAML.load_dir 
-  # then you'll automatically get the same kind
-  # of behavior from YAML.load_dir_pairs.
-  #
-  # This method sorts the keys for you.
-
-  def YAML.load_dir_pairs(*dirpaths)
-    YAML.load_dir(dirpaths){|doc|
-      doc.keys.sort.each{|key|
-        yield key,doc[key]
-      }
-    }
-  end
-
 end

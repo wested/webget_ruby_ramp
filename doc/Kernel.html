@@ -54,8 +54,6 @@
 					
 					<li><a href="#M000089">#method_name</a></li>
 					
-					<li><a href="#M000091">#method_name_of_caller</a></li>
-					
 				</ul>
 			</div>
 			
@@ -214,61 +212,12 @@ href="http://eigenclass.org/hiki.rb?Changes+in+Ruby+1.9#l90">eigenclass.org/hiki
 					<div class="method-source-code"
 						id="method-name-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/kernel.rb, line 9</span>
- 9:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_name</span>(<span class="ruby-identifier">caller_index</span>=<span class="ruby-value">0</span>)
-10:     <span class="ruby-comment cmt"># Make this fast because its often doing logging &amp; reporting.</span>
-11:     <span class="ruby-comment cmt"># Inline this and use $1 because it's empirically faster than /1</span>
-12:     <span class="ruby-identifier">caller</span>[<span class="ruby-identifier">caller_index</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/`([^']*)'/</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">$1</span>
-13:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="method-name-of-caller-method" class="method-detail ">
-				<a name="M000091"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">method_name_of_caller</span><span
-						class="method-args">(caller_index=0)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-See:
-</p>
-<ul>
-<li><a
-href="http://www.ruby-forum.com/topic/75258">www.ruby-forum.com/topic/75258</a>
-
-</li>
-<li>In 1.9 (Ruby CVS HEAD) there is #<em>method</em> and #<em>callee</em>
-
-</li>
-<li><a
-href="http://eigenclass.org/hiki.rb?Changes+in+Ruby+1.9#l90">eigenclass.org/hiki.rb?Changes+in+Ruby+1.9#l90</a>
-
-</li>
-</ul>
-					
-
-					
-					<div class="method-source-code"
-						id="method-name-of-caller-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/ramp/kernel.rb, line 21</span>
-21:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_name_of_caller</span>(<span class="ruby-identifier">caller_index</span>=<span class="ruby-value">0</span>)
-22:     <span class="ruby-comment cmt"># Make this fast because its often doing logging &amp; reporting.</span>
-23:     <span class="ruby-comment cmt"># Inline this and use $1 because it's empirically faster than /1</span>
-24:     <span class="ruby-identifier">caller</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/`([^']*)'/</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">$1</span>
-25:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/kernel.rb, line 8</span>
+ 8:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_name</span>(<span class="ruby-identifier">caller_index</span>=<span class="ruby-value">0</span>)
+ 9:     <span class="ruby-comment cmt"># Make this fast because its often doing logging &amp; reporting.</span>
+10:     <span class="ruby-comment cmt"># Inline this and use $1 because it's empirically faster than /1</span>
+11:     <span class="ruby-identifier">caller</span>[<span class="ruby-identifier">caller_index</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/`([^']*)'/</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">$1</span>
+12:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

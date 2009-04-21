@@ -54,8 +54,6 @@
 					
 					<li><a href="#M000083">::load_dir</a></li>
 					
-					<li><a href="#M000084">::load_dir_pairs</a></li>
-					
 				</ul>
 			</div>
 			
@@ -226,59 +224,6 @@ Load yaml documents from a directory
 26:       <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#dir</span>
 27:     <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#each</span>
 28:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="load-dir-pairs-method" class="method-detail ">
-				<a name="M000084"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">load_dir_pairs</span><span
-						class="method-args">(*dirpaths)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Load yaml documents from a directory, and process the key/value pairs
-</p>
-<h2>Example</h2>
-<pre>
-  YAML.load_dir_pairs('/tmp/*.yaml'){|key,val|
-    puts &quot;This key is #{key}, val is #{val}&quot;
-  }
-</pre>
-<p>
-This method wraps the <a href="YAML.html#M000083">YAML.load_dir</a> method,
-so if you choose to override <a href="YAML.html#M000083">YAML.load_dir</a>
-then you&#8217;ll automatically get the same kind of behavior from <a
-href="YAML.html#M000084">YAML.load_dir_pairs</a>.
-</p>
-<p>
-This method sorts the keys for you.
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="load-dir-pairs-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/ramp/yaml.rb, line 45</span>
-45:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_dir_pairs</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">dirpaths</span>)
-46:     <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-identifier">dirpaths</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span>
-47:       <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
-48:         <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">key</span>,<span class="ruby-identifier">doc</span>[<span class="ruby-identifier">key</span>]
-49:       }
-50:     }
-51:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
