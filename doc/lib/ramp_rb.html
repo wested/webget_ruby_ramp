@@ -24,7 +24,7 @@
 	<div id="metadata">
 		<dl>
 			<dt class="modified-date">Last Modified</dt>
-			<dd class="modified-date">Tue Apr 21 09:48:42 -0700 2009</dd>
+			<dd class="modified-date">Tue Apr 21 09:50:33 -0700 2009</dd>
 
 			
 			<dt class="requires">Requires</dt>
@@ -192,12 +192,12 @@ specified array parameter
 Extensions that help debug Ruby programs.
 </p>
 <ul>
-<li>ps: output of the system &#8216;ps&#8217; command, also including aliases,
-as raw plain text.
+<li>(class) ps: output of the system &#8216;ps&#8217; command, also including
+aliases, as raw plain text.
 
 </li>
-<li>pps: output of the system &#8216;ps&#8217; command with each value parsed
-to appropriate type for the key, e.g., integer, float, etc..
+<li>(class) pss: output of the system &#8216;ps&#8217; command as a hash with
+each value set to the right type, e.g., integer, float, etc..
 
 </li>
 </ul>
@@ -232,6 +232,64 @@ two booleans.
 <li>split_tab: splits the string into an array at each embedded tab
 (&#8220;LasttFirsttMiddle&#8221; =>
 [&#8220;last&#8221;,&#8220;first&#8221;,&#8220;middle&#8221;])
+
+</li>
+</ul>
+<h2><a href="../String.html">String</a></h2>
+<ul>
+<li>capitalize_words (alias to titleize/titlecase): ensures the first character
+of each word is uppercase.
+
+</li>
+<li>decrement: decrease the rightmost natural number, defaults to one value
+lower or by the optional step parameter value.
+
+</li>
+<li>increment: increase the rightmost natural number, defaults to one value
+higher or by the optional step parameter value.
+
+</li>
+<li>prev/pred: previous string (&#8220;b&#8221; => &#8220;a&#8221;,
+&#8220;bbc&#8221; => &#8220;bbb&#8221;, &#8220;a&#8221; => &#8220;z&#8221;,
+&#8220;880&#8221; => &#8220;879&#8221;)
+
+</li>
+<li>prev/pred: updates variable to the previous string in place (astring =
+&#8220;bbc&#8221;, astring.prev!, puts astring => &#8220;bbb&#8221;)
+
+</li>
+<li>(class) prev_char/pred_char: returns the previous character, with a changed
+flag and carry flag; that is, there are three returned values, a string and
+two booleans.
+
+</li>
+<li>split_tab: splits the string into an array at each embedded tab
+(&#8220;LasttFirsttMiddle&#8221; =>
+[&#8220;last&#8221;,&#8220;first&#8221;,&#8220;middle&#8221;])
+
+</li>
+<li>to_class: the global class reference of a given string
+
+</li>
+<li>words: splits the string into an array of words
+
+</li>
+</ul>
+<h2><a href="../Time.html">Time</a></h2>
+<ul>
+<li>(class) stamp: current time in UTC as a timestamp string
+(&#8220;YYYYMMDDHHMMSS&#8221;)
+
+</li>
+</ul>
+<h2><a href="../YAML.html">YAML</a></h2>
+<ul>
+<li>(class) load_dir: passes each <a href="../YAML.html">YAML</a> file in a
+directory to a specified block
+
+</li>
+<li>(class) load_dir_pairs: passes each <a href="../YAML.html">YAML</a> file in
+a directory to a specified block as Key, value pair
 
 </li>
 </ul>

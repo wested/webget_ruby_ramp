@@ -62,8 +62,8 @@ Dupe methods:
 
 Extensions that help debug Ruby programs.
 
-* ps: output of the system 'ps' command, also including aliases, as raw plain text.
-* pps: output of the system 'ps' command with each value parsed to appropriate type for the key, e.g., integer, float, etc..
+* (class) ps: output of the system 'ps' command, also including aliases, as raw plain text.
+* (class) pss: output of the system 'ps' command as a hash with each value set to the right type, e.g., integer, float, etc..
 
 == String
 
@@ -74,6 +74,27 @@ Extensions that help debug Ruby programs.
 * prev/pred: updates variable to the previous string in place (astring = "bbc", astring.prev!, puts astring => "bbb")
 * (class) prev_char/pred_char: returns the previous character, with a changed flag and carry flag; that is, there are three returned values, a string and two booleans.
 * split_tab: splits the string into an array at each embedded tab ("Last\tFirst\tMiddle" => ["last","first","middle"])
+
+== String
+
+* capitalize_words (alias to titleize/titlecase): ensures the first character of each word is uppercase.
+* decrement: decrease the rightmost natural number, defaults to one value lower or by the optional step parameter value.
+* increment: increase the rightmost natural number, defaults to one value higher or by the optional step parameter value.
+* prev/pred: previous string ("b" => "a", "bbc" => "bbb", "a" => "z", "880" => "879")
+* prev/pred: updates variable to the previous string in place (astring = "bbc", astring.prev!, puts astring => "bbb")
+* (class) prev_char/pred_char: returns the previous character, with a changed flag and carry flag; that is, there are three returned values, a string and two booleans.
+* split_tab: splits the string into an array at each embedded tab ("Last\tFirst\tMiddle" => ["last","first","middle"])
+* to_class: the global class reference of a given string
+* words: splits the string into an array of words
+
+== Time
+
+* (class) stamp: current time in UTC as a timestamp string ("YYYYMMDDHHMMSS")
+
+== YAML
+
+* (class) load_dir: passes each YAML file in a directory to a specified block
+* (class) load_dir_pairs: passes each YAML file in a directory to a specified block as Key, value pair
 
 == Changes
 
