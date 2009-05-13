@@ -63,7 +63,9 @@
 					
 					<li><a href="#M000101">#each_value!</a></li>
 					
-					<li><a href="#M000103">#pivot</a></li>
+					<li><a href="#M000104">#pivot</a></li>
+					
+					<li><a href="#M000105">#pivot_direction_up?</a></li>
 					
 					<li><a href="#M000099">#size?</a></li>
 					
@@ -270,7 +272,7 @@ updating it in place.
 
 		
 			<div id="pivot-method" class="method-detail ">
-				<a name="M000103"></a>
+				<a name="M000104"></a>
 
 				<div class="method-heading">
 				
@@ -283,7 +285,7 @@ updating it in place.
 				<div class="method-description">
 					
 					<p>
-<a href="Hash.html#M000103">Hash#pivot</a> aggregates values for a hash of
+<a href="Hash.html#M000104">Hash#pivot</a> aggregates values for a hash of
 hashes, for example to calculate subtotals and groups.
 </p>
 <p>
@@ -342,24 +344,19 @@ You can provide a block that will be called for the pivot items.
  90:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pivot</span>(<span class="ruby-identifier">direction</span>=<span class="ruby-value str">'keys'</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
  91:     <span class="ruby-identifier">a</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>
  92:     <span class="ruby-identifier">direction</span>=<span class="ruby-identifier">direction</span>.<span class="ruby-identifier">to_s</span>
- 93:     <span class="ruby-identifier">direction_up?</span> = \
- 94:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">direction</span>
- 95:       <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'key'</span>,<span class="ruby-value str">'keys'</span>,<span class="ruby-value str">'up'</span>,<span class="ruby-value str">'left'</span>,<span class="ruby-value str">'out'</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">k1</span>
- 96:       <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'val'</span>,<span class="ruby-value str">'vals'</span>,<span class="ruby-value str">'down'</span>,<span class="ruby-value str">'right'</span>,<span class="ruby-value str">'in'</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">k2</span>
- 97:       <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-value str">'Pivot direction must be either: up/left/out or down/right/in'</span>
- 98:       <span class="ruby-keyword kw">end</span>
- 99:     <span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k1</span>,<span class="ruby-identifier">v1</span><span class="ruby-operator">|</span>
-100:       <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k2</span>,<span class="ruby-identifier">v2</span><span class="ruby-operator">|</span>
-101:         <span class="ruby-identifier">k</span> = <span class="ruby-identifier">direction_up?</span> <span class="ruby-value">? </span><span class="ruby-identifier">k1</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">k2</span>
-102:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]=[] <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]<span class="ruby-operator">==</span><span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]<span class="ruby-operator">==</span>{})
-103:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]<span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">v2</span>)
-104:       }
-105:     }
-106:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span> 
-107:       <span class="ruby-identifier">a</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]=(<span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">v</span>)}
-108:     <span class="ruby-keyword kw">end</span>
-109:     <span class="ruby-identifier">a</span>
-110:   <span class="ruby-keyword kw">end</span></pre>
+ 93:     <span class="ruby-identifier">up</span>=<span class="ruby-identifier">pivot_direction_up?</span>(<span class="ruby-identifier">direction</span>)
+ 94:     <span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k1</span>,<span class="ruby-identifier">v1</span><span class="ruby-operator">|</span>
+ 95:       <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k2</span>,<span class="ruby-identifier">v2</span><span class="ruby-operator">|</span>
+ 96:         <span class="ruby-identifier">k</span> = <span class="ruby-identifier">up</span> <span class="ruby-value">? </span><span class="ruby-identifier">k1</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">k2</span>
+ 97:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]=[] <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]<span class="ruby-operator">==</span><span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]<span class="ruby-operator">==</span>{})
+ 98:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]<span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">v2</span>)
+ 99:       }
+100:     }
+101:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span> 
+102:       <span class="ruby-identifier">a</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]=(<span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">v</span>)}
+103:     <span class="ruby-keyword kw">end</span>
+104:     <span class="ruby-identifier">a</span>
+105:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -438,6 +435,48 @@ href="http://snippets.dzone.com/tag/yaml">snippets.dzone.com/tag/yaml</a>
 43:       <span class="ruby-keyword kw">end</span>
 44:     <span class="ruby-keyword kw">end</span>
 45:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="protected-instance-method-details" class="method-section section">
+			<h3 class="section-header">Protected Instance Methods</h3>
+
+		
+			<div id="pivot-direction-up--method" class="method-detail ">
+				<a name="M000105"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pivot_direction_up?</span><span
+						class="method-args">(direction_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="pivot-direction-up--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 109</span>
+109:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pivot_direction_up?</span>(<span class="ruby-identifier">direction_name</span>)
+110:     <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">direction_name</span>
+111:     <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'key'</span>,<span class="ruby-value str">'keys'</span>,<span class="ruby-value str">'up'</span>,<span class="ruby-value str">'left'</span>,<span class="ruby-value str">'out'</span> <span class="ruby-keyword kw">then</span> <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+112:     <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'val'</span>,<span class="ruby-value str">'vals'</span>,<span class="ruby-value str">'down'</span>,<span class="ruby-value str">'right'</span>,<span class="ruby-value str">'in'</span> <span class="ruby-keyword kw">then</span> <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+113:     <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-value str">'Pivot direction must be either: up/left/out or down/right/in'</span>
+114:     <span class="ruby-keyword kw">end</span>
+115:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

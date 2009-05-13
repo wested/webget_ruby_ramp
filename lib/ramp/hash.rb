@@ -90,15 +90,10 @@ class Hash
   def pivot(direction='keys',&b)
     a=self.class.new
     direction=direction.to_s
-    direction_up? = \
-      case direction
-      when 'key','keys','up','left','out' then k1
-      when 'val','vals','down','right','in' then k2
-      else raise 'Pivot direction must be either: up/left/out or down/right/in'
-      end
+    up=pivot_direction_up?(direction)
     each_pair{|k1,v1|
       v1.each_pair{|k2,v2|
-        k = direction_up? ? k1 : k2
+        k = up ? k1 : k2
         a[k]=[] if (a[k]==nil or a[k]=={})
         a[k]<<(v2)
       }
@@ -107,6 +102,16 @@ class Hash
       a.each_pair{|k,v| a[k]=(yield v)}
     end
     a
+  end
+
+  protected
+
+  def pivot_direction_up?(direction_name)
+    case direction_name
+    when 'key','keys','up','left','out' then return true
+    when 'val','vals','down','right','in' then return false
+    else raise 'Pivot direction must be either: up/left/out or down/right/in'
+    end
   end
 
 end
