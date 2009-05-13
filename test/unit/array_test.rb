@@ -3,13 +3,20 @@ require 'ramp'
 
 class ArrayTest < Test::Unit::TestCase
 
- def test_size
-   assert_equal(false,[].size?)
-   assert_equal(true,[1].size?)
-   assert_equal(true,[1,2].size?)
-   assert_equal(true,[[]].size?)
- end
+  def test_join
+    a=['a','b','c']                                                                                                                                                                                                 
+    assert_equal('abc',a.join)
+    assert_equal('a+b+c',a.join('+'))
+    assert_equal('+a-+b-+c-',a.join('+','-'))
+  end
 
+  def test_size
+    assert_equal(false,[].size?)
+    assert_equal(true,[1].size?)
+    assert_equal(true,[1,2].size?)
+    assert_equal(true,[[]].size?)
+  end
+  
  def test_rotate
    a=[1,2,3,4]
    a.rotate!
@@ -61,6 +68,11 @@ class ArrayTest < Test::Unit::TestCase
    a=[[2,3,4],[4,3,5],[3,4,7]]
    assert_equal([3,4],a.intersect)
  end
+
+  def test_to_csv
+    a=[["a", "b"], ["c", "d"], ["e", "f"]]
+    assert_equal("a,b\nc,d\ne,f\n",a.to_csv)
+  end
 
 end
 

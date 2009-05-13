@@ -59,27 +59,27 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000068">#choice</a></li>
+					<li><a href="#M000070">#choice</a></li>
 					
-					<li><a href="#M000069">#choices</a></li>
+					<li><a href="#M000071">#choices</a></li>
 					
-					<li><a href="#M000077">#divvy</a></li>
+					<li><a href="#M000079">#divvy</a></li>
 					
-					<li><a href="#M000079">#intersect</a></li>
+					<li><a href="#M000081">#intersect</a></li>
 					
-					<li><a href="#M000064">#join</a></li>
+					<li><a href="#M000066">#join</a></li>
 					
-					<li><a href="#M000067">#rotate!</a></li>
+					<li><a href="#M000069">#rotate!</a></li>
 					
-					<li><a href="#M000065">#ruby_join</a></li>
+					<li><a href="#M000067">#ruby_join</a></li>
 					
-					<li><a href="#M000066">#size?</a></li>
+					<li><a href="#M000068">#size?</a></li>
 					
 					<li><a href="#M000076">#slices</a></li>
 					
-					<li><a href="#M000080">#to_csv</a></li>
+					<li><a href="#M000082">#to_csv</a></li>
 					
-					<li><a href="#M000078">#union</a></li>
+					<li><a href="#M000080">#union</a></li>
 					
 				</ul>
 			</div>
@@ -205,7 +205,7 @@
 
 		
 			<div id="choice-method" class="method-detail ">
-				<a name="M000068"></a>
+				<a name="M000070"></a>
 
 				<div class="method-heading">
 				
@@ -248,7 +248,7 @@ Implemented in Ruby 1.9
 
 		
 			<div id="choices-method" class="method-detail ">
-				<a name="M000069"></a>
+				<a name="M000071"></a>
 
 				<div class="method-heading">
 				
@@ -289,7 +289,7 @@ Return a new array filled with <em>n</em> calls to choice
 
 		
 			<div id="divvy-method" class="method-detail ">
-				<a name="M000077"></a>
+				<a name="M000079"></a>
 
 				<div class="method-heading">
 				
@@ -344,7 +344,7 @@ slices as it can.
 
 		
 			<div id="intersect-method" class="method-detail ">
-				<a name="M000079"></a>
+				<a name="M000081"></a>
 
 				<div class="method-heading">
 				
@@ -390,7 +390,7 @@ item is an array.
 
 		
 			<div id="join-method" class="method-detail ">
-				<a name="M000064"></a>
+				<a name="M000066"></a>
 
 				<div class="method-heading">
 				
@@ -405,14 +405,14 @@ item is an array.
 					<p>
 Improved join to concatenate the items into a string
 </p>
-<h2>Typical <a href="Array.html#M000064">Array#join</a></h2>
+<h2>Typical <a href="Array.html#M000066">Array#join</a></h2>
 <pre>
   list=['anne','beth','cate']
   list.join
    =&gt;
   &quot;annebethcate&quot;
 </pre>
-<h2>Typical <a href="Array.html#M000064">Array#join</a> with separator</h2>
+<h2>Typical <a href="Array.html#M000066">Array#join</a> with separator</h2>
 <pre>
   list=['anne','beth','cate']
   list.join(&quot;+&quot;)
@@ -444,7 +444,7 @@ Improved join to concatenate the items into a string
     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 33</span>
 33:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">join</span>(<span class="ruby-identifier">prefix</span>=<span class="ruby-keyword kw">nil</span>,<span class="ruby-identifier">suffix</span>=<span class="ruby-keyword kw">nil</span>)
 34:     <span class="ruby-keyword kw">return</span> (<span class="ruby-identifier">prefix</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">suffix</span>) \
-35:     <span class="ruby-operator">?</span> <span class="ruby-identifier">inject</span>(<span class="ruby-value str">&quot;&quot;</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>,<span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">suffix</span>}
+35:     <span class="ruby-operator">?</span> <span class="ruby-identifier">inject</span>(<span class="ruby-value str">&quot;&quot;</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>,<span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">suffix</span>} \
 36:     <span class="ruby-operator">:</span> <span class="ruby-identifier">ruby_join</span>(<span class="ruby-identifier">prefix</span>)
 37:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
@@ -453,14 +453,14 @@ Improved join to concatenate the items into a string
 
 				
 				<div class="aliases">
-					Also aliased as: <a href="Array.html#M000065">ruby_join</a>
+					Also aliased as: <a href="Array.html#M000067">ruby_join</a>
 				</div>
 				
 			</div>
 
 		
 			<div id="rotate--method" class="method-detail ">
-				<a name="M000067"></a>
+				<a name="M000069"></a>
 
 				<div class="method-heading">
 				
@@ -503,7 +503,7 @@ Return self
 
 		
 			<div id="ruby-join-method" class="method-detail method-alias">
-				<a name="M000065"></a>
+				<a name="M000067"></a>
 
 				<div class="method-heading">
 				
@@ -516,7 +516,7 @@ Return self
 				<div class="method-description">
 					
 					<p>
-Alias for <a href="Array.html#M000064">join</a>
+Alias for <a href="Array.html#M000066">join</a>
 </p>
 					
 
@@ -528,7 +528,7 @@ Alias for <a href="Array.html#M000064">join</a>
 
 		
 			<div id="size--method" class="method-detail ">
-				<a name="M000066"></a>
+				<a name="M000068"></a>
 
 				<div class="method-heading">
 				
@@ -620,12 +620,12 @@ If the slices don&#8217;t divide evenly, then the last is smaller.
 
 		
 			<div id="to-csv-method" class="method-detail ">
-				<a name="M000080"></a>
+				<a name="M000082"></a>
 
 				<div class="method-heading">
 				
 					<span class="method-name">to_csv</span><span
-						class="method-args">()</span>
+						class="method-args">(ops={})</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
@@ -640,14 +640,14 @@ If the slices don&#8217;t divide evenly, then the last is smaller.
 						id="to-csv-source">
 <pre>
      <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 200</span>
-200:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_csv</span>
+200:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_csv</span>(<span class="ruby-identifier">ops</span>={})
 201:     <span class="ruby-identifier">s</span>=<span class="ruby-value str">''</span>
 202:     <span class="ruby-constant">CSV</span><span class="ruby-operator">::</span><span class="ruby-constant">Writer</span>.<span class="ruby-identifier">generate</span>(<span class="ruby-identifier">s</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">csv</span><span class="ruby-operator">|</span>
 203:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span>
 204:         <span class="ruby-identifier">csv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">r</span>
 205:       <span class="ruby-keyword kw">end</span>
 206:     <span class="ruby-keyword kw">end</span>
-207:     <span class="ruby-identifier">str</span>
+207:     <span class="ruby-identifier">s</span>
 208:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
@@ -658,7 +658,7 @@ If the slices don&#8217;t divide evenly, then the last is smaller.
 
 		
 			<div id="union-method" class="method-detail ">
-				<a name="M000078"></a>
+				<a name="M000080"></a>
 
 				<div class="method-heading">
 				

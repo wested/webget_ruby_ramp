@@ -32,7 +32,7 @@ class Array
 
   def join(prefix=nil,suffix=nil)
     return (prefix and suffix) \
-    ? inject(""){|sum,s| sum += prefix + s.to_s + suffix}
+    ? inject(""){|sum,s| sum += prefix + s.to_s + suffix} \
     : ruby_join(prefix)
   end
 
@@ -195,16 +195,16 @@ class Array
   #
   ##############################################################
   
-  require 'CSV'
+  require 'csv'
  
-  def to_csv
+  def to_csv(ops={})
     s=''
     CSV::Writer.generate(s) do |csv|
       self.each do |r|
         csv << r
       end
     end
-    str
+    s
   end
 
 end
