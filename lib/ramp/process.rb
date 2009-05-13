@@ -94,7 +94,7 @@ module Process
   ']
 
 
- def self.ps_aliases(=aliases)
+ def self.ps_aliases=(aliases)
   @@ps_aliases=aliases
  end
 
