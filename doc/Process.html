@@ -52,21 +52,21 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000067">::ps</a></li>
+					<li><a href="#M000063">::ps</a></li>
 					
-					<li><a href="#M000073">::ps_aliases</a></li>
+					<li><a href="#M000071">::ps_aliases</a></li>
 					
-					<li><a href="#M000074">::ps_aliases=</a></li>
+					<li><a href="#M000072">::ps_aliases=</a></li>
 					
-					<li><a href="#M000079">::ps_command</a></li>
+					<li><a href="#M000076">::ps_command</a></li>
 					
-					<li><a href="#M000080">::ps_command=</a></li>
+					<li><a href="#M000077">::ps_command=</a></li>
 					
-					<li><a href="#M000075">::ps_keys</a></li>
+					<li><a href="#M000074">::ps_keys</a></li>
 					
-					<li><a href="#M000078">::ps_keys=</a></li>
+					<li><a href="#M000075">::ps_keys=</a></li>
 					
-					<li><a href="#M000068">::pss</a></li>
+					<li><a href="#M000064">::pss</a></li>
 					
 				</ul>
 			</div>
@@ -209,7 +209,7 @@
 
 		
 			<div id="ps-method" class="method-detail ">
-				<a name="M000067"></a>
+				<a name="M000063"></a>
 
 				<div class="method-heading">
 				
@@ -244,7 +244,7 @@ typically useful for logging to a text file.
 
 		
 			<div id="ps-aliases-method" class="method-detail ">
-				<a name="M000073"></a>
+				<a name="M000071"></a>
 
 				<div class="method-heading">
 				
@@ -312,7 +312,7 @@ typically useful for logging to a text file.
 
 		
 			<div id="ps-aliases--method" class="method-detail ">
-				<a name="M000074"></a>
+				<a name="M000072"></a>
 
 				<div class="method-heading">
 				
@@ -344,7 +344,7 @@ typically useful for logging to a text file.
 
 		
 			<div id="ps-command-method" class="method-detail ">
-				<a name="M000079"></a>
+				<a name="M000076"></a>
 
 				<div class="method-heading">
 				
@@ -365,7 +365,7 @@ typically useful for logging to a text file.
 <pre>
      <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 111</span>
 111:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_command</span>
-112:   <span class="ruby-ivar">@@ps_command</span><span class="ruby-operator">||=</span><span class="ruby-value str">'ps h ww -o '</span><span class="ruby-operator">+</span><span class="ruby-constant">PS_KEYS</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>)
+112:   <span class="ruby-ivar">@@ps_command</span><span class="ruby-operator">||=</span><span class="ruby-value str">'ps h ww -o '</span><span class="ruby-operator">+</span><span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_keys</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>)
 113:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
@@ -376,7 +376,7 @@ typically useful for logging to a text file.
 
 		
 			<div id="ps-command--method" class="method-detail ">
-				<a name="M000080"></a>
+				<a name="M000077"></a>
 
 				<div class="method-heading">
 				
@@ -408,7 +408,7 @@ typically useful for logging to a text file.
 
 		
 			<div id="ps-keys-method" class="method-detail ">
-				<a name="M000075"></a>
+				<a name="M000074"></a>
 
 				<div class="method-heading">
 				
@@ -429,7 +429,7 @@ typically useful for logging to a text file.
 <pre>
      <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 103</span>
 103:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_keys</span>
-104:   <span class="ruby-ivar">@@ps_keys</span>=<span class="ruby-node">%w'blocked bsdtime c caught class cp egid egroup eip esp etime euid euser f fgid fgroup fuid fuser group ignored label lwp ni nlwp nwchan pending pcpu pgid pid pmem ppid pri psr rgid rgroup rss rtprio ruid ruser s sched sgi_p sgid sgroup sid sig size stackp start_time stat suid suser sz time tname tpgid vsize wchan'</span>
+104:   <span class="ruby-ivar">@@ps_keys</span><span class="ruby-operator">||=</span><span class="ruby-node">%w'blocked bsdtime c caught class cp egid egroup eip esp etime euid euser f fgid fgroup fuid fuser group ignored label lwp ni nlwp nwchan pending pcpu pgid pid pmem ppid pri psr rgid rgroup rss rtprio ruid ruser s sched sgi_p sgid sgroup sid sig size stackp start_time stat suid suser sz time tname tpgid vsize wchan'</span>
 105:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
@@ -440,7 +440,7 @@ typically useful for logging to a text file.
 
 		
 			<div id="ps-keys--method" class="method-detail ">
-				<a name="M000078"></a>
+				<a name="M000075"></a>
 
 				<div class="method-heading">
 				
@@ -472,7 +472,7 @@ typically useful for logging to a text file.
 
 		
 			<div id="pss-method" class="method-detail ">
-				<a name="M000068"></a>
+				<a name="M000064"></a>
 
 				<div class="method-heading">
 				

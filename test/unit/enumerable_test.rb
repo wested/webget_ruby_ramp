@@ -111,11 +111,11 @@ class EnumerableTest < Test::Unit::TestCase
   ########################################################################
 
 
-  def test_cat
-    a=['anne','beth','cate']
-    assert_equal("annebethcate",a.cat,"cat()")
-    assert_equal("+anne+beth+cate",a.cat('+'),"cat('+')")
-    assert_equal("+anne-+beth-+cate-",a.cat("+","-"),"cat('+','-')")
+  def test_join
+    a=['a','b','c']
+    assert_equal("abc",a.join,"cat()")
+    assert_equal("+a+b+c",a.join('+'),"cat('+')")
+    assert_equal("+a-+b-+c-",a.join("+","-"),"cat('+','-')")
   end
 
 

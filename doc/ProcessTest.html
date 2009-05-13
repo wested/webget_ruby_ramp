@@ -59,13 +59,9 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000015">#test_ps</a></li>
+					<li><a href="#M000013">#test_ps</a></li>
 					
-					<li><a href="#M000014">#test_ps_hash</a></li>
-					
-					<li><a href="#M000013">#test_ps_tdf</a></li>
-					
-					<li><a href="#M000012">#test_ps_text</a></li>
+					<li><a href="#M000014">#test_pss</a></li>
 					
 				</ul>
 			</div>
@@ -202,7 +198,7 @@
 
 		
 			<div id="test-ps-method" class="method-detail ">
-				<a name="M000015"></a>
+				<a name="M000013"></a>
 
 				<div class="method-heading">
 				
@@ -221,14 +217,13 @@
 					<div class="method-source-code"
 						id="test-ps-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/process_test.rb, line 28</span>
-28:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_ps</span>
-29:   <span class="ruby-identifier">p</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">ps</span>
-30:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p!</span>=<span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">&quot;ps != nil&quot;</span>)
-31:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>),<span class="ruby-value str">&quot;ps is a hash&quot;</span>)
-32:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>[<span class="ruby-value str">'pcpu'</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">&quot;ps pcpu != nil&quot;</span>)
-33:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>[<span class="ruby-value str">'pcpu'</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Float</span>),<span class="ruby-value str">&quot;ps pcpu is a float&quot;</span>)
-34:  <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/process_test.rb, line 8</span>
+ 8:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_ps</span>
+ 9:   <span class="ruby-identifier">p</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">ps</span>
+10:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p!</span>=<span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">&quot;ps != nil&quot;</span>)
+11:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>),<span class="ruby-value str">&quot;ps is a string&quot;</span>)
+12:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>,<span class="ruby-value str">&quot;ps size &gt; 0&quot;</span>)
+13:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -237,12 +232,12 @@
 			</div>
 
 		
-			<div id="test-ps-hash-method" class="method-detail ">
+			<div id="test-pss-method" class="method-detail ">
 				<a name="M000014"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">test_ps_hash</span><span
+					<span class="method-name">test_pss</span><span
 						class="method-args">()</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
@@ -255,84 +250,16 @@
 
 					
 					<div class="method-source-code"
-						id="test-ps-hash-source">
+						id="test-pss-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/process_test.rb, line 21</span>
-21:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_ps_hash</span>
-22:   <span class="ruby-identifier">p</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">ps_hash</span>
-23:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p!</span>=<span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">&quot;ps_hash != nil&quot;</span>)
-24:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>),<span class="ruby-value str">&quot;ps_hash is a hash&quot;</span>)
-25:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>[<span class="ruby-value str">'pcpu'</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">&quot;ps_hash pcpu != nil&quot;</span>)
-26:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="test-ps-tdf-method" class="method-detail ">
-				<a name="M000013"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">test_ps_tdf</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="test-ps-tdf-source">
-<pre>
-    <span class="ruby-comment cmt"># File test/unit/process_test.rb, line 14</span>
-14:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_ps_tdf</span>
-15:   <span class="ruby-identifier">p</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">ps_tdf</span>
-16:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p!</span>=<span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">&quot;ps_tdf != nil&quot;</span>)
-17:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>),<span class="ruby-value str">&quot;ps_tdf is a string&quot;</span>)
-18:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span><span class="ruby-operator">=~</span><span class="ruby-regexp re">/\t/</span>,<span class="ruby-value str">&quot;ps_tdf has a tab&quot;</span>)
-19:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="test-ps-text-method" class="method-detail ">
-				<a name="M000012"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">test_ps_text</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="test-ps-text-source">
-<pre>
-    <span class="ruby-comment cmt"># File test/unit/process_test.rb, line 8</span>
- 8:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_ps_text</span>
- 9:   <span class="ruby-identifier">p</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">ps_text</span>
-10:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p!</span>=<span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">&quot;ps_text != nil&quot;</span>)
-11:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>),<span class="ruby-value str">&quot;ps_text is a string&quot;</span>)
-12:  <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/process_test.rb, line 15</span>
+15:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_pss</span>
+16:   <span class="ruby-identifier">p</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pss</span>
+17:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p!</span>=<span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">&quot;pss != nil&quot;</span>)
+18:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>),<span class="ruby-value str">&quot;ps_hash is a hash&quot;</span>)
+19:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>,<span class="ruby-value str">&quot;pss size &gt; 0&quot;</span>)
+20:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>[<span class="ruby-value str">'pcpu'</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">&quot;ps_hash pcpu != nil&quot;</span>)
+21:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
