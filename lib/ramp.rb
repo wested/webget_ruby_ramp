@@ -53,6 +53,7 @@ Dupe methods:
 
 * if: returns 0 if the passed flag is any of: nil, false, 0, [], {} and otherwise returns self
 * unless: returns 0 unless the passed flag is any of: nil, false, 0, [], {} and otherwise returns self
+* peta, tera, giga, mega, kilo, hecto, deka, deci, centi, milli, micro, nano: multiply/divide by powers of ten
 
 == Object
 

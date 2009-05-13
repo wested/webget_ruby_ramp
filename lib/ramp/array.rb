@@ -189,4 +189,22 @@ class Array
   end
 
 
+  ##############################################################
+  # 
+  # CASTS
+  #
+  ##############################################################
+  
+  require 'CSV'
+ 
+  def to_csv
+    s=''
+    CSV::Writer.generate(s) do |csv|
+      self.each do |r|
+        csv << r
+      end
+    end
+    str
+  end
+
 end
