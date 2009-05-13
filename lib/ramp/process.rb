@@ -55,7 +55,7 @@ module Process
  end
 
   def self.ps_aliases
-    @@ps_aliases||=Hash[%w'
+    @@ps_aliases||=Hash[*%w'
     %cpu pcpu
     %mem pmem
     sig_block blocked

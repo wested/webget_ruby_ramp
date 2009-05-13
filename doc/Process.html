@@ -265,7 +265,7 @@ typically useful for logging to a text file.
 <pre>
     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 57</span>
 57:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_aliases</span>
-58:     <span class="ruby-ivar">@@ps_aliases</span><span class="ruby-operator">||=</span><span class="ruby-constant">Hash</span>[<span class="ruby-node">%w'
+58:     <span class="ruby-ivar">@@ps_aliases</span><span class="ruby-operator">||=</span><span class="ruby-constant">Hash</span>[<span class="ruby-operator">*</span><span class="ruby-node">%w'
 59:     %cpu pcpu
 60:     %mem pmem
 61:     sig_block blocked
