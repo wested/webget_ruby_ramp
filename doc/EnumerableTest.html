@@ -68,17 +68,21 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000024">#test_join</a></li>
+					<li><a href="#M000024">#test_join_0</a></li>
+					
+					<li><a href="#M000025">#test_join_1</a></li>
+					
+					<li><a href="#M000026">#test_join_2</a></li>
 					
 					<li><a href="#M000015">#test_map_id</a></li>
 					
 					<li><a href="#M000016">#test_map_to_sym</a></li>
 					
-					<li><a href="#M000022">#test_nitems_until</a></li>
+					<li><a href="#M000021">#test_nitems_until</a></li>
 					
-					<li><a href="#M000021">#test_nitems_while</a></li>
+					<li><a href="#M000020">#test_nitems_while</a></li>
 					
-					<li><a href="#M000023">#test_nitems_with_index</a></li>
+					<li><a href="#M000022">#test_nitems_with_index</a></li>
 					
 					<li><a href="#M000018">#test_select_until_condition</a></li>
 					
@@ -236,12 +240,12 @@
 			<h3 class="section-header">Public Instance Methods</h3>
 
 		
-			<div id="test-join-method" class="method-detail ">
+			<div id="test-join--method" class="method-detail ">
 				<a name="M000024"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">test_join</span><span
+					<span class="method-name">test_join_0</span><span
 						class="method-args">()</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
@@ -256,15 +260,79 @@ strings
 
 					
 					<div class="method-source-code"
-						id="test-join-source">
+						id="test-join--source">
 <pre>
      <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 114</span>
-114:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_join</span>
+114:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_join_0</span>
 115:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]
-116:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;abc&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">join</span>,<span class="ruby-value str">&quot;cat()&quot;</span>)
-117:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;+a+b+c&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">'+'</span>),<span class="ruby-value str">&quot;cat('+')&quot;</span>)
-118:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;+a-+b-+c-&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;+&quot;</span>,<span class="ruby-value str">&quot;-&quot;</span>),<span class="ruby-value str">&quot;cat('+','-')&quot;</span>)
-119:   <span class="ruby-keyword kw">end</span></pre>
+116:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;abc&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">join</span>,<span class="ruby-value str">&quot;join()&quot;</span>)
+117:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="test-join--method" class="method-detail ">
+				<a name="M000025"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_join_1</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-join--source">
+<pre>
+     <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 119</span>
+119:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_join_1</span>
+120:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]
+121:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;a+b+c&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">'+'</span>),<span class="ruby-value str">&quot;join('+')&quot;</span>)
+122:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="test-join--method" class="method-detail ">
+				<a name="M000026"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_join_2</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-join--source">
+<pre>
+     <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 124</span>
+124:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_join_2</span>
+125:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]
+126:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;+a-+b-+c-&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;+&quot;</span>,<span class="ruby-value str">&quot;-&quot;</span>),<span class="ruby-value str">&quot;join('+','-')&quot;</span>)
+127:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -338,7 +406,7 @@ strings
 
 		
 			<div id="test-nitems-until-method" class="method-detail ">
-				<a name="M000022"></a>
+				<a name="M000021"></a>
 
 				<div class="method-heading">
 				
@@ -374,7 +442,7 @@ strings
 
 		
 			<div id="test-nitems-while-method" class="method-detail ">
-				<a name="M000021"></a>
+				<a name="M000020"></a>
 
 				<div class="method-heading">
 				
@@ -412,7 +480,7 @@ nitems
 
 		
 			<div id="test-nitems-with-index-method" class="method-detail ">
-				<a name="M000023"></a>
+				<a name="M000022"></a>
 
 				<div class="method-heading">
 				
