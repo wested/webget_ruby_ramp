@@ -114,7 +114,6 @@ module Enumerable
 
 
   # Shortcut to Array#join to concatenate the items into a string
-  #
 
   def join(prefix=nil,suffix=nil)
    to_a.join(prefix,suffix)

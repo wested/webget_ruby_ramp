@@ -66,7 +66,7 @@ class HashTest < Test::Unit::TestCase
 
 
   def test_pivot_keys_with_block
-    p=pivot.pivot(:keys){|items| items.sort.inject{|sum,x| sum+=x}}
+    p=pivotable.pivot(:keys){|items| items.sort.inject{|sum,x| sum+=x}}
     assert_equal(['a','b','c'], p.keys.sort)
     assert_equal('mno', p['a'])
     assert_equal('pqr', p['b'])

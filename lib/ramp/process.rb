@@ -29,7 +29,7 @@ module Process
  # OPTIMIZE: add dates, times
  def self.pss(pid=Process.pid)
    ps=self.ps(pid)
-   h=Hash[self.ps_keys.zip(ps.split)]
+   h=Hash[*self.ps_keys.zip(ps.split).flatten]
    h['c']      =h['c'].to_i
    h['cp']     =h['cp'].to_f
    h['egid']   =h['egid'].to_i
@@ -109,7 +109,7 @@ module Process
  end
 
  def self.ps_command
-  @@ps_command||='ps h ww -o '+self.ps_keys.join(',')
+  @@ps_command||='ps h ww -o "'+self.ps_keys.join(',')+'"'
  end
 
 

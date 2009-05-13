@@ -52,21 +52,21 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000073">::ps</a></li>
+					<li><a href="#M000065">::ps</a></li>
 					
-					<li><a href="#M000078">::ps_aliases</a></li>
+					<li><a href="#M000074">::ps_aliases</a></li>
 					
-					<li><a href="#M000079">::ps_aliases=</a></li>
+					<li><a href="#M000075">::ps_aliases=</a></li>
 					
-					<li><a href="#M000082">::ps_command</a></li>
+					<li><a href="#M000078">::ps_command</a></li>
 					
-					<li><a href="#M000083">::ps_command=</a></li>
+					<li><a href="#M000079">::ps_command=</a></li>
 					
-					<li><a href="#M000080">::ps_keys</a></li>
+					<li><a href="#M000076">::ps_keys</a></li>
 					
-					<li><a href="#M000081">::ps_keys=</a></li>
+					<li><a href="#M000077">::ps_keys=</a></li>
 					
-					<li><a href="#M000074">::pss</a></li>
+					<li><a href="#M000068">::pss</a></li>
 					
 				</ul>
 			</div>
@@ -209,7 +209,7 @@
 
 		
 			<div id="ps-method" class="method-detail ">
-				<a name="M000073"></a>
+				<a name="M000065"></a>
 
 				<div class="method-heading">
 				
@@ -244,7 +244,7 @@ typically useful for logging to a text file.
 
 		
 			<div id="ps-aliases-method" class="method-detail ">
-				<a name="M000078"></a>
+				<a name="M000074"></a>
 
 				<div class="method-heading">
 				
@@ -312,7 +312,7 @@ typically useful for logging to a text file.
 
 		
 			<div id="ps-aliases--method" class="method-detail ">
-				<a name="M000079"></a>
+				<a name="M000075"></a>
 
 				<div class="method-heading">
 				
@@ -344,7 +344,7 @@ typically useful for logging to a text file.
 
 		
 			<div id="ps-command-method" class="method-detail ">
-				<a name="M000082"></a>
+				<a name="M000078"></a>
 
 				<div class="method-heading">
 				
@@ -365,7 +365,7 @@ typically useful for logging to a text file.
 <pre>
      <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 111</span>
 111:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_command</span>
-112:   <span class="ruby-ivar">@@ps_command</span><span class="ruby-operator">||=</span><span class="ruby-value str">'ps h ww -o '</span><span class="ruby-operator">+</span><span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_keys</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>)
+112:   <span class="ruby-ivar">@@ps_command</span><span class="ruby-operator">||=</span><span class="ruby-value str">'ps h ww -o &quot;'</span><span class="ruby-operator">+</span><span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_keys</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>)<span class="ruby-operator">+</span><span class="ruby-value str">'&quot;'</span>
 113:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
@@ -376,7 +376,7 @@ typically useful for logging to a text file.
 
 		
 			<div id="ps-command--method" class="method-detail ">
-				<a name="M000083"></a>
+				<a name="M000079"></a>
 
 				<div class="method-heading">
 				
@@ -408,7 +408,7 @@ typically useful for logging to a text file.
 
 		
 			<div id="ps-keys-method" class="method-detail ">
-				<a name="M000080"></a>
+				<a name="M000076"></a>
 
 				<div class="method-heading">
 				
@@ -440,7 +440,7 @@ typically useful for logging to a text file.
 
 		
 			<div id="ps-keys--method" class="method-detail ">
-				<a name="M000081"></a>
+				<a name="M000077"></a>
 
 				<div class="method-heading">
 				
@@ -472,7 +472,7 @@ typically useful for logging to a text file.
 
 		
 			<div id="pss-method" class="method-detail ">
-				<a name="M000074"></a>
+				<a name="M000068"></a>
 
 				<div class="method-heading">
 				
@@ -497,7 +497,7 @@ add dates, times
     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 30</span>
 30:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">pss</span>(<span class="ruby-identifier">pid</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>)
 31:    <span class="ruby-identifier">ps</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps</span>(<span class="ruby-identifier">pid</span>)
-32:    <span class="ruby-identifier">h</span>=<span class="ruby-constant">Hash</span>[<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_keys</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">ps</span>.<span class="ruby-identifier">split</span>)]
+32:    <span class="ruby-identifier">h</span>=<span class="ruby-constant">Hash</span>[<span class="ruby-operator">*</span><span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_keys</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">ps</span>.<span class="ruby-identifier">split</span>).<span class="ruby-identifier">flatten</span>]
 33:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'c'</span>]      =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'c'</span>].<span class="ruby-identifier">to_i</span>
 34:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'cp'</span>]     =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'cp'</span>].<span class="ruby-identifier">to_f</span>
 35:    <span class="ruby-identifier">h</span>[<span class="ruby-value str">'egid'</span>]   =<span class="ruby-identifier">h</span>[<span class="ruby-value str">'egid'</span>].<span class="ruby-identifier">to_i</span>
