@@ -92,6 +92,7 @@ module Process
     tty tname 
     vsz vsize
   ']
+ end
 
 
  def self.ps_aliases=(aliases)
@@ -101,12 +102,11 @@ module Process
 
  def self.ps_keys
   @@ps_keys=%w'blocked bsdtime c caught class cp egid egroup eip esp etime euid euser f fgid fgroup fuid fuser group ignored label lwp ni nlwp nwchan pending pcpu pgid pid pmem ppid pri psr rgid rgroup rss rtprio ruid ruser s sched sgi_p sgid sgroup sid sig size stackp start_time stat suid suser sz time tname tpgid vsize wchan'
-
-
+ end
+ 
  def self.ps_keys=(keys)
   @@ps_keys=keys
  end
-
 
  def self.ps_command
   @@ps_command||='ps h ww -o '+PS_KEYS.join(',')
