@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
 
-  CLASSES             = %w'array date enumerable hash kernel nil numeric object process string time yaml'
+  CLASSES             = %w'array csv date enumerable hash integer kernel nil numeric object process string time yaml'
 
   s.name              = "ramp"
   s.summary           = "ramp"
