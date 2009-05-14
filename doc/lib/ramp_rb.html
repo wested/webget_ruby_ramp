@@ -24,7 +24,7 @@
 	<div id="metadata">
 		<dl>
 			<dt class="modified-date">Last Modified</dt>
-			<dd class="modified-date">Mon Apr 27 09:18:15 -0700 2009</dd>
+			<dd class="modified-date">Thu May 14 09:48:15 -0700 2009</dd>
 
 			
 			<dt class="requires">Requires</dt>
@@ -66,7 +66,7 @@ href="../DateTest.html">DateTest</a>, etc.
 <li>divvy: divides an array, like a pie, into a specified number of slices
 
 </li>
-<li>join: same as <a href="../Array.html#M000071">Array#join</a> with some
+<li>join: same as <a href="../Array.html#M000069">Array#join</a> with some
 improvments
 
 </li>
@@ -155,6 +155,14 @@ Dupe methods:
 </p>
 <ul>
 <li>size? => empty?
+
+</li>
+</ul>
+<h2><a href="../Integer.html">Integer</a></h2>
+<ul>
+<li>yields: loop over a block n times and return an array with all the results
+(e.g. 3.yields{&#8216;foo&#8217;} =>
+[&#8216;foo&#8217;,&#8217;foo&#8217;,&#8217;foo&#8217;])
 
 </li>
 </ul>
@@ -253,6 +261,10 @@ lower or by the optional step parameter value.
 higher or by the optional step parameter value.
 
 </li>
+<li>lorem: return a short random string, good for use in &#8220;lorem
+ipsum&#8221; sample text.
+
+</li>
 <li>prev/pred: previous string (&#8220;b&#8221; => &#8220;a&#8221;,
 &#8220;bbc&#8221; => &#8220;bbb&#8221;, &#8220;a&#8221; => &#8220;z&#8221;,
 &#8220;880&#8221; => &#8220;879&#8221;)
@@ -299,6 +311,10 @@ a directory to a specified block as Key, value pair
 </ul>
 <h2>Changes</h2>
 <ul>
+<li>1.6.6 Add <a href="../Integer.html#M000088">Integer#yields</a>, <a
+href="../String.html#M000125">String#lorem</a>, etc., improve tests
+
+</li>
 <li>1.6.4 Bug fixes: <a href="../String.html">String</a> characters and <a
 href="../YAML.html">YAML</a> test files
 

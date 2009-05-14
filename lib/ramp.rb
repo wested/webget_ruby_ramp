@@ -13,6 +13,7 @@ Ramp is a library of extensions to Ruby base classes, including Array, Date, Enu
 * join: same as Array#join with some improvments
 * rotate: moves the first element of an array to the end
 * slices: divides an array into specified number of equal size sub-arrays ([1,2,3,4,5,6]slices(3) => [[1,2],[3,4],[5,6]])
+* to_csv: outputs the array to Comma Separated Value (CSV) text, typically for viewing in a spreadsheet such as Excel
 * union: builds an array containing each of the unique elements of sub-arrays ([[1,2,3,4],[2,3,4,5],[3,4,5,6]].union => [1,2,3,4,5,6])
 
 Dupe methods:
@@ -28,7 +29,7 @@ Dupe methods:
 
 == Enumerable
 
-* join
+* join: forwards to self.to_a.join
 * map_id: returns the id of an Enumerable object; *requires* the object has a field named 'id'
 * map_to_sym: symbolifies the object (i.e., enum.to_sym)
 * nitems_until, select_until: returns the number of, or an array containing, the leading elements for which block is false or nil.
@@ -43,6 +44,10 @@ Dupe methods:
 
 Dupe methods:
 * size? => empty?
+
+== Integer
+
+* yields: loop over a block n times and return an array with all the results (e.g. 3.yields{'foo'} => ['foo','foo','foo'])
 
 == Kernel
 
@@ -81,6 +86,7 @@ Extensions that help debug Ruby programs.
 * capitalize_words (alias to titleize/titlecase): ensures the first character of each word is uppercase.
 * decrement: decrease the rightmost natural number, defaults to one value lower or by the optional step parameter value.
 * increment: increase the rightmost natural number, defaults to one value higher or by the optional step parameter value.
+* lorem: return a short random string, good for use in "lorem ipsum" sample text.
 * prev/pred: previous string ("b" => "a", "bbc" => "bbb", "a" => "z", "880" => "879")
 * prev/pred: updates variable to the previous string in place (astring = "bbc", astring.prev!, puts astring => "bbb")
 * (class) prev_char/pred_char: returns the previous character, with a changed flag and carry flag; that is, there are three returned values, a string and two booleans.
@@ -99,6 +105,7 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
+- 1.6.6 Add Array#to_csv, Integer#yields, String#lorem, etc., improve tests
 - 1.6.4 Bug fixes: String characters and YAML test files
 - 1.6.2 Improve organizaiton of class files to lib/ramp
 - 1.6.0 Upgraded to work with Ruby 1.9.1
