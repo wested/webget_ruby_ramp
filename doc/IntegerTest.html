@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: NilTest</title>
+	<title>Class: IntegerTest</title>
 
 	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -28,8 +28,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="./test/unit/nil_test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="test/unit/nil_test.rb">test/unit/nil_test.rb</a></li>
+						<li><a href="./test/unit/integer_test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="test/unit/integer_test.rb">test/unit/integer_test.rb</a></li>
 					
 					</ul>
 				</div>
@@ -59,7 +59,7 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000000">#test_size</a></li>
+					<li><a href="#M000015">#test_yields</a></li>
 					
 				</ul>
 			</div>
@@ -170,7 +170,7 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">NilTest</h1>
+		<h1 class="class">IntegerTest</h1>
 
 		<div id="description">
 			
@@ -188,12 +188,12 @@
 			<h3 class="section-header">Public Instance Methods</h3>
 
 		
-			<div id="test-size-method" class="method-detail ">
-				<a name="M000000"></a>
+			<div id="test-yields-method" class="method-detail ">
+				<a name="M000015"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">test_size</span><span
+					<span class="method-name">test_yields</span><span
 						class="method-args">()</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
@@ -206,12 +206,14 @@
 
 					
 					<div class="method-source-code"
-						id="test-size-source">
+						id="test-yields-source">
 <pre>
-   <span class="ruby-comment cmt"># File test/unit/nil_test.rb, line 6</span>
-6:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_size</span>
-7:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword kw">false</span>,<span class="ruby-keyword kw">nil</span>.<span class="ruby-identifier">size?</span>)
-8:  <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/integer_test.rb, line 6</span>
+ 6:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_yields</span>
+ 7:     <span class="ruby-identifier">expect</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'a'</span>]
+ 8:     <span class="ruby-identifier">actual</span>=<span class="ruby-value">3</span>.<span class="ruby-identifier">yields</span>{<span class="ruby-value str">'a'</span>}
+ 9:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>)
+10:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

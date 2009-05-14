@@ -59,27 +59,33 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000114">::prev_char</a></li>
+					<li><a href="#M000126">::lorem</a></li>
 					
-					<li><a href="#M000109">#capitalize_words</a></li>
+					<li><a href="#M000123">::lorem_length</a></li>
 					
-					<li><a href="#M000112">#decrement</a></li>
+					<li><a href="#M000129">::lorems</a></li>
 					
-					<li><a href="#M000111">#increment</a></li>
+					<li><a href="#M000117">::prev_char</a></li>
 					
-					<li><a href="#M000117">#pred</a></li>
+					<li><a href="#M000112">#capitalize_words</a></li>
 					
-					<li><a href="#M000118">#pred!</a></li>
+					<li><a href="#M000115">#decrement</a></li>
 					
-					<li><a href="#M000115">#prev</a></li>
+					<li><a href="#M000114">#increment</a></li>
 					
-					<li><a href="#M000116">#prev!</a></li>
+					<li><a href="#M000121">#pred</a></li>
 					
-					<li><a href="#M000108">#split_tab</a></li>
+					<li><a href="#M000122">#pred!</a></li>
 					
-					<li><a href="#M000110">#to_class</a></li>
+					<li><a href="#M000118">#prev</a></li>
 					
-					<li><a href="#M000107">#words</a></li>
+					<li><a href="#M000119">#prev!</a></li>
+					
+					<li><a href="#M000110">#split_tab</a></li>
+					
+					<li><a href="#M000113">#to_class</a></li>
+					
+					<li><a href="#M000109">#words</a></li>
 					
 				</ul>
 			</div>
@@ -143,6 +149,10 @@
 				
 					<li><a href="./HashTest.html">HashTest</a></li>
 				
+					<li><a href="./Integer.html">Integer</a></li>
+				
+					<li><a href="./IntegerTest.html">IntegerTest</a></li>
+				
 					<li><a href="./Kernel.html">Kernel</a></li>
 				
 					<li><a href="./KernelTest.html">KernelTest</a></li>
@@ -194,6 +204,25 @@
 
 		<!-- Constants -->
 		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="LOWERCASE_ENGLISH_CHARS">LOWERCASE_ENGLISH_CHARS</a></dt>
+				
+				<dd class="description"><p>
+Helpful constants
+</p></dd>
+				
+			
+				<dt><a name="UPPERCASE_ENGLISH_CHARS">UPPERCASE_ENGLISH_CHARS</a></dt>
+				
+				<dd class="description missing-docs">(Not documented)</dd>
+				
+			
+			</dl>
+		</div>
+		
 
 		<!-- Attributes -->
 		
@@ -204,8 +233,113 @@
 			<h3 class="section-header">Public Class Methods</h3>
 
 		
+			<div id="lorem-method" class="method-detail ">
+				<a name="M000126"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">lorem</span><span
+						class="method-args">(count=1,length=self.lorem_length)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return a random string suitable for &#8220;lorem ipsum&#8221; text
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="lorem-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 138</span>
+138:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lorem</span>(<span class="ruby-identifier">count</span>=<span class="ruby-value">1</span>,<span class="ruby-identifier">length</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lorem_length</span>)
+139:   [<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>,<span class="ruby-value str">'d'</span>,<span class="ruby-value str">'e'</span>,<span class="ruby-value str">'f'</span>,<span class="ruby-value str">'g'</span>,<span class="ruby-value str">'h'</span>,<span class="ruby-value str">'i'</span>,<span class="ruby-value str">'j'</span>,<span class="ruby-value str">'k'</span>,<span class="ruby-value str">'l'</span>,<span class="ruby-value str">'m'</span>,<span class="ruby-value str">'n'</span>,<span class="ruby-value str">'o'</span>,<span class="ruby-value str">'p'</span>,<span class="ruby-value str">'q'</span>,<span class="ruby-value str">'r'</span>,<span class="ruby-value str">'s'</span>,<span class="ruby-value str">'t'</span>,<span class="ruby-value str">'u'</span>,<span class="ruby-value str">'v'</span>,<span class="ruby-value str">'w'</span>,<span class="ruby-value str">'x'</span>,<span class="ruby-value str">'y'</span>,<span class="ruby-value str">'z'</span>].<span class="ruby-identifier">choices</span>(<span class="ruby-identifier">length</span>).<span class="ruby-identifier">join</span>
+140:  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="lorem-length-method" class="method-detail ">
+				<a name="M000123"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">lorem_length</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return a random length suitable for a &#8220;lorem ipsum&#8221; string
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="lorem-length-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 133</span>
+133:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lorem_length</span>
+134:   <span class="ruby-value">1</span><span class="ruby-operator">+</span><span class="ruby-identifier">rand</span>(<span class="ruby-value">10</span>)
+135:  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="lorems-method" class="method-detail ">
+				<a name="M000129"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">lorems</span><span
+						class="method-args">(count)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return <em>count</em> random strings suitable for &#8220;lorem ipsum&#8221;
+text
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="lorems-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 144</span>
+144:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lorems</span>(<span class="ruby-identifier">count</span>)
+145:    (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-identifier">count</span>).<span class="ruby-identifier">map</span>{<span class="ruby-identifier">lorem</span>
+146: 
+147: 
+148: <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
 			<div id="prev-char-method" class="method-detail ">
-				<a name="M000114"></a>
+				<a name="M000117"></a>
 
 				<div class="method-heading">
 				
@@ -265,7 +399,7 @@ Return the previous character, with a changed flag and carry flag
 
 		
 			<div id="capitalize-words-method" class="method-detail ">
-				<a name="M000109"></a>
+				<a name="M000112"></a>
 
 				<div class="method-heading">
 				
@@ -297,7 +431,7 @@ Return the previous character, with a changed flag and carry flag
 
 		
 			<div id="decrement-method" class="method-detail ">
-				<a name="M000112"></a>
+				<a name="M000115"></a>
 
 				<div class="method-heading">
 				
@@ -319,7 +453,7 @@ Decrement the rightmost natural number
   'foo10bar'.derement =&gt; 'foo9bar'
 </pre>
 <ul>
-<li>see <a href="String.html#M000111">String#increment</a>
+<li>see <a href="String.html#M000114">String#increment</a>
 
 </li>
 </ul>
@@ -342,7 +476,7 @@ Decrement the rightmost natural number
 
 		
 			<div id="increment-method" class="method-detail ">
-				<a name="M000111"></a>
+				<a name="M000114"></a>
 
 				<div class="method-heading">
 				
@@ -364,7 +498,7 @@ Increment the rightmost natural number
   'foo9bar'.increment =&gt; 'foo10bar'
 </pre>
 <ul>
-<li>see <a href="String.html#M000112">String#decrement</a>
+<li>see <a href="String.html#M000115">String#decrement</a>
 
 </li>
 </ul>
@@ -387,7 +521,7 @@ Increment the rightmost natural number
 
 		
 			<div id="pred-method" class="method-detail method-alias">
-				<a name="M000117"></a>
+				<a name="M000121"></a>
 
 				<div class="method-heading">
 				
@@ -400,7 +534,7 @@ Increment the rightmost natural number
 				<div class="method-description">
 					
 					<p>
-Alias for <a href="String.html#M000115">prev</a>
+Alias for <a href="String.html#M000118">prev</a>
 </p>
 					
 
@@ -412,7 +546,7 @@ Alias for <a href="String.html#M000115">prev</a>
 
 		
 			<div id="pred--method" class="method-detail method-alias">
-				<a name="M000118"></a>
+				<a name="M000122"></a>
 
 				<div class="method-heading">
 				
@@ -425,7 +559,7 @@ Alias for <a href="String.html#M000115">prev</a>
 				<div class="method-description">
 					
 					<p>
-Alias for <a href="String.html#M000116">prev!</a>
+Alias for <a href="String.html#M000119">prev!</a>
 </p>
 					
 
@@ -437,7 +571,7 @@ Alias for <a href="String.html#M000116">prev!</a>
 
 		
 			<div id="prev-method" class="method-detail ">
-				<a name="M000115"></a>
+				<a name="M000118"></a>
 
 				<div class="method-heading">
 				
@@ -484,14 +618,14 @@ Return the previous string
 
 				
 				<div class="aliases">
-					Also aliased as: <a href="String.html#M000117">pred</a>
+					Also aliased as: <a href="String.html#M000121">pred</a>
 				</div>
 				
 			</div>
 
 		
 			<div id="prev--method" class="method-detail ">
-				<a name="M000116"></a>
+				<a name="M000119"></a>
 
 				<div class="method-heading">
 				
@@ -504,7 +638,7 @@ Return the previous string
 				<div class="method-description">
 					
 					<p>
-Do <a href="String.html#M000115">String#prev</a> in place
+Do <a href="String.html#M000118">String#prev</a> in place
 </p>
 					
 
@@ -532,14 +666,14 @@ Do <a href="String.html#M000115">String#prev</a> in place
 
 				
 				<div class="aliases">
-					Also aliased as: <a href="String.html#M000118">pred!</a>
+					Also aliased as: <a href="String.html#M000122">pred!</a>
 				</div>
 				
 			</div>
 
 		
 			<div id="split-tab-method" class="method-detail ">
-				<a name="M000108"></a>
+				<a name="M000110"></a>
 
 				<div class="method-heading">
 				
@@ -573,7 +707,7 @@ Return the string split at tabs, i.e. split(/t/)
 
 		
 			<div id="to-class-method" class="method-detail ">
-				<a name="M000110"></a>
+				<a name="M000113"></a>
 
 				<div class="method-heading">
 				
@@ -586,7 +720,7 @@ Return the string split at tabs, i.e. split(/t/)
 				<div class="method-description">
 					
 					<p>
-Ruby <a href="String.html#M000110">String#to_class</a> method to convert
+Ruby <a href="String.html#M000113">String#to_class</a> method to convert
 from a <a href="String.html">String</a> to a class
 </p>
 <p>
@@ -612,7 +746,7 @@ href="http://infovore.org/archives/2006/08/02/getting-a-class-object-in-ruby-fro
 
 		
 			<div id="words-method" class="method-detail ">
-				<a name="M000107"></a>
+				<a name="M000109"></a>
 
 				<div class="method-heading">
 				

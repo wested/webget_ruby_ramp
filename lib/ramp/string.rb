@@ -112,10 +112,38 @@ class String
 
  alias pred  prev   # String#pred : predecessor :: String#succ : successor
  alias pred! prev!
-
+ 
  class << self
   alias_method :pred_char, :prev_char
  end
+
+ # Helpful constants
+
+ LOWERCASE_ENGLISH_CHARS = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+ UPPERCASE_ENGLISH_CHARS = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+
+
+ ##
+ #
+ #  Lorem Ipsum random text generator
+ #
+ ##
+ 
+ # Return a random length suitable for a "lorem ipsum" string
+ def self.lorem_length
+  1+rand(10)
+ end
+
+ # Return a random string suitable for "lorem ipsum" text
+ def self.lorem(count=1,length=self.lorem_length)
+  ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'].choices(length).join
+ end
+
+
+ # Return _count_ random strings suitable for "lorem ipsum" text
+ def self.lorems(count)
+   (1..count).map{lorem
+
 
 end
 

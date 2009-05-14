@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: NilTest</title>
+	<title>Class: Integer</title>
 
 	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -28,8 +28,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="./test/unit/nil_test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="test/unit/nil_test.rb">test/unit/nil_test.rb</a></li>
+						<li><a href="./lib/ramp/integer_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ramp/integer.rb">lib/ramp/integer.rb</a></li>
 					
 					</ul>
 				</div>
@@ -45,7 +45,7 @@
 			<div id="parent-class-section" class="section">
 				<h3 class="section-header">Parent</h3>
 				
-				<p class="link">Test::Unit::TestCase</p>
+				<p class="link"><a href="Object.html">Object</a></p>
 				
 			</div>
 			
@@ -59,7 +59,7 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000000">#test_size</a></li>
+					<li><a href="#M000087">#yields</a></li>
 					
 				</ul>
 			</div>
@@ -170,7 +170,7 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">NilTest</h1>
+		<h1 class="class">Integer</h1>
 
 		<div id="description">
 			
@@ -188,12 +188,12 @@
 			<h3 class="section-header">Public Instance Methods</h3>
 
 		
-			<div id="test-size-method" class="method-detail ">
-				<a name="M000000"></a>
+			<div id="yields-method" class="method-detail ">
+				<a name="M000087"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">test_size</span><span
+					<span class="method-name">yields</span><span
 						class="method-args">()</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
@@ -201,17 +201,25 @@
 
 				<div class="method-description">
 					
-					<p class="missing-docs">(Not documented)</p>
+					<p>
+Return an array of <em>self</em> calls to yield
+</p>
+<p>
+Examples
+</p>
+<pre>
+  3.yields{rand} =&gt; [0.0248131784304143, 0.814666170190905, 0.15812816258206]
+</pre>
 					
 
 					
 					<div class="method-source-code"
-						id="test-size-source">
+						id="yields-source">
 <pre>
-   <span class="ruby-comment cmt"># File test/unit/nil_test.rb, line 6</span>
-6:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_size</span>
-7:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword kw">false</span>,<span class="ruby-keyword kw">nil</span>.<span class="ruby-identifier">size?</span>)
-8:  <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/integer.rb, line 8</span>
+ 8:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">yields</span>
+ 9:     (<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">map</span>{<span class="ruby-keyword kw">yield</span>}
+10:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
