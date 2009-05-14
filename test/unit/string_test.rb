@@ -74,25 +74,25 @@ class StringTest < Test::Unit::TestCase
     assert_equal('MZZZ','NAAA'.prev) # uppercase carries
   end
 
- def test_lorem_length
-  x = String.lorem_length
-  assert(x.is_a?(Integer),'x is integer')
-  assert(x>0, x, 'x>0')
-  assert(x<=10, x, 'x<=10')
- end
+  def test_lorem_length
+    x = String.lorem_length
+    assert(x.is_a?(Integer),'x is integer')
+    assert(x>0,"x:#{x}>0")
+    assert(x<=20,"x:#{x}<=20")
+  end
 
- def test_lorem
-  s = String.lorem
-  assert(s.is_a?(String),'s is string')
-  assert(s.size>0,'s.size>0')
-  assert(s.size<10,'s.size<=10')
- end
+  def test_lorem
+    s = String.lorem
+    assert(s.is_a?(String),'s is string')
+    assert(s.size>0,"s.size:#{s.size}>0")
+    assert(s.size<20,"s.size:#{s.size}<=20")
+  end
 
- def test_lorem_with_length
-  s = String.lorem(5)
-  assert(s.is_a?(String),'s is string')
-  assert(s.size==5,'s.size==5')
- end
+  def test_lorem_with_length
+    s = String.lorem(5)
+    assert(s.is_a?(String),'s is string')
+    assert(s.size==5,"s.size:#{s.size}==5")
+  end
 
 end
 

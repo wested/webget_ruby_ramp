@@ -59,29 +59,29 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000041">#test_capitalize_words</a></li>
+					<li><a href="#M000037">#test_capitalize_words</a></li>
 					
-					<li><a href="#M000046">#test_decrement</a></li>
+					<li><a href="#M000042">#test_decrement</a></li>
 					
-					<li><a href="#M000045">#test_increment</a></li>
+					<li><a href="#M000040">#test_increment</a></li>
 					
 					<li><a href="#M000050">#test_lorem</a></li>
 					
-					<li><a href="#M000049">#test_lorem_length</a></li>
+					<li><a href="#M000048">#test_lorem_length</a></li>
 					
 					<li><a href="#M000051">#test_lorem_with_length</a></li>
 					
-					<li><a href="#M000048">#test_prev</a></li>
+					<li><a href="#M000045">#test_prev</a></li>
 					
-					<li><a href="#M000047">#test_prev_char</a></li>
+					<li><a href="#M000043">#test_prev_char</a></li>
 					
-					<li><a href="#M000040">#test_split_tab</a></li>
+					<li><a href="#M000034">#test_split_tab</a></li>
 					
-					<li><a href="#M000042">#test_to_class</a></li>
+					<li><a href="#M000038">#test_to_class</a></li>
 					
-					<li><a href="#M000043">#test_to_class_nested</a></li>
+					<li><a href="#M000039">#test_to_class_nested</a></li>
 					
-					<li><a href="#M000039">#test_words</a></li>
+					<li><a href="#M000033">#test_words</a></li>
 					
 				</ul>
 			</div>
@@ -211,7 +211,7 @@
 
 		
 			<div id="test-capitalize-words-method" class="method-detail ">
-				<a name="M000041"></a>
+				<a name="M000037"></a>
 
 				<div class="method-heading">
 				
@@ -243,7 +243,7 @@
 
 		
 			<div id="test-decrement-method" class="method-detail ">
-				<a name="M000046"></a>
+				<a name="M000042"></a>
 
 				<div class="method-heading">
 				
@@ -280,7 +280,7 @@
 
 		
 			<div id="test-increment-method" class="method-detail ">
-				<a name="M000045"></a>
+				<a name="M000040"></a>
 
 				<div class="method-heading">
 				
@@ -337,12 +337,12 @@
 						id="test-lorem-source">
 <pre>
     <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 84</span>
-84:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_lorem</span>
-85:   <span class="ruby-identifier">s</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">lorem</span>
-86:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>),<span class="ruby-value str">'s is string'</span>)
-87:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>,<span class="ruby-value str">'s.size&gt;0'</span>)
-88:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">&lt;</span><span class="ruby-value">10</span>,<span class="ruby-value str">'s.size&lt;=10'</span>)
-89:  <span class="ruby-keyword kw">end</span></pre>
+84:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_lorem</span>
+85:     <span class="ruby-identifier">s</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">lorem</span>
+86:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>),<span class="ruby-value str">'s is string'</span>)
+87:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>,<span class="ruby-node">&quot;s.size:#{s.size}&gt;0&quot;</span>)
+88:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">&lt;</span><span class="ruby-value">20</span>,<span class="ruby-node">&quot;s.size:#{s.size}&lt;=20&quot;</span>)
+89:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -352,7 +352,7 @@
 
 		
 			<div id="test-lorem-length-method" class="method-detail ">
-				<a name="M000049"></a>
+				<a name="M000048"></a>
 
 				<div class="method-heading">
 				
@@ -372,12 +372,12 @@
 						id="test-lorem-length-source">
 <pre>
     <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 77</span>
-77:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_lorem_length</span>
-78:   <span class="ruby-identifier">x</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">lorem_length</span>
-79:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">x</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>),<span class="ruby-value str">'x is integer'</span>)
-80:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">x</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>, <span class="ruby-identifier">x</span>, <span class="ruby-value str">'x&gt;0'</span>)
-81:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">x</span><span class="ruby-operator">&lt;=</span><span class="ruby-value">10</span>, <span class="ruby-identifier">x</span>, <span class="ruby-value str">'x&lt;=10'</span>)
-82:  <span class="ruby-keyword kw">end</span></pre>
+77:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_lorem_length</span>
+78:     <span class="ruby-identifier">x</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">lorem_length</span>
+79:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">x</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>),<span class="ruby-value str">'x is integer'</span>)
+80:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">x</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>,<span class="ruby-node">&quot;x:#{x}&gt;0&quot;</span>)
+81:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">x</span><span class="ruby-operator">&lt;=</span><span class="ruby-value">20</span>,<span class="ruby-node">&quot;x:#{x}&lt;=20&quot;</span>)
+82:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -407,11 +407,11 @@
 						id="test-lorem-with-length-source">
 <pre>
     <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 91</span>
-91:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_lorem_with_length</span>
-92:   <span class="ruby-identifier">s</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">lorem</span>(<span class="ruby-value">5</span>)
-93:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>),<span class="ruby-value str">'s is string'</span>)
-94:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-value">5</span>,<span class="ruby-value str">'s.size==5'</span>)
-95:  <span class="ruby-keyword kw">end</span></pre>
+91:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_lorem_with_length</span>
+92:     <span class="ruby-identifier">s</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">lorem</span>(<span class="ruby-value">5</span>)
+93:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>),<span class="ruby-value str">'s is string'</span>)
+94:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-value">5</span>,<span class="ruby-node">&quot;s.size:#{s.size}==5&quot;</span>)
+95:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -421,7 +421,7 @@
 
 		
 			<div id="test-prev-method" class="method-detail ">
-				<a name="M000048"></a>
+				<a name="M000045"></a>
 
 				<div class="method-heading">
 				
@@ -462,7 +462,7 @@
 
 		
 			<div id="test-prev-char-method" class="method-detail ">
-				<a name="M000047"></a>
+				<a name="M000043"></a>
 
 				<div class="method-heading">
 				
@@ -500,7 +500,7 @@
 
 		
 			<div id="test-split-tab-method" class="method-detail ">
-				<a name="M000040"></a>
+				<a name="M000034"></a>
 
 				<div class="method-heading">
 				
@@ -532,7 +532,7 @@
 
 		
 			<div id="test-to-class-method" class="method-detail ">
-				<a name="M000042"></a>
+				<a name="M000038"></a>
 
 				<div class="method-heading">
 				
@@ -564,7 +564,7 @@
 
 		
 			<div id="test-to-class-nested-method" class="method-detail ">
-				<a name="M000043"></a>
+				<a name="M000039"></a>
 
 				<div class="method-heading">
 				
@@ -596,7 +596,7 @@
 
 		
 			<div id="test-words-method" class="method-detail ">
-				<a name="M000039"></a>
+				<a name="M000033"></a>
 
 				<div class="method-heading">
 				
