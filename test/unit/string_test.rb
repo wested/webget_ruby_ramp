@@ -88,6 +88,12 @@ class StringTest < Test::Unit::TestCase
   assert(s.size<10,'s.size<=10')
  end
 
+ def test_lorem_with_length
+  s = String.lorem(5)
+  assert(s.is_a?(String),'s is string')
+  assert(s.size==5,'s.size==5')
+ end
+
 end
 
 

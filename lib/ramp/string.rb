@@ -135,7 +135,7 @@ class String
  end
 
  # Return a random string suitable for "lorem ipsum" text
- def self.lorem(count=1,length=self.lorem_length)
+ def self.lorem(length=self.lorem_length)
   ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'].choices(length).join
  end
 
