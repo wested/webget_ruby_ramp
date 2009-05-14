@@ -231,24 +231,24 @@ href="http://stackoverflow.com/questions/94502/in-rails-how-to-return-records-as
 					<div class="method-source-code"
 						id="http-headers-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/csv.rb, line 16</span>
-16:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">http_headers</span>(<span class="ruby-identifier">ops</span>={})
-17:     <span class="ruby-identifier">filename</span>=<span class="ruby-identifier">ops</span>[<span class="ruby-identifier">:filename</span>]<span class="ruby-operator">||</span><span class="ruby-value str">'data.csv'</span>
-18:     <span class="ruby-identifier">request</span>=<span class="ruby-identifier">ops</span>[<span class="ruby-identifier">:request</span>]<span class="ruby-operator">||</span><span class="ruby-keyword kw">nil</span>
-19:     <span class="ruby-identifier">headers</span>={}
-20:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">request</span>
-21:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_USER_AGENT'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/msie/i</span>
-22:         <span class="ruby-identifier">headers</span>[<span class="ruby-value str">'Pragma'</span>] = <span class="ruby-value str">'public'</span>
-23:         <span class="ruby-identifier">headers</span>[<span class="ruby-value str">&quot;Content-type&quot;</span>] = <span class="ruby-value str">&quot;text/plain&quot;</span> 
-24:         <span class="ruby-identifier">headers</span>[<span class="ruby-value str">'Cache-Control'</span>] = <span class="ruby-value str">'no-cache, must-revalidate, post-check=0, pre-check=0'</span>
-25:         <span class="ruby-identifier">headers</span>[<span class="ruby-value str">'Expires'</span>] = <span class="ruby-value str">&quot;0&quot;</span> 
-26:       <span class="ruby-keyword kw">end</span>
-27:     <span class="ruby-keyword kw">else</span>
-28:       <span class="ruby-identifier">headers</span>[<span class="ruby-value str">&quot;Content-type&quot;</span>] = <span class="ruby-value str">&quot;text/csv&quot;</span> 
-29:     <span class="ruby-keyword kw">end</span>
-30:     <span class="ruby-identifier">headers</span>[<span class="ruby-value str">'Content-Disposition'</span>] = <span class="ruby-node">&quot;attachment; filename=\&quot;#{filename}\&quot;&quot;</span> 
-31:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">headers</span>
-32:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/csv.rb, line 15</span>
+15:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">http_headers</span>(<span class="ruby-identifier">ops</span>={})
+16:     <span class="ruby-identifier">filename</span>=<span class="ruby-identifier">ops</span>[<span class="ruby-identifier">:filename</span>]<span class="ruby-operator">||</span><span class="ruby-value str">'data.csv'</span>
+17:     <span class="ruby-identifier">request</span>=<span class="ruby-identifier">ops</span>[<span class="ruby-identifier">:request</span>]<span class="ruby-operator">||</span><span class="ruby-keyword kw">nil</span>
+18:     <span class="ruby-identifier">headers</span>={}
+19:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">request</span>
+20:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">request</span>.<span class="ruby-identifier">env</span>[<span class="ruby-value str">'HTTP_USER_AGENT'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/msie/i</span>
+21:         <span class="ruby-identifier">headers</span>[<span class="ruby-value str">'Pragma'</span>] = <span class="ruby-value str">'public'</span>
+22:         <span class="ruby-identifier">headers</span>[<span class="ruby-value str">&quot;Content-type&quot;</span>] = <span class="ruby-value str">&quot;text/plain&quot;</span> 
+23:         <span class="ruby-identifier">headers</span>[<span class="ruby-value str">'Cache-Control'</span>] = <span class="ruby-value str">'no-cache, must-revalidate, post-check=0, pre-check=0'</span>
+24:         <span class="ruby-identifier">headers</span>[<span class="ruby-value str">'Expires'</span>] = <span class="ruby-value str">&quot;0&quot;</span> 
+25:       <span class="ruby-keyword kw">end</span>
+26:     <span class="ruby-keyword kw">else</span>
+27:       <span class="ruby-identifier">headers</span>[<span class="ruby-value str">&quot;Content-type&quot;</span>] = <span class="ruby-value str">&quot;text/csv&quot;</span> 
+28:     <span class="ruby-keyword kw">end</span>
+29:     <span class="ruby-identifier">headers</span>[<span class="ruby-value str">'Content-Disposition'</span>] = <span class="ruby-node">&quot;attachment; filename=\&quot;#{filename}\&quot;&quot;</span> 
+30:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">headers</span>
+31:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
