@@ -59,9 +59,9 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000031">#test_http_headers</a></li>
+					<li><a href="#M000029">#test_http_headers</a></li>
 					
-					<li><a href="#M000032">#test_http_headers_with_filename</a></li>
+					<li><a href="#M000030">#test_http_headers_with_filename</a></li>
 					
 				</ul>
 			</div>
@@ -195,7 +195,7 @@
 
 		
 			<div id="test-http-headers-method" class="method-detail ">
-				<a name="M000031"></a>
+				<a name="M000029"></a>
 
 				<div class="method-heading">
 				
@@ -229,7 +229,7 @@
 
 		
 			<div id="test-http-headers-with-filename-method" class="method-detail ">
-				<a name="M000032"></a>
+				<a name="M000030"></a>
 
 				<div class="method-heading">
 				
@@ -252,7 +252,7 @@
 12:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_http_headers_with_filename</span>
 13:    <span class="ruby-identifier">h</span>=<span class="ruby-constant">CSV</span>.<span class="ruby-identifier">http_headers</span>(<span class="ruby-identifier">filename</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">'foo'</span>)
 14:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'text/csv'</span>,<span class="ruby-identifier">h</span>[<span class="ruby-value str">&quot;Content-Type&quot;</span>])
-15:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;attachment; filename=\&quot;foo\&quot;&quot;</span>),<span class="ruby-identifier">h</span>[<span class="ruby-value str">&quot;Content-Disposition&quot;</span>])
+15:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;attachment; filename=\&quot;foo\&quot;&quot;</span>,<span class="ruby-identifier">h</span>[<span class="ruby-value str">&quot;Content-Disposition&quot;</span>])
 16:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
