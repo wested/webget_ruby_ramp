@@ -1,3 +1,5 @@
+require 'csv'
+
 class CSV
 
   # Return HTTP headers for a CSV file download.
