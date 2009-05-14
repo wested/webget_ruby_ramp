@@ -1,4 +1,4 @@
-equire 'test/unit'
+require 'test/unit'
 require 'ramp'
 
 class IntegerTest < Test::Unit::TestCase
