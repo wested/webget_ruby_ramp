@@ -140,10 +140,5 @@ class String
  end
 
 
- # Return _count_ random strings suitable for "lorem ipsum" text
- def self.lorems(count)
-   (1..count).map{lorem
-
-
 end
 
