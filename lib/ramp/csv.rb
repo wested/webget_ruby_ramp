@@ -19,12 +19,12 @@ class CSV
     if request
       if request.env['HTTP_USER_AGENT'] =~ /msie/i
         headers['Pragma'] = 'public'
-        headers["Content-type"] = "text/plain" 
+        headers['Content-Type'] = "text/plain" 
         headers['Cache-Control'] = 'no-cache, must-revalidate, post-check=0, pre-check=0'
         headers['Expires'] = "0" 
       end
     else
-      headers["Content-type"] = "text/csv" 
+      headers['Content-Type'] = "text/csv" 
     end
     headers['Content-Disposition'] = "attachment; filename=\"#{filename}\"" 
     return headers
