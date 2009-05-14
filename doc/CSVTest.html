@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Module: YAML</title>
+	<title>Class: CSVTest</title>
 
 	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -19,7 +19,7 @@
 		charset="utf-8"></script>
 
 </head>
-<body class="module">
+<body class="class">
 
 	<div id="metadata">
 		<div id="file-metadata">
@@ -28,8 +28,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="./lib/ramp/yaml_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="lib/ramp/yaml.rb">lib/ramp/yaml.rb</a></li>
+						<li><a href="./test/unit/csv_test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="test/unit/csv_test.rb">test/unit/csv_test.rb</a></li>
 					
 					</ul>
 				</div>
@@ -42,6 +42,13 @@
 
 			<!-- Parent Class -->
 			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Test::Unit::TestCase</p>
+				
+			</div>
+			
 
 			<!-- Namespace Contents -->
 			
@@ -52,7 +59,9 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000094">::load_dir</a></li>
+					<li><a href="#M000030">#test_http_headers</a></li>
+					
+					<li><a href="#M000031">#test_http_headers_with_filename</a></li>
 					
 				</ul>
 			</div>
@@ -167,7 +176,7 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="module">YAML</h1>
+		<h1 class="class">CSVTest</h1>
 
 		<div id="description">
 			
@@ -181,57 +190,70 @@
 
 		<!-- Methods -->
 		
-		<div id="public-class-method-details" class="method-section section">
-			<h3 class="section-header">Public Class Methods</h3>
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
 
 		
-			<div id="load-dir-method" class="method-detail ">
-				<a name="M000094"></a>
+			<div id="test-http-headers-method" class="method-detail ">
+				<a name="M000030"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">load_dir</span><span
-						class="method-args">(*dirpaths)</span>
+					<span class="method-name">test_http_headers</span><span
+						class="method-args">()</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
 
 				<div class="method-description">
 					
-					<p>
-Load yaml documents from a directory
-</p>
-<h2>Example</h2>
-<pre>
-  YAML.load_dir('/tmp/*.yaml'){|yaml_document|
-    #...whatever you want to do with each yaml document
-  }
-</pre>
-<h2>Example to load documents in files ending in &#8220;.yaml&#8221; and &#8220;.yml&#8220;</h2>
-<pre>
-  YAML.load_dir('/tmp/*.yaml','/tmp/*.yml','){|yaml_document|
-    #...whatever you want to do with the yaml document
-  }
-</pre>
+					<p class="missing-docs">(Not documented)</p>
 					
 
 					
 					<div class="method-source-code"
-						id="load-dir-source">
+						id="test-http-headers-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/yaml.rb, line 17</span>
-17:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">dirpaths</span>)
-18:     <span class="ruby-identifier">dirpaths</span>=[<span class="ruby-operator">*</span><span class="ruby-identifier">dirpaths</span>.<span class="ruby-identifier">flatten</span>]
-19:     <span class="ruby-identifier">dirpaths</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dirpath</span><span class="ruby-operator">|</span>
-20:       <span class="ruby-constant">Dir</span>[<span class="ruby-identifier">dirpath</span>].<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">filename</span><span class="ruby-operator">|</span>
-21:         <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
-22:           <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_documents</span>(<span class="ruby-identifier">file</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span>
-23:             <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">doc</span>
-24:           <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#load</span>
-25:         <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#file</span>
-26:       <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#dir</span>
-27:     <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#each</span>
-28:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/csv_test.rb, line 6</span>
+ 6:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_http_headers</span>
+ 7:    <span class="ruby-identifier">h</span>=<span class="ruby-constant">CSV</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">headers</span>
+ 8:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">h</span>[<span class="ruby-value str">&quot;Content-Type&quot;</span>],<span class="ruby-value str">'text/csv'</span>)
+ 9:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">h</span>[<span class="ruby-value str">&quot;Content-Disposition&quot;</span>],<span class="ruby-value str">&quot;attachment; filename=\&quot;data.csv\&quot;&quot;</span>)
+10:  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="test-http-headers-with-filename-method" class="method-detail ">
+				<a name="M000031"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_http_headers_with_filename</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-http-headers-with-filename-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/unit/csv_test.rb, line 12</span>
+12:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_http_headers_with_filename</span>
+13:    <span class="ruby-identifier">h</span>=<span class="ruby-constant">CSV</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">headers</span>(<span class="ruby-identifier">filename</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">'foo'</span>)
+14:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">h</span>[<span class="ruby-value str">&quot;Content-Type&quot;</span>],<span class="ruby-value str">'text/csv'</span>)
+15:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">h</span>[<span class="ruby-value str">&quot;Content-Disposition&quot;</span>],<span class="ruby-value str">&quot;attachment; filename=\&quot;foo\&quot;&quot;</span>)
+16:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

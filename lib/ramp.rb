@@ -20,12 +20,19 @@ Dupe methods:
 * intersection => '&' (a1 & a2 => [common items])
 * size => empty?
 
+
+== CSV
+
+* http_headers: provides web file download headers for text/csv content type and disposition.
+
+
 == Date
 
 * age_days, age_years
 * between: a random date between two specified dates
 * to_sql: date as a string formatted as expected for MySQL
 * weekday?, weekend?: is date a weekday or on the weekend
+
 
 == Enumerable
 
@@ -36,6 +43,7 @@ Dupe methods:
 * nitems_while, select_while: returns the number of items, or an array containing the leading elements, for which block is not false or nil.
 * nitems_with_index, select_with_index: calls block with two arguments, the item and its index, for each item in enum. Returns the number of, or an array containing, the leading elements for which block is not false or nil. 
 
+
 == Hash
 
 * each_value: passes each element to a specified block and updates the element in place in the original hash.
@@ -45,14 +53,17 @@ Dupe methods:
 Dupe methods:
 * size? => empty?
 
+
 == Integer
 
 * yields: loop over a block n times and return an array with all the results (e.g. 3.yields{'foo'} => ['foo','foo','foo'])
+
 
 == Kernel
 
 * method_name: 
 * method_name_of_caller: returns the name of the method which called the current method, or the Nth parent up the call stack if the optional caller_index parameter is passed.
+
 
 == Numeric
 
@@ -60,9 +71,11 @@ Dupe methods:
 * unless: returns 0 unless the passed flag is any of: nil, false, 0, [], {} and otherwise returns self
 * peta, tera, giga, mega, kilo, hecto, deka, deci, centi, milli, micro, nano: multiply/divide by powers of ten
 
+
 == Object
 
 * in?: returns boolean indicating whether the object is a member of the specified array parameter
+
 
 == Process
 
@@ -70,6 +83,7 @@ Extensions that help debug Ruby programs.
 
 * (class) ps: output of the system 'ps' command, also including aliases, as raw plain text.
 * (class) pss: output of the system 'ps' command as a hash with each value set to the right type, e.g., integer, float, etc..
+
 
 == String
 
@@ -80,6 +94,7 @@ Extensions that help debug Ruby programs.
 * prev/pred: updates variable to the previous string in place (astring = "bbc", astring.prev!, puts astring => "bbb")
 * (class) prev_char/pred_char: returns the previous character, with a changed flag and carry flag; that is, there are three returned values, a string and two booleans.
 * split_tab: splits the string into an array at each embedded tab ("Last\tFirst\tMiddle" => ["last","first","middle"])
+
 
 == String
 
@@ -94,18 +109,22 @@ Extensions that help debug Ruby programs.
 * to_class: the global class reference of a given string
 * words: splits the string into an array of words
 
+
 == Time
 
 * (class) stamp: current time in UTC as a timestamp string ("YYYYMMDDHHMMSS")
+
 
 == YAML
 
 * (class) load_dir: passes each YAML file in a directory to a specified block
 * (class) load_dir_pairs: passes each YAML file in a directory to a specified block as Key, value pair
 
+
 == Changes
 
-- 1.6.6 Add Array#to_csv, Integer#yields, String#lorem, etc., improve tests
+- 1.6.7 Add CSV
+- 1.6.6 Add Array#to_csv, Integer, String#lorem, etc., improve tests
 - 1.6.4 Bug fixes: String characters and YAML test files
 - 1.6.2 Improve organizaiton of class files to lib/ramp
 - 1.6.0 Upgraded to work with Ruby 1.9.1
@@ -115,6 +134,6 @@ Extensions that help debug Ruby programs.
 =end
 
 
-%w{array date enumerable hash kernel nil numeric object process string time yaml}.map{|x|
+%w{array csv date enumerable hash integer kernel nil numeric object process string time yaml}.map{|x|
   require File.dirname(__FILE__) + "/ramp/#{x}.rb"
 }
