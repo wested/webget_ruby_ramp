@@ -129,11 +129,290 @@
 	<div id="documentation">
 		<h1>WebGet.com Ramp: methods to ramp up your ruby applications</h1>
 <p>
-Ramp is a library of simple straightforward Ruby base class extensions.
+Ramp is a library of extensions to Ruby base classes, including <a
+href="Array.html">Array</a>, <a href="Date.html">Date</a>, <a
+href="Enumerable.html">Enumerable</a>, <a href="Hash.html">Hash</a>, <a
+href="Kernel.html">Kernel</a>, <a href="Numeric.html">Numeric</a>, <a
+href="Object.html">Object</a>, <a href="Process.html">Process</a>, <a
+href="String.html">String</a>, <a href="Time.html">Time</a>, and <a
+href="YAML.html">YAML</a>.
 </p>
+<p>
+<p>Each has an associated test class, e.g., <a
+href="ArrayTest.html">ArrayTest</a>, <a href="DateTest.html">DateTest</a>,
+etc.
+</p>
+<h2><a href="Array.html">Array</a></h2>
+<ul>
+<li>choice, choices: one or more random elements from an array
+
+</li>
+<li>divvy: divides an array, like a pie, into a specified number of slices
+
+</li>
+<li>join: same as <a href="Array.html#M000080">Array#join</a> with some
+improvments
+
+</li>
+<li>rotate: moves the first element of an array to the end
+
+</li>
+<li>slices: divides an array into specified number of equal size sub-arrays
+([1,2,3,4,5,6]slices(3) => [[1,2],[3,4],[5,6]])
+
+</li>
+<li>to_csv: outputs the array to Comma Separated Value (<a
+href="CSV.html">CSV</a>) text, typically for viewing in a spreadsheet such
+as Excel
+
+</li>
+<li>union: builds an array containing each of the unique elements of sub-arrays
+([[1,2,3,4],[2,3,4,5],[3,4,5,6]].union => [1,2,3,4,5,6])
+
+</li>
+</ul>
+<p>
+Dupe methods:
+</p>
+<ul>
+<li>intersection => &#8217;&amp;&#8217; (a1 &amp; a2 => [common items])
+
+</li>
+<li>size => empty?
+
+</li>
+</ul>
+<h2><a href="CSV.html">CSV</a></h2>
+<ul>
+<li>http_headers: provides web file download headers for text/csv content type
+and disposition.
+
+</li>
+</ul>
+<h2><a href="Date.html">Date</a></h2>
+<ul>
+<li>age_days, age_years
+
+</li>
+<li>between: a random date between two specified dates
+
+</li>
+<li>to_sql: date as a string formatted as expected for MySQL
+
+</li>
+<li>weekday?, weekend?: is date a weekday or on the weekend
+
+</li>
+</ul>
+<h2><a href="Enumerable.html">Enumerable</a></h2>
+<ul>
+<li>join: forwards to self.to_a.join
+
+</li>
+<li>map_id: returns the id of an <a href="Enumerable.html">Enumerable</a>
+object; <b>requires</b> the object has a field named &#8216;id&#8217;
+
+</li>
+<li>map_to_sym: symbolifies the object (i.e., enum.to_sym)
+
+</li>
+<li>nitems_until, select_until: returns the number of, or an array containing,
+the leading elements for which block is false or nil.
+
+</li>
+<li>nitems_while, select_while: returns the number of items, or an array
+containing the leading elements, for which block is not false or nil.
+
+</li>
+<li>nitems_with_index, select_with_index: calls block with two arguments, the
+item and its index, for each item in enum. Returns the number of, or an
+array containing, the leading elements for which block is not false or nil.
+
+</li>
+</ul>
+<h2><a href="Hash.html">Hash</a></h2>
+<ul>
+<li>each_value: passes each element to a specified block and updates the
+element in place in the original hash.
+
+</li>
+<li>rolldown, rollup: retrieve arrays of elements from a hash of hashes by top
+level field name or by interior hash field name, optionally passing a block
+to execute against each resulting array.
+
+</li>
+<li>to_yaml_sort: returns a <a href="YAML.html">YAML</a> object, sorted by
+field name
+
+</li>
+</ul>
+<p>
+Dupe methods:
+</p>
+<ul>
+<li>size? => empty?
+
+</li>
+</ul>
+<h2><a href="Integer.html">Integer</a></h2>
+<ul>
+<li>yields: loop over a block n times and return an array with all the results
+(e.g. 3.yields{&#8216;foo&#8217;} =>
+[&#8216;foo&#8217;,&#8217;foo&#8217;,&#8217;foo&#8217;])
+
+</li>
+</ul>
+<h2><a href="Kernel.html">Kernel</a></h2>
+<ul>
+<li>method_name:
+
+</li>
+<li>method_name_of_caller: returns the name of the method which called the
+current method, or the Nth parent up the call stack if the optional
+caller_index parameter is passed.
+
+</li>
+</ul>
+<h2><a href="Numeric.html">Numeric</a></h2>
+<ul>
+<li>if: returns 0 if the passed flag is any of: nil, false, 0, [], {} and
+otherwise returns self
+
+</li>
+<li>unless: returns 0 unless the passed flag is any of: nil, false, 0, [], {}
+and otherwise returns self
+
+</li>
+<li>peta, tera, giga, mega, kilo, hecto, deka, deci, centi, milli, micro, nano:
+multiply/divide by powers of ten
+
+</li>
+</ul>
+<h2><a href="Object.html">Object</a></h2>
+<ul>
+<li>in?: returns boolean indicating whether the object is a member of the
+specified array parameter
+
+</li>
+</ul>
+<h2><a href="Process.html">Process</a></h2>
+<p>
+Extensions that help debug Ruby programs.
+</p>
+<ul>
+<li>(class) ps: output of the system &#8216;ps&#8217; command, also including
+aliases, as raw plain text.
+
+</li>
+<li>(class) pss: output of the system &#8216;ps&#8217; command as a hash with
+each value set to the right type, e.g., integer, float, etc..
+
+</li>
+</ul>
+<h2><a href="String.html">String</a></h2>
+<ul>
+<li>capitalize_words (alias to titleize/titlecase): ensures the first character
+of each word is uppercase.
+
+</li>
+<li>decrement: decrease the rightmost natural number, defaults to one value
+lower or by the optional step parameter value.
+
+</li>
+<li>increment: increase the rightmost natural number, defaults to one value
+higher or by the optional step parameter value.
+
+</li>
+<li>prev/pred: previous string (&#8220;b&#8221; => &#8220;a&#8221;,
+&#8220;bbc&#8221; => &#8220;bbb&#8221;, &#8220;a&#8221; => &#8220;z&#8221;,
+&#8220;880&#8221; => &#8220;879&#8221;)
+
+</li>
+<li>prev/pred: updates variable to the previous string in place (astring =
+&#8220;bbc&#8221;, astring.prev!, puts astring => &#8220;bbb&#8221;)
+
+</li>
+<li>(class) prev_char/pred_char: returns the previous character, with a changed
+flag and carry flag; that is, there are three returned values, a string and
+two booleans.
+
+</li>
+<li>split_tab: splits the string into an array at each embedded tab
+(&#8220;LasttFirsttMiddle&#8221; =>
+[&#8220;last&#8221;,&#8220;first&#8221;,&#8220;middle&#8221;])
+
+</li>
+</ul>
+<h2><a href="String.html">String</a></h2>
+<ul>
+<li>capitalize_words (alias to titleize/titlecase): ensures the first character
+of each word is uppercase.
+
+</li>
+<li>decrement: decrease the rightmost natural number, defaults to one value
+lower or by the optional step parameter value.
+
+</li>
+<li>increment: increase the rightmost natural number, defaults to one value
+higher or by the optional step parameter value.
+
+</li>
+<li>lorem: return a short random string, good for use in &#8220;lorem
+ipsum&#8221; sample text.
+
+</li>
+<li>prev/pred: previous string (&#8220;b&#8221; => &#8220;a&#8221;,
+&#8220;bbc&#8221; => &#8220;bbb&#8221;, &#8220;a&#8221; => &#8220;z&#8221;,
+&#8220;880&#8221; => &#8220;879&#8221;)
+
+</li>
+<li>prev/pred: updates variable to the previous string in place (astring =
+&#8220;bbc&#8221;, astring.prev!, puts astring => &#8220;bbb&#8221;)
+
+</li>
+<li>(class) prev_char/pred_char: returns the previous character, with a changed
+flag and carry flag; that is, there are three returned values, a string and
+two booleans.
+
+</li>
+<li>split_tab: splits the string into an array at each embedded tab
+(&#8220;LasttFirsttMiddle&#8221; =>
+[&#8220;last&#8221;,&#8220;first&#8221;,&#8220;middle&#8221;])
+
+</li>
+<li>to_class: the global class reference of a given string
+
+</li>
+<li>words: splits the string into an array of words
+
+</li>
+</ul>
+<h2><a href="Time.html">Time</a></h2>
+<ul>
+<li>(class) stamp: current time in UTC as a timestamp string
+(&#8220;YYYYMMDDHHMMSS&#8221;)
+
+</li>
+</ul>
+<h2><a href="YAML.html">YAML</a></h2>
+<ul>
+<li>(class) load_dir: passes each <a href="YAML.html">YAML</a> file in a
+directory to a specified block
+
+</li>
+<li>(class) load_dir_pairs: passes each <a href="YAML.html">YAML</a> file in a
+directory to a specified block as Key, value pair
+
+</li>
+</ul>
 <h2>Changes</h2>
 <ul>
-<li>1.6.6 Add <a href="Array.html#M000084">Array#to_csv</a>
+<li>1.6.7 Add <a href="CSV.html">CSV</a>
+
+</li>
+<li>1.6.6 Add <a href="Array.html#M000093">Array#to_csv</a>, <a
+href="Integer.html">Integer</a>, <a
+href="String.html#M000140">String#lorem</a>, etc., improve tests
 
 </li>
 <li>1.6.4 Bug fixes: <a href="String.html">String</a> characters and <a
@@ -153,6 +432,17 @@ href="YAML.html">YAML</a> test files
 
 </li>
 </ul>
+<h1>end</h1>
+<p>
+%w{array csv date enumerable hash integer kernel nil numeric object process
+string time yaml}.map{|x|
+</p>
+<pre>
+  require File.dirname(__FILE__) + &quot;/ramp/#{x}.rb&quot;
+</pre>
+<p>
+}
+</p>
 
 	</div>
 

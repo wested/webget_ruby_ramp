@@ -68,27 +68,35 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000025">#test_join_0</a></li>
+					<li><a href="#M000029">#test_join_0</a></li>
 					
-					<li><a href="#M000026">#test_join_1</a></li>
+					<li><a href="#M000030">#test_join_1</a></li>
 					
-					<li><a href="#M000027">#test_join_2</a></li>
+					<li><a href="#M000031">#test_join_2</a></li>
 					
-					<li><a href="#M000016">#test_map_id</a></li>
+					<li><a href="#M000017">#test_map_id</a></li>
 					
-					<li><a href="#M000017">#test_map_to_sym</a></li>
+					<li><a href="#M000018">#test_map_to_a</a></li>
 					
-					<li><a href="#M000023">#test_nitems_until</a></li>
+					<li><a href="#M000019">#test_map_to_f</a></li>
 					
-					<li><a href="#M000022">#test_nitems_while</a></li>
+					<li><a href="#M000020">#test_map_to_i</a></li>
 					
-					<li><a href="#M000024">#test_nitems_with_index</a></li>
+					<li><a href="#M000021">#test_map_to_s</a></li>
 					
-					<li><a href="#M000020">#test_select_until_condition</a></li>
+					<li><a href="#M000022">#test_map_to_sym</a></li>
 					
-					<li><a href="#M000018">#test_select_while</a></li>
+					<li><a href="#M000027">#test_nitems_until</a></li>
 					
-					<li><a href="#M000021">#test_select_with_index</a></li>
+					<li><a href="#M000026">#test_nitems_while</a></li>
+					
+					<li><a href="#M000028">#test_nitems_with_index</a></li>
+					
+					<li><a href="#M000024">#test_select_until_condition</a></li>
+					
+					<li><a href="#M000023">#test_select_while</a></li>
+					
+					<li><a href="#M000025">#test_select_with_index</a></li>
 					
 				</ul>
 			</div>
@@ -249,7 +257,7 @@
 
 		
 			<div id="test-join--method" class="method-detail ">
-				<a name="M000025"></a>
+				<a name="M000029"></a>
 
 				<div class="method-heading">
 				
@@ -270,11 +278,11 @@ strings
 					<div class="method-source-code"
 						id="test-join--source">
 <pre>
-     <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 114</span>
-114:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_join_0</span>
-115:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]
-116:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;abc&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">join</span>,<span class="ruby-value str">&quot;join()&quot;</span>)
-117:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 129</span>
+129:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_join_0</span>
+130:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]
+131:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;abc&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">join</span>,<span class="ruby-value str">&quot;join()&quot;</span>)
+132:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -284,7 +292,7 @@ strings
 
 		
 			<div id="test-join--method" class="method-detail ">
-				<a name="M000026"></a>
+				<a name="M000030"></a>
 
 				<div class="method-heading">
 				
@@ -303,11 +311,11 @@ strings
 					<div class="method-source-code"
 						id="test-join--source">
 <pre>
-     <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 119</span>
-119:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_join_1</span>
-120:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]
-121:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;a+b+c&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">'+'</span>),<span class="ruby-value str">&quot;join('+')&quot;</span>)
-122:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 134</span>
+134:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_join_1</span>
+135:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]
+136:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;a+b+c&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">'+'</span>),<span class="ruby-value str">&quot;join('+')&quot;</span>)
+137:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -317,7 +325,7 @@ strings
 
 		
 			<div id="test-join--method" class="method-detail ">
-				<a name="M000027"></a>
+				<a name="M000031"></a>
 
 				<div class="method-heading">
 				
@@ -336,11 +344,11 @@ strings
 					<div class="method-source-code"
 						id="test-join--source">
 <pre>
-     <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 124</span>
-124:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_join_2</span>
-125:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]
-126:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;+a-+b-+c-&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;+&quot;</span>,<span class="ruby-value str">&quot;-&quot;</span>),<span class="ruby-value str">&quot;join('+','-')&quot;</span>)
-127:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 139</span>
+139:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_join_2</span>
+140:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]
+141:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;+a-+b-+c-&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;+&quot;</span>,<span class="ruby-value str">&quot;-&quot;</span>),<span class="ruby-value str">&quot;join('+','-')&quot;</span>)
+142:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -350,7 +358,7 @@ strings
 
 		
 			<div id="test-map-id-method" class="method-detail ">
-				<a name="M000016"></a>
+				<a name="M000017"></a>
 
 				<div class="method-heading">
 				
@@ -381,8 +389,136 @@ strings
 			</div>
 
 		
+			<div id="test-map-to-a-method" class="method-detail ">
+				<a name="M000018"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_map_to_a</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-map-to-a-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 33</span>
+33:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_map_to_a</span>
+34:     <span class="ruby-identifier">assert_equal</span>([[<span class="ruby-value">123</span>],[<span class="ruby-value str">&quot;456&quot;</span>]],<span class="ruby-constant">MAPTEST</span>.<span class="ruby-identifier">map_to_a</span>)
+35:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="test-map-to-f-method" class="method-detail ">
+				<a name="M000019"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_map_to_f</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-map-to-f-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 37</span>
+37:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_map_to_f</span>
+38:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value">123.0</span>,<span class="ruby-value">456.0</span>],<span class="ruby-constant">MAPTEST</span>.<span class="ruby-identifier">map_to_f</span>)
+39:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="test-map-to-i-method" class="method-detail ">
+				<a name="M000020"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_map_to_i</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-map-to-i-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 41</span>
+41:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_map_to_i</span>
+42:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value">123</span>,<span class="ruby-value">456</span>],[<span class="ruby-value">123</span>,<span class="ruby-constant">MAPTEST</span>.<span class="ruby-identifier">map_to_i</span>)
+43:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="test-map-to-s-method" class="method-detail ">
+				<a name="M000021"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_map_to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-map-to-s-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 45</span>
+45:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_map_to_s</span>
+46:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;123&quot;</span>,<span class="ruby-value str">&quot;456&quot;</span>],<span class="ruby-constant">MAPTEST</span>.<span class="ruby-identifier">map_to_s</span>)
+47:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
 			<div id="test-map-to-sym-method" class="method-detail ">
-				<a name="M000017"></a>
+				<a name="M000022"></a>
 
 				<div class="method-heading">
 				
@@ -401,10 +537,10 @@ strings
 					<div class="method-source-code"
 						id="test-map-to-sym-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 34</span>
-34:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_map_to_sym</span>
-35:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-identifier">:a</span>,<span class="ruby-identifier">:b</span>,<span class="ruby-identifier">:c</span>],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">map_to_sym</span>)
-36:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 49</span>
+49:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_map_to_sym</span>
+50:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-identifier">:a</span>,<span class="ruby-identifier">:b</span>,<span class="ruby-identifier">:c</span>],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">map_to_sym</span>)
+51:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -414,7 +550,7 @@ strings
 
 		
 			<div id="test-nitems-until-method" class="method-detail ">
-				<a name="M000023"></a>
+				<a name="M000027"></a>
 
 				<div class="method-heading">
 				
@@ -433,14 +569,14 @@ strings
 					<div class="method-source-code"
 						id="test-nitems-until-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 89</span>
-89:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_nitems_until</span>
-90:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'a'</span> },<span class="ruby-value str">'a'</span>)
-91:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">1</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'b'</span> },<span class="ruby-value str">'b'</span>)
-92:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">2</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'c'</span> },<span class="ruby-value str">'c'</span>)
-93:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">3</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'d'</span> },<span class="ruby-value str">'d'</span>)
-94:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">3</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'e'</span> },<span class="ruby-value str">'e'</span>)
-95:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 104</span>
+104:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_nitems_until</span>
+105:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'a'</span> },<span class="ruby-value str">'a'</span>)
+106:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">1</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'b'</span> },<span class="ruby-value str">'b'</span>)
+107:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">2</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'c'</span> },<span class="ruby-value str">'c'</span>)
+108:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">3</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'d'</span> },<span class="ruby-value str">'d'</span>)
+109:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">3</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'e'</span> },<span class="ruby-value str">'e'</span>)
+110:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -450,7 +586,7 @@ strings
 
 		
 			<div id="test-nitems-while-method" class="method-detail ">
-				<a name="M000022"></a>
+				<a name="M000026"></a>
 
 				<div class="method-heading">
 				
@@ -471,14 +607,14 @@ nitems
 					<div class="method-source-code"
 						id="test-nitems-while-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 80</span>
-80:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_nitems_while</span>  
-81:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'a'</span> },<span class="ruby-value str">'&lt; a'</span>)
-82:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">1</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'b'</span> },<span class="ruby-value str">'&lt; b'</span>)
-83:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">2</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'c'</span> },<span class="ruby-value str">'&lt; c'</span>)
-84:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">3</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'d'</span> },<span class="ruby-value str">'&lt; d'</span>)
-85:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">3</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'e'</span> },<span class="ruby-value str">'&lt; e'</span>)
-86:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 95</span>
+ 95:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_nitems_while</span>  
+ 96:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'a'</span> },<span class="ruby-value str">'&lt; a'</span>)
+ 97:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">1</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'b'</span> },<span class="ruby-value str">'&lt; b'</span>)
+ 98:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">2</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'c'</span> },<span class="ruby-value str">'&lt; c'</span>)
+ 99:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">3</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'d'</span> },<span class="ruby-value str">'&lt; d'</span>)
+100:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">3</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'e'</span> },<span class="ruby-value str">'&lt; e'</span>)
+101:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -488,7 +624,7 @@ nitems
 
 		
 			<div id="test-nitems-with-index-method" class="method-detail ">
-				<a name="M000024"></a>
+				<a name="M000028"></a>
 
 				<div class="method-heading">
 				
@@ -507,14 +643,14 @@ nitems
 					<div class="method-source-code"
 						id="test-nitems-with-index-source">
 <pre>
-     <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 98</span>
- 98:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_nitems_with_index</span>
- 99:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> },<span class="ruby-value str">'i &lt; 0'</span>)
-100:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">1</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1</span> },<span class="ruby-value str">'i &lt; 1'</span>)
-101:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">2</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span> },<span class="ruby-value str">'i &lt; 2'</span>)
-102:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">3</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span> },<span class="ruby-value str">'i &lt; 3'</span>)
-103:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">3</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">4</span> },<span class="ruby-value str">'i &lt; 4'</span>)
-104:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 113</span>
+113:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_nitems_with_index</span>
+114:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">0</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> },<span class="ruby-value str">'i &lt; 0'</span>)
+115:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">1</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1</span> },<span class="ruby-value str">'i &lt; 1'</span>)
+116:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">2</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span> },<span class="ruby-value str">'i &lt; 2'</span>)
+117:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">3</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span> },<span class="ruby-value str">'i &lt; 3'</span>)
+118:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">3</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">4</span> },<span class="ruby-value str">'i &lt; 4'</span>)
+119:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -524,7 +660,7 @@ nitems
 
 		
 			<div id="test-select-until-condition-method" class="method-detail ">
-				<a name="M000020"></a>
+				<a name="M000024"></a>
 
 				<div class="method-heading">
 				
@@ -543,14 +679,14 @@ nitems
 					<div class="method-source-code"
 						id="test-select-until-condition-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 55</span>
-55:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_select_until_condition</span>
-56:     <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'a'</span> },<span class="ruby-value str">'a'</span>)
-57:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>        ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'b'</span> },<span class="ruby-value str">'b'</span>)
-58:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>    ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'c'</span> },<span class="ruby-value str">'c'</span>)
-59:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'d'</span> },<span class="ruby-value str">'d'</span>)
-60:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'e'</span> },<span class="ruby-value str">'e'</span>)
-61:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 70</span>
+70:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_select_until_condition</span>
+71:     <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'a'</span> },<span class="ruby-value str">'a'</span>)
+72:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>        ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'b'</span> },<span class="ruby-value str">'b'</span>)
+73:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>    ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'c'</span> },<span class="ruby-value str">'c'</span>)
+74:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'d'</span> },<span class="ruby-value str">'d'</span>)
+75:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_until</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'e'</span> },<span class="ruby-value str">'e'</span>)
+76:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -560,7 +696,7 @@ nitems
 
 		
 			<div id="test-select-while-method" class="method-detail ">
-				<a name="M000018"></a>
+				<a name="M000023"></a>
 
 				<div class="method-heading">
 				
@@ -581,14 +717,14 @@ select
 					<div class="method-source-code"
 						id="test-select-while-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 46</span>
-46:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_select_while</span>
-47:     <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'a'</span> },<span class="ruby-value str">'&lt; a'</span>)
-48:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>        ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'b'</span> },<span class="ruby-value str">'&lt; b'</span>)
-49:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>    ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'c'</span> },<span class="ruby-value str">'&lt; c'</span>)
-50:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'d'</span> },<span class="ruby-value str">'&lt; d'</span>)
-51:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'e'</span> },<span class="ruby-value str">'&lt; e'</span>)
-52:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 61</span>
+61:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_select_while</span>
+62:     <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'a'</span> },<span class="ruby-value str">'&lt; a'</span>)
+63:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>        ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'b'</span> },<span class="ruby-value str">'&lt; b'</span>)
+64:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>    ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'c'</span> },<span class="ruby-value str">'&lt; c'</span>)
+65:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'d'</span> },<span class="ruby-value str">'&lt; d'</span>)
+66:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_while</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value str">'e'</span> },<span class="ruby-value str">'&lt; e'</span>)
+67:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -598,7 +734,7 @@ select
 
 		
 			<div id="test-select-with-index-method" class="method-detail ">
-				<a name="M000021"></a>
+				<a name="M000025"></a>
 
 				<div class="method-heading">
 				
@@ -617,14 +753,14 @@ select
 					<div class="method-source-code"
 						id="test-select-with-index-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 64</span>
-64:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_select_with_index</span>
-65:     <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> },<span class="ruby-value str">'i &lt; 0'</span>)
-66:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>        ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1</span> },<span class="ruby-value str">'i &lt; 1'</span>)
-67:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>    ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span> },<span class="ruby-value str">'i &lt; 2'</span>)
-68:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span> },<span class="ruby-value str">'i &lt; 3'</span>)
-69:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">4</span> },<span class="ruby-value str">'i &lt; 4'</span>)
-70:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 79</span>
+79:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_select_with_index</span>
+80:     <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span> },<span class="ruby-value str">'i &lt; 0'</span>)
+81:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>        ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">1</span> },<span class="ruby-value str">'i &lt; 1'</span>)
+82:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>    ],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">2</span> },<span class="ruby-value str">'i &lt; 2'</span>)
+83:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span> },<span class="ruby-value str">'i &lt; 3'</span>)
+84:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">select_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">4</span> },<span class="ruby-value str">'i &lt; 4'</span>)
+85:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

@@ -30,6 +30,21 @@ class EnumerableTest < Test::Unit::TestCase
     assert_equal(['a','b','c'],[A,B,C].map_id)
   end
 
+  def test_map_to_a
+    assert_equal([[123],["456"]],MAPTEST.map_to_a)
+  end
+
+  def test_map_to_f
+    assert_equal([123.0,456.0],MAPTEST.map_to_f)
+  end
+
+  def test_map_to_i
+    assert_equal([123,456],[123,MAPTEST.map_to_i)
+  end
+
+  def test_map_to_s
+    assert_equal(["123","456"],MAPTEST.map_to_s)
+  end
 
   def test_map_to_sym
     assert_equal([:a,:b,:c],ITEMS.map_to_sym)

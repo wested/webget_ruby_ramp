@@ -15,6 +15,34 @@ module Enumerable
   end
 
 
+  # map item => item.to_a
+
+  def map_to_a
+    map{|x| x.to_a}
+  end
+
+
+  # map item => item.to_f
+
+  def map_to_f
+    map{|x| x.to_f}
+  end
+
+
+  # map item => item.to_i
+
+  def map_to_i
+    map{|x| x.to_i}
+  end
+
+
+  # map item => item.to_s
+
+  def map_to_s
+    map{|x| x.to_s}
+  end
+
+
   # map item => item.to_sym
 
   def map_to_sym
