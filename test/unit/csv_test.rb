@@ -10,7 +10,7 @@ class CSVTest < Test::Unit::TestCase
  end
 
  def test_http_headers_with_filename
-   h=CSV.http_headers(filename=>'foo')
+   h=CSV.http_headers(:filename=>'foo')
    assert_equal('text/csv',h["Content-Type"])
    assert_equal("attachment; filename=\"foo\"",h["Content-Disposition"])
  end
