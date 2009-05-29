@@ -19,9 +19,10 @@ class CSV
     filename=ops[:filename]||'data.csv'
     request=ops[:request]||nil
     msie = (request and request.env['HTTP_USER_AGENT'] =~ /msie/i)
+    content_type = msie ? 'text/plain' : 'text/csv'
     return {
-     'Content-Type' => msie ? 'text/plain' : 'text/csv'
-     'Cache-Control' => 'no-cache, must-revalidate, post-check=0, pre-check=0'
+     'Content-Type' => content_type,
+     'Cache-Control' => 'no-cache, must-revalidate, post-check=0, pre-check=0',
      'Expires' => "0",
      'Pragma' => 'no-cache',
      'Content-Disposition' => "attachment; filename=\"#{filename}\"",
