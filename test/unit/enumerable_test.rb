@@ -1,5 +1,6 @@
 require 'test/unit'
 require 'ramp'
+require 'set'
 
 class EnumerableTest < Test::Unit::TestCase
 
