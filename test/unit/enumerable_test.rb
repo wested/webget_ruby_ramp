@@ -16,9 +16,15 @@ class EnumerableTest < Test::Unit::TestCase
 
   class Mock #:nodoc: all
     attr_accessor :id
+
     def initialize(id)
       @id=id
     end
+
+    def to_a
+     [self]
+    end
+
   end
 
 
@@ -32,7 +38,7 @@ class EnumerableTest < Test::Unit::TestCase
   end
 
   def test_map_to_a
-    assert_equal([[123],["456"]],MAPTEST.map_to_a)
+    assert_equal([[123],["456"]],MAPTEST.to_set.map_to_a)
   end
 
   def test_map_to_f
