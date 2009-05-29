@@ -213,7 +213,8 @@ and disposition.
 object; <b>requires</b> the object has a field named &#8216;id&#8217;
 
 </li>
-<li>map_to_sym: symbolifies the object (i.e., enum.to_sym)
+<li>map_to_a, map_to_f, map_to_i, map_to_s, map_to_sym : convert each object by
+calling its respective method to_a, to_i, to_f, to_s, to_sym
 
 </li>
 <li>nitems_until, select_until: returns the number of, or an array containing,
@@ -407,12 +408,15 @@ directory to a specified block as Key, value pair
 </ul>
 <h2>Changes</h2>
 <ul>
+<li>1.6.8 Add map_to_xxx methods
+
+</li>
 <li>1.6.7 Add <a href="CSV.html">CSV</a>
 
 </li>
-<li>1.6.6 Add <a href="Array.html#M000093">Array#to_csv</a>, <a
+<li>1.6.6 Add <a href="Array.html#M000098">Array#to_csv</a>, <a
 href="Integer.html">Integer</a>, <a
-href="String.html#M000140">String#lorem</a>, etc., improve tests
+href="String.html#M000136">String#lorem</a>, etc., improve tests
 
 </li>
 <li>1.6.4 Bug fixes: <a href="String.html">String</a> characters and <a
