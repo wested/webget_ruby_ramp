@@ -4,6 +4,7 @@ require 'ramp'
 class EnumerableTest < Test::Unit::TestCase
 
   ITEMS = ['a','b','c']
+  MAPTEST = [123,"456"]
 
 
   ########################################################################
@@ -24,7 +25,7 @@ class EnumerableTest < Test::Unit::TestCase
   A = Mock.new('a') 
   B = Mock.new('b') 
   C = Mock.new('c') 
-
+  
 
   def test_map_id
     assert_equal(['a','b','c'],[A,B,C].map_id)
@@ -39,7 +40,7 @@ class EnumerableTest < Test::Unit::TestCase
   end
 
   def test_map_to_i
-    assert_equal([123,456],[123,MAPTEST.map_to_i)
+    assert_equal([123,456],MAPTEST.map_to_i)
   end
 
   def test_map_to_s
