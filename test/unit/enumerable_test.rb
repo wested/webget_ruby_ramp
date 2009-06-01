@@ -197,7 +197,7 @@ class EnumerableTest < Test::Unit::TestCase
     a2=['d','e','f']
     a3=['g','h','i']
     actual=a1.cartesian_product(a2,a3)
-    assert_equal(CARETESIAN_PRODUCT_EXPECT,actual,'instance method')
+    assert_equal(CARTESIAN_PRODUCT_EXPECT,actual,'instance method')
   end
 
   def test_power_set
