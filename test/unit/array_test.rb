@@ -69,11 +69,6 @@ class ArrayTest < Test::Unit::TestCase
    assert_equal([3,4],a.intersect)
  end
 
-  def test_cross
-    foo=['a','b','d']
-    bar=['d','e','f']
-    assert_equal(['a','d'],['a','e'x.cross(y)
-
   def test_to_csv
     a=[["a", "b"], ["c", "d"], ["e", "f"]]
     assert_equal("a,b\nc,d\ne,f\n",a.to_csv)
