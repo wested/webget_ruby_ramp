@@ -184,8 +184,9 @@ module Enumerable
   end
 
   def cartesian_product(*enums)
-    self.cartesian_product([self]+enums)
+    Enumerable.cartesian_product(self,*enums)
   end
+
 
   # Return the power set: an array with all subsets of the enum's elements.
   # http://en.wikipedia.org/wiki/Power_set
