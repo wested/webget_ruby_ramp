@@ -19,7 +19,7 @@ module Enumerable
   # map item => item.to_a
 
   def map_to_a
-    map{|x| x.to_a}
+    map{|x| [x]}
   end
 
 

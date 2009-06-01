@@ -52,15 +52,15 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000083">::cartesian_product</a></li>
+					<li><a href="#M000085">::cartesian_product</a></li>
 					
-					<li><a href="#M000084">#cartesian_product</a></li>
+					<li><a href="#M000090">#cartesian_product</a></li>
 					
-					<li><a href="#M000082">#join</a></li>
+					<li><a href="#M000084">#join</a></li>
 					
-					<li><a href="#M000069">#map_id</a></li>
+					<li><a href="#M000070">#map_id</a></li>
 					
-					<li><a href="#M000070">#map_to_a</a></li>
+					<li><a href="#M000071">#map_to_a</a></li>
 					
 					<li><a href="#M000072">#map_to_f</a></li>
 					
@@ -76,7 +76,7 @@
 					
 					<li><a href="#M000081">#nitems_with_index</a></li>
 					
-					<li><a href="#M000085">#power_set</a></li>
+					<li><a href="#M000091">#power_set</a></li>
 					
 					<li><a href="#M000077">#select_until</a></li>
 					
@@ -216,7 +216,7 @@
 
 		
 			<div id="cartesian-product-method" class="method-detail ">
-				<a name="M000083"></a>
+				<a name="M000085"></a>
 
 				<div class="method-heading">
 				
@@ -288,7 +288,7 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857">blade.
 
 		
 			<div id="cartesian-product-method" class="method-detail ">
-				<a name="M000084"></a>
+				<a name="M000090"></a>
 
 				<div class="method-heading">
 				
@@ -320,7 +320,7 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857">blade.
 
 		
 			<div id="join-method" class="method-detail ">
-				<a name="M000082"></a>
+				<a name="M000084"></a>
 
 				<div class="method-heading">
 				
@@ -333,7 +333,7 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857">blade.
 				<div class="method-description">
 					
 					<p>
-Shortcut to <a href="Array.html#M000086">Array#join</a> to concatenate the
+Shortcut to <a href="Array.html#M000082">Array#join</a> to concatenate the
 items into a string
 </p>
 					
@@ -355,7 +355,7 @@ items into a string
 
 		
 			<div id="map-id-method" class="method-detail ">
-				<a name="M000069"></a>
+				<a name="M000070"></a>
 
 				<div class="method-heading">
 				
@@ -389,7 +389,7 @@ map item => item.id
 
 		
 			<div id="map-to-a-method" class="method-detail ">
-				<a name="M000070"></a>
+				<a name="M000071"></a>
 
 				<div class="method-heading">
 				
@@ -412,7 +412,7 @@ map item => item.to_a
 <pre>
     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 21</span>
 21:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map_to_a</span>
-22:     <span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_a</span>}
+22:     <span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">x</span>]}
 23:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
@@ -678,7 +678,7 @@ number of leading elements for which block is true.
 
 		
 			<div id="power-set-method" class="method-detail ">
-				<a name="M000085"></a>
+				<a name="M000091"></a>
 
 				<div class="method-heading">
 				
