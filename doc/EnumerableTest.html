@@ -68,6 +68,8 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
+					<li><a href="#M000032">#test_cartesian_product</a></li>
+					
 					<li><a href="#M000029">#test_join_0</a></li>
 					
 					<li><a href="#M000030">#test_join_1</a></li>
@@ -91,6 +93,8 @@
 					<li><a href="#M000026">#test_nitems_while</a></li>
 					
 					<li><a href="#M000028">#test_nitems_with_index</a></li>
+					
+					<li><a href="#M000033">#test_power_set</a></li>
 					
 					<li><a href="#M000024">#test_select_until_condition</a></li>
 					
@@ -259,6 +263,73 @@
 		
 		<div id="public-instance-method-details" class="method-section section">
 			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="test-cartesian-product-method" class="method-detail ">
+				<a name="M000032"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_cartesian_product</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+set math
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-cartesian-product-source">
+<pre>
+     <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 159</span>
+159:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_cartesian_product</span>
+160:     <span class="ruby-identifier">a1</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]
+161:     <span class="ruby-identifier">a2</span>=[<span class="ruby-value str">'d'</span>,<span class="ruby-value str">'e'</span>,<span class="ruby-value str">'f'</span>]
+162:     <span class="ruby-identifier">a3</span>=[<span class="ruby-value str">'g'</span>,<span class="ruby-value str">'h'</span>,<span class="ruby-value str">'i'</span>]
+163:     <span class="ruby-identifier">expect</span>=[[<span class="ruby-value str">&quot;a&quot;</span>, <span class="ruby-value str">&quot;d&quot;</span>, <span class="ruby-value str">&quot;g&quot;</span>],
+164:             [<span class="ruby-value str">&quot;a&quot;</span>, <span class="ruby-value str">&quot;d&quot;</span>, <span class="ruby-value str">&quot;h&quot;</span>],
+165:             [<span class="ruby-value str">&quot;a&quot;</span>, <span class="ruby-value str">&quot;d&quot;</span>, <span class="ruby-value str">&quot;i&quot;</span>],
+166:             [<span class="ruby-value str">&quot;a&quot;</span>, <span class="ruby-value str">&quot;e&quot;</span>, <span class="ruby-value str">&quot;g&quot;</span>],
+167:             [<span class="ruby-value str">&quot;a&quot;</span>, <span class="ruby-value str">&quot;e&quot;</span>, <span class="ruby-value str">&quot;h&quot;</span>],
+168:             [<span class="ruby-value str">&quot;a&quot;</span>, <span class="ruby-value str">&quot;e&quot;</span>, <span class="ruby-value str">&quot;i&quot;</span>],
+169:             [<span class="ruby-value str">&quot;a&quot;</span>, <span class="ruby-value str">&quot;f&quot;</span>, <span class="ruby-value str">&quot;g&quot;</span>],
+170:             [<span class="ruby-value str">&quot;a&quot;</span>, <span class="ruby-value str">&quot;f&quot;</span>, <span class="ruby-value str">&quot;h&quot;</span>],
+171:             [<span class="ruby-value str">&quot;a&quot;</span>, <span class="ruby-value str">&quot;f&quot;</span>, <span class="ruby-value str">&quot;i&quot;</span>],
+172:             [<span class="ruby-value str">&quot;b&quot;</span>, <span class="ruby-value str">&quot;d&quot;</span>, <span class="ruby-value str">&quot;g&quot;</span>],
+173:             [<span class="ruby-value str">&quot;b&quot;</span>, <span class="ruby-value str">&quot;d&quot;</span>, <span class="ruby-value str">&quot;h&quot;</span>],
+174:             [<span class="ruby-value str">&quot;b&quot;</span>, <span class="ruby-value str">&quot;d&quot;</span>, <span class="ruby-value str">&quot;i&quot;</span>],
+175:             [<span class="ruby-value str">&quot;b&quot;</span>, <span class="ruby-value str">&quot;e&quot;</span>, <span class="ruby-value str">&quot;g&quot;</span>],
+176:             [<span class="ruby-value str">&quot;b&quot;</span>, <span class="ruby-value str">&quot;e&quot;</span>, <span class="ruby-value str">&quot;h&quot;</span>],
+177:             [<span class="ruby-value str">&quot;b&quot;</span>, <span class="ruby-value str">&quot;e&quot;</span>, <span class="ruby-value str">&quot;i&quot;</span>],
+178:             [<span class="ruby-value str">&quot;b&quot;</span>, <span class="ruby-value str">&quot;f&quot;</span>, <span class="ruby-value str">&quot;g&quot;</span>],
+179:             [<span class="ruby-value str">&quot;b&quot;</span>, <span class="ruby-value str">&quot;f&quot;</span>, <span class="ruby-value str">&quot;h&quot;</span>],
+180:             [<span class="ruby-value str">&quot;b&quot;</span>, <span class="ruby-value str">&quot;f&quot;</span>, <span class="ruby-value str">&quot;i&quot;</span>],
+181:             [<span class="ruby-value str">&quot;c&quot;</span>, <span class="ruby-value str">&quot;d&quot;</span>, <span class="ruby-value str">&quot;g&quot;</span>],
+182:             [<span class="ruby-value str">&quot;c&quot;</span>, <span class="ruby-value str">&quot;d&quot;</span>, <span class="ruby-value str">&quot;h&quot;</span>],
+183:             [<span class="ruby-value str">&quot;c&quot;</span>, <span class="ruby-value str">&quot;d&quot;</span>, <span class="ruby-value str">&quot;i&quot;</span>],
+184:             [<span class="ruby-value str">&quot;c&quot;</span>, <span class="ruby-value str">&quot;e&quot;</span>, <span class="ruby-value str">&quot;g&quot;</span>],
+185:             [<span class="ruby-value str">&quot;c&quot;</span>, <span class="ruby-value str">&quot;e&quot;</span>, <span class="ruby-value str">&quot;h&quot;</span>],
+186:             [<span class="ruby-value str">&quot;c&quot;</span>, <span class="ruby-value str">&quot;e&quot;</span>, <span class="ruby-value str">&quot;i&quot;</span>],
+187:             [<span class="ruby-value str">&quot;c&quot;</span>, <span class="ruby-value str">&quot;f&quot;</span>, <span class="ruby-value str">&quot;g&quot;</span>],
+188:             [<span class="ruby-value str">&quot;c&quot;</span>, <span class="ruby-value str">&quot;f&quot;</span>, <span class="ruby-value str">&quot;h&quot;</span>],
+189:             [<span class="ruby-value str">&quot;c&quot;</span>, <span class="ruby-value str">&quot;f&quot;</span>, <span class="ruby-value str">&quot;i&quot;</span>]]
+190:     <span class="ruby-identifier">actual</span>=<span class="ruby-constant">Enumerable</span>.<span class="ruby-identifier">cartesian_product</span>(<span class="ruby-identifier">a1</span>,<span class="ruby-identifier">a2</span>,<span class="ruby-identifier">a3</span>)
+191:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-value str">'class method'</span>)
+192:     <span class="ruby-identifier">actual</span>=<span class="ruby-identifier">a1</span>.<span class="ruby-identifier">cartesian_product</span>(<span class="ruby-identifier">a2</span>,<span class="ruby-identifier">a3</span>)
+193:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-value str">'instance method'</span>)
+194:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
 
 		
 			<div id="test-join--method" class="method-detail ">
@@ -656,6 +727,41 @@ nitems
 125:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">3</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">3</span> },<span class="ruby-value str">'i &lt; 3'</span>)
 126:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">3</span>,<span class="ruby-constant">ITEMS</span>.<span class="ruby-identifier">nitems_with_index</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">4</span> },<span class="ruby-value str">'i &lt; 4'</span>)
 127:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="test-power-set-method" class="method-detail ">
+				<a name="M000033"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_power_set</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-power-set-source">
+<pre>
+     <span class="ruby-comment cmt"># File test/unit/enumerable_test.rb, line 196</span>
+196:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_power_set</span>
+197:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]
+198:     <span class="ruby-identifier">expect</span>=[[],[<span class="ruby-value str">'a'</span>],[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>],[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'c'</span>],[<span class="ruby-value str">'b'</span>],[<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],[<span class="ruby-value str">'c'</span>]]
+199:     <span class="ruby-identifier">actual</span>=<span class="ruby-identifier">a</span>.<span class="ruby-identifier">power_set_sort</span>
+200:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>)
+201:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

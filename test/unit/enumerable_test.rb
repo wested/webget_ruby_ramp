@@ -150,6 +150,56 @@ class EnumerableTest < Test::Unit::TestCase
   end
 
 
+  ########################################################################
+  #
+  #  set math
+  #
+  ########################################################################
+
+  def test_cartesian_product
+    a1=['a','b','c']
+    a2=['d','e','f']
+    a3=['g','h','i']
+    expect=[["a", "d", "g"],
+            ["a", "d", "h"],
+            ["a", "d", "i"],
+            ["a", "e", "g"],
+            ["a", "e", "h"],
+            ["a", "e", "i"],
+            ["a", "f", "g"],
+            ["a", "f", "h"],
+            ["a", "f", "i"],
+            ["b", "d", "g"],
+            ["b", "d", "h"],
+            ["b", "d", "i"],
+            ["b", "e", "g"],
+            ["b", "e", "h"],
+            ["b", "e", "i"],
+            ["b", "f", "g"],
+            ["b", "f", "h"],
+            ["b", "f", "i"],
+            ["c", "d", "g"],
+            ["c", "d", "h"],
+            ["c", "d", "i"],
+            ["c", "e", "g"],
+            ["c", "e", "h"],
+            ["c", "e", "i"],
+            ["c", "f", "g"],
+            ["c", "f", "h"],
+            ["c", "f", "i"]]
+    actual=Enumerable.cartesian_product(a1,a2,a3)
+    assert_equal(expect,actual,'class method')
+    actual=a1.cartesian_product(a2,a3)
+    assert_equal(expect,actual,'instance method')
+  end
+
+  def test_power_set
+    a=['a','b','c']
+    expect=[[],['a'],['a','b'],['a','b','c'],['a','c'],['b'],['b','c'],['c']]
+    actual=a.power_set_sort
+    assert_equal(expect,actual)
+  end
+
 end
 
 

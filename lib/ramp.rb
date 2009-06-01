@@ -9,6 +9,7 @@ Ramp is a library of extensions to Ruby base classes, including Array, Date, Enu
 == Array
 
 * choice, choices: one or more random elements from an array
+* cross: return the cross pairings of an array with another array
 * divvy: divides an array, like a pie, into a specified number of slices
 * join: same as Array#join with some improvments
 * rotate: moves the first element of an array to the end
@@ -36,13 +37,14 @@ Dupe methods:
 
 == Enumerable
 
+* cartesian_product: return an array of all possible ordered tuples from arrays.
 * join: forwards to self.to_a.join
 * map_id: returns the id of an Enumerable object; *requires* the object has a field named 'id'
 * map_to_a, map_to_f, map_to_i, map_to_s, map_to_sym : convert each object by calling its respective method to_a, to_i, to_f, to_s, to_sym
 * nitems_until, select_until: returns the number of, or an array containing, the leading elements for which block is false or nil.
 * nitems_while, select_while: returns the number of items, or an array containing the leading elements, for which block is not false or nil.
 * nitems_with_index, select_with_index: calls block with two arguments, the item and its index, for each item in enum. Returns the number of, or an array containing, the leading elements for which block is not false or nil. 
-
+* power_set: return an array with all subsets of the enum's elements
 
 == Hash
 

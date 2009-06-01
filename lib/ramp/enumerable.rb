@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 module Enumerable
 
 
@@ -5,7 +6,7 @@ module Enumerable
   #
   #  map
   #  
-  ########################################################################
+  x########################################################################
   
 
   #  map item => item.id
@@ -148,5 +149,56 @@ module Enumerable
   end
 
 
+  ########################################################################
+  #
+  #  set math
+  #  
+  ########################################################################
+
+
+  # Return the cartesian product of the enumerations.
+  # http://en.wikipedia.org/wiki/Cartesian_product
+  #
+  # This is the fastest implementation we have found.
+  # It returns results in typical order.
+  #
+  # By Thomas Hafner
+  # See http://www.ruby-forum.com/topic/95519
+  #
+  # For our benchmarks, we also compared thesk:
+  # - By William James, http://www.ruby-forum.com/topic/95519
+  # - By Brian Schröäer, http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857
+
+  def self.cartesian_product(*enums)
+    result = [[]]
+    while [] != enums
+      t, result = result, []
+      b, *enums = enums
+      t.each do |a|
+        b.each do |n|
+          result << a + [n]
+        end
+      end
+    end
+    result
+  end
+
+  def cartesian_product(*enums)
+    self.cartesian_product([self]+enums)
+  end
+
+  # Return the power set: an array with all subsets of the enum's elements.
+  # http://en.wikipedia.org/wiki/Power_set
+  #
+  # This implementation is from
+  # http://johncarrino.net/blog/2006/08/11/powerset-in-ruby/
+  #
+  # ==Example
+  #   [1,2,3].power_set.sort
+  #   =>  [[], [1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3]]
+
+  def power_set
+    inject([[]]){|c,y|r=[];c.each{|i|r<<i;r<<i+[y]};r}
+  end
 
 end
