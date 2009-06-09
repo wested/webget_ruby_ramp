@@ -6,7 +6,7 @@ class StringTest < Test::Unit::TestCase
 
 
   def test_lowcase
-    assert_equal('foo_goo_hoo',"Foo GOO!@#$%^&Hoo".lowcase)
+    assert_equal('foo_goo_hoo',"Foo GOO**_**Hoo".lowcase)
   end
 
 
