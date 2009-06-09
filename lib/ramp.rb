@@ -92,6 +92,7 @@ Extensions that help debug Ruby programs.
 * capitalize_words (alias to titleize/titlecase): ensures the first character of each word is uppercase.
 * decrement: decrease the rightmost natural number, defaults to one value lower or by the optional step parameter value.
 * increment: increase the rightmost natural number, defaults to one value higher or by the optional step parameter value.
+* lowcase: translate a string to lowercase, digits and single underscores (e.g. to a method name)
 * prev/pred: previous string ("b" => "a", "bbc" => "bbb", "a" => "z", "880" => "879")
 * prev/pred: updates variable to the previous string in place (astring = "bbc", astring.prev!, puts astring => "bbb")
 * (class) prev_char/pred_char: returns the previous character, with a changed flag and carry flag; that is, there are three returned values, a string and two booleans.

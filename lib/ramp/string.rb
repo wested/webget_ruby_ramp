@@ -1,5 +1,14 @@
 class String
 
+ # Return the string in lowercase, with any non-word-characters
+ # replaced with single underscores (aka low dashes).
+ #
+ # ==Example
+ #   'Foo Goo Hoo' => 'foo_goo_hoo'
+ #   'Foo***Goo***Hoo' => 'foo_goo_hoo'
+ def lowcase
+  downcase.gsub(/\W+/,'_').gsub(/__+/,'_')
+ end
 
  # Return the string split into words, i.e. split(\W*\b\*)
  def words

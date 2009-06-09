@@ -5,6 +5,11 @@ require 'ramp'
 class StringTest < Test::Unit::TestCase
 
 
+  def test_lowcase
+    assert_equal('foo_goo_hoo',"Foo GOO!@#$%^&Hoo".lowcase)
+  end
+
+
   def test_words
     assert_equal(['foo','goo','hoo'],"foo goo hoo".words)
   end
