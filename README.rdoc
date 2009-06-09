@@ -1,9 +1,13 @@
 
-= WebGet.com Ramp: methods to ramp up your ruby applications
+= WebGet.com Ramp: methods to ramp up your Ruby On Rails applications
 
-Ramp is a library of extensions to Ruby base classes, including Array, Date, Enumerable, Hash, Kernel, Numeric, Object, Process, String, Time, and YAML. 
+Ramp is a library of extensions to Ruby and Rails base classes, including ActiveRecord, Array, Date, Enumerable, Hash, Kernel, Numeric, Object, Process, String, Time, and YAML. 
 
 <p>Each has an associated test class, e.g., ArrayTest, DateTest, etc.
+
+== ActiveRecord
+
+* create_or_update_by: create a record or update a record if it matches a referenced field. 
 
 == Array
 
