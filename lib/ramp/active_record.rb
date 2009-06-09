@@ -3,6 +3,7 @@
 # create_or_update_by_xxx
 # See http://www.intridea.com/2008/2/19/activerecord-base-create_or_update-on-steroids-2
 
+require 'activerecord'
 require 'active_record'
 
 class << ActiveRecord::Base  
