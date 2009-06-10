@@ -4,7 +4,7 @@
 
 Ramp is a library of extensions to Ruby and Rails base classes, including ActiveRecord, Array, Date, Enumerable, Hash, Kernel, Numeric, Object, Process, String, Time, and YAML. 
 
-<p>Each has an associated test class, e.g., ArrayTest, DateTest, etc.
+Each has an associated test class, e.g., ArrayTest, DateTest, etc.
 
 == ActiveRecord
 
@@ -21,15 +21,9 @@ Ramp is a library of extensions to Ruby and Rails base classes, including Active
 * to_csv: outputs the array to Comma Separated Value (CSV) text, typically for viewing in a spreadsheet such as Excel
 * union: builds an array containing each of the unique elements of sub-arrays ([[1,2,3,4],[2,3,4,5],[3,4,5,6]].union => [1,2,3,4,5,6])
 
-Dupe methods:
-* intersection => '&' (a1 & a2 => [common items])
-* size => empty?
-
-
 == CSV
 
 * http_headers: provides web file download headers for text/csv content type and disposition.
-
 
 == Date
 
@@ -37,7 +31,6 @@ Dupe methods:
 * between: a random date between two specified dates
 * to_sql: date as a string formatted as expected for MySQL
 * weekday?, weekend?: is date a weekday or on the weekend
-
 
 == Enumerable
 
@@ -56,20 +49,14 @@ Dupe methods:
 * rolldown, rollup: retrieve arrays of elements from a hash of hashes by top level field name or by interior hash field name, optionally passing a block to execute against each resulting array.
 * to_yaml_sort: returns a YAML object, sorted by field name
 
-Dupe methods:
-* size? => empty?
-
-
 == Integer
 
 * yields: loop over a block n times and return an array with all the results (e.g. 3.yields{'foo'} => ['foo','foo','foo'])
-
 
 == Kernel
 
 * method_name: 
 * method_name_of_caller: returns the name of the method which called the current method, or the Nth parent up the call stack if the optional caller_index parameter is passed.
-
 
 == Numeric
 
@@ -77,11 +64,9 @@ Dupe methods:
 * unless: returns 0 unless the passed flag is any of: nil, false, 0, [], {} and otherwise returns self
 * peta, tera, giga, mega, kilo, hecto, deka, deci, centi, milli, micro, nano: multiply/divide by powers of ten
 
-
 == Object
 
 * in?: returns boolean indicating whether the object is a member of the specified array parameter
-
 
 == Process
 
@@ -89,7 +74,6 @@ Extensions that help debug Ruby programs.
 
 * (class) ps: output of the system 'ps' command, also including aliases, as raw plain text.
 * (class) pss: output of the system 'ps' command as a hash with each value set to the right type, e.g., integer, float, etc..
-
 
 == String
 
@@ -102,25 +86,9 @@ Extensions that help debug Ruby programs.
 * (class) prev_char/pred_char: returns the previous character, with a changed flag and carry flag; that is, there are three returned values, a string and two booleans.
 * split_tab: splits the string into an array at each embedded tab ("Last\tFirst\tMiddle" => ["last","first","middle"])
 
-
-== String
-
-* capitalize_words (alias to titleize/titlecase): ensures the first character of each word is uppercase.
-* decrement: decrease the rightmost natural number, defaults to one value lower or by the optional step parameter value.
-* increment: increase the rightmost natural number, defaults to one value higher or by the optional step parameter value.
-* lorem: return a short random string, good for use in "lorem ipsum" sample text.
-* prev/pred: previous string ("b" => "a", "bbc" => "bbb", "a" => "z", "880" => "879")
-* prev/pred: updates variable to the previous string in place (astring = "bbc", astring.prev!, puts astring => "bbb")
-* (class) prev_char/pred_char: returns the previous character, with a changed flag and carry flag; that is, there are three returned values, a string and two booleans.
-* split_tab: splits the string into an array at each embedded tab ("Last\tFirst\tMiddle" => ["last","first","middle"])
-* to_class: the global class reference of a given string
-* words: splits the string into an array of words
-
-
 == Time
 
 * (class) stamp: current time in UTC as a timestamp string ("YYYYMMDDHHMMSS")
-
 
 == XML
 
@@ -129,7 +97,6 @@ Extensions that help debug Ruby programs.
 == YAML
 
 * (class) load_dir: passes each YAML file in a directory to a specified block
-
 
 == Changes
 
@@ -146,7 +113,6 @@ Extensions that help debug Ruby programs.
 - 1.0.0 Original
 
 =end
-
 
 %w{active_record array csv date enumerable hash integer kernel nil numeric object process string time xml yaml}.map{|x|
   require File.dirname(__FILE__) + "/ramp/#{x}.rb"
