@@ -110,7 +110,7 @@ Extensions that help debug Ruby programs.
 - 1.6.2 Improve organizaiton of class files to lib/ramp
 - 1.6.0 Upgraded to work with Ruby 1.9.1
 - 1.5.0 Combined all Ruby extension files into one gem
-- 1.0.0 Original
+- 1.0.0 Original 
 
 =end
 
