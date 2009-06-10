@@ -219,8 +219,8 @@ Load xml documents from a directory
 </pre>
 <h2>Example to load xml documents in files beginning in &#8220;foo&#8221; or &#8220;bar&#8220;</h2>
 <pre>
-  XML.load_dir('/tmp/foo*.yaml','/tmp/bar*.xml','){|yaml_document|
-    #...whatever you want to do with the yaml document
+  XML.load_dir('/tmp/foo*.yaml','/tmp/bar*.xml','){|xml_document|
+    #...whatever you want to do with the xml document
   }
 </pre>
 					

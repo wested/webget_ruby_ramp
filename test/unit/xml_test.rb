@@ -14,7 +14,7 @@ class XMLTest < Test::Unit::TestCase
   dirpath='test/unit/xml_test_*.xml'
   expect="abcdef"
   actual=''
-  XML.load_dir(dirpath){|doc| doc.elements.each('foo/bar'){|e| s+=e.attributes['x']}}
+  XML.load_dir(dirpath){|doc| doc.elements.each('foo/bar'){|e| actual+=e.attributes['x']}}
   assert_equal(expect,actual,'XML.load_dir')
  end
 

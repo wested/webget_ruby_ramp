@@ -59,9 +59,9 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000040">#test_load_dir</a></li>
+					<li><a href="#M000041">#test_load_dir</a></li>
 					
-					<li><a href="#M000039">#test_load_dir_files</a></li>
+					<li><a href="#M000040">#test_load_dir_files</a></li>
 					
 				</ul>
 			</div>
@@ -205,7 +205,7 @@
 
 		
 			<div id="test-load-dir-method" class="method-detail ">
-				<a name="M000040"></a>
+				<a name="M000041"></a>
 
 				<div class="method-heading">
 				
@@ -229,7 +229,7 @@
 14:   <span class="ruby-identifier">dirpath</span>=<span class="ruby-value str">'test/unit/xml_test_*.xml'</span>
 15:   <span class="ruby-identifier">expect</span>=<span class="ruby-value str">&quot;abcdef&quot;</span>
 16:   <span class="ruby-identifier">actual</span>=<span class="ruby-value str">''</span>
-17:   <span class="ruby-constant">XML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-identifier">dirpath</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-value str">'foo/bar'</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span><span class="ruby-operator">+=</span><span class="ruby-identifier">e</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-value str">'x'</span>]}}
+17:   <span class="ruby-constant">XML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-identifier">dirpath</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-value str">'foo/bar'</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">actual</span><span class="ruby-operator">+=</span><span class="ruby-identifier">e</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-value str">'x'</span>]}}
 18:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-value str">'XML.load_dir'</span>)
 19:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
@@ -241,7 +241,7 @@
 
 		
 			<div id="test-load-dir-files-method" class="method-detail ">
-				<a name="M000039"></a>
+				<a name="M000040"></a>
 
 				<div class="method-heading">
 				

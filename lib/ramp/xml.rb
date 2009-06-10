@@ -10,8 +10,8 @@ module XML
   #   }
   #
   # ==Example to load xml documents in files beginning in "foo" or "bar"
-  #   XML.load_dir('/tmp/foo*.yaml','/tmp/bar*.xml','){|yaml_document|
-  #     #...whatever you want to do with the yaml document
+  #   XML.load_dir('/tmp/foo*.yaml','/tmp/bar*.xml','){|xml_document|
+  #     #...whatever you want to do with the xml document
   #   }
 
   def XML.load_dir(*dirpaths)
