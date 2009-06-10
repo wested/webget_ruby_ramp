@@ -37,6 +37,10 @@
 				
 					<li class="file"><a href="./ramp_sha512_txt.html">ramp.sha512.txt</a></li>
 				
+					<li class="file"><a href="./test/unit/xml_test_1_xml.html">xml_test_1.xml</a></li>
+				
+					<li class="file"><a href="./test/unit/xml_test_2_xml.html">xml_test_2.xml</a></li>
+				
 					<li class="file"><a href="./test/unit/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
 				
 					<li class="file"><a href="./test/unit/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
@@ -116,6 +120,10 @@
 				
 					<li><a href="./TimeTest.html">TimeTest</a></li>
 				
+					<li><a href="./XML.html">XML</a></li>
+				
+					<li><a href="./XMLTest.html">XMLTest</a></li>
+				
 					<li><a href="./YAML.html">YAML</a></li>
 				
 					<li><a href="./YAMLTest.html">YAMLTest</a></li>
@@ -133,11 +141,12 @@
 Gem::Specification.new do |s|
 </p>
 <pre>
-  CLASSES             = %w'active_record array csv date enumerable hash integer kernel nil numeric object process string time yaml'
+  CLASSES             = %w'active_record array csv date enumerable hash integer kernel nil numeric object process string time xml yaml'
+  TEST_UNIT_FILES     = %w'xml_test_1.xml xml_test_2.xml yaml_test_1.yml yaml_test_2.yml'
 
   s.name              = &quot;ramp&quot;
   s.summary           = &quot;ramp&quot;
-  s.version           = &quot;1.6.8.3&quot;
+  s.version           = &quot;1.6.8.4&quot;
   s.author            = &quot;WebGet&quot;
   s.email             = &quot;webget@webget.com&quot;
   s.homepage          = &quot;http://webget.com/gems/ramp&quot;
@@ -147,7 +156,7 @@ Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.require_path      = 'lib'
   s.has_rdoc          = true
-  s.files             = ['lib/ramp.rb'] + CLASSES.map{|c| &quot;lib/ramp/#{c}.rb&quot;} + ['test/unit/yaml_test_1.yml','test/unit/yaml_test_2.yml']
+  s.files             = ['lib/ramp.rb'] + CLASSES.map{|c| &quot;lib/ramp/#{c}.rb&quot;} + TEST_UNIT_FILES.map{|f| &quot;test/unit/#{f}&quot;}
   s.test_files        = CLASSES.map{|c| &quot;test/unit/#{c}_test.rb&quot;}
 </pre>
 <p>

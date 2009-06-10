@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: RampTest</title>
+	<title>Module: XML</title>
 
 	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -19,7 +19,7 @@
 		charset="utf-8"></script>
 
 </head>
-<body class="class">
+<body class="module">
 
 	<div id="metadata">
 		<div id="file-metadata">
@@ -28,8 +28,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="./test/unit/ramp_test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="test/unit/ramp_test.rb">test/unit/ramp_test.rb</a></li>
+						<li><a href="./lib/ramp/xml_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ramp/xml.rb">lib/ramp/xml.rb</a></li>
 					
 					</ul>
 				</div>
@@ -42,13 +42,6 @@
 
 			<!-- Parent Class -->
 			
-			<div id="parent-class-section" class="section">
-				<h3 class="section-header">Parent</h3>
-				
-				<p class="link">Test::Unit::TestCase</p>
-				
-			</div>
-			
 
 			<!-- Namespace Contents -->
 			
@@ -59,7 +52,7 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000036">#test_</a></li>
+					<li><a href="#M000147">::load_dir</a></li>
 					
 				</ul>
 			</div>
@@ -184,7 +177,7 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">RampTest</h1>
+		<h1 class="module">XML</h1>
 
 		<div id="description">
 			
@@ -198,34 +191,56 @@
 
 		<!-- Methods -->
 		
-		<div id="public-instance-method-details" class="method-section section">
-			<h3 class="section-header">Public Instance Methods</h3>
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
 
 		
-			<div id="test--method" class="method-detail ">
-				<a name="M000036"></a>
+			<div id="load-dir-method" class="method-detail ">
+				<a name="M000147"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">test_</span><span
-						class="method-args">()</span>
+					<span class="method-name">load_dir</span><span
+						class="method-args">(*dirpaths)</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
 
 				<div class="method-description">
 					
-					
+					<p>
+Load xml documents from a directory
+</p>
+<h2>Example</h2>
+<pre>
+  XML.load_dir('/tmp/*.xml'){|xml_document|
+    #...whatever you want to do with each xml document
+  }
+</pre>
+<h2>Example to load xml documents in files beginning in &#8220;foo&#8221; or &#8220;bar&#8220;</h2>
+<pre>
+  XML.load_dir('/tmp/foo*.yaml','/tmp/bar*.xml','){|yaml_document|
+    #...whatever you want to do with the yaml document
+  }
+</pre>
 					
 
 					
 					<div class="method-source-code"
-						id="test--source">
+						id="load-dir-source">
 <pre>
-   <span class="ruby-comment cmt"># File test/unit/ramp_test.rb, line 7</span>
-7:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_</span>
-8:   <span class="ruby-identifier">assert</span>()
-9:  <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/xml.rb, line 17</span>
+17:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">XML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">dirpaths</span>)
+18:     <span class="ruby-identifier">dirpaths</span>=[<span class="ruby-operator">*</span><span class="ruby-identifier">dirpaths</span>.<span class="ruby-identifier">flatten</span>]
+19:     <span class="ruby-identifier">dirpaths</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dirpath</span><span class="ruby-operator">|</span>
+20:       <span class="ruby-constant">Dir</span>[<span class="ruby-identifier">dirpath</span>].<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">filename</span><span class="ruby-operator">|</span>
+21:         <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+22:           <span class="ruby-identifier">doc</span> = <span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">file</span>
+23:           <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">doc</span>
+24:         <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#file</span>
+25:       <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#dir</span>
+26:     <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#each</span>
+27:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

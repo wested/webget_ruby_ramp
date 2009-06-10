@@ -122,14 +122,20 @@ Extensions that help debug Ruby programs.
 * (class) stamp: current time in UTC as a timestamp string ("YYYYMMDDHHMMSS")
 
 
+== XML
+
+* (class) load_dir: passes each XML file in a directory to a specified block
+
 == YAML
 
 * (class) load_dir: passes each YAML file in a directory to a specified block
-* (class) load_dir_pairs: passes each YAML file in a directory to a specified block as Key, value pair
 
 
 == Changes
 
+- 1.6.8.4 Add XML
+- 1.6.8.3 Add ActiveRecord
+- 1.6.8.2 Add String#lowcase
 - 1.6.8 Add map_to_xxx methods
 - 1.6.7 Add CSV
 - 1.6.6 Add Array#to_csv, Integer, String#lorem, etc., improve tests
@@ -142,6 +148,6 @@ Extensions that help debug Ruby programs.
 =end
 
 
-%w{active_record array csv date enumerable hash integer kernel nil numeric object process string time yaml}.map{|x|
+%w{active_record array csv date enumerable hash integer kernel nil numeric object process string time xml yaml}.map{|x|
   require File.dirname(__FILE__) + "/ramp/#{x}.rb"
 }

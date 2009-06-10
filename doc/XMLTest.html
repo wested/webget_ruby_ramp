@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: RampTest</title>
+	<title>Class: XMLTest</title>
 
 	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -28,8 +28,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="./test/unit/ramp_test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="test/unit/ramp_test.rb">test/unit/ramp_test.rb</a></li>
+						<li><a href="./test/unit/xml_test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="test/unit/xml_test.rb">test/unit/xml_test.rb</a></li>
 					
 					</ul>
 				</div>
@@ -59,7 +59,9 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000036">#test_</a></li>
+					<li><a href="#M000040">#test_load_dir</a></li>
+					
+					<li><a href="#M000039">#test_load_dir_files</a></li>
 					
 				</ul>
 			</div>
@@ -184,7 +186,7 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">RampTest</h1>
+		<h1 class="class">XMLTest</h1>
 
 		<div id="description">
 			
@@ -202,12 +204,12 @@
 			<h3 class="section-header">Public Instance Methods</h3>
 
 		
-			<div id="test--method" class="method-detail ">
-				<a name="M000036"></a>
+			<div id="test-load-dir-method" class="method-detail ">
+				<a name="M000040"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">test_</span><span
+					<span class="method-name">test_load_dir</span><span
 						class="method-args">()</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
@@ -215,17 +217,56 @@
 
 				<div class="method-description">
 					
-					
+					<p class="missing-docs">(Not documented)</p>
 					
 
 					
 					<div class="method-source-code"
-						id="test--source">
+						id="test-load-dir-source">
 <pre>
-   <span class="ruby-comment cmt"># File test/unit/ramp_test.rb, line 7</span>
-7:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_</span>
-8:   <span class="ruby-identifier">assert</span>()
-9:  <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/xml_test.rb, line 13</span>
+13:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_load_dir</span>
+14:   <span class="ruby-identifier">dirpath</span>=<span class="ruby-value str">'test/unit/xml_test_*.xml'</span>
+15:   <span class="ruby-identifier">expect</span>=<span class="ruby-value str">&quot;abcdef&quot;</span>
+16:   <span class="ruby-identifier">actual</span>=<span class="ruby-value str">''</span>
+17:   <span class="ruby-constant">XML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-identifier">dirpath</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span> <span class="ruby-identifier">actual</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">to_s</span> }
+18:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-value str">'XML.load_dir'</span>)
+19:  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="test-load-dir-files-method" class="method-detail ">
+				<a name="M000039"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_load_dir_files</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-load-dir-files-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/unit/xml_test.rb, line 6</span>
+ 6:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_load_dir_files</span>
+ 7:   <span class="ruby-identifier">dirpath</span>=<span class="ruby-value str">'test/unit/xml_test_*.yml'</span>
+ 8:   <span class="ruby-identifier">expect</span>=[<span class="ruby-value str">&quot;test/unit/xml_test_1.yml&quot;</span>,<span class="ruby-value str">&quot;test/unit/xml_test_2.yml&quot;</span>]
+ 9:   <span class="ruby-identifier">actual</span>=<span class="ruby-constant">Dir</span>[<span class="ruby-identifier">dirpath</span>].<span class="ruby-identifier">sort</span>
+10:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-node">&quot;Dir[#{dirpath}] expects test data files&quot;</span>)
+11:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
