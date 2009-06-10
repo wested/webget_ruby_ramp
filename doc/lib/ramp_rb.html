@@ -6,7 +6,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>File: ramp.rb [ramp]</title>
+	<title>File: ramp.rb [RDoc Documentation]</title>
 
 	<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet" />
 
@@ -24,7 +24,7 @@
 	<div id="metadata">
 		<dl>
 			<dt class="modified-date">Last Modified</dt>
-			<dd class="modified-date">Wed Jun 10 05:57:05 -0700 2009</dd>
+			<dd class="modified-date">Wed Jun 10 10:19:40 -0700 2009</dd>
 
 			
 			<dt class="requires">Requires</dt>
@@ -54,7 +54,7 @@ href="../Process.html">Process</a>, <a href="../String.html">String</a>, <a
 href="../Time.html">Time</a>, and <a href="../YAML.html">YAML</a>.
 </p>
 <p>
-<p>Each has an associated test class, e.g., <a
+Each has an associated test class, e.g., <a
 href="../ArrayTest.html">ArrayTest</a>, <a
 href="../DateTest.html">DateTest</a>, etc.
 </p>
@@ -76,7 +76,7 @@ referenced field.
 <li>divvy: divides an array, like a pie, into a specified number of slices
 
 </li>
-<li>join: same as <a href="../Array.html#M000092">Array#join</a> with some
+<li>join: same as <a href="../Array.html#M000003">Array#join</a> with some
 improvments
 
 </li>
@@ -94,17 +94,6 @@ such as Excel
 </li>
 <li>union: builds an array containing each of the unique elements of sub-arrays
 ([[1,2,3,4],[2,3,4,5],[3,4,5,6]].union => [1,2,3,4,5,6])
-
-</li>
-</ul>
-<p>
-Dupe methods:
-</p>
-<ul>
-<li>intersection => &#8217;&amp;&#8217; (a1 &amp; a2 => [common items])
-
-</li>
-<li>size => empty?
 
 </li>
 </ul>
@@ -177,14 +166,6 @@ to execute against each resulting array.
 </li>
 <li>to_yaml_sort: returns a <a href="../YAML.html">YAML</a> object, sorted by
 field name
-
-</li>
-</ul>
-<p>
-Dupe methods:
-</p>
-<ul>
-<li>size? => empty?
 
 </li>
 </ul>
@@ -281,50 +262,6 @@ two booleans.
 
 </li>
 </ul>
-<h2><a href="../String.html">String</a></h2>
-<ul>
-<li>capitalize_words (alias to titleize/titlecase): ensures the first character
-of each word is uppercase.
-
-</li>
-<li>decrement: decrease the rightmost natural number, defaults to one value
-lower or by the optional step parameter value.
-
-</li>
-<li>increment: increase the rightmost natural number, defaults to one value
-higher or by the optional step parameter value.
-
-</li>
-<li>lorem: return a short random string, good for use in &#8220;lorem
-ipsum&#8221; sample text.
-
-</li>
-<li>prev/pred: previous string (&#8220;b&#8221; => &#8220;a&#8221;,
-&#8220;bbc&#8221; => &#8220;bbb&#8221;, &#8220;a&#8221; => &#8220;z&#8221;,
-&#8220;880&#8221; => &#8220;879&#8221;)
-
-</li>
-<li>prev/pred: updates variable to the previous string in place (astring =
-&#8220;bbc&#8221;, astring.prev!, puts astring => &#8220;bbb&#8221;)
-
-</li>
-<li>(class) prev_char/pred_char: returns the previous character, with a changed
-flag and carry flag; that is, there are three returned values, a string and
-two booleans.
-
-</li>
-<li>split_tab: splits the string into an array at each embedded tab
-(&#8220;LasttFirsttMiddle&#8221; =>
-[&#8220;last&#8221;,&#8220;first&#8221;,&#8220;middle&#8221;])
-
-</li>
-<li>to_class: the global class reference of a given string
-
-</li>
-<li>words: splits the string into an array of words
-
-</li>
-</ul>
 <h2><a href="../Time.html">Time</a></h2>
 <ul>
 <li>(class) stamp: current time in UTC as a timestamp string
@@ -354,7 +291,7 @@ directory to a specified block
 <li>1.6.8.3 Add ActiveRecord
 
 </li>
-<li>1.6.8.2 Add <a href="../String.html#M000135">String#lowcase</a>
+<li>1.6.8.2 Add <a href="../String.html#M000069">String#lowcase</a>
 
 </li>
 <li>1.6.8 Add map_to_xxx methods
@@ -363,9 +300,9 @@ directory to a specified block
 <li>1.6.7 Add <a href="../CSV.html">CSV</a>
 
 </li>
-<li>1.6.6 Add <a href="../Array.html#M000110">Array#to_csv</a>, <a
+<li>1.6.6 Add <a href="../Array.html#M000013">Array#to_csv</a>, <a
 href="../Integer.html">Integer</a>, <a
-href="../String.html#M000152">String#lorem</a>, etc., improve tests
+href="../String.html#M000083">String#lorem</a>, etc., improve tests
 
 </li>
 <li>1.6.4 Bug fixes: <a href="../String.html">String</a> characters and <a
