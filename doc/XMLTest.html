@@ -229,7 +229,7 @@
 14:   <span class="ruby-identifier">dirpath</span>=<span class="ruby-value str">'test/unit/xml_test_*.xml'</span>
 15:   <span class="ruby-identifier">expect</span>=<span class="ruby-value str">&quot;abcdef&quot;</span>
 16:   <span class="ruby-identifier">actual</span>=<span class="ruby-value str">''</span>
-17:   <span class="ruby-constant">XML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-identifier">dirpath</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span> <span class="ruby-identifier">actual</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">to_s</span> }
+17:   <span class="ruby-constant">XML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-identifier">dirpath</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-value str">'foo/bar'</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span><span class="ruby-operator">+=</span><span class="ruby-identifier">e</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-value str">'x'</span>]}}
 18:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-value str">'XML.load_dir'</span>)
 19:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
@@ -262,8 +262,8 @@
 <pre>
     <span class="ruby-comment cmt"># File test/unit/xml_test.rb, line 6</span>
  6:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_load_dir_files</span>
- 7:   <span class="ruby-identifier">dirpath</span>=<span class="ruby-value str">'test/unit/xml_test_*.yml'</span>
- 8:   <span class="ruby-identifier">expect</span>=[<span class="ruby-value str">&quot;test/unit/xml_test_1.yml&quot;</span>,<span class="ruby-value str">&quot;test/unit/xml_test_2.yml&quot;</span>]
+ 7:   <span class="ruby-identifier">dirpath</span>=<span class="ruby-value str">'test/unit/xml_test_*.xml'</span>
+ 8:   <span class="ruby-identifier">expect</span>=[<span class="ruby-value str">&quot;test/unit/xml_test_1.xml&quot;</span>,<span class="ruby-value str">&quot;test/unit/xml_test_2.xml&quot;</span>]
  9:   <span class="ruby-identifier">actual</span>=<span class="ruby-constant">Dir</span>[<span class="ruby-identifier">dirpath</span>].<span class="ruby-identifier">sort</span>
 10:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-node">&quot;Dir[#{dirpath}] expects test data files&quot;</span>)
 11:  <span class="ruby-keyword kw">end</span></pre>

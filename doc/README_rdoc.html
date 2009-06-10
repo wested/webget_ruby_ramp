@@ -426,28 +426,40 @@ two booleans.
 
 </li>
 </ul>
+<h2><a href="XML.html">XML</a></h2>
+<ul>
+<li>(class) load_dir: passes each <a href="XML.html">XML</a> file in a
+directory to a specified block
+
+</li>
+</ul>
 <h2><a href="YAML.html">YAML</a></h2>
 <ul>
 <li>(class) load_dir: passes each <a href="YAML.html">YAML</a> file in a
 directory to a specified block
 
 </li>
-<li>(class) load_dir_pairs: passes each <a href="YAML.html">YAML</a> file in a
-directory to a specified block as Key, value pair
-
-</li>
 </ul>
 <h2>Changes</h2>
 <ul>
+<li>1.6.8.4 Add <a href="XML.html">XML</a>
+
+</li>
+<li>1.6.8.3 Add ActiveRecord
+
+</li>
+<li>1.6.8.2 Add <a href="String.html#M000134">String#lowcase</a>
+
+</li>
 <li>1.6.8 Add map_to_xxx methods
 
 </li>
 <li>1.6.7 Add <a href="CSV.html">CSV</a>
 
 </li>
-<li>1.6.6 Add <a href="Array.html#M000108">Array#to_csv</a>, <a
+<li>1.6.6 Add <a href="Array.html#M000109">Array#to_csv</a>, <a
 href="Integer.html">Integer</a>, <a
-href="String.html#M000151">String#lorem</a>, etc., improve tests
+href="String.html#M000150">String#lorem</a>, etc., improve tests
 
 </li>
 <li>1.6.4 Bug fixes: <a href="String.html">String</a> characters and <a
@@ -470,7 +482,7 @@ href="YAML.html">YAML</a> test files
 <h1>end</h1>
 <p>
 %w{active_record array csv date enumerable hash integer kernel nil numeric
-object process string time yaml}.map{|x|
+object process string time xml yaml}.map{|x|
 </p>
 <pre>
   require File.dirname(__FILE__) + &quot;/ramp/#{x}.rb&quot;

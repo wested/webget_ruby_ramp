@@ -1,5 +1,5 @@
 <foo>
-<bar name="d"/>
-<bar name="e"/>
-<bar name="f"/>
+<bar x="d"/>
+<bar x="e"/>
+<bar x="f"/>
 </foo>
