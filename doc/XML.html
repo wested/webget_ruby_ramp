@@ -52,7 +52,11 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000151">::load_dir</a></li>
+					<li><a href="#M000154">::load_attributes</a></li>
+					
+					<li><a href="#M000150">::load_dir</a></li>
+					
+					<li><a href="#M000153">::load_elements</a></li>
 					
 				</ul>
 			</div>
@@ -105,6 +109,10 @@
 				<ul class="link-list">
 				
 					<li><a href="./EnumerableTest.html">EnumerableTest</a></li>
+				
+					<li><a href="./REXML.html">REXML</a></li>
+				
+					<li><a href="./REXML/Attributes.html">REXML::Attributes</a></li>
 				
 					<li><a href="./ActiveRecordTest.html">ActiveRecordTest</a></li>
 				
@@ -195,8 +203,48 @@
 			<h3 class="section-header">Public Class Methods</h3>
 
 		
+			<div id="load-attributes-method" class="method-detail ">
+				<a name="M000154"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_attributes</span><span
+						class="method-args">(dirpath,xpath)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Sugar to load attributes from a file to a hash.
+</p>
+<h2>Example</h2>
+<pre>
+  XML.load_attributes('config.xml','userlist/user'){|attributes| pp attributes['first_name'] }
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="load-attributes-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/xml.rb, line 49</span>
+49:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">XML</span>.<span class="ruby-identifier">load_attributes</span>(<span class="ruby-identifier">dirpath</span>,<span class="ruby-identifier">xpath</span>)
+50:     <span class="ruby-constant">XML</span>.<span class="ruby-identifier">load_elements</span>(<span class="ruby-identifier">dirpath</span>,<span class="ruby-identifier">xpath</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+51:       <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">attributes</span>
+52:     }
+53:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
 			<div id="load-dir-method" class="method-detail ">
-				<a name="M000151"></a>
+				<a name="M000150"></a>
 
 				<div class="method-heading">
 				
@@ -241,6 +289,48 @@ Load xml documents from a directory
 25:       <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#dir</span>
 26:     <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#each</span>
 27:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="load-elements-method" class="method-detail ">
+				<a name="M000153"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_elements</span><span
+						class="method-args">(dirpath,xpath)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Sugar to load elements from a file.
+</p>
+<h2>Example</h2>
+<pre>
+  XML.load_attributes('config.xml','userlist/user'){|element| pp element.attributes['first_name'] }
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="load-elements-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/xml.rb, line 35</span>
+35:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">XML</span>.<span class="ruby-identifier">load_elements</span>(<span class="ruby-identifier">dirpath</span>,<span class="ruby-identifier">xpath</span>)
+36:     <span class="ruby-constant">XML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-identifier">dirpath</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span>
+37:       <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-identifier">xpath</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+38:         <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">e</span>
+39:       }
+40:     }
+41:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

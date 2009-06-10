@@ -18,5 +18,12 @@ class XMLTest < Test::Unit::TestCase
   assert_equal(expect,actual,'XML.load_dir')
  end
 
+ def test_attributes_hash
+   doc=REXML::Document.new('<foo a="b" c="d" e="f"/>')
+   expect={"a"=>"b","c"=>"d","e"=>"f"}
+   actual=doc.elements['foo'].attributes.hash
+   assert_equal(expect,actual,'XML attributes hash')
+ end
+
 end
 

@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: EnumerableTest::Mock</title>
+	<title>Class: REXML::Attributes</title>
 
 	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
 
@@ -28,8 +28,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="../test/unit/enumerable_test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="test/unit/enumerable_test.rb">test/unit/enumerable_test.rb</a></li>
+						<li><a href="../lib/ramp/xml_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ramp/xml.rb">lib/ramp/xml.rb</a></li>
 					
 					</ul>
 				</div>
@@ -54,6 +54,15 @@
 			
 
 			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000155">#hash</a></li>
+					
+				</ul>
+			</div>
 			
 
 			<!-- Included Modules -->
@@ -179,13 +188,10 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">EnumerableTest::Mock</h1>
+		<h1 class="class">REXML::Attributes</h1>
 
 		<div id="description">
-			<p>
-map
-</p>
-
+			
 		</div>
 
 		<!-- Constants -->
@@ -196,6 +202,46 @@ map
 
 		<!-- Methods -->
 		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="hash-method" class="method-detail ">
+				<a name="M000155"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hash</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="hash-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/xml.rb, line 60</span>
+60:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hash</span>
+61:     <span class="ruby-identifier">h</span>=<span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+62:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">h</span>[<span class="ruby-identifier">k</span>]=<span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">k</span>]}
+63:     <span class="ruby-identifier">h</span>
+64:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
 
 	</div>
 

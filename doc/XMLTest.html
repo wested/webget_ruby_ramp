@@ -59,9 +59,11 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000041">#test_load_dir</a></li>
+					<li><a href="#M000041">#test_attributes_hash</a></li>
 					
-					<li><a href="#M000040">#test_load_dir_files</a></li>
+					<li><a href="#M000040">#test_load_dir</a></li>
+					
+					<li><a href="#M000039">#test_load_dir_files</a></li>
 					
 				</ul>
 			</div>
@@ -114,6 +116,10 @@
 				<ul class="link-list">
 				
 					<li><a href="./EnumerableTest.html">EnumerableTest</a></li>
+				
+					<li><a href="./REXML.html">REXML</a></li>
+				
+					<li><a href="./REXML/Attributes.html">REXML::Attributes</a></li>
 				
 					<li><a href="./ActiveRecordTest.html">ActiveRecordTest</a></li>
 				
@@ -204,8 +210,43 @@
 			<h3 class="section-header">Public Instance Methods</h3>
 
 		
-			<div id="test-load-dir-method" class="method-detail ">
+			<div id="test-attributes-hash-method" class="method-detail ">
 				<a name="M000041"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_attributes_hash</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-attributes-hash-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/unit/xml_test.rb, line 21</span>
+21:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_attributes_hash</span>
+22:    <span class="ruby-identifier">doc</span>=<span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">'&lt;foo a=&quot;b&quot; c=&quot;d&quot; e=&quot;f&quot;/&gt;'</span>)
+23:    <span class="ruby-identifier">expect</span>={<span class="ruby-value str">&quot;a&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;b&quot;</span>,<span class="ruby-value str">&quot;c&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;d&quot;</span>,<span class="ruby-value str">&quot;e&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;f&quot;</span>}
+24:    <span class="ruby-identifier">actual</span>=<span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value str">'foo'</span>].<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">hash</span>
+25:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-value str">'XML attributes hash'</span>)
+26:  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="test-load-dir-method" class="method-detail ">
+				<a name="M000040"></a>
 
 				<div class="method-heading">
 				
@@ -241,7 +282,7 @@
 
 		
 			<div id="test-load-dir-files-method" class="method-detail ">
-				<a name="M000040"></a>
+				<a name="M000039"></a>
 
 				<div class="method-heading">
 				

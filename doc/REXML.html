@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: ProcessTest</title>
+	<title>Module: REXML</title>
 
 	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -19,7 +19,7 @@
 		charset="utf-8"></script>
 
 </head>
-<body class="class">
+<body class="module">
 
 	<div id="metadata">
 		<div id="file-metadata">
@@ -27,9 +27,6 @@
 				<h3 class="section-header">In Files</h3>
 				<div class="section-body">
 					<ul>
-					
-						<li><a href="./test/unit/process_test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="test/unit/process_test.rb">test/unit/process_test.rb</a></li>
 					
 					</ul>
 				</div>
@@ -42,43 +39,23 @@
 
 			<!-- Parent Class -->
 			
-			<div id="parent-class-section" class="section">
-				<h3 class="section-header">Parent</h3>
-				
-				<p class="link">Test::Unit::TestCase</p>
-				
-			</div>
-			
 
 			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="REXML/Attributes.html">REXML::Attributes</a></li>
+					
+				</ul>
+			</div>
 			
 
 			<!-- Method Quickref -->
 			
-			<div id="method-list-section" class="section">
-				<h3 class="section-header">Methods</h3>
-				<ul class="link-list">
-					
-					<li><a href="#M000013">#test_ps</a></li>
-					
-					<li><a href="#M000014">#test_pss</a></li>
-					
-				</ul>
-			</div>
-			
 
 			<!-- Included Modules -->
-			
-			<div id="includes-section" class="section">
-				<h3 class="section-header">Included Modules</h3>
-				<ul class="link-list">
-				
-				
-					<li><a class="include" href="FooModule.html">FooModule</a></li>
-				
-				
-				</ul>
-			</div>
 			
 		</div>
 
@@ -201,7 +178,7 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">ProcessTest</h1>
+		<h1 class="module">REXML</h1>
 
 		<div id="description">
 			
@@ -215,83 +192,6 @@
 
 		<!-- Methods -->
 		
-		<div id="public-instance-method-details" class="method-section section">
-			<h3 class="section-header">Public Instance Methods</h3>
-
-		
-			<div id="test-ps-method" class="method-detail ">
-				<a name="M000013"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">test_ps</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="test-ps-source">
-<pre>
-    <span class="ruby-comment cmt"># File test/unit/process_test.rb, line 8</span>
- 8:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_ps</span>
- 9:   <span class="ruby-identifier">p</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">ps</span>
-10:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p!</span>=<span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">&quot;ps != nil&quot;</span>)
-11:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>),<span class="ruby-value str">&quot;ps is a string&quot;</span>)
-12:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>,<span class="ruby-value str">&quot;ps size &gt; 0&quot;</span>)
-13:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="test-pss-method" class="method-detail ">
-				<a name="M000014"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">test_pss</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="test-pss-source">
-<pre>
-    <span class="ruby-comment cmt"># File test/unit/process_test.rb, line 15</span>
-15:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_pss</span>
-16:   <span class="ruby-identifier">p</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pss</span>
-17:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p!</span>=<span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">&quot;pss != nil&quot;</span>)
-18:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>),<span class="ruby-value str">&quot;ps_hash is a hash&quot;</span>)
-19:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>,<span class="ruby-value str">&quot;pss size &gt; 0&quot;</span>)
-20:   <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">p</span>[<span class="ruby-value str">'pcpu'</span>]<span class="ruby-operator">!=</span><span class="ruby-keyword kw">nil</span>,<span class="ruby-value str">&quot;ps_hash pcpu != nil&quot;</span>)
-21:  <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-		</div>
-	
 
 	</div>
 

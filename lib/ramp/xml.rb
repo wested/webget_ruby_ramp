@@ -25,5 +25,45 @@ module XML
       end #dir
     end #each
   end #def                                                                                                                                                                                                                          
+
+
+  # Sugar to load elements from a file.
+  #
+  # ==Example
+  #   XML.load_attributes('config.xml','userlist/user'){|element| pp element.attributes['first_name'] }
+
+  def XML.load_elements(dirpath,xpath)
+    XML.load_dir(dirpath){|doc|
+      doc.elements.each(xpath){|e|
+        yield e
+      }
+    }
+  end
+
+
+  # Sugar to load attributes from a file to a hash.
+  #
+  # ==Example
+  #   XML.load_attributes('config.xml','userlist/user'){|attributes| pp attributes['first_name'] }
+
+  def XML.load_attributes(dirpath,xpath)
+    XML.load_elements(dirpath,xpath){|e|
+      yield e.attributes
+    }
+  end
+
 end
+
+
+class REXML::Attributes
+
+  def hash
+    h=Hash.new
+    self.keys.each{|k| h[k]=self[k]}
+    h
+  end
+
+end
+
+
 
