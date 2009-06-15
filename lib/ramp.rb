@@ -18,7 +18,7 @@ Each has an associated test class, e.g., ArrayTest, DateTest, etc.
 * join: same as Array#join with some improvments
 * rotate: moves the first element of an array to the end
 * slices: divides an array into specified number of equal size sub-arrays ([1,2,3,4,5,6]slices(3) => [[1,2],[3,4],[5,6]])
-* to_csv: outputs the array to Comma Separated Value (CSV) text, typically for viewing in a spreadsheet such as Excel
+* to_csv: returns a CSV-style string representation of a multi-dimensional array, with each subarray becoming one 'line' in the output; typically for viewing in a spreadsheet such as Excel.
 * union: builds an array containing each of the unique elements of sub-arrays ([[1,2,3,4],[2,3,4,5],[3,4,5,6]].union => [1,2,3,4,5,6])
 
 == CSV

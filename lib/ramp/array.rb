@@ -197,11 +197,13 @@ class Array
   
   require 'csv'
  
+  # Returns a CSV-style string representation of a multi-dimensional array
+  # Each subarray becomes one 'line' in the output
   def to_csv(ops={})
     s=''
     CSV::Writer.generate(s) do |csv|
-      self.each do |r|
-        csv << r
+      self.each do |row|
+        csv << row
       end
     end
     s
