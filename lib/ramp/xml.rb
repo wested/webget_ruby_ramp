@@ -1,8 +1,9 @@
-require 'rexml/document'
+require 'rexml/document' 
 
 module XML
 
-  # Load xml documents from a directory
+  # Specify one or more directory patterns and pass each XML file in the matching directories to a block; 
+  # see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
   #
   # ==Example
   #   XML.load_dir('/tmp/*.xml'){|xml_document|

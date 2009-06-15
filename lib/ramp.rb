@@ -4,7 +4,7 @@
 
 Ramp is a library of extensions to Ruby and Rails base classes, including ActiveRecord, Array, Date, Enumerable, Hash, Kernel, Numeric, Object, Process, String, Time, and YAML. 
 
-<p>Each has an associated test class, e.g., ArrayTest, DateTest, etc.
+Each has an associated test class, e.g., ArrayTest, DateTest, etc.
 
 == ActiveRecord
 
@@ -18,18 +18,12 @@ Ramp is a library of extensions to Ruby and Rails base classes, including Active
 * join: same as Array#join with some improvments
 * rotate: moves the first element of an array to the end
 * slices: divides an array into specified number of equal size sub-arrays ([1,2,3,4,5,6]slices(3) => [[1,2],[3,4],[5,6]])
-* to_csv: outputs the array to Comma Separated Value (CSV) text, typically for viewing in a spreadsheet such as Excel
+* to_csv: returns a CSV-style string representation of a multi-dimensional array, with each subarray becoming one 'line' in the output; typically for viewing in a spreadsheet such as Excel.
 * union: builds an array containing each of the unique elements of sub-arrays ([[1,2,3,4],[2,3,4,5],[3,4,5,6]].union => [1,2,3,4,5,6])
-
-Dupe methods:
-* intersection => '&' (a1 & a2 => [common items])
-* size => empty?
-
 
 == CSV
 
 * http_headers: provides web file download headers for text/csv content type and disposition.
-
 
 == Date
 
@@ -37,7 +31,6 @@ Dupe methods:
 * between: a random date between two specified dates
 * to_sql: date as a string formatted as expected for MySQL
 * weekday?, weekend?: is date a weekday or on the weekend
-
 
 == Enumerable
 
@@ -56,20 +49,14 @@ Dupe methods:
 * rolldown, rollup: retrieve arrays of elements from a hash of hashes by top level field name or by interior hash field name, optionally passing a block to execute against each resulting array.
 * to_yaml_sort: returns a YAML object, sorted by field name
 
-Dupe methods:
-* size? => empty?
-
-
 == Integer
 
-* yields: loop over a block n times and return an array with all the results (e.g. 3.yields{'foo'} => ['foo','foo','foo'])
-
+* maps: syntactic sugar to yield n times to a block, returning an array of any results (e.g. 3.yields{'foo'} => ['foo','foo','foo'])
 
 == Kernel
 
 * method_name: 
 * method_name_of_caller: returns the name of the method which called the current method, or the Nth parent up the call stack if the optional caller_index parameter is passed.
-
 
 == Numeric
 
@@ -77,11 +64,9 @@ Dupe methods:
 * unless: returns 0 unless the passed flag is any of: nil, false, 0, [], {} and otherwise returns self
 * peta, tera, giga, mega, kilo, hecto, deka, deci, centi, milli, micro, nano: multiply/divide by powers of ten
 
-
 == Object
 
 * in?: returns boolean indicating whether the object is a member of the specified array parameter
-
 
 == Process
 
@@ -94,7 +79,6 @@ Extensions that help debug Ruby programs.
 == REXML::Attributes
 
 * hash: flattens the attributes hash set into a more useful ruby hash, e.g. {:height => 100, :width => 400 }
-
 
 == String
 
@@ -115,16 +99,14 @@ Extensions that help debug Ruby programs.
 
 * (class) stamp: current time in UTC as a timestamp string ("YYYYMMDDHHMMSS")
 
-
 == XML
 
-* (class) load_dir: passes each XML file in a directory to a specified block
+* (class) load_dir: specify a one or more directory patterns and pass each XML file in the matching directories to a block; see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
 
 
 == YAML
 
-* (class) load_dir: passes each YAML file in a directory to a specified block
-
+* (class) load_dir: specify a one or more directory patterns and pass each YAML file in the matching directories to a block; see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
 
 == Changes
 
@@ -141,7 +123,6 @@ Extensions that help debug Ruby programs.
 - 1.0.0 Original 
 
 =end
-
 
 %w{active_record array csv date enumerable hash integer kernel nil numeric object process string time xml yaml}.map{|x|
   require File.dirname(__FILE__) + "/ramp/#{x}.rb"
