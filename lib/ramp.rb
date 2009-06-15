@@ -91,16 +91,9 @@ Extensions that help debug Ruby programs.
 * (class) pss: output of the system 'ps' command as a hash with each value set to the right type, e.g., integer, float, etc..
 
 
-== String
+== REXML::Attributes
 
-* capitalize_words (alias to titleize/titlecase): ensures the first character of each word is uppercase.
-* decrement: decrease the rightmost natural number, defaults to one value lower or by the optional step parameter value.
-* increment: increase the rightmost natural number, defaults to one value higher or by the optional step parameter value.
-* lowcase: translate a string to lowercase, digits and single underscores (e.g. to a method name)
-* prev/pred: previous string ("b" => "a", "bbc" => "bbb", "a" => "z", "880" => "879")
-* prev/pred: updates variable to the previous string in place (astring = "bbc", astring.prev!, puts astring => "bbb")
-* (class) prev_char/pred_char: returns the previous character, with a changed flag and carry flag; that is, there are three returned values, a string and two booleans.
-* split_tab: splits the string into an array at each embedded tab ("Last\tFirst\tMiddle" => ["last","first","middle"])
+* hash: flattens the attributes hash set into a more useful ruby hash, e.g. {:height => 100, :width => 400 }
 
 
 == String
@@ -109,8 +102,9 @@ Extensions that help debug Ruby programs.
 * decrement: decrease the rightmost natural number, defaults to one value lower or by the optional step parameter value.
 * increment: increase the rightmost natural number, defaults to one value higher or by the optional step parameter value.
 * lorem: return a short random string, good for use in "lorem ipsum" sample text.
+* lowcase: translate a string to lowercase, digits and single underscores (e.g. to a method name)
 * prev/pred: previous string ("b" => "a", "bbc" => "bbb", "a" => "z", "880" => "879")
-* prev/pred: updates variable to the previous string in place (astring = "bbc", astring.prev!, puts astring => "bbb")
+* prev!/pred!: updates variable to the previous string in place (astring = "bbc", astring.prev!, puts astring => "bbb")
 * (class) prev_char/pred_char: returns the previous character, with a changed flag and carry flag; that is, there are three returned values, a string and two booleans.
 * split_tab: splits the string into an array at each embedded tab ("Last\tFirst\tMiddle" => ["last","first","middle"])
 * to_class: the global class reference of a given string
@@ -125,6 +119,7 @@ Extensions that help debug Ruby programs.
 == XML
 
 * (class) load_dir: passes each XML file in a directory to a specified block
+
 
 == YAML
 

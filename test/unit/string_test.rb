@@ -5,8 +5,8 @@ require 'ramp'
 class StringTest < Test::Unit::TestCase
 
 
-  def test_lowcase
-    assert_equal('foo_goo_hoo',"Foo GOO**_**Hoo".lowcase)
+  def test_capitalize_words
+    assert_equal("Foo Goo Hoo","foo goo hoo".capitalize_words)
   end
 
 
@@ -19,12 +19,12 @@ class StringTest < Test::Unit::TestCase
     assert_equal(['foo','goo','hoo'],"foo\tgoo\thoo".split_tab)
   end
 
-  
-  def test_capitalize_words
-    assert_equal("Foo Goo Hoo","foo goo hoo".capitalize_words)
+
+  def test_lowcase
+    assert_equal('foo_goo_hoo',"Foo GOO**_**Hoo".lowcase)
   end
 
-
+  
   def test_to_class
     assert_equal(String,'String'.to_class)
   end
