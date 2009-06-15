@@ -5,7 +5,7 @@ class String
  à a á a â a ã a ä a å a ā a ă a
  æ ae
  ď d đ d             
- ç c ć c č c ĉ c ċ c c            
+ ç c ć c č c ĉ c ċ c
  è e é e ê e ë e ē e ę e ě e ĕ e ė e           
  ƒ f              
  ĝ g ğ g ġ g ģ g             
