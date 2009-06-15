@@ -17,7 +17,7 @@ module YAML
   def YAML.load_dir(*dirpaths)
     dirpaths=[*dirpaths.flatten]
     dirpaths.each do |dirpath|
-      Dir[dirpath].sort.each do |filename|
+      Dir[dirpath].each do |filename|
         File.open(filename) do |file|
           YAML.load_documents(file) do |doc|
             yield doc
