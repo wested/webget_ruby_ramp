@@ -9,43 +9,44 @@ module Enumerable
   ########################################################################
   
 
-  #  map item => item.id
-
+  # map item => item.id
+  # returns the id of an Enumerable object; *requires* that the object respond to an 'id' message
   def map_id
     map{|x| x.id}
   end
 
 
   # map item => item.to_a
-
+  # typical usage: convert a list of Sets to a list of Arrays, to more easily walk the items
+  # see [Enumerable.to_a](http://www.ruby-doc.org/core/classes/Enumerable.html#M003148)
   def map_to_a
     map{|x| [x]}
   end
 
 
   # map item => item.to_f
-
+  # typical usage: convert a list of integers to a list of floats
   def map_to_f
     map{|x| x.to_f}
   end
 
 
   # map item => item.to_i
-
+  # typical usage: convert a list of floats to a list of integers
   def map_to_i
     map{|x| x.to_i}
   end
 
 
   # map item => item.to_s
-
+  # typical usage: convert a list of items to a list of their string representations
   def map_to_s
     map{|x| x.to_s}
   end
 
 
   # map item => item.to_sym
-
+  # typical usage: convert a list of items to a list of their symbolic representations
   def map_to_sym
     map{|x| x.to_sym}
   end
