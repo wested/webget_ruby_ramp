@@ -51,7 +51,7 @@ Each has an associated test class, e.g., ArrayTest, DateTest, etc.
 
 == Integer
 
-* yields: loop over a block n times and return an array with all the results (e.g. 3.yields{'foo'} => ['foo','foo','foo'])
+* maps: syntactic sugar to yield n times to a block, returning an array of any results (e.g. 3.yields{'foo'} => ['foo','foo','foo'])
 
 == Kernel
 

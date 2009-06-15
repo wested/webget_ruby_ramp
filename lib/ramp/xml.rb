@@ -2,7 +2,7 @@ require 'rexml/document'
 
 module XML
 
-  # Specify a one or more directory patterns and pass each XML file in the matching directories to a block; 
+  # Specify one or more directory patterns and pass each XML file in the matching directories to a block; 
   # see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
   #
   # ==Example
