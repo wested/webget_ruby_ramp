@@ -92,11 +92,11 @@ Extensions that help debug Ruby programs.
 
 == XML
 
-* (class) load_dir: passes each XML file in a directory to a specified block
+* (class) load_dir: specify a one or more directory patterns and pass each XML file in the matching directories to a block; see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
 
 == YAML
 
-* (class) load_dir: passes each YAML file in a directory to a specified block
+* (class) load_dir: specify a one or more directory patterns and pass each YAML file in the matching directories to a block; see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
 
 == Changes
 
