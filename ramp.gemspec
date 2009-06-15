@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
 
   s.name              = "ramp"
   s.summary           = "ramp"
-  s.version           = "1.6.8.4"
+  s.version           = "1.6.8.5"
   s.author            = "WebGet"
   s.email             = "webget@webget.com"
   s.homepage          = "http://webget.com/gems/ramp"

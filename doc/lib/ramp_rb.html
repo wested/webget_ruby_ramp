@@ -6,7 +6,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>File: ramp.rb [RDoc Documentation]</title>
+	<title>File: ramp.rb [ramp]</title>
 
 	<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet" />
 
@@ -24,7 +24,7 @@
 	<div id="metadata">
 		<dl>
 			<dt class="modified-date">Last Modified</dt>
-			<dd class="modified-date">Wed Jun 10 10:19:40 -0700 2009</dd>
+			<dd class="modified-date">Mon Jun 15 16:02:18 -0700 2009</dd>
 
 			
 			<dt class="requires">Requires</dt>
@@ -60,8 +60,9 @@ href="../DateTest.html">DateTest</a>, etc.
 </p>
 <h2>ActiveRecord</h2>
 <ul>
-<li>create_or_update_by: create a record or update a record if it matches a
-referenced field.
+<li>create_or_update_by: create a record, or update a record if value passed
+matches a field in the AR object; includes method_missing function to make
+code more readable.
 
 </li>
 </ul>
@@ -76,7 +77,7 @@ referenced field.
 <li>divvy: divides an array, like a pie, into a specified number of slices
 
 </li>
-<li>join: same as <a href="../Array.html#M000003">Array#join</a> with some
+<li>join: same as <a href="../Array.html#M000094">Array#join</a> with some
 improvments
 
 </li>
@@ -87,9 +88,9 @@ improvments
 ([1,2,3,4,5,6]slices(3) => [[1,2],[3,4],[5,6]])
 
 </li>
-<li>to_csv: outputs the array to Comma Separated Value (<a
-href="../CSV.html">CSV</a>) text, typically for viewing in a spreadsheet
-such as Excel
+<li>to_csv: returns a CSV-style string representation of a multi-dimensional
+array, with each subarray becoming one &#8216;line&#8217; in the output;
+typically for viewing in a spreadsheet such as Excel.
 
 </li>
 <li>union: builds an array containing each of the unique elements of sub-arrays
@@ -129,11 +130,13 @@ arrays.
 
 </li>
 <li>map_id: returns the id of an <a href="../Enumerable.html">Enumerable</a>
-object; <b>requires</b> the object has a field named &#8216;id&#8217;
+object; <b>requires</b> that the object respond to an &#8216;id&#8217;
+message
 
 </li>
-<li>map_to_a, map_to_f, map_to_i, map_to_s, map_to_sym : convert each object by
-calling its respective method to_a, to_i, to_f, to_s, to_sym
+<li>map_to_a, map_to_f, map_to_i, map_to_s, map_to_sym : convert each object to
+a specific type by calling its respective method to_a, to_i, to_f, to_s,
+to_sym
 
 </li>
 <li>nitems_until, select_until: returns the number of, or an array containing,
@@ -171,8 +174,8 @@ field name
 </ul>
 <h2><a href="../Integer.html">Integer</a></h2>
 <ul>
-<li>yields: loop over a block n times and return an array with all the results
-(e.g. 3.yields{&#8216;foo&#8217;} =>
+<li>maps: syntactic sugar to yield n times to a block, returning an array of
+any results (e.g. 3.yields{&#8216;foo&#8217;} =>
 [&#8216;foo&#8217;,&#8217;foo&#8217;,&#8217;foo&#8217;])
 
 </li>
@@ -224,6 +227,13 @@ each value set to the right type, e.g., integer, float, etc..
 
 </li>
 </ul>
+<h2><a href="../REXML/Attributes.html">REXML::Attributes</a></h2>
+<ul>
+<li>hash: flattens the attributes hash set into a more useful ruby hash, e.g.
+{:height => 100, :width => 400 }
+
+</li>
+</ul>
 <h2><a href="../String.html">String</a></h2>
 <ul>
 <li>capitalize_words (alias to titleize/titlecase): ensures the first character
@@ -238,6 +248,10 @@ lower or by the optional step parameter value.
 higher or by the optional step parameter value.
 
 </li>
+<li>lorem: return a short random string, good for use in &#8220;lorem
+ipsum&#8221; sample text.
+
+</li>
 <li>lowcase: translate a string to lowercase, digits and single underscores
 (e.g. to a method name)
 
@@ -247,7 +261,7 @@ higher or by the optional step parameter value.
 &#8220;880&#8221; => &#8220;879&#8221;)
 
 </li>
-<li>prev/pred: updates variable to the previous string in place (astring =
+<li>prev!/pred!: updates variable to the previous string in place (astring =
 &#8220;bbc&#8221;, astring.prev!, puts astring => &#8220;bbb&#8221;)
 
 </li>
@@ -261,6 +275,12 @@ two booleans.
 [&#8220;last&#8221;,&#8220;first&#8221;,&#8220;middle&#8221;])
 
 </li>
+<li>to_class: the global class reference of a given string
+
+</li>
+<li>words: splits the string into an array of words
+
+</li>
 </ul>
 <h2><a href="../Time.html">Time</a></h2>
 <ul>
@@ -271,27 +291,37 @@ two booleans.
 </ul>
 <h2><a href="../XML.html">XML</a></h2>
 <ul>
-<li>(class) load_dir: passes each <a href="../XML.html">XML</a> file in a
-directory to a specified block
+<li>(class) load_dir: specify a one or more directory patterns and pass each <a
+href="../XML.html">XML</a> file in the matching directories to a block; see
+[Dir#glob](<a
+href="http://www.ruby-doc.org/core/classes/Dir.html#M002347">www.ruby-doc.org/core/classes/Dir.html#M002347</a>)
+for pattern details.
 
 </li>
 </ul>
 <h2><a href="../YAML.html">YAML</a></h2>
 <ul>
-<li>(class) load_dir: passes each <a href="../YAML.html">YAML</a> file in a
-directory to a specified block
+<li>(class) load_dir: specify a one or more directory patterns and pass each <a
+href="../YAML.html">YAML</a> file in the matching directories to a block;
+see [Dir#glob](<a
+href="http://www.ruby-doc.org/core/classes/Dir.html#M002347">www.ruby-doc.org/core/classes/Dir.html#M002347</a>)
+for pattern details.
 
 </li>
 </ul>
 <h2>Changes</h2>
 <ul>
+<li>1.6.8.5 Add <a href="../Integer.html#M000110">Integer#maps</a>, <a
+href="../String.html#ACCENTS">String#ACCENTS</a>
+
+</li>
 <li>1.6.8.4 Add <a href="../XML.html">XML</a>
 
 </li>
 <li>1.6.8.3 Add ActiveRecord
 
 </li>
-<li>1.6.8.2 Add <a href="../String.html#M000069">String#lowcase</a>
+<li>1.6.8.2 Add <a href="../String.html#M000140">String#lowcase</a>
 
 </li>
 <li>1.6.8 Add map_to_xxx methods
@@ -300,9 +330,9 @@ directory to a specified block
 <li>1.6.7 Add <a href="../CSV.html">CSV</a>
 
 </li>
-<li>1.6.6 Add <a href="../Array.html#M000013">Array#to_csv</a>, <a
+<li>1.6.6 Add <a href="../Array.html#M000106">Array#to_csv</a>, <a
 href="../Integer.html">Integer</a>, <a
-href="../String.html#M000083">String#lorem</a>, etc., improve tests
+href="../String.html#M000153">String#lorem</a>, etc., improve tests
 
 </li>
 <li>1.6.4 Bug fixes: <a href="../String.html">String</a> characters and <a

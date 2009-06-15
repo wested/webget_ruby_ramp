@@ -110,6 +110,7 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
+- 1.6.8.5 Add Integer#maps, String#ACCENTS
 - 1.6.8.4 Add XML
 - 1.6.8.3 Add ActiveRecord
 - 1.6.8.2 Add String#lowcase
