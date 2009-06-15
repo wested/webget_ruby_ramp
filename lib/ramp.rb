@@ -8,7 +8,7 @@ Ramp is a library of extensions to Ruby and Rails base classes, including Active
 
 == ActiveRecord
 
-* create_or_update_by: create a record or update a record if it matches a referenced field. 
+* create_or_update_by: create a record, or update a record if value passed matches a field in the AR object; includes method_missing function to make code more readable. 
 
 == Array
 
@@ -43,8 +43,8 @@ Dupe methods:
 
 * cartesian_product: return an array of all possible ordered tuples from arrays.
 * join: forwards to self.to_a.join
-* map_id: returns the id of an Enumerable object; *requires* the object has a field named 'id'
-* map_to_a, map_to_f, map_to_i, map_to_s, map_to_sym : convert each object by calling its respective method to_a, to_i, to_f, to_s, to_sym
+* map_id: returns the id of an Enumerable object; *requires* that the object respond to an 'id' message
+* map_to_a, map_to_f, map_to_i, map_to_s, map_to_sym : convert each object to a specific type by calling its respective method to_a, to_i, to_f, to_s, to_sym
 * nitems_until, select_until: returns the number of, or an array containing, the leading elements for which block is false or nil.
 * nitems_while, select_while: returns the number of items, or an array containing the leading elements, for which block is not false or nil.
 * nitems_with_index, select_with_index: calls block with two arguments, the item and its index, for each item in enum. Returns the number of, or an array containing, the leading elements for which block is not false or nil. 
