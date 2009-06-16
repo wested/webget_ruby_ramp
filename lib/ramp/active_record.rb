@@ -32,9 +32,7 @@ class << ActiveRecord::Base
     find_value = options.delete(field)
     record = find(:first, :conditions => {field => find_value}) || self.new
     record.send field.to_s + '=', find_value
-    options.each_pair do |key, value| record.send key.to_s + '=', value
-    end
-    record.attributes = options
+    options.each_pair{|key, value| record.send key.to_s + '=', value}
     record.save!
     record
   end
