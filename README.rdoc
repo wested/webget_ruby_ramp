@@ -50,7 +50,7 @@ Each has an associated test class, e.g., ArrayTest, DateTest, etc.
 
 == Integer
 
-* maps: syntactic sugar to yield n times to a block, returning an array of any results (e.g. 3.yields{'foo'} => ['foo','foo','foo'])
+* maps: syntactic sugar to yield n times to a block, returning an array of any results (e.g. 3.maps{rand} => [0.4351325,0.7778625,0.158613534])
 
 == Kernel
 

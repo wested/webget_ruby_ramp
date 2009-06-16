@@ -42,7 +42,7 @@ module XML
   end
 
 
-  # Sugar to load attributes from a file to a hash.
+  # Sugar to load attributes from a file.
   #
   # ==Example
   #   XML.load_attributes('config.xml','userlist/user'){|attributes| pp attributes['first_name'] }
@@ -50,6 +50,17 @@ module XML
   def XML.load_attributes(dirpath,xpath)
     XML.load_elements(dirpath,xpath){|e|
       yield e.attributes
+    }
+  end
+
+  # Sugar to load attributes hash from a file.
+  #
+  # ==Example
+  #   XML.load_attributes('config.xml','userlist/user'){|attributes| pp attributes['first_name'] }
+
+  def XML.load_attributes_hash(dirpath,xpath)
+    XML.load_elements(dirpath,xpath){|e|
+      yield e.attributes.hash
     }
   end
 
