@@ -231,11 +231,16 @@
     <span class="ruby-comment cmt"># File test/unit/yaml_test.rb, line 13</span>
 13:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_load_dir</span>
 14:   <span class="ruby-identifier">dirpath</span>=<span class="ruby-value str">'test/unit/yaml_test_*.yml'</span>
-15:   <span class="ruby-identifier">expect</span>=<span class="ruby-value str">&quot;aa1a10a2a20a3a30bb1b10b2b20b3b30cc1c10c2c20c3c30dd1d10d2d20d3d30ee1e10e2e20e3e30ff1f10f2f20f3f30gg2g20g3g30g1g10hh3h30h1h10h2h20ii1i10i2i20i3i30kk1k10k2k20k3k30ll1l10l2l20l3l30jj1j10j2j20j3j30mm1m10m2m20m3m30nn1n10n2n20n3n30oo1o10o2o20o3o30pp1p10p2p20p3p30qq1q10q2q20q3q30rr2r20r3r30r1r10&quot;</span>
-16:   <span class="ruby-identifier">actual</span>=<span class="ruby-value str">''</span>
-17:   <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-identifier">dirpath</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span> <span class="ruby-identifier">actual</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">to_s</span> }
-18:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-value str">'YAML.load_dir'</span>)
-19:  <span class="ruby-keyword kw">end</span></pre>
+15:   <span class="ruby-identifier">expect</span>=[<span class="ruby-value str">'aa1a10a2a20a3a30bb1b10b2b20b3b30cc1c10c2c20c3c30'</span>,
+16:           <span class="ruby-value str">'dd1d10d2d20d3d30ee1e10e2e20e3e30ff1f10f2f20f3f30'</span>,
+17:           <span class="ruby-value str">'gg2g20g3g30g1g10hh3h30h1h10h2h20ii1i10i2i20i3i30'</span>,
+18:           <span class="ruby-value str">'jj1j10j2j20j3j30kk1k10k2k20k3k30ll1l10l2l20l3l30'</span>,
+19:           <span class="ruby-value str">'mm1m10m2m20m3m30nn1n10n2n20n3n30oo1o10o2o20o3o30'</span>,
+20:           <span class="ruby-value str">'pp1p10p2p20p3p30qq1q10q2q20q3q30rr2r20r3r30r1r10'</span>]
+21:   <span class="ruby-identifier">actual</span>=[]
+22:   <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-identifier">dirpath</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span> <span class="ruby-identifier">actual</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">to_s</span> }
+23:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>.<span class="ruby-identifier">sort</span>,<span class="ruby-value str">'YAML.load_dir'</span>)
+24:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
