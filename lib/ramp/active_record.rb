@@ -49,8 +49,9 @@ class << ActiveRecord::Base
   end
 
   def method_missing_with_create_or_update(method_name, *args)
-    if match = method_name.to_s.match(/create_or_update_by_([a-z0-9_]+)/)
-      return create_or_update_by(field,*args)
+    if match = method_name.to_s.match(/create_or_update_by_([a-z0-9_]+)/)  
+      field = match[1]
+      return create_or_update_by($1,*args)
     end
     method_missing_without_create_or_update(method_name, *args)
   end
