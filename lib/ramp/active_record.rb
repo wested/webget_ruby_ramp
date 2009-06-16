@@ -28,8 +28,19 @@ class << ActiveRecord::Base
     self.create_or_update_by(:id, options)
   end
 
+  # Create or update a record by a field.
+  # This will look for the field as a key for the options.
+  #
+  # The field can be a symbol (typical of ruby) or string (typical of SQL);
+  # this method will look for either a symbol or string in the options keys.
+
   def create_or_update_by(field, options = {})
-    find_value = options.delete(field)
+    case field.class
+      when Symbol:
+        find_value = options.delete(field)||options.delete(field.to_s)
+      when String:
+        find_value = options.delete(field)||options.delete(field.to_sym)
+    end
     record = find(:first, :conditions => {field => find_value}) || self.new
     record.send field.to_s + '=', find_value
     options.each_pair{|key, value| record.send key.to_s + '=', value}
@@ -39,7 +50,6 @@ class << ActiveRecord::Base
 
   def method_missing_with_create_or_update(method_name, *args)
     if match = method_name.to_s.match(/create_or_update_by_([a-z0-9_]+)/)
-      field = match[1].to_sym
       return create_or_update_by(field,*args)
     end
     method_missing_without_create_or_update(method_name, *args)
