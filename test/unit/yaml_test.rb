@@ -19,7 +19,7 @@ class YAMLTest < Test::Unit::TestCase
           'mm1m10m2m20m3m30nn1n10n2n20n3n30oo1o10o2o20o3o30',
           'pp1p10p2p20p3p30qq1q10q2q20q3q30rr2r20r3r30r1r10']
   actual=[]
-  YAML.load_dir(dirpath){|doc| actual << doc.to_s }
+  YAML.load_dir(dirpath){|doc| actual << doc.sort.to_s }
   assert_equal(expect,actual.sort,'YAML.load_dir')
  end
 
