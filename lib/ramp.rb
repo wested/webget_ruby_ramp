@@ -6,9 +6,17 @@ Ramp is a library of extensions to Ruby and Rails base classes, including Active
 
 Each has an associated test class, e.g., ArrayTest, DateTest, etc.
 
+
 == ActiveRecord
 
 * create_or_update_by: create a record, or update a record if value passed matches a field in the AR object; includes method_missing function to make code more readable. 
+
+
+== ActiveRecord::ConnectionAdapters::SchemaStatements
+
+* add_column_and_index: database migration helper to add a table column and index at the same time.
+* remove_column_and_index: database migration helper to add a table column and index at the same time.
+
 
 == Array
 
@@ -21,9 +29,11 @@ Each has an associated test class, e.g., ArrayTest, DateTest, etc.
 * to_csv: returns a CSV-style string representation of a multi-dimensional array, with each subarray becoming one 'line' in the output; typically for viewing in a spreadsheet such as Excel.
 * union: builds an array containing each of the unique elements of sub-arrays ([[1,2,3,4],[2,3,4,5],[3,4,5,6]].union => [1,2,3,4,5,6])
 
+
 == CSV
 
 * http_headers: provides web file download headers for text/csv content type and disposition.
+
 
 == Date
 
@@ -31,6 +41,7 @@ Each has an associated test class, e.g., ArrayTest, DateTest, etc.
 * between: a random date between two specified dates
 * to_sql: date as a string formatted as expected for MySQL
 * weekday?, weekend?: is date a weekday or on the weekend
+
 
 == Enumerable
 
@@ -43,20 +54,30 @@ Each has an associated test class, e.g., ArrayTest, DateTest, etc.
 * nitems_with_index, select_with_index: calls block with two arguments, the item and its index, for each item in enum. Returns the number of, or an array containing, the leading elements for which block is not false or nil. 
 * power_set: return an array with all subsets of the enum's elements
 
+
 == Hash
 
 * each_value: passes each element to a specified block and updates the element in place in the original hash.
 * rolldown, rollup: retrieve arrays of elements from a hash of hashes by top level field name or by interior hash field name, optionally passing a block to execute against each resulting array.
 * to_yaml_sort: returns a YAML object, sorted by field name
 
+
 == Integer
 
 * maps: syntactic sugar to yield n times to a block, returning an array of any results (e.g. 3.maps{rand} => [0.4351325,0.7778625,0.158613534])
+
 
 == Kernel
 
 * method_name: 
 * method_name_of_caller: returns the name of the method which called the current method, or the Nth parent up the call stack if the optional caller_index parameter is passed.
+
+
+== Math
+
+* ln(x): natural log of x
+* logn(x,b): log of x in base b
+
 
 == Numeric
 
@@ -64,9 +85,11 @@ Each has an associated test class, e.g., ArrayTest, DateTest, etc.
 * unless: returns 0 unless the passed flag is any of: nil, false, 0, [], {} and otherwise returns self
 * peta, tera, giga, mega, kilo, hecto, deka, deci, centi, milli, micro, nano: multiply/divide by powers of ten
 
+
 == Object
 
 * in?: returns boolean indicating whether the object is a member of the specified array parameter
+
 
 == Process
 
@@ -79,6 +102,7 @@ Extensions that help debug Ruby programs.
 == REXML::Attributes
 
 * hash: flattens the attributes hash set into a more useful ruby hash, e.g. {:height => 100, :width => 400 }
+
 
 == String
 
@@ -99,6 +123,7 @@ Extensions that help debug Ruby programs.
 
 * (class) stamp: current time in UTC as a timestamp string ("YYYYMMDDHHMMSS")
 
+
 == XML
 
 * (class) load_dir: specify a one or more directory patterns and pass each XML file in the matching directories to a block; see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
@@ -108,8 +133,11 @@ Extensions that help debug Ruby programs.
 
 * (class) load_dir: specify a one or more directory patterns and pass each YAML file in the matching directories to a block; see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
 
+
 == Changes
 
+- 1.6.8.7 Add Math
+- 1.6.8.6 Add ActiveRecord SchemaStatements
 - 1.6.8.5 Add Integer#maps, String#ACCENTS
 - 1.6.8.4 Add XML
 - 1.6.8.3 Add ActiveRecord
