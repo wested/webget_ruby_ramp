@@ -24,7 +24,7 @@
 	<div id="metadata">
 		<dl>
 			<dt class="modified-date">Last Modified</dt>
-			<dd class="modified-date">Fri Jun 26 14:10:57 -0700 2009</dd>
+			<dd class="modified-date">Wed Jul 01 11:04:54 -0700 2009</dd>
 
 			
 			<dt class="requires">Requires</dt>
@@ -89,7 +89,7 @@ and index at the same time.
 <li>divvy: divides an array, like a pie, into a specified number of slices
 
 </li>
-<li>join: same as <a href="../Array.html#M000099">Array#join</a> with some
+<li>join: same as <a href="../Array.html#M000095">Array#join</a> with some
 improvments
 
 </li>
@@ -170,13 +170,21 @@ array containing, the leading elements for which block is not false or nil.
 </ul>
 <h2><a href="../Hash.html">Hash</a></h2>
 <ul>
-<li>each_value: passes each element to a specified block and updates the
+<li>size?: return true if hash has any keys
+
+</li>
+<li>each_sort: sort the keys then call each
+
+</li>
+<li>each_value!: passes each element to a specified block and updates the
 element in place in the original hash.
 
 </li>
-<li>rolldown, rollup: retrieve arrays of elements from a hash of hashes by top
-level field name or by interior hash field name, optionally passing a block
-to execute against each resulting array.
+<li>map_pair: map each key-value pair by calling a a block
+
+</li>
+<li>pivot: aggregates subtotals by keys and values, such as a rollup and
+rolldown
 
 </li>
 <li>to_yaml_sort: returns a <a href="../YAML.html">YAML</a> object, sorted by
@@ -331,6 +339,11 @@ for pattern details.
 </ul>
 <h2>Changes</h2>
 <ul>
+<li>1.6.8.8 Add <a href="../Hash.html#M000142">Hash#map_pair</a>, <a
+href="../Hash.html#M000139">Hash#size?</a>, <a
+href="../Hash.html#M000144">Hash#pivot</a>
+
+</li>
 <li>1.6.8.7 Add <a href="../Math.html">Math</a>
 
 </li>
@@ -338,7 +351,7 @@ for pattern details.
 SchemaStatements
 
 </li>
-<li>1.6.8.5 Add <a href="../Integer.html#M000112">Integer#maps</a>, <a
+<li>1.6.8.5 Add <a href="../Integer.html#M000121">Integer#maps</a>, <a
 href="../String.html#ACCENTS">String#ACCENTS</a>
 
 </li>
@@ -348,7 +361,7 @@ href="../String.html#ACCENTS">String#ACCENTS</a>
 <li>1.6.8.3 Add <a href="../ActiveRecord.html">ActiveRecord</a>
 
 </li>
-<li>1.6.8.2 Add <a href="../String.html#M000147">String#lowcase</a>
+<li>1.6.8.2 Add <a href="../String.html#M000149">String#lowcase</a>
 
 </li>
 <li>1.6.8 Add map_to_xxx methods
@@ -357,9 +370,9 @@ href="../String.html#ACCENTS">String#ACCENTS</a>
 <li>1.6.7 Add <a href="../CSV.html">CSV</a>
 
 </li>
-<li>1.6.6 Add <a href="../Array.html#M000109">Array#to_csv</a>, <a
+<li>1.6.6 Add <a href="../Array.html#M000110">Array#to_csv</a>, <a
 href="../Integer.html">Integer</a>, <a
-href="../String.html#M000160">String#lorem</a>, etc., improve tests
+href="../String.html#M000162">String#lorem</a>, etc., improve tests
 
 </li>
 <li>1.6.4 Bug fixes: <a href="../String.html">String</a> characters and <a

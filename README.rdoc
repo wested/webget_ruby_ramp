@@ -56,8 +56,11 @@ Each has an associated test class, e.g., ArrayTest, DateTest, etc.
 
 == Hash
 
-* each_value: passes each element to a specified block and updates the element in place in the original hash.
-* rolldown, rollup: retrieve arrays of elements from a hash of hashes by top level field name or by interior hash field name, optionally passing a block to execute against each resulting array.
+* size?: return true if hash has any keys
+* each_sort: sort the keys then call each
+* each_value!: passes each element to a specified block and updates the element in place in the original hash.
+* map_pair: map each key-value pair by calling a a block
+* pivot: aggregates subtotals by keys and values, such as a rollup and rolldown 
 * to_yaml_sort: returns a YAML object, sorted by field name
 
 
@@ -135,6 +138,7 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
+- 1.6.8.8 Add Hash#map_pair, Hash#size?, Hash#pivot
 - 1.6.8.7 Add Math
 - 1.6.8.6 Add ActiveRecord SchemaStatements
 - 1.6.8.5 Add Integer#maps, String#ACCENTS

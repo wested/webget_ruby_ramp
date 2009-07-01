@@ -8,6 +8,7 @@ class Hash
     size>0
   end
 
+
   # Calls block once for each key in hsh, passing the key and value to the block as a two-element array.
   # The keys are sorted.
   def each_sort
@@ -27,6 +28,19 @@ class Hash
   def each_value!
     each_pair{|key,value| self[key]=yield(value) }
     self
+  end
+
+
+  # Calls block once for each key-value pair in hsh,
+  # passing the key and value as paramters to the block.
+  #
+  #   h = {"a"=>"b", "c"=>"d", "e"=>"f" }
+  #   h.map_pair{|key,value| key+value }
+  #   =>
+  #   ["ab","cd","ef"]
+
+  def map_pair
+    keys.map{|key| yield key, self[key] }
   end
 
 

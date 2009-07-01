@@ -20,6 +20,14 @@ class HashTest < Test::Unit::TestCase
   end
 
 
+  def test_map_pair
+    h = {"a"=>"b", "c"=>"d", "e"=>"f" }
+    expect=["ab","cd","ef"]  
+    actual=h.map_pair{|key,value| key+value }.sort
+    assert_equal(expect,actual,h.inspect)
+  end
+   
+
   def pivotable
     h=Hash.new
     h['a']=Hash.new

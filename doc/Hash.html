@@ -59,17 +59,19 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000138">#each_sort</a></li>
+					<li><a href="#M000140">#each_sort</a></li>
 					
-					<li><a href="#M000139">#each_value!</a></li>
+					<li><a href="#M000141">#each_value!</a></li>
 					
-					<li><a href="#M000142">#pivot</a></li>
+					<li><a href="#M000142">#map_pair</a></li>
 					
-					<li><a href="#M000143">#pivot_direction_up?</a></li>
+					<li><a href="#M000144">#pivot</a></li>
 					
-					<li><a href="#M000137">#size?</a></li>
+					<li><a href="#M000145">#pivot_direction_up?</a></li>
 					
-					<li><a href="#M000140">#to_yaml_sort</a></li>
+					<li><a href="#M000139">#size?</a></li>
+					
+					<li><a href="#M000143">#to_yaml_sort</a></li>
 					
 				</ul>
 			</div>
@@ -122,6 +124,8 @@
 				<ul class="link-list">
 				
 					<li><a href="./ActiveRecord.html">ActiveRecord</a></li>
+				
+					<li><a href="./ActiveRecord/Base.html">ActiveRecord::Base</a></li>
 				
 					<li><a href="./ActiveRecord/ConnectionAdapters.html">ActiveRecord::ConnectionAdapters</a></li>
 				
@@ -229,7 +233,7 @@
 
 		
 			<div id="each-sort-method" class="method-detail ">
-				<a name="M000138"></a>
+				<a name="M000140"></a>
 
 				<div class="method-heading">
 				
@@ -251,10 +255,10 @@ block as a two-element array. The keys are sorted.
 					<div class="method-source-code"
 						id="each-sort-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 13</span>
-13:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each_sort</span>
-14:    <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">key</span>,<span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>] }
-15:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 14</span>
+14:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each_sort</span>
+15:    <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">key</span>,<span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>] }
+16:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -264,7 +268,7 @@ block as a two-element array. The keys are sorted.
 
 		
 			<div id="each-value--method" class="method-detail ">
-				<a name="M000139"></a>
+				<a name="M000141"></a>
 
 				<div class="method-heading">
 				
@@ -292,11 +296,52 @@ updating it in place.
 					<div class="method-source-code"
 						id="each-value--source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 27</span>
-27:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each_value!</span>
-28:     <span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>]=<span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">value</span>) }
-29:     <span class="ruby-keyword kw">self</span>
-30:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 28</span>
+28:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">each_value!</span>
+29:     <span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">value</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>]=<span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">value</span>) }
+30:     <span class="ruby-keyword kw">self</span>
+31:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="map-pair-method" class="method-detail ">
+				<a name="M000142"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">map_pair</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Calls block once for each key-value pair in hsh, passing the key and value
+as paramters to the block.
+</p>
+<pre>
+  h = {&quot;a&quot;=&gt;&quot;b&quot;, &quot;c&quot;=&gt;&quot;d&quot;, &quot;e&quot;=&gt;&quot;f&quot; }
+  h.map_pair{|key,value| key+value }
+  =&gt;
+  [&quot;ab&quot;,&quot;cd&quot;,&quot;ef&quot;]
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="map-pair-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 42</span>
+42:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map_pair</span>
+43:     <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">key</span>, <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">key</span>] }
+44:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -306,7 +351,7 @@ updating it in place.
 
 		
 			<div id="pivot-method" class="method-detail ">
-				<a name="M000142"></a>
+				<a name="M000144"></a>
 
 				<div class="method-heading">
 				
@@ -319,7 +364,7 @@ updating it in place.
 				<div class="method-description">
 					
 					<p>
-<a href="Hash.html#M000142">Hash#pivot</a> aggregates values for a hash of
+<a href="Hash.html#M000144">Hash#pivot</a> aggregates values for a hash of
 hashes, for example to calculate subtotals and groups.
 </p>
 <p>
@@ -374,23 +419,23 @@ You can provide a block that will be called for the pivot items.
 					<div class="method-source-code"
 						id="pivot-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 90</span>
- 90:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pivot</span>(<span class="ruby-identifier">direction</span>=<span class="ruby-value str">'keys'</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
- 91:     <span class="ruby-identifier">a</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>
- 92:     <span class="ruby-identifier">direction</span>=<span class="ruby-identifier">direction</span>.<span class="ruby-identifier">to_s</span>
- 93:     <span class="ruby-identifier">up</span>=<span class="ruby-identifier">pivot_direction_up?</span>(<span class="ruby-identifier">direction</span>)
- 94:     <span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k1</span>,<span class="ruby-identifier">v1</span><span class="ruby-operator">|</span>
- 95:       <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k2</span>,<span class="ruby-identifier">v2</span><span class="ruby-operator">|</span>
- 96:         <span class="ruby-identifier">k</span> = <span class="ruby-identifier">up</span> <span class="ruby-value">? </span><span class="ruby-identifier">k1</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">k2</span>
- 97:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]=[] <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]<span class="ruby-operator">==</span><span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]<span class="ruby-operator">==</span>{})
- 98:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]<span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">v2</span>)
- 99:       }
-100:     }
-101:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span> 
-102:       <span class="ruby-identifier">a</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]=(<span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">v</span>)}
-103:     <span class="ruby-keyword kw">end</span>
-104:     <span class="ruby-identifier">a</span>
-105:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 104</span>
+104:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pivot</span>(<span class="ruby-identifier">direction</span>=<span class="ruby-value str">'keys'</span>,<span class="ruby-operator">&amp;</span><span class="ruby-identifier">b</span>)
+105:     <span class="ruby-identifier">a</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">new</span>
+106:     <span class="ruby-identifier">direction</span>=<span class="ruby-identifier">direction</span>.<span class="ruby-identifier">to_s</span>
+107:     <span class="ruby-identifier">up</span>=<span class="ruby-identifier">pivot_direction_up?</span>(<span class="ruby-identifier">direction</span>)
+108:     <span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k1</span>,<span class="ruby-identifier">v1</span><span class="ruby-operator">|</span>
+109:       <span class="ruby-identifier">v1</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k2</span>,<span class="ruby-identifier">v2</span><span class="ruby-operator">|</span>
+110:         <span class="ruby-identifier">k</span> = <span class="ruby-identifier">up</span> <span class="ruby-value">? </span><span class="ruby-identifier">k1</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">k2</span>
+111:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]=[] <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]<span class="ruby-operator">==</span><span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]<span class="ruby-operator">==</span>{})
+112:         <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]<span class="ruby-operator">&lt;&lt;</span>(<span class="ruby-identifier">v2</span>)
+113:       }
+114:     }
+115:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span> 
+116:       <span class="ruby-identifier">a</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>[<span class="ruby-identifier">k</span>]=(<span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">v</span>)}
+117:     <span class="ruby-keyword kw">end</span>
+118:     <span class="ruby-identifier">a</span>
+119:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -400,7 +445,7 @@ You can provide a block that will be called for the pivot items.
 
 		
 			<div id="size--method" class="method-detail ">
-				<a name="M000137"></a>
+				<a name="M000139"></a>
 
 				<div class="method-heading">
 				
@@ -434,7 +479,7 @@ Return true if size > 0
 
 		
 			<div id="to-yaml-sort-method" class="method-detail ">
-				<a name="M000140"></a>
+				<a name="M000143"></a>
 
 				<div class="method-heading">
 				
@@ -459,16 +504,16 @@ href="http://snippets.dzone.com/tag/yaml">snippets.dzone.com/tag/yaml</a>
 					<div class="method-source-code"
 						id="to-yaml-sort-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 37</span>
-37:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_yaml_sort</span>( <span class="ruby-identifier">opts</span> = {} )
-38:     <span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-identifier">quick_emit</span>( <span class="ruby-identifier">object_id</span>, <span class="ruby-identifier">opts</span> ) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">out</span><span class="ruby-operator">|</span>
-39:       <span class="ruby-identifier">out</span>.<span class="ruby-identifier">map</span>( <span class="ruby-identifier">taguri</span>, <span class="ruby-identifier">to_yaml_style</span> ) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">map</span><span class="ruby-operator">|</span>
-40:         <span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>   <span class="ruby-comment cmt"># &lt;-- here's my addition (the 'sort')</span>
-41:           <span class="ruby-identifier">map</span>.<span class="ruby-identifier">add</span>( <span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span> )
-42:         <span class="ruby-keyword kw">end</span>
-43:       <span class="ruby-keyword kw">end</span>
-44:     <span class="ruby-keyword kw">end</span>
-45:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 51</span>
+51:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_yaml_sort</span>( <span class="ruby-identifier">opts</span> = {} )
+52:     <span class="ruby-constant">YAML</span><span class="ruby-operator">::</span><span class="ruby-identifier">quick_emit</span>( <span class="ruby-identifier">object_id</span>, <span class="ruby-identifier">opts</span> ) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">out</span><span class="ruby-operator">|</span>
+53:       <span class="ruby-identifier">out</span>.<span class="ruby-identifier">map</span>( <span class="ruby-identifier">taguri</span>, <span class="ruby-identifier">to_yaml_style</span> ) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">map</span><span class="ruby-operator">|</span>
+54:         <span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span>   <span class="ruby-comment cmt"># &lt;-- here's my addition (the 'sort')</span>
+55:           <span class="ruby-identifier">map</span>.<span class="ruby-identifier">add</span>( <span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span> )
+56:         <span class="ruby-keyword kw">end</span>
+57:       <span class="ruby-keyword kw">end</span>
+58:     <span class="ruby-keyword kw">end</span>
+59:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -484,7 +529,7 @@ href="http://snippets.dzone.com/tag/yaml">snippets.dzone.com/tag/yaml</a>
 
 		
 			<div id="pivot-direction-up--method" class="method-detail ">
-				<a name="M000143"></a>
+				<a name="M000145"></a>
 
 				<div class="method-heading">
 				
@@ -503,14 +548,14 @@ href="http://snippets.dzone.com/tag/yaml">snippets.dzone.com/tag/yaml</a>
 					<div class="method-source-code"
 						id="pivot-direction-up--source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 109</span>
-109:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pivot_direction_up?</span>(<span class="ruby-identifier">direction_name</span>)
-110:     <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">direction_name</span>
-111:     <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'key'</span>,<span class="ruby-value str">'keys'</span>,<span class="ruby-value str">'up'</span>,<span class="ruby-value str">'left'</span>,<span class="ruby-value str">'out'</span> <span class="ruby-keyword kw">then</span> <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
-112:     <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'val'</span>,<span class="ruby-value str">'vals'</span>,<span class="ruby-value str">'down'</span>,<span class="ruby-value str">'right'</span>,<span class="ruby-value str">'in'</span> <span class="ruby-keyword kw">then</span> <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
-113:     <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-value str">'Pivot direction must be either: up/left/out or down/right/in'</span>
-114:     <span class="ruby-keyword kw">end</span>
-115:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/hash.rb, line 123</span>
+123:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pivot_direction_up?</span>(<span class="ruby-identifier">direction_name</span>)
+124:     <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">direction_name</span>
+125:     <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'key'</span>,<span class="ruby-value str">'keys'</span>,<span class="ruby-value str">'up'</span>,<span class="ruby-value str">'left'</span>,<span class="ruby-value str">'out'</span> <span class="ruby-keyword kw">then</span> <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+126:     <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'val'</span>,<span class="ruby-value str">'vals'</span>,<span class="ruby-value str">'down'</span>,<span class="ruby-value str">'right'</span>,<span class="ruby-value str">'in'</span> <span class="ruby-keyword kw">then</span> <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+127:     <span class="ruby-keyword kw">else</span> <span class="ruby-identifier">raise</span> <span class="ruby-value str">'Pivot direction must be either: up/left/out or down/right/in'</span>
+128:     <span class="ruby-keyword kw">end</span>
+129:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
