@@ -89,6 +89,21 @@ class Array
   end
 
 
+  # Return a hash of this array's items as keys
+  # mapped onto another array's items as values.
+  #
+  # ==Example
+  #   foo=[:a,:b,:c]
+  #   goo=[:x,:y,:z]
+  #   foo.onto(goo) => {:a=>:x, :b=>:y, :c=>:z}
+  #
+  # This is identical to calling foo.zip(values).to_h
+
+  def onto(values)
+    zip(values).to_h
+  end
+
+
   ##############################################################
   # 
   # GROUPINGS

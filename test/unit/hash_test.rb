@@ -12,11 +12,27 @@ class HashTest < Test::Unit::TestCase
   end
 
 
+  def test_each_key
+    actual = { "a" => "b", "c" => "d" }
+    expect = { "A" => "b", "C" => "d" }
+    actual.each_key! {|key| key.upcase }
+    assert_equal(expect,actual)
+  end
+
+
+  def test_each_pair
+    actual = { "a" => "b", "c" => "d" }
+    expect = { "A" => "B", "C" => "D" }
+    actual.each_pair! {|key,value| [key.upcase, value.upcase] }
+    assert_equal(expect,actual)
+  end
+
+
   def test_each_value
-    h = { "a" => 100, "b" => 200 }
-    h.each_value! {|value| value+5 }
-    assert_equal(105,h['a'])
-    assert_equal(205,h['b'])
+    actual = { "a" => "b", "c" => "d" }
+    expect = { "a" => "B", "c" => "D" }
+    actual.each_value! {|value| value.upcase }
+    assert_equal(expect,actual)
   end
 
 

@@ -1,11 +1,11 @@
 Gem::Specification.new do |s|
 
-  CLASSES             = %w'active_record active_record/connection_adapters/abstract/schema_statements array csv date enumerable hash integer kernel math nil numeric object process string time xml yaml'
-  TEST_UNIT_FILES     = %w'xml_test_1.xml xml_test_2.xml yaml_test_1.yml yaml_test_2.yml'
+  CLASSES             = %w'active_record active_record/connection_adapters/abstract/schema_statements array csv date enumerable file hash integer io kernel math nil numeric object process string time xml yaml'
+  TEST_UNIT_FILES     = %w'io_test.txt xml_test_1.xml xml_test_2.xml yaml_test_1.yml yaml_test_2.yml'
 
   s.name              = "ramp"
   s.summary           = "ramp"
-  s.version           = "1.6.8.8"
+  s.version           = "1.6.9.0"
   s.author            = "WebGet"
   s.email             = "webget@webget.com"
   s.homepage          = "http://webget.com/gems/ramp"

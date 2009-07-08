@@ -8,7 +8,8 @@ Each has an associated test class, e.g., ArrayTest, DateTest, etc.
 
 == ActiveRecord
 
-* create_or_update_by: create a record, or update a record if value passed matches a field in the AR object; includes method_missing function to make code more readable. 
+* create_or_update_by: create a record, or update a record if value passed matches a field (or fields) in the AR object; includes method_missing function to make code more readable. 
+* seed: syntactic sugar alias for #create_or_update_by
 
 
 == ActiveRecord::ConnectionAdapters::SchemaStatements
@@ -54,11 +55,18 @@ Each has an associated test class, e.g., ArrayTest, DateTest, etc.
 * power_set: return an array with all subsets of the enum's elements
 
 
+== File
+
+* File.joindir: wrapper for File.join(File.dirname(...),string,...)
+
+
 == Hash
 
 * size?: return true if hash has any keys
 * each_sort: sort the keys then call each
-* each_value!: passes each element to a specified block and updates the element in place in the original hash.
+* each_key!: passes each key to a specified block and updates hash in place if the key changes
+* each_pair!: passes each key value pair to a specified block and updates the hash in place if the key or value change.
+* each_value!: passes each value to a specified block and updates the hash in place if the value changes.
 * map_pair: map each key-value pair by calling a a block
 * pivot: aggregates subtotals by keys and values, such as a rollup and rolldown 
 * to_yaml_sort: returns a YAML object, sorted by field name
@@ -67,6 +75,12 @@ Each has an associated test class, e.g., ArrayTest, DateTest, etc.
 == Integer
 
 * maps: syntactic sugar to yield n times to a block, returning an array of any results (e.g. 3.maps{rand} => [0.4351325,0.7778625,0.158613534])
+
+
+== IO
+
+* readrow: reads a row line as with IO#readline, and return the row split it into fields 
+* IO.readrows: reads the entire file specified by name as individual row lines, and returns those rows split into fields, in an array of arrays.
 
 
 == Kernel
@@ -138,6 +152,8 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
+- 1.6.9.0 Add IO, File, ActiveRecord#seed
+- 1.6.8.9 Add Enumerable#to_h, Array#hash, Hash#each_key!, Hash#each_pair, Hash#each_value!
 - 1.6.8.8 Add Hash#map_pair, Hash#size?, Hash#pivot
 - 1.6.8.7 Add Math
 - 1.6.8.6 Add ActiveRecord SchemaStatements
@@ -156,6 +172,8 @@ Extensions that help debug Ruby programs.
 
 =end
 
-%w{active_record array csv date enumerable hash integer kernel nil numeric object process string time xml yaml}.map{|x|
+%w{active_record array csv date enumerable file hash integer io kernel math nil numeric object process string time xml yaml}.map{|x|
   require File.dirname(__FILE__) + "/ramp/#{x}.rb"
 }
+
+

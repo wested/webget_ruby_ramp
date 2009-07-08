@@ -4,6 +4,45 @@ module Enumerable
 
   ########################################################################
   #
+  #  typecast
+  #  
+  ########################################################################
+
+  # Convert an enumerable to a hash.
+  #
+  # ==Example
+  #   array=[[:a, :b],[:c, :d],[:e, :f]]
+  #   array.to_h => {:a=>:b, :c=>:d, :e=>:f}
+  #
+  # If a key occurs more than once, then this will automatically 
+  # convert the value to an array of the keys' values.
+  #
+  # ==Example
+  #   array=[[:a,:b],[:a,:c],[:a,:d]]
+  #   array.to_h => {:a=>[:b, :c, :d]}
+
+  def to_h
+    h={}
+    dupe={}
+    each{|k,v|
+      if h.key? k
+        if dupe.key? k
+          h[k] << v
+        else
+          h[k]=[h[k]]
+          h[k] << v          
+          dupe[k]=true
+        end
+      else
+        h[k]=v
+      end
+    }
+    return h
+  end
+
+    
+  ########################################################################
+  #
   #  map
   #  
   ########################################################################

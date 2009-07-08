@@ -45,6 +45,12 @@ class ArrayTest < Test::Unit::TestCase
    assert(a.include?(c[2]))
  end
 
+ def test_hash
+   foo=[:a,:b,:c]
+   goo=[:x,:y,:z]
+   assert_equal({:a=>:x, :b=>:y, :c=>:z},foo.hash(goo))
+ end
+
  def test_slices
   a=[1,2,3,4,5,6,7,8]
   assert_equal([[1,2],[3,4],[5,6],[7,8]],a.slices(2))

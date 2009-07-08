@@ -60,7 +60,7 @@ module XML
 
   def XML.load_attributes_hash(dirpath,xpath)
     XML.load_elements(dirpath,xpath){|e|
-      yield e.attributes.hash
+      yield e.attributes.to_hash
     }
   end
 
@@ -69,7 +69,7 @@ end
 
 class REXML::Attributes
 
-  def hash
+  def to_hash
     h=Hash.new
     self.keys.each{|k| h[k]=self[k]}
     h

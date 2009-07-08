@@ -16,18 +16,77 @@ class Hash
   end
 
 
+  # Calls block once for each key in hsh, 
+  # passing the key as a parameter,
+  # and updating it in place.
+  #
+  #   h = { "a" => "b", "c" => "d" }
+  #   h.each_key! {|key| key.upcase }
+  #   h => { "A" => "b", "C" => "d" }
+  #
+  # Return self.
+
+  def each_key!
+    each_pair{|key,value|
+      key2=yield(key)
+      if key===key2
+        #nop
+      else
+        self.delete(key)
+        self[key2]=value
+      end
+    }
+  end
+
+
+  # Calls block once for each key in hsh,
+  # passing the key and value as parameters,
+  # and updated them in place.
+  #
+  #   h = { "a" => "b", "c" => "d" }
+  #   h.each_pair! {|key,value| key.upcase, value.upcase }
+  #   h => { "A" => "B", "C" => "D" }
+  #
+  # Return self.
+
+  def each_pair!
+    each_pair{|key,value|
+      key2,value2=yield(key,value)
+      if key===key2
+        if value===value2
+          #nop
+        else
+          self[key]=value2
+        end
+      else
+        self.delete(key)
+        self[key2]=value2
+      end
+    }
+    return self
+  end
+
+
   # Calls block once for each key in hsh,
   # passing the value as a parameter, 
   # and updating it in place.
   #
-  #   h = { "a" => 100, "b" => 200 }
-  #   h.each_value! {|value| value+5 }
-  #   =>
-  #   { "a" => 105, "b" => 205 }
+  #   h = { "a" => "b", "c" => "d" }
+  #   h.each_value! {|value| value.upcase }
+  #   h => { "a" => "B", "c" => "d" }
+  #
+  # Return self.
 
   def each_value!
-    each_pair{|key,value| self[key]=yield(value) }
-    self
+    each_pair{|key,value| 
+      value2=yield(value)
+      if value===value2
+        #nop
+      else
+        self[key]=yield(value) 
+      end
+    }
+    return self
   end
 
 
