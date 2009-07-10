@@ -40,7 +40,7 @@ module Enumerable
     return h
   end
 
-    
+
   ########################################################################
   #
   #  map
@@ -194,6 +194,22 @@ module Enumerable
   #  set math
   #  
   ########################################################################
+
+
+  # Returns true if this  _enum_ intersects another _enum_.
+  #
+  # @nb This implementation uses #to_a and array intersection.
+  # A developer may want to optimize this implementation for
+  # other classes, such as detecting whether a range intersects
+  # another range simply by comparing the ranges' min/max values.
+  #
+  # ==Examples
+  #   ['a','b','c'].intersect?(['c','d','e'] => true
+  #   ['a','b','c'].intersect?(['d','e','f'] => false
+
+  def intersect?(enum)
+    return ((self===enum and self.to_a.size>0) or (self.to_a & enum.to_a).size>0))
+  end
 
 
   # Return the cartesian product of the enumerations.

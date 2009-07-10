@@ -174,6 +174,22 @@ class EnumerableTest < Test::Unit::TestCase
   #
   ########################################################################
 
+  def test_intersect_true
+    assert_equal(true,['a','b'].intersect?(['b','c']))
+  end
+
+  def test_intersect_true_with_same
+    assert_equal(true,['a','b'].intersect?(['a','b']))
+  end
+
+  def test_intersect_false
+    assert_equal(true,['a','b'].intersect?(['c','d']))
+  end
+
+  def test_intersect_false_with_none
+    assert_equal(false,['a','b','c'].intersect?([]))
+  end
+
   CARTESIAN_PRODUCT_EXPECT=[["a", "d", "g"],
                             ["a", "d", "h"],
                             ["a", "d", "i"],

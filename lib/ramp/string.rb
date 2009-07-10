@@ -51,9 +51,17 @@ class String
  #   'Foo Goo Hoo' => 'foo_goo_hoo'
  #   'Foo***Goo***Hoo' => 'foo_goo_hoo'
  def lowcase
-  downcase.gsub(/\W+/,'_').gsub(/__+/,'_')
+  downcase.gsub(/[_\W]+/,'_')
  end
 
+ # Return the string as an XML id, which is the same as #lowcase
+ #
+ # ==Example
+ #   "Foo Hoo Goo" => 'foo_goo_hoo'
+ #   "Foo***Goo***Hoo" => 'foo_goo_hoo'
+ def to_xid
+  self.lowcase
+ end
 
  # Ruby String#to_class method to convert from a String to a class
  #

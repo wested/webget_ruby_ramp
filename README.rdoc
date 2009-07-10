@@ -24,6 +24,7 @@ Each has an associated test class, e.g., ArrayTest, DateTest, etc.
 * cross: return the cross pairings of an array with another array
 * divvy: divides an array, like a pie, into a specified number of slices
 * join: same as Array#join with some improvments
+* onto: return a hash that maps an array's keys on to another array's values
 * rotate: moves the first element of an array to the end
 * slices: divides an array into specified number of equal size sub-arrays ([1,2,3,4,5,6]slices(3) => [[1,2],[3,4],[5,6]])
 * to_csv: returns a CSV-style string representation of a multi-dimensional array, with each subarray becoming one 'line' in the output; typically for viewing in a spreadsheet such as Excel.
@@ -152,6 +153,7 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
+- 1.6.9.1 Add Array#onto
 - 1.6.9.0 Add IO, File, ActiveRecord#seed
 - 1.6.8.9 Add Enumerable#to_h, Array#hash, Hash#each_key!, Hash#each_pair, Hash#each_value!
 - 1.6.8.8 Add Hash#map_pair, Hash#size?, Hash#pivot

@@ -154,7 +154,7 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
-- 1.6.9.1 Add Array#onto
+- 1.6.9.1 Add Array#onto, Enumerable#intersect?
 - 1.6.9.0 Add IO, File, ActiveRecord#seed
 - 1.6.8.9 Add Enumerable#to_h, Array#hash, Hash#each_key!, Hash#each_pair, Hash#each_value!
 - 1.6.8.8 Add Hash#map_pair, Hash#size?, Hash#pivot
