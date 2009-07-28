@@ -208,7 +208,7 @@ module Enumerable
   #   ['a','b','c'].intersect?(['d','e','f'] => false
 
   def intersect?(enum)
-    return ((self===enum and self.to_a.size>0) or (self.to_a & enum.to_a).size>0))
+    return ((self===enum and self.to_a.size>0) or ((self.to_a & enum.to_a).size>0))
   end
 
 

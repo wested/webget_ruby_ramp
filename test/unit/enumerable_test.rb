@@ -183,7 +183,7 @@ class EnumerableTest < Test::Unit::TestCase
   end
 
   def test_intersect_false
-    assert_equal(true,['a','b'].intersect?(['c','d']))
+    assert_equal(false,['a','b'].intersect?(['c','d']))
   end
 
   def test_intersect_false_with_none
