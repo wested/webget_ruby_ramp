@@ -135,7 +135,7 @@ module Enumerable
   #
   # A typical use is to convert a list of Object items to a list of Symbol items.
   #
-  # This method is a fast way to get the same results as items.map(&:to_s)
+  # This method is a fast way to get the same results as items.map(&:to_sym)
 
   def map_to_sym
     map{|x| x.to_sym}
