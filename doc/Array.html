@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Array</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/ramp/array_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ramp/array.rb">lib/ramp/array.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Object.html">Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#M000119">#choice</a></li>
+					
+					<li><a href="#M000120">#choices</a></li>
+					
+					<li><a href="#M000123">#divvy</a></li>
+					
+					<li><a href="#M000125">#intersect</a></li>
+					
+					<li><a href="#M000115">#join</a></li>
+					
+					<li><a href="#M000121">#onto</a></li>
+					
+					<li><a href="#M000118">#rotate!</a></li>
+					
+					<li><a href="#M000116">#ruby_join</a></li>
+					
+					<li><a href="#M000117">#size?</a></li>
+					
+					<li><a href="#M000122">#slices</a></li>
+					
+					<li><a href="#M000126">#to_csv</a></li>
+					
+					<li><a href="#M000124">#union</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
+				
+					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+				
+					<li class="file"><a href="./ramp_gemspec.html">ramp.gemspec</a></li>
+				
+					<li class="file"><a href="./ramp_sha512_txt.html">ramp.sha512.txt</a></li>
+				
+					<li class="file"><a href="./test/unit/io_test_txt.html">io_test.txt</a></li>
+				
+					<li class="file"><a href="./test/unit/xml_test_1_xml.html">xml_test_1.xml</a></li>
+				
+					<li class="file"><a href="./test/unit/xml_test_2_xml.html">xml_test_2.xml</a></li>
+				
+					<li class="file"><a href="./test/unit/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
+				
+					<li class="file"><a href="./test/unit/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./ActiveRecord.html">ActiveRecord</a></li>
+				
+					<li><a href="./ActiveRecord/Base.html">ActiveRecord::Base</a></li>
+				
+					<li><a href="./ActiveRecord/ConnectionAdapters.html">ActiveRecord::ConnectionAdapters</a></li>
+				
+					<li><a href="./ActiveRecord/ConnectionAdapters/SchemaStatements.html">ActiveRecord::ConnectionAdapters::SchemaStatements</a></li>
+				
+					<li><a href="./EnumerableTest.html">EnumerableTest</a></li>
+				
+					<li><a href="./REXML.html">REXML</a></li>
+				
+					<li><a href="./REXML/Attributes.html">REXML::Attributes</a></li>
+				
+					<li><a href="./ActiveRecordTest.html">ActiveRecordTest</a></li>
+				
+					<li><a href="./Array.html">Array</a></li>
+				
+					<li><a href="./ArrayTest.html">ArrayTest</a></li>
+				
+					<li><a href="./CSV.html">CSV</a></li>
+				
+					<li><a href="./CSVTest.html">CSVTest</a></li>
+				
+					<li><a href="./Date.html">Date</a></li>
+				
+					<li><a href="./DateTest.html">DateTest</a></li>
+				
+					<li><a href="./Enumerable.html">Enumerable</a></li>
+				
+					<li><a href="./File.html">File</a></li>
+				
+					<li><a href="./FileTestCase.html">FileTestCase</a></li>
+				
+					<li><a href="./Hash.html">Hash</a></li>
+				
+					<li><a href="./HashTest.html">HashTest</a></li>
+				
+					<li><a href="./IO.html">IO</a></li>
+				
+					<li><a href="./IOTest.html">IOTest</a></li>
+				
+					<li><a href="./Integer.html">Integer</a></li>
+				
+					<li><a href="./IntegerTest.html">IntegerTest</a></li>
+				
+					<li><a href="./Kernel.html">Kernel</a></li>
+				
+					<li><a href="./KernelTest.html">KernelTest</a></li>
+				
+					<li><a href="./Math.html">Math</a></li>
+				
+					<li><a href="./MathTest.html">MathTest</a></li>
+				
+					<li><a href="./NilClass.html">NilClass</a></li>
+				
+					<li><a href="./NilTest.html">NilTest</a></li>
+				
+					<li><a href="./Numeric.html">Numeric</a></li>
+				
+					<li><a href="./NumericTest.html">NumericTest</a></li>
+				
+					<li><a href="./Object.html">Object</a></li>
+				
+					<li><a href="./ObjectTest.html">ObjectTest</a></li>
+				
+					<li><a href="./Process.html">Process</a></li>
+				
+					<li><a href="./ProcessTest.html">ProcessTest</a></li>
+				
+					<li><a href="./RampTest.html">RampTest</a></li>
+				
+					<li><a href="./SchemaStatementsTest.html">SchemaStatementsTest</a></li>
+				
+					<li><a href="./String.html">String</a></li>
+				
+					<li><a href="./StringTest.html">StringTest</a></li>
+				
+					<li><a href="./Time.html">Time</a></li>
+				
+					<li><a href="./TimeTest.html">TimeTest</a></li>
+				
+					<li><a href="./XML.html">XML</a></li>
+				
+					<li><a href="./XMLTest.html">XMLTest</a></li>
+				
+					<li><a href="./YAML.html">YAML</a></li>
+				
+					<li><a href="./YAMLTest.html">YAMLTest</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Array</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="choice-method" class="method-detail ">
+				<a name="M000119"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">choice</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return a random item from the array
+</p>
+<h2>Examples</h2>
+<pre>
+  [1,2,3,4].choice =&gt; 2
+  [1,2,3,4].choice =&gt; 4
+  [1,2,3,4].choice =&gt; 3
+</pre>
+<p>
+Implemented in Ruby 1.9
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="choice-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 74</span>
+74:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">choice</span>
+75:     <span class="ruby-keyword kw">self</span>[<span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">size</span>)]
+76:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="choices-method" class="method-detail ">
+				<a name="M000120"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">choices</span><span
+						class="method-args">(n)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return a new array filled with <em>n</em> calls to choice
+</p>
+<h2>Examples</h2>
+<pre>
+  [1,2,3,4].choices(2) =&gt; [3,1]
+  [1,2,3,4].choices(3) =&gt; [4,2,3]
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="choices-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 85</span>
+85:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">choices</span>(<span class="ruby-identifier">n</span>)
+86:     <span class="ruby-identifier">a</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+87:     <span class="ruby-identifier">n</span>.<span class="ruby-identifier">times</span> { <span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">choice</span> }
+88:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">a</span>
+89:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="divvy-method" class="method-detail ">
+				<a name="M000123"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">divvy</span><span
+						class="method-args">(number_of_slices)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Divvy the array, like a pie, into <em>n</em> number of slices.
+</p>
+<p>
+If the array divides evenly, then each slice has size/n items.
+</p>
+<p>
+Otherwise, divvy makes a best attempt by rounding up to give earlier slices
+one more item, which makes the last slice smaller:
+</p>
+<h2>Examples</h2>
+<pre>
+  [1,2,3,4,5].divvy(2) =&gt; [[1,2,3],[4,5]]
+  [1,2,3,4,5,6,7].divvy(3) =&gt; [[1,2,3],[4,5,6],[7]]
+</pre>
+<p>
+If the array size so small compared to <em>n</em> that there is no
+mathematical way to <em>n</em> slices, then divvy will return as many
+slices as it can.
+</p>
+<h2>Examples</h2>
+<pre>
+  [1,2,3,4,5,6].divvy(4) =&gt; [[1,2],[3,4],[5,6]]
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="divvy-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 155</span>
+155:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">divvy</span>(<span class="ruby-identifier">number_of_slices</span>)
+156:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">slices</span>((<span class="ruby-identifier">length</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-identifier">number_of_slices</span>.<span class="ruby-identifier">to_f</span>).<span class="ruby-identifier">ceil</span>)
+157:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="intersect-method" class="method-detail ">
+				<a name="M000125"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">intersect</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return the intersection of the array&#8217;s items. In typical usage, each
+item is an array.
+</p>
+<h2>Examples</h2>
+<pre>
+  arr=[[1,2,3,4],[2,3,4,5],[3,4,5,6]]
+  arr.intersect
+  =&gt; [3,4]
+</pre>
+<h2>Examples with proc</h2>
+<pre>
+  arr.map(&amp;:foo).intersect
+  =&gt; foos that are in all of the array items
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="intersect-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 202</span>
+202:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">intersect</span>
+203:     <span class="ruby-identifier">inject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">inj</span>,<span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">inj</span> <span class="ruby-operator">&amp;</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_a</span> }
+204:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="join-method" class="method-detail ">
+				<a name="M000115"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">join</span><span
+						class="method-args">(prefix=nil,suffix=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Improved join to concatenate the items into a string
+</p>
+<h2>Typical <a href="Array.html#M000115">Array#join</a></h2>
+<pre>
+  list=['anne','beth','cate']
+  list.join
+   =&gt;
+  &quot;annebethcate&quot;
+</pre>
+<h2>Typical <a href="Array.html#M000115">Array#join</a> with separator</h2>
+<pre>
+  list=['anne','beth','cate']
+  list.join(&quot;+&quot;)
+  =&gt;
+  &quot;anne+beth+cate&quot;
+</pre>
+<h2>Improved join with prefix and suffix</h2>
+<pre>
+  list=['anne','beth','cate']
+  list.join(&quot;+&quot;,&quot;-&quot;)
+   =&gt;
+   &quot;+anne-+beth-+cate-&quot;
+</pre>
+<h2>Example of wrapping items in HTML tags</h2>
+<pre>
+  list=['anne','beth','cate']
+  list.join(&quot;&lt;li&gt;&quot;,&quot;&lt;/li&gt;\n&quot;)
+  =&gt;
+  &lt;li&gt;anne&lt;/li&gt;
+  &lt;li&gt;beth&lt;/li&gt;
+  &lt;li&gt;cate&lt;/li&gt;
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="join-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 33</span>
+33:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">join</span>(<span class="ruby-identifier">prefix</span>=<span class="ruby-keyword kw">nil</span>,<span class="ruby-identifier">suffix</span>=<span class="ruby-keyword kw">nil</span>)
+34:     <span class="ruby-keyword kw">return</span> (<span class="ruby-identifier">prefix</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">suffix</span>) \
+35:     <span class="ruby-operator">?</span> <span class="ruby-identifier">inject</span>(<span class="ruby-value str">&quot;&quot;</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>,<span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">suffix</span>} \
+36:     <span class="ruby-operator">:</span> <span class="ruby-identifier">ruby_join</span>(<span class="ruby-identifier">prefix</span>)
+37:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Array.html#M000116">ruby_join</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="onto-method" class="method-detail ">
+				<a name="M000121"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">onto</span><span
+						class="method-args">(values)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return a hash of this array&#8217;s items as keys mapped onto another
+array&#8217;s items as values.
+</p>
+<h2>Example</h2>
+<pre>
+  foo=[:a,:b,:c]
+  goo=[:x,:y,:z]
+  foo.onto(goo) =&gt; {:a=&gt;:x, :b=&gt;:y, :c=&gt;:z}
+</pre>
+<p>
+This is identical to calling foo.zip(values).to_h
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="onto-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 102</span>
+102:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">onto</span>(<span class="ruby-identifier">values</span>)
+103:     <span class="ruby-identifier">zip</span>(<span class="ruby-identifier">values</span>).<span class="ruby-identifier">to_h</span>
+104:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="rotate--method" class="method-detail ">
+				<a name="M000118"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rotate!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Move the first item to the last by using Array#shift and Array#push
+</p>
+<h2>Examples</h2>
+<pre>
+  [1,2,3,4].rotate! =&gt; [2,3,4,1]
+  ['a','b','c'].rotate! =&gt; ['b','c','a']
+</pre>
+<p>
+Return self
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="rotate--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 59</span>
+59:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rotate!</span>
+60:     <span class="ruby-identifier">push</span> <span class="ruby-identifier">x</span>=<span class="ruby-identifier">shift</span>
+61:     <span class="ruby-keyword kw">self</span>
+62:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="ruby-join-method" class="method-detail method-alias">
+				<a name="M000116"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ruby_join</span><span
+						class="method-args">(prefix=nil,suffix=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Alias for <a href="Array.html#M000115">join</a>
+</p>
+					
+
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="size--method" class="method-detail ">
+				<a name="M000117"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">size?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return true if size > 0
+</p>
+<h2>Examples</h2>
+<pre>
+  [1,2,3].size? =&gt; true
+  [].size? =&gt; false
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="size--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 46</span>
+46:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">size?</span>
+47:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>
+48:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="slices-method" class="method-detail ">
+				<a name="M000122"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">slices</span><span
+						class="method-args">(slice_length)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Return items in groups of <em>n</em> items (aka slices)
+</p>
+<h2>Examples</h2>
+<pre>
+  [1,2,3,4,5,6,7,8].slices(2) =&gt; [[1,2],[3,4],[5,6],[7,8]]
+  [1,2,3,4,5,6,7,8].slices(4) =&gt; [[1,2,3,4],[5,6,7,8]]
+</pre>
+<p>
+If the slices don&#8217;t divide evenly, then the last is smaller.
+</p>
+<h2>Examples</h2>
+<pre>
+  [1,2,3,4,5,6,7,8].slices(3) =&gt; [[1,2,3],[4,5,6],[7,8]]
+  [1,2,3,4,5,6,7,8].slices(5) =&gt; [[1,2,3,4,5],[6,7,8]]
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="slices-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 126</span>
+126:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">slices</span>(<span class="ruby-identifier">slice_length</span>)
+127:     <span class="ruby-identifier">a</span>=[]
+128:     <span class="ruby-identifier">i</span>=<span class="ruby-value">0</span>
+129:     <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">i</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">length</span>
+130:       <span class="ruby-identifier">a</span>.<span class="ruby-identifier">push</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">...</span>(<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-identifier">slice_length</span>)]
+131:       <span class="ruby-identifier">i</span><span class="ruby-operator">+=</span><span class="ruby-identifier">slice_length</span>
+132:     <span class="ruby-keyword kw">end</span>
+133:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">a</span>
+134:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="to-csv-method" class="method-detail ">
+				<a name="M000126"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_csv</span><span
+						class="method-args">(ops={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a CSV-style string representation of a multi-dimensional array Each
+subarray becomes one &#8216;line&#8217; in the output
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-csv-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 217</span>
+217:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_csv</span>(<span class="ruby-identifier">ops</span>={})
+218:     <span class="ruby-identifier">s</span>=<span class="ruby-value str">''</span>
+219:     <span class="ruby-constant">CSV</span><span class="ruby-operator">::</span><span class="ruby-constant">Writer</span>.<span class="ruby-identifier">generate</span>(<span class="ruby-identifier">s</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">csv</span><span class="ruby-operator">|</span>
+220:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+221:         <span class="ruby-identifier">csv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">row</span>
+222:       <span class="ruby-keyword kw">end</span>
+223:     <span class="ruby-keyword kw">end</span>
+224:     <span class="ruby-identifier">s</span>
+225:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="union-method" class="method-detail ">
+				<a name="M000124"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">union</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<h2>Examples with proc</h2>
+<pre>
+  arr.map(&amp;:foo).union
+  =&gt; foos that are in any of the array items
+</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="union-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 185</span>
+185:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">union</span>
+186:     <span class="ruby-identifier">inject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">inj</span>,<span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">inj</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_a</span> }
+187:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -18,15 +18,19 @@
 module Process
 
 
- # Return the 'ps' command as one long text string.
+ # Get the 'ps' command as one long text string.
+ #
  # This is typically useful for logging to a text file.
 
  def self.ps(pid=Process.pid)
    `#{self.ps_command} #{pid.to_i}`
  end
 
- # Return the 'ps' command as a hash of keys and values.
+
+ # Get the 'ps' command as a hash of keys and values.
+ # -
  # OPTIMIZE: add dates, times
+
  def self.pss(pid=Process.pid)
    ps=self.ps(pid)
    h=Hash[*self.ps_keys.zip(ps.split).flatten]
@@ -53,6 +57,10 @@ module Process
    self.ps_aliases.each_pair{|k,v| h[k]=h[v]}
   return h
  end
+
+  # Get the list of process alias keywords as typically defined by the shell.
+  #
+  # For example, a shell may consider "%cpu" and "pcpu" to be identical.
 
   def self.ps_aliases
     @@ps_aliases||=Hash[*%w'
@@ -95,24 +103,48 @@ module Process
  end
 
 
+ # Set the list of process alias keywords.
+
  def self.ps_aliases=(aliases)
   @@ps_aliases=aliases
  end
 
 
+ # Get the list of process keywords.
+ #
+ # ==Example
+ #   Process.ps_keys => ["blocked","group","pending","size"]
+
  def self.ps_keys
   @@ps_keys||=%w'blocked bsdtime c caught class cp egid egroup eip esp etime euid euser f fgid fgroup fuid fuser group ignored label lwp ni nlwp nwchan pending pcpu pgid pid pmem ppid pri psr rgid rgroup rss rtprio ruid ruser s sched sgi_p sgid sgroup sid sig size stackp start_time stat suid suser sz time tname tpgid vsize wchan'
  end
+
  
+ # Set the list of process keywords.
+ #
+ # ==Example 
+ #   Process.ps_keys = ["blocked","group","pending","size"]
+
  def self.ps_keys=(keys)
   @@ps_keys=keys
  end
 
+
+ # Get the process command, i.e. what the sytem will call for the "ps" command.
+ #
+ # ==Example
+ #   Process.ps_command => "ps h ww -o blocked,group,pending,size"
+ 
  def self.ps_command
   @@ps_command||='ps h ww -o "'+self.ps_keys.join(',')+'"'
  end
 
 
+ # Set the process command, i.e. what the sytem will call for the "ps" command.
+ #
+ # ==Example
+ #   Process.ps_command = "ps h ww -o blocked,group,pending,size"
+ 
  def self.ps_command=(command)
   @@ps_comannd=command
  end

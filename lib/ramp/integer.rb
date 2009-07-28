@@ -1,6 +1,7 @@
 class Integer
 
   # Syntactic sugar to yield n times to a block.
+  #
   # Return an array of any results.
   #
   # ==Example

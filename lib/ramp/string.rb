@@ -29,16 +29,21 @@ class String
 
 
  # Return the string with words capitalized
+
  def capitalize_words
   split(/\b/).map{|x| x.capitalize }.join
  end
 
+
  # Return the string split into words, i.e. split(\W*\b\*)
+
  def words
   split(/\W*\b\W*/)
  end
 
+
  # Return the string split at tabs, i.e. split(/\t/)
+
  def split_tab
   split(/\t/)
  end
@@ -50,15 +55,18 @@ class String
  # ==Example
  #   'Foo Goo Hoo' => 'foo_goo_hoo'
  #   'Foo***Goo***Hoo' => 'foo_goo_hoo'
+
  def lowcase
   downcase.gsub(/[_\W]+/,'_')
  end
+
 
  # Return the string as an XML id, which is the same as #lowcase
  #
  # ==Example
  #   "Foo Hoo Goo" => 'foo_goo_hoo'
  #   "Foo***Goo***Hoo" => 'foo_goo_hoo'
+
  def to_xid
   self.lowcase
  end
@@ -66,6 +74,7 @@ class String
  # Ruby String#to_class method to convert from a String to a class
  #
  # From Mirage at http://infovore.org/archives/2006/08/02/getting-a-class-object-in-ruby-from-a-string-containing-that-classes-name/
+
  def to_class
   split('::').inject(Kernel) {|scope, const_name| scope.const_get(const_name)}
  end
@@ -143,7 +152,9 @@ class String
   self.clone.prev!
  end
 
+
  # Do String#prev in place
+
  def prev!
   return self if length==0
   i=length-1 # rightmost
@@ -177,12 +188,20 @@ class String
  #
  ##
  
- # Return a random length suitable for a "lorem ipsum" string
+ # Return a random length suitable for a "lorem ipsum" string.
+ #
+ # This method uses 1+rand(10)
+
  def self.lorem_length
   1+rand(10)
  end
 
- # Return a random string suitable for "lorem ipsum" text
+ # Return a random string suitable for "lorem ipsum" text.
+ #
+ # This method chooses from lowercase letters a-z.
+ #
+ # This method defaults to length = self.lorem_length.
+ 
  def self.lorem(length=self.lorem_length)
   ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'].choices(length).join
  end

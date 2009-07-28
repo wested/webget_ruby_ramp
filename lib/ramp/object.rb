@@ -1,8 +1,9 @@
 class Object
 
-  # Syntactic sugar for arrays
-  #   object.in? array
-  #   => array.include? object
+  # Syntactic sugar for arrays.
+  #
+  # ==Definition
+  #   object.in? array === array.include? object
   #
   # ==Example
   #   array=['a','b','c']

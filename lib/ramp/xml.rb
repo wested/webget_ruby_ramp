@@ -2,8 +2,9 @@ require 'rexml/document'
 
 module XML
 
-  # Specify one or more directory patterns and pass each XML file in the matching directories to a block; 
-  # see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
+  # Specify one or more directory patterns and pass each XML file in the matching directories to a block.
+  #
+  # See [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
   #
   # ==Example
   #   XML.load_dir('/tmp/*.xml'){|xml_document|
@@ -68,6 +69,11 @@ end
 
 
 class REXML::Attributes
+
+  # Return a new hash of the attribute keys and values.
+  #
+  # ==Example
+  #   attributes.to_hash => {"src"=>"pic.jpg", "height" => "100", "width" => "200"} 
 
   def to_hash
     h=Hash.new

@@ -3,14 +3,14 @@ class CSV
 
   # Return HTTP headers for a typical CSV file download without caching.
   #
-  # Options
+  # ==Options
   #   - filename: defaults to "data.csv"
   #   - request: the incoming http request, which is used to return MSIE-specific headers
   #
-  # Example
+  # ==Example
   #   headers = CSV.http_headers("myfile.csv")
   #
-  # Example for Rails
+  # ==Example for Rails
   #   response.headers.merge CSV.http_headers("myfile.csv")
   # 
   # Ideas from http://stackoverflow.com/questions/94502/in-rails-how-to-return-records-as-a-csv-file/94520

@@ -48,44 +48,95 @@ module Enumerable
   ########################################################################
   
 
-  # map item => item.id
-  # returns the id of an Enumerable object; *requires* that the object respond to an 'id' message
+  # Map each item => item.id
+  #
+  # ==Example
+  #   users = User.find(:all)
+  #   users.map_id => [1,2,3,4,...]
+  #
+  # A typical use is to convert a list of ActiveRecord items to a list of id items.
+  #
+  # This method is a fast way to get the same results as items.map(&:id)
+
   def map_id
     map{|x| x.id}
   end
 
 
-  # map item => item.to_a
-  # typical usage: convert a list of Sets to a list of Arrays, to more easily walk the items
-  # see [Enumerable.to_a](http://www.ruby-doc.org/core/classes/Enumerable.html#M003148)
+  # Map each item => item.to_a
+  #
+  # ==Example
+  #   set1 = Set.new([:a,:b,:c])
+  #   set2 = Set.new([:d,:e,:f])
+  #   set3 = Set.new([:g,:h,:i])
+  #   sets = [set1, set2, set3]
+  #   sets.map_to_a => [[:a, :b, :c], [:d, :e, :f], [:g, :h, :i]]
+  #
+  # A typical use is to convert a list with Set items to a list of Array items,
+  # so you can more easily iterate over the the Array items.
+  #
+  # See http://www.ruby-doc.org/core/classes/Enumerable.html#M003148
+
   def map_to_a
     map{|x| [x]}
   end
 
 
-  # map item => item.to_f
-  # typical usage: convert a list of integers to a list of floats
+  # Map each item => item.to_f
+  #
+  # ==Example
+  #   strings = ["1","2","3"]
+  #   strings.map_to_f => [1.0, 2.0, 3.0]
+  #
+  # A typical use is to convert a list of String items to a list of float items.
+  #
+  # This method is a fast way to get the same results as items.map(&:to_f)
+
   def map_to_f
     map{|x| x.to_f}
   end
 
 
-  # map item => item.to_i
-  # typical usage: convert a list of floats to a list of integers
+  # Map each item => item.to_i
+  #
+  # ==Example
+  #   strings = ["1","2","3"]
+  #   strings.map_to_i => [1, 2, 3]  
+  #
+  # A typical use is to convert a list of String items to a list of integer items.
+  #
+  # This method is a fast way to get the same results as items.map(&:to_i)
+
   def map_to_i
     map{|x| x.to_i}
   end
 
 
-  # map item => item.to_s
-  # typical usage: convert a list of items to a list of their string representations
+  # Map each item => item.to_s
+  #
+  # ==Example
+  #   numbers = [1, 2, 3]
+  #   numbers.map_to_s => ["1", "2", "3"]  
+  #
+  # A typical use is to convert a list of Numeric items to a list of String items.
+  #
+  # This method is a fast way to get the same results as items.map(&:to_s)
+ 
   def map_to_s
     map{|x| x.to_s}
   end
 
 
-  # map item => item.to_sym
-  # typical usage: convert a list of items to a list of their symbolic representations
+  # Map each item => item.to_sym
+  #
+  # ==Example
+  #   strings = ["foo", "goo", "hoo"]
+  #   strings.map_to_sym => [:foo, :goo, :hoo]
+  #
+  # A typical use is to convert a list of Object items to a list of Symbol items.
+  #
+  # This method is a fast way to get the same results as items.map(&:to_s)
+
   def map_to_sym
     map{|x| x.to_sym}
   end

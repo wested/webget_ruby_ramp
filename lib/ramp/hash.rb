@@ -10,7 +10,9 @@ class Hash
 
 
   # Calls block once for each key in hsh, passing the key and value to the block as a two-element array.
+  #
   # The keys are sorted.
+
   def each_sort
    keys.sort.each{|key| yield key,self[key] }
   end
@@ -20,6 +22,7 @@ class Hash
   # passing the key as a parameter,
   # and updating it in place.
   #
+  # ==Example
   #   h = { "a" => "b", "c" => "d" }
   #   h.each_key! {|key| key.upcase }
   #   h => { "A" => "b", "C" => "d" }
@@ -43,6 +46,7 @@ class Hash
   # passing the key and value as parameters,
   # and updated them in place.
   #
+  # ==Example
   #   h = { "a" => "b", "c" => "d" }
   #   h.each_pair! {|key,value| key.upcase, value.upcase }
   #   h => { "A" => "B", "C" => "D" }
@@ -71,6 +75,7 @@ class Hash
   # passing the value as a parameter, 
   # and updating it in place.
   #
+  # ==Example
   #   h = { "a" => "b", "c" => "d" }
   #   h.each_value! {|value| value.upcase }
   #   h => { "a" => "B", "c" => "d" }
@@ -93,10 +98,10 @@ class Hash
   # Calls block once for each key-value pair in hsh,
   # passing the key and value as paramters to the block.
   #
+  # ==Example
   #   h = {"a"=>"b", "c"=>"d", "e"=>"f" }
   #   h.map_pair{|key,value| key+value }
-  #   =>
-  #   ["ab","cd","ef"]
+  #   => ["ab","cd","ef"]
 
   def map_pair
     keys.map{|key| yield key, self[key] }
