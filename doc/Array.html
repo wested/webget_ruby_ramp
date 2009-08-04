@@ -283,10 +283,10 @@ Implemented in Ruby 1.9
 					<div class="method-source-code"
 						id="choice-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 74</span>
-74:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">choice</span>
-75:     <span class="ruby-keyword kw">self</span>[<span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">size</span>)]
-76:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 89</span>
+89:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">choice</span>
+90:     <span class="ruby-keyword kw">self</span>[<span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">size</span>)]
+91:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -322,12 +322,12 @@ Return a new array filled with <em>n</em> calls to choice
 					<div class="method-source-code"
 						id="choices-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 85</span>
-85:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">choices</span>(<span class="ruby-identifier">n</span>)
-86:     <span class="ruby-identifier">a</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
-87:     <span class="ruby-identifier">n</span>.<span class="ruby-identifier">times</span> { <span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">choice</span> }
-88:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">a</span>
-89:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 100</span>
+100:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">choices</span>(<span class="ruby-identifier">n</span>)
+101:     <span class="ruby-identifier">a</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
+102:     <span class="ruby-identifier">n</span>.<span class="ruby-identifier">times</span> { <span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">choice</span> }
+103:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">a</span>
+104:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -379,10 +379,10 @@ slices as it can.
 					<div class="method-source-code"
 						id="divvy-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 155</span>
-155:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">divvy</span>(<span class="ruby-identifier">number_of_slices</span>)
-156:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">slices</span>((<span class="ruby-identifier">length</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-identifier">number_of_slices</span>.<span class="ruby-identifier">to_f</span>).<span class="ruby-identifier">ceil</span>)
-157:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 170</span>
+170:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">divvy</span>(<span class="ruby-identifier">number_of_slices</span>)
+171:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">slices</span>((<span class="ruby-identifier">length</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-identifier">number_of_slices</span>.<span class="ruby-identifier">to_f</span>).<span class="ruby-identifier">ceil</span>)
+172:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -425,10 +425,10 @@ item is an array.
 					<div class="method-source-code"
 						id="intersect-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 202</span>
-202:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">intersect</span>
-203:     <span class="ruby-identifier">inject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">inj</span>,<span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">inj</span> <span class="ruby-operator">&amp;</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_a</span> }
-204:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 217</span>
+217:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">intersect</span>
+218:     <span class="ruby-identifier">inject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">inj</span>,<span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">inj</span> <span class="ruby-operator">&amp;</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_a</span> }
+219:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -443,7 +443,7 @@ item is an array.
 				<div class="method-heading">
 				
 					<span class="method-name">join</span><span
-						class="method-args">(prefix=nil,suffix=nil)</span>
+						class="method-args">(*fixes)</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
@@ -460,12 +460,12 @@ Improved join to concatenate the items into a string
    =&gt;
   &quot;annebethcate&quot;
 </pre>
-<h2>Typical <a href="Array.html#M000115">Array#join</a> with separator</h2>
+<h2>Typical <a href="Array.html#M000115">Array#join</a> with infix</h2>
 <pre>
   list=['anne','beth','cate']
-  list.join(&quot;+&quot;)
+  list.join(&quot;*&quot;)
   =&gt;
-  &quot;anne+beth+cate&quot;
+  &quot;anne*beth*cate&quot;
 </pre>
 <h2>Improved join with prefix and suffix</h2>
 <pre>
@@ -473,6 +473,13 @@ Improved join to concatenate the items into a string
   list.join(&quot;+&quot;,&quot;-&quot;)
    =&gt;
    &quot;+anne-+beth-+cate-&quot;
+</pre>
+<h2>Improved join with infix and prefix and suffix</h2>
+<pre>
+  list=['anne','beth','cate']
+  list.join(&quot;*&quot;,&quot;+&quot;,&quot;-&quot;)
+   =&gt;
+   &quot;+anne-*+beth-*+cate-&quot;
 </pre>
 <h2>Example of wrapping items in HTML tags</h2>
 <pre>
@@ -489,12 +496,21 @@ Improved join to concatenate the items into a string
 					<div class="method-source-code"
 						id="join-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 33</span>
-33:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">join</span>(<span class="ruby-identifier">prefix</span>=<span class="ruby-keyword kw">nil</span>,<span class="ruby-identifier">suffix</span>=<span class="ruby-keyword kw">nil</span>)
-34:     <span class="ruby-keyword kw">return</span> (<span class="ruby-identifier">prefix</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">suffix</span>) \
-35:     <span class="ruby-operator">?</span> <span class="ruby-identifier">inject</span>(<span class="ruby-value str">&quot;&quot;</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>,<span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">suffix</span>} \
-36:     <span class="ruby-operator">:</span> <span class="ruby-identifier">ruby_join</span>(<span class="ruby-identifier">prefix</span>)
-37:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 39</span>
+39:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">join</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">fixes</span>)
+40:     <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">fixes</span>.<span class="ruby-identifier">size</span>
+41:     <span class="ruby-keyword kw">when</span> <span class="ruby-value">1</span>
+42:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ruby_join</span>(<span class="ruby-identifier">fixes</span>[<span class="ruby-value">0</span>])
+43:     <span class="ruby-keyword kw">when</span> <span class="ruby-value">2</span>
+44:       <span class="ruby-identifier">prefix</span>,<span class="ruby-identifier">suffix</span>=<span class="ruby-identifier">fixes</span>
+45:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">inject</span>(<span class="ruby-value str">&quot;&quot;</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>,<span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">suffix</span>} 
+46:     <span class="ruby-keyword kw">when</span> <span class="ruby-value">3</span>
+47:       <span class="ruby-identifier">infix</span>,<span class="ruby-identifier">prefix</span>,<span class="ruby-identifier">suffix</span>=<span class="ruby-identifier">fixes</span>
+48:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">inject</span>(<span class="ruby-value str">&quot;&quot;</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>,<span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">suffix</span>}.<span class="ruby-identifier">ruby_join</span>(<span class="ruby-identifier">infix</span>)
+49:     <span class="ruby-keyword kw">else</span>
+50:       <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;join(fixes[&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">fixes</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">+</span><span class="ruby-value str">&quot;]&quot;</span>
+51:     <span class="ruby-keyword kw">end</span>
+52:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -539,10 +555,10 @@ This is identical to calling foo.zip(values).to_h
 					<div class="method-source-code"
 						id="onto-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 102</span>
-102:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">onto</span>(<span class="ruby-identifier">values</span>)
-103:     <span class="ruby-identifier">zip</span>(<span class="ruby-identifier">values</span>).<span class="ruby-identifier">to_h</span>
-104:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 117</span>
+117:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">onto</span>(<span class="ruby-identifier">values</span>)
+118:     <span class="ruby-identifier">zip</span>(<span class="ruby-identifier">values</span>).<span class="ruby-identifier">to_h</span>
+119:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -581,11 +597,11 @@ Return self
 					<div class="method-source-code"
 						id="rotate--source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 59</span>
-59:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rotate!</span>
-60:     <span class="ruby-identifier">push</span> <span class="ruby-identifier">x</span>=<span class="ruby-identifier">shift</span>
-61:     <span class="ruby-keyword kw">self</span>
-62:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 74</span>
+74:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rotate!</span>
+75:     <span class="ruby-identifier">push</span> <span class="ruby-identifier">x</span>=<span class="ruby-identifier">shift</span>
+76:     <span class="ruby-keyword kw">self</span>
+77:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -600,7 +616,7 @@ Return self
 				<div class="method-heading">
 				
 					<span class="method-name">ruby_join</span><span
-						class="method-args">(prefix=nil,suffix=nil)</span>
+						class="method-args">(*fixes)</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
@@ -646,10 +662,10 @@ Return true if size > 0
 					<div class="method-source-code"
 						id="size--source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 46</span>
-46:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">size?</span>
-47:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>
-48:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 61</span>
+61:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">size?</span>
+62:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>
+63:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -693,16 +709,16 @@ If the slices don&#8217;t divide evenly, then the last is smaller.
 					<div class="method-source-code"
 						id="slices-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 126</span>
-126:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">slices</span>(<span class="ruby-identifier">slice_length</span>)
-127:     <span class="ruby-identifier">a</span>=[]
-128:     <span class="ruby-identifier">i</span>=<span class="ruby-value">0</span>
-129:     <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">i</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">length</span>
-130:       <span class="ruby-identifier">a</span>.<span class="ruby-identifier">push</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">...</span>(<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-identifier">slice_length</span>)]
-131:       <span class="ruby-identifier">i</span><span class="ruby-operator">+=</span><span class="ruby-identifier">slice_length</span>
-132:     <span class="ruby-keyword kw">end</span>
-133:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">a</span>
-134:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 141</span>
+141:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">slices</span>(<span class="ruby-identifier">slice_length</span>)
+142:     <span class="ruby-identifier">a</span>=[]
+143:     <span class="ruby-identifier">i</span>=<span class="ruby-value">0</span>
+144:     <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">i</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">length</span>
+145:       <span class="ruby-identifier">a</span>.<span class="ruby-identifier">push</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">i</span><span class="ruby-operator">...</span>(<span class="ruby-identifier">i</span><span class="ruby-operator">+</span><span class="ruby-identifier">slice_length</span>)]
+146:       <span class="ruby-identifier">i</span><span class="ruby-operator">+=</span><span class="ruby-identifier">slice_length</span>
+147:     <span class="ruby-keyword kw">end</span>
+148:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">a</span>
+149:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -734,16 +750,16 @@ subarray becomes one &#8216;line&#8217; in the output
 					<div class="method-source-code"
 						id="to-csv-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 217</span>
-217:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_csv</span>(<span class="ruby-identifier">ops</span>={})
-218:     <span class="ruby-identifier">s</span>=<span class="ruby-value str">''</span>
-219:     <span class="ruby-constant">CSV</span><span class="ruby-operator">::</span><span class="ruby-constant">Writer</span>.<span class="ruby-identifier">generate</span>(<span class="ruby-identifier">s</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">csv</span><span class="ruby-operator">|</span>
-220:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
-221:         <span class="ruby-identifier">csv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">row</span>
-222:       <span class="ruby-keyword kw">end</span>
-223:     <span class="ruby-keyword kw">end</span>
-224:     <span class="ruby-identifier">s</span>
-225:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 232</span>
+232:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_csv</span>(<span class="ruby-identifier">ops</span>={})
+233:     <span class="ruby-identifier">s</span>=<span class="ruby-value str">''</span>
+234:     <span class="ruby-constant">CSV</span><span class="ruby-operator">::</span><span class="ruby-constant">Writer</span>.<span class="ruby-identifier">generate</span>(<span class="ruby-identifier">s</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">csv</span><span class="ruby-operator">|</span>
+235:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+236:         <span class="ruby-identifier">csv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">row</span>
+237:       <span class="ruby-keyword kw">end</span>
+238:     <span class="ruby-keyword kw">end</span>
+239:     <span class="ruby-identifier">s</span>
+240:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -776,10 +792,10 @@ subarray becomes one &#8216;line&#8217; in the output
 					<div class="method-source-code"
 						id="union-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 185</span>
-185:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">union</span>
-186:     <span class="ruby-identifier">inject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">inj</span>,<span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">inj</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_a</span> }
-187:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 200</span>
+200:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">union</span>
+201:     <span class="ruby-identifier">inject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">inj</span>,<span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">inj</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_a</span> }
+202:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

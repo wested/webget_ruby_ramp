@@ -6,8 +6,9 @@ class ArrayTest < Test::Unit::TestCase
   def test_join
     a=['a','b','c']
     assert_equal('abc',a.join)
-    assert_equal('a+b+c',a.join('+'))
+    assert_equal('a*b*c',a.join('*'))
     assert_equal('+a-+b-+c-',a.join('+','-'))
+    assert_equal('+a-*+b-*+c-',a.join('*','+','-'))
   end
 
   def test_size

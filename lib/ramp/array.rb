@@ -10,17 +10,23 @@ class Array
   #    =>
   #   "annebethcate"
   #
-  # ==Typical Array#join with separator
+  # ==Typical Array#join with infix
   #   list=['anne','beth','cate']
-  #   list.join("+") 
+  #   list.join("*") 
   #   =>
-  #   "anne+beth+cate"
+  #   "anne*beth*cate"
   #
   # ==Improved join with prefix and suffix
   #   list=['anne','beth','cate']
   #   list.join("+","-")
   #    =>
   #    "+anne-+beth-+cate-"
+  #
+  # ==Improved join with infix and prefix and suffix
+  #   list=['anne','beth','cate']
+  #   list.join("*","+","-")
+  #    =>
+  #    "+anne-*+beth-*+cate-"
   #
   # ==Example of wrapping items in HTML tags
   #   list=['anne','beth','cate']
@@ -30,10 +36,19 @@ class Array
   #   <li>beth</li>
   #   <li>cate</li>
 
-  def join(prefix=nil,suffix=nil)
-    return (prefix and suffix) \
-    ? inject(""){|sum,s| sum += prefix + s.to_s + suffix} \
-    : ruby_join(prefix)
+  def join(*fixes)
+    case fixes.size
+    when 1
+      return self.ruby_join(fixes[0])
+    when 2
+      prefix,suffix=fixes
+      return inject(""){|sum,s| sum += prefix + s.to_s + suffix} 
+    when 3
+      infix,prefix,suffix=fixes
+      return inject(""){|sum,s| sum += prefix + s.to_s + suffix}.ruby_join(infix)
+    else
+      raise "join(fixes["+fixes.size+"]"
+    end
   end
 
 
