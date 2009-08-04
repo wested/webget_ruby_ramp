@@ -2,52 +2,38 @@ class Array
 
   alias :ruby_join :join
 
-  # Improved join to concatenate the items into a string
-  #
-  # ==Typical Array#join
-  #   list=['anne','beth','cate']
-  #   list.join
-  #    =>
-  #   "annebethcate"
+  # Concatenate the items into a string by join.
   #
   # ==Typical Array#join with infix
-  #   list=['anne','beth','cate']
-  #   list.join("*") 
-  #   =>
-  #   "anne*beth*cate"
+  #   list=['a','b','c']
+  #   list.join("*") => "a*b*c"
   #
-  # ==Improved join with prefix and suffix
-  #   list=['anne','beth','cate']
-  #   list.join("+","-")
-  #    =>
-  #    "+anne-+beth-+cate-"
+  # ==Improved join with infix, prefix, suffix
+  #   list=['a','b','c']
+  #   list.join("*","[","]") => "[a]*[b]*[c]"
   #
-  # ==Improved join with infix and prefix and suffix
-  #   list=['anne','beth','cate']
-  #   list.join("*","+","-")
-  #    =>
-  #    "+anne-*+beth-*+cate-"
-  #
-  # ==Example of wrapping items in HTML tags
-  #   list=['anne','beth','cate']
-  #   list.join("<li>","</li>\n")
-  #   =>
-  #   <li>anne</li>
-  #   <li>beth</li>
-  #   <li>cate</li>
+  # ==Improved join with just prefix and suffix
+  #   list=['a','b','c']
+  #   list.join("[","]") => "[a][b][c]"
 
   def join(*fixes)
+    if fixes.is_a?(String) then return self.ruby_join(fixes) end
     case fixes.size
+    when 0
+      return self.ruby_join()
     when 1
       return self.ruby_join(fixes[0])
     when 2
-      prefix,suffix=fixes
-      return inject(""){|sum,s| sum += prefix + s.to_s + suffix} 
+      prefix=fixes[0].to_s
+      suffix=fixes[1].to_s
+      return self.map{|s| prefix + s.to_s + suffix}.ruby_join()
     when 3
-      infix,prefix,suffix=fixes
-      return inject(""){|sum,s| sum += prefix + s.to_s + suffix}.ruby_join(infix)
+      infix =fixes[0].to_s
+      prefix=fixes[1].to_s
+      suffix=fixes[2].to_s
+      return map{|s| prefix + s.to_s + suffix}.ruby_join(infix)
     else
-      raise "join(fixes["+fixes.size+"]"
+      raise "join(fixes[#{fixes.size}]"
     end
   end
 
