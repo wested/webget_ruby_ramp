@@ -154,6 +154,7 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
+- 1.6.9.4 JRuby install and test successful
 - 1.6.9.3 Array#join add infix, prefix, suffix
 - 1.6.9.2 Improve ri docs
 - 1.6.9.1 Add Array#onto, Enumerable#intersect?

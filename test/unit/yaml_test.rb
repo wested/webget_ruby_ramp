@@ -12,15 +12,18 @@ class YAMLTest < Test::Unit::TestCase
 
  def test_load_dir
   dirpath='test/unit/yaml_test_*.yml'
-  expect=['aa1a10a2a20a3a30bb1b10b2b20b3b30cc1c10c2c20c3c30',
-          'dd1d10d2d20d3d30ee1e10e2e20e3e30ff1f10f2f20f3f30',
-          'gg2g20g3g30g1g10hh3h30h1h10h2h20ii1i10i2i20i3i30',
-          'jj1j10j2j20j3j30kk1k10k2k20k3k30ll1l10l2l20l3l30',
-          'mm1m10m2m20m3m30nn1n10n2n20n3n30oo1o10o2o20o3o30',
-          'pp1p10p2p20p3p30qq1q10q2q20q3q30rr2r20r3r30r1r10']
+  expect=[
+   "a:a1,a10,a2,a20,a3,a30b:b1,b10,b2,b20,b3,b30c:c1,c10,c2,c20,c3,c30", 
+   "d:d1,d10,d2,d20,d3,d30e:e1,e10,e2,e20,e3,e30f:f1,f10,f2,f20,f3,f30", 
+   "g:g1,g10,g2,g20,g3,g30h:h1,h10,h2,h20,h3,h30i:i1,i10,i2,i20,i3,i30",
+   "k:k1,k10,k2,k20,k3,k30l:l1,l10,l2,l20,l3,l30j:j1,j10,j2,j20,j3,j30",
+   "m:m1,m10,m2,m20,m3,m30n:n1,n10,n2,n20,n3,n30o:o1,o10,o2,o20,o3,o30", 
+   "p:p1,p10,p2,p20,p3,p30q:q1,q10,q2,q20,q3,q30r:r1,r10,r2,r20,r3,r30", 
+  ]
   actual=[]
-  YAML.load_dir(dirpath){|doc| actual << doc.sort.to_s }
-  assert_equal(expect,actual.sort,'YAML.load_dir')
+  YAML.load_dir(dirpath){|doc| actual << doc.keys.map{|k| v=doc[k]; "#{k}:#{v.sort.join(",")}" }.join("") }
+  actual.sort!
+  assert_equal(expect,actual,'YAML.load_dir')
  end
 
 end

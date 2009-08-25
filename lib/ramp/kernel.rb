@@ -1,3 +1,6 @@
+require 'pp'
+require 'stringio'  
+
 module Kernel
 
   # See:
@@ -10,6 +13,22 @@ module Kernel
     # Inline this and use $1 because it's empirically faster than /1
     caller[caller_index] =~ /`([^']*)'/ and $1
   end
+
+  # Pretty print to a string.
+  # 
+  # Created by Graeme Mathieson.
+  #
+  # See http://rha7dotcom.blogspot.com/2008/07/ruby-and-rails-how-to-get-pp-pretty.html
+
+  def pp_s(*objs)  
+    s = StringIO.new  
+    objs.each {|obj|  
+        PP.pp(obj, s)  
+      }  
+      s.rewind  
+      s.read  
+  end  
+  module_function :pp_s  
 
 end
 
