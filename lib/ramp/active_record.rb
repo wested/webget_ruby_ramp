@@ -3,7 +3,9 @@ require 'active_record'
 
 # ActiveRecord extensions
 
-class << ActiveRecord::Base #:doc:
+module ActiveRecord #:doc:
+
+class Base #:doc:
 
   # Create a record, or update a record if value passed matches a field in the AR object;
   # includes method_missing function to make code more readable
@@ -25,7 +27,7 @@ class << ActiveRecord::Base #:doc:
   #     Role.create_or_update_by_key(:key => key, :name => val[0], :value => val[1])
   # end
 
-  def create_or_update(options = {})  #:doc:
+  def self.create_or_update(options = {})
     self.create_or_update_by(:id, options)
   end
 
@@ -46,7 +48,7 @@ class << ActiveRecord::Base #:doc:
   # The fields can be any mix of symbols or strings.
   # The option keys can be any mix of symbols or strings.
 
-  def create_or_update_by(condition_keys, attribute_pairs = {})  #:doc:
+  def self.create_or_update_by(condition_keys, attribute_pairs = {})
     condition_pairs=[*condition_keys].map{|x| [x,(attribute_pairs.delete(x)||attribute_pairs.delete(x.to_s)||attribute_pairs.delete(x.to_sym))]}.to_h
     record = find(:first, :conditions => condition_pairs) || self.new
     if record.new_record? then attribute_pairs.merge!(condition_pairs) end
@@ -56,11 +58,23 @@ class << ActiveRecord::Base #:doc:
   end
 
 
-  # Syntactic sugar for setting up a database with initial data, e.g. in rake db:seed
-  alias :seed :create_or_update_by  #:doc:
+  # Set up a database with initial data, e.g. in rake db:seed method.
+  #
+  # This method calls #create_or_update_by (and you may want to change
+  # this behavior to do more, e.g. to test that a DB and table exists).
+
+  def self.seed(condition_keys, attribute_pairs = {})
+    self.create_or_update_by(condition_keys, attribute_pairs)
+  end
 
 
-  def method_missing_with_create_or_update(method_name, *args)  #:doc:
+  # Method missing for create_or_update_by_xxx that forwards to #create_or_update_by
+  #
+  # ==Example
+  #   MyModel.create_or_update_by_foo(options)
+  #   => MyModel.create_or_update_by(:foo,option)
+
+  def self.method_missing_with_create_or_update(method_name, *args) 
     if match = method_name.to_s.match(/create_or_update_by_([a-z0-9_]+)/)  
       field = match[1]
       return create_or_update_by(field,*args)
@@ -69,5 +83,7 @@ class << ActiveRecord::Base #:doc:
   end
 
   alias_method_chain :method_missing, :create_or_update  #:doc:
+
+end
 
 end

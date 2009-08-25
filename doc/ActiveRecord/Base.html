@@ -31,6 +31,9 @@
 						<li><a href="../lib/ramp/active_record/base_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
 							class="thickbox" title="lib/ramp/active_record/base.rb">lib/ramp/active_record/base.rb</a></li>
 					
+						<li><a href="../lib/ramp/active_record_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ramp/active_record.rb">lib/ramp/active_record.rb</a></li>
+					
 					</ul>
 				</div>
 			</div>
@@ -59,11 +62,13 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000175">::create_or_update</a></li>
+					<li><a href="#M000177">::create_or_update</a></li>
 					
-					<li><a href="#M000178">::create_or_update_by</a></li>
+					<li><a href="#M000180">::create_or_update_by</a></li>
 					
-					<li><a href="#M000182">::method_missing_with_create_or_update</a></li>
+					<li><a href="#M000184">::method_missing_with_create_or_update</a></li>
+					
+					<li><a href="#M000183">::seed</a></li>
 					
 				</ul>
 			</div>
@@ -235,7 +240,7 @@
 
 		
 			<div id="create-or-update-method" class="method-detail ">
-				<a name="M000175"></a>
+				<a name="M000177"></a>
 
 				<div class="method-heading">
 				
@@ -256,8 +261,8 @@ Most common use will be for testing (fixture/mock object generation)
 </p>
 <p>
 Three versions of method included: <a
-href="Base.html#M000175">create_or_update</a> <a
-href="Base.html#M000178">create_or_update_by</a> create_or_update_by_xxx
+href="Base.html#M000177">create_or_update</a> <a
+href="Base.html#M000180">create_or_update_by</a> create_or_update_by_xxx
 (where xxx is a field name)
 </p>
 <p>
@@ -282,10 +287,10 @@ end
 					<div class="method-source-code"
 						id="create-or-update-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/active_record.rb, line 28</span>
-28:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_or_update</span>(<span class="ruby-identifier">options</span> = {})  <span class="ruby-comment cmt">#:doc:</span>
-29:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">create_or_update_by</span>(<span class="ruby-identifier">:id</span>, <span class="ruby-identifier">options</span>)
-30:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/active_record.rb, line 30</span>
+30:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">create_or_update</span>(<span class="ruby-identifier">options</span> = {})
+31:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">create_or_update_by</span>(<span class="ruby-identifier">:id</span>, <span class="ruby-identifier">options</span>)
+32:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -295,7 +300,7 @@ end
 
 		
 			<div id="create-or-update-by-method" class="method-detail ">
-				<a name="M000178"></a>
+				<a name="M000180"></a>
 
 				<div class="method-heading">
 				
@@ -333,15 +338,15 @@ mix of symbols or strings.
 					<div class="method-source-code"
 						id="create-or-update-by-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/active_record.rb, line 49</span>
-49:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">create_or_update_by</span>(<span class="ruby-identifier">condition_keys</span>, <span class="ruby-identifier">attribute_pairs</span> = {})  <span class="ruby-comment cmt">#:doc:</span>
-50:     <span class="ruby-identifier">condition_pairs</span>=[<span class="ruby-operator">*</span><span class="ruby-identifier">condition_keys</span>].<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">x</span>,(<span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">x</span>)<span class="ruby-operator">||</span><span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_s</span>)<span class="ruby-operator">||</span><span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_sym</span>))]}.<span class="ruby-identifier">to_h</span>
-51:     <span class="ruby-identifier">record</span> = <span class="ruby-identifier">find</span>(<span class="ruby-identifier">:first</span>, <span class="ruby-identifier">:conditions</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">condition_pairs</span>) <span class="ruby-operator">||</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">new</span>
-52:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">new_record?</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">condition_pairs</span>) <span class="ruby-keyword kw">end</span>
-53:     <span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">send</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-value str">'='</span>, <span class="ruby-identifier">v</span>}
-54:     <span class="ruby-identifier">record</span>.<span class="ruby-identifier">save!</span>
-55:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">record</span>
-56:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/active_record.rb, line 51</span>
+51:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">create_or_update_by</span>(<span class="ruby-identifier">condition_keys</span>, <span class="ruby-identifier">attribute_pairs</span> = {})
+52:     <span class="ruby-identifier">condition_pairs</span>=[<span class="ruby-operator">*</span><span class="ruby-identifier">condition_keys</span>].<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">x</span>,(<span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">x</span>)<span class="ruby-operator">||</span><span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_s</span>)<span class="ruby-operator">||</span><span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_sym</span>))]}.<span class="ruby-identifier">to_h</span>
+53:     <span class="ruby-identifier">record</span> = <span class="ruby-identifier">find</span>(<span class="ruby-identifier">:first</span>, <span class="ruby-identifier">:conditions</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">condition_pairs</span>) <span class="ruby-operator">||</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">new</span>
+54:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">new_record?</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">condition_pairs</span>) <span class="ruby-keyword kw">end</span>
+55:     <span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">send</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-value str">'='</span>, <span class="ruby-identifier">v</span>}
+56:     <span class="ruby-identifier">record</span>.<span class="ruby-identifier">save!</span>
+57:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">record</span>
+58:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -351,7 +356,7 @@ mix of symbols or strings.
 
 		
 			<div id="method-missing-with-create-or-update-method" class="method-detail ">
-				<a name="M000182"></a>
+				<a name="M000184"></a>
 
 				<div class="method-heading">
 				
@@ -363,21 +368,68 @@ mix of symbols or strings.
 
 				<div class="method-description">
 					
-					<p class="missing-docs">(Not documented)</p>
+					<p>
+Method missing for create_or_update_by_xxx that forwards to <a
+href="Base.html#M000180">create_or_update_by</a>
+</p>
+<h2>Example</h2>
+<pre>
+  MyModel.create_or_update_by_foo(options)
+  =&gt; MyModel.create_or_update_by(:foo,option)
+</pre>
 					
 
 					
 					<div class="method-source-code"
 						id="method-missing-with-create-or-update-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/active_record.rb, line 63</span>
-63:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_missing_with_create_or_update</span>(<span class="ruby-identifier">method_name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)  <span class="ruby-comment cmt">#:doc:</span>
-64:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">match</span> = <span class="ruby-identifier">method_name</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp re">/create_or_update_by_([a-z0-9_]+)/</span>)  
-65:       <span class="ruby-identifier">field</span> = <span class="ruby-identifier">match</span>[<span class="ruby-value">1</span>]
-66:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">create_or_update_by</span>(<span class="ruby-identifier">field</span>,<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
-67:     <span class="ruby-keyword kw">end</span>
-68:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">method_missing_without_create_or_update</span>(<span class="ruby-identifier">method_name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
-69:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/active_record.rb, line 77</span>
+77:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">method_missing_with_create_or_update</span>(<span class="ruby-identifier">method_name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) 
+78:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">match</span> = <span class="ruby-identifier">method_name</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp re">/create_or_update_by_([a-z0-9_]+)/</span>)  
+79:       <span class="ruby-identifier">field</span> = <span class="ruby-identifier">match</span>[<span class="ruby-value">1</span>]
+80:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">create_or_update_by</span>(<span class="ruby-identifier">field</span>,<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+81:     <span class="ruby-keyword kw">end</span>
+82:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">method_missing_without_create_or_update</span>(<span class="ruby-identifier">method_name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
+83:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="seed-method" class="method-detail ">
+				<a name="M000183"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">seed</span><span
+						class="method-args">(condition_keys, attribute_pairs = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Set up a database with initial data, e.g. in rake db:seed method.
+</p>
+<p>
+This method calls <a href="Base.html#M000180">create_or_update_by</a> (and
+you may want to change this behavior to do more, e.g. to test that a DB and
+table exists).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="seed-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/active_record.rb, line 66</span>
+66:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">seed</span>(<span class="ruby-identifier">condition_keys</span>, <span class="ruby-identifier">attribute_pairs</span> = {})
+67:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">create_or_update_by</span>(<span class="ruby-identifier">condition_keys</span>, <span class="ruby-identifier">attribute_pairs</span>)
+68:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
