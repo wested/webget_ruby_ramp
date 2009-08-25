@@ -18,6 +18,6 @@ Gem::Specification.new do |s|
   s.files             = ['lib/ramp.rb'] + CLASSES.map{|c| "lib/ramp/#{c}.rb"} + TEST_UNIT_FILES.map{|f| "test/unit/#{f}"}
   s.test_files        = CLASSES.map{|c| "test/unit/#{c}_test.rb"}
 
-  s.add_dependency('sqlite3') # for testing ActiveRecord
+  s.add_dependency('sqlite3-ruby') # for testing ActiveRecord
 
 end

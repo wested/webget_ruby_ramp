@@ -62,13 +62,13 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000170">::create_or_update</a></li>
+					<li><a href="#M000181">::create_or_update</a></li>
 					
-					<li><a href="#M000171">::create_or_update_by</a></li>
+					<li><a href="#M000183">::create_or_update_by</a></li>
 					
-					<li><a href="#M000179">::method_missing_with_create_or_update</a></li>
+					<li><a href="#M000185">::method_missing_with_create_or_update</a></li>
 					
-					<li><a href="#M000176">::seed</a></li>
+					<li><a href="#M000184">::seed</a></li>
 					
 				</ul>
 			</div>
@@ -242,7 +242,7 @@
 
 		
 			<div id="create-or-update-method" class="method-detail ">
-				<a name="M000170"></a>
+				<a name="M000181"></a>
 
 				<div class="method-heading">
 				
@@ -263,8 +263,8 @@ Most common use will be for testing (fixture/mock object generation)
 </p>
 <p>
 Three versions of method included: <a
-href="Base.html#M000170">create_or_update</a> <a
-href="Base.html#M000171">create_or_update_by</a> create_or_update_by_xxx
+href="Base.html#M000181">create_or_update</a> <a
+href="Base.html#M000183">create_or_update_by</a> create_or_update_by_xxx
 (where xxx is a field name)
 </p>
 <p>
@@ -303,7 +303,7 @@ end
 
 		
 			<div id="create-or-update-by-method" class="method-detail ">
-				<a name="M000171"></a>
+				<a name="M000183"></a>
 
 				<div class="method-heading">
 				
@@ -359,7 +359,7 @@ mix of symbols or strings.
 
 		
 			<div id="method-missing-with-create-or-update-method" class="method-detail ">
-				<a name="M000179"></a>
+				<a name="M000185"></a>
 
 				<div class="method-heading">
 				
@@ -373,7 +373,7 @@ mix of symbols or strings.
 					
 					<p>
 Method missing for create_or_update_by_xxx that forwards to <a
-href="Base.html#M000171">create_or_update_by</a>
+href="Base.html#M000183">create_or_update_by</a>
 </p>
 <h2>Example</h2>
 <pre>
@@ -403,7 +403,7 @@ href="Base.html#M000171">create_or_update_by</a>
 
 		
 			<div id="seed-method" class="method-detail ">
-				<a name="M000176"></a>
+				<a name="M000184"></a>
 
 				<div class="method-heading">
 				
@@ -422,7 +422,7 @@ Set up a database with initial data, e.g. in rake db:seed method.
 This will look for each field name as a key in the options hash.
 </p>
 <p>
-This method calls <a href="Base.html#M000171">create_or_update_by</a> (and
+This method calls <a href="Base.html#M000183">create_or_update_by</a> (and
 you may want to change this behavior to do more, e.g. to test that a DB and
 table exists).
 </p>
