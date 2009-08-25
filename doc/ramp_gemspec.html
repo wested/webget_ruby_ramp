@@ -100,6 +100,8 @@
 				
 					<li><a href="./FileTestCase.html">FileTestCase</a></li>
 				
+					<li><a href="./Foo.html">Foo</a></li>
+				
 					<li><a href="./Hash.html">Hash</a></li>
 				
 					<li><a href="./HashTest.html">HashTest</a></li>
@@ -174,7 +176,7 @@ Gem::Specification.new do |s|
 
   s.name              = &quot;ramp&quot;
   s.summary           = &quot;ramp&quot;
-  s.version           = &quot;1.6.9.4&quot;
+  s.version           = &quot;1.6.9.5&quot;
   s.author            = &quot;WebGet&quot;
   s.email             = &quot;webget@webget.com&quot;
   s.homepage          = &quot;http://webget.com/gems/ramp&quot;
@@ -186,6 +188,8 @@ Gem::Specification.new do |s|
   s.has_rdoc          = true
   s.files             = ['lib/ramp.rb'] + CLASSES.map{|c| &quot;lib/ramp/#{c}.rb&quot;} + TEST_UNIT_FILES.map{|f| &quot;test/unit/#{f}&quot;}
   s.test_files        = CLASSES.map{|c| &quot;test/unit/#{c}_test.rb&quot;}
+
+  s.add_dependency('sqlite3') # for testing ActiveRecord
 </pre>
 <p>
 end

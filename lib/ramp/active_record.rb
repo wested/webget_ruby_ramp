@@ -1,6 +1,13 @@
 require 'activerecord'
 require 'active_record'
 
+#--
+# See http://stackoverflow.com/questions/722918/testing-ruby-gems-under-rails
+# $LOAD_PATH << File.join(File.dirname(__FILE__), '..', '..', 'lib')
+#++
+
+
+#:startdoc:
 # ActiveRecord extensions
 
 module ActiveRecord #:doc:
@@ -19,7 +26,7 @@ class Base #:doc:
   #
   # Inspired by http://www.intridea.com/2008/2/19/activerecord-base-create_or_update-on-steroids-2
   #
-  # Example:
+  # ==Example
   # { "admin"     => ["Administrator", 1000], 
   #   "member"    => ["Member", 1], 
   #   "moderator" => ["Moderator", 100],
@@ -60,8 +67,23 @@ class Base #:doc:
 
   # Set up a database with initial data, e.g. in rake db:seed method.
   #
+  # This will look for each field name as a key in the options hash.
+  #
   # This method calls #create_or_update_by (and you may want to change
   # this behavior to do more, e.g. to test that a DB and table exists).
+  #
+  # ==Example
+  #   attributes={:name="John Smith", :email=>"john@example.com", :birthdate=>'1980/01/01'}
+  #   User.create_or_update_by(:email,attributes)
+  #   => if a user with that email exists then update his name and birthdate, else create him
+  #
+  # ==Example with multiple conditions
+  #   attributes={:name="John Smith", :email=>"john@example.com", :birthdate=>'1980/01/01'}
+  #   User.create_or_update_by([:name,:birthdate],attributes)
+  #   => if a user with that name and birthdate exists then update his email, else create him
+  #
+  # The fields can be any mix of symbols or strings.
+  # The option keys can be any mix of symbols or strings.
 
   def self.seed(condition_keys, attribute_pairs = {})
     self.create_or_update_by(condition_keys, attribute_pairs)
