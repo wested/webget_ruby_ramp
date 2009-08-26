@@ -1,12 +1,6 @@
 require 'activerecord'
 require 'active_record'
 
-#--
-# See http://stackoverflow.com/questions/722918/testing-ruby-gems-under-rails
-# $LOAD_PATH << File.join(File.dirname(__FILE__), '..', '..', 'lib')
-#++
-
-
 #:startdoc:
 # ActiveRecord extensions
 

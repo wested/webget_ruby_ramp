@@ -18,13 +18,31 @@ end
 
 class ActiveRecordTest < Test::Unit::TestCase
 
-  def test_create_or_update
+  def test_prelim_count
+    assert_equal(0,Foo.count)
   end
 
-  def test_create_or_update_by
+  def test_prelim_create
+    f=Foo.new
+    f.a='aa'
+    f.b='bb'
+    f.c='cc'
+    f.save
+    assert_equal(1,Foo.count)    
   end
 
-  def seed
+  def test_seed_with_create
+    n1=Foo.count
+    Foo.seed(:a,{:a=>'xxx',:b=>'yyy'})
+    n2=Foo.count
+    assert_equal(n1+1,n2)    
+  end
+
+  def test_seed_with_update
+    n1=Foo.count
+    Foo.seed(:a,{:a=>'aaa',:b=>'bbb'})
+    n2=Foo.count
+    assert_equal(n1,n2)    
   end
 
 end
