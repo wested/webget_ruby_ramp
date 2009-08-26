@@ -40,7 +40,8 @@ class ActiveRecordTest < Test::Unit::TestCase
 
   def test_seed_with_update
     n1=Foo.count
-    Foo.seed(:a,{:a=>'aaa',:b=>'bbb'})
+    f1=Foo.find(:first)
+    Foo.seed(:a,{:a=>f1.a,:b=>'bbb'})
     n2=Foo.count
     assert_equal(n1,n2)    
   end
