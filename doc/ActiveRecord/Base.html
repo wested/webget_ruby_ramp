@@ -62,11 +62,13 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000171">::create_or_update</a></li>
+					<li><a href="#M000172">::create_or_update</a></li>
 					
 					<li><a href="#M000177">::create_or_update_by</a></li>
 					
-					<li><a href="#M000180">::method_missing_with_create_or_update</a></li>
+					<li><a href="#M000183">::included</a></li>
+					
+					<li><a href="#M000182">::method_missing_with_create_or_update</a></li>
 					
 					<li><a href="#M000179">::seed</a></li>
 					
@@ -242,7 +244,7 @@
 
 		
 			<div id="create-or-update-method" class="method-detail ">
-				<a name="M000171"></a>
+				<a name="M000172"></a>
 
 				<div class="method-heading">
 				
@@ -263,7 +265,7 @@ Most common use will be for testing (fixture/mock object generation)
 </p>
 <p>
 Three versions of method included: <a
-href="Base.html#M000171">create_or_update</a> <a
+href="Base.html#M000172">create_or_update</a> <a
 href="Base.html#M000177">create_or_update_by</a> create_or_update_by_xxx
 (where xxx is a field name)
 </p>
@@ -358,8 +360,51 @@ mix of symbols or strings.
 			</div>
 
 		
+			<div id="included-method" class="method-detail ">
+				<a name="M000183"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">included</span><span
+						class="method-args">(base)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+For alias method chain
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="included-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/active_record.rb, line 103</span>
+103:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">included</span>(<span class="ruby-identifier">base</span>)
+104:     <span class="ruby-comment cmt"># base == ActiveRecord::Base (the class)</span>
+105:     <span class="ruby-identifier">base</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword kw">do</span>
+106:         <span class="ruby-comment cmt"># class_eval makes self == ActiveRecord::Base, and makes def define instance methods.</span>
+107:         <span class="ruby-identifier">extend</span> <span class="ruby-constant">ClassMethods</span>
+108:         <span class="ruby-comment cmt"># If has_many were an instance method, we could do this</span>
+109:         <span class="ruby-comment cmt">#   alias_method_chain :has_many, :association_option; end            </span>
+110:         <span class="ruby-comment cmt"># but it's a class method, so we have to do the alias_method_chain on  </span>
+111:         <span class="ruby-comment cmt"># the meta-class for ActiveRecord::Base, which is what class &lt;&lt; self does.   </span>
+112:         <span class="ruby-keyword kw">class</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword kw">self</span>;  <span class="ruby-identifier">alias_method_chain</span> <span class="ruby-identifier">:method_missing</span>, <span class="ruby-identifier">:create_or_update</span>;  <span class="ruby-keyword kw">end</span>
+113:       <span class="ruby-keyword kw">end</span>
+114:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
 			<div id="method-missing-with-create-or-update-method" class="method-detail ">
-				<a name="M000180"></a>
+				<a name="M000182"></a>
 
 				<div class="method-heading">
 				

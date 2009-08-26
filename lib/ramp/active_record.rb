@@ -98,7 +98,21 @@ class Base #:doc:
     return method_missing_without_create_or_update(method_name, *args)
   end
 
-  alias_method_chain :method_missing, :create_or_update  #:doc:
+
+  # For alias method chain
+  def self.included(base)
+    # base == ActiveRecord::Base (the class)
+    base.class_eval do
+        # class_eval makes self == ActiveRecord::Base, and makes def define instance methods.
+        extend ClassMethods
+        # If has_many were an instance method, we could do this
+        #   alias_method_chain :has_many, :association_option; end            
+        # but it's a class method, so we have to do the alias_method_chain on  
+        # the meta-class for ActiveRecord::Base, which is what class << self does.   
+        class << self;  alias_method_chain :method_missing, :create_or_update;  end
+      end
+  end
+
 
 end
 
