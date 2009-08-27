@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: ObjectTest</title>
+	<title>Class: Symbol</title>
 
 	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -28,8 +28,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="./test/unit/object_test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="test/unit/object_test.rb">test/unit/object_test.rb</a></li>
+						<li><a href="./lib/ramp/symbol_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/ramp/symbol.rb">lib/ramp/symbol.rb</a></li>
 					
 					</ul>
 				</div>
@@ -45,7 +45,7 @@
 			<div id="parent-class-section" class="section">
 				<h3 class="section-header">Parent</h3>
 				
-				<p class="link">Test::Unit::TestCase</p>
+				<p class="link"><a href="Object.html">Object</a></p>
 				
 			</div>
 			
@@ -59,13 +59,24 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000001">#test_in_array</a></li>
+					<li><a href="#M000133">#<=></a></li>
 					
 				</ul>
 			</div>
 			
 
 			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">Comparable</span></li>
+				
+				
+				</ul>
+			</div>
 			
 		</div>
 
@@ -218,7 +229,7 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">ObjectTest</h1>
+		<h1 class="class">Symbol</h1>
 
 		<div id="description">
 			
@@ -236,13 +247,13 @@
 			<h3 class="section-header">Public Instance Methods</h3>
 
 		
-			<div id="test-in-array-method" class="method-detail ">
-				<a name="M000001"></a>
+			<div id="--method" class="method-detail ">
+				<a name="M000133"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">test_in_array</span><span
-						class="method-args">()</span>
+					<span class="method-name">&lt;=&gt;</span><span
+						class="method-args">(that)</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
@@ -254,13 +265,12 @@
 
 					
 					<div class="method-source-code"
-						id="test-in-array-source">
+						id="--source">
 <pre>
-   <span class="ruby-comment cmt"># File test/unit/object_test.rb, line 6</span>
-6:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_in_array</span>
-7:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword kw">true</span>,<span class="ruby-value str">'a'</span>.<span class="ruby-identifier">in?</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]))
-8:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword kw">false</span>,<span class="ruby-value str">'x'</span>.<span class="ruby-identifier">in?</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]))
-9:  <span class="ruby-keyword kw">end</span></pre>
+   <span class="ruby-comment cmt"># File lib/ramp/symbol.rb, line 5</span>
+5:   <span class="ruby-keyword kw">def</span> <span class="ruby-operator">&lt;=&gt;</span>(<span class="ruby-identifier">that</span>)
+6:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">&lt;=&gt;</span><span class="ruby-identifier">that</span>.<span class="ruby-identifier">to_s</span>
+7:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

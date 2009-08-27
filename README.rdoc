@@ -136,6 +136,11 @@ Extensions that help debug Ruby programs.
 * words: splits the string into an array of words
 
 
+== Symbol
+
+* <=> and include the comparable mixin to compare symbols as strings
+
+
 == Time
 
 * (class) stamp: current time in UTC as a timestamp string ("YYYYMMDDHHMMSS")
@@ -153,6 +158,7 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
+- 1.6.9.6 Add Symbol with comparable and <=>
 - 1.6.9.5 Add ActiveRecord testing with sqlite3
 - 1.6.9.4 JRuby install and test successful
 - 1.6.9.3 Array#join add infix, prefix, suffix

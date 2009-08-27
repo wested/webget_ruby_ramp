@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: ObjectTest</title>
+	<title>Class: SymbolTest</title>
 
 	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -28,8 +28,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="./test/unit/object_test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="test/unit/object_test.rb">test/unit/object_test.rb</a></li>
+						<li><a href="./test/unit/symbol_test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="test/unit/symbol_test.rb">test/unit/symbol_test.rb</a></li>
 					
 					</ul>
 				</div>
@@ -59,7 +59,7 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000001">#test_in_array</a></li>
+					<li><a href="#M000000">#test_comparable</a></li>
 					
 				</ul>
 			</div>
@@ -218,7 +218,7 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">ObjectTest</h1>
+		<h1 class="class">SymbolTest</h1>
 
 		<div id="description">
 			
@@ -236,12 +236,12 @@
 			<h3 class="section-header">Public Instance Methods</h3>
 
 		
-			<div id="test-in-array-method" class="method-detail ">
-				<a name="M000001"></a>
+			<div id="test-comparable-method" class="method-detail ">
+				<a name="M000000"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">test_in_array</span><span
+					<span class="method-name">test_comparable</span><span
 						class="method-args">()</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
@@ -254,13 +254,14 @@
 
 					
 					<div class="method-source-code"
-						id="test-in-array-source">
+						id="test-comparable-source">
 <pre>
-   <span class="ruby-comment cmt"># File test/unit/object_test.rb, line 6</span>
-6:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_in_array</span>
-7:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword kw">true</span>,<span class="ruby-value str">'a'</span>.<span class="ruby-identifier">in?</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]))
-8:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword kw">false</span>,<span class="ruby-value str">'x'</span>.<span class="ruby-identifier">in?</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]))
-9:  <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/symbol_test.rb, line 8</span>
+ 8:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_comparable</span>
+ 9:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value">-1</span>,<span class="ruby-identifier">:foo</span><span class="ruby-operator">&lt;=&gt;</span><span class="ruby-identifier">:goo</span>)
+10:     <span class="ruby-identifier">assert_equal</span>( <span class="ruby-value">0</span>,<span class="ruby-identifier">:foo</span><span class="ruby-operator">&lt;=&gt;</span><span class="ruby-identifier">:foo</span>)
+11:     <span class="ruby-identifier">assert_equal</span>( <span class="ruby-value">1</span>,<span class="ruby-identifier">:goo</span><span class="ruby-operator">&lt;=&gt;</span><span class="ruby-identifier">:foo</span>)
+12:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
