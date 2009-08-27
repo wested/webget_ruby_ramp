@@ -185,7 +185,7 @@ Extensions that help debug Ruby programs.
 
 =end
 
-%w{active_record array csv date enumerable file hash integer io kernel math nil numeric object process string time xml yaml}.map{|x|
+%w{active_record array csv date enumerable file hash integer io kernel math nil numeric object process string symbol time xml yaml}.map{|x|
   require File.dirname(__FILE__) + "/ramp/#{x}.rb"
 }
 
