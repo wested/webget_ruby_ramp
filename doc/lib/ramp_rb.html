@@ -24,7 +24,7 @@
 	<div id="metadata">
 		<dl>
 			<dt class="modified-date">Last Modified</dt>
-			<dd class="modified-date">Wed Aug 26 18:23:13 -0700 2009</dd>
+			<dd class="modified-date">Wed Sep 09 19:17:13 -0700 2009</dd>
 
 			
 			<dt class="requires">Requires</dt>
@@ -55,9 +55,13 @@ href="../Enumerable.html">Enumerable</a>, <a href="../Hash.html">Hash</a>,
 <a href="../YAML.html">YAML</a>.
 </p>
 <p>
-Each has an associated test class, e.g., <a
+Testing: <ul> <li>Each has an associated test class, e.g., <a
 href="../ArrayTest.html">ArrayTest</a>, <a
-href="../DateTest.html">DateTest</a>, etc.
+href="../DateTest.html">DateTest</a>, etc. <li>The easy way to run the
+tests: gem install ramp &#8212;test <li>Some of the <a
+href="../ActiveRecord.html">ActiveRecord</a> extensions use sqlite for
+testing. We don&#8217;t install sqlite automatically because it requires
+some native extensions. If you need sqlite: gem install sqlite3-ruby </ul>
 </p>
 <h2><a href="../ActiveRecord.html">ActiveRecord</a></h2>
 <ul>
@@ -92,7 +96,7 @@ and index at the same time.
 <li>divvy: divides an array, like a pie, into a specified number of slices
 
 </li>
-<li>join: same as <a href="../Array.html#M000112">Array#join</a> with some
+<li>join: same as <a href="../Array.html#M000119">Array#join</a> with some
 improvments
 
 </li>
@@ -389,7 +393,7 @@ sqlite3
 <li>1.6.9.4 JRuby install and test successful
 
 </li>
-<li>1.6.9.3 <a href="../Array.html#M000112">Array#join</a> add infix, prefix,
+<li>1.6.9.3 <a href="../Array.html#M000119">Array#join</a> add infix, prefix,
 suffix
 
 </li>
@@ -397,7 +401,7 @@ suffix
 
 </li>
 <li>1.6.9.1 Add <a href="../Array.html#M000125">Array#onto</a>, <a
-href="../Enumerable.html#M000117">Enumerable#intersect?</a>
+href="../Enumerable.html#M000115">Enumerable#intersect?</a>
 
 </li>
 <li>1.6.9.0 Add <a href="../IO.html">IO</a>, <a href="../File.html">File</a>,
@@ -442,7 +446,7 @@ href="../String.html#ACCENTS">String#ACCENTS</a>
 </li>
 <li>1.6.6 Add <a href="../Array.html#M000130">Array#to_csv</a>, <a
 href="../Integer.html">Integer</a>, <a
-href="../String.html#M000188">String#lorem</a>, etc., improve tests
+href="../String.html#M000189">String#lorem</a>, etc., improve tests
 
 </li>
 <li>1.6.4 Bug fixes: <a href="../String.html">String</a> characters and <a

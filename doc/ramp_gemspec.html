@@ -180,7 +180,7 @@ Gem::Specification.new do |s|
 
   s.name              = &quot;ramp&quot;
   s.summary           = &quot;ramp&quot;
-  s.version           = &quot;1.6.9.6&quot;
+  s.version           = &quot;1.6.7.0&quot;
   s.author            = &quot;WebGet&quot;
   s.email             = &quot;webget@webget.com&quot;
   s.homepage          = &quot;http://webget.com/gems/ramp&quot;
@@ -193,7 +193,7 @@ Gem::Specification.new do |s|
   s.files             = ['lib/ramp.rb'] + CLASSES.map{|c| &quot;lib/ramp/#{c}.rb&quot;} + TEST_UNIT_FILES.map{|f| &quot;test/unit/#{f}&quot;}
   s.test_files        = CLASSES.map{|c| &quot;test/unit/#{c}_test.rb&quot;}
 
-  s.add_dependency('sqlite3-ruby') # for testing ActiveRecord
+  #s.add_dependency('sqlite3-ruby') # for testing ActiveRecord
 </pre>
 <p>
 end

@@ -3,7 +3,13 @@
 
 Ramp is a library of extensions to Ruby and Rails base classes, including ActiveRecord, Array, Date, Enumerable, Hash, Kernel, Numeric, Object, Process, String, Time, and YAML. 
 
-Each has an associated test class, e.g., ArrayTest, DateTest, etc.
+
+Testing: 
+<ul>
+<li>Each has an associated test class, e.g., ArrayTest, DateTest, etc.
+<li>The easy way to run the tests: gem install ramp --test
+<li>Some of the ActiveRecord extensions use sqlite for testing. We don't install sqlite automatically because it requires some native extensions. If you need sqlite: gem install sqlite3-ruby
+</ul>
 
 
 == ActiveRecord

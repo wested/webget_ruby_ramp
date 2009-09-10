@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
 
   s.name              = "ramp"
   s.summary           = "ramp"
-  s.version           = "1.6.9.6"
+  s.version           = "1.6.7.0"
   s.author            = "WebGet"
   s.email             = "webget@webget.com"
   s.homepage          = "http://webget.com/gems/ramp"
@@ -18,6 +18,6 @@ Gem::Specification.new do |s|
   s.files             = ['lib/ramp.rb'] + CLASSES.map{|c| "lib/ramp/#{c}.rb"} + TEST_UNIT_FILES.map{|f| "test/unit/#{f}"}
   s.test_files        = CLASSES.map{|c| "test/unit/#{c}_test.rb"}
 
-  s.add_dependency('sqlite3-ruby') # for testing ActiveRecord
+  #s.add_dependency('sqlite3-ruby') # for testing ActiveRecord
 
 end
