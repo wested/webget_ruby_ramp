@@ -183,9 +183,13 @@ href="String.html">String</a>, <a href="Time.html">Time</a>, and <a
 href="YAML.html">YAML</a>.
 </p>
 <p>
-Each has an associated test class, e.g., <a
+Testing: <ul> <li>Each has an associated test class, e.g., <a
 href="ArrayTest.html">ArrayTest</a>, <a href="DateTest.html">DateTest</a>,
-etc.
+etc. <li>The easy way to run the tests: gem install ramp &#8212;test
+<li>Some of the <a href="ActiveRecord.html">ActiveRecord</a> extensions use
+sqlite for testing. We don&#8217;t install sqlite automatically because it
+requires some native extensions. If you need sqlite: gem install
+sqlite3-ruby </ul>
 </p>
 <h2><a href="ActiveRecord.html">ActiveRecord</a></h2>
 <ul>
@@ -305,7 +309,7 @@ array containing, the leading elements for which block is not false or nil.
 </ul>
 <h2><a href="File.html">File</a></h2>
 <ul>
-<li><a href="File.html#M000198">File.joindir</a>: wrapper for
+<li><a href="File.html#M000196">File.joindir</a>: wrapper for
 File.join(File.dirname(...),string,&#8230;)
 
 </li>
@@ -533,12 +537,12 @@ ActiveRecord#seed
 
 </li>
 <li>1.6.8.9 Add <a href="Enumerable.html#M000100">Enumerable#to_h</a>,
-Array#hash, <a href="Hash.html#M000161">Hash#each_key!</a>, Hash#each_pair,
+Array#hash, <a href="Hash.html#M000163">Hash#each_key!</a>, Hash#each_pair,
 <a href="Hash.html#M000165">Hash#each_value!</a>
 
 </li>
 <li>1.6.8.8 Add <a href="Hash.html#M000166">Hash#map_pair</a>, <a
-href="Hash.html#M000159">Hash#size?</a>, <a
+href="Hash.html#M000161">Hash#size?</a>, <a
 href="Hash.html#M000168">Hash#pivot</a>
 
 </li>
@@ -569,7 +573,7 @@ href="String.html#ACCENTS">String#ACCENTS</a>
 </li>
 <li>1.6.6 Add <a href="Array.html#M000130">Array#to_csv</a>, <a
 href="Integer.html">Integer</a>, <a
-href="String.html#M000189">String#lorem</a>, etc., improve tests
+href="String.html#M000184">String#lorem</a>, etc., improve tests
 
 </li>
 <li>1.6.4 Bug fixes: <a href="String.html">String</a> characters and <a
