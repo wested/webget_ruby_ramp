@@ -81,6 +81,11 @@ class ArrayTest < Test::Unit::TestCase
     assert_equal("a,b\nc,d\ne,f\n",a.to_csv)
   end
 
+  def test_to_tdf
+    a=[["a", "b"], ["c", "d"], ["e", "f"]]
+    assert_equal("a\tb\nc\td\ne\tf\n",a.to_tdf)
+  end
+
 end
 
 

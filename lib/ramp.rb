@@ -1,3 +1,4 @@
+
 =begin rdoc
 
 = WebGet.com Ramp: methods to ramp up your Ruby On Rails applications
@@ -35,6 +36,7 @@ Testing:
 * rotate: moves the first element of an array to the end
 * slices: divides an array into specified number of equal size sub-arrays ([1,2,3,4,5,6]slices(3) => [[1,2],[3,4],[5,6]])
 * to_csv: returns a CSV-style string representation of a multi-dimensional array, with each subarray becoming one 'line' in the output; typically for viewing in a spreadsheet such as Excel.
+* to_tdf: returns a TDF-style string representation of a multi-dimensional array, with each subarray becoming one 'line' in the output; typically for viewing in a spreadsheet such as Excel.
 * union: builds an array containing each of the unique elements of sub-arrays ([[1,2,3,4],[2,3,4,5],[3,4,5,6]].union => [1,2,3,4,5,6])
 
 
@@ -151,6 +153,7 @@ Extensions that help debug Ruby programs.
 == Time
 
 * (class) stamp: current time in UTC as a timestamp string ("YYYYMMDDHHMMSS")
+* to_sql: time as a string formatted as expected for MySQL
 
 
 == XML
@@ -165,6 +168,8 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
+- 1.6.7.2 Add Array#to_tdf
+- 1.6.7.1 Remove sqlite3 testing dependency
 - 1.6.9.6 Add Symbol with comparable and <=>
 - 1.6.9.5 Add ActiveRecord testing with sqlite3
 - 1.6.9.4 JRuby install and test successful

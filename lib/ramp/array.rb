@@ -210,7 +210,7 @@ class Array
   # CASTS
   #
   ##############################################################
-  
+
   require 'csv'
  
   # Returns a CSV-style string representation of a multi-dimensional array
@@ -222,7 +222,13 @@ class Array
         csv << row
       end
     end
-    s
+    return s
+  end
+
+  # Returns a TDF-style string representation of a multi-dimensional array
+  # Each subarray becomes one 'line' in the output
+  def to_tdf(ops={})
+    self.map{|row| row.join("\t")+"\n"}.join
   end
 
 end

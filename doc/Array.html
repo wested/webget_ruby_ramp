@@ -61,27 +61,29 @@
 					
 					<li><a href="#M000123">#choice</a></li>
 					
-					<li><a href="#M000124">#choices</a></li>
+					<li><a href="#M000125">#choices</a></li>
 					
-					<li><a href="#M000127">#divvy</a></li>
+					<li><a href="#M000128">#divvy</a></li>
 					
-					<li><a href="#M000129">#intersect</a></li>
+					<li><a href="#M000130">#intersect</a></li>
 					
-					<li><a href="#M000119">#join</a></li>
+					<li><a href="#M000117">#join</a></li>
 					
-					<li><a href="#M000125">#onto</a></li>
+					<li><a href="#M000126">#onto</a></li>
 					
 					<li><a href="#M000122">#rotate!</a></li>
 					
-					<li><a href="#M000120">#ruby_join</a></li>
+					<li><a href="#M000118">#ruby_join</a></li>
 					
 					<li><a href="#M000121">#size?</a></li>
 					
-					<li><a href="#M000126">#slices</a></li>
+					<li><a href="#M000127">#slices</a></li>
 					
-					<li><a href="#M000130">#to_csv</a></li>
+					<li><a href="#M000131">#to_csv</a></li>
 					
-					<li><a href="#M000128">#union</a></li>
+					<li><a href="#M000132">#to_tdf</a></li>
+					
+					<li><a href="#M000129">#union</a></li>
 					
 				</ul>
 			</div>
@@ -302,7 +304,7 @@ Implemented in Ruby 1.9
 
 		
 			<div id="choices-method" class="method-detail ">
-				<a name="M000124"></a>
+				<a name="M000125"></a>
 
 				<div class="method-heading">
 				
@@ -343,7 +345,7 @@ Return a new array filled with <em>n</em> calls to choice
 
 		
 			<div id="divvy-method" class="method-detail ">
-				<a name="M000127"></a>
+				<a name="M000128"></a>
 
 				<div class="method-heading">
 				
@@ -398,7 +400,7 @@ slices as it can.
 
 		
 			<div id="intersect-method" class="method-detail ">
-				<a name="M000129"></a>
+				<a name="M000130"></a>
 
 				<div class="method-heading">
 				
@@ -444,7 +446,7 @@ item is an array.
 
 		
 			<div id="join-method" class="method-detail ">
-				<a name="M000119"></a>
+				<a name="M000117"></a>
 
 				<div class="method-heading">
 				
@@ -459,7 +461,7 @@ item is an array.
 					<p>
 Concatenate the items into a string by join.
 </p>
-<h2>Typical <a href="Array.html#M000119">Array#join</a> with infix</h2>
+<h2>Typical <a href="Array.html#M000117">Array#join</a> with infix</h2>
 <pre>
   list=['a','b','c']
   list.join(&quot;*&quot;) =&gt; &quot;a*b*c&quot;
@@ -507,14 +509,14 @@ Concatenate the items into a string by join.
 
 				
 				<div class="aliases">
-					Also aliased as: <a href="Array.html#M000120">ruby_join</a>
+					Also aliased as: <a href="Array.html#M000118">ruby_join</a>
 				</div>
 				
 			</div>
 
 		
 			<div id="onto-method" class="method-detail ">
-				<a name="M000125"></a>
+				<a name="M000126"></a>
 
 				<div class="method-heading">
 				
@@ -601,7 +603,7 @@ Return self
 
 		
 			<div id="ruby-join-method" class="method-detail method-alias">
-				<a name="M000120"></a>
+				<a name="M000118"></a>
 
 				<div class="method-heading">
 				
@@ -614,7 +616,7 @@ Return self
 				<div class="method-description">
 					
 					<p>
-Alias for <a href="Array.html#M000119">join</a>
+Alias for <a href="Array.html#M000117">join</a>
 </p>
 					
 
@@ -665,7 +667,7 @@ Return true if size > 0
 
 		
 			<div id="slices-method" class="method-detail ">
-				<a name="M000126"></a>
+				<a name="M000127"></a>
 
 				<div class="method-heading">
 				
@@ -718,7 +720,7 @@ If the slices don&#8217;t divide evenly, then the last is smaller.
 
 		
 			<div id="to-csv-method" class="method-detail ">
-				<a name="M000130"></a>
+				<a name="M000131"></a>
 
 				<div class="method-heading">
 				
@@ -748,7 +750,7 @@ subarray becomes one &#8216;line&#8217; in the output
 222:         <span class="ruby-identifier">csv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">row</span>
 223:       <span class="ruby-keyword kw">end</span>
 224:     <span class="ruby-keyword kw">end</span>
-225:     <span class="ruby-identifier">s</span>
+225:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">s</span>
 226:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
@@ -758,8 +760,43 @@ subarray becomes one &#8216;line&#8217; in the output
 			</div>
 
 		
+			<div id="to-tdf-method" class="method-detail ">
+				<a name="M000132"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_tdf</span><span
+						class="method-args">(ops={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a TDF-style string representation of a multi-dimensional array Each
+subarray becomes one &#8216;line&#8217; in the output
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-tdf-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 230</span>
+230:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_tdf</span>(<span class="ruby-identifier">ops</span>={})
+231:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span> <span class="ruby-identifier">row</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\t&quot;</span>)<span class="ruby-operator">+</span><span class="ruby-value str">&quot;\n&quot;</span>}.<span class="ruby-identifier">join</span>
+232:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
 			<div id="union-method" class="method-detail ">
-				<a name="M000128"></a>
+				<a name="M000129"></a>
 
 				<div class="method-heading">
 				

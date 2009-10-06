@@ -65,19 +65,21 @@
 					
 					<li><a href="#M000066">#test_divvy_evenly_divisible</a></li>
 					
-					<li><a href="#M000074">#test_intersect</a></li>
+					<li><a href="#M000072">#test_intersect</a></li>
 					
-					<li><a href="#M000059">#test_join</a></li>
+					<li><a href="#M000057">#test_join</a></li>
 					
 					<li><a href="#M000064">#test_onto</a></li>
 					
 					<li><a href="#M000061">#test_rotate</a></li>
 					
-					<li><a href="#M000060">#test_size</a></li>
+					<li><a href="#M000058">#test_size</a></li>
 					
 					<li><a href="#M000065">#test_slices</a></li>
 					
-					<li><a href="#M000075">#test_to_csv</a></li>
+					<li><a href="#M000073">#test_to_csv</a></li>
+					
+					<li><a href="#M000074">#test_to_tdf</a></li>
 					
 					<li><a href="#M000067">#test_union</a></li>
 					
@@ -367,7 +369,7 @@
 
 		
 			<div id="test-intersect-method" class="method-detail ">
-				<a name="M000074"></a>
+				<a name="M000072"></a>
 
 				<div class="method-heading">
 				
@@ -400,7 +402,7 @@
 
 		
 			<div id="test-join-method" class="method-detail ">
-				<a name="M000059"></a>
+				<a name="M000057"></a>
 
 				<div class="method-heading">
 				
@@ -506,7 +508,7 @@
 
 		
 			<div id="test-size-method" class="method-detail ">
-				<a name="M000060"></a>
+				<a name="M000058"></a>
 
 				<div class="method-heading">
 				
@@ -577,7 +579,7 @@
 
 		
 			<div id="test-to-csv-method" class="method-detail ">
-				<a name="M000075"></a>
+				<a name="M000073"></a>
 
 				<div class="method-heading">
 				
@@ -601,6 +603,39 @@
 80:     <span class="ruby-identifier">a</span>=[[<span class="ruby-value str">&quot;a&quot;</span>, <span class="ruby-value str">&quot;b&quot;</span>], [<span class="ruby-value str">&quot;c&quot;</span>, <span class="ruby-value str">&quot;d&quot;</span>], [<span class="ruby-value str">&quot;e&quot;</span>, <span class="ruby-value str">&quot;f&quot;</span>]]
 81:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;a,b\nc,d\ne,f\n&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">to_csv</span>)
 82:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="test-to-tdf-method" class="method-detail ">
+				<a name="M000074"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_to_tdf</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-to-tdf-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/unit/array_test.rb, line 84</span>
+84:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_to_tdf</span>
+85:     <span class="ruby-identifier">a</span>=[[<span class="ruby-value str">&quot;a&quot;</span>, <span class="ruby-value str">&quot;b&quot;</span>], [<span class="ruby-value str">&quot;c&quot;</span>, <span class="ruby-value str">&quot;d&quot;</span>], [<span class="ruby-value str">&quot;e&quot;</span>, <span class="ruby-value str">&quot;f&quot;</span>]]
+86:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;a\tb\nc\td\ne\tf\n&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">to_tdf</span>)
+87:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
