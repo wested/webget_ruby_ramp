@@ -168,8 +168,8 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
-- 1.6.7.2 Add Array#to_tdf
-- 1.6.7.1 Remove sqlite3 testing dependency
+- 1.7.0.2 Add Array#to_tdf
+- 1.7.0.1 Remove sqlite3 testing dependency
 - 1.6.9.6 Add Symbol with comparable and <=>
 - 1.6.9.5 Add ActiveRecord testing with sqlite3
 - 1.6.9.4 JRuby install and test successful
