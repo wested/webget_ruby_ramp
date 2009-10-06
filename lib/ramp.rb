@@ -1,4 +1,3 @@
-
 =begin rdoc
 
 = WebGet.com Ramp: methods to ramp up your Ruby On Rails applications
