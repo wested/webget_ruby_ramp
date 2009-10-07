@@ -52,41 +52,43 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000117">::cartesian_product</a></li>
+					<li><a href="#M000121">::cartesian_product</a></li>
 					
-					<li><a href="#M000118">#cartesian_product</a></li>
+					<li><a href="#M000113">#bisect</a></li>
 					
-					<li><a href="#M000116">#intersect?</a></li>
+					<li><a href="#M000122">#cartesian_product</a></li>
 					
-					<li><a href="#M000115">#join</a></li>
+					<li><a href="#M000118">#intersect?</a></li>
 					
-					<li><a href="#M000103">#map_id</a></li>
+					<li><a href="#M000117">#join</a></li>
 					
-					<li><a href="#M000104">#map_to_a</a></li>
+					<li><a href="#M000104">#map_id</a></li>
 					
-					<li><a href="#M000105">#map_to_f</a></li>
+					<li><a href="#M000105">#map_to_a</a></li>
 					
-					<li><a href="#M000106">#map_to_i</a></li>
+					<li><a href="#M000106">#map_to_f</a></li>
 					
-					<li><a href="#M000107">#map_to_s</a></li>
+					<li><a href="#M000107">#map_to_i</a></li>
 					
-					<li><a href="#M000108">#map_to_sym</a></li>
+					<li><a href="#M000108">#map_to_s</a></li>
 					
-					<li><a href="#M000113">#nitems_until</a></li>
+					<li><a href="#M000109">#map_to_sym</a></li>
 					
-					<li><a href="#M000112">#nitems_while</a></li>
+					<li><a href="#M000115">#nitems_until</a></li>
 					
-					<li><a href="#M000114">#nitems_with_index</a></li>
+					<li><a href="#M000114">#nitems_while</a></li>
 					
-					<li><a href="#M000119">#power_set</a></li>
+					<li><a href="#M000116">#nitems_with_index</a></li>
 					
-					<li><a href="#M000110">#select_until</a></li>
+					<li><a href="#M000125">#power_set</a></li>
 					
-					<li><a href="#M000109">#select_while</a></li>
+					<li><a href="#M000111">#select_until</a></li>
 					
-					<li><a href="#M000111">#select_with_index</a></li>
+					<li><a href="#M000110">#select_while</a></li>
 					
-					<li><a href="#M000101">#to_h</a></li>
+					<li><a href="#M000112">#select_with_index</a></li>
+					
+					<li><a href="#M000102">#to_h</a></li>
 					
 				</ul>
 			</div>
@@ -264,7 +266,7 @@
 
 		
 			<div id="cartesian-product-method" class="method-detail ">
-				<a name="M000117"></a>
+				<a name="M000121"></a>
 
 				<div class="method-heading">
 				
@@ -307,20 +309,20 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857">blade.
 					<div class="method-source-code"
 						id="cartesian-product-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 279</span>
-279:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">cartesian_product</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">enums</span>)
-280:     <span class="ruby-identifier">result</span> = [[]]
-281:     <span class="ruby-keyword kw">while</span> [] <span class="ruby-operator">!=</span> <span class="ruby-identifier">enums</span>
-282:       <span class="ruby-identifier">t</span>, <span class="ruby-identifier">result</span> = <span class="ruby-identifier">result</span>, []
-283:       <span class="ruby-identifier">b</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">enums</span> = <span class="ruby-identifier">enums</span>
-284:       <span class="ruby-identifier">t</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
-285:         <span class="ruby-identifier">b</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
-286:           <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">+</span> [<span class="ruby-identifier">n</span>]
-287:         <span class="ruby-keyword kw">end</span>
-288:       <span class="ruby-keyword kw">end</span>
-289:     <span class="ruby-keyword kw">end</span>
-290:     <span class="ruby-identifier">result</span>
-291:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 303</span>
+303:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">cartesian_product</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">enums</span>)
+304:     <span class="ruby-identifier">result</span> = [[]]
+305:     <span class="ruby-keyword kw">while</span> [] <span class="ruby-operator">!=</span> <span class="ruby-identifier">enums</span>
+306:       <span class="ruby-identifier">t</span>, <span class="ruby-identifier">result</span> = <span class="ruby-identifier">result</span>, []
+307:       <span class="ruby-identifier">b</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">enums</span> = <span class="ruby-identifier">enums</span>
+308:       <span class="ruby-identifier">t</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
+309:         <span class="ruby-identifier">b</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+310:           <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">+</span> [<span class="ruby-identifier">n</span>]
+311:         <span class="ruby-keyword kw">end</span>
+312:       <span class="ruby-keyword kw">end</span>
+313:     <span class="ruby-keyword kw">end</span>
+314:     <span class="ruby-identifier">result</span>
+315:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -335,8 +337,53 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857">blade.
 			<h3 class="section-header">Public Instance Methods</h3>
 
 		
+			<div id="bisect-method" class="method-detail ">
+				<a name="M000113"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">bisect</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+enum.bisect {|obj| block} => array of positives, array of negatives Returns
+two arrays: the first contains the elements for which block is true, the
+second contains the elements for which block is false or nil.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="bisect-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 201</span>
+201:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bisect</span>
+202:     <span class="ruby-identifier">a</span>=[]
+203:     <span class="ruby-identifier">b</span>=[]
+204:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> 
+205:      <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">x</span>)
+206:       <span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">x</span>
+207:      <span class="ruby-keyword kw">else</span>
+208:       <span class="ruby-identifier">b</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">x</span>
+209:      <span class="ruby-keyword kw">end</span>
+210:     }
+211:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">a</span>,<span class="ruby-identifier">b</span>
+212:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
 			<div id="cartesian-product-method" class="method-detail ">
-				<a name="M000118"></a>
+				<a name="M000122"></a>
 
 				<div class="method-heading">
 				
@@ -355,10 +402,10 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857">blade.
 					<div class="method-source-code"
 						id="cartesian-product-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 293</span>
-293:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cartesian_product</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">enums</span>)
-294:     <span class="ruby-constant">Enumerable</span>.<span class="ruby-identifier">cartesian_product</span>(<span class="ruby-keyword kw">self</span>,<span class="ruby-operator">*</span><span class="ruby-identifier">enums</span>)
-295:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 317</span>
+317:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cartesian_product</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">enums</span>)
+318:     <span class="ruby-constant">Enumerable</span>.<span class="ruby-identifier">cartesian_product</span>(<span class="ruby-keyword kw">self</span>,<span class="ruby-operator">*</span><span class="ruby-identifier">enums</span>)
+319:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -368,7 +415,7 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857">blade.
 
 		
 			<div id="intersect--method" class="method-detail ">
-				<a name="M000116"></a>
+				<a name="M000118"></a>
 
 				<div class="method-heading">
 				
@@ -400,10 +447,10 @@ ranges&#8217; min/max values.
 					<div class="method-source-code"
 						id="intersect--source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 261</span>
-261:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">intersect?</span>(<span class="ruby-identifier">enum</span>)
-262:     <span class="ruby-keyword kw">return</span> ((<span class="ruby-keyword kw">self</span><span class="ruby-operator">===</span><span class="ruby-identifier">enum</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>) <span class="ruby-keyword kw">or</span> ((<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_a</span> <span class="ruby-operator">&amp;</span> <span class="ruby-identifier">enum</span>.<span class="ruby-identifier">to_a</span>).<span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>))
-263:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 285</span>
+285:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">intersect?</span>(<span class="ruby-identifier">enum</span>)
+286:     <span class="ruby-keyword kw">return</span> ((<span class="ruby-keyword kw">self</span><span class="ruby-operator">===</span><span class="ruby-identifier">enum</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>) <span class="ruby-keyword kw">or</span> ((<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_a</span> <span class="ruby-operator">&amp;</span> <span class="ruby-identifier">enum</span>.<span class="ruby-identifier">to_a</span>).<span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>))
+287:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -413,7 +460,7 @@ ranges&#8217; min/max values.
 
 		
 			<div id="join-method" class="method-detail ">
-				<a name="M000115"></a>
+				<a name="M000117"></a>
 
 				<div class="method-heading">
 				
@@ -426,7 +473,7 @@ ranges&#8217; min/max values.
 				<div class="method-description">
 					
 					<p>
-Shortcut to <a href="Array.html#M000120">Array#join</a> to concatenate the
+Shortcut to <a href="Array.html#M000119">Array#join</a> to concatenate the
 items into a string
 </p>
 					
@@ -435,10 +482,10 @@ items into a string
 					<div class="method-source-code"
 						id="join-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 238</span>
-238:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">join</span>(<span class="ruby-identifier">prefix</span>=<span class="ruby-keyword kw">nil</span>,<span class="ruby-identifier">suffix</span>=<span class="ruby-keyword kw">nil</span>)
-239:    <span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">prefix</span>,<span class="ruby-identifier">suffix</span>)
-240:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 262</span>
+262:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">join</span>(<span class="ruby-identifier">prefix</span>=<span class="ruby-keyword kw">nil</span>,<span class="ruby-identifier">suffix</span>=<span class="ruby-keyword kw">nil</span>)
+263:    <span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">prefix</span>,<span class="ruby-identifier">suffix</span>)
+264:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -448,7 +495,7 @@ items into a string
 
 		
 			<div id="map-id-method" class="method-detail ">
-				<a name="M000103"></a>
+				<a name="M000104"></a>
 
 				<div class="method-heading">
 				
@@ -494,7 +541,7 @@ This method is a fast way to get the same results as items.map(&amp;:id)
 
 		
 			<div id="map-to-a-method" class="method-detail ">
-				<a name="M000104"></a>
+				<a name="M000105"></a>
 
 				<div class="method-heading">
 				
@@ -545,7 +592,7 @@ href="http://www.ruby-doc.org/core/classes/Enumerable.html#M003148">www.ruby-doc
 
 		
 			<div id="map-to-f-method" class="method-detail ">
-				<a name="M000105"></a>
+				<a name="M000106"></a>
 
 				<div class="method-heading">
 				
@@ -591,7 +638,7 @@ This method is a fast way to get the same results as items.map(&amp;:to_f)
 
 		
 			<div id="map-to-i-method" class="method-detail ">
-				<a name="M000106"></a>
+				<a name="M000107"></a>
 
 				<div class="method-heading">
 				
@@ -637,7 +684,7 @@ This method is a fast way to get the same results as items.map(&amp;:to_i)
 
 		
 			<div id="map-to-s-method" class="method-detail ">
-				<a name="M000107"></a>
+				<a name="M000108"></a>
 
 				<div class="method-heading">
 				
@@ -683,7 +730,7 @@ This method is a fast way to get the same results as items.map(&amp;:to_s)
 
 		
 			<div id="map-to-sym-method" class="method-detail ">
-				<a name="M000108"></a>
+				<a name="M000109"></a>
 
 				<div class="method-heading">
 				
@@ -730,7 +777,7 @@ items.map(&amp;:to_sym)
 
 		
 			<div id="nitems-until-method" class="method-detail ">
-				<a name="M000113"></a>
+				<a name="M000115"></a>
 
 				<div class="method-heading">
 				
@@ -752,19 +799,19 @@ leading elements for which block is false.
 					<div class="method-source-code"
 						id="nitems-until-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 211</span>
-211:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nitems_until</span>
-212:     <span class="ruby-identifier">n</span> = <span class="ruby-value">0</span>
-213:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
-214:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">x</span>) 
-215:         <span class="ruby-keyword kw">break</span>
-216:       <span class="ruby-keyword kw">else</span>
-217:         <span class="ruby-identifier">n</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
-218:       <span class="ruby-keyword kw">end</span>
-219:     }
-220:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">n</span>
-221:     <span class="ruby-identifier">irb</span>
-222:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 235</span>
+235:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nitems_until</span>
+236:     <span class="ruby-identifier">n</span> = <span class="ruby-value">0</span>
+237:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+238:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">x</span>) 
+239:         <span class="ruby-keyword kw">break</span>
+240:       <span class="ruby-keyword kw">else</span>
+241:         <span class="ruby-identifier">n</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+242:       <span class="ruby-keyword kw">end</span>
+243:     }
+244:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">n</span>
+245:     <span class="ruby-identifier">irb</span>
+246:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -774,7 +821,7 @@ leading elements for which block is false.
 
 		
 			<div id="nitems-while-method" class="method-detail ">
-				<a name="M000112"></a>
+				<a name="M000114"></a>
 
 				<div class="method-heading">
 				
@@ -796,12 +843,12 @@ leading elements for which block is not false or nil.
 					<div class="method-source-code"
 						id="nitems-while-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 201</span>
-201:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nitems_while</span>
-202:     <span class="ruby-identifier">n</span> = <span class="ruby-value">0</span>
-203:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">x</span>) <span class="ruby-operator">?</span> (<span class="ruby-identifier">n</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword kw">break</span>}
-204:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">n</span>
-205:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 225</span>
+225:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nitems_while</span>
+226:     <span class="ruby-identifier">n</span> = <span class="ruby-value">0</span>
+227:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">x</span>) <span class="ruby-operator">?</span> (<span class="ruby-identifier">n</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword kw">break</span>}
+228:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">n</span>
+229:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -811,7 +858,7 @@ leading elements for which block is not false or nil.
 
 		
 			<div id="nitems-with-index-method" class="method-detail ">
-				<a name="M000114"></a>
+				<a name="M000116"></a>
 
 				<div class="method-heading">
 				
@@ -834,12 +881,12 @@ number of leading elements for which block is true.
 					<div class="method-source-code"
 						id="nitems-with-index-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 229</span>
-229:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nitems_with_index</span>
-230:     <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
-231:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span>) <span class="ruby-operator">?</span> (<span class="ruby-identifier">i</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword kw">break</span>}
-232:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">i</span>
-233:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 253</span>
+253:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nitems_with_index</span>
+254:     <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+255:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">i</span>) <span class="ruby-operator">?</span> (<span class="ruby-identifier">i</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword kw">break</span>}
+256:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">i</span>
+257:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -849,7 +896,7 @@ number of leading elements for which block is true.
 
 		
 			<div id="power-set-method" class="method-detail ">
-				<a name="M000119"></a>
+				<a name="M000125"></a>
 
 				<div class="method-heading">
 				
@@ -881,10 +928,10 @@ href="http://johncarrino.net/blog/2006/08/11/powerset-in-ruby">johncarrino.net/b
 					<div class="method-source-code"
 						id="power-set-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 308</span>
-308:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">power_set</span>
-309:     <span class="ruby-identifier">inject</span>([[]]){<span class="ruby-operator">|</span><span class="ruby-identifier">c</span>,<span class="ruby-identifier">y</span><span class="ruby-operator">|</span><span class="ruby-identifier">r</span>=[];<span class="ruby-identifier">c</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">&lt;&lt;</span><span class="ruby-identifier">i</span>;<span class="ruby-identifier">r</span><span class="ruby-operator">&lt;&lt;</span><span class="ruby-identifier">i</span><span class="ruby-operator">+</span>[<span class="ruby-identifier">y</span>]};<span class="ruby-identifier">r</span>}
-310:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/ramp/enumerable.rb, line 332</span>
+332:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">power_set</span>
+333:     <span class="ruby-identifier">inject</span>([[]]){<span class="ruby-operator">|</span><span class="ruby-identifier">c</span>,<span class="ruby-identifier">y</span><span class="ruby-operator">|</span><span class="ruby-identifier">r</span>=[];<span class="ruby-identifier">c</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">&lt;&lt;</span><span class="ruby-identifier">i</span>;<span class="ruby-identifier">r</span><span class="ruby-operator">&lt;&lt;</span><span class="ruby-identifier">i</span><span class="ruby-operator">+</span>[<span class="ruby-identifier">y</span>]};<span class="ruby-identifier">r</span>}
+334:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -894,7 +941,7 @@ href="http://johncarrino.net/blog/2006/08/11/powerset-in-ruby">johncarrino.net/b
 
 		
 			<div id="select-until-method" class="method-detail ">
-				<a name="M000110"></a>
+				<a name="M000111"></a>
 
 				<div class="method-heading">
 				
@@ -931,7 +978,7 @@ leading elements for which block is false or nil.
 
 		
 			<div id="select-while-method" class="method-detail ">
-				<a name="M000109"></a>
+				<a name="M000110"></a>
 
 				<div class="method-heading">
 				
@@ -968,7 +1015,7 @@ leading elements for which block is not false or nil.
 
 		
 			<div id="select-with-index-method" class="method-detail ">
-				<a name="M000111"></a>
+				<a name="M000112"></a>
 
 				<div class="method-heading">
 				
@@ -1014,7 +1061,7 @@ containing the leading elements for which block is not false or nil.
 
 		
 			<div id="to-h-method" class="method-detail ">
-				<a name="M000101"></a>
+				<a name="M000102"></a>
 
 				<div class="method-heading">
 				

@@ -190,6 +190,30 @@ module Enumerable
 
   ########################################################################
   #
+  #  bisect
+  #  
+  ########################################################################
+
+  # enum.bisect {|obj| block} => array of positives, array of negatives
+  # Returns two arrays: the first contains the elements for which block is
+  # true, the second contains the elements for which block is false or nil.
+
+  def bisect
+    a=[]
+    b=[]
+    each{|x| 
+     if yield(x)
+      a << x
+     else
+      b << x
+     end
+    }
+    return a,b
+  end
+
+
+  ########################################################################
+  #
   #  nitems
   #  
   ########################################################################
