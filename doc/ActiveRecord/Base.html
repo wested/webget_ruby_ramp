@@ -62,15 +62,15 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000189">::create_or_update</a></li>
+					<li><a href="#M000187">::create_or_update</a></li>
 					
-					<li><a href="#M000190">::create_or_update_by</a></li>
+					<li><a href="#M000194">::create_or_update_by</a></li>
 					
-					<li><a href="#M000193">::included</a></li>
+					<li><a href="#M000200">::included</a></li>
 					
-					<li><a href="#M000192">::method_missing_with_create_or_update</a></li>
+					<li><a href="#M000198">::method_missing_with_create_or_update</a></li>
 					
-					<li><a href="#M000191">::seed</a></li>
+					<li><a href="#M000197">::seed</a></li>
 					
 				</ul>
 			</div>
@@ -248,7 +248,7 @@
 
 		
 			<div id="create-or-update-method" class="method-detail ">
-				<a name="M000189"></a>
+				<a name="M000187"></a>
 
 				<div class="method-heading">
 				
@@ -269,8 +269,8 @@ Most common use will be for testing (fixture/mock object generation)
 </p>
 <p>
 Three versions of method included: <a
-href="Base.html#M000189">create_or_update</a> <a
-href="Base.html#M000190">create_or_update_by</a> create_or_update_by_xxx
+href="Base.html#M000187">create_or_update</a> <a
+href="Base.html#M000194">create_or_update_by</a> create_or_update_by_xxx
 (where xxx is a field name)
 </p>
 <p>
@@ -309,7 +309,7 @@ end
 
 		
 			<div id="create-or-update-by-method" class="method-detail ">
-				<a name="M000190"></a>
+				<a name="M000194"></a>
 
 				<div class="method-heading">
 				
@@ -365,7 +365,7 @@ mix of symbols or strings.
 
 		
 			<div id="included-method" class="method-detail ">
-				<a name="M000193"></a>
+				<a name="M000200"></a>
 
 				<div class="method-heading">
 				
@@ -408,7 +408,7 @@ For alias method chain
 
 		
 			<div id="method-missing-with-create-or-update-method" class="method-detail ">
-				<a name="M000192"></a>
+				<a name="M000198"></a>
 
 				<div class="method-heading">
 				
@@ -422,7 +422,7 @@ For alias method chain
 					
 					<p>
 Method missing for create_or_update_by_xxx that forwards to <a
-href="Base.html#M000190">create_or_update_by</a>
+href="Base.html#M000194">create_or_update_by</a>
 </p>
 <h2>Example</h2>
 <pre>
@@ -452,7 +452,7 @@ href="Base.html#M000190">create_or_update_by</a>
 
 		
 			<div id="seed-method" class="method-detail ">
-				<a name="M000191"></a>
+				<a name="M000197"></a>
 
 				<div class="method-heading">
 				
@@ -471,7 +471,7 @@ Set up a database with initial data, e.g. in rake db:seed method.
 This will look for each field name as a key in the options hash.
 </p>
 <p>
-This method calls <a href="Base.html#M000190">create_or_update_by</a> (and
+This method calls <a href="Base.html#M000194">create_or_update_by</a> (and
 you may want to change this behavior to do more, e.g. to test that a DB and
 table exists).
 </p>

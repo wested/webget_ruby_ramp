@@ -1,6 +1,10 @@
 class Array
 
+
+  # Alias join because we're going to override it
+
   alias :ruby_join :join
+
 
   # Concatenate the items into a string by join.
   #
@@ -203,6 +207,64 @@ class Array
   def intersect
     inject{|inj,x| inj & x.to_a }
   end
+
+  
+
+  ##############################################################
+  # 
+  # LIST PROCESSING
+  #
+  ##############################################################
+
+  # Returns the rest of the items of self, after a shift.
+  #
+  # ==Example
+  #   list=['a','b','c']
+  #   list.shift => 'a'
+  #   list.shifted => ['b','c']
+  #
+  # ==Example with length
+  #   list.shifted(0) => ['a','b','c']
+  #   list.shifted(1) => ['b','c']
+  #   list.shifted(2) => ['c']
+  #   list.shifted(3) => []
+  #
+  # Ruby programmers may prefer this alias wording:
+  #   list.first => 'a'
+  #   list.rest => ['b','c']
+  #
+  # LISP programmers may prefer this alias wording:
+  #   list.car => 'a'
+  #   list.cdr => ['b','c']
+  #
+
+  def shifted(n=1)
+   slice(n,self.length-n)
+  end
+
+  alias :car :first
+  alias :cdr :shifted
+  alias :rest :shifted
+
+
+  # Delete the first _n_ items. Returns the array, not the deleted items.
+  # 
+  # ==Example
+  #   list=['a','b','c']
+  #   list.shifted!
+  #   list => ['b','c']
+  #
+  # ==Example with length:
+  #   list=['a','b','c']
+  #   list.shifted!(2)
+  #   list => ['c']
+
+  def shifted!(n=1)
+   slice!(n,self.length-n)
+  end
+
+  alias :cdr! :shifted!
+  alias :rest! :shifted!
 
 
   ##############################################################

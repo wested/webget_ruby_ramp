@@ -76,6 +76,76 @@ class ArrayTest < Test::Unit::TestCase
    assert_equal([3,4],a.intersect)
  end
 
+  def test_shifted
+    a=['a','b','c']
+    assert_equal([    'b','c'],a.shifted)
+    assert_equal(['a','b','c'],a.shifted(0))
+    assert_equal([    'b','c'],a.shifted(1))
+    assert_equal([        'c'],a.shifted(2))
+    assert_equal([           ],a.shifted(3))
+    assert_equal([           ],a.shifted(4))
+  end
+
+  # test_cdr must be idential to test_shifted
+  # because cdr is an alias for shifted
+  def test_cdr
+    a=['a','b','c']
+    assert_equal([    'b','c'],a.cdr)
+    assert_equal(['a','b','c'],a.cdr(0))
+    assert_equal([    'b','c'],a.cdr(1))
+    assert_equal([        'c'],a.cdr(2))
+    assert_equal([           ],a.cdr(3))
+    assert_equal([           ],a.cdr(4))
+  end
+
+  # test_rest must be idential to test_shifted
+  # because rest is an alias for shifted
+  def test_rest
+    a=['a','b','c']
+    assert_equal([    'b','c'],a.rest)
+    assert_equal(['a','b','c'],a.rest(0))
+    assert_equal([    'b','c'],a.rest(1))
+    assert_equal([        'c'],a.rest(2))
+    assert_equal([           ],a.rest(3))
+    assert_equal([           ],a.rest(4))
+  end
+
+  def test_shifted_bang
+    a=['a','b','c']; a.shifted!;    assert_equal([    'b','c'],a)
+    a=['a','b','c']; a.shifted!(0); assert_equal(['a','b','c'],a)
+    a=['a','b','c']; a.shifted!(1); assert_equal([    'b','c'],a)
+    a=['a','b','c']; a.shifted!(2); assert_equal([        'c'],a)
+    a=['a','b','c']; a.shifted!(3); assert_equal([           ],a)
+    a=['a','b','c']; a.shifted!(4); assert_equal([           ],a)
+  end
+
+  # test_cdr_band must be identical to test_shifted_bang
+  # because cdr! is an alias for cdr!
+  def test_cdr_bang
+    a=['a','b','c']; a.cdr!;    assert_equal([    'b','c'],a)
+    a=['a','b','c']; a.cdr!(0); assert_equal(['a','b','c'],a)
+    a=['a','b','c']; a.cdr!(1); assert_equal([    'b','c'],a)
+    a=['a','b','c']; a.cdr!(2); assert_equal([        'c'],a)
+    a=['a','b','c']; a.cdr!(3); assert_equal([           ],a)
+    a=['a','b','c']; a.cdr!(4); assert_equal([           ],a)
+  end
+
+  # test_rest_band must be identical to test_shifted_bang
+  # because rest! is an alias for cdr!
+  def test_rest_bang
+    a=['a','b','c']; a.rest!;    assert_equal([    'b','c'],a)
+    a=['a','b','c']; a.rest!(0); assert_equal(['a','b','c'],a)
+    a=['a','b','c']; a.rest!(1); assert_equal([    'b','c'],a)
+    a=['a','b','c']; a.rest!(2); assert_equal([        'c'],a)
+    a=['a','b','c']; a.rest!(3); assert_equal([           ],a)
+    a=['a','b','c']; a.rest!(4); assert_equal([           ],a)
+  end
+
+  def test_car
+    a=['a','b','c']
+    assert_equal('a',a.car)
+  end
+
   def test_to_csv
     a=[["a", "b"], ["c", "d"], ["e", "f"]]
     assert_equal("a,b\nc,d\ne,f\n",a.to_csv)

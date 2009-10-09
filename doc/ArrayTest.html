@@ -59,29 +59,43 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
+					<li><a href="#M000089">#test_car</a></li>
+					
+					<li><a href="#M000080">#test_cdr</a></li>
+					
+					<li><a href="#M000087">#test_cdr_bang</a></li>
+					
 					<li><a href="#M000063">#test_choice</a></li>
 					
 					<li><a href="#M000064">#test_choices</a></li>
 					
-					<li><a href="#M000074">#test_divvy_evenly_divisible</a></li>
+					<li><a href="#M000073">#test_divvy_evenly_divisible</a></li>
 					
-					<li><a href="#M000078">#test_intersect</a></li>
+					<li><a href="#M000077">#test_intersect</a></li>
 					
 					<li><a href="#M000060">#test_join</a></li>
 					
 					<li><a href="#M000065">#test_onto</a></li>
 					
+					<li><a href="#M000082">#test_rest</a></li>
+					
+					<li><a href="#M000088">#test_rest_bang</a></li>
+					
 					<li><a href="#M000062">#test_rotate</a></li>
+					
+					<li><a href="#M000078">#test_shifted</a></li>
+					
+					<li><a href="#M000083">#test_shifted_bang</a></li>
 					
 					<li><a href="#M000061">#test_size</a></li>
 					
-					<li><a href="#M000067">#test_slices</a></li>
+					<li><a href="#M000066">#test_slices</a></li>
 					
-					<li><a href="#M000080">#test_to_csv</a></li>
+					<li><a href="#M000090">#test_to_csv</a></li>
 					
-					<li><a href="#M000081">#test_to_tdf</a></li>
+					<li><a href="#M000091">#test_to_tdf</a></li>
 					
-					<li><a href="#M000077">#test_union</a></li>
+					<li><a href="#M000076">#test_union</a></li>
 					
 				</ul>
 			</div>
@@ -258,6 +272,122 @@
 			<h3 class="section-header">Public Instance Methods</h3>
 
 		
+			<div id="test-car-method" class="method-detail ">
+				<a name="M000089"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_car</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-car-source">
+<pre>
+     <span class="ruby-comment cmt"># File test/unit/array_test.rb, line 144</span>
+144:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_car</span>
+145:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]
+146:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'a'</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">car</span>)
+147:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="test-cdr-method" class="method-detail ">
+				<a name="M000080"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_cdr</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+<a href="ArrayTest.html#M000080">test_cdr</a> must be idential to <a
+href="ArrayTest.html#M000078">test_shifted</a> because cdr is an alias for
+shifted
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-cdr-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/unit/array_test.rb, line 91</span>
+91:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_cdr</span>
+92:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]
+93:     <span class="ruby-identifier">assert_equal</span>([    <span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">cdr</span>)
+94:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">cdr</span>(<span class="ruby-value">0</span>))
+95:     <span class="ruby-identifier">assert_equal</span>([    <span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">cdr</span>(<span class="ruby-value">1</span>))
+96:     <span class="ruby-identifier">assert_equal</span>([        <span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">cdr</span>(<span class="ruby-value">2</span>))
+97:     <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">cdr</span>(<span class="ruby-value">3</span>))
+98:     <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">cdr</span>(<span class="ruby-value">4</span>))
+99:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="test-cdr-bang-method" class="method-detail ">
+				<a name="M000087"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_cdr_bang</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+test_cdr_band must be identical to <a
+href="ArrayTest.html#M000083">test_shifted_bang</a> because cdr! is an
+alias for cdr!
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-cdr-bang-source">
+<pre>
+     <span class="ruby-comment cmt"># File test/unit/array_test.rb, line 124</span>
+124:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_cdr_bang</span>
+125:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">cdr!</span>;    <span class="ruby-identifier">assert_equal</span>([    <span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>)
+126:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">cdr!</span>(<span class="ruby-value">0</span>); <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>)
+127:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">cdr!</span>(<span class="ruby-value">1</span>); <span class="ruby-identifier">assert_equal</span>([    <span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>)
+128:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">cdr!</span>(<span class="ruby-value">2</span>); <span class="ruby-identifier">assert_equal</span>([        <span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>)
+129:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">cdr!</span>(<span class="ruby-value">3</span>); <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-identifier">a</span>)
+130:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">cdr!</span>(<span class="ruby-value">4</span>); <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-identifier">a</span>)
+131:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
 			<div id="test-choice-method" class="method-detail ">
 				<a name="M000063"></a>
 
@@ -335,7 +465,7 @@
 
 		
 			<div id="test-divvy-evenly-divisible-method" class="method-detail ">
-				<a name="M000074"></a>
+				<a name="M000073"></a>
 
 				<div class="method-heading">
 				
@@ -369,7 +499,7 @@
 
 		
 			<div id="test-intersect-method" class="method-detail ">
-				<a name="M000078"></a>
+				<a name="M000077"></a>
 
 				<div class="method-heading">
 				
@@ -471,6 +601,89 @@
 			</div>
 
 		
+			<div id="test-rest-method" class="method-detail ">
+				<a name="M000082"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_rest</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+<a href="ArrayTest.html#M000082">test_rest</a> must be idential to <a
+href="ArrayTest.html#M000078">test_shifted</a> because rest is an alias for
+shifted
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-rest-source">
+<pre>
+     <span class="ruby-comment cmt"># File test/unit/array_test.rb, line 103</span>
+103:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_rest</span>
+104:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]
+105:     <span class="ruby-identifier">assert_equal</span>([    <span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">rest</span>)
+106:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">rest</span>(<span class="ruby-value">0</span>))
+107:     <span class="ruby-identifier">assert_equal</span>([    <span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">rest</span>(<span class="ruby-value">1</span>))
+108:     <span class="ruby-identifier">assert_equal</span>([        <span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">rest</span>(<span class="ruby-value">2</span>))
+109:     <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">rest</span>(<span class="ruby-value">3</span>))
+110:     <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">rest</span>(<span class="ruby-value">4</span>))
+111:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="test-rest-bang-method" class="method-detail ">
+				<a name="M000088"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_rest_bang</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+test_rest_band must be identical to <a
+href="ArrayTest.html#M000083">test_shifted_bang</a> because rest! is an
+alias for cdr!
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-rest-bang-source">
+<pre>
+     <span class="ruby-comment cmt"># File test/unit/array_test.rb, line 135</span>
+135:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_rest_bang</span>
+136:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">rest!</span>;    <span class="ruby-identifier">assert_equal</span>([    <span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>)
+137:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">rest!</span>(<span class="ruby-value">0</span>); <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>)
+138:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">rest!</span>(<span class="ruby-value">1</span>); <span class="ruby-identifier">assert_equal</span>([    <span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>)
+139:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">rest!</span>(<span class="ruby-value">2</span>); <span class="ruby-identifier">assert_equal</span>([        <span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>)
+140:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">rest!</span>(<span class="ruby-value">3</span>); <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-identifier">a</span>)
+141:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">rest!</span>(<span class="ruby-value">4</span>); <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-identifier">a</span>)
+142:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
 			<div id="test-rotate-method" class="method-detail ">
 				<a name="M000062"></a>
 
@@ -499,6 +712,81 @@
 25:    <span class="ruby-identifier">a</span>.<span class="ruby-identifier">rotate!</span>
 26:    <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value">3</span>,<span class="ruby-value">4</span>,<span class="ruby-value">1</span>,<span class="ruby-value">2</span>],<span class="ruby-identifier">a</span>)
 27:  <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="test-shifted-method" class="method-detail ">
+				<a name="M000078"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_shifted</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-shifted-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/unit/array_test.rb, line 79</span>
+79:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_shifted</span>
+80:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]
+81:     <span class="ruby-identifier">assert_equal</span>([    <span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">shifted</span>)
+82:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">shifted</span>(<span class="ruby-value">0</span>))
+83:     <span class="ruby-identifier">assert_equal</span>([    <span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">shifted</span>(<span class="ruby-value">1</span>))
+84:     <span class="ruby-identifier">assert_equal</span>([        <span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">shifted</span>(<span class="ruby-value">2</span>))
+85:     <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">shifted</span>(<span class="ruby-value">3</span>))
+86:     <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-identifier">a</span>.<span class="ruby-identifier">shifted</span>(<span class="ruby-value">4</span>))
+87:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
+			<div id="test-shifted-bang-method" class="method-detail ">
+				<a name="M000083"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_shifted_bang</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-shifted-bang-source">
+<pre>
+     <span class="ruby-comment cmt"># File test/unit/array_test.rb, line 113</span>
+113:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_shifted_bang</span>
+114:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">shifted!</span>;    <span class="ruby-identifier">assert_equal</span>([    <span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>)
+115:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">shifted!</span>(<span class="ruby-value">0</span>); <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>)
+116:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">shifted!</span>(<span class="ruby-value">1</span>); <span class="ruby-identifier">assert_equal</span>([    <span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>)
+117:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">shifted!</span>(<span class="ruby-value">2</span>); <span class="ruby-identifier">assert_equal</span>([        <span class="ruby-value str">'c'</span>],<span class="ruby-identifier">a</span>)
+118:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">shifted!</span>(<span class="ruby-value">3</span>); <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-identifier">a</span>)
+119:     <span class="ruby-identifier">a</span>=[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>]; <span class="ruby-identifier">a</span>.<span class="ruby-identifier">shifted!</span>(<span class="ruby-value">4</span>); <span class="ruby-identifier">assert_equal</span>([           ],<span class="ruby-identifier">a</span>)
+120:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -543,7 +831,7 @@
 
 		
 			<div id="test-slices-method" class="method-detail ">
-				<a name="M000067"></a>
+				<a name="M000066"></a>
 
 				<div class="method-heading">
 				
@@ -579,7 +867,7 @@
 
 		
 			<div id="test-to-csv-method" class="method-detail ">
-				<a name="M000080"></a>
+				<a name="M000090"></a>
 
 				<div class="method-heading">
 				
@@ -598,11 +886,11 @@
 					<div class="method-source-code"
 						id="test-to-csv-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/array_test.rb, line 79</span>
-79:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_to_csv</span>
-80:     <span class="ruby-identifier">a</span>=[[<span class="ruby-value str">&quot;a&quot;</span>, <span class="ruby-value str">&quot;b&quot;</span>], [<span class="ruby-value str">&quot;c&quot;</span>, <span class="ruby-value str">&quot;d&quot;</span>], [<span class="ruby-value str">&quot;e&quot;</span>, <span class="ruby-value str">&quot;f&quot;</span>]]
-81:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;a,b\nc,d\ne,f\n&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">to_csv</span>)
-82:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File test/unit/array_test.rb, line 149</span>
+149:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_to_csv</span>
+150:     <span class="ruby-identifier">a</span>=[[<span class="ruby-value str">&quot;a&quot;</span>, <span class="ruby-value str">&quot;b&quot;</span>], [<span class="ruby-value str">&quot;c&quot;</span>, <span class="ruby-value str">&quot;d&quot;</span>], [<span class="ruby-value str">&quot;e&quot;</span>, <span class="ruby-value str">&quot;f&quot;</span>]]
+151:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;a,b\nc,d\ne,f\n&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">to_csv</span>)
+152:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -612,7 +900,7 @@
 
 		
 			<div id="test-to-tdf-method" class="method-detail ">
-				<a name="M000081"></a>
+				<a name="M000091"></a>
 
 				<div class="method-heading">
 				
@@ -631,11 +919,11 @@
 					<div class="method-source-code"
 						id="test-to-tdf-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/array_test.rb, line 84</span>
-84:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_to_tdf</span>
-85:     <span class="ruby-identifier">a</span>=[[<span class="ruby-value str">&quot;a&quot;</span>, <span class="ruby-value str">&quot;b&quot;</span>], [<span class="ruby-value str">&quot;c&quot;</span>, <span class="ruby-value str">&quot;d&quot;</span>], [<span class="ruby-value str">&quot;e&quot;</span>, <span class="ruby-value str">&quot;f&quot;</span>]]
-86:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;a\tb\nc\td\ne\tf\n&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">to_tdf</span>)
-87:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File test/unit/array_test.rb, line 154</span>
+154:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_to_tdf</span>
+155:     <span class="ruby-identifier">a</span>=[[<span class="ruby-value str">&quot;a&quot;</span>, <span class="ruby-value str">&quot;b&quot;</span>], [<span class="ruby-value str">&quot;c&quot;</span>, <span class="ruby-value str">&quot;d&quot;</span>], [<span class="ruby-value str">&quot;e&quot;</span>, <span class="ruby-value str">&quot;f&quot;</span>]]
+156:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">&quot;a\tb\nc\td\ne\tf\n&quot;</span>,<span class="ruby-identifier">a</span>.<span class="ruby-identifier">to_tdf</span>)
+157:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -645,7 +933,7 @@
 
 		
 			<div id="test-union-method" class="method-detail ">
-				<a name="M000077"></a>
+				<a name="M000076"></a>
 
 				<div class="method-heading">
 				

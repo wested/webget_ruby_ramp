@@ -26,12 +26,15 @@ Testing:
 
 == Array
 
+* car, cdr: aka first, rest (see shifted)
 * choice, choices: one or more random elements from an array
 * cross: return the cross pairings of an array with another array
 * divvy: divides an array, like a pie, into a specified number of slices
 * join: same as Array#join with some improvments
 * onto: return a hash that maps an array's keys on to another array's values
 * rotate: moves the first element of an array to the end
+* rest: return the rest of the items of the array (aka cdr, aka shifted)
+* shifted, shifted!: return an array with the first n items shifted (aka cdr, aka rest)
 * slices: divides an array into specified number of equal size sub-arrays ([1,2,3,4,5,6]slices(3) => [[1,2],[3,4],[5,6]])
 * to_csv: returns a CSV-style string representation of a multi-dimensional array, with each subarray becoming one 'line' in the output; typically for viewing in a spreadsheet such as Excel.
 * to_tdf: returns a TDF-style string representation of a multi-dimensional array, with each subarray becoming one 'line' in the output; typically for viewing in a spreadsheet such as Excel.
@@ -166,6 +169,8 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
+- 1.7.0.5 Add Array#shifted, Array#rest, Array#car, Array#cdr
+- 1.7.0.4 Upgrade IO#readrows and #readrow to use options
 - 1.7.0.2 Add Array#to_tdf
 - 1.7.0.1 Remove sqlite3 testing dependency
 - 1.6.9.6 Add Symbol with comparable and <=>
