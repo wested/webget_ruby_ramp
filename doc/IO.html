@@ -244,7 +244,7 @@
 				<div class="method-heading">
 				
 					<span class="method-name">readrows</span><span
-						class="method-args">(name, sep_string=$/, split=$;)</span>
+						class="method-args">(name, options={})</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
@@ -256,15 +256,30 @@ Reads the entire file specified by name as individual lines as with
 IO#readlines, and returns those lines in an array of rows, where each row
 is an array of fields.
 </p>
+<h2>Example</h2>
+<pre>
+  IO.readrows(&quot;my.tdf&quot;)
+   =&gt; [[&quot;A1&quot;,&quot;B1&quot;,&quot;C1&quot;],[&quot;A2&quot;,&quot;B2&quot;,&quot;C2&quot;],[&quot;A3&quot;,&quot;B3&quot;,&quot;C3&quot;]]
+</pre>
+<h2>Options</h2>
 <ul>
-<li>Lines are separated by <em>sep_string</em>, which defaults to $/ or
-&#8220;n&#8220;
+<li>Rows are separated by <em>row</em> option, which defaults to Ruby&#8217;s
+record separator $/ or &#8220;n&#8220;
 
 </li>
-<li>Rows are split by <em>split</em>, which defaults to $; or /t/
+<li>Cols are separated by <em>col</em> option, which defaults to Ruby&#8217;s
+string split separator $; or &#8220;t&#8220;
 
 </li>
 </ul>
+<h2>Example with options suitable for a TDF file</h2>
+<pre>
+  IO.readrows(&quot;my.tdf&quot;, :row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;)
+</pre>
+<p>
+Note: the col option is sent along to String#split, so can be a string or a
+regexp.
+</p>
 <p>
 See:
 </p>
@@ -285,12 +300,12 @@ See:
 					<div class="method-source-code"
 						id="readrows-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/io.rb, line 14</span>
-14:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IO</span>.<span class="ruby-identifier">readrows</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">sep_string</span>=<span class="ruby-identifier">$/</span>, <span class="ruby-identifier">split</span>=<span class="ruby-identifier">$;</span>)
-15:     <span class="ruby-identifier">sep_string</span><span class="ruby-operator">||=</span><span class="ruby-value str">&quot;\n&quot;</span>
-16:     <span class="ruby-identifier">split</span><span class="ruby-operator">||=</span><span class="ruby-regexp re">/\t/</span>
-17:     <span class="ruby-keyword kw">return</span> <span class="ruby-constant">IO</span>.<span class="ruby-identifier">readlines</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">sep_string</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">chomp</span>(<span class="ruby-identifier">sep_string</span>).<span class="ruby-identifier">split</span>(<span class="ruby-identifier">split</span>)}
-18:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/io.rb, line 25</span>
+25:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IO</span>.<span class="ruby-identifier">readrows</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">options</span>={})
+26:     <span class="ruby-identifier">row_sep</span><span class="ruby-operator">||=</span><span class="ruby-identifier">options</span>[<span class="ruby-value str">'row'</span>]<span class="ruby-operator">||</span><span class="ruby-identifier">$/</span><span class="ruby-operator">||</span><span class="ruby-value str">&quot;\n&quot;</span>
+27:     <span class="ruby-identifier">col_sep</span><span class="ruby-operator">||=</span><span class="ruby-identifier">options</span>[<span class="ruby-value str">'col'</span>]<span class="ruby-operator">||</span><span class="ruby-identifier">$;</span><span class="ruby-operator">||</span><span class="ruby-value str">&quot;\t&quot;</span>
+28:     <span class="ruby-keyword kw">return</span> <span class="ruby-constant">IO</span>.<span class="ruby-identifier">readlines</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">row_sep</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">chomp</span>(<span class="ruby-identifier">row_sep</span>).<span class="ruby-identifier">split</span>(<span class="ruby-identifier">col_sep</span>)}
+29:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -311,7 +326,7 @@ See:
 				<div class="method-heading">
 				
 					<span class="method-name">readrow</span><span
-						class="method-args">(sep_string=$/,split=$;)</span>
+						class="method-args">(options={})</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
@@ -321,15 +336,35 @@ See:
 					<p>
 Read a line as with IO#readline and return the line as a row of fields.
 </p>
+<h2>Example</h2>
+<pre>
+  file = File.new(&quot;my.tdf&quot;)
+  file.readrow() =&gt; [&quot;A1&quot;,&quot;B1&quot;,&quot;C1&quot;]
+  file.readrow() =&gt; [&quot;A2&quot;,&quot;B2&quot;,&quot;C2&quot;]
+  file.readrow() =&gt; [&quot;A3&quot;,&quot;B3&quot;,&quot;C3&quot;]]
+</pre>
+<h2>Options</h2>
 <ul>
-<li>Lines are separated by <em>sep_string</em>, which defaults to $/ or
-&#8220;n&#8220;
+<li>Rows are separated by <em>row</em> option, which defaults to Ruby&#8217;s
+record separator $/ or &#8220;n&#8220;
 
 </li>
-<li>Rows are split by <em>split</em>, which defaults to $; or /t/
+<li>Cols are separated by <em>col</em> option, which defaults to Ruby&#8217;s
+string split separator $; or &#8220;t&#8220;
 
 </li>
 </ul>
+<h2>Example with options suitable for a TDF file</h2>
+<pre>
+  file = File.new(&quot;my.tdf&quot;)
+  file.readrow(:row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;) =&gt; [&quot;A1&quot;,&quot;B1&quot;,&quot;C1&quot;]
+  file.readrow(:row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;) =&gt; [&quot;A2&quot;,&quot;B2&quot;,&quot;C2&quot;]
+  file.readrow(:row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;) =&gt; [&quot;A3&quot;,&quot;B3&quot;,&quot;C3&quot;]
+</pre>
+<p>
+Note: the col option is sent along to String#split, so can be a string or a
+regexp.
+</p>
 <p>
 See:
 </p>
@@ -350,12 +385,12 @@ See:
 					<div class="method-source-code"
 						id="readrow-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/io.rb, line 30</span>
-30:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">readrow</span>(<span class="ruby-identifier">sep_string</span>=<span class="ruby-identifier">$/</span>,<span class="ruby-identifier">split</span>=<span class="ruby-identifier">$;</span>)
-31:     <span class="ruby-identifier">sep_string</span><span class="ruby-operator">||=</span><span class="ruby-value str">&quot;\n&quot;</span>
-32:     <span class="ruby-identifier">split</span><span class="ruby-operator">||=</span><span class="ruby-regexp re">/\t/</span>
-33:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">readline</span>(<span class="ruby-identifier">sep_string</span>).<span class="ruby-identifier">chomp</span>(<span class="ruby-identifier">sep_string</span>).<span class="ruby-identifier">split</span>(<span class="ruby-identifier">split</span>)
-34:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/ramp/io.rb, line 57</span>
+57:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">readrow</span>(<span class="ruby-identifier">options</span>={})
+58:     <span class="ruby-identifier">row_sep</span><span class="ruby-operator">||=</span><span class="ruby-identifier">options</span>[<span class="ruby-value str">'row'</span>]<span class="ruby-operator">||</span><span class="ruby-identifier">$/</span><span class="ruby-operator">||</span><span class="ruby-value str">&quot;\n&quot;</span>
+59:     <span class="ruby-identifier">col_sep</span><span class="ruby-operator">||=</span><span class="ruby-identifier">options</span>[<span class="ruby-value str">'col'</span>]<span class="ruby-operator">||</span><span class="ruby-identifier">$;</span><span class="ruby-operator">||</span><span class="ruby-value str">&quot;\t&quot;</span>
+60:    <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">readline</span>(<span class="ruby-identifier">row_sep</span>).<span class="ruby-identifier">chomp</span>(<span class="ruby-identifier">row_sep</span>).<span class="ruby-identifier">split</span>(<span class="ruby-identifier">col_sep</span>)
+61:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
