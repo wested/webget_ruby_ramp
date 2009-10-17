@@ -20,6 +20,11 @@ class StringTest < Test::Unit::TestCase
   end
 
 
+  def test_split_tsv
+    assert_equal([['a','b','c'].['d','e','f'],['g','h','i']],"a\tb\tc\nd\te\tf\ng\th\ti".split_tsv)
+  end
+
+
   def test_lowcase
     assert_equal('foo_goo_hoo',"Foo GOO**_**Hoo".lowcase)
   end

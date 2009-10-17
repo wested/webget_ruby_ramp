@@ -59,31 +59,33 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000064">#test_capitalize_words</a></li>
+					<li><a href="#M000070">#test_capitalize_words</a></li>
 					
-					<li><a href="#M000072">#test_decrement</a></li>
+					<li><a href="#M000080">#test_decrement</a></li>
 					
-					<li><a href="#M000071">#test_increment</a></li>
+					<li><a href="#M000079">#test_increment</a></li>
 					
-					<li><a href="#M000083">#test_lorem</a></li>
+					<li><a href="#M000087">#test_lorem</a></li>
 					
-					<li><a href="#M000082">#test_lorem_length</a></li>
+					<li><a href="#M000086">#test_lorem_length</a></li>
 					
-					<li><a href="#M000084">#test_lorem_with_length</a></li>
+					<li><a href="#M000088">#test_lorem_with_length</a></li>
 					
-					<li><a href="#M000067">#test_lowcase</a></li>
+					<li><a href="#M000074">#test_lowcase</a></li>
 					
-					<li><a href="#M000077">#test_prev</a></li>
+					<li><a href="#M000084">#test_prev</a></li>
 					
-					<li><a href="#M000075">#test_prev_char</a></li>
+					<li><a href="#M000082">#test_prev_char</a></li>
 					
-					<li><a href="#M000066">#test_split_tab</a></li>
+					<li><a href="#M000072">#test_split_tab</a></li>
 					
-					<li><a href="#M000068">#test_to_class</a></li>
+					<li><a href="#M000073">#test_split_tsv</a></li>
 					
-					<li><a href="#M000069">#test_to_class_nested</a></li>
+					<li><a href="#M000077">#test_to_class</a></li>
 					
-					<li><a href="#M000065">#test_words</a></li>
+					<li><a href="#M000078">#test_to_class_nested</a></li>
+					
+					<li><a href="#M000071">#test_words</a></li>
 					
 				</ul>
 			</div>
@@ -261,7 +263,7 @@
 
 		
 			<div id="test-capitalize-words-method" class="method-detail ">
-				<a name="M000064"></a>
+				<a name="M000070"></a>
 
 				<div class="method-heading">
 				
@@ -293,7 +295,7 @@
 
 		
 			<div id="test-decrement-method" class="method-detail ">
-				<a name="M000072"></a>
+				<a name="M000080"></a>
 
 				<div class="method-heading">
 				
@@ -312,15 +314,15 @@
 					<div class="method-source-code"
 						id="test-decrement-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 48</span>
-48:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_decrement</span>
-49:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'3'</span>,<span class="ruby-value str">'4'</span>.<span class="ruby-identifier">decrement</span>,               <span class="ruby-value str">'number is entire string'</span>)
-50:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'3foo'</span>,<span class="ruby-value str">'4foo'</span>.<span class="ruby-identifier">decrement</span>,         <span class="ruby-value str">'number is leftmost'</span>)
-51:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo3'</span>,<span class="ruby-value str">'foo4'</span>.<span class="ruby-identifier">decrement</span>,         <span class="ruby-value str">'number is rightmost'</span>)
-52:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo9'</span>,<span class="ruby-value str">'foo10'</span>.<span class="ruby-identifier">decrement</span>,        <span class="ruby-value str">'number is rightmost with carry'</span>)
-53:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo3bar'</span>,<span class="ruby-value str">'foo4bar'</span>.<span class="ruby-identifier">decrement</span>,   <span class="ruby-value str">'number is in then middle'</span>)
-54:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foobar'</span>,<span class="ruby-value str">'foobar'</span>.<span class="ruby-identifier">decrement</span>,     <span class="ruby-value str">'no number, so should be unchanged'</span>)
-55:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 53</span>
+53:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_decrement</span>
+54:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'3'</span>,<span class="ruby-value str">'4'</span>.<span class="ruby-identifier">decrement</span>,               <span class="ruby-value str">'number is entire string'</span>)
+55:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'3foo'</span>,<span class="ruby-value str">'4foo'</span>.<span class="ruby-identifier">decrement</span>,         <span class="ruby-value str">'number is leftmost'</span>)
+56:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo3'</span>,<span class="ruby-value str">'foo4'</span>.<span class="ruby-identifier">decrement</span>,         <span class="ruby-value str">'number is rightmost'</span>)
+57:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo9'</span>,<span class="ruby-value str">'foo10'</span>.<span class="ruby-identifier">decrement</span>,        <span class="ruby-value str">'number is rightmost with carry'</span>)
+58:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo3bar'</span>,<span class="ruby-value str">'foo4bar'</span>.<span class="ruby-identifier">decrement</span>,   <span class="ruby-value str">'number is in then middle'</span>)
+59:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foobar'</span>,<span class="ruby-value str">'foobar'</span>.<span class="ruby-identifier">decrement</span>,     <span class="ruby-value str">'no number, so should be unchanged'</span>)
+60:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -330,7 +332,7 @@
 
 		
 			<div id="test-increment-method" class="method-detail ">
-				<a name="M000071"></a>
+				<a name="M000079"></a>
 
 				<div class="method-heading">
 				
@@ -349,15 +351,15 @@
 					<div class="method-source-code"
 						id="test-increment-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 38</span>
-38:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_increment</span>
-39:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'5'</span>,<span class="ruby-value str">'4'</span>.<span class="ruby-identifier">increment</span>,               <span class="ruby-value str">'number is entire string'</span>)
-40:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'5foo'</span>,<span class="ruby-value str">'4foo'</span>.<span class="ruby-identifier">increment</span>,         <span class="ruby-value str">'number is leftmost'</span>)
-41:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo5'</span>,<span class="ruby-value str">'foo4'</span>.<span class="ruby-identifier">increment</span>,         <span class="ruby-value str">'number is rightmost'</span>)
-42:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo10'</span>,<span class="ruby-value str">'foo9'</span>.<span class="ruby-identifier">increment</span>,        <span class="ruby-value str">'number is rightmost with carry'</span>)
-43:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo5bar'</span>,<span class="ruby-value str">'foo4bar'</span>.<span class="ruby-identifier">increment</span>,   <span class="ruby-value str">'number is in then middle'</span>)
-44:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foobar'</span>,<span class="ruby-value str">'foobar'</span>.<span class="ruby-identifier">increment</span>,     <span class="ruby-value str">'no number, so should be unchanged'</span>)
-45:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 43</span>
+43:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_increment</span>
+44:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'5'</span>,<span class="ruby-value str">'4'</span>.<span class="ruby-identifier">increment</span>,               <span class="ruby-value str">'number is entire string'</span>)
+45:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'5foo'</span>,<span class="ruby-value str">'4foo'</span>.<span class="ruby-identifier">increment</span>,         <span class="ruby-value str">'number is leftmost'</span>)
+46:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo5'</span>,<span class="ruby-value str">'foo4'</span>.<span class="ruby-identifier">increment</span>,         <span class="ruby-value str">'number is rightmost'</span>)
+47:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo10'</span>,<span class="ruby-value str">'foo9'</span>.<span class="ruby-identifier">increment</span>,        <span class="ruby-value str">'number is rightmost with carry'</span>)
+48:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo5bar'</span>,<span class="ruby-value str">'foo4bar'</span>.<span class="ruby-identifier">increment</span>,   <span class="ruby-value str">'number is in then middle'</span>)
+49:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foobar'</span>,<span class="ruby-value str">'foobar'</span>.<span class="ruby-identifier">increment</span>,     <span class="ruby-value str">'no number, so should be unchanged'</span>)
+50:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -367,7 +369,7 @@
 
 		
 			<div id="test-lorem-method" class="method-detail ">
-				<a name="M000083"></a>
+				<a name="M000087"></a>
 
 				<div class="method-heading">
 				
@@ -386,13 +388,13 @@
 					<div class="method-source-code"
 						id="test-lorem-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 89</span>
-89:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_lorem</span>
-90:     <span class="ruby-identifier">s</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">lorem</span>
-91:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>),<span class="ruby-value str">'s is string'</span>)
-92:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>,<span class="ruby-node">&quot;s.size:#{s.size}&gt;0&quot;</span>)
-93:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">&lt;</span><span class="ruby-value">20</span>,<span class="ruby-node">&quot;s.size:#{s.size}&lt;=20&quot;</span>)
-94:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 94</span>
+94:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_lorem</span>
+95:     <span class="ruby-identifier">s</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">lorem</span>
+96:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>),<span class="ruby-value str">'s is string'</span>)
+97:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>,<span class="ruby-node">&quot;s.size:#{s.size}&gt;0&quot;</span>)
+98:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">&lt;</span><span class="ruby-value">20</span>,<span class="ruby-node">&quot;s.size:#{s.size}&lt;=20&quot;</span>)
+99:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -402,7 +404,7 @@
 
 		
 			<div id="test-lorem-length-method" class="method-detail ">
-				<a name="M000082"></a>
+				<a name="M000086"></a>
 
 				<div class="method-heading">
 				
@@ -421,13 +423,13 @@
 					<div class="method-source-code"
 						id="test-lorem-length-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 82</span>
-82:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_lorem_length</span>
-83:     <span class="ruby-identifier">x</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">lorem_length</span>
-84:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">x</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>),<span class="ruby-value str">'x is integer'</span>)
-85:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">x</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>,<span class="ruby-node">&quot;x:#{x}&gt;0&quot;</span>)
-86:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">x</span><span class="ruby-operator">&lt;=</span><span class="ruby-value">20</span>,<span class="ruby-node">&quot;x:#{x}&lt;=20&quot;</span>)
-87:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 87</span>
+87:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_lorem_length</span>
+88:     <span class="ruby-identifier">x</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">lorem_length</span>
+89:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">x</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Integer</span>),<span class="ruby-value str">'x is integer'</span>)
+90:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">x</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>,<span class="ruby-node">&quot;x:#{x}&gt;0&quot;</span>)
+91:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">x</span><span class="ruby-operator">&lt;=</span><span class="ruby-value">20</span>,<span class="ruby-node">&quot;x:#{x}&lt;=20&quot;</span>)
+92:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -437,7 +439,7 @@
 
 		
 			<div id="test-lorem-with-length-method" class="method-detail ">
-				<a name="M000084"></a>
+				<a name="M000088"></a>
 
 				<div class="method-heading">
 				
@@ -456,12 +458,12 @@
 					<div class="method-source-code"
 						id="test-lorem-with-length-source">
 <pre>
-     <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 96</span>
- 96:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_lorem_with_length</span>
- 97:     <span class="ruby-identifier">s</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">lorem</span>(<span class="ruby-value">5</span>)
- 98:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>),<span class="ruby-value str">'s is string'</span>)
- 99:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-value">5</span>,<span class="ruby-node">&quot;s.size:#{s.size}==5&quot;</span>)
-100:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 101</span>
+101:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_lorem_with_length</span>
+102:     <span class="ruby-identifier">s</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">lorem</span>(<span class="ruby-value">5</span>)
+103:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>),<span class="ruby-value str">'s is string'</span>)
+104:     <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">s</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-value">5</span>,<span class="ruby-node">&quot;s.size:#{s.size}==5&quot;</span>)
+105:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -471,7 +473,7 @@
 
 		
 			<div id="test-lowcase-method" class="method-detail ">
-				<a name="M000067"></a>
+				<a name="M000074"></a>
 
 				<div class="method-heading">
 				
@@ -490,10 +492,10 @@
 					<div class="method-source-code"
 						id="test-lowcase-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 23</span>
-23:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_lowcase</span>
-24:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo_goo_hoo'</span>,<span class="ruby-value str">&quot;Foo GOO**_**Hoo&quot;</span>.<span class="ruby-identifier">lowcase</span>)
-25:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 28</span>
+28:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_lowcase</span>
+29:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'foo_goo_hoo'</span>,<span class="ruby-value str">&quot;Foo GOO**_**Hoo&quot;</span>.<span class="ruby-identifier">lowcase</span>)
+30:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -503,7 +505,7 @@
 
 		
 			<div id="test-prev-method" class="method-detail ">
-				<a name="M000077"></a>
+				<a name="M000084"></a>
 
 				<div class="method-heading">
 				
@@ -522,19 +524,19 @@
 					<div class="method-source-code"
 						id="test-prev-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 69</span>
-69:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_prev</span>
-70:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'n-'</span>,<span class="ruby-value str">'n-'</span>.<span class="ruby-identifier">prev</span>)     <span class="ruby-comment cmt"># unchanged</span>
-71:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'n5'</span>,<span class="ruby-value str">'n6'</span>.<span class="ruby-identifier">prev</span>)     <span class="ruby-comment cmt"># numeric typical</span>
-72:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'m9'</span>,<span class="ruby-value str">'n0'</span>.<span class="ruby-identifier">prev</span>)     <span class="ruby-comment cmt"># numeric carry</span>
-73:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'m999'</span>,<span class="ruby-value str">'n000'</span>.<span class="ruby-identifier">prev</span>) <span class="ruby-comment cmt"># numeric carries</span>
-74:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'ne'</span>,<span class="ruby-value str">'nf'</span>.<span class="ruby-identifier">prev</span>)     <span class="ruby-comment cmt"># lowercase typical</span>
-75:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'mz'</span>,<span class="ruby-value str">'na'</span>.<span class="ruby-identifier">prev</span>)     <span class="ruby-comment cmt"># lowercase carry</span>
-76:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'mzzz'</span>,<span class="ruby-value str">'naaa'</span>.<span class="ruby-identifier">prev</span>) <span class="ruby-comment cmt"># lowercase carries</span>
-77:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'NE'</span>,<span class="ruby-value str">'NF'</span>.<span class="ruby-identifier">prev</span>)     <span class="ruby-comment cmt"># uppercase typical</span>
-78:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'MZ'</span>,<span class="ruby-value str">'NA'</span>.<span class="ruby-identifier">prev</span>)     <span class="ruby-comment cmt"># uppercase carry</span>
-79:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'MZZZ'</span>,<span class="ruby-value str">'NAAA'</span>.<span class="ruby-identifier">prev</span>) <span class="ruby-comment cmt"># uppercase carries</span>
-80:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 74</span>
+74:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_prev</span>
+75:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'n-'</span>,<span class="ruby-value str">'n-'</span>.<span class="ruby-identifier">prev</span>)     <span class="ruby-comment cmt"># unchanged</span>
+76:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'n5'</span>,<span class="ruby-value str">'n6'</span>.<span class="ruby-identifier">prev</span>)     <span class="ruby-comment cmt"># numeric typical</span>
+77:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'m9'</span>,<span class="ruby-value str">'n0'</span>.<span class="ruby-identifier">prev</span>)     <span class="ruby-comment cmt"># numeric carry</span>
+78:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'m999'</span>,<span class="ruby-value str">'n000'</span>.<span class="ruby-identifier">prev</span>) <span class="ruby-comment cmt"># numeric carries</span>
+79:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'ne'</span>,<span class="ruby-value str">'nf'</span>.<span class="ruby-identifier">prev</span>)     <span class="ruby-comment cmt"># lowercase typical</span>
+80:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'mz'</span>,<span class="ruby-value str">'na'</span>.<span class="ruby-identifier">prev</span>)     <span class="ruby-comment cmt"># lowercase carry</span>
+81:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'mzzz'</span>,<span class="ruby-value str">'naaa'</span>.<span class="ruby-identifier">prev</span>) <span class="ruby-comment cmt"># lowercase carries</span>
+82:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'NE'</span>,<span class="ruby-value str">'NF'</span>.<span class="ruby-identifier">prev</span>)     <span class="ruby-comment cmt"># uppercase typical</span>
+83:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'MZ'</span>,<span class="ruby-value str">'NA'</span>.<span class="ruby-identifier">prev</span>)     <span class="ruby-comment cmt"># uppercase carry</span>
+84:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-value str">'MZZZ'</span>,<span class="ruby-value str">'NAAA'</span>.<span class="ruby-identifier">prev</span>) <span class="ruby-comment cmt"># uppercase carries</span>
+85:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -544,7 +546,7 @@
 
 		
 			<div id="test-prev-char-method" class="method-detail ">
-				<a name="M000075"></a>
+				<a name="M000082"></a>
 
 				<div class="method-heading">
 				
@@ -563,16 +565,16 @@
 					<div class="method-source-code"
 						id="test-prev-char-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 58</span>
-58:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_prev_char</span>
-59:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;-&quot;</span>,<span class="ruby-keyword kw">false</span>,<span class="ruby-keyword kw">false</span>] ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;-&quot;</span>))  <span class="ruby-comment cmt">#unchanged</span>
-60:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;5&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">false</span>]  ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;6&quot;</span>))  <span class="ruby-comment cmt">#numeric typical</span>
-61:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;9&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">true</span>]   ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;0&quot;</span>))  <span class="ruby-comment cmt">#numeric carry</span>
-62:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;m&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">false</span>]  ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;n&quot;</span>))  <span class="ruby-comment cmt">#lowercase typical</span>
-63:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;z&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">true</span>]   ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;a&quot;</span>))  <span class="ruby-comment cmt">#lowercase carry</span>
-64:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;M&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">false</span>]  ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;N&quot;</span>))  <span class="ruby-comment cmt">#uppercase typical</span>
-65:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;Z&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">true</span>]   ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;A&quot;</span>))  <span class="ruby-comment cmt">#uppercase carry</span>
-66:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 63</span>
+63:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_prev_char</span>
+64:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;-&quot;</span>,<span class="ruby-keyword kw">false</span>,<span class="ruby-keyword kw">false</span>] ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;-&quot;</span>))  <span class="ruby-comment cmt">#unchanged</span>
+65:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;5&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">false</span>]  ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;6&quot;</span>))  <span class="ruby-comment cmt">#numeric typical</span>
+66:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;9&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">true</span>]   ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;0&quot;</span>))  <span class="ruby-comment cmt">#numeric carry</span>
+67:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;m&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">false</span>]  ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;n&quot;</span>))  <span class="ruby-comment cmt">#lowercase typical</span>
+68:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;z&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">true</span>]   ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;a&quot;</span>))  <span class="ruby-comment cmt">#lowercase carry</span>
+69:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;M&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">false</span>]  ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;N&quot;</span>))  <span class="ruby-comment cmt">#uppercase typical</span>
+70:     <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;Z&quot;</span>,<span class="ruby-keyword kw">true</span>,<span class="ruby-keyword kw">true</span>]   ,<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-value str">&quot;A&quot;</span>))  <span class="ruby-comment cmt">#uppercase carry</span>
+71:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -582,7 +584,7 @@
 
 		
 			<div id="test-split-tab-method" class="method-detail ">
-				<a name="M000066"></a>
+				<a name="M000072"></a>
 
 				<div class="method-heading">
 				
@@ -613,8 +615,40 @@
 			</div>
 
 		
+			<div id="test-split-tsv-method" class="method-detail ">
+				<a name="M000073"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">test_split_tsv</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p class="missing-docs">(Not documented)</p>
+					
+
+					
+					<div class="method-source-code"
+						id="test-split-tsv-source">
+<pre>
+    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 23</span>
+23:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_split_tsv</span>
+24:     <span class="ruby-identifier">assert_equal</span>([[<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>].[<span class="ruby-value str">'d'</span>,<span class="ruby-value str">'e'</span>,<span class="ruby-value str">'f'</span>],[<span class="ruby-value str">'g'</span>,<span class="ruby-value str">'h'</span>,<span class="ruby-value str">'i'</span>]],<span class="ruby-value str">&quot;a\tb\tc\nd\te\tf\ng\th\ti&quot;</span>.<span class="ruby-identifier">split_tsv</span>)
+25:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+			</div>
+
+		
 			<div id="test-to-class-method" class="method-detail ">
-				<a name="M000068"></a>
+				<a name="M000077"></a>
 
 				<div class="method-heading">
 				
@@ -633,10 +667,10 @@
 					<div class="method-source-code"
 						id="test-to-class-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 28</span>
-28:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_to_class</span>
-29:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">String</span>,<span class="ruby-value str">'String'</span>.<span class="ruby-identifier">to_class</span>)
-30:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 33</span>
+33:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_to_class</span>
+34:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">String</span>,<span class="ruby-value str">'String'</span>.<span class="ruby-identifier">to_class</span>)
+35:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -646,7 +680,7 @@
 
 		
 			<div id="test-to-class-nested-method" class="method-detail ">
-				<a name="M000069"></a>
+				<a name="M000078"></a>
 
 				<div class="method-heading">
 				
@@ -665,10 +699,10 @@
 					<div class="method-source-code"
 						id="test-to-class-nested-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 33</span>
-33:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_to_class_nested</span>
-34:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">FooModule</span><span class="ruby-operator">::</span><span class="ruby-constant">FooClass</span>,<span class="ruby-value str">'FooModule::FooClass'</span>.<span class="ruby-identifier">to_class</span>)
-35:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File test/unit/string_test.rb, line 38</span>
+38:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_to_class_nested</span>
+39:     <span class="ruby-identifier">assert_equal</span>(<span class="ruby-constant">FooModule</span><span class="ruby-operator">::</span><span class="ruby-constant">FooClass</span>,<span class="ruby-value str">'FooModule::FooClass'</span>.<span class="ruby-identifier">to_class</span>)
+40:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -678,7 +712,7 @@
 
 		
 			<div id="test-words-method" class="method-detail ">
-				<a name="M000065"></a>
+				<a name="M000071"></a>
 
 				<div class="method-heading">
 				

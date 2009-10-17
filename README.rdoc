@@ -143,9 +143,10 @@ Extensions that help debug Ruby programs.
 * prev/pred: previous string ("b" => "a", "bbc" => "bbb", "a" => "z", "880" => "879")
 * prev!/pred!: updates variable to the previous string in place (astring = "bbc", astring.prev!, puts astring => "bbb")
 * (class) prev_char/pred_char: returns the previous character, with a changed flag and carry flag; that is, there are three returned values, a string and two booleans.
-* split_tab: splits the string into an array at each embedded tab ("Last\tFirst\tMiddle" => ["last","first","middle"])
+* split_tab: split the string into an array at each embedded tab ("Last\tFirst\tMiddle" => ["last","first","middle"])
+* split_tsv: split the string into an array at each embedded newline and embedded tab ("A\tB\t\C\nD\tE\tF" => [["A","B","C"],["D","E","F"]])
 * to_class: the global class reference of a given string
-* words: splits the string into an array of words
+* words: split the string into an array of words
 
 
 == Symbol
@@ -171,7 +172,7 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
-- 1.7.0.7 Add Array#to_tsv
+- 1.7.0.7 Add Array#to_tsv, String#split_tsv
 - 1.7.0.6 Add Array#shuffle, Array#shuffle! 
 - 1.7.0.5 Add Array#shifted, Array#rest, Array#car, Array#cdr
 - 1.7.0.4 Upgrade IO#readrows and #readrow to use options

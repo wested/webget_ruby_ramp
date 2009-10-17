@@ -35,17 +35,26 @@ class String
  end
 
 
- # Return the string split into words, i.e. split(\W*\b\*)
+ # Return an array that is the string split into words, i.e. split(\W*\b\*)
 
  def words
   split(/\W*\b\W*/)
  end
 
 
- # Return the string split at tabs, i.e. split(/\t/)
+ # Return an array that is the string split at tabs, i.e. split(/\t/)
 
  def split_tab
   split(/\t/)
+ end
+
+
+ # Return an array that is the string split at newlines, then tabs.
+ # This is useful to split a TSV (Tab Separated Values) string
+ # into an array of rows, and each row into an array of fields.
+
+ def split_tsv
+   split(/\n/).map{|x| split(/\t/)}
  end
 
 
