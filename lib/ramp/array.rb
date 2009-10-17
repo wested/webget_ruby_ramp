@@ -267,6 +267,49 @@ class Array
   alias :rest! :shifted!
 
 
+  # Randomly arrange the array items.
+  #
+  # This implementation is optimized for speed, not for memory use.
+  # See http://codeidol.com/other/rubyckbk/Arrays/Shuffling-an-Array/
+  #
+  # This method definition is skipped if Array#shuffle! is already defined.
+  #
+  # ==Example
+  #   list=
+  #   list=['a','b','c']
+  #   list.shuffle!
+  #   list => ['c','a','b']
+
+  if !instance_methods.include?('shuffle!')
+    def shuffle!  
+      each_index do |i| 
+        j = rand(length-i) + i
+        self[j], self[i] = self[i], self[j]  
+      end
+    end
+  end
+
+  # Return the array items in random order.
+  #
+  # This implementation is optimized for speed, not for memory use.
+  # See http://codeidol.com/other/rubyckbk/Arrays/Shuffling-an-Array/
+  #
+  # This method definition is skipped if Array#shuffle is already defined.
+  # For example, Ruby 1.8.7 Array#shuffle is already defined.
+  #
+  # ==Example
+  #   list=
+  #   list=['a','b','c']
+  #   list.shuffle!
+  #   list => ['c','a','b']
+
+  if !instance_methods.include?('shuffle') and instance_methods.include?('shuffle!')
+    def shuffle  
+      dup.shuffle!  
+    end
+  end
+
+
   ##############################################################
   # 
   # CASTS
@@ -275,8 +318,11 @@ class Array
 
   require 'csv'
  
-  # Returns a CSV-style string representation of a multi-dimensional array
-  # Each subarray becomes one 'line' in the output
+  # Returns a CSV (Comma Separated Value) string
+  # representation of a multi-dimensional array.
+  #
+  # Each subarray becomes one 'line' in the output.
+
   def to_csv(ops={})
     s=''
     CSV::Writer.generate(s) do |csv|
@@ -287,10 +333,16 @@ class Array
     return s
   end
 
-  # Returns a TDF-style string representation of a multi-dimensional array
-  # Each subarray becomes one 'line' in the output
-  def to_tdf(ops={})
+
+  # Returns a TSV (Tab Separated Value) string
+  # representation of a multi-dimensional array.
+  #
+  # Each subarray becomes one 'line' in the output.
+
+  def to_tsv(ops={})
     self.map{|row| row.join("\t")+"\n"}.join
   end
+
+  alias to_tdf to_tsv
 
 end

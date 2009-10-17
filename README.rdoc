@@ -35,9 +35,11 @@ Testing:
 * rotate: moves the first element of an array to the end
 * rest: return the rest of the items of the array (aka cdr, aka shifted)
 * shifted, shifted!: return an array with the first n items shifted (aka cdr, aka rest)
-* slices: divides an array into specified number of equal size sub-arrays ([1,2,3,4,5,6]slices(3) => [[1,2],[3,4],[5,6]])
-* to_csv: returns a CSV-style string representation of a multi-dimensional array, with each subarray becoming one 'line' in the output; typically for viewing in a spreadsheet such as Excel.
-* to_tdf: returns a TDF-style string representation of a multi-dimensional array, with each subarray becoming one 'line' in the output; typically for viewing in a spreadsheet such as Excel.
+* shuffle, shuffle!: randomly sort an array efficiently; each of these methods are loaded only if needed (Ruby 1.8.7+ already defines shuffle)
+* slices: divide an array into specified number of equal size sub-arrays ([1,2,3,4,5,6]slices(3) => [[1,2],[3,4],[5,6]])
+* to_csv: join a multidimensional array into a string in CSV (Comma Separated Values), with each subarray becoming one 'line' in the output; typically for viewing in a spreadsheet such as Excel.
+* to_tdf: join a multidimensional array into a string in TDF (Tab Delimited Format); this is an alias for #to_tsv
+* to_tsv: join a multidimensional array into a string in TSV (Tab Separated Values), with each subarray becoming one 'line' in the output; typically for viewing in a spreadsheet such as Excel.
 * union: builds an array containing each of the unique elements of sub-arrays ([[1,2,3,4],[2,3,4,5],[3,4,5,6]].union => [1,2,3,4,5,6])
 
 
@@ -169,6 +171,8 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
+- 1.7.0.7 Add Array#to_tsv
+- 1.7.0.6 Add Array#shuffle, Array#shuffle! 
 - 1.7.0.5 Add Array#shifted, Array#rest, Array#car, Array#cdr
 - 1.7.0.4 Upgrade IO#readrows and #readrow to use options
 - 1.7.0.2 Add Array#to_tdf

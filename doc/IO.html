@@ -59,9 +59,9 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000207">::readrows</a></li>
+					<li><a href="#M000211">::readrows</a></li>
 					
-					<li><a href="#M000208">#readrow</a></li>
+					<li><a href="#M000212">#readrow</a></li>
 					
 				</ul>
 			</div>
@@ -239,7 +239,7 @@
 
 		
 			<div id="readrows-method" class="method-detail ">
-				<a name="M000207"></a>
+				<a name="M000211"></a>
 
 				<div class="method-heading">
 				
@@ -258,7 +258,7 @@ is an array of fields.
 </p>
 <h2>Example</h2>
 <pre>
-  IO.readrows(&quot;my.tdf&quot;)
+  IO.readrows(&quot;my.tsv&quot;)
    =&gt; [[&quot;A1&quot;,&quot;B1&quot;,&quot;C1&quot;],[&quot;A2&quot;,&quot;B2&quot;,&quot;C2&quot;],[&quot;A3&quot;,&quot;B3&quot;,&quot;C3&quot;]]
 </pre>
 <h2>Options</h2>
@@ -272,9 +272,9 @@ string split separator $; or &#8220;t&#8220;
 
 </li>
 </ul>
-<h2>Example with options suitable for a TDF file</h2>
+<h2>Example with options suitable for a file using TSV (Tab Separated Values)</h2>
 <pre>
-  IO.readrows(&quot;my.tdf&quot;, :row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;)
+  IO.readrows(&quot;my.tsv&quot;, :row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;)
 </pre>
 <p>
 Note: the col option is sent along to String#split, so can be a string or a
@@ -321,7 +321,7 @@ See:
 
 		
 			<div id="readrow-method" class="method-detail ">
-				<a name="M000208"></a>
+				<a name="M000212"></a>
 
 				<div class="method-heading">
 				
@@ -338,7 +338,7 @@ Read a line as with IO#readline and return the line as a row of fields.
 </p>
 <h2>Example</h2>
 <pre>
-  file = File.new(&quot;my.tdf&quot;)
+  file = File.new(&quot;my.tsv&quot;)
   file.readrow() =&gt; [&quot;A1&quot;,&quot;B1&quot;,&quot;C1&quot;]
   file.readrow() =&gt; [&quot;A2&quot;,&quot;B2&quot;,&quot;C2&quot;]
   file.readrow() =&gt; [&quot;A3&quot;,&quot;B3&quot;,&quot;C3&quot;]]
@@ -354,9 +354,9 @@ string split separator $; or &#8220;t&#8220;
 
 </li>
 </ul>
-<h2>Example with options suitable for a TDF file</h2>
+<h2>Example with options suitable for a file using TSV (Tab Separated Values)</h2>
 <pre>
-  file = File.new(&quot;my.tdf&quot;)
+  file = File.new(&quot;my.tsv&quot;)
   file.readrow(:row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;) =&gt; [&quot;A1&quot;,&quot;B1&quot;,&quot;C1&quot;]
   file.readrow(:row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;) =&gt; [&quot;A2&quot;,&quot;B2&quot;,&quot;C2&quot;]
   file.readrow(:row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;) =&gt; [&quot;A3&quot;,&quot;B3&quot;,&quot;C3&quot;]

@@ -5,15 +5,15 @@ class IO
   # and returns those lines in an array of rows, where each row is an array of fields.
   #
   # ==Example
-  #   IO.readrows("my.tdf")
+  #   IO.readrows("my.tsv")
   #    => [["A1","B1","C1"],["A2","B2","C2"],["A3","B3","C3"]]
   #
   # ==Options
   # - Rows are separated by _row_ option, which defaults to Ruby's record separator $/ or "\n" 
   # - Cols are separated by _col_ option, which defaults to Ruby's string split separator $; or "\t"
   #
-  # ==Example with options suitable for a TDF file
-  #   IO.readrows("my.tdf", :row=>"\n", :col=>"\t") 
+  # ==Example with options suitable for a file using TSV (Tab Separated Values)
+  #   IO.readrows("my.tsv", :row=>"\n", :col=>"\t") 
   #
   # Note: the col option is sent along to String#split, so can be a string or a regexp.
   #
@@ -32,7 +32,7 @@ class IO
   # Read a line as with IO#readline and return the line as a row of fields.
   #
   # ==Example
-  #   file = File.new("my.tdf")
+  #   file = File.new("my.tsv")
   #   file.readrow() => ["A1","B1","C1"]
   #   file.readrow() => ["A2","B2","C2"]
   #   file.readrow() => ["A3","B3","C3"]]
@@ -41,8 +41,8 @@ class IO
   # - Rows are separated by _row_ option, which defaults to Ruby's record separator $/ or "\n" 
   # - Cols are separated by _col_ option, which defaults to Ruby's string split separator $; or "\t"
   #
-  # ==Example with options suitable for a TDF file
-  #   file = File.new("my.tdf")
+  # ==Example with options suitable for a file using TSV (Tab Separated Values)
+  #   file = File.new("my.tsv")
   #   file.readrow(:row=>"\n", :col=>"\t") => ["A1","B1","C1"] 
   #   file.readrow(:row=>"\n", :col=>"\t") => ["A2","B2","C2"] 
   #   file.readrow(:row=>"\n", :col=>"\t") => ["A3","B3","C3"] 

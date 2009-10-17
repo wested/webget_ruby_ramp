@@ -119,8 +119,7 @@ class ArrayTest < Test::Unit::TestCase
     a=['a','b','c']; a.shifted!(4); assert_equal([           ],a)
   end
 
-  # test_cdr_band must be identical to test_shifted_bang
-  # because cdr! is an alias for cdr!
+  # alias: test_cdr_band must be identical to test_shifted_bang
   def test_cdr_bang
     a=['a','b','c']; a.cdr!;    assert_equal([    'b','c'],a)
     a=['a','b','c']; a.cdr!(0); assert_equal(['a','b','c'],a)
@@ -130,8 +129,7 @@ class ArrayTest < Test::Unit::TestCase
     a=['a','b','c']; a.cdr!(4); assert_equal([           ],a)
   end
 
-  # test_rest_band must be identical to test_shifted_bang
-  # because rest! is an alias for cdr!
+  # alias: test_rest_band must be identical to test_shifted_bang
   def test_rest_bang
     a=['a','b','c']; a.rest!;    assert_equal([    'b','c'],a)
     a=['a','b','c']; a.rest!(0); assert_equal(['a','b','c'],a)
@@ -151,6 +149,12 @@ class ArrayTest < Test::Unit::TestCase
     assert_equal("a,b\nc,d\ne,f\n",a.to_csv)
   end
 
+  def test_to_tsv
+    a=[["a", "b"], ["c", "d"], ["e", "f"]]
+    assert_equal("a\tb\nc\td\ne\tf\n",a.to_tsv)
+  end
+
+  # alias: test_to_tdf must be identical to test_to_tsv
   def test_to_tdf
     a=[["a", "b"], ["c", "d"], ["e", "f"]]
     assert_equal("a\tb\nc\td\ne\tf\n",a.to_tdf)
