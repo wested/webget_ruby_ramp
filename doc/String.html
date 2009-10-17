@@ -803,7 +803,7 @@ and each row into an array of fields.
 <pre>
     <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 56</span>
 56:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">split_tsv</span>
-57:    <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\n/</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\t/</span>)}
+57:    <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\n/</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\t/</span>)}
 58:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					

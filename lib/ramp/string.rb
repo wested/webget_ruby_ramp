@@ -54,7 +54,7 @@ class String
  # into an array of rows, and each row into an array of fields.
 
  def split_tsv
-   split(/\n/).map{|x| split(/\t/)}
+   split(/\n/).map{|x| x.split(/\t/)}
  end
 
 
