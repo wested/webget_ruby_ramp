@@ -144,9 +144,14 @@ class ArrayTest < Test::Unit::TestCase
     assert_equal('a',a.car)
   end
 
-  def test_to_csv
-    a=[["a", "b"], ["c", "d"], ["e", "f"]]
-    assert_equal("a,b\nc,d\ne,f\n",a.to_csv)
+  def test_to_csv_one_dimensional
+    a=["a", "b","c"]
+    assert_equal("a,b,c\n",a.to_csv)
+  end
+
+  def test_to_csv_multi_dimensional
+    a=[["a", "b","c"], ["d","e","f"], ["g","h","i"]]
+    assert_equal("a,b,c\nd,e,f\ng,h,i\n",a.to_csv)
   end
 
   def test_to_tsv

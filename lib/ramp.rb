@@ -173,7 +173,7 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
-- 1.7.0.7 Add Array#to_tsv, String#split_tsv
+- 1.7.0.7 Array#to_tsv, String#split_tsv, improve Array#to_csv
 - 1.7.0.6 Add Array#shuffle, Array#shuffle! 
 - 1.7.0.5 Add Array#shifted, Array#rest, Array#car, Array#cdr
 - 1.7.0.4 Upgrade IO#readrows and #readrow to use options

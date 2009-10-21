@@ -318,16 +318,30 @@ class Array
 
   require 'csv'
  
-  # Returns a CSV (Comma Separated Value) string
-  # representation of a multi-dimensional array.
+  # Returns a CSV (Comma Separated Value) string of this array.
   #
-  # Each subarray becomes one 'line' in the output.
+  # ==Example of a one-dimensional array
+  #
+  #   [1,2,3].to_csv => "1,2,3\n"
+  #
+  # ==Example of a multi-dimensional array
+  #
+  #   [[1,2,3],[4,5,6]] => "1,2,3\n4,5,6\n"
+  #
+  # N.b. this method uses the multi-dimensional if the
+  # array's first item will respond to the 'each' method.
 
   def to_csv(ops={})
     s=''
-    CSV::Writer.generate(s) do |csv|
-      self.each do |row|
-        csv << row
+    if size>0 and self[0].respond_to?('each')
+      CSV::Writer.generate(s) do |csv|
+        self.each do |row|
+          csv << row
+        end
+      end
+    else
+      CSV::Writer.generate(s) do |csv|
+        csv << self
       end
     end
     return s
