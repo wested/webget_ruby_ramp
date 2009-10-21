@@ -95,7 +95,7 @@ class ArrayTest < Test::Unit::TestCase
     assert_equal([    'b','c'],a.cdr(1))
     assert_equal([        'c'],a.cdr(2))
     assert_equal([           ],a.cdr(3))
-    assert_equal(             ,a.cdr(4))
+    assert_equal(nil          ,a.cdr(4))
   end
 
   # test_rest must be idential to test_shifted
