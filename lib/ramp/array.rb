@@ -262,12 +262,10 @@ class Array
   # If _n_ is greater than the array size, then return nil.
 
   def shifted!(n=1)
-   if n<size
-     slice!(0,n)
-     return self
-   else
-     return nil
-   end
+   return [] if n==size
+   return nil if n>size
+   slice!(0,n)
+   return self
   end
 
   alias :cdr! :shifted!
