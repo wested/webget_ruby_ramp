@@ -258,10 +258,16 @@ class Array
   #   list=['a','b','c']
   #   list.shifted!(2)
   #   list => ['c']
+  #
+  # If _n_ is greater than the array size, then return nil.
 
   def shifted!(n=1)
-   slice!(0,n)
-   self
+   if n<size
+     slice!(0,n)
+     return self
+   else
+     return nil
+   end
   end
 
   alias :cdr! :shifted!

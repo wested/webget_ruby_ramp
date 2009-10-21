@@ -116,7 +116,7 @@ class ArrayTest < Test::Unit::TestCase
     a=['a','b','c']; a.shifted!(1); assert_equal([    'b','c'],a)
     a=['a','b','c']; a.shifted!(2); assert_equal([        'c'],a)
     a=['a','b','c']; a.shifted!(3); assert_equal([           ],a)
-    a=['a','b','c']; a.shifted!(4); assert_equal(nil         ,a)
+    a=['a','b','c']; a.shifted!(4); assert_equal(nil          ,a)
   end
 
   # alias: test_cdr_bang must be identical to test_shifted_bang
