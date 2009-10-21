@@ -23,8 +23,8 @@ class IO
   # - File#readrow
 
   def IO.readrows(name, options={})
-    row_sep||=options['row']||$/||"\n"
-    col_sep||=options['col']||$;||"\t"
+    row_sep||=options[:row]||$/||"\n"
+    col_sep||=options[:col]||$;||"\t"
     return IO.readlines(name, row_sep).map{|line| line.chomp(row_sep).split(col_sep)}
   end
 
@@ -55,8 +55,8 @@ class IO
   # - File#readrows
 
   def readrow(options={})
-    row_sep||=options['row']||$/||"\n"
-    col_sep||=options['col']||$;||"\t"
+    row_sep||=options[:row]||$/||"\n"
+    col_sep||=options[:col]||$;||"\t"
    return readline(row_sep).chomp(row_sep).split(col_sep)
   end
 

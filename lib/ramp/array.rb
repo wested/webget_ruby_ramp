@@ -260,7 +260,8 @@ class Array
   #   list => ['c']
 
   def shifted!(n=1)
-   slice!(n,self.length-n)
+   slice!(0,n)
+   self
   end
 
   alias :cdr! :shifted!

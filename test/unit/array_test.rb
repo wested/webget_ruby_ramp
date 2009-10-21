@@ -119,7 +119,7 @@ class ArrayTest < Test::Unit::TestCase
     a=['a','b','c']; a.shifted!(4); assert_equal(nil         ,a)
   end
 
-  # alias: test_cdr_band must be identical to test_shifted_bang
+  # alias: test_cdr_bang must be identical to test_shifted_bang
   def test_cdr_bang
     a=['a','b','c']; a.cdr!;    assert_equal([    'b','c'],a)
     a=['a','b','c']; a.cdr!(0); assert_equal(['a','b','c'],a)
