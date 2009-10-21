@@ -21,7 +21,7 @@ class StringTest < Test::Unit::TestCase
 
 
   def test_split_tsv
-    assert_equal([['a','b','c'].['d','e','f'],['g','h','i']],"a\tb\tc\nd\te\tf\ng\th\ti".split_tsv)
+    assert_equal([['a','b','c'],['d','e','f'],['g','h','i']],"a\tb\tc\nd\te\tf\ng\th\ti".split_tsv)
   end
 
 
