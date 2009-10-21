@@ -259,11 +259,9 @@ class Array
   #   list.shifted!(2)
   #   list => ['c']
   #
-  # If _n_ is greater than the array size, then return nil.
+  # If _n_ is greater than the array size, then return []
 
   def shifted!(n=1)
-   return [] if n==size
-   return nil if n>size
    slice!(0,n)
    return self
   end
