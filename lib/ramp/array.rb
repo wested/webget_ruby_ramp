@@ -329,11 +329,11 @@ class Array
   #   [[1,2,3],[4,5,6]] => "1,2,3\n4,5,6\n"
   #
   # N.b. this method uses the multi-dimensional if the
-  # array's first item will respond to the 'each' method.
+  # array's first item is also an array.
 
   def to_csv(ops={})
     s=''
-    if size>0 and self[0].respond_to?('each')
+    if size>0 and self[0].is_a?Array
       CSV::Writer.generate(s) do |csv|
         self.each do |row|
           csv << row
@@ -341,7 +341,7 @@ class Array
       end
     else
       CSV::Writer.generate(s) do |csv|
-        csv << self
+        csv << self.map{|x| x.to_s}
       end
     end
     return s
