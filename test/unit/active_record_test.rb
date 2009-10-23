@@ -3,7 +3,7 @@ require 'ramp'
 require 'active_record'
 require 'sqlite3'
 
-ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :dbfile => ":memory:")
+ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => ":memory:")
 
 ActiveRecord::Schema.define(:version => 1) do
   create_table :foos do |t|
