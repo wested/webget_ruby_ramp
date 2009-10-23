@@ -3,6 +3,8 @@ require 'ramp'
 
 class XMLTest < Test::Unit::TestCase
 
+ @@formatter=REXML::Formatters::Default.new
+
  def test_load_dir_files
   dirpath='test/unit/xml_test_*.xml'
   expect=["test/unit/xml_test_1.xml","test/unit/xml_test_2.xml"]
@@ -23,6 +25,25 @@ class XMLTest < Test::Unit::TestCase
    expect={"a"=>"b","c"=>"d","e"=>"f"}
    actual=doc.elements['foo'].attributes.to_hash
    assert_equal(expect,actual,'XML attributes hash')
+ end
+
+ def test_element_remove_attributes
+   xml='<foo a="b" c="d"><bar e="f" g="h">text</bar></foo>'
+   expect='<foo><bar e="f" g="h">content</bar></foo>'
+   doc=REXML::Document.new(xml)
+   e=doc.elements.first
+   e.remove_attributes
+   actual=doc.to_s
+   assert_equal(expect,actual,'REXML::Document#remove_attributes')
+ end
+
+ def test_document_remove_attributes
+   xml='<foo a="b" c="d"><bar e="f" g="h">text</bar></foo>'
+   expect='<foo><bar>text</bar></foo>'
+   doc=REXML::Document.new(xml)
+   doc.remove_attributes
+   actual=doc.to_s
+   assert_equal(expect,actual,'REXML::Document#remove_attributes')
  end
 
 end

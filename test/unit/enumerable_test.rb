@@ -25,6 +25,10 @@ class EnumerableTest < Test::Unit::TestCase
     assert_equal({:a=>[:b, :c, :d]}, a.to_h)
   end
 
+  def test_maphash
+    assert_equal({"Red"=>3,"Blue"=>4,"Green"=>5},["red","blue","green"].maphash{|x| [x.titlecase,x.size]})
+  end
+
     
   ########################################################################
   #
@@ -50,8 +54,8 @@ class EnumerableTest < Test::Unit::TestCase
   A = Mock.new('a') 
   B = Mock.new('b') 
   C = Mock.new('c') 
-  
 
+  
   def test_map_id
     assert_equal(['a','b','c'],[A,B,C].map_id)
   end

@@ -2,6 +2,7 @@ require 'rexml/document'
 
 module XML
 
+
   # Specify one or more directory patterns and pass each XML file in the matching directories to a block.
   #
   # See [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
@@ -79,6 +80,31 @@ class REXML::Attributes
     h=Hash.new
     self.keys.each{|k| h[k]=self[k]}
     h
+  end
+
+end
+
+
+class REXML::Document
+
+  # Remove all attributes from the document's elements.
+  #
+  # cf. Element#remove_attributes
+
+  def remove_attributes
+    self.elements.each("//") { |e| e.attributes.each_attribute{|attribute| attribute.remove }}
+  end
+  
+end
+
+
+class REXML::Element
+
+  # Remove all attributes from the element.
+  # cf. Document#remove_attributes
+
+  def remove_attributes
+    self.attributes.each_attribute{|attribute| attribute.remove }
   end
 
 end

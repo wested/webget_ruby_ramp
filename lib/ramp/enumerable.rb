@@ -46,7 +46,19 @@ module Enumerable
   #  map
   #  
   ########################################################################
-  
+
+
+  # Map the enumerable to a hash by mapping each item to a key,value pair.
+  #
+  # ==Example
+  #   strings = ["red","blue","green"]
+  #   array.maphash{|item| [item.titlecase, item.size]}
+  #   => {"Red" => 3, "Blue" => 4, "Green" => 5}
+
+  def maphash
+    map{|x| yield(x)}.to_h
+  end
+
 
   # Map each item => item.id
   #

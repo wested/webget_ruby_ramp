@@ -134,6 +134,16 @@ Extensions that help debug Ruby programs.
 * hash: flattens the attributes hash set into a more useful ruby hash, e.g. {:height => 100, :width => 400 }
 
 
+== REXML::Document
+
+* remove_attributes: remove all the attributes from the document's elements
+
+
+== REXML::Element
+
+* remove_attributes: remove all the attributes from the element
+
+
 == String
 
 * capitalize_words (alias to titleize/titlecase): ensures the first character of each word is uppercase.
