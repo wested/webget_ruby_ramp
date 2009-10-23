@@ -6,6 +6,7 @@ class EnumerableTest < Test::Unit::TestCase
 
   ITEMS = ['a','b','c']
   MAPTEST = [123,"456"]
+  RGB = ["red","green","blue"]  
 
 
   ########################################################################
@@ -25,8 +26,12 @@ class EnumerableTest < Test::Unit::TestCase
     assert_equal({:a=>[:b, :c, :d]}, a.to_h)
   end
 
-  def test_maphash
-    assert_equal({"Red"=>3,"Blue"=>4,"Green"=>5},["red","blue","green"].maphash{|x| [x.titlecase,x.size]})
+  def test_index_by
+    assert_equal({3=>"red",4=>"blue",5=>"green"},RGB.index_by{|x| x.size})
+  end
+
+  def test_hash_by
+    assert_equal({3=>"Red",4=>"Blue",5=>"Green"},RGB.hash_by{|x| [x.size,x.titlecase]})
   end
 
     

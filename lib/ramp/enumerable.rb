@@ -41,23 +41,44 @@ module Enumerable
   end
 
 
-  ########################################################################
-  #
-  #  map
-  #  
-  ########################################################################
-
-
-  # Map the enumerable to a hash by mapping each item to a key,value pair.
+  # Convert the enumerable to a hash by mapping each item to a key,item pair.
   #
   # ==Example
   #   strings = ["red","blue","green"]
-  #   array.maphash{|item| [item.titlecase, item.size]}
-  #   => {"Red" => 3, "Blue" => 4, "Green" => 5}
+  #   strings.index_by{|a| a.size]}
+  #   => {3 => "red", 4 => "blue", 5 => "green"}
+  #
+  # Rails has this method.
+  #
+  # From http://stackoverflow.com/questions/412771/cleanest-way-to-create-a-hash-from-an-array
+  #
+  # Compare #hash_by
 
-  def maphash
+  def index_by
+    inject({}) {|hash, elem| hash.merge!(yield(elem) => elem) }
+  end
+
+
+  # Convert the enumerable to a hash by mapping each item to a key,value pair.
+  #
+  # ==Example
+  #   strings = ["red","blue","green"]
+  #   strings.hash_by{|a| [a.size, a.titlecase]}
+  #   => {3 => "red", 4 => "blue", 5 => "green"}
+  #
+  # Compare #index_by
+
+  def hash_by
     map{|x| yield(x)}.to_h
   end
+
+
+
+  ########################################################################
+  #
+  #  map_to_xxx
+  #  
+  ########################################################################
 
 
   # Map each item => item.id
