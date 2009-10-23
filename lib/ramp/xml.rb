@@ -88,11 +88,14 @@ end
 class REXML::Document
 
   # Remove all attributes from the document's elements.
+  # 
+  # Return the document.
   #
   # cf. Element#remove_attributes
 
   def remove_attributes
     self.elements.each("//") { |e| e.attributes.each_attribute{|attribute| attribute.remove }}
+    self
   end
   
 end
@@ -101,10 +104,14 @@ end
 class REXML::Element
 
   # Remove all attributes from the element.
+  #
+  # Return the element.
+  #
   # cf. Document#remove_attributes
 
   def remove_attributes
     self.attributes.each_attribute{|attribute| attribute.remove }
+    self
   end
 
 end
