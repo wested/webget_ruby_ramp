@@ -29,7 +29,7 @@ class XMLTest < Test::Unit::TestCase
 
  def test_element_remove_attributes
    xml="<foo a='b' c='d'><bar e='f' g='h'>text</bar></foo>"
-   expect="<foo><bar e='f' g='h'>content</bar></foo>"
+   expect="<foo><bar e='f' g='h'>text</bar></foo>"
    doc=REXML::Document.new(xml)
    doc.elements.first.remove_attributes
    actual=doc.to_s
