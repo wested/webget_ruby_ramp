@@ -28,22 +28,21 @@ class XMLTest < Test::Unit::TestCase
  end
 
  def test_element_remove_attributes
-   xml='<foo a="b" c="d"><bar e="f" g="h">text</bar></foo>'
-   expect='<foo><bar e="f" g="h">content</bar></foo>'
+   xml="<foo a='b' c='d'><bar e='f' g='h'>text</bar></foo>"
+   expect="<foo><bar e='f' g='h'>content</bar></foo>"
    doc=REXML::Document.new(xml)
-   e=doc.elements.first
-   e.remove_attributes
+   doc.elements.first.remove_attributes
    actual=doc.to_s
-   assert_equal(expect,actual,'REXML::Document#remove_attributes')
+   assert_equal(expect,actual)
  end
 
  def test_document_remove_attributes
-   xml='<foo a="b" c="d"><bar e="f" g="h">text</bar></foo>'
-   expect='<foo><bar>text</bar></foo>'
+   xml="<foo a='b' c='d'><bar e='f' g='h'>text</bar></foo>"
+   expect="<foo><bar>text</bar></foo>"
    doc=REXML::Document.new(xml)
    doc.remove_attributes
    actual=doc.to_s
-   assert_equal(expect,actual,'REXML::Document#remove_attributes')
+   assert_equal(expect,actual)
  end
 
 end
