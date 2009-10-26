@@ -59,6 +59,8 @@ Testing:
 == Enumerable
 
 * cartesian_product: return an array of all possible ordered tuples from arrays.
+* hash_by: convert the array to a hash by mapping each item to a key=>value pair.
+* index_by: convert the array to a hash by mapping each ite to a key=>item pair.
 * join: forwards to self.to_a.join
 * map_id: returns the id of an Enumerable object; *requires* that the object respond to an 'id' message
 * map_to_a, map_to_f, map_to_i, map_to_s, map_to_sym : convert each object to a specific type by calling its respective method to_a, to_i, to_f, to_s, to_sym
@@ -133,6 +135,16 @@ Extensions that help debug Ruby programs.
 * hash: flattens the attributes hash set into a more useful ruby hash, e.g. {:height => 100, :width => 400 }
 
 
+== REXML::Document
+
+* remove_attributes: remove all the attributes from the document's elements
+
+
+== REXML::Element
+
+* remove_attributes: remove all the attributes from the element
+
+
 == String
 
 * capitalize_words (alias to titleize/titlecase): ensures the first character of each word is uppercase.
@@ -172,7 +184,9 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
-- 1.7.0.7 Add Array#to_tsv, String#split_tsv
+- 1.7.1.0 Add XML attributes methods #
+- 1.7.0.9 Add Enumerable #hash_by, #index_by
+- 1.7.0.7 Add Array#to_tsv, String#split_tsv, improve Array#to_csv
 - 1.7.0.6 Add Array#shuffle, Array#shuffle! 
 - 1.7.0.5 Add Array#shifted, Array#rest, Array#car, Array#cdr
 - 1.7.0.4 Upgrade IO#readrows and #readrow to use options

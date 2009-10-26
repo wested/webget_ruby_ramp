@@ -1,0 +1,648 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Class: Numeric [ramp]</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }<\/style>" )
+
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+    <div id="classHeader">
+        <table class="header-table">
+        <tr class="top-aligned-row">
+          <td><strong>Class</strong></td>
+          <td class="class-name-in-header">Numeric</td>
+        </tr>
+        <tr class="top-aligned-row">
+            <td><strong>In:</strong></td>
+            <td>
+
+
+                <a href="../files/lib/ramp/numeric_rb.html">
+
+                lib/ramp/numeric.rb
+
+                </a>
+
+
+        <br />
+
+            </td>
+        </tr>
+
+
+        <tr class="top-aligned-row">
+            <td><strong>Parent:</strong></td>
+            <td>
+
+                <a href="Object.html">
+
+                Object
+
+               </a>
+
+            </td>
+        </tr>
+
+        </table>
+    </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+  <div id="contextContent">
+
+   </div>
+
+
+    <div id="method-list">
+      <h3 class="section-bar">Methods</h3>
+
+      <div class="name-list">
+
+        <a href="#M000048">centi</a>&nbsp;&nbsp;
+
+        <a href="#M000047">deci</a>&nbsp;&nbsp;
+
+        <a href="#M000046">deka</a>&nbsp;&nbsp;
+
+        <a href="#M000042">giga</a>&nbsp;&nbsp;
+
+        <a href="#M000045">hecto</a>&nbsp;&nbsp;
+
+        <a href="#M000038">if</a>&nbsp;&nbsp;
+
+        <a href="#M000044">kilo</a>&nbsp;&nbsp;
+
+        <a href="#M000043">mega</a>&nbsp;&nbsp;
+
+        <a href="#M000050">micro</a>&nbsp;&nbsp;
+
+        <a href="#M000049">milli</a>&nbsp;&nbsp;
+
+        <a href="#M000051">nano</a>&nbsp;&nbsp;
+
+        <a href="#M000040">peta</a>&nbsp;&nbsp;
+
+        <a href="#M000041">tera</a>&nbsp;&nbsp;
+
+        <a href="#M000039">unless</a>&nbsp;&nbsp;
+
+      </div>
+    </div>
+
+  </div>
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+    <!-- if method_list -->
+
+    <div id="methods">
+
+      <h3 class="section-bar">Public Instance methods</h3>
+
+
+      <div id="method-M000048" class="method-detail">
+        <a name="M000048"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000048" class="method-signature">
+
+          <span class="method-name">centi</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Return self * 10^2
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000048-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000048-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/numeric.rb, line 74</span>
+74:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">centi</span>
+75:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">*</span><span class="ruby-value">100</span>
+76:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000047" class="method-detail">
+        <a name="M000047"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000047" class="method-signature">
+
+          <span class="method-name">deci</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Return self * 10
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000047-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000047-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/numeric.rb, line 69</span>
+69:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deci</span>
+70:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">*</span><span class="ruby-value">10</span>
+71:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000046" class="method-detail">
+        <a name="M000046"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000046" class="method-signature">
+
+          <span class="method-name">deka</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Return self / 10
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000046-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000046-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/numeric.rb, line 64</span>
+64:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">deka</span>
+65:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">/</span><span class="ruby-value">10</span>
+66:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000042" class="method-detail">
+        <a name="M000042"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000042" class="method-signature">
+
+          <span class="method-name">giga</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Return self / 10^9
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000042-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000042-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/numeric.rb, line 44</span>
+44:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">giga</span>
+45:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">/</span><span class="ruby-value">1000000000</span>
+46:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000045" class="method-detail">
+        <a name="M000045"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000045" class="method-signature">
+
+          <span class="method-name">hecto</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Return self / 10^2
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000045-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000045-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/numeric.rb, line 59</span>
+59:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hecto</span>
+60:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">/</span><span class="ruby-value">100</span>
+61:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000038" class="method-detail">
+        <a name="M000038"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000038" class="method-signature">
+
+          <span class="method-name">if</span><span class="method-args">(flag)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Return 0 if the given flag is any of: nil, false, 0, [], {}
+</p>
+<p>
+This is useful for multiplying a number if and only if a flag is set.
+</p>
+<h2>Example</h2>
+<pre>
+  sum = x.if(foo) + y.if(bar)
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000038-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000038-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/numeric.rb, line 11</span>
+11:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">if</span>(<span class="ruby-identifier">flag</span>)
+12:   (<span class="ruby-identifier">flag</span><span class="ruby-operator">==</span><span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">flag</span><span class="ruby-operator">==</span><span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">flag</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">flag</span><span class="ruby-operator">==</span>[] <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">flag</span><span class="ruby-operator">==</span>{}) <span class="ruby-operator">?</span> <span class="ruby-value">0</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">self</span>
+13:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000044" class="method-detail">
+        <a name="M000044"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000044" class="method-signature">
+
+          <span class="method-name">kilo</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Return self / 10^3
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000044-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000044-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/numeric.rb, line 54</span>
+54:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">kilo</span>
+55:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">/</span><span class="ruby-value">1000</span>
+56:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000043" class="method-detail">
+        <a name="M000043"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000043" class="method-signature">
+
+          <span class="method-name">mega</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Return self / 10^6
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000043-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000043-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/numeric.rb, line 49</span>
+49:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mega</span>
+50:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">/</span><span class="ruby-value">100000</span>
+51:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000050" class="method-detail">
+        <a name="M000050"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000050" class="method-signature">
+
+          <span class="method-name">micro</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Return self * 10^6
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000050-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000050-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/numeric.rb, line 84</span>
+84:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">micro</span>
+85:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">*</span><span class="ruby-value">1000000</span>
+86:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000049" class="method-detail">
+        <a name="M000049"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000049" class="method-signature">
+
+          <span class="method-name">milli</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Return self * 10^3
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000049-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000049-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/numeric.rb, line 79</span>
+79:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">milli</span>
+80:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">*</span><span class="ruby-value">1000</span>
+81:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000051" class="method-detail">
+        <a name="M000051"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000051" class="method-signature">
+
+          <span class="method-name">nano</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Return self * 10^9
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000051-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000051-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/numeric.rb, line 89</span>
+89:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nano</span>
+90:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">*</span><span class="ruby-value">1000000000</span>
+91:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000040" class="method-detail">
+        <a name="M000040"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000040" class="method-signature">
+
+          <span class="method-name">peta</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Return self / 10^15
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000040-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000040-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/numeric.rb, line 34</span>
+34:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">peta</span>
+35:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">/</span><span class="ruby-value">1000000000000000</span>
+36:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000041" class="method-detail">
+        <a name="M000041"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000041" class="method-signature">
+
+          <span class="method-name">tera</span><span class="method-args">()</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Return self / 10^12
+</p>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000041-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000041-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/numeric.rb, line 39</span>
+39:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tera</span>
+40:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">/</span><span class="ruby-value">1000000000000</span>
+41:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div id="method-M000039" class="method-detail">
+        <a name="M000039"></a>
+
+        <div class="method-heading">
+
+          <a href="#M000039" class="method-signature">
+
+          <span class="method-name">unless</span><span class="method-args">(flag)</span>
+
+          </a>
+
+        </div>
+
+        <div class="method-description">
+
+          <p>
+Return self if flag is nil, false, 0, [], {}; otherwise return 0.
+</p>
+<p>
+This is useful for multiplying a number if and only if a flag is unset.
+</p>
+<h2>Example</h2>
+<pre>
+  sum = w.unless(foo) +y.unless(bar)
+</pre>
+
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000039-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000039-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/ramp/numeric.rb, line 23</span>
+23:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">unless</span>(<span class="ruby-identifier">flag</span>)
+24:   (<span class="ruby-identifier">flag</span><span class="ruby-operator">==</span><span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">flag</span><span class="ruby-operator">==</span><span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">flag</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">flag</span><span class="ruby-operator">==</span>[] <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">flag</span><span class="ruby-operator">==</span>{}) <span class="ruby-operator">?</span> <span class="ruby-keyword kw">self</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+25:  <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+  </div>
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>
