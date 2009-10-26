@@ -31,7 +31,7 @@ class XMLTest < Test::Unit::TestCase
    xml="<foo a='b' c='d'><bar e='f' g='h'>text</bar></foo>"
    expect="<foo><bar e='f' g='h'>text</bar></foo>"
    doc=REXML::Document.new(xml)
-   doc.elements.first.remove_attributes
+   doc.elements[1].remove_attributes
    actual=doc.to_s
    assert_equal(expect,actual)
  end
