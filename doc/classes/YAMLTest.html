@@ -53,9 +53,9 @@
             <td>
 
 
-                <a href="../files/test/unit/yaml_test_rb.html">
+                <a href="../files/test/webget_ramp/yaml_test_rb.html">
 
-                test/unit/yaml_test.rb
+                test/webget_ramp/yaml_test.rb
 
                 </a>
 
@@ -104,6 +104,23 @@
 
     <div id="section">
 
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">MYDIR</td>
+          <td>=</td>
+          <td class="context-item-value">File.join('test','webget_ramp')</td>
+
+        </tr>
+
+        </table>
+      </div>
+    </div>
+
 
 
 
@@ -133,22 +150,22 @@
             onclick="toggleCode('M000120-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000120-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/yaml_test.rb, line 13</span>
-13:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_load_dir</span>
-14:   <span class="ruby-identifier">dirpath</span>=<span class="ruby-value str">'test/unit/yaml_test_*.yml'</span>
-15:   <span class="ruby-identifier">expect</span>=[
-16:    <span class="ruby-value str">&quot;a:a1,a10,a2,a20,a3,a30b:b1,b10,b2,b20,b3,b30c:c1,c10,c2,c20,c3,c30&quot;</span>, 
-17:    <span class="ruby-value str">&quot;d:d1,d10,d2,d20,d3,d30e:e1,e10,e2,e20,e3,e30f:f1,f10,f2,f20,f3,f30&quot;</span>, 
-18:    <span class="ruby-value str">&quot;g:g1,g10,g2,g20,g3,g30h:h1,h10,h2,h20,h3,h30i:i1,i10,i2,i20,i3,i30&quot;</span>,
-19:    <span class="ruby-value str">&quot;k:k1,k10,k2,k20,k3,k30l:l1,l10,l2,l20,l3,l30j:j1,j10,j2,j20,j3,j30&quot;</span>,
-20:    <span class="ruby-value str">&quot;m:m1,m10,m2,m20,m3,m30n:n1,n10,n2,n20,n3,n30o:o1,o10,o2,o20,o3,o30&quot;</span>, 
-21:    <span class="ruby-value str">&quot;p:p1,p10,p2,p20,p3,p30q:q1,q10,q2,q20,q3,q30r:r1,r10,r2,r20,r3,r30&quot;</span>, 
-22:   ]
-23:   <span class="ruby-identifier">actual</span>=[]
-24:   <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-identifier">dirpath</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span> <span class="ruby-identifier">actual</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>=<span class="ruby-identifier">doc</span>[<span class="ruby-identifier">k</span>]; <span class="ruby-node">&quot;#{k}:#{v.sort.join(&quot;,&quot;)}&quot;</span> }.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;&quot;</span>) }
-25:   <span class="ruby-identifier">actual</span>.<span class="ruby-identifier">sort!</span>
-26:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-value str">'YAML.load_dir'</span>)
-27:  <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File test/webget_ramp/yaml_test.rb, line 15</span>
+15:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_load_dir</span>
+16:   <span class="ruby-identifier">dirpath</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'yaml_test_*.yml'</span>)
+17:   <span class="ruby-identifier">expect</span>=[
+18:    <span class="ruby-value str">&quot;a:a1,a10,a2,a20,a3,a30b:b1,b10,b2,b20,b3,b30c:c1,c10,c2,c20,c3,c30&quot;</span>, 
+19:    <span class="ruby-value str">&quot;d:d1,d10,d2,d20,d3,d30e:e1,e10,e2,e20,e3,e30f:f1,f10,f2,f20,f3,f30&quot;</span>, 
+20:    <span class="ruby-value str">&quot;g:g1,g10,g2,g20,g3,g30h:h1,h10,h2,h20,h3,h30i:i1,i10,i2,i20,i3,i30&quot;</span>,
+21:    <span class="ruby-value str">&quot;j:j1,j10,j2,j20,j3,j30k:k1,k10,k2,k20,k3,k30l:l1,l10,l2,l20,l3,l30&quot;</span>,
+22:    <span class="ruby-value str">&quot;m:m1,m10,m2,m20,m3,m30n:n1,n10,n2,n20,n3,n30o:o1,o10,o2,o20,o3,o30&quot;</span>, 
+23:    <span class="ruby-value str">&quot;p:p1,p10,p2,p20,p3,p30q:q1,q10,q2,q20,q3,q30r:r1,r10,r2,r20,r3,r30&quot;</span>, 
+24:   ]
+25:   <span class="ruby-identifier">actual</span>=[]
+26:   <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-identifier">dirpath</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span> <span class="ruby-identifier">actual</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>=<span class="ruby-identifier">doc</span>[<span class="ruby-identifier">k</span>]; <span class="ruby-node">&quot;#{k}:#{v.sort.join(&quot;,&quot;)}&quot;</span> }.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;&quot;</span>) }
+27:   <span class="ruby-identifier">actual</span>.<span class="ruby-identifier">sort!</span>
+28:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-value str">'YAML.load_dir'</span>)
+29:  <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
 
@@ -175,13 +192,13 @@
             onclick="toggleCode('M000119-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000119-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/yaml_test.rb, line 6</span>
- 6:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_load_dir_files</span>
- 7:   <span class="ruby-identifier">dirpath</span>=<span class="ruby-value str">'test/unit/yaml_test_*.yml'</span>
- 8:   <span class="ruby-identifier">expect</span>=[<span class="ruby-value str">&quot;test/unit/yaml_test_1.yml&quot;</span>,<span class="ruby-value str">&quot;test/unit/yaml_test_2.yml&quot;</span>]
- 9:   <span class="ruby-identifier">actual</span>=<span class="ruby-constant">Dir</span>[<span class="ruby-identifier">dirpath</span>].<span class="ruby-identifier">sort</span>
-10:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-node">&quot;Dir[#{dirpath}] expects test data files&quot;</span>)
-11:  <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File test/webget_ramp/yaml_test.rb, line 8</span>
+ 8:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_load_dir_files</span>
+ 9:   <span class="ruby-identifier">dirpath</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'yaml_test_*.yml'</span>)
+10:   <span class="ruby-identifier">expect</span>=[<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'yaml_test_1.yml'</span>),<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'yaml_test_2.yml'</span>)]
+11:   <span class="ruby-identifier">actual</span>=<span class="ruby-constant">Dir</span>[<span class="ruby-identifier">dirpath</span>].<span class="ruby-identifier">sort</span>
+12:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-node">&quot;Dir[#{dirpath}] expects test data files&quot;</span>)
+13:  <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
 

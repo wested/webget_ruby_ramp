@@ -53,9 +53,9 @@
             <td>
 
 
-                <a href="../files/test/unit/xml_test_rb.html">
+                <a href="../files/test/webget_ramp/xml_test_rb.html">
 
-                test/unit/xml_test.rb
+                test/webget_ramp/xml_test.rb
 
                 </a>
 
@@ -110,6 +110,23 @@
 
     <div id="section">
 
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">MYDIR</td>
+          <td>=</td>
+          <td class="context-item-value">File.join('test','webget_ramp')</td>
+
+        </tr>
+
+        </table>
+      </div>
+    </div>
+
 
 
 
@@ -139,13 +156,13 @@
             onclick="toggleCode('M000133-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000133-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/xml_test.rb, line 23</span>
-23:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_attributes_to_hash</span>
-24:    <span class="ruby-identifier">doc</span>=<span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">'&lt;foo a=&quot;b&quot; c=&quot;d&quot; e=&quot;f&quot;/&gt;'</span>)
-25:    <span class="ruby-identifier">expect</span>={<span class="ruby-value str">&quot;a&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;b&quot;</span>,<span class="ruby-value str">&quot;c&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;d&quot;</span>,<span class="ruby-value str">&quot;e&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;f&quot;</span>}
-26:    <span class="ruby-identifier">actual</span>=<span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value str">'foo'</span>].<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">to_hash</span>
-27:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-value str">'XML attributes hash'</span>)
-28:  <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File test/webget_ramp/xml_test.rb, line 24</span>
+24:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_attributes_to_hash</span>
+25:    <span class="ruby-identifier">doc</span>=<span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">'&lt;foo a=&quot;b&quot; c=&quot;d&quot; e=&quot;f&quot;/&gt;'</span>)
+26:    <span class="ruby-identifier">expect</span>={<span class="ruby-value str">&quot;a&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;b&quot;</span>,<span class="ruby-value str">&quot;c&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;d&quot;</span>,<span class="ruby-value str">&quot;e&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;f&quot;</span>}
+27:    <span class="ruby-identifier">actual</span>=<span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value str">'foo'</span>].<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">to_hash</span>
+28:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-value str">'XML attributes hash'</span>)
+29:  <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
 
@@ -172,15 +189,15 @@
             onclick="toggleCode('M000135-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000135-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/xml_test.rb, line 39</span>
-39:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_document_remove_attributes</span>
-40:    <span class="ruby-identifier">xml</span>=<span class="ruby-value str">&quot;&lt;foo a='b' c='d'&gt;&lt;bar e='f' g='h'&gt;text&lt;/bar&gt;&lt;/foo&gt;&quot;</span>
-41:    <span class="ruby-identifier">expect</span>=<span class="ruby-value str">&quot;&lt;foo&gt;&lt;bar&gt;text&lt;/bar&gt;&lt;/foo&gt;&quot;</span>
-42:    <span class="ruby-identifier">doc</span>=<span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">xml</span>)
-43:    <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">remove_attributes</span>
-44:    <span class="ruby-identifier">actual</span>=<span class="ruby-identifier">doc</span>.<span class="ruby-identifier">to_s</span>
-45:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>)
-46:  <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File test/webget_ramp/xml_test.rb, line 40</span>
+40:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_document_remove_attributes</span>
+41:    <span class="ruby-identifier">xml</span>=<span class="ruby-value str">&quot;&lt;foo a='b' c='d'&gt;&lt;bar e='f' g='h'&gt;text&lt;/bar&gt;&lt;/foo&gt;&quot;</span>
+42:    <span class="ruby-identifier">expect</span>=<span class="ruby-value str">&quot;&lt;foo&gt;&lt;bar&gt;text&lt;/bar&gt;&lt;/foo&gt;&quot;</span>
+43:    <span class="ruby-identifier">doc</span>=<span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">xml</span>)
+44:    <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">remove_attributes</span>
+45:    <span class="ruby-identifier">actual</span>=<span class="ruby-identifier">doc</span>.<span class="ruby-identifier">to_s</span>
+46:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>)
+47:  <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
 
@@ -207,15 +224,15 @@
             onclick="toggleCode('M000134-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000134-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/xml_test.rb, line 30</span>
-30:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_element_remove_attributes</span>
-31:    <span class="ruby-identifier">xml</span>=<span class="ruby-value str">&quot;&lt;foo a='b' c='d'&gt;&lt;bar e='f' g='h'&gt;text&lt;/bar&gt;&lt;/foo&gt;&quot;</span>
-32:    <span class="ruby-identifier">expect</span>=<span class="ruby-value str">&quot;&lt;foo&gt;&lt;bar e='f' g='h'&gt;text&lt;/bar&gt;&lt;/foo&gt;&quot;</span>
-33:    <span class="ruby-identifier">doc</span>=<span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">xml</span>)
-34:    <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">remove_attributes</span>
-35:    <span class="ruby-identifier">actual</span>=<span class="ruby-identifier">doc</span>.<span class="ruby-identifier">to_s</span>
-36:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>)
-37:  <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File test/webget_ramp/xml_test.rb, line 31</span>
+31:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_element_remove_attributes</span>
+32:    <span class="ruby-identifier">xml</span>=<span class="ruby-value str">&quot;&lt;foo a='b' c='d'&gt;&lt;bar e='f' g='h'&gt;text&lt;/bar&gt;&lt;/foo&gt;&quot;</span>
+33:    <span class="ruby-identifier">expect</span>=<span class="ruby-value str">&quot;&lt;foo&gt;&lt;bar e='f' g='h'&gt;text&lt;/bar&gt;&lt;/foo&gt;&quot;</span>
+34:    <span class="ruby-identifier">doc</span>=<span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">xml</span>)
+35:    <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">remove_attributes</span>
+36:    <span class="ruby-identifier">actual</span>=<span class="ruby-identifier">doc</span>.<span class="ruby-identifier">to_s</span>
+37:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>)
+38:  <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
 
@@ -242,14 +259,14 @@
             onclick="toggleCode('M000132-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000132-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/xml_test.rb, line 15</span>
-15:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_load_dir</span>
-16:   <span class="ruby-identifier">dirpath</span>=<span class="ruby-value str">'test/unit/xml_test_*.xml'</span>
-17:   <span class="ruby-identifier">expect</span>=<span class="ruby-value str">&quot;abcdef&quot;</span>
-18:   <span class="ruby-identifier">actual</span>=<span class="ruby-value str">''</span>
-19:   <span class="ruby-constant">XML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-identifier">dirpath</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-value str">'foo/bar'</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">actual</span><span class="ruby-operator">+=</span><span class="ruby-identifier">e</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-value str">'x'</span>]}}
-20:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-value str">'XML.load_dir'</span>)
-21:  <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File test/webget_ramp/xml_test.rb, line 16</span>
+16:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_load_dir</span>
+17:   <span class="ruby-identifier">dirpath</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'xml_test_*.xml'</span>)
+18:   <span class="ruby-identifier">expect</span>=<span class="ruby-value str">&quot;abcdef&quot;</span>
+19:   <span class="ruby-identifier">actual</span>=<span class="ruby-value str">''</span>
+20:   <span class="ruby-constant">XML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-identifier">dirpath</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span> <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">elements</span>.<span class="ruby-identifier">each</span>(<span class="ruby-value str">'foo/bar'</span>){<span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">actual</span><span class="ruby-operator">+=</span><span class="ruby-identifier">e</span>.<span class="ruby-identifier">attributes</span>[<span class="ruby-value str">'x'</span>]}}
+21:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-value str">'XML.load_dir'</span>)
+22:  <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
 
@@ -276,13 +293,13 @@
             onclick="toggleCode('M000131-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000131-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/xml_test.rb, line 8</span>
- 8:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_load_dir_files</span>
- 9:   <span class="ruby-identifier">dirpath</span>=<span class="ruby-value str">'test/unit/xml_test_*.xml'</span>
-10:   <span class="ruby-identifier">expect</span>=[<span class="ruby-value str">&quot;test/unit/xml_test_1.xml&quot;</span>,<span class="ruby-value str">&quot;test/unit/xml_test_2.xml&quot;</span>]
-11:   <span class="ruby-identifier">actual</span>=<span class="ruby-constant">Dir</span>[<span class="ruby-identifier">dirpath</span>].<span class="ruby-identifier">sort</span>
-12:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-node">&quot;Dir[#{dirpath}] expects test data files&quot;</span>)
-13:  <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File test/webget_ramp/xml_test.rb, line 9</span>
+ 9:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_load_dir_files</span>
+10:   <span class="ruby-identifier">dirpath</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'xml_test_*.xml'</span>)
+11:   <span class="ruby-identifier">expect</span>=[<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'xml_test_1.xml'</span>),<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'xml_test_2.xml'</span>)]
+12:   <span class="ruby-identifier">actual</span>=<span class="ruby-constant">Dir</span>[<span class="ruby-identifier">dirpath</span>].<span class="ruby-identifier">sort</span>
+13:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-node">&quot;Dir[#{dirpath}] expects test data files&quot;</span>)
+14:  <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
 

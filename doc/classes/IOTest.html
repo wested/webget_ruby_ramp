@@ -53,9 +53,9 @@
             <td>
 
 
-                <a href="../files/test/unit/io_test_rb.html">
+                <a href="../files/test/webget_ramp/io_test_rb.html">
 
-                test/unit/io_test.rb
+                test/webget_ramp/io_test.rb
 
                 </a>
 
@@ -106,6 +106,23 @@
 
     <div id="section">
 
+    <div id="constants-list">
+      <h3 class="section-bar">Constants</h3>
+
+      <div class="name-list">
+        <table summary="Constants">
+
+        <tr class="top-aligned-row context-row">
+          <td class="context-item-name">MYDIR</td>
+          <td>=</td>
+          <td class="context-item-value">File.join('test','webget_ramp')</td>
+
+        </tr>
+
+        </table>
+      </div>
+    </div>
+
 
 
 
@@ -135,13 +152,13 @@
             onclick="toggleCode('M000187-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000187-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/io_test.rb, line 6</span>
- 6:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_load_dir_files</span>
- 7:    <span class="ruby-identifier">dirpath</span>=<span class="ruby-value str">'test/unit/io_test*'</span>
- 8:    <span class="ruby-identifier">expect</span>=[<span class="ruby-value str">&quot;test/unit/io_test.rb&quot;</span>,<span class="ruby-value str">&quot;test/unit/io_test.txt&quot;</span>]
- 9:    <span class="ruby-identifier">actual</span>=<span class="ruby-constant">Dir</span>[<span class="ruby-identifier">dirpath</span>].<span class="ruby-identifier">sort</span>
-10:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-node">&quot;Dir[#{dirpath}] expects test data files&quot;</span>)
-11:  <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File test/webget_ramp/io_test.rb, line 8</span>
+ 8:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_load_dir_files</span>
+ 9:    <span class="ruby-identifier">dirpath</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'io_test*'</span>)
+10:    <span class="ruby-identifier">expect</span>=[<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'io_test.rb'</span>),<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'io_test.txt'</span>)]
+11:    <span class="ruby-identifier">actual</span>=<span class="ruby-constant">Dir</span>[<span class="ruby-identifier">dirpath</span>].<span class="ruby-identifier">sort</span>
+12:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>,<span class="ruby-node">&quot;Dir[#{dirpath}] expects test data files&quot;</span>)
+13:  <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
 
@@ -168,14 +185,14 @@
             onclick="toggleCode('M000188-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000188-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/io_test.rb, line 13</span>
-13:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_readrow</span>
-14:   <span class="ruby-identifier">filename</span>=<span class="ruby-constant">Dir</span>[<span class="ruby-value str">'test/unit/io_test.txt'</span>].<span class="ruby-identifier">first</span>
-15:   <span class="ruby-identifier">f</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>)
-16:   <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;A1&quot;</span>,<span class="ruby-value str">&quot;B1&quot;</span>,<span class="ruby-value str">&quot;C1&quot;</span>],<span class="ruby-identifier">f</span>.<span class="ruby-identifier">readrow</span>(<span class="ruby-identifier">:row=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;=&quot;</span>,<span class="ruby-identifier">:col=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;-&quot;</span>))
-17:   <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;A2&quot;</span>,<span class="ruby-value str">&quot;B2&quot;</span>,<span class="ruby-value str">&quot;C2&quot;</span>],<span class="ruby-identifier">f</span>.<span class="ruby-identifier">readrow</span>(<span class="ruby-identifier">:row=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;=&quot;</span>,<span class="ruby-identifier">:col=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;-&quot;</span>))
-18:   <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;A3&quot;</span>,<span class="ruby-value str">&quot;B3&quot;</span>,<span class="ruby-value str">&quot;C3&quot;</span>],<span class="ruby-identifier">f</span>.<span class="ruby-identifier">readrow</span>(<span class="ruby-identifier">:row=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;=&quot;</span>,<span class="ruby-identifier">:col=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;-&quot;</span>))
-19:  <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File test/webget_ramp/io_test.rb, line 15</span>
+15:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_readrow</span>
+16:    <span class="ruby-identifier">filename</span>=<span class="ruby-constant">Dir</span>[<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'io_test.txt'</span>)].<span class="ruby-identifier">first</span>
+17:    <span class="ruby-identifier">f</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>)
+18:    <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;A1&quot;</span>,<span class="ruby-value str">&quot;B1&quot;</span>,<span class="ruby-value str">&quot;C1&quot;</span>],<span class="ruby-identifier">f</span>.<span class="ruby-identifier">readrow</span>(<span class="ruby-identifier">:row=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;=&quot;</span>,<span class="ruby-identifier">:col=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;-&quot;</span>))
+19:    <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;A2&quot;</span>,<span class="ruby-value str">&quot;B2&quot;</span>,<span class="ruby-value str">&quot;C2&quot;</span>],<span class="ruby-identifier">f</span>.<span class="ruby-identifier">readrow</span>(<span class="ruby-identifier">:row=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;=&quot;</span>,<span class="ruby-identifier">:col=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;-&quot;</span>))
+20:    <span class="ruby-identifier">assert_equal</span>([<span class="ruby-value str">&quot;A3&quot;</span>,<span class="ruby-value str">&quot;B3&quot;</span>,<span class="ruby-value str">&quot;C3&quot;</span>],<span class="ruby-identifier">f</span>.<span class="ruby-identifier">readrow</span>(<span class="ruby-identifier">:row=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;=&quot;</span>,<span class="ruby-identifier">:col=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;-&quot;</span>))
+21:  <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
 
@@ -202,13 +219,13 @@
             onclick="toggleCode('M000189-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000189-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/io_test.rb, line 21</span>
-21:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_readrows</span>
-22:   <span class="ruby-identifier">filename</span>=<span class="ruby-constant">Dir</span>[<span class="ruby-value str">'test/unit/io_test.txt'</span>].<span class="ruby-identifier">first</span>
-23:   <span class="ruby-identifier">expect</span>=[[<span class="ruby-value str">&quot;A1&quot;</span>,<span class="ruby-value str">&quot;B1&quot;</span>,<span class="ruby-value str">&quot;C1&quot;</span>],[<span class="ruby-value str">&quot;A2&quot;</span>,<span class="ruby-value str">&quot;B2&quot;</span>,<span class="ruby-value str">&quot;C2&quot;</span>],[<span class="ruby-value str">&quot;A3&quot;</span>,<span class="ruby-value str">&quot;B3&quot;</span>,<span class="ruby-value str">&quot;C3&quot;</span>]]
-24:   <span class="ruby-identifier">actual</span>=<span class="ruby-constant">IO</span>.<span class="ruby-identifier">readrows</span>(<span class="ruby-identifier">filename</span>,<span class="ruby-identifier">:row=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;=&quot;</span>,<span class="ruby-identifier">:col=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;-&quot;</span>)
-25:   <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>)
-26:  <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File test/webget_ramp/io_test.rb, line 23</span>
+23:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_readrows</span>
+24:    <span class="ruby-identifier">filename</span>=<span class="ruby-constant">Dir</span>[<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'io_test.txt'</span>)].<span class="ruby-identifier">first</span>
+25:    <span class="ruby-identifier">expect</span>=[[<span class="ruby-value str">&quot;A1&quot;</span>,<span class="ruby-value str">&quot;B1&quot;</span>,<span class="ruby-value str">&quot;C1&quot;</span>],[<span class="ruby-value str">&quot;A2&quot;</span>,<span class="ruby-value str">&quot;B2&quot;</span>,<span class="ruby-value str">&quot;C2&quot;</span>],[<span class="ruby-value str">&quot;A3&quot;</span>,<span class="ruby-value str">&quot;B3&quot;</span>,<span class="ruby-value str">&quot;C3&quot;</span>]]
+26:    <span class="ruby-identifier">actual</span>=<span class="ruby-constant">IO</span>.<span class="ruby-identifier">readrows</span>(<span class="ruby-identifier">filename</span>,<span class="ruby-identifier">:row=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;=&quot;</span>,<span class="ruby-identifier">:col=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;-&quot;</span>)
+27:    <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">expect</span>,<span class="ruby-identifier">actual</span>)
+28:  <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
 
