@@ -53,9 +53,9 @@
             <td>
 
 
-                <a href="../files/lib/ramp/array_rb.html">
+                <a href="../files/lib/webget_ramp/array_rb.html">
 
-                lib/ramp/array.rb
+                lib/webget_ramp/array.rb
 
                 </a>
 
@@ -244,7 +244,7 @@ Implemented in Ruby 1.9
             onclick="toggleCode('M000056-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000056-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 79</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/array.rb, line 79</span>
 79:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">choice</span>
 80:     <span class="ruby-keyword kw">self</span>[<span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">size</span>)]
 81:   <span class="ruby-keyword kw">end</span>
@@ -283,7 +283,7 @@ Return a new array filled with <em>n</em> calls to choice
             onclick="toggleCode('M000057-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000057-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 90</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/array.rb, line 90</span>
 90:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">choices</span>(<span class="ruby-identifier">n</span>)
 91:     <span class="ruby-identifier">a</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
 92:     <span class="ruby-identifier">n</span>.<span class="ruby-identifier">times</span> { <span class="ruby-identifier">a</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">choice</span> }
@@ -340,7 +340,7 @@ slices as it can.
             onclick="toggleCode('M000060-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000060-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 160</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/array.rb, line 160</span>
 160:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">divvy</span>(<span class="ruby-identifier">number_of_slices</span>)
 161:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">slices</span>((<span class="ruby-identifier">length</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-identifier">number_of_slices</span>.<span class="ruby-identifier">to_f</span>).<span class="ruby-identifier">ceil</span>)
 162:   <span class="ruby-keyword kw">end</span>
@@ -386,7 +386,7 @@ item is an array.
             onclick="toggleCode('M000062-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000062-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 207</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/array.rb, line 207</span>
 207:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">intersect</span>
 208:     <span class="ruby-identifier">inject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">inj</span>,<span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">inj</span> <span class="ruby-operator">&amp;</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_a</span> }
 209:   <span class="ruby-keyword kw">end</span>
@@ -435,7 +435,7 @@ Concatenate the items into a string by join.
             onclick="toggleCode('M000052-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000052-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 23</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/array.rb, line 23</span>
 23:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">join</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">fixes</span>)
 24:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">fixes</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-keyword kw">then</span> <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ruby_join</span>(<span class="ruby-identifier">fixes</span>) <span class="ruby-keyword kw">end</span>
 25:     <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">fixes</span>.<span class="ruby-identifier">size</span>
@@ -496,7 +496,7 @@ This is identical to calling foo.zip(values).to_h
             onclick="toggleCode('M000058-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000058-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 107</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/array.rb, line 107</span>
 107:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">onto</span>(<span class="ruby-identifier">values</span>)
 108:     <span class="ruby-identifier">zip</span>(<span class="ruby-identifier">values</span>).<span class="ruby-identifier">to_h</span>
 109:   <span class="ruby-keyword kw">end</span>
@@ -576,7 +576,7 @@ Return self
             onclick="toggleCode('M000055-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000055-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 64</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/array.rb, line 64</span>
 64:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rotate!</span>
 65:     <span class="ruby-identifier">push</span> <span class="ruby-identifier">x</span>=<span class="ruby-identifier">shift</span>
 66:     <span class="ruby-keyword kw">self</span>
@@ -657,7 +657,7 @@ LISP programmers may prefer this alias wording:
             onclick="toggleCode('M000063-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000063-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 241</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/array.rb, line 241</span>
 241:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">shifted</span>(<span class="ruby-identifier">n</span>=<span class="ruby-value">1</span>)
 242:    <span class="ruby-identifier">slice</span>(<span class="ruby-identifier">n</span>,<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-identifier">n</span>)
 243:   <span class="ruby-keyword kw">end</span>
@@ -707,7 +707,7 @@ If <em>n</em> is greater than the array size, then return []
             onclick="toggleCode('M000066-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000066-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 264</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/array.rb, line 264</span>
 264:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">shifted!</span>(<span class="ruby-identifier">n</span>=<span class="ruby-value">1</span>)
 265:    <span class="ruby-identifier">slice!</span>(<span class="ruby-value">0</span>,<span class="ruby-identifier">n</span>)
 266:    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
@@ -738,7 +738,7 @@ If <em>n</em> is greater than the array size, then return []
             onclick="toggleCode('M000070-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000070-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 310</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/array.rb, line 310</span>
 310:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">shuffle</span>  
 311:       <span class="ruby-identifier">dup</span>.<span class="ruby-identifier">shuffle!</span>  
 312:     <span class="ruby-keyword kw">end</span>
@@ -768,7 +768,7 @@ If <em>n</em> is greater than the array size, then return []
             onclick="toggleCode('M000069-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000069-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 287</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/array.rb, line 287</span>
 287:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">shuffle!</span>  
 288:       <span class="ruby-identifier">each_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> 
 289:         <span class="ruby-identifier">j</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-identifier">i</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>
@@ -810,7 +810,7 @@ Return true if size > 0
             onclick="toggleCode('M000054-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000054-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 51</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/array.rb, line 51</span>
 51:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">size?</span>
 52:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>
 53:   <span class="ruby-keyword kw">end</span>
@@ -857,7 +857,7 @@ If the slices don&#8217;t divide evenly, then the last is smaller.
             onclick="toggleCode('M000059-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000059-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 131</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/array.rb, line 131</span>
 131:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">slices</span>(<span class="ruby-identifier">slice_length</span>)
 132:     <span class="ruby-identifier">a</span>=[]
 133:     <span class="ruby-identifier">i</span>=<span class="ruby-value">0</span>
@@ -910,7 +910,7 @@ is also an array.
             onclick="toggleCode('M000071-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000071-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 337</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/array.rb, line 337</span>
 337:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_csv</span>(<span class="ruby-identifier">ops</span>={})
 338:     <span class="ruby-identifier">s</span>=<span class="ruby-value str">''</span>
 339:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">is_a?</span><span class="ruby-constant">Array</span>
@@ -979,7 +979,7 @@ Each subarray becomes one &#8216;line&#8217; in the output.
             onclick="toggleCode('M000072-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000072-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 359</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/array.rb, line 359</span>
 359:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_tsv</span>(<span class="ruby-identifier">ops</span>={})
 360:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span> <span class="ruby-identifier">row</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\t&quot;</span>)<span class="ruby-operator">+</span><span class="ruby-value str">&quot;\n&quot;</span>}.<span class="ruby-identifier">join</span>
 361:   <span class="ruby-keyword kw">end</span>
@@ -1015,7 +1015,7 @@ Each subarray becomes one &#8216;line&#8217; in the output.
             onclick="toggleCode('M000061-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000061-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/array.rb, line 190</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/array.rb, line 190</span>
 190:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">union</span>
 191:     <span class="ruby-identifier">inject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">inj</span>,<span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">inj</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_a</span> }
 192:   <span class="ruby-keyword kw">end</span>

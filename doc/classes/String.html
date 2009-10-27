@@ -53,9 +53,9 @@
             <td>
 
 
-                <a href="../files/lib/ramp/string_rb.html">
+                <a href="../files/lib/webget_ramp/string_rb.html">
 
-                lib/ramp/string.rb
+                lib/webget_ramp/string.rb
 
                 </a>
 
@@ -228,7 +228,7 @@ This method defaults to length = self.lorem_length.
             onclick="toggleCode('M000035-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000035-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 214</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/string.rb, line 214</span>
 214:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lorem</span>(<span class="ruby-identifier">length</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lorem_length</span>)
 215:   [<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>,<span class="ruby-value str">'d'</span>,<span class="ruby-value str">'e'</span>,<span class="ruby-value str">'f'</span>,<span class="ruby-value str">'g'</span>,<span class="ruby-value str">'h'</span>,<span class="ruby-value str">'i'</span>,<span class="ruby-value str">'j'</span>,<span class="ruby-value str">'k'</span>,<span class="ruby-value str">'l'</span>,<span class="ruby-value str">'m'</span>,<span class="ruby-value str">'n'</span>,<span class="ruby-value str">'o'</span>,<span class="ruby-value str">'p'</span>,<span class="ruby-value str">'q'</span>,<span class="ruby-value str">'r'</span>,<span class="ruby-value str">'s'</span>,<span class="ruby-value str">'t'</span>,<span class="ruby-value str">'u'</span>,<span class="ruby-value str">'v'</span>,<span class="ruby-value str">'w'</span>,<span class="ruby-value str">'x'</span>,<span class="ruby-value str">'y'</span>,<span class="ruby-value str">'z'</span>].<span class="ruby-identifier">choices</span>(<span class="ruby-identifier">length</span>).<span class="ruby-identifier">join</span>
 216:  <span class="ruby-keyword kw">end</span>
@@ -265,7 +265,7 @@ This method uses 1+rand(10)
             onclick="toggleCode('M000034-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000034-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 204</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/string.rb, line 204</span>
 204:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lorem_length</span>
 205:   <span class="ruby-value">1</span><span class="ruby-operator">+</span><span class="ruby-identifier">rand</span>(<span class="ruby-value">10</span>)
 206:  <span class="ruby-keyword kw">end</span>
@@ -307,7 +307,7 @@ Return the previous character, with a changed flag and carry flag
             onclick="toggleCode('M000029-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000029-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 129</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/string.rb, line 129</span>
 129:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-identifier">c</span>) <span class="ruby-comment cmt">#=&gt; prev_char, changed_flag, carry_flag</span>
 130:   <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">c</span>
 131:   <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'1'</span><span class="ruby-operator">..</span><span class="ruby-value str">'9'</span>, <span class="ruby-value str">'B'</span><span class="ruby-operator">..</span><span class="ruby-value str">'Z'</span>, <span class="ruby-value str">'b'</span><span class="ruby-operator">..</span><span class="ruby-value str">'z'</span>
@@ -356,7 +356,7 @@ Return the string with words capitalized
             onclick="toggleCode('M000020-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000020-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 33</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/string.rb, line 33</span>
 33:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">capitalize_words</span>
 34:   <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\b/</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">capitalize</span> }.<span class="ruby-identifier">join</span>
 35:  <span class="ruby-keyword kw">end</span>
@@ -401,7 +401,7 @@ Decrement the rightmost natural number
             onclick="toggleCode('M000028-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000028-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 115</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/string.rb, line 115</span>
 115:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">decrement</span>(<span class="ruby-identifier">step</span>=<span class="ruby-value">1</span>)
 116:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">=~</span><span class="ruby-regexp re">/\d+/</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">$`</span><span class="ruby-operator">+</span>(<span class="ruby-identifier">$&amp;</span>.<span class="ruby-identifier">to_i</span><span class="ruby-operator">-</span><span class="ruby-identifier">step</span>).<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-identifier">$'</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">self</span>
 117:  <span class="ruby-keyword kw">end</span>
@@ -446,7 +446,7 @@ Increment the rightmost natural number
             onclick="toggleCode('M000027-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000027-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 101</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/string.rb, line 101</span>
 101:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">increment</span>(<span class="ruby-identifier">step</span>=<span class="ruby-value">1</span>)
 102:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">=~</span><span class="ruby-regexp re">/\d+/</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">$`</span><span class="ruby-operator">+</span>(<span class="ruby-identifier">$&amp;</span>.<span class="ruby-identifier">to_i</span><span class="ruby-operator">+</span><span class="ruby-identifier">step</span>).<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-identifier">$'</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">self</span>
 103:  <span class="ruby-keyword kw">end</span>
@@ -486,7 +486,7 @@ single underscores (aka low dashes).
             onclick="toggleCode('M000024-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000024-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 68</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/string.rb, line 68</span>
 68:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lowcase</span>
 69:   <span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/[_\W]+/</span>,<span class="ruby-value str">'_'</span>)
 70:  <span class="ruby-keyword kw">end</span>
@@ -574,7 +574,7 @@ Return the previous string
             onclick="toggleCode('M000030-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000030-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 160</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/string.rb, line 160</span>
 160:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">prev</span>
 161:   <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">clone</span>.<span class="ruby-identifier">prev!</span>
 162:  <span class="ruby-keyword kw">end</span>
@@ -608,7 +608,7 @@ Do <a href="String.html#M000030">String#prev</a> in place
             onclick="toggleCode('M000031-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000031-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 167</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/string.rb, line 167</span>
 167:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">prev!</span>
 168:   <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">length</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>
 169:   <span class="ruby-identifier">i</span>=<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span> <span class="ruby-comment cmt"># rightmost</span>
@@ -652,7 +652,7 @@ Return an array that is the string split at tabs, i.e. split(/t/)
             onclick="toggleCode('M000022-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000022-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 47</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/string.rb, line 47</span>
 47:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">split_tab</span>
 48:   <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\t/</span>)
 49:  <span class="ruby-keyword kw">end</span>
@@ -688,7 +688,7 @@ and each row into an array of fields.
             onclick="toggleCode('M000023-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000023-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 56</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/string.rb, line 56</span>
 56:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">split_tsv</span>
 57:    <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\n/</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\t/</span>)}
 58:  <span class="ruby-keyword kw">end</span>
@@ -727,7 +727,7 @@ href="http://infovore.org/archives/2006/08/02/getting-a-class-object-in-ruby-fro
             onclick="toggleCode('M000026-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000026-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 87</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/string.rb, line 87</span>
 87:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_class</span>
 88:   <span class="ruby-identifier">split</span>(<span class="ruby-value str">'::'</span>).<span class="ruby-identifier">inject</span>(<span class="ruby-constant">Kernel</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">scope</span>, <span class="ruby-identifier">const_name</span><span class="ruby-operator">|</span> <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">const_name</span>)}
 89:  <span class="ruby-keyword kw">end</span>
@@ -767,7 +767,7 @@ Return the string as an <a href="XML.html">XML</a> id, which is the same as
             onclick="toggleCode('M000025-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000025-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 79</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/string.rb, line 79</span>
 79:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_xid</span>
 80:   <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lowcase</span>
 81:  <span class="ruby-keyword kw">end</span>
@@ -801,7 +801,7 @@ Return an array that is the string split into words, i.e. split(W*b*)
             onclick="toggleCode('M000021-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000021-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/string.rb, line 40</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/string.rb, line 40</span>
 40:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">words</span>
 41:   <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\W*\b\W*/</span>)
 42:  <span class="ruby-keyword kw">end</span>

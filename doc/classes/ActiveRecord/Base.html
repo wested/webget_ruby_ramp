@@ -53,9 +53,9 @@
             <td>
 
 
-                <a href="../../files/lib/ramp/active_record_rb.html">
+                <a href="../../files/lib/webget_ramp/active_record_rb.html">
 
-                lib/ramp/active_record.rb
+                lib/webget_ramp/active_record.rb
 
                 </a>
 
@@ -63,9 +63,9 @@
         <br />
 
 
-                <a href="../../files/lib/ramp/active_record/base_rb.html">
+                <a href="../../files/lib/webget_ramp/active_record/base_rb.html">
 
-                lib/ramp/active_record/base.rb
+                lib/webget_ramp/active_record/base.rb
 
                 </a>
 
@@ -184,7 +184,7 @@ end
             onclick="toggleCode('M000201-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000201-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/active_record.rb, line 31</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/active_record.rb, line 31</span>
 31:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">create_or_update</span>(<span class="ruby-identifier">options</span> = {})
 32:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">create_or_update_by</span>(<span class="ruby-identifier">:id</span>, <span class="ruby-identifier">options</span>)
 33:   <span class="ruby-keyword kw">end</span>
@@ -235,7 +235,7 @@ mix of symbols or strings.
             onclick="toggleCode('M000202-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000202-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/active_record.rb, line 52</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/active_record.rb, line 52</span>
 52:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">create_or_update_by</span>(<span class="ruby-identifier">condition_keys</span>, <span class="ruby-identifier">attribute_pairs</span> = {})
 53:     <span class="ruby-identifier">condition_pairs</span>=[<span class="ruby-operator">*</span><span class="ruby-identifier">condition_keys</span>].<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">x</span>,(<span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">x</span>)<span class="ruby-operator">||</span><span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_s</span>)<span class="ruby-operator">||</span><span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_sym</span>))]}.<span class="ruby-identifier">to_h</span>
 54:     <span class="ruby-identifier">record</span> = <span class="ruby-identifier">find</span>(<span class="ruby-identifier">:first</span>, <span class="ruby-identifier">:conditions</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">condition_pairs</span>) <span class="ruby-operator">||</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">new</span>
@@ -274,7 +274,7 @@ For alias method chain
             onclick="toggleCode('M000205-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000205-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/active_record.rb, line 103</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/active_record.rb, line 103</span>
 103:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">included</span>(<span class="ruby-identifier">base</span>)
 104:     <span class="ruby-comment cmt"># base == ActiveRecord::Base (the class)</span>
 105:     <span class="ruby-identifier">base</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword kw">do</span>
@@ -323,7 +323,7 @@ href="Base.html#M000202">create_or_update_by</a>
             onclick="toggleCode('M000204-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000204-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/active_record.rb, line 93</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/active_record.rb, line 93</span>
 93:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">method_missing_with_create_or_update</span>(<span class="ruby-identifier">method_name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>) 
 94:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">match</span> = <span class="ruby-identifier">method_name</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp re">/create_or_update_by_([a-z0-9_]+)/</span>)  
 95:       <span class="ruby-identifier">field</span> = <span class="ruby-identifier">match</span>[<span class="ruby-value">1</span>]
@@ -385,7 +385,7 @@ mix of symbols or strings.
             onclick="toggleCode('M000203-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000203-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/active_record.rb, line 82</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/active_record.rb, line 82</span>
 82:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">seed</span>(<span class="ruby-identifier">condition_keys</span>, <span class="ruby-identifier">attribute_pairs</span> = {})
 83:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">create_or_update_by</span>(<span class="ruby-identifier">condition_keys</span>, <span class="ruby-identifier">attribute_pairs</span>)
 84:   <span class="ruby-keyword kw">end</span>

@@ -2,10 +2,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Module: ActiveRecord [webget_ramp]</title>
+  <title>File: process.rb [webget_ramp]</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Script-Type" content="text/javascript" />
-  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="../../.././rdoc-style.css" type="text/css" media="screen" />
   <script type="text/javascript">
   // <![CDATA[
 
@@ -42,52 +42,21 @@
 <body>
 
 
-    <div id="classHeader">
-        <table class="header-table">
-        <tr class="top-aligned-row">
-          <td><strong>Module</strong></td>
-          <td class="class-name-in-header">ActiveRecord</td>
-        </tr>
-        <tr class="top-aligned-row">
-            <td><strong>In:</strong></td>
-            <td>
+  <div id="fileHeader">
+    <h1>process.rb</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>lib/webget_ramp/process.rb
 
-
-                <a href="../files/lib/webget_ramp/active_record_rb.html">
-
-                lib/webget_ramp/active_record.rb
-
-                </a>
-
-
-        <br />
-
-
-                <a href="../files/lib/webget_ramp/active_record/connection_adapters/abstract/schema_statements_rb.html">
-
-                lib/webget_ramp/active_record/connection_adapters/abstract/schema_statements.rb
-
-                </a>
-
-
-        <br />
-
-
-                <a href="../files/lib/webget_ramp/active_record/base_rb.html">
-
-                lib/webget_ramp/active_record/base.rb
-
-                </a>
-
-
-        <br />
-
-            </td>
-        </tr>
-
-
-        </table>
-    </div>
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>2009-07-28 00:57:22 -0700</td>
+    </tr>
+    </table>
+  </div>
   <!-- banner header -->
 
   <div id="bodyContent">
@@ -96,8 +65,23 @@
 
     <div id="description">
       <p>
-<a href="ActiveRecord.html">ActiveRecord</a> extensions
+<a href="../../../classes/Process.html">Process</a> extensions to help
+debug Ruby programs.
 </p>
+<h2>Examples</h2>
+<pre>
+  p = Process.ps
+  puts p
+  =&gt; the results of the 'ps' command for the current process id
+
+  p = Process.ps(1234)
+  puts p
+  =&gt; the results of the 'ps' command for process id 1234
+
+  p = Process.pss
+  p['%cpu'] =&gt; percentage of cpu use, as a float
+  p['%mem'] =&gt; percentage of memory use, as a float
+</pre>
 
     </div>
 
@@ -109,14 +93,6 @@
     <!-- if includes -->
 
     <div id="section">
-
-    <div id="class-list">
-      <h3 class="section-bar">Classes and Modules</h3>
-
-      Module <a href="ActiveRecord/ConnectionAdapters.html" class="link">ActiveRecord::ConnectionAdapters</a><br />
-Class <a href="ActiveRecord/Base.html" class="link">ActiveRecord::Base</a><br />
-
-    </div>
 
 
 

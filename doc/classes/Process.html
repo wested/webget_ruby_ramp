@@ -53,9 +53,9 @@
             <td>
 
 
-                <a href="../files/lib/ramp/process_rb.html">
+                <a href="../files/lib/webget_ramp/process_rb.html">
 
-                lib/ramp/process.rb
+                lib/webget_ramp/process.rb
 
                 </a>
 
@@ -164,7 +164,7 @@ This is typically useful for logging to a text file.
             onclick="toggleCode('M000206-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000206-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 25</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/process.rb, line 25</span>
 25:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps</span>(<span class="ruby-identifier">pid</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>)
 26:    <span class="ruby-node">`#{self.ps_command} #{pid.to_i}`</span>
 27:  <span class="ruby-keyword kw">end</span>
@@ -202,7 +202,7 @@ to be identical.
             onclick="toggleCode('M000208-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000208-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 65</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/process.rb, line 65</span>
  65:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_aliases</span>
  66:     <span class="ruby-ivar">@@ps_aliases</span><span class="ruby-operator">||=</span><span class="ruby-constant">Hash</span>[<span class="ruby-operator">*</span><span class="ruby-node">%w'
  67:     %cpu pcpu
@@ -272,7 +272,7 @@ Set the list of process alias keywords.
             onclick="toggleCode('M000209-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000209-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 108</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/process.rb, line 108</span>
 108:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_aliases=</span>(<span class="ruby-identifier">aliases</span>)
 109:   <span class="ruby-ivar">@@ps_aliases</span>=<span class="ruby-identifier">aliases</span>
 110:  <span class="ruby-keyword kw">end</span>
@@ -311,7 +311,7 @@ Get the process command, i.e. what the sytem will call for the
             onclick="toggleCode('M000212-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000212-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 138</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/process.rb, line 138</span>
 138:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_command</span>
 139:   <span class="ruby-ivar">@@ps_command</span><span class="ruby-operator">||=</span><span class="ruby-value str">'ps h ww -o &quot;'</span><span class="ruby-operator">+</span><span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_keys</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>)<span class="ruby-operator">+</span><span class="ruby-value str">'&quot;'</span>
 140:  <span class="ruby-keyword kw">end</span>
@@ -350,7 +350,7 @@ Set the process command, i.e. what the sytem will call for the
             onclick="toggleCode('M000213-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000213-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 148</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/process.rb, line 148</span>
 148:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_command=</span>(<span class="ruby-identifier">command</span>)
 149:   <span class="ruby-ivar">@@ps_comannd</span>=<span class="ruby-identifier">command</span>
 150:  <span class="ruby-keyword kw">end</span>
@@ -388,7 +388,7 @@ Get the list of process keywords.
             onclick="toggleCode('M000210-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000210-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 118</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/process.rb, line 118</span>
 118:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_keys</span>
 119:   <span class="ruby-ivar">@@ps_keys</span><span class="ruby-operator">||=</span><span class="ruby-node">%w'blocked bsdtime c caught class cp egid egroup eip esp etime euid euser f fgid fgroup fuid fuser group ignored label lwp ni nlwp nwchan pending pcpu pgid pid pmem ppid pri psr rgid rgroup rss rtprio ruid ruser s sched sgi_p sgid sgroup sid sig size stackp start_time stat suid suser sz time tname tpgid vsize wchan'</span>
 120:  <span class="ruby-keyword kw">end</span>
@@ -426,7 +426,7 @@ Set the list of process keywords.
             onclick="toggleCode('M000211-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000211-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 128</span>
+     <span class="ruby-comment cmt"># File lib/webget_ramp/process.rb, line 128</span>
 128:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_keys=</span>(<span class="ruby-identifier">keys</span>)
 129:   <span class="ruby-ivar">@@ps_keys</span>=<span class="ruby-identifier">keys</span>
 130:  <span class="ruby-keyword kw">end</span>
@@ -461,7 +461,7 @@ add dates, times
             onclick="toggleCode('M000207-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000207-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/process.rb, line 34</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/process.rb, line 34</span>
 34:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">pss</span>(<span class="ruby-identifier">pid</span>=<span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>)
 35:    <span class="ruby-identifier">ps</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps</span>(<span class="ruby-identifier">pid</span>)
 36:    <span class="ruby-identifier">h</span>=<span class="ruby-constant">Hash</span>[<span class="ruby-operator">*</span><span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ps_keys</span>.<span class="ruby-identifier">zip</span>(<span class="ruby-identifier">ps</span>.<span class="ruby-identifier">split</span>).<span class="ruby-identifier">flatten</span>]

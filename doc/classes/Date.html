@@ -53,9 +53,9 @@
             <td>
 
 
-                <a href="../files/lib/ramp/date_rb.html">
+                <a href="../files/lib/webget_ramp/date_rb.html">
 
-                lib/ramp/date.rb
+                lib/webget_ramp/date.rb
 
                 </a>
 
@@ -155,7 +155,7 @@ Return a random date between min &amp; max
             onclick="toggleCode('M000017-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000017-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/date.rb, line 48</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/date.rb, line 48</span>
 48:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">between</span>(<span class="ruby-identifier">min</span>,<span class="ruby-identifier">max</span>)
 49:     <span class="ruby-identifier">min</span><span class="ruby-operator">+</span><span class="ruby-identifier">rand</span>(<span class="ruby-identifier">max</span><span class="ruby-operator">-</span><span class="ruby-identifier">min</span>)
 50:   <span class="ruby-keyword kw">end</span>
@@ -192,7 +192,7 @@ Return the age in days for a given date.
             onclick="toggleCode('M000019-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000019-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/date.rb, line 82</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/date.rb, line 82</span>
 82:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">age_days</span>(<span class="ruby-identifier">compare_to_date</span>=<span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>)
 83:     (<span class="ruby-identifier">compare_to_date</span><span class="ruby-operator">-</span><span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">to_i</span>
 84:   <span class="ruby-keyword kw">end</span>
@@ -244,7 +244,7 @@ Return the age in years for a given date.
             onclick="toggleCode('M000018-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000018-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/date.rb, line 73</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/date.rb, line 73</span>
 73:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">age_years</span>(<span class="ruby-identifier">compare_date</span>=<span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>)
 74:     <span class="ruby-identifier">age</span>=<span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">year</span><span class="ruby-operator">-</span><span class="ruby-identifier">year</span>
 75:     <span class="ruby-identifier">age</span><span class="ruby-operator">-=</span><span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">month</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">month</span> <span class="ruby-keyword kw">or</span> (<span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">month</span><span class="ruby-operator">==</span><span class="ruby-identifier">month</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">day</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">day</span>)
@@ -285,7 +285,7 @@ Return date in a sql format: YYYY-MM-DD
             onclick="toggleCode('M000014-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000014-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/date.rb, line 12</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/date.rb, line 12</span>
 12:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_sql</span>
 13:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_time</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-value str">&quot;%Y-%m-%d&quot;</span>)
 14:   <span class="ruby-keyword kw">end</span>
@@ -325,7 +325,7 @@ Return true if the date is a weekday: Mon, Tue, Wed, Thu, Fri
             onclick="toggleCode('M000015-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000015-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/date.rb, line 24</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/date.rb, line 24</span>
 24:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">weekday?</span>
 25:     <span class="ruby-identifier">wday</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">wday</span><span class="ruby-operator">&lt;</span><span class="ruby-value">6</span>
 26:   <span class="ruby-keyword kw">end</span>
@@ -365,7 +365,7 @@ Return true if the date is a weekend: Sat, Sun
             onclick="toggleCode('M000016-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000016-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/date.rb, line 36</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/date.rb, line 36</span>
 36:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">weekend?</span>
 37:     <span class="ruby-identifier">wday</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">wday</span><span class="ruby-operator">==</span><span class="ruby-value">6</span>
 38:   <span class="ruby-keyword kw">end</span>

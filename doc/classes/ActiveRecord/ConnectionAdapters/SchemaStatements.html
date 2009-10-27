@@ -53,9 +53,9 @@
             <td>
 
 
-                <a href="../../../files/lib/ramp/active_record/connection_adapters/abstract/schema_statements_rb.html">
+                <a href="../../../files/lib/webget_ramp/active_record/connection_adapters/abstract/schema_statements_rb.html">
 
-                lib/ramp/active_record/connection_adapters/abstract/schema_statements.rb
+                lib/webget_ramp/active_record/connection_adapters/abstract/schema_statements.rb
 
                 </a>
 
@@ -128,7 +128,7 @@ Add a column and its index. This just calls add_column then add_index
             onclick="toggleCode('M000199-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000199-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/active_record/connection_adapters/abstract/schema_statements.rb, line 8</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/active_record/connection_adapters/abstract/schema_statements.rb, line 8</span>
  8:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_column_and_index</span>(<span class="ruby-identifier">table_name</span>, <span class="ruby-identifier">column_name</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">options</span> = {})
  9:         <span class="ruby-identifier">add_column</span>(<span class="ruby-identifier">table_name</span>, <span class="ruby-identifier">column_name</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">options</span>)
 10:         <span class="ruby-identifier">add_index</span>(<span class="ruby-identifier">table_name</span>, <span class="ruby-identifier">column_name</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">options</span>)
@@ -164,7 +164,7 @@ then remove_index.
             onclick="toggleCode('M000200-source');return false;">[Source]</a></p>
           <div class="method-source-code" id="M000200-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/ramp/active_record/connection_adapters/abstract/schema_statements.rb, line 17</span>
+    <span class="ruby-comment cmt"># File lib/webget_ramp/active_record/connection_adapters/abstract/schema_statements.rb, line 17</span>
 17:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_column_and_index</span>(<span class="ruby-identifier">table_name</span>, <span class="ruby-identifier">column_name</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">options</span> = {})
 18:         <span class="ruby-identifier">remove_column</span>(<span class="ruby-identifier">table_name</span>, <span class="ruby-identifier">column_name</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">options</span>)
 19:         <span class="ruby-identifier">remove_index</span>(<span class="ruby-identifier">table_name</span>, <span class="ruby-identifier">column_name</span>, <span class="ruby-identifier">type</span>, <span class="ruby-identifier">options</span>)
