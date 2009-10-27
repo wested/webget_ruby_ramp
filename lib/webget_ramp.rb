@@ -185,7 +185,7 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
-- 1.7.1.1 Update gemspec for gemcutter & rubygems.org
+- 1.7.1.1 Update gems: Gemcutter, Ruby 1.9.1, JRuby sqlite3
 - 1.7.1.0 Add XML attributes methods #
 - 1.7.0.9 Add Enumerable #hash_by, #index_by
 - 1.7.0.7 Add Array#to_tsv, String#split_tsv, improve Array#to_csv

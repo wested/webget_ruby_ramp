@@ -1,3 +1,6 @@
+require 'csv'
+ 
+
 class Array
 
 
@@ -319,8 +322,6 @@ class Array
   #
   ##############################################################
 
-  require 'csv'
- 
   # Returns a CSV (Comma Separated Value) string of this array.
   #
   # ==Example of a one-dimensional array
@@ -335,15 +336,18 @@ class Array
   # array's first item is also an array.
 
   def to_csv(ops={})
+
+    generator = RUBY_VERSION >= "1.9" ? CSV : CSV::Writer
+
     s=''
     if size>0 and self[0].is_a?Array
-      CSV::Writer.generate(s) do |csv|
+      generator.generate(s) do |csv|
         self.each do |row|
           csv << row
         end
       end
     else
-      CSV::Writer.generate(s) do |csv|
+      generator.generate(s) do |csv|
         csv << self.map{|x| x.to_s}
       end
     end
