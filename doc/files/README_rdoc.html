@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>File: README.rdoc [ramp]</title>
+  <title>File: README.rdoc [webget_ramp]</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Script-Type" content="text/javascript" />
   <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
@@ -53,7 +53,7 @@
     </tr>
     <tr class="top-aligned-row">
       <td><strong>Last Update:</strong></td>
-      <td>2009-10-17 13:40:12 -0700</td>
+      <td>2009-10-25 22:52:19 -0700</td>
     </tr>
     </table>
   </div>
@@ -198,6 +198,14 @@ and disposition.
 <ul>
 <li>cartesian_product: return an array of all possible ordered tuples from
 arrays.
+
+</li>
+<li>hash_by: convert the array to a hash by mapping each item to a key=>value
+pair.
+
+</li>
+<li>index_by: convert the array to a hash by mapping each ite to a key=>item
+pair.
 
 </li>
 <li>join: forwards to self.to_a.join
@@ -351,6 +359,19 @@ each value set to the right type, e.g., integer, float, etc..
 
 </li>
 </ul>
+<h2><a href="../classes/REXML/Document.html">REXML::Document</a></h2>
+<ul>
+<li>remove_attributes: remove all the attributes from the document&#8217;s
+elements
+
+</li>
+</ul>
+<h2><a href="../classes/REXML/Element.html">REXML::Element</a></h2>
+<ul>
+<li>remove_attributes: remove all the attributes from the element
+
+</li>
+</ul>
 <h2><a href="../classes/String.html">String</a></h2>
 <ul>
 <li>capitalize_words (alias to titleize/titlecase): ensures the first character
@@ -442,8 +463,16 @@ for pattern details.
 </ul>
 <h2>Changes</h2>
 <ul>
+<li>1.7.1.0 Add <a href="../classes/XML.html">XML</a> attributes methods #
+
+</li>
+<li>1.7.0.9 Add <a href="../classes/Enumerable.html">Enumerable</a> hash_by,
+index_by
+
+</li>
 <li>1.7.0.7 Add <a href="../classes/Array.html#M000072">Array#to_tsv</a>, <a
-href="../classes/String.html#M000023">String#split_tsv</a>
+href="../classes/String.html#M000023">String#split_tsv</a>, improve <a
+href="../classes/Array.html#M000071">Array#to_csv</a>
 
 </li>
 <li>1.7.0.6 Add <a href="../classes/Array.html#M000070">Array#shuffle</a>, <a
