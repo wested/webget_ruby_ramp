@@ -66,6 +66,69 @@ module XML
     }
   end
 
+
+  # Santize dirty xml by removing unprintables, bad tags,
+  # comments, and generally anything else we might need
+  # to enable the XML parser to handle a dirty document.
+  #
+  # ==Example
+  #   s="<foo a=b c=d><!--comment-->Hello<!-[if bar]>Microsoft<![endif]>World</foo>"
+  #   XML.strip_all(s) => "<foo>HelloWorld</foo>"
+  #
+  # This method calls these in order:
+  #   - XML.strip_unprintables
+  #   - XML.strip_microsoft
+  #   - XML.strip_comments
+  #   - XML.strip_attributes
+
+  def XML.strip_all(xml_text)
+    return XML.strip_attributes(XML.strip_comments(XML.strip_microsoft(XML.strip_unprintables(xml_text))))
+  end
+
+
+  # Strip out all attributes from the xml text's tags.
+  #
+  # ==Example
+  #   s="<foo a=b c=d e=f>Hello</foo>"
+  #   XML.strip_attributes(s) => "<foo>Hello</foo>"
+
+  def XML.strip_attributes(xml_text)
+    return xml_text.gsub(/<(\/?\w+).*?>/im){"<#{$1}>"}  # delete attributes
+  end
+
+
+  # Strip out all comments from the xml text.
+  #
+  # ==Example
+  #   s="Hello<!--comment-->World"
+  #   XML.strip_comments(s) => "HelloWorld"
+
+  def XML.strip_comments(xml_text)
+    return xml_text.gsub(/<!.*?>/im,'')  
+  end
+
+
+  # Strip out all microsoft proprietary codes.
+  #
+  # ==Example
+  #   s="Hello<!-[if foo]>Microsoft<![endif]->World"
+  #   XML.strip_microsoft(s) => "HelloWorld"
+
+  def XML.strip_microsoft(xml_text)
+    return xml_text.gsub(/<!-*\[if\b.*?<!\[endif\]-*>/im,'')
+  end
+
+
+  # Strip out all unprintable characters from the input string.
+  #
+  # ==Example
+  #   s="Hello\XXXWorld" # where XXX is unprintable
+  #   XML.strip_unprintables(s) => "HelloWorld"
+
+  def XML.strip_unprintables(xml_text)
+    return xml_text.gsub(/[^[:print:]]/, "")
+  end
+
 end
 
 

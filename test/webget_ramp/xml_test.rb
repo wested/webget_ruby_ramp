@@ -46,5 +46,48 @@ class XMLTest < Test::Unit::TestCase
    assert_equal(expect,actual)
  end
 
+ def test_strip_all
+   s="<foo a=b c=d><!--comment-->Hello<!-[if bar]>Microsoft<![endif]>World</foo>"
+   expect="<foo>HelloWorld</foo>"
+   actual=XML.strip_all(s)
+   assert_equal(expect,actual)
+ end 
+
+ def strip_attributes
+  s="<foo a=b c=d e=f>Hello</foo>"                                                                          
+  expect="<foo>Hello</foo>" 
+  actual=XML.strip_attributes(s) 
+  assert_equal(expect,actual)
+ end
+
+ def test_strip_comments
+   s="Hello<!--comment-->World" 
+   expect="HelloWorld"
+   actual=XML.strip_comments(s)
+   assert_equal(expect,actual)
+ end
+
+ def test_strip_microsoft
+   s="Hello<!-[if foo]>Microsoft<![endif]->World"     
+   expect="HelloWorld"    
+   actual=XML.strip_microsoft(s)
+   assert_equal(expect,actual)
+ end
+
+ def test_strip_unprintables
+   s="HelloWorld" #TODO create test that has unprintables
+   expect="HelloWorld"
+   actual=XML.strip_unprintables(s)
+   assert_equal(expect,actual)
+ end
+   
+ def test_strip_msword
+   clean=File.open(File.join(MYDIR,"xml_test_msword_clean.html"),"rb")
+   dirty=File.open(File.join(MYDIR,"xml_test_msword_dirty.html"),"rb")
+   expect=clean.read
+   actual=XML.strip_all(dirty.read)
+   assert_equal(expect,actual)
+ end
+
 end
 

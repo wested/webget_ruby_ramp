@@ -176,6 +176,11 @@ Extensions that help debug Ruby programs.
 == XML
 
 * (class) load_dir: specify a one or more directory patterns and pass each XML file in the matching directories to a block; see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
+* (class) strip_all: delete exraneous junk from an XML text string, typically for sanitizing input
+* (class) strip_attributes: delete all attributes from an XML text string
+* (class) strip_comments: delete all comments from an XML text string
+* (class) strip_microsoft: delete all proprietary Microsoft code from an XML text string
+* (class) strip_unprintables: delete all unprintable characters from an XML text string
 
 
 == YAML
@@ -185,7 +190,8 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
-- 1.7.1.1 Update gems: Gemcutter, Ruby 1.9.1, JRuby sqlite3
+- 1.7.1.3 Add XML#strip_xxx 
+- 1.7.1.2 Update gems: Gemcutter, Ruby 1.9.1, JRuby sqlite3
 - 1.7.1.0 Add XML attributes methods #
 - 1.7.0.9 Add Enumerable #hash_by, #index_by
 - 1.7.0.7 Add Array#to_tsv, String#split_tsv, improve Array#to_csv
