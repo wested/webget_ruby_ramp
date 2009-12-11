@@ -126,7 +126,33 @@ class Hash
   # Hash#pivot aggregates values for a hash of hashes,
   # for example to calculate subtotals and groups.
   #
-  # Example:
+  # Suppose you have data arranged by companies, roles, and headcounts.
+
+  #     data = {
+  #     "Apple"     => {"Accountants" => 11, "Designers" => 22, "Developers" => 33},
+  #     "Goggle"    => {"Accountants" => 44, "Designers" => 55, "Developers" => 66},
+  #     "Microsoft" => {"Accountants" => 77, "Designers" => 88, "Developers" => 99},
+  #   }
+  # 
+  # To calculate each company's total headcount, you pivot up, then sum:
+  # 
+  #   data.pivot(:up,&:sum)
+  #   => {
+  #    "Apple"=>66, 
+  #    "Goggle"=>165, 
+  #    "Microsoft"=>264
+  #   }
+  # 
+  # To calculate each role's total headcount, you pivot down, then sum:
+  # 
+  #   data.pivot(:down,&:sum)
+  #   => {
+  #    "Accountants"=>132,
+  #    "Designers"=>165,
+  #    "Developers"=>198
+  #   }
+  # 
+  #  Generic xxample:
   #   h={
   #    "a"=>{"x"=>1,"y"=>2,"z"=>3},
   #    "b"=>{"x"=>4,"y"=>5,"z"=>6},

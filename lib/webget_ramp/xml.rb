@@ -71,9 +71,10 @@ module XML
   # comments, and generally anything else we might need
   # to enable the XML parser to handle a dirty document.
   #
-  # ==Example
-  #   s="<foo a=b c=d><!--comment-->Hello<!-[if bar]>Microsoft<![endif]>World</foo>"
-  #   XML.strip_all(s) => "<foo>HelloWorld</foo>"
+  # ==Example 
+  #   # This example shows curly braces instead of angle braces because of HTML formatting
+  #   s="{foo a=b c=d}{!--comment--}Hello{!-[if bar]}Microsoft{![endif]}World{/foo}"
+  #   XML.strip_all(s) => "{foo}HelloWorld{/foo}"
   #
   # This method calls these in order:
   #   - XML.strip_unprintables
@@ -100,7 +101,8 @@ module XML
   # Strip out all comments from the xml text.
   #
   # ==Example
-  #   s="Hello<!--comment-->World"
+  #   # This example shows curly braces instead of angle braces because of HTML formatting
+  #   s="Hello{!--comment--}World"
   #   XML.strip_comments(s) => "HelloWorld"
 
   def XML.strip_comments(xml_text)

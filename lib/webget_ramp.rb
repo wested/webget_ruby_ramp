@@ -25,6 +25,11 @@ Testing:
 * remove_column_and_index: database migration helper to add a table column and index at the same time.
 
 
+== ActiveRecord::SaveExtensions
+
+* save_false_then_reload!: a transaction to save and reload a record, to help repair associations
+
+
 == Array
 
 * car, cdr: aka first, rest (see shifted)
@@ -111,6 +116,11 @@ Testing:
 * logn(x,b): log of x in base b
 
 
+== NilClass
+
+* blank?: return true (same as Rails)
+
+
 == Numeric
 
 * if: returns 0 if the passed flag is any of: nil, false, 0, [], {} and otherwise returns self
@@ -190,6 +200,7 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
+- 1.7.1.6 Add ActiveRecord::SaveExtensions#save_false_then_reload!
 - 1.7.1.3 Add XML#strip_xxx 
 - 1.7.1.2 Update gems: Gemcutter, Ruby 1.9.1, JRuby sqlite3
 - 1.7.1.0 Add XML attributes methods #
@@ -226,8 +237,7 @@ Extensions that help debug Ruby programs.
 
 =end
 
-%w{active_record array csv date enumerable file hash integer io kernel math nil numeric object process string symbol time xml yaml}.map{|x|
+%w{active_record active_record/save_extensions array csv date enumerable file hash integer io kernel math nil numeric object process string symbol time xml yaml}.map{|x|
   require File.dirname(__FILE__) + "/webget_ramp/#{x}.rb"
 }
-
 
