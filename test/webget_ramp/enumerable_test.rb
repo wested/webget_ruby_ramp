@@ -85,6 +85,10 @@ class EnumerableTest < Test::Unit::TestCase
     assert_equal([:a,:b,:c],ITEMS.map_to_sym)
   end
 
+  def test_map_with_index
+    assert_equal(['a0','b1','c2'],ITEMS.map_with_index{|x,i| "#{x}#{i}"})
+  end
+
 
   ########################################################################
   #

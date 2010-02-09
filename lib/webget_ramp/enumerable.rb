@@ -175,6 +175,22 @@ module Enumerable
   end
 
 
+  # Map each item and its index => a new output
+  #
+  # cf. Enumerable#map, Enumerable#each_with_index
+  #
+  # ==Example
+  #
+  #   strings = ["a", "b", "c"]
+  #   strings.map_with_index{|string,index| "#{string}#{index}"}
+  #    => ["a0, "b1", "c3"]
+
+  def map_with_index
+    i=-1
+    map{|x| i+=1; yield(x,i)}
+  end
+
+
   ########################################################################
   #
   #  select

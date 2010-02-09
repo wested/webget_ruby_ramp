@@ -69,7 +69,8 @@ Testing:
 * index_by: convert the array to a hash by mapping each ite to a key=>item pair.
 * join: forwards to self.to_a.join
 * map_id: returns the id of an Enumerable object; *requires* that the object respond to an 'id' message
-* map_to_a, map_to_f, map_to_i, map_to_s, map_to_sym : convert each object to a specific type by calling its respective method to_a, to_i, to_f, to_s, to_sym
+* map_to_a, map_to_f, map_to_i, map_to_s, map_to_sym: convert each object to a specific type by calling its respective method to_a, to_i, to_f, to_s, to_sym
+* map_with_index: for each item, yield to a block with the item and its incrementing index
 * nitems_until, select_until: returns the number of, or an array containing, the leading elements for which block is false or nil.
 * nitems_while, select_while: returns the number of items, or an array containing the leading elements, for which block is not false or nil.
 * nitems_with_index, select_with_index: calls block with two arguments, the item and its index, for each item in enum. Returns the number of, or an array containing, the leading elements for which block is not false or nil. 
@@ -200,6 +201,7 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
+- 1.7.1.8 Add Enumerable#map_with_index
 - 1.7.1.6 Add ActiveRecord::SaveExtensions#save_false_then_reload!
 - 1.7.1.3 Add XML#strip_xxx 
 - 1.7.1.2 Update gems: Gemcutter, Ruby 1.9.1, JRuby sqlite3
