@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>File: webget_ruby_ramp.rb [webget_ruby_ramp]</title>
+
+	<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+	<div id="metadata">
+		<dl>
+			<dt class="modified-date">Last Modified</dt>
+			<dd class="modified-date">2010-02-12 21:28:43 -0800</dd>
+
+			
+			<dt class="requires">Requires</dt>
+			<dd class="requires">
+				<ul>
+				
+				</ul>
+			</dd>
+			
+
+			
+		</dl>
+	</div>
+
+	<div id="documentation">
+		
+		<div class="description">
+			<h2>Description</h2>
+			<h1>WebGet Ruby Gem: Ramp is a toolkit of methods to ramp up your Ruby On Rails applications</h1>
+<table>
+<tr><td valign="top">Author:</td><td>Joel Parker Henderson, joelparkerhenderson@gmail.com
+
+</td></tr>
+<tr><td valign="top">Copyright:</td><td>Copyright &#169; 2006-2010 Joel Parker Henderson
+
+</td></tr>
+<tr><td valign="top">License:</td><td>CreativeCommons License, Non-commercial Share Alike
+
+</td></tr>
+<tr><td valign="top">License:</td><td>LGPL, GNU Lesser General Public License
+
+</td></tr>
+</table>
+<p>
+Ramp is a library of extensions to Ruby and Rails base classes, including
+<a href="../ActiveRecord.html">ActiveRecord</a>, <a
+href="../Array.html">Array</a>, <a href="../Date.html">Date</a>, <a
+href="../Enumerable.html">Enumerable</a>, <a href="../Hash.html">Hash</a>,
+<a href="../Kernel.html">Kernel</a>, <a href="../Numeric.html">Numeric</a>,
+<a href="../Object.html">Object</a>, <a href="../Process.html">Process</a>,
+<a href="../String.html">String</a>, <a href="../Time.html">Time</a>, and
+<a href="../YAML.html">YAML</a>.
+</p>
+<p>
+Testing: <ul> <li>Each has an associated test class, e.g., <a
+href="../ArrayTest.html">ArrayTest</a>, <a
+href="../DateTest.html">DateTest</a>, etc. <li>The easy way to run the
+tests: gem install ramp &#8212;test <li>Some of the <a
+href="../ActiveRecord.html">ActiveRecord</a> extensions use sqlite for
+testing. We don&#8217;t install sqlite automatically because it requires
+some native extensions. If you need sqlite: gem install sqlite3-ruby </ul>
+</p>
+<h2><a href="../ActiveRecord.html">ActiveRecord</a></h2>
+<ul>
+<li>create_or_update_by: create a record, or update a record if value passed
+matches a field (or fields) in the AR object; includes method_missing
+function to make code more readable.
+
+</li>
+<li>seed: syntactic sugar alias for create_or_update_by
+
+</li>
+</ul>
+<h2><a href="../ActiveRecord/ConnectionAdapters/SchemaStatements.html">ActiveRecord::ConnectionAdapters::SchemaStatements</a></h2>
+<ul>
+<li>add_column_and_index: database migration helper to add a table column and
+index at the same time.
+
+</li>
+<li>remove_column_and_index: database migration helper to add a table column
+and index at the same time.
+
+</li>
+</ul>
+<h2><a href="../ActiveRecord/SaveExtensions.html">ActiveRecord::SaveExtensions</a></h2>
+<ul>
+<li>save_false_then_reload!: a transaction to save and reload a record, to help
+repair associations
+
+</li>
+</ul>
+<h2><a href="../Array.html">Array</a></h2>
+<ul>
+<li>car, cdr: aka first, rest (see shifted)
+
+</li>
+<li>choice, choices: one or more random elements from an array
+
+</li>
+<li>cross: return the cross pairings of an array with another array
+
+</li>
+<li>divvy: divides an array, like a pie, into a specified number of slices
+
+</li>
+<li>join: same as <a href="../Array.html#M000098">Array#join</a> with some
+improvments
+
+</li>
+<li>onto: return a hash that maps an array&#8217;s keys on to another
+array&#8217;s values
+
+</li>
+<li>rotate: moves the first element of an array to the end
+
+</li>
+<li>rest: return the rest of the items of the array (aka cdr, aka shifted)
+
+</li>
+<li>shifted, shifted!: return an array with the first n items shifted (aka cdr,
+aka rest)
+
+</li>
+<li>shuffle, shuffle!: randomly sort an array efficiently; each of these
+methods are loaded only if needed (Ruby 1.8.7+ already defines shuffle)
+
+</li>
+<li>slices: divide an array into specified number of equal size sub-arrays
+([1,2,3,4,5,6]slices(3) => [[1,2],[3,4],[5,6]])
+
+</li>
+<li>to_csv: join a multidimensional array into a string in <a
+href="../CSV.html">CSV</a> (Comma Separated Values), with each subarray
+becoming one &#8216;line&#8217; in the output; typically for viewing in a
+spreadsheet such as Excel.
+
+</li>
+<li>to_tdf: join a multidimensional array into a string in TDF (Tab Delimited
+Format); this is an alias for to_tsv
+
+</li>
+<li>to_tsv: join a multidimensional array into a string in TSV (Tab Separated
+Values), with each subarray becoming one &#8216;line&#8217; in the output;
+typically for viewing in a spreadsheet such as Excel.
+
+</li>
+<li>union: builds an array containing each of the unique elements of sub-arrays
+([[1,2,3,4],[2,3,4,5],[3,4,5,6]].union => [1,2,3,4,5,6])
+
+</li>
+</ul>
+<h2><a href="../CSV.html">CSV</a></h2>
+<ul>
+<li>http_headers: provides web file download headers for text/csv content type
+and disposition.
+
+</li>
+</ul>
+<h2><a href="../Date.html">Date</a></h2>
+<ul>
+<li>age_days, age_years
+
+</li>
+<li>between: a random date between two specified dates
+
+</li>
+<li>to_sql: date as a string formatted as expected for MySQL
+
+</li>
+<li>weekday?, weekend?: is date a weekday or on the weekend
+
+</li>
+</ul>
+<h2><a href="../Enumerable.html">Enumerable</a></h2>
+<ul>
+<li>cartesian_product: return an array of all possible ordered tuples from
+arrays.
+
+</li>
+<li>hash_by: convert the array to a hash by mapping each item to a key=>value
+pair.
+
+</li>
+<li>index_by: convert the array to a hash by mapping each ite to a key=>item
+pair.
+
+</li>
+<li>join: forwards to self.to_a.join
+
+</li>
+<li>map_id: returns the id of an <a href="../Enumerable.html">Enumerable</a>
+object; <b>requires</b> that the object respond to an &#8216;id&#8217;
+message
+
+</li>
+<li>map_to_a, map_to_f, map_to_i, map_to_s, map_to_sym: convert each object to
+a specific type by calling its respective method to_a, to_i, to_f, to_s,
+to_sym
+
+</li>
+<li>map_with_index: for each item, yield to a block with the item and its
+incrementing index
+
+</li>
+<li>nitems_until, select_until: returns the number of, or an array containing,
+the leading elements for which block is false or nil.
+
+</li>
+<li>nitems_while, select_while: returns the number of items, or an array
+containing the leading elements, for which block is not false or nil.
+
+</li>
+<li>nitems_with_index, select_with_index: calls block with two arguments, the
+item and its index, for each item in enum. Returns the number of, or an
+array containing, the leading elements for which block is not false or nil.
+
+</li>
+<li>power_set: return an array with all subsets of the enum&#8217;s elements
+
+</li>
+</ul>
+<h2><a href="../File.html">File</a></h2>
+<ul>
+<li><a href="../File.html#M000128">File.joindir</a>: wrapper for
+File.join(File.dirname(...),string,&#8230;)
+
+</li>
+</ul>
+<h2><a href="../Hash.html">Hash</a></h2>
+<ul>
+<li>size?: return true if hash has any keys
+
+</li>
+<li>each_sort: sort the keys then call each
+
+</li>
+<li>each_key!: passes each key to a specified block and updates hash in place
+if the key changes
+
+</li>
+<li>each_pair!: passes each key value pair to a specified block and updates the
+hash in place if the key or value change.
+
+</li>
+<li>each_value!: passes each value to a specified block and updates the hash in
+place if the value changes.
+
+</li>
+<li>map_pair: map each key-value pair by calling a a block
+
+</li>
+<li>pivot: aggregates subtotals by keys and values, such as a rollup and
+rolldown
+
+</li>
+<li>to_yaml_sort: returns a <a href="../YAML.html">YAML</a> object, sorted by
+field name
+
+</li>
+</ul>
+<h2><a href="../Integer.html">Integer</a></h2>
+<ul>
+<li>maps: syntactic sugar to yield n times to a block, returning an array of
+any results (e.g. 3.maps{rand} => [0.4351325,0.7778625,0.158613534])
+
+</li>
+</ul>
+<h2><a href="../IO.html">IO</a></h2>
+<ul>
+<li>readrow: reads a row line as with IO#readline, and return the row split it
+into fields
+
+</li>
+<li><a href="../IO.html#M000082">IO.readrows</a>: reads the entire file
+specified by name as individual row lines, and returns those rows split
+into fields, in an array of arrays.
+
+</li>
+</ul>
+<h2><a href="../Kernel.html">Kernel</a></h2>
+<ul>
+<li>method_name:
+
+</li>
+<li>method_name_of_caller: returns the name of the method which called the
+current method, or the Nth parent up the call stack if the optional
+caller_index parameter is passed.
+
+</li>
+</ul>
+<h2><a href="../Math.html">Math</a></h2>
+<ul>
+<li>ln(x): natural log of x
+
+</li>
+<li>logn(x,b): log of x in base b
+
+</li>
+</ul>
+<h2><a href="../NilClass.html">NilClass</a></h2>
+<ul>
+<li>blank?: return true (same as Rails)
+
+</li>
+</ul>
+<h2><a href="../Numeric.html">Numeric</a></h2>
+<ul>
+<li>if: returns 0 if the passed flag is any of: nil, false, 0, [], {} and
+otherwise returns self
+
+</li>
+<li>unless: returns 0 unless the passed flag is any of: nil, false, 0, [], {}
+and otherwise returns self
+
+</li>
+<li>peta, tera, giga, mega, kilo, hecto, deka, deci, centi, milli, micro, nano:
+multiply/divide by powers of ten
+
+</li>
+</ul>
+<h2><a href="../Object.html">Object</a></h2>
+<ul>
+<li>in?: returns boolean indicating whether the object is a member of the
+specified array parameter
+
+</li>
+</ul>
+<h2><a href="../Process.html">Process</a></h2>
+<p>
+Extensions that help debug Ruby programs.
+</p>
+<ul>
+<li>(class) ps: output of the system &#8216;ps&#8217; command, also including
+aliases, as raw plain text.
+
+</li>
+<li>(class) pss: output of the system &#8216;ps&#8217; command as a hash with
+each value set to the right type, e.g., integer, float, etc..
+
+</li>
+</ul>
+<h2><a href="../REXML/Attributes.html">REXML::Attributes</a></h2>
+<ul>
+<li>hash: flattens the attributes hash set into a more useful ruby hash, e.g.
+{:height => 100, :width => 400 }
+
+</li>
+</ul>
+<h2><a href="../REXML/Document.html">REXML::Document</a></h2>
+<ul>
+<li>remove_attributes: remove all the attributes from the document&#8217;s
+elements
+
+</li>
+</ul>
+<h2><a href="../REXML/Element.html">REXML::Element</a></h2>
+<ul>
+<li>remove_attributes: remove all the attributes from the element
+
+</li>
+</ul>
+<h2><a href="../String.html">String</a></h2>
+<ul>
+<li>capitalize_words (alias to titleize/titlecase): ensures the first character
+of each word is uppercase.
+
+</li>
+<li>decrement: decrease the rightmost natural number, defaults to one value
+lower or by the optional step parameter value.
+
+</li>
+<li>increment: increase the rightmost natural number, defaults to one value
+higher or by the optional step parameter value.
+
+</li>
+<li>lorem: return a short random string, good for use in &#8220;lorem
+ipsum&#8221; sample text.
+
+</li>
+<li>lowcase: translate a string to lowercase, digits and single underscores
+(e.g. to a method name)
+
+</li>
+<li>prev/pred: previous string (&#8220;b&#8221; => &#8220;a&#8221;,
+&#8220;bbc&#8221; => &#8220;bbb&#8221;, &#8220;a&#8221; => &#8220;z&#8221;,
+&#8220;880&#8221; => &#8220;879&#8221;)
+
+</li>
+<li>prev!/pred!: updates variable to the previous string in place (astring =
+&#8220;bbc&#8221;, astring.prev!, puts astring => &#8220;bbb&#8221;)
+
+</li>
+<li>(class) prev_char/pred_char: returns the previous character, with a changed
+flag and carry flag; that is, there are three returned values, a string and
+two booleans.
+
+</li>
+<li>split_tab: split the string into an array at each embedded tab
+(&#8220;LasttFirsttMiddle&#8221; =>
+[&#8220;last&#8221;,&#8220;first&#8221;,&#8220;middle&#8221;])
+
+</li>
+<li>split_tsv: split the string into an array at each embedded newline and
+embedded tab (&#8220;AtBt\C\nDtEtF&#8221; =>
+[[&#8220;A&#8221;,&#8220;B&#8221;,&#8220;C&#8221;],[&#8220;D&#8221;,&#8220;E&#8221;,&#8220;F&#8221;]])
+
+</li>
+<li>to_class: the global class reference of a given string
+
+</li>
+<li>words: split the string into an array of words
+
+</li>
+</ul>
+<h2><a href="../Symbol.html">Symbol</a></h2>
+<ul>
+<li><=> and include the comparable mixin to compare symbols as strings
+
+</li>
+</ul>
+<h2><a href="../Time.html">Time</a></h2>
+<ul>
+<li>(class) stamp: current time in UTC as a timestamp string
+(&#8220;YYYYMMDDHHMMSS&#8221;)
+
+</li>
+<li>to_sql: time as a string formatted as expected for MySQL
+
+</li>
+</ul>
+<h2><a href="../XML.html">XML</a></h2>
+<ul>
+<li>(class) load_dir: specify a one or more directory patterns and pass each <a
+href="../XML.html">XML</a> file in the matching directories to a block; see
+[Dir#glob](<a
+href="http://www.ruby-doc.org/core/classes/Dir.html#M002347">www.ruby-doc.org/core/classes/Dir.html#M002347</a>)
+for pattern details.
+
+</li>
+<li>(class) strip_all: delete exraneous junk from an <a
+href="../XML.html">XML</a> text string, typically for sanitizing input
+
+</li>
+<li>(class) strip_attributes: delete all attributes from an <a
+href="../XML.html">XML</a> text string
+
+</li>
+<li>(class) strip_comments: delete all comments from an <a
+href="../XML.html">XML</a> text string
+
+</li>
+<li>(class) strip_microsoft: delete all proprietary Microsoft code from an <a
+href="../XML.html">XML</a> text string
+
+</li>
+<li>(class) strip_unprintables: delete all unprintable characters from an <a
+href="../XML.html">XML</a> text string
+
+</li>
+</ul>
+<h2><a href="../YAML.html">YAML</a></h2>
+<ul>
+<li>(class) load_dir: specify a one or more directory patterns and pass each <a
+href="../YAML.html">YAML</a> file in the matching directories to a block;
+see [Dir#glob](<a
+href="http://www.ruby-doc.org/core/classes/Dir.html#M002347">www.ruby-doc.org/core/classes/Dir.html#M002347</a>)
+for pattern details.
+
+</li>
+</ul>
+<h2>Changes</h2>
+<ul>
+<li>1.7.2 Genmcutter update
+
+</li>
+<li>1.7.1.8 Add <a
+href="../Enumerable.html#M000053">Enumerable#map_with_index</a>
+
+</li>
+<li>1.7.1.6 Add <a
+href="../ActiveRecord/SaveExtensions.html#M000047">ActiveRecord::SaveExtensions#save_false_then_reload!</a>
+
+</li>
+<li>1.7.1.3 Add XML#strip_xxx
+
+</li>
+<li>1.7.1.2 Update gems: Gemcutter, Ruby 1.9.1, JRuby sqlite3
+
+</li>
+<li>1.7.1.0 Add <a href="../XML.html">XML</a> attributes methods #
+
+</li>
+<li>1.7.0.9 Add <a href="../Enumerable.html">Enumerable</a> hash_by, index_by
+
+</li>
+<li>1.7.0.7 Add <a href="../Array.html#M000124">Array#to_tsv</a>, <a
+href="../String.html#M000073">String#split_tsv</a>, improve <a
+href="../Array.html#M000123">Array#to_csv</a>
+
+</li>
+<li>1.7.0.6 Add <a href="../Array.html#M000122">Array#shuffle</a>, <a
+href="../Array.html#M000120">Array#shuffle!</a>
+
+</li>
+<li>1.7.0.5 Add <a href="../Array.html#M000113">Array#shifted</a>, <a
+href="../Array.html#M000115">Array#rest</a>, Array#car, <a
+href="../Array.html#M000114">Array#cdr</a>
+
+</li>
+<li>1.7.0.4 Upgrade <a href="../IO.html#M000082">IO#readrows</a> and readrow to
+use options
+
+</li>
+<li>1.7.0.2 Add <a href="../Array.html#M000125">Array#to_tdf</a>
+
+</li>
+<li>1.7.0.1 Remove sqlite3 testing dependency
+
+</li>
+<li>1.6.9.6 Add <a href="../Symbol.html">Symbol</a> with comparable and <=>
+
+</li>
+<li>1.6.9.5 Add <a href="../ActiveRecord.html">ActiveRecord</a> testing with
+sqlite3
+
+</li>
+<li>1.6.9.4 JRuby install and test successful
+
+</li>
+<li>1.6.9.3 <a href="../Array.html#M000098">Array#join</a> add infix, prefix,
+suffix
+
+</li>
+<li>1.6.9.2 Improve ri docs
+
+</li>
+<li>1.6.9.1 Add <a href="../Array.html#M000106">Array#onto</a>, <a
+href="../Enumerable.html#M000062">Enumerable#intersect?</a>
+
+</li>
+<li>1.6.9.0 Add <a href="../IO.html">IO</a>, <a href="../File.html">File</a>,
+ActiveRecord#seed
+
+</li>
+<li>1.6.8.9 Add <a href="../Enumerable.html#M000021">Enumerable#to_h</a>,
+Array#hash, <a href="../Hash.html#M000039">Hash#each_key!</a>,
+Hash#each_pair, <a href="../Hash.html#M000041">Hash#each_value!</a>
+
+</li>
+<li>1.6.8.8 Add <a href="../Hash.html#M000042">Hash#map_pair</a>, <a
+href="../Hash.html#M000037">Hash#size?</a>, <a
+href="../Hash.html#M000044">Hash#pivot</a>
+
+</li>
+<li>1.6.8.7 Add <a href="../Math.html">Math</a>
+
+</li>
+<li>1.6.8.6 Add <a href="../ActiveRecord.html">ActiveRecord</a>
+SchemaStatements
+
+</li>
+<li>1.6.8.5 Add <a href="../Integer.html#M000133">Integer#maps</a>, <a
+href="../String.html#ACCENTS">String#ACCENTS</a>
+
+</li>
+<li>1.6.8.4 Add <a href="../XML.html">XML</a>
+
+</li>
+<li>1.6.8.3 Add <a href="../ActiveRecord.html">ActiveRecord</a>
+
+</li>
+<li>1.6.8.2 Add <a href="../String.html#M000074">String#lowcase</a>
+
+</li>
+<li>1.6.8 Add map_to_xxx methods
+
+</li>
+<li>1.6.7 Add <a href="../CSV.html">CSV</a>
+
+</li>
+<li>1.6.6 Add <a href="../Array.html#M000123">Array#to_csv</a>, <a
+href="../Integer.html">Integer</a>, <a
+href="../String.html#M000121">String#lorem</a>, etc., improve tests
+
+</li>
+<li>1.6.4 Bug fixes: <a href="../String.html">String</a> characters and <a
+href="../YAML.html">YAML</a> test files
+
+</li>
+<li>1.6.2 Improve organizaiton of class files to lib/ramp
+
+</li>
+<li>1.6.0 Upgraded to work with Ruby 1.9.1
+
+</li>
+<li>1.5.0 Combined all Ruby extension files into one gem
+
+</li>
+<li>1.0.0 Original
+
+</li>
+</ul>
+
+		</div>
+		
+	</div>
+</body>
+</html>
+
