@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
 
   s.name              = "webget_ruby_ramp"
   s.summary           = "WebGet Ruby Gem: Ramp gem provides base extensions to ruby classes and rails classes."
-  s.version           = "1.7.2"
+  s.version           = "1.7.3"
   s.author            = "WebGet"
   s.email             = "webget@webget.com"
   s.homepage          = "http://webget.com/"
@@ -17,7 +17,5 @@ Gem::Specification.new do |s|
   s.has_rdoc          = true
   s.files             = ['lib/webget_ruby_ramp.rb'] + CLASSES.map{|c| "lib/webget_ruby_ramp/#{c}.rb"} + TEST_FILES.map{|f| "test/webget_ruby_ramp/#{f}"}
   s.test_files        = CLASSES.map{|c| "test/webget_ruby_ramp/#{c}_test.rb"}
-
-  #s.add_dependency('sqlite3-ruby') # for testing ActiveRecord
 
 end

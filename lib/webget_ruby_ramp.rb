@@ -1,37 +1,19 @@
 =begin rdoc
 
-= WebGet Ruby Gem: Ramp is a toolkit of methods to ramp up your Ruby On Rails applications
+= WebGet Ruby Gem: Ramp is a toolkit of Ruby base class extensions
 
 Author:: Joel Parker Henderson, joelparkerhenderson@gmail.com
 Copyright:: Copyright (c) 2006-2010 Joel Parker Henderson
 License:: CreativeCommons License, Non-commercial Share Alike
 License:: LGPL, GNU Lesser General Public License
 
-Ramp is a library of extensions to Ruby and Rails base classes, including ActiveRecord, Array, Date, Enumerable, Hash, Kernel, Numeric, Object, Process, String, Time, and YAML. 
+Ramp is a library of extensions to Ruby base classes, including Array, Date, Enumerable, Hash, Kernel, Numeric, Object, Process, String, Time, and YAML. 
 
 Testing: 
 <ul>
 <li>Each has an associated test class, e.g., ArrayTest, DateTest, etc.
-<li>The easy way to run the tests: gem install ramp --test
-<li>Some of the ActiveRecord extensions use sqlite for testing. We don't install sqlite automatically because it requires some native extensions. If you need sqlite: gem install sqlite3-ruby
+<li>The easy way to run the tests: gem install webget_ruby_ramp --test
 </ul>
-
-
-== ActiveRecord
-
-* create_or_update_by: create a record, or update a record if value passed matches a field (or fields) in the AR object; includes method_missing function to make code more readable. 
-* seed: syntactic sugar alias for #create_or_update_by
-
-
-== ActiveRecord::ConnectionAdapters::SchemaStatements
-
-* add_column_and_index: database migration helper to add a table column and index at the same time.
-* remove_column_and_index: database migration helper to add a table column and index at the same time.
-
-
-== ActiveRecord::SaveExtensions
-
-* save_false_then_reload!: a transaction to save and reload a record, to help repair associations
 
 
 == Array
@@ -205,7 +187,8 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
-- 1.7.2 Genmcutter update
+- 1.7.3 Refactor Rails classes to their own gem
+- 1.7.2 Gemcutter update
 - 1.7.1.8 Add Enumerable#map_with_index
 - 1.7.1.6 Add ActiveRecord::SaveExtensions#save_false_then_reload!
 - 1.7.1.3 Add XML#strip_xxx 
@@ -244,7 +227,7 @@ Extensions that help debug Ruby programs.
 
 =end
 
-%w{active_record active_record/save_extensions array csv date enumerable file hash integer io kernel math nil numeric object process string symbol time xml yaml}.map{|x|
+%w{array csv date enumerable file hash integer io kernel math nil numeric object process string symbol time xml yaml}.map{|x|
   require File.dirname(__FILE__) + "/webget_ruby_ramp/#{x}.rb"
 }
 

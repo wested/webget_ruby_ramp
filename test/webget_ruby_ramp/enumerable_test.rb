@@ -31,7 +31,7 @@ class EnumerableTest < Test::Unit::TestCase
   end
 
   def test_hash_by
-    assert_equal({3=>"Red",4=>"Blue",5=>"Green"},RGB.hash_by{|x| [x.size,x.titlecase]})
+    assert_equal({3=>"RED",4=>"BLUE",5=>"GREEN"},RGB.hash_by{|x| [x.size,x.upcase]})
   end
 
     

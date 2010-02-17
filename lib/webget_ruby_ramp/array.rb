@@ -243,7 +243,7 @@ class Array
   #
 
   def shifted(number_of_items=1)
-   slice(n,self.length-number_of_items)
+   slice(number_of_items,self.length-number_of_items)
   end
 
   alias :car :first

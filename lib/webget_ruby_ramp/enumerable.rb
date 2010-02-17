@@ -26,7 +26,7 @@ module Enumerable
     hash={}
     dupe={}
     each{|key,val|
-      if h.key? key
+      if hash.key? key
         if dupe.key? key
           hash[key] << val
         else
@@ -64,8 +64,8 @@ module Enumerable
   #
   # ==Example
   #   strings = ["red","blue","green"]
-  #   strings.hash_by{|a| [a.size, a.titlecase]}
-  #   => {3 => "red", 4 => "blue", 5 => "green"}
+  #   strings.hash_by{|a| [a.size, a.upcase]}
+  #   => {3 => "RED", 4 => "BLUE", 5 => "GREEN"}
   #
   # Compare #index_by
 
