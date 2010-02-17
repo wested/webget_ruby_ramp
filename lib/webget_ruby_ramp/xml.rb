@@ -165,7 +165,7 @@ class REXML::Document
   # cf. Element#remove_attributes
 
   def remove_attributes
-    self.elements.each("//") { |e| e.attributes.each_attribute{|attribute| attribute.remove }}
+    self.elements.each("//") { |elem| elem.attributes.each_attribute{|attribute| attribute.remove }}
     self
   end
   

@@ -34,12 +34,12 @@ class Array
     when 2
       prefix=fixes[0].to_s
       suffix=fixes[1].to_s
-      return self.map{|s| prefix + s.to_s + suffix}.ruby_join()
+      return self.map{|item| prefix + item.to_s + suffix}.ruby_join()
     when 3
       infix =fixes[0].to_s
       prefix=fixes[1].to_s
       suffix=fixes[2].to_s
-      return map{|s| prefix + s.to_s + suffix}.ruby_join(infix)
+      return self.map{|item| prefix + item.to_s + suffix}.ruby_join(infix)
     else
       raise "join(fixes[#{fixes.size}]"
     end
@@ -134,10 +134,10 @@ class Array
 
   def slices(slice_length)
     arr=[]
-    i=0
-    while i<length
-      arr.push self[i...(i+slice_length)]
-      i+=slice_length
+    index=0
+    while index<length
+      arr.push self[index...(index+slice_length)]
+      index+=slice_length
     end
     return arr
   end

@@ -127,11 +127,11 @@ class String
  #   String.prev_char('0') => '9', true, true    # change & carry
  #   String.prev_char('-') => '-', false, false  # unchanged
 
- def self.prev_char(c) #=> prev_char, changed_flag, carry_flag
-  case c
+ def self.prev_char(chr) #=> prev_char, changed_flag, carry_flag
+  case chr
   when '1'..'9', 'B'..'Z', 'b'..'z'
-    i=(c.respond_to?(:ord) ? c.ord : c[0])
-    return (i-1).chr, true, false
+    pos=(chr.respond_to?(:ord) ? chr.ord : chr[0])
+    return (pos-1).chr, true, false
   when '0'
     return '9', true, true
   when 'A'
@@ -139,7 +139,7 @@ class String
   when 'a'
     return 'z', true, true
   else
-    return c, false, false
+    return chr, false, false
   end
  end
 

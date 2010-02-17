@@ -23,22 +23,22 @@ module Enumerable
   #   array.to_h => {:a=>[:b, :c, :d]}
 
   def to_h
-    h={}
+    hash={}
     dupe={}
-    each{|k,v|
-      if h.key? k
-        if dupe.key? k
-          h[k] << v
+    each{|key,val|
+      if h.key? key
+        if dupe.key? key
+          hash[key] << val
         else
-          h[k]=[h[k]]
-          h[k] << v          
-          dupe[k]=true
+          hash[key]=[hash[key]]
+          hash[key] << val
+          dupe[key]=true
         end
       else
-        h[k]=v
+        hash[key]=val
       end
     }
-    return h
+    return hash
   end
 
 
@@ -249,16 +249,16 @@ module Enumerable
   # true, the second contains the elements for which block is false or nil.
 
   def bisect
-    a=[]
-    b=[]
-    each{|x| 
-     if yield(x)
-      a << x
+    accept=[]
+    reject=[]
+    each{|item| 
+     if yield(item)
+      accept << item
      else
-      b << x
+      reject << item
      end
     }
-    return a,b
+    return accept,reject
   end
 
 
