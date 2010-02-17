@@ -62,15 +62,15 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000002">::create_or_update</a></li>
+					<li><a href="#M000005">::create_or_update</a></li>
 					
 					<li><a href="#M000006">::create_or_update_by</a></li>
 					
-					<li><a href="#M000017">::included</a></li>
+					<li><a href="#M000012">::included</a></li>
 					
-					<li><a href="#M000014">::method_missing_with_create_or_update</a></li>
+					<li><a href="#M000011">::method_missing_with_create_or_update</a></li>
 					
-					<li><a href="#M000013">::seed</a></li>
+					<li><a href="#M000008">::seed</a></li>
 					
 				</ul>
 			</div>
@@ -91,19 +91,19 @@
 				
 					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
 				
-					<li class="file"><a href="../test/unit/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
+					<li class="file"><a href="../test/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
 				
-					<li class="file"><a href="../test/unit/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
+					<li class="file"><a href="../test/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
 				
-					<li class="file"><a href="../test/unit/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
+					<li class="file"><a href="../test/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
 				
-					<li class="file"><a href="../test/unit/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
+					<li class="file"><a href="../test/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
 				
-					<li class="file"><a href="../test/unit/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
+					<li class="file"><a href="../test/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
 				
-					<li class="file"><a href="../test/unit/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
+					<li class="file"><a href="../test/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
 				
-					<li class="file"><a href="../test/unit/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
+					<li class="file"><a href="../test/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
 				
 					<li class="file"><a href="../webget_ruby_ramp_gemspec.html">webget_ruby_ramp.gemspec</a></li>
 				
@@ -244,7 +244,11 @@
 		<h1 class="class">ActiveRecord::Base</h1>
 
 		<div id="description">
-			
+			<p>
+<a href="Base.html">ActiveRecord::Base</a> is for our mixins. It comes from
+Rails.
+</p>
+
 		</div>
 
 		<!-- Constants -->
@@ -260,7 +264,7 @@
 
 		
 			<div id="create-or-update-method" class="method-detail ">
-				<a name="M000002"></a>
+				<a name="M000005"></a>
 
 				<div class="method-heading">
 				
@@ -281,7 +285,7 @@ Most common use will be for testing (fixture/mock object generation)
 </p>
 <p>
 Three versions of method included: <a
-href="Base.html#M000002">create_or_update</a> <a
+href="Base.html#M000005">create_or_update</a> <a
 href="Base.html#M000006">create_or_update_by</a> create_or_update_by_xxx
 (where xxx is a field name)
 </p>
@@ -361,10 +365,10 @@ mix of symbols or strings.
 <pre>
     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/active_record.rb, line 52</span>
 52:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">create_or_update_by</span>(<span class="ruby-identifier">condition_keys</span>, <span class="ruby-identifier">attribute_pairs</span> = {})
-53:     <span class="ruby-identifier">condition_pairs</span>=[<span class="ruby-operator">*</span><span class="ruby-identifier">condition_keys</span>].<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">x</span>,(<span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">x</span>)<span class="ruby-operator">||</span><span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_s</span>)<span class="ruby-operator">||</span><span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_sym</span>))]}.<span class="ruby-identifier">to_h</span>
+53:     <span class="ruby-identifier">condition_pairs</span>=[<span class="ruby-operator">*</span><span class="ruby-identifier">condition_keys</span>].<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">key</span>,(<span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">key</span>)<span class="ruby-operator">||</span><span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>)<span class="ruby-operator">||</span><span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_sym</span>))]}.<span class="ruby-identifier">to_h</span>
 54:     <span class="ruby-identifier">record</span> = <span class="ruby-identifier">find</span>(<span class="ruby-identifier">:first</span>, <span class="ruby-identifier">:conditions</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">condition_pairs</span>) <span class="ruby-operator">||</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">new</span>
 55:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">new_record?</span> <span class="ruby-keyword kw">then</span> <span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">condition_pairs</span>) <span class="ruby-keyword kw">end</span>
-56:     <span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">send</span> <span class="ruby-identifier">k</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-value str">'='</span>, <span class="ruby-identifier">v</span>}
+56:     <span class="ruby-identifier">attribute_pairs</span>.<span class="ruby-identifier">each_pair</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">val</span><span class="ruby-operator">|</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">send</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-value str">'='</span>, <span class="ruby-identifier">val</span>}
 57:     <span class="ruby-identifier">record</span>.<span class="ruby-identifier">save!</span>
 58:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">record</span>
 59:   <span class="ruby-keyword kw">end</span></pre>
@@ -377,7 +381,7 @@ mix of symbols or strings.
 
 		
 			<div id="included-method" class="method-detail ">
-				<a name="M000017"></a>
+				<a name="M000012"></a>
 
 				<div class="method-heading">
 				
@@ -420,7 +424,7 @@ For alias method chain
 
 		
 			<div id="method-missing-with-create-or-update-method" class="method-detail ">
-				<a name="M000014"></a>
+				<a name="M000011"></a>
 
 				<div class="method-heading">
 				
@@ -464,7 +468,7 @@ href="Base.html#M000006">create_or_update_by</a>
 
 		
 			<div id="seed-method" class="method-detail ">
-				<a name="M000013"></a>
+				<a name="M000008"></a>
 
 				<div class="method-heading">
 				

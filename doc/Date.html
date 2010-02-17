@@ -59,17 +59,17 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000067">::between</a></li>
+					<li><a href="#M000069">::between</a></li>
 					
-					<li><a href="#M000069">#age_days</a></li>
+					<li><a href="#M000078">#age_days</a></li>
 					
-					<li><a href="#M000068">#age_years</a></li>
+					<li><a href="#M000075">#age_years</a></li>
 					
-					<li><a href="#M000063">#to_sql</a></li>
+					<li><a href="#M000066">#to_sql</a></li>
 					
-					<li><a href="#M000064">#weekday?</a></li>
+					<li><a href="#M000067">#weekday?</a></li>
 					
-					<li><a href="#M000066">#weekend?</a></li>
+					<li><a href="#M000068">#weekend?</a></li>
 					
 				</ul>
 			</div>
@@ -90,19 +90,19 @@
 				
 					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
 				
 					<li class="file"><a href="./webget_ruby_ramp_gemspec.html">webget_ruby_ramp.gemspec</a></li>
 				
@@ -243,7 +243,10 @@
 		<h1 class="class">Date</h1>
 
 		<div id="description">
-			
+			<p>
+<a href="Date.html">Date</a> extensions
+</p>
+
 		</div>
 
 		<!-- Constants -->
@@ -259,7 +262,7 @@
 
 		
 			<div id="between-method" class="method-detail ">
-				<a name="M000067"></a>
+				<a name="M000069"></a>
 
 				<div class="method-heading">
 				
@@ -286,10 +289,10 @@ Return a random date between min &amp; max
 					<div class="method-source-code"
 						id="between-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 48</span>
-48:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">between</span>(<span class="ruby-identifier">min</span>,<span class="ruby-identifier">max</span>)
-49:     <span class="ruby-identifier">min</span><span class="ruby-operator">+</span><span class="ruby-identifier">rand</span>(<span class="ruby-identifier">max</span><span class="ruby-operator">-</span><span class="ruby-identifier">min</span>)
-50:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 50</span>
+50:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">between</span>(<span class="ruby-identifier">min</span>,<span class="ruby-identifier">max</span>)
+51:     <span class="ruby-identifier">min</span><span class="ruby-operator">+</span><span class="ruby-identifier">rand</span>(<span class="ruby-identifier">max</span><span class="ruby-operator">-</span><span class="ruby-identifier">min</span>)
+52:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -305,7 +308,7 @@ Return a random date between min &amp; max
 
 		
 			<div id="age-days-method" class="method-detail ">
-				<a name="M000069"></a>
+				<a name="M000078"></a>
 
 				<div class="method-heading">
 				
@@ -326,10 +329,10 @@ Return the age in days for a given date.
 					<div class="method-source-code"
 						id="age-days-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 82</span>
-82:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">age_days</span>(<span class="ruby-identifier">compare_to_date</span>=<span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>)
-83:     (<span class="ruby-identifier">compare_to_date</span><span class="ruby-operator">-</span><span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">to_i</span>
-84:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 85</span>
+85:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">age_days</span>(<span class="ruby-identifier">compare_to_date</span>=<span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>)
+86:     (<span class="ruby-identifier">compare_to_date</span><span class="ruby-operator">-</span><span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">to_i</span>
+87:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -339,7 +342,7 @@ Return the age in days for a given date.
 
 		
 			<div id="age-years-method" class="method-detail ">
-				<a name="M000068"></a>
+				<a name="M000075"></a>
 
 				<div class="method-heading">
 				
@@ -378,12 +381,13 @@ Return the age in years for a given date.
 					<div class="method-source-code"
 						id="age-years-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 73</span>
-73:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">age_years</span>(<span class="ruby-identifier">compare_date</span>=<span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>)
-74:     <span class="ruby-identifier">age</span>=<span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">year</span><span class="ruby-operator">-</span><span class="ruby-identifier">year</span>
-75:     <span class="ruby-identifier">age</span><span class="ruby-operator">-=</span><span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">month</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">month</span> <span class="ruby-keyword kw">or</span> (<span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">month</span><span class="ruby-operator">==</span><span class="ruby-identifier">month</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">day</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">day</span>)
-76:     <span class="ruby-identifier">age</span>
-77:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 75</span>
+75:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">age_years</span>(<span class="ruby-identifier">compare_date</span>=<span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>)
+76:     <span class="ruby-identifier">age</span>=<span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">year</span><span class="ruby-operator">-</span><span class="ruby-identifier">year</span>
+77:     <span class="ruby-identifier">compare_month</span> = <span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">month</span>
+78:     <span class="ruby-identifier">age</span><span class="ruby-operator">-=</span><span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">compare_month</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">month</span> <span class="ruby-keyword kw">or</span> (<span class="ruby-identifier">compare_month</span><span class="ruby-operator">==</span><span class="ruby-identifier">month</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">day</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">day</span>)
+79:     <span class="ruby-identifier">age</span>
+80:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -393,7 +397,7 @@ Return the age in years for a given date.
 
 		
 			<div id="to-sql-method" class="method-detail ">
-				<a name="M000063"></a>
+				<a name="M000066"></a>
 
 				<div class="method-heading">
 				
@@ -419,10 +423,10 @@ Return date in a sql format: YYYY-MM-DD
 					<div class="method-source-code"
 						id="to-sql-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 12</span>
-12:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_sql</span>
-13:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_time</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-value str">&quot;%Y-%m-%d&quot;</span>)
-14:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 14</span>
+14:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_sql</span>
+15:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">to_time</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-value str">&quot;%Y-%m-%d&quot;</span>)
+16:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -432,7 +436,7 @@ Return date in a sql format: YYYY-MM-DD
 
 		
 			<div id="weekday--method" class="method-detail ">
-				<a name="M000064"></a>
+				<a name="M000067"></a>
 
 				<div class="method-heading">
 				
@@ -459,10 +463,10 @@ Return true if the date is a weekday: Mon, Tue, Wed, Thu, Fri
 					<div class="method-source-code"
 						id="weekday--source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 24</span>
-24:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">weekday?</span>
-25:     <span class="ruby-identifier">wday</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">wday</span><span class="ruby-operator">&lt;</span><span class="ruby-value">6</span>
-26:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 26</span>
+26:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">weekday?</span>
+27:     <span class="ruby-identifier">wday</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">wday</span><span class="ruby-operator">&lt;</span><span class="ruby-value">6</span>
+28:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -472,7 +476,7 @@ Return true if the date is a weekday: Mon, Tue, Wed, Thu, Fri
 
 		
 			<div id="weekend--method" class="method-detail ">
-				<a name="M000066"></a>
+				<a name="M000068"></a>
 
 				<div class="method-heading">
 				
@@ -499,10 +503,10 @@ Return true if the date is a weekend: Sat, Sun
 					<div class="method-source-code"
 						id="weekend--source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 36</span>
-36:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">weekend?</span>
-37:     <span class="ruby-identifier">wday</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">wday</span><span class="ruby-operator">==</span><span class="ruby-value">6</span>
-38:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 38</span>
+38:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">weekend?</span>
+39:     <span class="ruby-identifier">wday</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">wday</span><span class="ruby-operator">==</span><span class="ruby-value">6</span>
+40:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

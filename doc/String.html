@@ -59,35 +59,35 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000121">::lorem</a></li>
+					<li><a href="#M000090">::lorem</a></li>
 					
-					<li><a href="#M000119">::lorem_length</a></li>
+					<li><a href="#M000089">::lorem_length</a></li>
 					
-					<li><a href="#M000081">::prev_char</a></li>
+					<li><a href="#M000082">::prev_char</a></li>
 					
 					<li><a href="#M000070">#capitalize_words</a></li>
 					
 					<li><a href="#M000080">#decrement</a></li>
 					
-					<li><a href="#M000078">#increment</a></li>
+					<li><a href="#M000079">#increment</a></li>
 					
 					<li><a href="#M000074">#lowcase</a></li>
 					
-					<li><a href="#M000108">#pred</a></li>
+					<li><a href="#M000086">#pred</a></li>
 					
-					<li><a href="#M000109">#pred!</a></li>
+					<li><a href="#M000087">#pred!</a></li>
 					
-					<li><a href="#M000104">#prev</a></li>
+					<li><a href="#M000084">#prev</a></li>
 					
-					<li><a href="#M000105">#prev!</a></li>
+					<li><a href="#M000085">#prev!</a></li>
 					
 					<li><a href="#M000072">#split_tab</a></li>
 					
 					<li><a href="#M000073">#split_tsv</a></li>
 					
-					<li><a href="#M000076">#to_class</a></li>
+					<li><a href="#M000077">#to_class</a></li>
 					
-					<li><a href="#M000075">#to_xid</a></li>
+					<li><a href="#M000076">#to_xid</a></li>
 					
 					<li><a href="#M000071">#words</a></li>
 					
@@ -110,19 +110,19 @@
 				
 					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
 				
 					<li class="file"><a href="./webget_ruby_ramp_gemspec.html">webget_ruby_ramp.gemspec</a></li>
 				
@@ -263,7 +263,10 @@
 		<h1 class="class">String</h1>
 
 		<div id="description">
-			
+			<p>
+<a href="String.html">String</a> extensions
+</p>
+
 		</div>
 
 		<!-- Constants -->
@@ -303,7 +306,7 @@ Helpful constants
 
 		
 			<div id="lorem-method" class="method-detail ">
-				<a name="M000121"></a>
+				<a name="M000090"></a>
 
 				<div class="method-heading">
 				
@@ -330,10 +333,10 @@ This method defaults to length = self.lorem_length.
 					<div class="method-source-code"
 						id="lorem-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 214</span>
-214:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lorem</span>(<span class="ruby-identifier">length</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lorem_length</span>)
-215:   [<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>,<span class="ruby-value str">'d'</span>,<span class="ruby-value str">'e'</span>,<span class="ruby-value str">'f'</span>,<span class="ruby-value str">'g'</span>,<span class="ruby-value str">'h'</span>,<span class="ruby-value str">'i'</span>,<span class="ruby-value str">'j'</span>,<span class="ruby-value str">'k'</span>,<span class="ruby-value str">'l'</span>,<span class="ruby-value str">'m'</span>,<span class="ruby-value str">'n'</span>,<span class="ruby-value str">'o'</span>,<span class="ruby-value str">'p'</span>,<span class="ruby-value str">'q'</span>,<span class="ruby-value str">'r'</span>,<span class="ruby-value str">'s'</span>,<span class="ruby-value str">'t'</span>,<span class="ruby-value str">'u'</span>,<span class="ruby-value str">'v'</span>,<span class="ruby-value str">'w'</span>,<span class="ruby-value str">'x'</span>,<span class="ruby-value str">'y'</span>,<span class="ruby-value str">'z'</span>].<span class="ruby-identifier">choices</span>(<span class="ruby-identifier">length</span>).<span class="ruby-identifier">join</span>
-216:  <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 215</span>
+215:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lorem</span>(<span class="ruby-identifier">length</span>=<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lorem_length</span>)
+216:   [<span class="ruby-value str">'a'</span>,<span class="ruby-value str">'b'</span>,<span class="ruby-value str">'c'</span>,<span class="ruby-value str">'d'</span>,<span class="ruby-value str">'e'</span>,<span class="ruby-value str">'f'</span>,<span class="ruby-value str">'g'</span>,<span class="ruby-value str">'h'</span>,<span class="ruby-value str">'i'</span>,<span class="ruby-value str">'j'</span>,<span class="ruby-value str">'k'</span>,<span class="ruby-value str">'l'</span>,<span class="ruby-value str">'m'</span>,<span class="ruby-value str">'n'</span>,<span class="ruby-value str">'o'</span>,<span class="ruby-value str">'p'</span>,<span class="ruby-value str">'q'</span>,<span class="ruby-value str">'r'</span>,<span class="ruby-value str">'s'</span>,<span class="ruby-value str">'t'</span>,<span class="ruby-value str">'u'</span>,<span class="ruby-value str">'v'</span>,<span class="ruby-value str">'w'</span>,<span class="ruby-value str">'x'</span>,<span class="ruby-value str">'y'</span>,<span class="ruby-value str">'z'</span>].<span class="ruby-identifier">choices</span>(<span class="ruby-identifier">length</span>).<span class="ruby-identifier">join</span>
+217:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -343,7 +346,7 @@ This method defaults to length = self.lorem_length.
 
 		
 			<div id="lorem-length-method" class="method-detail ">
-				<a name="M000119"></a>
+				<a name="M000089"></a>
 
 				<div class="method-heading">
 				
@@ -367,10 +370,10 @@ This method uses 1+rand(10)
 					<div class="method-source-code"
 						id="lorem-length-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 204</span>
-204:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lorem_length</span>
-205:   <span class="ruby-value">1</span><span class="ruby-operator">+</span><span class="ruby-identifier">rand</span>(<span class="ruby-value">10</span>)
-206:  <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 205</span>
+205:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lorem_length</span>
+206:   <span class="ruby-value">1</span><span class="ruby-operator">+</span><span class="ruby-identifier">rand</span>(<span class="ruby-value">10</span>)
+207:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -380,7 +383,7 @@ This method uses 1+rand(10)
 
 		
 			<div id="prev-char-method" class="method-detail ">
-				<a name="M000081"></a>
+				<a name="M000082"></a>
 
 				<div class="method-heading">
 				
@@ -409,22 +412,22 @@ Return the previous character, with a changed flag and carry flag
 					<div class="method-source-code"
 						id="prev-char-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 129</span>
-129:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-identifier">c</span>) <span class="ruby-comment cmt">#=&gt; prev_char, changed_flag, carry_flag</span>
-130:   <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">c</span>
-131:   <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'1'</span><span class="ruby-operator">..</span><span class="ruby-value str">'9'</span>, <span class="ruby-value str">'B'</span><span class="ruby-operator">..</span><span class="ruby-value str">'Z'</span>, <span class="ruby-value str">'b'</span><span class="ruby-operator">..</span><span class="ruby-value str">'z'</span>
-132:     <span class="ruby-identifier">i</span>=(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">:ord</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">ord</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">c</span>[<span class="ruby-value">0</span>])
-133:     <span class="ruby-keyword kw">return</span> (<span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>).<span class="ruby-identifier">chr</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">false</span>
-134:   <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'0'</span>
-135:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'9'</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">true</span>
-136:   <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'A'</span>
-137:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'Z'</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">true</span>
-138:   <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'a'</span>
-139:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'z'</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">true</span>
-140:   <span class="ruby-keyword kw">else</span>
-141:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">c</span>, <span class="ruby-keyword kw">false</span>, <span class="ruby-keyword kw">false</span>
-142:   <span class="ruby-keyword kw">end</span>
-143:  <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 130</span>
+130:  <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-identifier">c</span>) <span class="ruby-comment cmt">#=&gt; prev_char, changed_flag, carry_flag</span>
+131:   <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">c</span>
+132:   <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'1'</span><span class="ruby-operator">..</span><span class="ruby-value str">'9'</span>, <span class="ruby-value str">'B'</span><span class="ruby-operator">..</span><span class="ruby-value str">'Z'</span>, <span class="ruby-value str">'b'</span><span class="ruby-operator">..</span><span class="ruby-value str">'z'</span>
+133:     <span class="ruby-identifier">i</span>=(<span class="ruby-identifier">c</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-identifier">:ord</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">ord</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">c</span>[<span class="ruby-value">0</span>])
+134:     <span class="ruby-keyword kw">return</span> (<span class="ruby-identifier">i</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>).<span class="ruby-identifier">chr</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">false</span>
+135:   <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'0'</span>
+136:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'9'</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">true</span>
+137:   <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'A'</span>
+138:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'Z'</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">true</span>
+139:   <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'a'</span>
+140:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">'z'</span>, <span class="ruby-keyword kw">true</span>, <span class="ruby-keyword kw">true</span>
+141:   <span class="ruby-keyword kw">else</span>
+142:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">c</span>, <span class="ruby-keyword kw">false</span>, <span class="ruby-keyword kw">false</span>
+143:   <span class="ruby-keyword kw">end</span>
+144:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -461,10 +464,10 @@ Return the string with words capitalized
 					<div class="method-source-code"
 						id="capitalize-words-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 33</span>
-33:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">capitalize_words</span>
-34:   <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\b/</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">capitalize</span> }.<span class="ruby-identifier">join</span>
-35:  <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 34</span>
+34:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">capitalize_words</span>
+35:   <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\b/</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">word</span><span class="ruby-operator">|</span> <span class="ruby-identifier">word</span>.<span class="ruby-identifier">capitalize</span> }.<span class="ruby-identifier">join</span>
+36:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -496,7 +499,7 @@ Decrement the rightmost natural number
   'foo10bar'.derement =&gt; 'foo9bar'
 </pre>
 <ul>
-<li>see <a href="String.html#M000078">String#increment</a>
+<li>see <a href="String.html#M000079">String#increment</a>
 
 </li>
 </ul>
@@ -506,10 +509,10 @@ Decrement the rightmost natural number
 					<div class="method-source-code"
 						id="decrement-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 115</span>
-115:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">decrement</span>(<span class="ruby-identifier">step</span>=<span class="ruby-value">1</span>)
-116:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">=~</span><span class="ruby-regexp re">/\d+/</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">$`</span><span class="ruby-operator">+</span>(<span class="ruby-identifier">$&amp;</span>.<span class="ruby-identifier">to_i</span><span class="ruby-operator">-</span><span class="ruby-identifier">step</span>).<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-identifier">$'</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">self</span>
-117:  <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 116</span>
+116:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">decrement</span>(<span class="ruby-identifier">step</span>=<span class="ruby-value">1</span>)
+117:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">=~</span><span class="ruby-regexp re">/\d+/</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">$`</span><span class="ruby-operator">+</span>(<span class="ruby-identifier">$&amp;</span>.<span class="ruby-identifier">to_i</span><span class="ruby-operator">-</span><span class="ruby-identifier">step</span>).<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-identifier">$'</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">self</span>
+118:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -519,7 +522,7 @@ Decrement the rightmost natural number
 
 		
 			<div id="increment-method" class="method-detail ">
-				<a name="M000078"></a>
+				<a name="M000079"></a>
 
 				<div class="method-heading">
 				
@@ -551,10 +554,10 @@ Increment the rightmost natural number
 					<div class="method-source-code"
 						id="increment-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 101</span>
-101:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">increment</span>(<span class="ruby-identifier">step</span>=<span class="ruby-value">1</span>)
-102:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">=~</span><span class="ruby-regexp re">/\d+/</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">$`</span><span class="ruby-operator">+</span>(<span class="ruby-identifier">$&amp;</span>.<span class="ruby-identifier">to_i</span><span class="ruby-operator">+</span><span class="ruby-identifier">step</span>).<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-identifier">$'</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">self</span>
-103:  <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 102</span>
+102:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">increment</span>(<span class="ruby-identifier">step</span>=<span class="ruby-value">1</span>)
+103:   <span class="ruby-keyword kw">self</span><span class="ruby-operator">=~</span><span class="ruby-regexp re">/\d+/</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">$`</span><span class="ruby-operator">+</span>(<span class="ruby-identifier">$&amp;</span>.<span class="ruby-identifier">to_i</span><span class="ruby-operator">+</span><span class="ruby-identifier">step</span>).<span class="ruby-identifier">to_s</span><span class="ruby-operator">+</span><span class="ruby-identifier">$'</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">self</span>
+104:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -591,10 +594,10 @@ single underscores (aka low dashes).
 					<div class="method-source-code"
 						id="lowcase-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 68</span>
-68:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lowcase</span>
-69:   <span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/[_\W]+/</span>,<span class="ruby-value str">'_'</span>)
-70:  <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 69</span>
+69:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lowcase</span>
+70:   <span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/[_\W]+/</span>,<span class="ruby-value str">'_'</span>)
+71:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -604,7 +607,7 @@ single underscores (aka low dashes).
 
 		
 			<div id="pred-method" class="method-detail method-alias">
-				<a name="M000108"></a>
+				<a name="M000086"></a>
 
 				<div class="method-heading">
 				
@@ -617,7 +620,7 @@ single underscores (aka low dashes).
 				<div class="method-description">
 					
 					<p>
-Alias for <a href="String.html#M000104">prev</a>
+Alias for <a href="String.html#M000084">prev</a>
 </p>
 					
 
@@ -629,7 +632,7 @@ Alias for <a href="String.html#M000104">prev</a>
 
 		
 			<div id="pred--method" class="method-detail method-alias">
-				<a name="M000109"></a>
+				<a name="M000087"></a>
 
 				<div class="method-heading">
 				
@@ -642,7 +645,7 @@ Alias for <a href="String.html#M000104">prev</a>
 				<div class="method-description">
 					
 					<p>
-Alias for <a href="String.html#M000105">prev!</a>
+Alias for <a href="String.html#M000085">prev!</a>
 </p>
 					
 
@@ -654,7 +657,7 @@ Alias for <a href="String.html#M000105">prev!</a>
 
 		
 			<div id="prev-method" class="method-detail ">
-				<a name="M000104"></a>
+				<a name="M000084"></a>
 
 				<div class="method-heading">
 				
@@ -691,24 +694,24 @@ Return the previous string
 					<div class="method-source-code"
 						id="prev-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 160</span>
-160:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">prev</span>
-161:   <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">clone</span>.<span class="ruby-identifier">prev!</span>
-162:  <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 161</span>
+161:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">prev</span>
+162:   <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">clone</span>.<span class="ruby-identifier">prev!</span>
+163:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
 
 				
 				<div class="aliases">
-					Also aliased as: <a href="String.html#M000108">pred</a>
+					Also aliased as: <a href="String.html#M000086">pred</a>
 				</div>
 				
 			</div>
 
 		
 			<div id="prev--method" class="method-detail ">
-				<a name="M000105"></a>
+				<a name="M000085"></a>
 
 				<div class="method-heading">
 				
@@ -721,7 +724,7 @@ Return the previous string
 				<div class="method-description">
 					
 					<p>
-Do <a href="String.html#M000104">String#prev</a> in place
+Do <a href="String.html#M000084">String#prev</a> in place
 </p>
 					
 
@@ -729,27 +732,27 @@ Do <a href="String.html#M000104">String#prev</a> in place
 					<div class="method-source-code"
 						id="prev--source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 167</span>
-167:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">prev!</span>
-168:   <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">length</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>
-169:   <span class="ruby-identifier">i</span>=<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span> <span class="ruby-comment cmt"># rightmost</span>
-170:   <span class="ruby-keyword kw">while</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">do</span>
-171:    <span class="ruby-identifier">c</span>=<span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">i</span>].<span class="ruby-identifier">chr</span>
-172:    <span class="ruby-identifier">prev_c</span>,<span class="ruby-identifier">changed_flag</span>,<span class="ruby-identifier">carry_flag</span>=<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-identifier">c</span>)
-173:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">changed_flag</span>
-174:    <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">i</span>]=<span class="ruby-identifier">prev_c</span>
-175:    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">carry_flag</span>
-176:    <span class="ruby-identifier">i</span><span class="ruby-operator">-=</span><span class="ruby-value">1</span>
-177:    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">i</span><span class="ruby-operator">&lt;</span><span class="ruby-value">0</span>
-178:   <span class="ruby-keyword kw">end</span>
-179:  <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 168</span>
+168:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">prev!</span>
+169:   <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">length</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>
+170:   <span class="ruby-identifier">index</span>=<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-value">1</span> <span class="ruby-comment cmt"># rightmost</span>
+171:   <span class="ruby-keyword kw">while</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">do</span>
+172:    <span class="ruby-identifier">chr</span>=<span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">index</span>].<span class="ruby-identifier">chr</span>
+173:    <span class="ruby-identifier">prev_chr</span>,<span class="ruby-identifier">changed_flag</span>,<span class="ruby-identifier">carry_flag</span>=<span class="ruby-constant">String</span>.<span class="ruby-identifier">prev_char</span>(<span class="ruby-identifier">chr</span>)
+174:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">changed_flag</span>
+175:    <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">index</span>]=<span class="ruby-identifier">prev_chr</span>
+176:    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">carry_flag</span>
+177:    <span class="ruby-identifier">index</span><span class="ruby-operator">-=</span><span class="ruby-value">1</span>
+178:    <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">index</span><span class="ruby-operator">&lt;</span><span class="ruby-value">0</span>
+179:   <span class="ruby-keyword kw">end</span>
+180:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
 
 				
 				<div class="aliases">
-					Also aliased as: <a href="String.html#M000109">pred!</a>
+					Also aliased as: <a href="String.html#M000087">pred!</a>
 				</div>
 				
 			</div>
@@ -777,10 +780,10 @@ Return an array that is the string split at tabs, i.e. split(/t/)
 					<div class="method-source-code"
 						id="split-tab-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 47</span>
-47:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">split_tab</span>
-48:   <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\t/</span>)
-49:  <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 48</span>
+48:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">split_tab</span>
+49:   <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\t/</span>)
+50:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -813,10 +816,10 @@ and each row into an array of fields.
 					<div class="method-source-code"
 						id="split-tsv-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 56</span>
-56:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">split_tsv</span>
-57:    <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\n/</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\t/</span>)}
-58:  <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 57</span>
+57:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">split_tsv</span>
+58:    <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\n/</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\t/</span>)}
+59:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -826,7 +829,7 @@ and each row into an array of fields.
 
 		
 			<div id="to-class-method" class="method-detail ">
-				<a name="M000076"></a>
+				<a name="M000077"></a>
 
 				<div class="method-heading">
 				
@@ -839,7 +842,7 @@ and each row into an array of fields.
 				<div class="method-description">
 					
 					<p>
-Ruby <a href="String.html#M000076">String#to_class</a> method to convert
+Ruby <a href="String.html#M000077">String#to_class</a> method to convert
 from a <a href="String.html">String</a> to a class
 </p>
 <p>
@@ -852,10 +855,10 @@ href="http://infovore.org/archives/2006/08/02/getting-a-class-object-in-ruby-fro
 					<div class="method-source-code"
 						id="to-class-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 87</span>
-87:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_class</span>
-88:   <span class="ruby-identifier">split</span>(<span class="ruby-value str">'::'</span>).<span class="ruby-identifier">inject</span>(<span class="ruby-constant">Kernel</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">scope</span>, <span class="ruby-identifier">const_name</span><span class="ruby-operator">|</span> <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">const_name</span>)}
-89:  <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 88</span>
+88:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_class</span>
+89:   <span class="ruby-identifier">split</span>(<span class="ruby-value str">'::'</span>).<span class="ruby-identifier">inject</span>(<span class="ruby-constant">Kernel</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">scope</span>, <span class="ruby-identifier">const_name</span><span class="ruby-operator">|</span> <span class="ruby-identifier">scope</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">const_name</span>)}
+90:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -865,7 +868,7 @@ href="http://infovore.org/archives/2006/08/02/getting-a-class-object-in-ruby-fro
 
 		
 			<div id="to-xid-method" class="method-detail ">
-				<a name="M000075"></a>
+				<a name="M000076"></a>
 
 				<div class="method-heading">
 				
@@ -892,10 +895,10 @@ Return the string as an <a href="XML.html">XML</a> id, which is the same as
 					<div class="method-source-code"
 						id="to-xid-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 79</span>
-79:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_xid</span>
-80:   <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lowcase</span>
-81:  <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 80</span>
+80:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_xid</span>
+81:   <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">lowcase</span>
+82:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -926,10 +929,10 @@ Return an array that is the string split into words, i.e. split(W*b*)
 					<div class="method-source-code"
 						id="words-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 40</span>
-40:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">words</span>
-41:   <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\W*\b\W*/</span>)
-42:  <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/string.rb, line 41</span>
+41:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">words</span>
+42:   <span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\W*\b\W*/</span>)
+43:  <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

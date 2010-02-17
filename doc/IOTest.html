@@ -28,8 +28,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="./test/unit/webget_ruby_ramp/io_test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="test/unit/webget_ruby_ramp/io_test.rb">test/unit/webget_ruby_ramp/io_test.rb</a></li>
+						<li><a href="./test/webget_ruby_ramp/io_test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="test/webget_ruby_ramp/io_test.rb">test/webget_ruby_ramp/io_test.rb</a></li>
 					
 					</ul>
 				</div>
@@ -59,11 +59,11 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000247">#test_load_dir_files</a></li>
+					<li><a href="#M000245">#test_load_dir_files</a></li>
 					
-					<li><a href="#M000248">#test_readrow</a></li>
+					<li><a href="#M000252">#test_readrow</a></li>
 					
-					<li><a href="#M000249">#test_readrows</a></li>
+					<li><a href="#M000253">#test_readrows</a></li>
 					
 				</ul>
 			</div>
@@ -84,19 +84,19 @@
 				
 					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
 				
 					<li class="file"><a href="./webget_ruby_ramp_gemspec.html">webget_ruby_ramp.gemspec</a></li>
 				
@@ -265,7 +265,7 @@
 
 		
 			<div id="test-load-dir-files-method" class="method-detail ">
-				<a name="M000247"></a>
+				<a name="M000245"></a>
 
 				<div class="method-heading">
 				
@@ -284,7 +284,7 @@
 					<div class="method-source-code"
 						id="test-load-dir-files-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/webget_ruby_ramp/io_test.rb, line 8</span>
+    <span class="ruby-comment cmt"># File test/webget_ruby_ramp/io_test.rb, line 8</span>
  8:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_load_dir_files</span>
  9:    <span class="ruby-identifier">dirpath</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'io_test*'</span>)
 10:    <span class="ruby-identifier">expect</span>=[<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'io_test.rb'</span>),<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'io_test.txt'</span>)]
@@ -300,7 +300,7 @@
 
 		
 			<div id="test-readrow-method" class="method-detail ">
-				<a name="M000248"></a>
+				<a name="M000252"></a>
 
 				<div class="method-heading">
 				
@@ -319,7 +319,7 @@
 					<div class="method-source-code"
 						id="test-readrow-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/webget_ruby_ramp/io_test.rb, line 15</span>
+    <span class="ruby-comment cmt"># File test/webget_ruby_ramp/io_test.rb, line 15</span>
 15:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_readrow</span>
 16:    <span class="ruby-identifier">filename</span>=<span class="ruby-constant">Dir</span>[<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'io_test.txt'</span>)].<span class="ruby-identifier">first</span>
 17:    <span class="ruby-identifier">f</span>=<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>)
@@ -336,7 +336,7 @@
 
 		
 			<div id="test-readrows-method" class="method-detail ">
-				<a name="M000249"></a>
+				<a name="M000253"></a>
 
 				<div class="method-heading">
 				
@@ -355,7 +355,7 @@
 					<div class="method-source-code"
 						id="test-readrows-source">
 <pre>
-    <span class="ruby-comment cmt"># File test/unit/webget_ruby_ramp/io_test.rb, line 23</span>
+    <span class="ruby-comment cmt"># File test/webget_ruby_ramp/io_test.rb, line 23</span>
 23:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">test_readrows</span>
 24:    <span class="ruby-identifier">filename</span>=<span class="ruby-constant">Dir</span>[<span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">MYDIR</span>,<span class="ruby-value str">'io_test.txt'</span>)].<span class="ruby-identifier">first</span>
 25:    <span class="ruby-identifier">expect</span>=[[<span class="ruby-value str">&quot;A1&quot;</span>,<span class="ruby-value str">&quot;B1&quot;</span>,<span class="ruby-value str">&quot;C1&quot;</span>],[<span class="ruby-value str">&quot;A2&quot;</span>,<span class="ruby-value str">&quot;B2&quot;</span>,<span class="ruby-value str">&quot;C2&quot;</span>],[<span class="ruby-value str">&quot;A3&quot;</span>,<span class="ruby-value str">&quot;B3&quot;</span>,<span class="ruby-value str">&quot;C3&quot;</span>]]

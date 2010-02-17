@@ -52,7 +52,7 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000131">::load_dir</a></li>
+					<li><a href="#M000115">::load_dir</a></li>
 					
 				</ul>
 			</div>
@@ -73,19 +73,19 @@
 				
 					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
 				
 					<li class="file"><a href="./webget_ruby_ramp_gemspec.html">webget_ruby_ramp.gemspec</a></li>
 				
@@ -226,7 +226,10 @@
 		<h1 class="module">YAML</h1>
 
 		<div id="description">
-			
+			<p>
+<a href="YAML.html">YAML</a> extensions
+</p>
+
 		</div>
 
 		<!-- Constants -->
@@ -242,7 +245,7 @@
 
 		
 			<div id="load-dir-method" class="method-detail ">
-				<a name="M000131"></a>
+				<a name="M000115"></a>
 
 				<div class="method-heading">
 				
@@ -281,19 +284,19 @@ for pattern details.
 					<div class="method-source-code"
 						id="load-dir-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/yaml.rb, line 19</span>
-19:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">dirpaths</span>)
-20:     <span class="ruby-identifier">dirpaths</span>=[<span class="ruby-operator">*</span><span class="ruby-identifier">dirpaths</span>.<span class="ruby-identifier">flatten</span>]
-21:     <span class="ruby-identifier">dirpaths</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dirpath</span><span class="ruby-operator">|</span>
-22:       <span class="ruby-constant">Dir</span>[<span class="ruby-identifier">dirpath</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">filename</span><span class="ruby-operator">|</span>
-23:         <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
-24:           <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_documents</span>(<span class="ruby-identifier">file</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span>
-25:             <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">doc</span>
-26:           <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#load</span>
-27:         <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#file</span>
-28:       <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#dir</span>
-29:     <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#each</span>
-30:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/yaml.rb, line 21</span>
+21:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_dir</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">dirpaths</span>)
+22:     <span class="ruby-identifier">dirpaths</span>=[<span class="ruby-operator">*</span><span class="ruby-identifier">dirpaths</span>.<span class="ruby-identifier">flatten</span>]
+23:     <span class="ruby-identifier">dirpaths</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dirpath</span><span class="ruby-operator">|</span>
+24:       <span class="ruby-constant">Dir</span>[<span class="ruby-identifier">dirpath</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">filename</span><span class="ruby-operator">|</span>
+25:         <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-identifier">filename</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+26:           <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_documents</span>(<span class="ruby-identifier">file</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">doc</span><span class="ruby-operator">|</span>
+27:             <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">doc</span>
+28:           <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#load</span>
+29:         <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#file</span>
+30:       <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#dir</span>
+31:     <span class="ruby-keyword kw">end</span> <span class="ruby-comment cmt">#each</span>
+32:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

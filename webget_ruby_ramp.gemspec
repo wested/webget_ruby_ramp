@@ -15,8 +15,8 @@ Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.require_path      = 'lib'
   s.has_rdoc          = true
-  s.files             = ['lib/webget_ruby_ramp.rb'] + CLASSES.map{|c| "lib/webget_ruby_ramp/#{c}.rb"} + TEST_FILES.map{|f| "test/unit/webget_ruby_ramp/#{f}"}
-  s.test_files        = CLASSES.map{|c| "test/unit/webget_ruby_ramp/#{c}_test.rb"}
+  s.files             = ['lib/webget_ruby_ramp.rb'] + CLASSES.map{|c| "lib/webget_ruby_ramp/#{c}.rb"} + TEST_FILES.map{|f| "test/webget_ruby_ramp/#{f}"}
+  s.test_files        = CLASSES.map{|c| "test/webget_ruby_ramp/#{c}_test.rb"}
 
   #s.add_dependency('sqlite3-ruby') # for testing ActiveRecord
 

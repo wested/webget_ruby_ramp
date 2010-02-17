@@ -59,7 +59,7 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#M000018">#remove_attributes</a></li>
+					<li><a href="#M000019">#remove_attributes</a></li>
 					
 				</ul>
 			</div>
@@ -80,19 +80,19 @@
 				
 					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
 				
-					<li class="file"><a href="../test/unit/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
+					<li class="file"><a href="../test/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
 				
-					<li class="file"><a href="../test/unit/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
+					<li class="file"><a href="../test/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
 				
-					<li class="file"><a href="../test/unit/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
+					<li class="file"><a href="../test/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
 				
-					<li class="file"><a href="../test/unit/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
+					<li class="file"><a href="../test/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
 				
-					<li class="file"><a href="../test/unit/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
+					<li class="file"><a href="../test/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
 				
-					<li class="file"><a href="../test/unit/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
+					<li class="file"><a href="../test/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
 				
-					<li class="file"><a href="../test/unit/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
+					<li class="file"><a href="../test/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
 				
 					<li class="file"><a href="../webget_ruby_ramp_gemspec.html">webget_ruby_ramp.gemspec</a></li>
 				
@@ -233,7 +233,10 @@
 		<h1 class="class">REXML::Element</h1>
 
 		<div id="description">
-			
+			<p>
+<a href="Element.html">REXML::Element</a> extensions
+</p>
+
 		</div>
 
 		<!-- Constants -->
@@ -249,7 +252,7 @@
 
 		
 			<div id="remove-attributes-method" class="method-detail ">
-				<a name="M000018"></a>
+				<a name="M000019"></a>
 
 				<div class="method-heading">
 				
@@ -268,7 +271,7 @@ Remove all attributes from the element.
 Return the element.
 </p>
 <p>
-cf. <a href="Document.html#M000016">Document#remove_attributes</a>
+cf. <a href="Document.html#M000017">Document#remove_attributes</a>
 </p>
 					
 
@@ -276,11 +279,11 @@ cf. <a href="Document.html#M000016">Document#remove_attributes</a>
 					<div class="method-source-code"
 						id="remove-attributes-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/xml.rb, line 177</span>
-177:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_attributes</span>
-178:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">each_attribute</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">attribute</span><span class="ruby-operator">|</span> <span class="ruby-identifier">attribute</span>.<span class="ruby-identifier">remove</span> }
-179:     <span class="ruby-keyword kw">self</span>
-180:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/xml.rb, line 185</span>
+185:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_attributes</span>
+186:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">each_attribute</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">attribute</span><span class="ruby-operator">|</span> <span class="ruby-identifier">attribute</span>.<span class="ruby-identifier">remove</span> }
+187:     <span class="ruby-keyword kw">self</span>
+188:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

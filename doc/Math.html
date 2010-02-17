@@ -75,19 +75,19 @@
 				
 					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
 				
-					<li class="file"><a href="./test/unit/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
+					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
 				
 					<li class="file"><a href="./webget_ruby_ramp_gemspec.html">webget_ruby_ramp.gemspec</a></li>
 				
@@ -228,7 +228,10 @@
 		<h1 class="module">Math</h1>
 
 		<div id="description">
-			
+			<p>
+<a href="Math.html">Math</a> extensions
+</p>
+
 		</div>
 
 		<!-- Constants -->
@@ -249,7 +252,7 @@
 				<div class="method-heading">
 				
 					<span class="method-name">ln</span><span
-						class="method-args">(x)</span>
+						class="method-args">(num)</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
@@ -257,7 +260,7 @@
 				<div class="method-description">
 					
 					<p>
-Return the natural log of x
+Return the natural log of <em>num</em>
 </p>
 					
 
@@ -265,10 +268,10 @@ Return the natural log of x
 					<div class="method-source-code"
 						id="ln-source">
 <pre>
-   <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/math.rb, line 6</span>
-6:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Math</span>.<span class="ruby-identifier">ln</span>(<span class="ruby-identifier">x</span>)
-7:    <span class="ruby-constant">Math</span>.<span class="ruby-identifier">log</span>(<span class="ruby-identifier">x</span>)
-8:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/math.rb, line 8</span>
+ 8:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Math</span>.<span class="ruby-identifier">ln</span>(<span class="ruby-identifier">num</span>)
+ 9:    <span class="ruby-constant">Math</span>.<span class="ruby-identifier">log</span>(<span class="ruby-identifier">num</span>)
+10:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -283,7 +286,7 @@ Return the natural log of x
 				<div class="method-heading">
 				
 					<span class="method-name">logn</span><span
-						class="method-args">(x,b)</span>
+						class="method-args">(num,base)</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
@@ -291,7 +294,7 @@ Return the natural log of x
 				<div class="method-description">
 					
 					<p>
-Return the log of x in base b.
+Return the log of <em>num</em> in base <em>base</em>
 </p>
 					
 
@@ -299,10 +302,10 @@ Return the log of x in base b.
 					<div class="method-source-code"
 						id="logn-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/math.rb, line 13</span>
-13:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Math</span>.<span class="ruby-identifier">logn</span>(<span class="ruby-identifier">x</span>,<span class="ruby-identifier">b</span>)
-14:     <span class="ruby-constant">Math</span>.<span class="ruby-identifier">ln</span>(<span class="ruby-identifier">x</span>)<span class="ruby-operator">/</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">ln</span>(<span class="ruby-identifier">b</span>)
-15:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/math.rb, line 15</span>
+15:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">Math</span>.<span class="ruby-identifier">logn</span>(<span class="ruby-identifier">num</span>,<span class="ruby-identifier">base</span>)
+16:     <span class="ruby-constant">Math</span>.<span class="ruby-identifier">ln</span>(<span class="ruby-identifier">num</span>)<span class="ruby-operator">/</span><span class="ruby-constant">Math</span>.<span class="ruby-identifier">ln</span>(<span class="ruby-identifier">base</span>)
+17:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
