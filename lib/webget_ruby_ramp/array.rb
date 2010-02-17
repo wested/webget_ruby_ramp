@@ -1,5 +1,6 @@
 require 'csv'
  
+# Array extensions
 
 class Array
 
@@ -65,7 +66,7 @@ class Array
   # Return self
   
   def rotate!
-    push x=shift
+    push item=shift
     self
   end
 
@@ -84,16 +85,16 @@ class Array
   end
 
 
-  # Return a new array filled with _n_ calls to choice
+  # Return a new array filled with _count_ calls to choice
   #
   # ==Examples
   #   [1,2,3,4].choices(2) => [3,1]
   #   [1,2,3,4].choices(3) => [4,2,3]
   
-  def choices(n)
-    a = Array.new
-    n.times { a << self.choice }
-    return a
+  def choices(count)
+    arr = Array.new
+    count.times { arr << self.choice }
+    return arr
   end
 
 
@@ -132,13 +133,13 @@ class Array
   #   [1,2,3,4,5,6,7,8].slices(5) => [[1,2,3,4,5],[6,7,8]] 
 
   def slices(slice_length)
-    a=[]
+    arr=[]
     i=0
     while i<length
-      a.push self[i...(i+slice_length)]
+      arr.push self[i...(i+slice_length)]
       i+=slice_length
     end
-    return a
+    return arr
   end
 
 
@@ -191,7 +192,7 @@ class Array
   #   => foos that are in any of the array items
 
   def union
-    inject{|inj,x| inj | x.to_a }
+    inject{|inj,item| inj | item.to_a }
   end
 
 
@@ -208,7 +209,7 @@ class Array
   #   => foos that are in all of the array items
 
   def intersect
-    inject{|inj,x| inj & x.to_a }
+    inject{|inj,item| inj & item.to_a }
   end
 
   
@@ -241,8 +242,8 @@ class Array
   #   list.cdr => ['b','c']
   #
 
-  def shifted(n=1)
-   slice(n,self.length-n)
+  def shifted(number_of_items=1)
+   slice(n,self.length-number_of_items)
   end
 
   alias :car :first
@@ -250,7 +251,7 @@ class Array
   alias :rest :shifted
 
 
-  # Delete the first _n_ items. Returns the array, not the deleted items.
+  # Delete the first _number_of_items_ items. Returns the array, not the deleted items.
   # 
   # ==Example
   #   list=['a','b','c']
@@ -264,8 +265,8 @@ class Array
   #
   # If _n_ is greater than the array size, then return []
 
-  def shifted!(n=1)
-   slice!(0,n)
+  def shifted!(number_of_items=1)
+   slice!(0,number_of_items)
    return self
   end
 
@@ -339,19 +340,19 @@ class Array
 
     generator = RUBY_VERSION >= "1.9" ? CSV : CSV::Writer
 
-    s=''
+    str=''
     if size>0 and self[0].is_a?Array
-      generator.generate(s) do |csv|
+      generator.generate(str) do |csv|
         self.each do |row|
           csv << row
         end
       end
     else
-      generator.generate(s) do |csv|
-        csv << self.map{|x| x.to_s}
+      generator.generate(str) do |csv|
+        csv << self.map{|item| item.to_s}
       end
     end
-    return s
+    return str
   end
 
 

@@ -50,10 +50,10 @@ class Base #:doc:
   # The option keys can be any mix of symbols or strings.
 
   def self.create_or_update_by(condition_keys, attribute_pairs = {})
-    condition_pairs=[*condition_keys].map{|x| [x,(attribute_pairs.delete(x)||attribute_pairs.delete(x.to_s)||attribute_pairs.delete(x.to_sym))]}.to_h
+    condition_pairs=[*condition_keys].map{|key| [key,(attribute_pairs.delete(key)||attribute_pairs.delete(key.to_s)||attribute_pairs.delete(key.to_sym))]}.to_h
     record = find(:first, :conditions => condition_pairs) || self.new
     if record.new_record? then attribute_pairs.merge!(condition_pairs) end
-    attribute_pairs.each_pair{|k,v| record.send k.to_s+'=', v}
+    attribute_pairs.each_pair{|key,val| record.send key.to_s+'=', val}
     record.save!
     return record
   end

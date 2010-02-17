@@ -1,5 +1,7 @@
 require 'yaml'
 
+# YAML extensions
+
 module YAML
 
   # Specify one or more directory patterns and pass each YAML file in the matching directories to a block.

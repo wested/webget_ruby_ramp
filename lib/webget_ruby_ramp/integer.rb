@@ -1,3 +1,5 @@
+# Integer extensions
+
 class Integer
 
   # Syntactic sugar to yield n times to a block.
@@ -14,7 +16,7 @@ class Integer
   # returned to the calling code.
   
   def maps
-    (0...self).map{|i| yield i}
+    (0...self).map{|item| yield item}
   end
 
 end

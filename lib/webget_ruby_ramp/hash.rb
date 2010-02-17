@@ -1,5 +1,7 @@
 require 'yaml'
 
+# Hash extensions
+
 class Hash
 
 
@@ -115,8 +117,8 @@ class Hash
   def to_yaml_sort( opts = {} )
     YAML::quick_emit( object_id, opts ) do |out|
       out.map( taguri, to_yaml_style ) do |map|
-        sort.each do |k, v|   # <-- here's my addition (the 'sort')
-	  map.add( k, v )
+        sort.each do |key, val|   # <-- here's my addition (the 'sort')
+	  map.add(key, val)
         end
       end
     end
@@ -127,7 +129,7 @@ class Hash
   # for example to calculate subtotals and groups.
   #
   # Suppose you have data arranged by companies, roles, and headcounts.
-
+  #
   #     data = {
   #     "Apple"     => {"Accountants" => 11, "Designers" => 22, "Developers" => 33},
   #     "Goggle"    => {"Accountants" => 44, "Designers" => 55, "Developers" => 66},

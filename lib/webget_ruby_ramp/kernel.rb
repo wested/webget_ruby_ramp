@@ -1,6 +1,8 @@
 require 'pp'
 require 'stringio'  
 
+# Kernel extensions
+
 module Kernel
 
   # See:
@@ -21,12 +23,12 @@ module Kernel
   # See http://rha7dotcom.blogspot.com/2008/07/ruby-and-rails-how-to-get-pp-pretty.html
 
   def pp_s(*objs)  
-    s = StringIO.new  
+    str = StringIO.new  
     objs.each {|obj|  
-        PP.pp(obj, s)  
+        PP.pp(obj, str)  
       }  
-      s.rewind  
-      s.read  
+      str.rewind  
+      str.read  
   end  
   module_function :pp_s  
 

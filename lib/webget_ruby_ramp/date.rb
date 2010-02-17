@@ -1,5 +1,7 @@
 require 'date'
 
+# Date extensions
+
 class Date
 
 
@@ -72,7 +74,8 @@ class Date
 
   def age_years(compare_date=Date.today)
     age=compare_date.year-year
-    age-=1 if compare_date.month < month or (compare_date.month==month and compare_date.day < day)
+    compare_month = compare_date.month
+    age-=1 if compare_month < month or (compare_month==month and compare_date.day < day)
     age
   end
 

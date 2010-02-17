@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+# String extensions
+
 class String
 
   ACCENTS =  Hash[*'
@@ -31,7 +32,7 @@ class String
  # Return the string with words capitalized
 
  def capitalize_words
-  split(/\b/).map{|x| x.capitalize }.join
+  split(/\b/).map{|word| word.capitalize }.join
  end
 
 
@@ -54,7 +55,7 @@ class String
  # into an array of rows, and each row into an array of fields.
 
  def split_tsv
-   split(/\n/).map{|x| x.split(/\t/)}
+   split(/\n/).map{|line| line.split(/\t/)}
  end
 
 
@@ -166,15 +167,15 @@ class String
 
  def prev!
   return self if length==0
-  i=length-1 # rightmost
+  index=length-1 # rightmost
   while true do
-   c=self[i].chr
-   prev_c,changed_flag,carry_flag=String.prev_char(c)
+   chr=self[index].chr
+   prev_chr,changed_flag,carry_flag=String.prev_char(chr)
     return self if !changed_flag
-   self[i]=prev_c
+   self[index]=prev_chr
    return self if !carry_flag
-   i-=1
-   return nil if i<0
+   index-=1
+   return nil if index<0
   end
  end
 

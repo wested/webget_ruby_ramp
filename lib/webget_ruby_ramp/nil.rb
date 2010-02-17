@@ -1,3 +1,6 @@
+# NilClass provides an instantiatable object
+# suitable for more careful thorough programming.
+
 class NilClass
 
  # Same as Rails

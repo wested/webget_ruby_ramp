@@ -1,17 +1,19 @@
+# Math extensions
+
 module Math
 
 
-  # Return the natural log of x 
+  # Return the natural log of _num_
 
-  def Math.ln(x)
-   Math.log(x)
+  def Math.ln(num)
+   Math.log(num)
   end
 
 
-  # Return the log of x in base b.
+  # Return the log of _num_ in base _base_
  
-  def Math.logn(x,b)
-    Math.ln(x)/Math.ln(b)
+  def Math.logn(num,base)
+    Math.ln(num)/Math.ln(base)
   end
 
 

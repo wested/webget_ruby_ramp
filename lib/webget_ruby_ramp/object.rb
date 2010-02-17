@@ -1,3 +1,5 @@
+# Object extensions
+
 class Object
 
   # Syntactic sugar for arrays.

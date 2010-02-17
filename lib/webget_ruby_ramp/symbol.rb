@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+# Symbol extensions
+
 class Symbol
 
   include Comparable

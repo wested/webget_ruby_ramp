@@ -1,31 +1,35 @@
+# Numeric extensions
+
 class Numeric
 
 
  # Return 0 if the given flag is any of: nil, false, 0, [], {}
  #
- # This is useful for multiplying a number if and only if a flag is set.
- #
  # ==Example
- #   sum = x.if(foo) + y.if(bar)
+ #   3.if(true) => 3
+ #   3.if(false) => 0
+ #   
 
  def if(flag)
-  (flag==nil or flag==false or flag==0 or flag==[] or flag=={}) ? 0 : self
+   # inline for speed
+   return (flag==nil or flag==false or flag==0 or flag==[] or flag=={}) ? 0 : self
  end
 
 
  # Return self if flag is nil, false, 0, [], {}; otherwise return 0.
  #
- # This is useful for multiplying a number if and only if a flag is unset.
- #
  # ==Example
- #   sum = w.unless(foo) +y.unless(bar)
+ #   3.unless(true) => 0
+ #   3.unless(false) => 3
 
  def unless(flag)
-  (flag==nil or flag==false or flag==0 or flag==[] or flag=={}) ? self : 0
+   # inline for speed
+   return (flag==nil or flag==false or flag==0 or flag==[] or flag=={}) ? self : 0
  end
 
 
  ###
+ #
  #  Metric conversions
  #
  ###

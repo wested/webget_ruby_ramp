@@ -1,3 +1,5 @@
+# File extensions
+
 class File
 
   # Return File.join(File.dirname(dirname),strings)

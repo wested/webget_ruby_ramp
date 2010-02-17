@@ -54,7 +54,7 @@ module Process
    h['sid']    =h['sid'].to_i  
    h['sgid']   =h['sgid'].to_i  
    h['suid']   =h['suid'].to_i  
-   self.ps_aliases.each_pair{|k,v| h[k]=h[v]}
+   self.ps_aliases.each_pair{|key,val| h[key]=h[val]}
   return h
  end
 

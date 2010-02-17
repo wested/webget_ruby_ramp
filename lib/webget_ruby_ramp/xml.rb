@@ -1,5 +1,7 @@
 require 'rexml/document' 
 
+# XML extensions
+
 module XML
 
 
@@ -37,8 +39,8 @@ module XML
 
   def XML.load_elements(dirpath,xpath)
     XML.load_dir(dirpath){|doc|
-      doc.elements.each(xpath){|e|
-        yield e
+      doc.elements.each(xpath){|elem|
+        yield elem
       }
     }
   end
@@ -50,8 +52,8 @@ module XML
   #   XML.load_attributes('config.xml','userlist/user'){|attributes| pp attributes['first_name'] }
 
   def XML.load_attributes(dirpath,xpath)
-    XML.load_elements(dirpath,xpath){|e|
-      yield e.attributes
+    XML.load_elements(dirpath,xpath){|elem|
+      yield elem.attributes
     }
   end
 
@@ -61,8 +63,8 @@ module XML
   #   XML.load_attributes('config.xml','userlist/user'){|attributes| pp attributes['first_name'] }
 
   def XML.load_attributes_hash(dirpath,xpath)
-    XML.load_elements(dirpath,xpath){|e|
-      yield e.attributes.to_hash
+    XML.load_elements(dirpath,xpath){|elem|
+      yield elem.attributes.to_hash
     }
   end
 
@@ -134,6 +136,8 @@ module XML
 end
 
 
+# REXML::Attributes extensions
+
 class REXML::Attributes
 
   # Return a new hash of the attribute keys and values.
@@ -150,6 +154,8 @@ class REXML::Attributes
 end
 
 
+# REXML::Document extensions
+
 class REXML::Document
 
   # Remove all attributes from the document's elements.
@@ -165,6 +171,8 @@ class REXML::Document
   
 end
 
+
+# REXML::Element extensions
 
 class REXML::Element
 

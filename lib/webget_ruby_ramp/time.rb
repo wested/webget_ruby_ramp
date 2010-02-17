@@ -1,3 +1,5 @@
+# Time extensions
+
 class Time
 
   # Return current time in UTC as a timestamp string "YYYYMMDDHHMMSS"

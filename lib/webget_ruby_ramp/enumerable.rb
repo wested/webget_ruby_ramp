@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+# Enumberable extensions
+
 module Enumerable
 
 
@@ -69,7 +70,7 @@ module Enumerable
   # Compare #index_by
 
   def hash_by
-    map{|x| yield(x)}.to_h
+    map{|item| yield(item)}.to_h
   end
 
 
@@ -92,7 +93,7 @@ module Enumerable
   # This method is a fast way to get the same results as items.map(&:id)
 
   def map_id
-    map{|x| x.id}
+    map{|item| item.id}
   end
 
 
@@ -111,7 +112,7 @@ module Enumerable
   # See http://www.ruby-doc.org/core/classes/Enumerable.html#M003148
 
   def map_to_a
-    map{|x| [x]}
+    map{|item| [item]}
   end
 
 
@@ -126,7 +127,7 @@ module Enumerable
   # This method is a fast way to get the same results as items.map(&:to_f)
 
   def map_to_f
-    map{|x| x.to_f}
+    map{|item| item.to_f}
   end
 
 
@@ -141,7 +142,7 @@ module Enumerable
   # This method is a fast way to get the same results as items.map(&:to_i)
 
   def map_to_i
-    map{|x| x.to_i}
+    map{|item| item.to_i}
   end
 
 
@@ -156,7 +157,7 @@ module Enumerable
   # This method is a fast way to get the same results as items.map(&:to_s)
  
   def map_to_s
-    map{|x| x.to_s}
+    map{|item| item.to_s}
   end
 
 
@@ -171,7 +172,7 @@ module Enumerable
   # This method is a fast way to get the same results as items.map(&:to_sym)
 
   def map_to_sym
-    map{|x| x.to_sym}
+    map{|item| item.to_sym}
   end
 
 
@@ -186,8 +187,8 @@ module Enumerable
   #    => ["a0, "b1", "c3"]
 
   def map_with_index
-    i=-1
-    map{|x| i+=1; yield(x,i)}
+    index=-1
+    map{|item| index+=1; yield(item,index)}
   end
 
 
@@ -202,9 +203,9 @@ module Enumerable
   # Returns an array containing the leading elements for which block is not false or nil.
 
   def select_while
-    a = []
-    each{|x| yield(x) ? (a << x) : break}
-    return a
+    arr = []
+    each{|item| yield(item) ? (arr << item) : break}
+    return arr
   end
 
 
@@ -212,9 +213,9 @@ module Enumerable
   # Returns an array containing the leading elements for which block is false or nil.
 
   def select_until
-    a = []
-    each{|x| yield(x) ? break : (a << x)}
-    return a
+    arr = []
+    each{|item| yield(item) ? break : (arr << item)}
+    return arr
   end
 
 
@@ -223,17 +224,17 @@ module Enumerable
   # Returns an array containing the leading elements for which block is not false or nil.
 
   def select_with_index
-    i = 0
-    a = []
-    each{|x| 
-      if yield(x,i)
-        a << x
-        i+=1
+    index = 0
+    arr = []
+    each{|item| 
+      if yield(item,index)
+        arr << item
+        index+=1
       else
         break
       end
     }
-    return a
+    return arr
   end
 
 
@@ -272,9 +273,9 @@ module Enumerable
   # Returns the number of leading elements for which block is not false or nil.
 
   def nitems_while
-    n = 0
-    each{|x| yield(x) ? (n+=1) : break}
-    return n
+    num = 0
+    each{|item| yield(item) ? (num+=1) : break}
+    return num
   end
 
 
@@ -282,16 +283,15 @@ module Enumerable
   # Returns the number of leading elements for which block is false.
 
   def nitems_until
-    n = 0
-    each{|x|
-      if yield(x) 
+    num = 0
+    each{|item|
+      if yield(item) 
         break
       else
-        n+=1
+        num+=1
       end
     }
-    return n
-    irb
+    return num
   end
 
 
@@ -300,9 +300,9 @@ module Enumerable
   # Returns the number of leading elements for which block is true.
 
   def nitems_with_index
-    i = 0
-    each{|x| yield(x,i) ? (i+=1) : break}
-    return i
+    index = 0
+    each{|item| yield(item,index) ? (index+=1) : break}
+    return index
   end
 
 
