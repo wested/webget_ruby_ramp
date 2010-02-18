@@ -41,7 +41,7 @@ class Array
       suffix=fixes[2].to_s
       return self.map{|item| prefix + item.to_s + suffix}.ruby_join(infix)
     else
-      raise "join(fixes[#{fixes.size}]"
+      raise ArgumentError, "join() takes 0-3 arguments; you gave #{fixes.size}]"
     end
   end
 
@@ -62,11 +62,14 @@ class Array
   # ==Examples
   #   [1,2,3,4].rotate! => [2,3,4,1]
   #   ['a','b','c'].rotate! => ['b','c','a']
+  #   [].rotate! => []
   #
   # Return self
   
   def rotate!
-    push item=shift
+    if size>0
+      push item=shift
+    end
     self
   end
 
@@ -109,6 +112,7 @@ class Array
   # This is identical to calling foo.zip(values).to_h
 
   def onto(values)
+    size==values.size or raise ArgumentError, "Array size #{size} must match values size #{size}" 
     zip(values).to_h
   end
 
@@ -133,6 +137,8 @@ class Array
   #   [1,2,3,4,5,6,7,8].slices(5) => [[1,2,3,4,5],[6,7,8]] 
 
   def slices(slice_length)
+    (slice_length.is_a? Integer) or (raise ArgumentError, "slice_length must be an integer")
+    (slice_length > 0) or (raise ArgumentError, "slice_length must be > 0")
     arr=[]
     index=0
     while index<length
@@ -162,6 +168,8 @@ class Array
   #   [1,2,3,4,5,6].divvy(4) => [[1,2],[3,4],[5,6]]
 
   def divvy(number_of_slices)
+    (number_of_slices.is_a? Integer) or (raise ArgumentError, "number_of_slices must be an integer")
+    (number_of_slices > 0) or (raise ArgumentError, "number_of_slices must be > 0")
     return slices((length.to_f/number_of_slices.to_f).ceil)
   end
 
@@ -177,22 +185,18 @@ class Array
   # In typical use, each item is an array.
   #
   # ==Example using Ruby Array pipe
-  #   a=[1,2,3]
-  #   b=[2,3,4]
-  #   a | b => [1,2,3,4]
+  #   arr=[[1,2,3,4],[3,4,5,6]]
+  #   arr.union => [1,2,3,4,5,6]
   #
-  # ==Example using union method
-  #   arr=[a,b]
-  #   => [1,2,3,4]
-  #
-  # This is identical to 
-  
   # ==Examples with proc
   #   arr.map(&:foo).union
   #   => foos that are in any of the array items
+  #
+  # ==Example with nil
+  #   [].union => []
 
   def union
-    inject{|inj,item| inj | item.to_a }
+    inject{|inj,item| inj | item.to_a } || []
   end
 
 
@@ -200,16 +204,19 @@ class Array
   # In typical usage, each item is an array.
   #
   # ==Examples
-  #   arr=[[1,2,3,4],[2,3,4,5],[3,4,5,6]]
+  #   arr=[[1,2,3,4],[3,4,5,6]]
   #   arr.intersect
   #   => [3,4]
   #
   # ==Examples with proc
   #   arr.map(&:foo).intersect
   #   => foos that are in all of the array items
+  #
+  # ==Example with nil
+  #   [].intersect => []
 
   def intersect
-    inject{|inj,item| inj & item.to_a }
+    inject{|inj,item| inj & item.to_a } || []
   end
 
   
@@ -243,7 +250,9 @@ class Array
   #
 
   def shifted(number_of_items=1)
-   slice(number_of_items,self.length-number_of_items)
+    (number_of_items.is_a? Integer) or (raise ArgumentError, "number_of_items must be an integer")
+    (number_of_items >= 0) or (raise ArgumentError, "number_of_items must be >= 0")
+    slice(number_of_items,self.length-number_of_items)
   end
 
   alias :car :first
@@ -266,8 +275,10 @@ class Array
   # If _n_ is greater than the array size, then return []
 
   def shifted!(number_of_items=1)
-   slice!(0,number_of_items)
-   return self
+    (number_of_items.is_a? Integer) or (raise ArgumentError, "number_of_items must be an integer")
+    (number_of_items >= 0) or (raise ArgumentError, "number_of_items must be >= 0")
+    slice!(0,number_of_items)
+    return self
   end
 
   alias :cdr! :shifted!
@@ -333,10 +344,16 @@ class Array
   #
   #   [[1,2,3],[4,5,6]] => "1,2,3\n4,5,6\n"
   #
+  # ==Example of a blank array
+  #   
+  #   [].to_csv => ""
+  #
   # N.b. this method uses the multi-dimensional if the
   # array's first item is also an array.
 
   def to_csv(ops={})
+
+    return "" if size==0
 
     generator = RUBY_VERSION >= "1.9" ? CSV : CSV::Writer
 
@@ -360,6 +377,10 @@ class Array
   # representation of a multi-dimensional array.
   #
   # Each subarray becomes one 'line' in the output.
+  #
+  # ==Example of a blank array
+  #   
+  #   [].to_csv => ""
 
   def to_tsv(ops={})
     self.map{|row| row.join("\t")+"\n"}.join

@@ -1,21 +1,6 @@
 require 'test/unit'
-require 'array_test'
-require 'csv_test'
-require 'date_test'
-require 'enumerable_test'
-require 'file_test'
-require 'hash_test'
-require 'integer_test'
-require 'io_test'
-require 'kernel_test'
-require 'math_test'
-require 'nil_test'
-require 'numeric_test'
-require 'object_test'
-require 'process_test'
-require 'string_test'
-require 'symbol_test'
-require 'time_test'
-require 'xml_test'
-require 'yaml_test'
+
+%w{array csv date enumerable file hash integer io kernel math nil numeric object process string symbol time xml yaml}.map{|x|
+  require File.dirname(__FILE__) + "/webget_ruby_ramp/#{x}_test.rb"
+}
 
