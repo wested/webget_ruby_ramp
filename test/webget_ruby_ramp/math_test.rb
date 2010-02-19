@@ -4,6 +4,7 @@ require 'webget_ruby_ramp'
 class MathTest < Test::Unit::TestCase
 
   def test_ln
+    assert_equal(0.0,Math.ln(1.0))
     assert_equal(1.0,Math.ln(Math.exp(1.0)))
   end
 

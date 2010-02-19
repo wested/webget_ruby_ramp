@@ -87,7 +87,9 @@ Testing:
 
 == Integer
 
+* even?: is the number even?
 * maps: syntactic sugar to yield n times to a block, returning an array of any results (e.g. 3.maps{rand} => [0.4351325,0.7778625,0.158613534])
+* odd?: is the number odd?
 
 
 == IO
@@ -192,7 +194,7 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
-- 1.7.4 Add Class#publicize_methods for unit tests
+- 1.7.4 Add Class#publicize_methods, Integer#even?, Integer#odd?
 - 1.7.3 Refactor Rails classes to their own gem, add README, LICENSE
 - 1.7.2 Gemcutter update
 - 1.7.1.8 Add Enumerable#map_with_index

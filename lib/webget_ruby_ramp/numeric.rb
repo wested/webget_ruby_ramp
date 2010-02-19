@@ -53,7 +53,7 @@ class Numeric
 
  # Return self / 10^6
  def mega
-  self/100000
+  self/1000000
  end
 
  # Return self / 10^3

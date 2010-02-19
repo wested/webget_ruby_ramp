@@ -166,6 +166,7 @@ class HashTest < Test::Unit::TestCase
     end
   end
 
+
   def test_pivot_direction_up_with_false
     Hash.publicize_methods do
       assert(!{}.pivot_direction_up?('val'))
@@ -175,6 +176,7 @@ class HashTest < Test::Unit::TestCase
       assert(!{}.pivot_direction_up?('in'))
     end
   end
+
 
   def test_pivot_direction_up_with_invalid
     Hash.publicize_methods do
