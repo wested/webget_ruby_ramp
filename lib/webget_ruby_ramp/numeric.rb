@@ -4,6 +4,7 @@
 
 class Numeric
 
+ BLANK_FLAGS = [nil,false,0,[],{}]
 
  # Return 0 if the given flag is any of: nil, false, 0, [], {}
  #
@@ -13,8 +14,7 @@ class Numeric
  #   
 
  def if(flag)
-   # inline for speed
-   return (flag==nil or flag==false or flag==0 or flag==[] or flag=={}) ? 0 : self
+   return BLANK_FLAGS.include?(flag) ? 0 : self
  end
 
 
@@ -25,8 +25,7 @@ class Numeric
  #   3.unless(false) => 3
 
  def unless(flag)
-   # inline for speed
-   return (flag==nil or flag==false or flag==0 or flag==[] or flag=={}) ? self : 0
+   return BLANK_FLAGS.include?(flag) ? self : 0
  end
 
 
