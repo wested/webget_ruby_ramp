@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 # Comma Separated Values extensions
 
 class CSV
@@ -34,19 +36,22 @@ class CSV
       }
     end
 
+
   # Helper to try to "do the right thing" for the common case of Rails & MS IE.
   #
   # Rails automatically defines a _request_ object,
   # that has an env HTTP_USER_AGENT.
-  
+  # 
+  # @return [Hash] options
+
   def self.http_headers_adjust_for_broken_msie(options={})
     request = options[:request] || request 
     msie = (request and request.env['HTTP_USER_AGENT'] =~ /msie/i)
     if msie
-      options[:content_type]||='text/plain''})'
+      options[:content_type]||='text/plain'
       options[:cache]||=false
     end
-    options
+    return options
   end
 
 end

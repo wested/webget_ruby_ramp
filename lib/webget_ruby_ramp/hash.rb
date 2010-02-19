@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 require 'yaml'
 
 # Hash extensions
@@ -14,6 +16,11 @@ class Hash
   # Calls block once for each key in hsh, passing the key and value to the block as a two-element array.
   #
   # The keys are sorted.
+  #
+  # ==Example
+  #   h = { "xyz" => "123", "abc" => "789" }
+  #   h.each_sort {|key, val| ... }
+  #   => calls the block with "abc" => "789", then with "xyz" => "123"
 
   def each_sort
    keys.sort.each{|key| yield key,self[key] }
@@ -113,6 +120,11 @@ class Hash
   # Hash#to_yaml with sort 
   #
   # From http://snippets.dzone.com/tag/yaml
+  #
+  # ==Example
+  #   h = {"a"=>"b", "c"=>"d", "e"=>"f" }
+  #   h.to_yaml_sort
+  #   => "--- \na: b\nc: d\ne: f\n"
 
   def to_yaml_sort( opts = {} )
     YAML::quick_emit( object_id, opts ) do |out|
@@ -216,7 +228,7 @@ class Hash
     case direction_name
     when 'key','keys','up','left','out' then return true
     when 'val','vals','down','right','in' then return false
-    else raise 'Pivot direction must be either: up/left/out or down/right/in'
+    else raise ArgumentError, 'Pivot direction must be either: key/keys/up/left/out or val/vals/down/right/in'
     end
   end
 

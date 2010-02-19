@@ -1,4 +1,6 @@
-# Process extensions to help debug Ruby programs.
+# -*- encoding: utf-8 -*-
+
+# = Process extensions to help debug Ruby programs.
 #
 # ==Examples
 #

@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 # File extensions
 
 class File

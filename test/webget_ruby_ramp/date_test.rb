@@ -30,8 +30,13 @@ class DateTest < Test::Unit::TestCase
   end
 
 
-  def test_to_sql
-    assert('2007-12-31',Date.new(2008,12,31))
+  def test_to_sql_with_non_zero_month_and_mday
+    assert_equal('2007-12-31',Date.new(2007,12,31).to_sql)
+  end
+
+
+  def test_to_sql_with_zero_month_and_mday
+    assert_equal('2007-01-02',Date.new(2007,1,2).to_sql)
   end
 
 
@@ -48,11 +53,18 @@ class DateTest < Test::Unit::TestCase
     assert_equal(28,BIRTHDATE.age_years(NEW_YEARS_EVE), '> birthday')
   end
 
+  def test_age_years_with_non_date
+    assert_raise(ArgumentError){ BIRTHDATE.age_years('') }
+  end
 
   def test_age_days
     assert_equal( 9967,BIRTHDATE.age_days(VALENTINES),     '< birthday')
     assert_equal(10227,BIRTHDATE.age_days(HALLOWEEN),      '= birthday')
     assert_equal(10288,BIRTHDATE.age_days(NEW_YEARS_EVE),  '> birthday')
+  end
+
+  def test_age_days_with_non_date
+    assert_raise(ArgumentError){ BIRTHDATE.age_days('') }
   end
 
 

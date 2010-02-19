@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 # Time extensions
 
 class Time

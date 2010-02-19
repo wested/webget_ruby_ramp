@@ -1,19 +1,10 @@
+# -*- encoding: utf-8 -*-
+
 require 'date'
 
 # Date extensions
 
 class Date
-
-
-  # Return date in a sql format: YYYY-MM-DD
-  #
-  # ==Example
-  #   d=Date.today
-  #   d.to_sql => "2007-12-31"
-
-  def to_sql
-    return to_time.strftime("%Y-%m-%d")
-  end
 
 
   # Return true if the date is a weekday: Mon, Tue, Wed, Thu, Fri
@@ -52,6 +43,17 @@ class Date
   end
 
 
+  # Return date in a sql format: YYYY-MM-DD
+  #
+  # ==Example
+  #   d=Date.today
+  #   d.to_sql => "2007-12-31"
+
+  def to_sql
+    return to_time.strftime("%Y-%m-%d")
+  end
+
+
   # Return the age in years for a given date.
   #
   # ==Example
@@ -73,6 +75,7 @@ class Date
   #   birthdate.age_years(new_years_eve) => 28  # after the birthday
 
   def age_years(compare_date=Date.today)
+    (compare_date.is_a? Date) or raise ArgumentError, "compare_date must be a date"
     age=compare_date.year-year
     compare_month = compare_date.month
     age-=1 if compare_month < month or (compare_month==month and compare_date.day < day)
@@ -82,8 +85,9 @@ class Date
 
   # Return the age in days for a given date.
 
-  def age_days(compare_to_date=Date.today)
-    (compare_to_date-self).to_i
+  def age_days(compare_date=Date.today)
+    (compare_date.is_a? Date) or raise ArgumentError, "compare_date must be a date"
+    (compare_date-self).to_i
   end
 
 

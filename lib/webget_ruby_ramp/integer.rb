@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 # Integer extensions
 
 class Integer

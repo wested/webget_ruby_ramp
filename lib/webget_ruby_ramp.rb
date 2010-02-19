@@ -35,6 +35,11 @@ Testing:
 * union: builds an array containing each of the unique elements of sub-arrays ([[1,2,3,4],[2,3,4,5],[3,4,5,6]].union => [1,2,3,4,5,6])
 
 
+== Class
+
+* publicize_methods: make all methods public for a block, e.g. to unit test private methods
+
+
 == CSV
 
 * http_headers: provides web file download headers for text/csv content type and disposition.
@@ -187,7 +192,8 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
-- 1.7.3 Refactor Rails classes to their own gem
+- 1.7.4 Add Class#publicize_methods for unit tests
+- 1.7.3 Refactor Rails classes to their own gem, add README, LICENSE
 - 1.7.2 Gemcutter update
 - 1.7.1.8 Add Enumerable#map_with_index
 - 1.7.1.6 Add ActiveRecord::SaveExtensions#save_false_then_reload!
@@ -227,7 +233,7 @@ Extensions that help debug Ruby programs.
 
 =end
 
-%w{array csv date enumerable file hash integer io kernel math nil numeric object process string symbol time xml yaml}.map{|x|
+['array','class','csv','date','enumerable','file','hash','integer','io','kernel','math','nil','numeric','object','process','string','symbol','time','xml','yaml'].map{|x|
   require File.dirname(__FILE__) + "/webget_ruby_ramp/#{x}.rb"
 }
 
