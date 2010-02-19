@@ -4,8 +4,6 @@
 
 class Numeric
 
- BLANK_FLAGS = [nil,false,0,[],{}]
-
  # Return 0 if the given flag is any of: nil, false, 0, [], {}
  #
  # ==Example
@@ -14,7 +12,7 @@ class Numeric
  #   
 
  def if(flag)
-   return BLANK_FLAGS.include?(flag) ? 0 : self
+   if [nil,false,0,[],{}].include?(flag) then 0 else self end
  end
 
 
@@ -25,7 +23,7 @@ class Numeric
  #   3.unless(false) => 3
 
  def unless(flag)
-   return BLANK_FLAGS.include?(flag) ? self : 0
+   if [nil,false,0,[],{}].include?(flag) then self else 0 end
  end
 
 
