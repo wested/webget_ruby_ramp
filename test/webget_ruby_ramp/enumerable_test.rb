@@ -5,8 +5,8 @@ require 'set'
 class EnumerableTest < Test::Unit::TestCase
 
   ITEMS = ['a','b','c']
-  MAPTEST = [123,"456"]
-  RGB = ["red","green","blue"]  
+  MAPTEST = [123,"456"] # to test typecasts-- one is numeric and one is string
+  RGB = ["red","green","blue"]  # to test case changes
 
 
   ########################################################################

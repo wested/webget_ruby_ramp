@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.platform          = Gem::Platform::RUBY
   s.require_path      = 'lib'
   s.has_rdoc          = true
-  s.files             = ['lib/webget_ruby_ramp.rb'] + CLASSES.map{|c| "lib/webget_ruby_ramp/#{c}.rb"} + TEST_FILES.map{|f| "test/webget_ruby_ramp/#{f}"}
+  s.files             = ['README.rdoc','LICENSE.txt','lib/webget_ruby_ramp.rb'] + CLASSES.map{|c| "lib/webget_ruby_ramp/#{c}.rb"} + TEST_FILES.map{|f| "test/webget_ruby_ramp/#{f}"}
   s.test_files        = CLASSES.map{|c| "test/webget_ruby_ramp/#{c}_test.rb"}
 
 end
