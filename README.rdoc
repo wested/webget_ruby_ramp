@@ -9,10 +9,8 @@ License:: LGPL, GNU Lesser General Public License
 Ramp is a library of extensions to Ruby base classes, including Array, Date, Enumerable, Hash, Kernel, Numeric, Object, Process, String, Time, and YAML. 
 
 Testing: 
-<ul>
-<li>Each has an associated test class, e.g., ArrayTest, DateTest, etc.
-<li>The easy way to run the tests: gem install webget_ruby_ramp --test
-</ul>
+* Each has an associated test class, e.g., ArrayTest, DateTest, etc.
+* The easy way to run the tests: gem install webget_ruby_ramp --test
 
 
 == Array
