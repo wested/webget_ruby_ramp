@@ -225,7 +225,7 @@ class Hash
   protected
 
   def pivot_direction_up?(direction_name)
-    case direction_name
+    case direction_name.to_s
     when 'key','keys','up','left','out' then return true
     when 'val','vals','down','right','in' then return false
     else raise ArgumentError, 'Pivot direction must be either: key/keys/up/left/out or val/vals/down/right/in'

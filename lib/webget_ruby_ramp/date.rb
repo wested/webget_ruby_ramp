@@ -6,7 +6,6 @@ require 'date'
 
 class Date
 
-
   # Return true if the date is a weekday: Mon, Tue, Wed, Thu, Fri
   #
   # ==Example
