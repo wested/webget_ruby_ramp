@@ -130,7 +130,7 @@ class HashTest < Test::Unit::TestCase
 
 
   def test_pivot_vals_with_block
-    p=pivotable.pivot(:vals){|items| items.sort.inject(""){|sum,x| sum+=x}}
+    p=pivotable.pivot(:vals){|items| items.sort.join }
     assert_equal(['x','y','z'], p.keys.sort)
     assert_equal('mps', p['x'])
     assert_equal('nqt', p['y'])
@@ -148,7 +148,7 @@ class HashTest < Test::Unit::TestCase
 
 
   def test_pivot_keys_with_block
-    p=pivotable.pivot(:keys){|items| items.sort.inject(""){|sum,x| sum+=x}}
+    p=pivotable.pivot(:keys){|items| items.sort.join }
     assert_equal(['a','b','c'], p.keys.sort)
     assert_equal('mno', p['a'])
     assert_equal('pqr', p['b'])

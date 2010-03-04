@@ -205,7 +205,7 @@ class Hash
   #   h.pivot(:vals){|items| items.join("-") } => {"a"=>"1-4-7","b"=>"2-5-8","c"=>"3-6-9"}
   #   h.pivot(:vals){|items| items.inject{|sum,x| sum+=x } } => {"a"=>12,"b"=>15,"c"=>18}   
 
-  def pivot(direction='keys',&b)
+  def pivot(direction='keys')
     a=self.class.new
     direction=direction.to_s
     up=pivot_direction_up?(direction)
