@@ -49,7 +49,7 @@ class Date
   #   d.to_sql => "2007-12-31"
 
   def to_sql
-    return to_time.strftime("%Y-%m-%d")
+    return sprintf("%04d-%02d-%02d",year,month,mday)
   end
 
 
