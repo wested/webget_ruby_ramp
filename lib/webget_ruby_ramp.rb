@@ -194,6 +194,7 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
+- 1.7.8 Add rcov testing
 - 1.7.4 Add Class#publicize_methods, Integer#even?, Integer#odd?
 - 1.7.3 Refactor Rails classes to their own gem, add README, LICENSE
 - 1.7.2 Gemcutter update
