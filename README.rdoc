@@ -9,8 +9,10 @@ License:: LGPL, GNU Lesser General Public License
 Ramp is a library of extensions to Ruby base classes, including Array, Date, Enumerable, Hash, Kernel, Numeric, Object, Process, String, Time, and YAML. 
 
 Testing: 
-* Each has an associated test class, e.g., ArrayTest, DateTest, etc.
-* The easy way to run the tests: gem install webget_ruby_ramp --test
+<ul>
+<li>Each has an associated test class, e.g., ArrayTest, DateTest, etc.
+<li>The easy way to run the tests: gem install webget_ruby_ramp --test
+</ul>
 
 
 == Array
@@ -30,6 +32,11 @@ Testing:
 * to_tdf: join a multidimensional array into a string in TDF (Tab Delimited Format); this is an alias for #to_tsv
 * to_tsv: join a multidimensional array into a string in TSV (Tab Separated Values), with each subarray becoming one 'line' in the output; typically for viewing in a spreadsheet such as Excel.
 * union: builds an array containing each of the unique elements of sub-arrays ([[1,2,3,4],[2,3,4,5],[3,4,5,6]].union => [1,2,3,4,5,6])
+
+
+== Class
+
+* publicize_methods: make all methods public for a block, e.g. to unit test private methods
 
 
 == CSV
@@ -65,6 +72,12 @@ Testing:
 * File.joindir: wrapper for File.join(File.dirname(...),string,...)
 
 
+== Fixnum
+
+* even?: is the number even?
+* odd?: is the number odd?
+
+
 == Hash
 
 * size?: return true if hash has any keys
@@ -80,6 +93,7 @@ Testing:
 == Integer
 
 * maps: syntactic sugar to yield n times to a block, returning an array of any results (e.g. 3.maps{rand} => [0.4351325,0.7778625,0.158613534])
+* odd?: is the number odd?
 
 
 == IO
@@ -90,8 +104,8 @@ Testing:
 
 == Kernel
 
-* method_name: 
-* method_name_of_caller: returns the name of the method which called the current method, or the Nth parent up the call stack if the optional caller_index parameter is passed.
+* my_method_name: returns the name of the current method
+* caller_method_name: returns the name of the caller method, or the Nth parent up the call stack if the optional caller_index parameter is passed.
 
 
 == Math
@@ -184,7 +198,10 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
-- 1.7.3 Refactor Rails classes to their own gem
+- 1.8.0 100% rcov coverage
+- 1.7.8 Add rcov testing
+- 1.7.4 Add Class#publicize_methods, Integer#even?, Integer#odd?
+- 1.7.3 Refactor Rails classes to their own gem, add README, LICENSE
 - 1.7.2 Gemcutter update
 - 1.7.1.8 Add Enumerable#map_with_index
 - 1.7.1.6 Add ActiveRecord::SaveExtensions#save_false_then_reload!
