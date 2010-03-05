@@ -5,6 +5,11 @@ require 'webget_ruby_ramp'
 class StringTest < Test::Unit::TestCase
 
 
+  def test_accents
+    assert(String::ACCENTS.is_a?Hash)
+  end
+
+
   def test_capitalize_words
     assert_equal("Foo Goo Hoo","foo goo hoo".capitalize_words)
   end
@@ -22,6 +27,11 @@ class StringTest < Test::Unit::TestCase
 
   def test_split_tsv
     assert_equal([['a','b','c'],['d','e','f'],['g','h','i']],"a\tb\tc\nd\te\tf\ng\th\ti".split_tsv)
+  end
+
+
+  def test_xid
+    assert_equal('foo_goo_hoo',"Foo GOO**_**Hoo".to_xid)
   end
 
 

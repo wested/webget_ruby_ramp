@@ -1,6 +1,7 @@
 require 'test/unit'
 require 'webget_ruby_ramp'
 
+
 class IntegerTest < Test::Unit::TestCase
 
   def test_maps
@@ -13,22 +14,6 @@ class IntegerTest < Test::Unit::TestCase
     expect=[0,1,2]
     actual=3.maps{|i| i}
     assert_equal(expect,actual)
-  end
-
-  def test_even_with_true
-    assert(2.even?)
-  end
-
-  def test_even_with_false
-    assert(!3.even?)
-  end
-
-  def test_odd_with_true
-    assert(3.odd?)
-  end
-
-  def test_odd_with_false
-    assert(!2.odd?)
   end
 
 end

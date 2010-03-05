@@ -228,7 +228,7 @@ class Hash
     case direction_name.to_s
     when 'key','keys','up','left','out' then return true
     when 'val','vals','down','right','in' then return false
-    else raise ArgumentError, 'Pivot direction must be either: key/keys/up/left/out or val/vals/down/right/in'
+    else raise ArgumentError.new('Pivot direction must be either: key/keys/up/left/out or val/vals/down/right/in')
     end
   end
 

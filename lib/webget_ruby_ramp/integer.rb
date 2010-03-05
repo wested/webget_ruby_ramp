@@ -18,29 +18,8 @@ class Integer
   # returned to the calling code.
   
   def maps
-    (0...self).map{|item| yield item}
+    return (0...self).map{|item| yield item}
   end
 
-
-  # Return true if the number is even
-  #
-  # ==Example
-  #   2.even? => true
-  #   3.even? => false
-
-  def even?
-    self % 2 == 0
-  end
-
-
-  # Return true if the number is odd
-  #
-  # ==Example
-  #   2.odd? => false
-  #   3.odd? => true
-
-  def odd?
-    self %2 == 1
-  end
 
 end

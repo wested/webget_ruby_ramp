@@ -4,31 +4,8 @@
 
 class String
 
-  ACCENTS =  Hash[*'
- à a á a â a ã a ä a å a ā a ă a
- æ ae
- ď d đ d             
- ç c ć c č c ĉ c ċ c
- è e é e ê e ë e ē e ę e ě e ĕ e ė e           
- ƒ f              
- ĝ g ğ g ġ g ģ g             
- ĥ h ħ h             
- ì i ì i í i î i ï i ī i ĩ i ĭ i            
- į j ı j ĳ j ĵ j             
- ķ k ĸ k             
- ł l ľ l ĺ l ļ l ŀ l             
- ñ n ń n ň n ņ n ŉ n ŋ n            
- ò o ó o ô o õ o ö o ø o ō o ő o ŏ o ŏ o           
- œ oek             
- ą q              
- ŕ r ř r ŗ r             
- ś s š s ş s ŝ s ș s             
- ť t ţ t ŧ t ț t             
- ù u ú u û u ü u ū u ů u ű u ŭ u ũ u ų u           
- ŵ w              
- ý y ÿ y ŷ y             
- ž z ż z ź z             
- '.split]
+  ACCENTS =  Hash[*'à a á a â a ã a ä a å a ā a ă a æ ae ď d đ d ç c ć c č c ĉ c ċ c è e é e ê e ë e ē e ę e ě e ĕ e ė e ƒ f ĝ g ğ g ġ g ģ g ĥ h ħ h ì i ì i í i î i ï i ī i ĩ i ĭ i į j ı j ĳ j ĵ j ķ k ĸ k ł l ľ l ĺ l ļ l ŀ l
+ ñ n ń n ň n ņ n ŉ n ŋ n ò o ó o ô o õ o ö o ø o ō o ő o ŏ o ŏ o œ oek ą q ŕ r ř r ŗ r ś s š s ş s ŝ s ș s ť t ţ t ŧ t ț t ù u ú u û u ü u ū u ů u ű u ŭ u ũ u ų u ŵ w ý y ÿ y ŷ y ž z ż z ź z'.split]
 
 
  # Return the string with words capitalized

@@ -64,6 +64,22 @@ class HashTest < Test::Unit::TestCase
   end
 
 
+  def test_each_pair_bang_with_same_key_different_value
+    actual = { "a" => "b", "c" => "d" }
+    expect = { "a" => "B", "c" => "D" }
+    actual.each_pair! {|key,value| [key, value.upcase] }
+    assert_equal(expect,actual)
+  end
+
+
+  def test_each_pair_bang_with_same_key_same_value
+    actual = { "a" => "b", "c" => "d" }
+    expect = { "a" => "b", "c" => "d" }
+    actual.each_pair! {|key,value| [key, value] }
+    assert_equal(expect,actual)
+  end
+
+
   def test_each_value_bang
     actual = { "a" => "b", "c" => "d" }
     expect = { "a" => "B", "c" => "D" }

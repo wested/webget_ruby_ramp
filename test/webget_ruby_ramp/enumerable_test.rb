@@ -180,17 +180,17 @@ class EnumerableTest < Test::Unit::TestCase
 
 
   def test_join_0
-    a=['a','b','c']
+    a='a'..'c'
     assert_equal("abc",a.join,"join()")
   end
 
   def test_join_1
-    a=['a','b','c']
+    a='a'..'c'
     assert_equal("a+b+c",a.join('+'),"join('+')")
   end
 
   def test_join_2
-    a=['a','b','c']
+    a='a'..'c'
     assert_equal("+a-+b-+c-",a.join("+","-"),"join('+','-')")
   end
 

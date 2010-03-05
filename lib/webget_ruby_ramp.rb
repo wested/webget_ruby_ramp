@@ -73,6 +73,12 @@ Testing:
 * File.joindir: wrapper for File.join(File.dirname(...),string,...)
 
 
+== Fixnum
+
+* even?: is the number even?
+* odd?: is the number odd?
+
+
 == Hash
 
 * size?: return true if hash has any keys
@@ -87,7 +93,6 @@ Testing:
 
 == Integer
 
-* even?: is the number even?
 * maps: syntactic sugar to yield n times to a block, returning an array of any results (e.g. 3.maps{rand} => [0.4351325,0.7778625,0.158613534])
 * odd?: is the number odd?
 
@@ -100,8 +105,8 @@ Testing:
 
 == Kernel
 
-* method_name: 
-* method_name_of_caller: returns the name of the method which called the current method, or the Nth parent up the call stack if the optional caller_index parameter is passed.
+* my_method_name: returns the name of the current method
+* caller_method_name: returns the name of the caller method, or the Nth parent up the call stack if the optional caller_index parameter is passed.
 
 
 == Math
@@ -194,6 +199,7 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
+- 1.8.0 100% rcov coverage
 - 1.7.8 Add rcov testing
 - 1.7.4 Add Class#publicize_methods, Integer#even?, Integer#odd?
 - 1.7.3 Refactor Rails classes to their own gem, add README, LICENSE
@@ -236,7 +242,7 @@ Extensions that help debug Ruby programs.
 
 =end
 
-['array','class','csv','date','enumerable','file','hash','integer','io','kernel','math','nil','numeric','object','process','string','symbol','time','xml','yaml'].map{|x|
+['array','class','csv','date','enumerable','file','fixnum','hash','integer','io','kernel','math','nil','numeric','object','process','string','symbol','time','xml','yaml'].map{|x|
   require File.dirname(__FILE__) + "/webget_ruby_ramp/#{x}.rb"
 }
 

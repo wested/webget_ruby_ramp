@@ -7,18 +7,42 @@ class XMLTest < Test::Unit::TestCase
  @@formatter=REXML::Formatters::Default.new
 
  def test_load_dir_files
-  dirpath=File.join(MYDIR,'xml_test_*.xml')
-  expect=[File.join(MYDIR,'xml_test_1.xml'),File.join(MYDIR,'xml_test_2.xml')]
-  actual=Dir[dirpath].sort
-  assert_equal(expect,actual,"Dir[#{dirpath}] expects test data files")
+   dirpath=File.join(MYDIR,'xml_test_*.xml')
+   expect=[File.join(MYDIR,'xml_test_1.xml'),File.join(MYDIR,'xml_test_2.xml')]
+   actual=Dir[dirpath].sort
+   assert_equal(expect,actual,"Dir[#{dirpath}] expects test data files")
  end
 
  def test_load_dir
-  dirpath=File.join(MYDIR,'xml_test_*.xml')
-  expect="abcdef"
-  actual=''
-  XML.load_dir(dirpath){|doc| doc.elements.each('foo/bar'){|e| actual+=e.attributes['x']}}
-  assert_equal(expect,actual,'XML.load_dir')
+   dirpath=File.join(MYDIR,'xml_test_*.xml')
+   expect="abcdef"
+   actual=''
+   XML.load_dir(dirpath){|doc| doc.elements.each('foo/bar'){|e| actual+=e.attributes['x']}}
+   assert_equal(expect,actual,'XML.load_dir')
+ end
+
+ def test_load_elements
+   dirpath=File.join(MYDIR,'xml_test_*.xml')
+   expect="<bar x='a'/><bar x='b'/><bar x='c'/><bar x='d'/><bar x='e'/><bar x='f'/>"
+   actual=''
+   XML.load_elements(dirpath,'foo/bar'){|elem| actual+=elem.to_s }
+   assert_equal(expect,actual,'XML.load_elements')
+ end
+
+ def test_load_attributes
+   dirpath=File.join(MYDIR,'xml_test_*.xml')
+   expect="xaxbxcxdxexf"
+   actual=''
+   XML.load_attributes(dirpath,'foo/bar'){|attributes| actual+=attributes.sort.to_s }
+   assert_equal(expect,actual,'XML.load_attributes')
+ end
+
+ def test_load_attributes_hash
+   dirpath=File.join(MYDIR,'xml_test_*.xml')
+   expect="xaxbxcxdxexf"
+   actual=''
+   XML.load_attributes_hash(dirpath,'foo/bar'){|attributes_hash| actual+=attributes_hash.to_s }
+   assert_equal(expect,actual,'XML.load_attributes_hash')
  end
 
  def test_attributes_to_hash

@@ -11,13 +11,28 @@ module Kernel
   # - http://www.ruby-forum.com/topic/75258
   # - In 1.9 (Ruby CVS HEAD) there is #__method__ and #__callee__
   # - http://eigenclass.org/hiki.rb?Changes+in+Ruby+1.9#l90
+  #-
+  # Make this fast because its often doing logging & reporting.
+  # Inline this and use $1 because it's empirically faster than /1
 
-  def method_name(caller_index=0)
-    # Make this fast because its often doing logging & reporting.
-    # Inline this and use $1 because it's empirically faster than /1
+  def my_method_name
+    caller[0] =~ /`([^']*)'/ and $1
+  end
+
+
+  # See:
+  # - http://www.ruby-forum.com/topic/75258
+  # - In 1.9 (Ruby CVS HEAD) there is #__method__ and #__callee__
+  # - http://eigenclass.org/hiki.rb?Changes+in+Ruby+1.9#l90
+  #-
+  # Make this fast because its often doing logging & reporting.
+  # Inline this and use $1 because it's empirically faster than /1
+
+  def caller_method_name(caller_index=0)
     caller[caller_index] =~ /`([^']*)'/ and $1
   end
 
+  
   # Pretty print to a string.
   # 
   # Created by Graeme Mathieson.

@@ -40,6 +40,20 @@ class DateTest < Test::Unit::TestCase
   end
 
 
+  def test_between
+    d1= Date.parse('2008-01-01')                                                                                  
+    d2= Date.parse('2009-01-01')                                                                                  
+    d3= Date.between(d1,d2)
+    assert(d3>=d1)
+    assert(d3<=d2)
+  end
+
+
+  def self.between(min,max)
+    min+rand(max-min)
+  end
+
+
   # for test_age_years and test_age_days
   BIRTHDATE     = Date.new(1980,10,31)
   VALENTINES    = Date.new(2008,02,14)
