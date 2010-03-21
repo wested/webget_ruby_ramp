@@ -12,10 +12,12 @@ class Class
   #
   # From http://blog.jayfields.com/2007/11/ruby-testing-private-methods.html
   #
-  # ==Example
+  # @example
   #   MyClass.publicize_methods do
   #     ...call some method that was private or protected...
   #   end
+  #
+  # @return void
  
   def publicize_methods
     saved_private_instance_methods = self.private_instance_methods

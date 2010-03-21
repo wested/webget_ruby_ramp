@@ -1,317 +1,395 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+<title>Module: Kernel</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
-	<title>Module: Kernel</title>
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
-	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (K)</a> &raquo; 
+    
+    
+    <span class="title">Kernel</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
 
-	<script src="./js/jquery.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="./js/thickbox-compressed.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="./js/quicksearch.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="./js/darkfish.js" type="text/javascript"
-		charset="utf-8"></script>
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
 
-</head>
-<body class="module">
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: Kernel 
+  
+  
+</h1>
 
-	<div id="metadata">
-		<div id="file-metadata">
-			<div id="file-list-section" class="section">
-				<h3 class="section-header">In Files</h3>
-				<div class="section-body">
-					<ul>
-					
-						<li><a href="./lib/webget_ruby_ramp/kernel_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="lib/webget_ruby_ramp/kernel.rb">lib/webget_ruby_ramp/kernel.rb</a></li>
-					
-					</ul>
-				</div>
-			</div>
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/webget_ruby_ramp/kernel.rb</dd>
+  
+</dl>
+<div class="clear"></div>
 
-			
-		</div>
-
-		<div id="class-metadata">
-
-			<!-- Parent Class -->
-			
-
-			<!-- Namespace Contents -->
-			
-
-			<!-- Method Quickref -->
-			
-			<div id="method-list-section" class="section">
-				<h3 class="section-header">Methods</h3>
-				<ul class="link-list">
-					
-					<li><a href="#M000106">::pp_s</a></li>
-					
-					<li><a href="#M000105">#caller_method_name</a></li>
-					
-					<li><a href="#M000104">#my_method_name</a></li>
-					
-					<li><a href="#M000106">#pp_s</a></li>
-					
-				</ul>
-			</div>
-			
-
-			<!-- Included Modules -->
-			
-		</div>
-
-		<div id="project-metadata">
-			
-			
-			<div id="fileindex-section" class="section project-section">
-				<h3 class="section-header">Files</h3>
-				<ul>
-				
-					<li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
-				
-					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
-				
-					<li class="file"><a href="./coverage/index_html.html">index.html</a></li>
-				
-					<li class="file"><a href="./coverage/jquery-1_3_2_min_js.html">jquery-1.3.2.min.js</a></li>
-				
-					<li class="file"><a href="./coverage/jquery_tablesorter_min_js.html">jquery.tablesorter.min.js</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-array_rb_html.html">lib-webget_ruby_ramp-array_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-class_rb_html.html">lib-webget_ruby_ramp-class_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-csv_rb_html.html">lib-webget_ruby_ramp-csv_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-date_rb_html.html">lib-webget_ruby_ramp-date_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-enumerable_rb_html.html">lib-webget_ruby_ramp-enumerable_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-file_rb_html.html">lib-webget_ruby_ramp-file_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-fixnum_rb_html.html">lib-webget_ruby_ramp-fixnum_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-hash_rb_html.html">lib-webget_ruby_ramp-hash_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-integer_rb_html.html">lib-webget_ruby_ramp-integer_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-io_rb_html.html">lib-webget_ruby_ramp-io_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-kernel_rb_html.html">lib-webget_ruby_ramp-kernel_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-math_rb_html.html">lib-webget_ruby_ramp-math_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-nil_rb_html.html">lib-webget_ruby_ramp-nil_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-numeric_rb_html.html">lib-webget_ruby_ramp-numeric_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-object_rb_html.html">lib-webget_ruby_ramp-object_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-process_rb_html.html">lib-webget_ruby_ramp-process_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-string_rb_html.html">lib-webget_ruby_ramp-string_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-symbol_rb_html.html">lib-webget_ruby_ramp-symbol_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-time_rb_html.html">lib-webget_ruby_ramp-time_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-xml_rb_html.html">lib-webget_ruby_ramp-xml_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-yaml_rb_html.html">lib-webget_ruby_ramp-yaml_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp_rb_html.html">lib-webget_ruby_ramp_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/print_css.html">print.css</a></li>
-				
-					<li class="file"><a href="./coverage/rcov_js.html">rcov.js</a></li>
-				
-					<li class="file"><a href="./coverage/screen_css.html">screen.css</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
-				
-					<li class="file"><a href="./webget_ruby_ramp_gemspec.html">webget_ruby_ramp.gemspec</a></li>
-				
-					<li class="file"><a href="./webget_ruby_ramp_sha512_txt.html">webget_ruby_ramp.sha512.txt</a></li>
-				
-				</ul>
-			</div>
-			
-
-			<div id="classindex-section" class="section project-section">
-				<h3 class="section-header">Class Index
-					<span class="search-toggle"><img src="./images/find.png"
-						height="16" width="16" alt="[+]"
-						title="show/hide quicksearch" /></span></h3>
-				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-				<fieldset>
-					<legend>Quicksearch</legend>
-					<input type="text" name="quicksearch" value=""
-						class="quicksearch-field" />
-				</fieldset>
-				</form>
-
-				<ul class="link-list">
-				
-					<li><a href="./REXML.html">REXML</a></li>
-				
-					<li><a href="./REXML/Attributes.html">REXML::Attributes</a></li>
-				
-					<li><a href="./REXML/Document.html">REXML::Document</a></li>
-				
-					<li><a href="./REXML/Element.html">REXML::Element</a></li>
-				
-					<li><a href="./EnumerableTest.html">EnumerableTest</a></li>
-				
-					<li><a href="./Array.html">Array</a></li>
-				
-					<li><a href="./ArrayTest.html">ArrayTest</a></li>
-				
-					<li><a href="./CSV.html">CSV</a></li>
-				
-					<li><a href="./CSVTest.html">CSVTest</a></li>
-				
-					<li><a href="./Class.html">Class</a></li>
-				
-					<li><a href="./ClassTest.html">ClassTest</a></li>
-				
-					<li><a href="./Date.html">Date</a></li>
-				
-					<li><a href="./DateTest.html">DateTest</a></li>
-				
-					<li><a href="./Enumerable.html">Enumerable</a></li>
-				
-					<li><a href="./File.html">File</a></li>
-				
-					<li><a href="./FileTestCase.html">FileTestCase</a></li>
-				
-					<li><a href="./Fixnum.html">Fixnum</a></li>
-				
-					<li><a href="./FixnumTest.html">FixnumTest</a></li>
-				
-					<li><a href="./Hash.html">Hash</a></li>
-				
-					<li><a href="./HashTest.html">HashTest</a></li>
-				
-					<li><a href="./IO.html">IO</a></li>
-				
-					<li><a href="./IOTest.html">IOTest</a></li>
-				
-					<li><a href="./Integer.html">Integer</a></li>
-				
-					<li><a href="./IntegerTest.html">IntegerTest</a></li>
-				
-					<li><a href="./Kernel.html">Kernel</a></li>
-				
-					<li><a href="./KernelTest.html">KernelTest</a></li>
-				
-					<li><a href="./Math.html">Math</a></li>
-				
-					<li><a href="./MathTest.html">MathTest</a></li>
-				
-					<li><a href="./MockRequest.html">MockRequest</a></li>
-				
-					<li><a href="./My.html">My</a></li>
-				
-					<li><a href="./NilClass.html">NilClass</a></li>
-				
-					<li><a href="./NilTest.html">NilTest</a></li>
-				
-					<li><a href="./Numeric.html">Numeric</a></li>
-				
-					<li><a href="./NumericTest.html">NumericTest</a></li>
-				
-					<li><a href="./Object.html">Object</a></li>
-				
-					<li><a href="./ObjectTest.html">ObjectTest</a></li>
-				
-					<li><a href="./Process.html">Process</a></li>
-				
-					<li><a href="./ProcessTest.html">ProcessTest</a></li>
-				
-					<li><a href="./String.html">String</a></li>
-				
-					<li><a href="./StringTest.html">StringTest</a></li>
-				
-					<li><a href="./Symbol.html">Symbol</a></li>
-				
-					<li><a href="./SymbolTest.html">SymbolTest</a></li>
-				
-					<li><a href="./Time.html">Time</a></li>
-				
-					<li><a href="./TimeTest.html">TimeTest</a></li>
-				
-					<li><a href="./XML.html">XML</a></li>
-				
-					<li><a href="./XMLTest.html">XMLTest</a></li>
-				
-					<li><a href="./YAML.html">YAML</a></li>
-				
-					<li><a href="./YAMLTest.html">YAMLTest</a></li>
-				
-				</ul>
-				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
-			</div>
-
-			
-		</div>
-	</div>
-
-	<div id="documentation">
-		<h1 class="module">Kernel</h1>
-
-		<div id="description">
-			<p>
-<a href="Kernel.html">Kernel</a> extensions
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Kernel extensions
 </p>
 
-		</div>
 
-		<!-- Constants -->
-		
+  </div>
+</div>
+<div class="tags">
+  
+</div>
 
-		<!-- Attributes -->
-		
 
-		<!-- Methods -->
-		
-		<div id="public-class-method-details" class="method-section section">
-			<h3 class="section-header">Public Class Methods</h3>
+  <h2>Instance Method Summary</h2>
 
-		
-			<div id="pp-s-method" class="method-detail ">
-				<a name="M000106"></a>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#caller_method_name-instance_method" title="#caller_method_name (instance method)">- (String) <strong>caller_method_name</strong>(caller_index = 0) </a>
+    
 
-				<div class="method-heading">
-				
-					<span class="method-name">pp_s</span><span
-						class="method-args">(*objs)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
+    
+  </span>
+  
+  
+  
+  
+  
 
-				<div class="method-description">
-					
-					<p>
+  
+    <span class="summary_desc">
+See:
+
+<ul>
+<li><a
+href="http://www.ruby-forum.com/topic/75258">www.ruby-forum.com/topic/75258</a>
+
+</li>
+<li>In 1.9 (Ruby CVS HEAD) there is #<em>method</em> and #<em>callee</em>
+
+</li>
+<li><a
+href="http://eigenclass.org/hiki.rb?Changes<tt>in</tt>Ruby<tt>1.9#l90">eigenclass.org/hiki.rb?Changes</tt>in<tt>Ruby</tt>1.9#l90</a>
+
+</li>
+</ul>
+
+- Make this fast because its often doing logging &amp; reporting.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#my_method_name-instance_method" title="#my_method_name (instance method)">- (String) <strong>my_method_name</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+See:
+
+<ul>
+<li><a
+href="http://www.ruby-forum.com/topic/75258">www.ruby-forum.com/topic/75258</a>
+
+</li>
+<li>In 1.9 (Ruby CVS HEAD) there is #<em>method</em> and #<em>callee</em>
+
+</li>
+<li><a
+href="http://eigenclass.org/hiki.rb?Changes<tt>in</tt>Ruby<tt>1.9#l90">eigenclass.org/hiki.rb?Changes</tt>in<tt>Ruby</tt>1.9#l90</a>
+
+</li>
+</ul>
+
+- Make this fast because its often doing logging &amp; reporting.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pp_s-instance_method" title="#pp_s (instance method)">- (String) <strong>pp_s</strong>(*objs) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Pretty print to a string.
+
+</span>
+  
+</li>
+
+    
+  </ul>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="caller_method_name-instance_method">
+  
+    - (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>caller_method_name</strong>(caller_index = 0) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+See:
+</p>
+<ul>
+<li><a
+href="http://www.ruby-forum.com/topic/75258">www.ruby-forum.com/topic/75258</a>
+
+</li>
+<li>In 1.9 (Ruby CVS HEAD) there is #<em>method</em> and #<em>callee</em>
+
+</li>
+<li><a
+href="http://eigenclass.org/hiki.rb?Changes<tt>in</tt>Ruby<tt>1.9#l90">eigenclass.org/hiki.rb?Changes</tt>in<tt>Ruby</tt>1.9#l90</a>
+
+</li>
+</ul>
+<p>
+- Make this fast because its often doing logging &amp; reporting. Inline
+this and use $1 because it&#8217;s empirically faster than /1
+</p>
+<p>
+These two methods are always equal:
+</p>
+<pre class="code">
+  <span class='caller_method_name identifier id'>caller_method_name</span><span class='lparen token'>(</span><span class='integer val'>0</span><span class='rparen token'>)</span> <span class='eqq op'>===</span> <span class='my_method_name identifier id'>my_method_name</span>
+</pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='def def kw'>def</span> <span class='foo identifier id'>foo</span>
+    <span class='puts identifier id'>puts</span> <span class='caller_method_name identifier id'>caller_method_name</span><span class='lparen token'>(</span><span class='integer val'>0</span><span class='rparen token'>)</span>
+    <span class='puts identifier id'>puts</span> <span class='caller_method_name identifier id'>caller_method_name</span><span class='lparen token'>(</span><span class='integer val'>1</span><span class='rparen token'>)</span>
+  <span class='end end kw'>end</span>
+  <span class='assign token'>=</span><span class='gt op'>&gt;</span> 
+  <span class='string val'>&quot;foo&quot;</span>
+  <span class='string val'>&quot;irb_binding&quot;</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the method name of the caller at the index
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/kernel.rb', line 57</span>
+
+<span class='def def kw'>def</span> <span class='caller_method_name identifier id'>caller_method_name</span><span class='lparen token'>(</span><span class='caller_index identifier id'>caller_index</span><span class='assign token'>=</span><span class='integer val'>0</span><span class='rparen token'>)</span>
+  <span class='caller identifier id'>caller</span><span class='lbrack token'>[</span><span class='caller_index identifier id'>caller_index</span><span class='rbrack token'>]</span> <span class='match op'>=~</span> <span class='regexp val'>/`([^']*)'/</span> <span class='and and kw'>and</span> <span class='$1 nth_ref id'>$1</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="my_method_name-instance_method">
+  
+    - (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>my_method_name</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+See:
+</p>
+<ul>
+<li><a
+href="http://www.ruby-forum.com/topic/75258">www.ruby-forum.com/topic/75258</a>
+
+</li>
+<li>In 1.9 (Ruby CVS HEAD) there is #<em>method</em> and #<em>callee</em>
+
+</li>
+<li><a
+href="http://eigenclass.org/hiki.rb?Changes<tt>in</tt>Ruby<tt>1.9#l90">eigenclass.org/hiki.rb?Changes</tt>in<tt>Ruby</tt>1.9#l90</a>
+
+</li>
+</ul>
+<p>
+- Make this fast because its often doing logging &amp; reporting. Inline
+this and use $1 because it&#8217;s empirically faster than /1
+</p>
+<p>
+These two methods are always equal:
+</p>
+<pre class="code">
+  <span class='caller_method_name identifier id'>caller_method_name</span><span class='lparen token'>(</span><span class='integer val'>0</span><span class='rparen token'>)</span> <span class='eqq op'>===</span> <span class='my_method_name identifier id'>my_method_name</span>
+</pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='def def kw'>def</span> <span class='foo identifier id'>foo</span>
+    <span class='puts identifier id'>puts</span> <span class='my_method_name identifier id'>my_method_name</span>
+  <span class='end end kw'>end</span>
+  <span class='foo identifier id'>foo</span>
+  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;foo&quot;</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+my method name
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+30
+31
+32</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/kernel.rb', line 30</span>
+
+<span class='def def kw'>def</span> <span class='my_method_name identifier id'>my_method_name</span>
+  <span class='caller identifier id'>caller</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span> <span class='match op'>=~</span> <span class='regexp val'>/`([^']*)'/</span> <span class='and and kw'>and</span> <span class='$1 nth_ref id'>$1</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="pp_s-instance_method">
+  
+    - (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>pp_s</strong>(*objs) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
 Pretty print to a string.
 </p>
 <p>
@@ -321,193 +399,82 @@ Created by Graeme Mathieson.
 See <a
 href="http://rha7dotcom.blogspot.com/2008/07/ruby-and-rails-how-to-get-pp-pretty.html">rha7dotcom.blogspot.com/2008/07/ruby-and-rails-how-to-get-pp-pretty.html</a>
 </p>
-					
 
-					
-					<div class="method-source-code"
-						id="pp-s-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/kernel.rb, line 42</span>
-42:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pp_s</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">objs</span>)  
-43:     <span class="ruby-identifier">str</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>  
-44:     <span class="ruby-identifier">objs</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">obj</span><span class="ruby-operator">|</span>  
-45:         <span class="ruby-constant">PP</span>.<span class="ruby-identifier">pp</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-identifier">str</span>)  
-46:       }  
-47:       <span class="ruby-identifier">str</span>.<span class="ruby-identifier">rewind</span>  
-48:       <span class="ruby-identifier">str</span>.<span class="ruby-identifier">read</span>  
-49:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
-
-		
-		</div>
-	
-		<div id="public-instance-method-details" class="method-section section">
-			<h3 class="section-header">Public Instance Methods</h3>
-
-		
-			<div id="caller-method-name-method" class="method-detail ">
-				<a name="M000105"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">caller_method_name</span><span
-						class="method-args">(caller_index=0)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<pre>
- See:
- - http://www.ruby-forum.com/topic/75258
- - In 1.9 (Ruby CVS HEAD) there is #__method__ and #__callee__
- - http://eigenclass.org/hiki.rb?Changes+in+Ruby+1.9#l90
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='pp_s identifier id'>pp_s</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='string val'>&quot;foo&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;goo&quot;</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;[\&quot;foo\&quot;, \&quot;goo\&quot;]\n&quot;</span>
 </pre>
-<p>
--
-</p>
-<pre>
- Make this fast because its often doing logging &amp; reporting.
- Inline this and use $1 because it's empirically faster than /1
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a pretty print string of the params
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75
+76
+77
+78
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/kernel.rb', line 74</span>
+
+<span class='def def kw'>def</span> <span class='pp_s identifier id'>pp_s</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='objs identifier id'>objs</span><span class='rparen token'>)</span>  
+  <span class='str identifier id'>str</span> <span class='assign token'>=</span> <span class='StringIO constant id'>StringIO</span><span class='dot token'>.</span><span class='new identifier id'>new</span>  
+  <span class='objs identifier id'>objs</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='obj identifier id'>obj</span><span class='bitor op'>|</span>  
+      <span class='PP constant id'>PP</span><span class='dot token'>.</span><span class='pp identifier id'>pp</span><span class='lparen token'>(</span><span class='obj identifier id'>obj</span><span class='comma token'>,</span> <span class='str identifier id'>str</span><span class='rparen token'>)</span>  
+    <span class='rbrace token'>}</span>  
+    <span class='str identifier id'>str</span><span class='dot token'>.</span><span class='rewind identifier id'>rewind</span>  
+    <span class='str identifier id'>str</span><span class='dot token'>.</span><span class='read identifier id'>read</span>  
+<span class='end end kw'>end</span>
 </pre>
-					
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
-					
-					<div class="method-source-code"
-						id="caller-method-name-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/kernel.rb, line 31</span>
-31:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">caller_method_name</span>(<span class="ruby-identifier">caller_index</span>=<span class="ruby-value">0</span>)
-32:     <span class="ruby-identifier">caller</span>[<span class="ruby-identifier">caller_index</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/`([^']*)'/</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">$1</span>
-33:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
+</div>
+    
+    <div id="footer">
+  Generated on Sat Mar 20 17:19:00 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
+  0.5.3 (ruby-1.8.7).
+</div>
 
-				
-			</div>
-
-		
-			<div id="my-method-name-method" class="method-detail ">
-				<a name="M000104"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">my_method_name</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<pre>
- See:
- - http://www.ruby-forum.com/topic/75258
- - In 1.9 (Ruby CVS HEAD) there is #__method__ and #__callee__
- - http://eigenclass.org/hiki.rb?Changes+in+Ruby+1.9#l90
-</pre>
-<p>
--
-</p>
-<pre>
- Make this fast because its often doing logging &amp; reporting.
- Inline this and use $1 because it's empirically faster than /1
-</pre>
-					
-
-					
-					<div class="method-source-code"
-						id="my-method-name-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/kernel.rb, line 18</span>
-18:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">my_method_name</span>
-19:     <span class="ruby-identifier">caller</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/`([^']*)'/</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">$1</span>
-20:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-		</div>
-	
-		<div id="private-instance-method-details" class="method-section section">
-			<h3 class="section-header">Private Instance Methods</h3>
-
-		
-			<div id="pp-s-method" class="method-detail ">
-				<a name="M000106"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">pp_s</span><span
-						class="method-args">(*objs)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Pretty print to a string.
-</p>
-<p>
-Created by Graeme Mathieson.
-</p>
-<p>
-See <a
-href="http://rha7dotcom.blogspot.com/2008/07/ruby-and-rails-how-to-get-pp-pretty.html">rha7dotcom.blogspot.com/2008/07/ruby-and-rails-how-to-get-pp-pretty.html</a>
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="pp-s-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/kernel.rb, line 42</span>
-42:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pp_s</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">objs</span>)  
-43:     <span class="ruby-identifier">str</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>  
-44:     <span class="ruby-identifier">objs</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">obj</span><span class="ruby-operator">|</span>  
-45:         <span class="ruby-constant">PP</span>.<span class="ruby-identifier">pp</span>(<span class="ruby-identifier">obj</span>, <span class="ruby-identifier">str</span>)  
-46:       }  
-47:       <span class="ruby-identifier">str</span>.<span class="ruby-identifier">rewind</span>  
-48:       <span class="ruby-identifier">str</span>.<span class="ruby-identifier">read</span>  
-49:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-		</div>
-	
-
-	</div>
-
-
-	<div id="rdoc-debugging-section-dump" class="debugging-section">
-	
-		<p>Disabled; run with --debug to generate this.</p>
-	
-	</div>
-
-	<div id="validator-badges">
-		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-			Rdoc Generator</a> 1.1.6</small>.</p>
-	</div>
-
-</body>
+  </body>
 </html>
-

@@ -1,588 +1,701 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+<title>Class: Date</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
-	<title>Class: Date</title>
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
-	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (D)</a> &raquo; 
+    
+    
+    <span class="title">Date</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
 
-	<script src="./js/jquery.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="./js/thickbox-compressed.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="./js/quicksearch.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="./js/darkfish.js" type="text/javascript"
-		charset="utf-8"></script>
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
 
-</head>
-<body class="class">
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Date 
+  
+  
+</h1>
 
-	<div id="metadata">
-		<div id="file-metadata">
-			<div id="file-list-section" class="section">
-				<h3 class="section-header">In Files</h3>
-				<div class="section-body">
-					<ul>
-					
-						<li><a href="./lib/webget_ruby_ramp/date_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="lib/webget_ruby_ramp/date.rb">lib/webget_ruby_ramp/date.rb</a></li>
-					
-					</ul>
-				</div>
-			</div>
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><a href="Object.html" title="Object (class)">Object</a></span>
+      
+        <ul class="fullTree">
+          <li><a href="Object.html" title="Object (class)">Object</a></li>
+          
+            <li class="next">Date</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/webget_ruby_ramp/date.rb</dd>
+  
+</dl>
+<div class="clear"></div>
 
-			
-		</div>
-
-		<div id="class-metadata">
-
-			<!-- Parent Class -->
-			
-			<div id="parent-class-section" class="section">
-				<h3 class="section-header">Parent</h3>
-				
-				<p class="link"><a href="Object.html">Object</a></p>
-				
-			</div>
-			
-
-			<!-- Namespace Contents -->
-			
-
-			<!-- Method Quickref -->
-			
-			<div id="method-list-section" class="section">
-				<h3 class="section-header">Methods</h3>
-				<ul class="link-list">
-					
-					<li><a href="#M000050">::between</a></li>
-					
-					<li><a href="#M000053">#age_days</a></li>
-					
-					<li><a href="#M000052">#age_years</a></li>
-					
-					<li><a href="#M000051">#to_sql</a></li>
-					
-					<li><a href="#M000048">#weekday?</a></li>
-					
-					<li><a href="#M000049">#weekend?</a></li>
-					
-				</ul>
-			</div>
-			
-
-			<!-- Included Modules -->
-			
-		</div>
-
-		<div id="project-metadata">
-			
-			
-			<div id="fileindex-section" class="section project-section">
-				<h3 class="section-header">Files</h3>
-				<ul>
-				
-					<li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
-				
-					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
-				
-					<li class="file"><a href="./coverage/index_html.html">index.html</a></li>
-				
-					<li class="file"><a href="./coverage/jquery-1_3_2_min_js.html">jquery-1.3.2.min.js</a></li>
-				
-					<li class="file"><a href="./coverage/jquery_tablesorter_min_js.html">jquery.tablesorter.min.js</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-array_rb_html.html">lib-webget_ruby_ramp-array_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-class_rb_html.html">lib-webget_ruby_ramp-class_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-csv_rb_html.html">lib-webget_ruby_ramp-csv_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-date_rb_html.html">lib-webget_ruby_ramp-date_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-enumerable_rb_html.html">lib-webget_ruby_ramp-enumerable_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-file_rb_html.html">lib-webget_ruby_ramp-file_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-fixnum_rb_html.html">lib-webget_ruby_ramp-fixnum_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-hash_rb_html.html">lib-webget_ruby_ramp-hash_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-integer_rb_html.html">lib-webget_ruby_ramp-integer_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-io_rb_html.html">lib-webget_ruby_ramp-io_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-kernel_rb_html.html">lib-webget_ruby_ramp-kernel_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-math_rb_html.html">lib-webget_ruby_ramp-math_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-nil_rb_html.html">lib-webget_ruby_ramp-nil_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-numeric_rb_html.html">lib-webget_ruby_ramp-numeric_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-object_rb_html.html">lib-webget_ruby_ramp-object_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-process_rb_html.html">lib-webget_ruby_ramp-process_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-string_rb_html.html">lib-webget_ruby_ramp-string_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-symbol_rb_html.html">lib-webget_ruby_ramp-symbol_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-time_rb_html.html">lib-webget_ruby_ramp-time_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-xml_rb_html.html">lib-webget_ruby_ramp-xml_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-yaml_rb_html.html">lib-webget_ruby_ramp-yaml_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp_rb_html.html">lib-webget_ruby_ramp_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/print_css.html">print.css</a></li>
-				
-					<li class="file"><a href="./coverage/rcov_js.html">rcov.js</a></li>
-				
-					<li class="file"><a href="./coverage/screen_css.html">screen.css</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
-				
-					<li class="file"><a href="./webget_ruby_ramp_gemspec.html">webget_ruby_ramp.gemspec</a></li>
-				
-					<li class="file"><a href="./webget_ruby_ramp_sha512_txt.html">webget_ruby_ramp.sha512.txt</a></li>
-				
-				</ul>
-			</div>
-			
-
-			<div id="classindex-section" class="section project-section">
-				<h3 class="section-header">Class Index
-					<span class="search-toggle"><img src="./images/find.png"
-						height="16" width="16" alt="[+]"
-						title="show/hide quicksearch" /></span></h3>
-				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-				<fieldset>
-					<legend>Quicksearch</legend>
-					<input type="text" name="quicksearch" value=""
-						class="quicksearch-field" />
-				</fieldset>
-				</form>
-
-				<ul class="link-list">
-				
-					<li><a href="./REXML.html">REXML</a></li>
-				
-					<li><a href="./REXML/Attributes.html">REXML::Attributes</a></li>
-				
-					<li><a href="./REXML/Document.html">REXML::Document</a></li>
-				
-					<li><a href="./REXML/Element.html">REXML::Element</a></li>
-				
-					<li><a href="./EnumerableTest.html">EnumerableTest</a></li>
-				
-					<li><a href="./Array.html">Array</a></li>
-				
-					<li><a href="./ArrayTest.html">ArrayTest</a></li>
-				
-					<li><a href="./CSV.html">CSV</a></li>
-				
-					<li><a href="./CSVTest.html">CSVTest</a></li>
-				
-					<li><a href="./Class.html">Class</a></li>
-				
-					<li><a href="./ClassTest.html">ClassTest</a></li>
-				
-					<li><a href="./Date.html">Date</a></li>
-				
-					<li><a href="./DateTest.html">DateTest</a></li>
-				
-					<li><a href="./Enumerable.html">Enumerable</a></li>
-				
-					<li><a href="./File.html">File</a></li>
-				
-					<li><a href="./FileTestCase.html">FileTestCase</a></li>
-				
-					<li><a href="./Fixnum.html">Fixnum</a></li>
-				
-					<li><a href="./FixnumTest.html">FixnumTest</a></li>
-				
-					<li><a href="./Hash.html">Hash</a></li>
-				
-					<li><a href="./HashTest.html">HashTest</a></li>
-				
-					<li><a href="./IO.html">IO</a></li>
-				
-					<li><a href="./IOTest.html">IOTest</a></li>
-				
-					<li><a href="./Integer.html">Integer</a></li>
-				
-					<li><a href="./IntegerTest.html">IntegerTest</a></li>
-				
-					<li><a href="./Kernel.html">Kernel</a></li>
-				
-					<li><a href="./KernelTest.html">KernelTest</a></li>
-				
-					<li><a href="./Math.html">Math</a></li>
-				
-					<li><a href="./MathTest.html">MathTest</a></li>
-				
-					<li><a href="./MockRequest.html">MockRequest</a></li>
-				
-					<li><a href="./My.html">My</a></li>
-				
-					<li><a href="./NilClass.html">NilClass</a></li>
-				
-					<li><a href="./NilTest.html">NilTest</a></li>
-				
-					<li><a href="./Numeric.html">Numeric</a></li>
-				
-					<li><a href="./NumericTest.html">NumericTest</a></li>
-				
-					<li><a href="./Object.html">Object</a></li>
-				
-					<li><a href="./ObjectTest.html">ObjectTest</a></li>
-				
-					<li><a href="./Process.html">Process</a></li>
-				
-					<li><a href="./ProcessTest.html">ProcessTest</a></li>
-				
-					<li><a href="./String.html">String</a></li>
-				
-					<li><a href="./StringTest.html">StringTest</a></li>
-				
-					<li><a href="./Symbol.html">Symbol</a></li>
-				
-					<li><a href="./SymbolTest.html">SymbolTest</a></li>
-				
-					<li><a href="./Time.html">Time</a></li>
-				
-					<li><a href="./TimeTest.html">TimeTest</a></li>
-				
-					<li><a href="./XML.html">XML</a></li>
-				
-					<li><a href="./XMLTest.html">XMLTest</a></li>
-				
-					<li><a href="./YAML.html">YAML</a></li>
-				
-					<li><a href="./YAMLTest.html">YAMLTest</a></li>
-				
-				</ul>
-				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
-			</div>
-
-			
-		</div>
-	</div>
-
-	<div id="documentation">
-		<h1 class="class">Date</h1>
-
-		<div id="description">
-			<p>
-<a href="Date.html">Date</a> extensions
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Date extensions
 </p>
 
-		</div>
 
-		<!-- Constants -->
-		
+  </div>
+</div>
+<div class="tags">
+  
+</div>
 
-		<!-- Attributes -->
-		
 
-		<!-- Methods -->
-		
-		<div id="public-class-method-details" class="method-section section">
-			<h3 class="section-header">Public Class Methods</h3>
+  <h2>Class Method Summary</h2>
 
-		
-			<div id="between-method" class="method-detail ">
-				<a name="M000050"></a>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#between-class_method" title="between (class method)">+ (Date) <strong>between</strong>(min, max) </a>
+    
 
-				<div class="method-heading">
-				
-					<span class="method-name">between</span><span
-						class="method-args">(min,max)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
+    
+  </span>
+  
+  
+  
+  
+  
 
-				<div class="method-description">
-					
-					<p>
-Return a random date between min &amp; max
+  
+    <span class="summary_desc">
+A random date between min &amp; max.
+
+</span>
+  
+</li>
+
+    
+  </ul>
+
+  <h2>Instance Method Summary</h2>
+
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#age_days-instance_method" title="#age_days (instance method)">- (Integer) <strong>age_days</strong>(compare_date = Date.today) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+The age in days for a given date.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#age_years-instance_method" title="#age_years (instance method)">- (Integer) <strong>age_years</strong>(compare_date = Date.today) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+The age in years for a given date.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_sql-instance_method" title="#to_sql (instance method)">- (String) <strong>to_sql</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Date in a sql format: YYYY-MM-DD.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#weekday%3F-instance_method" title="#weekday? (instance method)">- (Boolean) <strong>weekday?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+True if the date is a weekday: Mon, Tue, Wed, Thu, Fri.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#weekend%3F-instance_method" title="#weekend? (instance method)">- (Boolean) <strong>weekend?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+True if the date is a weekend: Sat, Sun.
+
+</span>
+  
+</li>
+
+    
+  </ul>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="between-class_method">
+  
+    + (<tt><a href="" title="Date (class)">Date</a></tt>) <strong>between</strong>(min, max) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A random date between min &amp; max
 </p>
-<h2>Example</h2>
-<pre>
-  d1= Date.parse('2008-01-01')
-  d2= Date.parse('2009-01-01')
-  Date.between(d1,d3) =&gt; Date 2008-11-22
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='d1 identifier id'>d1</span><span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='string val'>'2008-01-01'</span><span class='rparen token'>)</span>
+  <span class='d2 identifier id'>d2</span><span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='string val'>'2009-01-01'</span><span class='rparen token'>)</span>
+  <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='between identifier id'>between</span><span class='lparen token'>(</span><span class='d1 identifier id'>d1</span><span class='comma token'>,</span><span class='d3 identifier id'>d3</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='Date constant id'>Date</span> <span class='integer val'>2008</span><span class='minus op'>-</span><span class='integer val'>11</span><span class='minus op'>-</span><span class='integer val'>22</span>
 </pre>
-					
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Date (class)">Date</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a random date between min &amp; max
 
-					
-					<div class="method-source-code"
-						id="between-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 40</span>
-40:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">between</span>(<span class="ruby-identifier">min</span>,<span class="ruby-identifier">max</span>)
-41:     <span class="ruby-identifier">min</span><span class="ruby-operator">+</span><span class="ruby-identifier">rand</span>(<span class="ruby-identifier">max</span><span class="ruby-operator">-</span><span class="ruby-identifier">min</span>)
-42:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+      
+    </li>
+  
+</ul>
 
-		
-		</div>
-	
-		<div id="public-instance-method-details" class="method-section section">
-			<h3 class="section-header">Public Instance Methods</h3>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-		
-			<div id="age-days-method" class="method-detail ">
-				<a name="M000053"></a>
 
-				<div class="method-heading">
-				
-					<span class="method-name">age_days</span><span
-						class="method-args">(compare_date=Date.today)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/date.rb', line 40</span>
 
-				<div class="method-description">
-					
-					<p>
-Return the age in days for a given date.
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="age-days-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 87</span>
-87:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">age_days</span>(<span class="ruby-identifier">compare_date</span>=<span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>)
-88:     (<span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Date</span>) <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;compare_date must be a date&quot;</span>
-89:     (<span class="ruby-identifier">compare_date</span><span class="ruby-operator">-</span><span class="ruby-keyword kw">self</span>).<span class="ruby-identifier">to_i</span>
-90:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="age-years-method" class="method-detail ">
-				<a name="M000052"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">age_years</span><span
-						class="method-args">(compare_date=Date.today)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Return the age in years for a given date.
-</p>
-<h2>Example</h2>
-<pre>
-  birthdate=Date.new(1980,10,31)
-  birthdate.age_years =&gt; 28 (where 28 is the correct age for today)
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='between identifier id'>between</span><span class='lparen token'>(</span><span class='min identifier id'>min</span><span class='comma token'>,</span><span class='max identifier id'>max</span><span class='rparen token'>)</span>
+  <span class='min identifier id'>min</span><span class='plus op'>+</span><span class='rand identifier id'>rand</span><span class='lparen token'>(</span><span class='max identifier id'>max</span><span class='minus op'>-</span><span class='min identifier id'>min</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
 </pre>
-<h2>Example of custom dates</h2>
-<pre>
-  birthdate=Date.new(1980,10,31)
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
-  valentines = Date.new(2008,02,14)
-  birthdate.age_years(valentines) =&gt; 27  # before the birthday
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="age_days-instance_method">
+  
+    - (<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>) <strong>age_days</strong>(compare_date = Date.today) 
+  
 
-  halloween = Date.new(2008,10,31)
-  birthdate.age_years(halloween) =&gt; 28   # on the birthday
-
-  new_years_eve = Date.new(2008,12,31)
-  birthdate.age_years(new_years_eve) =&gt; 28  # after the birthday
-</pre>
-					
-
-					
-					<div class="method-source-code"
-						id="age-years-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 76</span>
-76:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">age_years</span>(<span class="ruby-identifier">compare_date</span>=<span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>)
-77:     (<span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Date</span>) <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;compare_date must be a date&quot;</span>
-78:     <span class="ruby-identifier">age</span>=<span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">year</span><span class="ruby-operator">-</span><span class="ruby-identifier">year</span>
-79:     <span class="ruby-identifier">compare_month</span> = <span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">month</span>
-80:     <span class="ruby-identifier">age</span><span class="ruby-operator">-=</span><span class="ruby-value">1</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">compare_month</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">month</span> <span class="ruby-keyword kw">or</span> (<span class="ruby-identifier">compare_month</span><span class="ruby-operator">==</span><span class="ruby-identifier">month</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">compare_date</span>.<span class="ruby-identifier">day</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">day</span>)
-81:     <span class="ruby-identifier">age</span>
-82:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="to-sql-method" class="method-detail ">
-				<a name="M000051"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">to_sql</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Return date in a sql format: YYYY-MM-DD
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The age in days for a given date.
 </p>
-<h2>Example</h2>
-<pre>
-  d=Date.today
-  d.to_sql =&gt; &quot;2007-12-31&quot;
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the age in days for a given date.
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88
+89
+90</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/date.rb', line 87</span>
+
+<span class='def def kw'>def</span> <span class='age_days identifier id'>age_days</span><span class='lparen token'>(</span><span class='compare_date identifier id'>compare_date</span><span class='assign token'>=</span><span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='today identifier id'>today</span><span class='rparen token'>)</span>
+  <span class='lparen token'>(</span><span class='compare_date identifier id'>compare_date</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span> <span class='Date constant id'>Date</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;compare_date must be a date&quot;</span>
+  <span class='lparen token'>(</span><span class='compare_date identifier id'>compare_date</span><span class='minus op'>-</span><span class='self self kw'>self</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span>
+<span class='end end kw'>end</span>
 </pre>
-					
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="age_years-instance_method">
+  
+    - (<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>) <strong>age_years</strong>(compare_date = Date.today) 
+  
 
-					
-					<div class="method-source-code"
-						id="to-sql-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 51</span>
-51:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_sql</span>
-52:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">sprintf</span>(<span class="ruby-value str">&quot;%04d-%02d-%02d&quot;</span>,<span class="ruby-identifier">year</span>,<span class="ruby-identifier">month</span>,<span class="ruby-identifier">mday</span>)
-53:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="weekday--method" class="method-detail ">
-				<a name="M000048"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">weekday?</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Return true if the date is a weekday: Mon, Tue, Wed, Thu, Fri
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The age in years for a given date.
 </p>
-<h2>Example</h2>
-<pre>
-  d = Date.parse('2008-01-01')
-  d.wday =&gt; 2
-  d.weekday? =&gt; true
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">
+  <span class='birthdate identifier id'>birthdate</span><span class='assign token'>=</span><span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>1980</span><span class='comma token'>,</span><span class='integer val'>10</span><span class='comma token'>,</span><span class='integer val'>31</span><span class='rparen token'>)</span>
+  <span class='birthdate identifier id'>birthdate</span><span class='dot token'>.</span><span class='age_years identifier id'>age_years</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>28</span> <span class='lparen token'>(</span><span class='where identifier id'>where</span> <span class='integer val'>28</span> <span class='is identifier id'>is</span> <span class='the identifier id'>the</span> <span class='correct identifier id'>correct</span> <span class='age identifier id'>age</span> <span class='for for kw'>for</span> <span class='today identifier id'>today</span><span class='rparen token'>)</span>
 </pre>
-					
+    
+      <h4>
+of custom dates
 
-					
-					<div class="method-source-code"
-						id="weekday--source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 16</span>
-16:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">weekday?</span>
-17:     <span class="ruby-identifier">wday</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">wday</span><span class="ruby-operator">&lt;</span><span class="ruby-value">6</span>
-18:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
+</h4>
+      <pre class="example code">
+  <span class='birthdate identifier id'>birthdate</span><span class='assign token'>=</span><span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>1980</span><span class='comma token'>,</span><span class='integer val'>10</span><span class='comma token'>,</span><span class='integer val'>31</span><span class='rparen token'>)</span>
 
-				
-			</div>
+  <span class='valentines identifier id'>valentines</span> <span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>2008</span><span class='comma token'>,</span><span class='integer val'>02</span><span class='comma token'>,</span><span class='integer val'>14</span><span class='rparen token'>)</span>
+  <span class='birthdate identifier id'>birthdate</span><span class='dot token'>.</span><span class='age_years identifier id'>age_years</span><span class='lparen token'>(</span><span class='valentines identifier id'>valentines</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>27</span>  <span class='comment val'># before the birthday</span>
 
-		
-			<div id="weekend--method" class="method-detail ">
-				<a name="M000049"></a>
+  <span class='halloween identifier id'>halloween</span> <span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>2008</span><span class='comma token'>,</span><span class='integer val'>10</span><span class='comma token'>,</span><span class='integer val'>31</span><span class='rparen token'>)</span>
+  <span class='birthdate identifier id'>birthdate</span><span class='dot token'>.</span><span class='age_years identifier id'>age_years</span><span class='lparen token'>(</span><span class='halloween identifier id'>halloween</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>28</span>   <span class='comment val'># on the birthday</span>
 
-				<div class="method-heading">
-				
-					<span class="method-name">weekend?</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
+  <span class='new_years_eve identifier id'>new_years_eve</span> <span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='integer val'>2008</span><span class='comma token'>,</span><span class='integer val'>12</span><span class='comma token'>,</span><span class='integer val'>31</span><span class='rparen token'>)</span>
+  <span class='birthdate identifier id'>birthdate</span><span class='dot token'>.</span><span class='age_years identifier id'>age_years</span><span class='lparen token'>(</span><span class='new_years_eve identifier id'>new_years_eve</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>28</span>  <span class='comment val'># after the birthday</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the age in years for a given date.
 
-				<div class="method-description">
-					
-					<p>
-Return true if the date is a weekend: Sat, Sun
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78
+79
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/date.rb', line 76</span>
+
+<span class='def def kw'>def</span> <span class='age_years identifier id'>age_years</span><span class='lparen token'>(</span><span class='compare_date identifier id'>compare_date</span><span class='assign token'>=</span><span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='today identifier id'>today</span><span class='rparen token'>)</span>
+  <span class='lparen token'>(</span><span class='compare_date identifier id'>compare_date</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span> <span class='Date constant id'>Date</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;compare_date must be a date&quot;</span>
+  <span class='age identifier id'>age</span><span class='assign token'>=</span><span class='compare_date identifier id'>compare_date</span><span class='dot token'>.</span><span class='year identifier id'>year</span><span class='minus op'>-</span><span class='year identifier id'>year</span>
+  <span class='compare_month identifier id'>compare_month</span> <span class='assign token'>=</span> <span class='compare_date identifier id'>compare_date</span><span class='dot token'>.</span><span class='month identifier id'>month</span>
+  <span class='age identifier id'>age</span><span class='opasgn op'>-=</span><span class='integer val'>1</span> <span class='if if_mod kw'>if</span> <span class='compare_month identifier id'>compare_month</span> <span class='lt op'>&lt;</span> <span class='month identifier id'>month</span> <span class='or or kw'>or</span> <span class='lparen token'>(</span><span class='compare_month identifier id'>compare_month</span><span class='eq op'>==</span><span class='month identifier id'>month</span> <span class='and and kw'>and</span> <span class='compare_date identifier id'>compare_date</span><span class='dot token'>.</span><span class='day identifier id'>day</span> <span class='lt op'>&lt;</span> <span class='day identifier id'>day</span><span class='rparen token'>)</span>
+  <span class='age identifier id'>age</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="to_sql-instance_method">
+  
+    - (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>to_sql</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Date in a sql format: YYYY-MM-DD
 </p>
-<h2>Example</h2>
-<pre>
-  d = Date.parse('2008-01-05')
-  d.wday =&gt; 6
-  d.weekend? =&gt; true
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='d identifier id'>d</span><span class='assign token'>=</span><span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='today identifier id'>today</span>
+  <span class='d identifier id'>d</span><span class='dot token'>.</span><span class='to_sql identifier id'>to_sql</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;2007-12-31&quot;</span>
 </pre>
-					
-
-					
-					<div class="method-source-code"
-						id="weekend--source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/date.rb, line 28</span>
-28:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">weekend?</span>
-29:     <span class="ruby-identifier">wday</span><span class="ruby-operator">==</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">wday</span><span class="ruby-operator">==</span><span class="ruby-value">6</span>
-30:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-		</div>
-	
-
-	</div>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+date in a sql format: YYYY-MM-DD
 
 
-	<div id="rdoc-debugging-section-dump" class="debugging-section">
-	
-		<p>Disabled; run with --debug to generate this.</p>
-	
-	</div>
+      
+    </li>
+  
+</ul>
 
-	<div id="validator-badges">
-		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-			Rdoc Generator</a> 1.1.6</small>.</p>
-	</div>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-</body>
+
+51
+52
+53</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/date.rb', line 51</span>
+
+<span class='def def kw'>def</span> <span class='to_sql identifier id'>to_sql</span>
+  <span class='return return kw'>return</span> <span class='sprintf identifier id'>sprintf</span><span class='lparen token'>(</span><span class='string val'>&quot;%04d-%02d-%02d&quot;</span><span class='comma token'>,</span><span class='year identifier id'>year</span><span class='comma token'>,</span><span class='month identifier id'>month</span><span class='comma token'>,</span><span class='mday identifier id'>mday</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="weekday?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>weekday?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+True if the date is a weekday: Mon, Tue, Wed, Thu, Fri
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='d identifier id'>d</span> <span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='string val'>'2008-01-01'</span><span class='rparen token'>)</span>
+  <span class='d identifier id'>d</span><span class='dot token'>.</span><span class='wday identifier id'>wday</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>2</span>
+  <span class='d identifier id'>d</span><span class='dot token'>.</span><span class='weekday? fid id'>weekday?</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+true if the date is a weekday: Mon, Tue, Wed, Thu, Fri
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17
+18</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/date.rb', line 16</span>
+
+<span class='def def kw'>def</span> <span class='weekday? fid id'>weekday?</span>
+  <span class='wday identifier id'>wday</span><span class='gt op'>&gt;</span><span class='integer val'>0</span> <span class='and and kw'>and</span> <span class='wday identifier id'>wday</span><span class='lt op'>&lt;</span><span class='integer val'>6</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="weekend?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>weekend?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+True if the date is a weekend: Sat, Sun
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='d identifier id'>d</span> <span class='assign token'>=</span> <span class='Date constant id'>Date</span><span class='dot token'>.</span><span class='parse identifier id'>parse</span><span class='lparen token'>(</span><span class='string val'>'2008-01-05'</span><span class='rparen token'>)</span>
+  <span class='d identifier id'>d</span><span class='dot token'>.</span><span class='wday identifier id'>wday</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>6</span>
+  <span class='d identifier id'>d</span><span class='dot token'>.</span><span class='weekend? fid id'>weekend?</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+true if the date is a weekend: Sat, Sun
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/date.rb', line 28</span>
+
+<span class='def def kw'>def</span> <span class='weekend? fid id'>weekend?</span>
+  <span class='wday identifier id'>wday</span><span class='eq op'>==</span><span class='integer val'>0</span> <span class='or or kw'>or</span> <span class='wday identifier id'>wday</span><span class='eq op'>==</span><span class='integer val'>6</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Sat Mar 20 17:19:02 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
+  0.5.3 (ruby-1.8.7).
+</div>
+
+  </body>
 </html>
-

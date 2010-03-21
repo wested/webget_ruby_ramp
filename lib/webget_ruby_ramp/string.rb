@@ -4,44 +4,56 @@
 
 class String
 
-  ACCENTS =  Hash[*'à a á a â a ã a ä a å a ā a ă a æ ae ď d đ d ç c ć c č c ĉ c ċ c è e é e ê e ë e ē e ę e ě e ĕ e ė e ƒ f ĝ g ğ g ġ g ģ g ĥ h ħ h ì i ì i í i î i ï i ī i ĩ i ĭ i į j ı j ĳ j ĵ j ķ k ĸ k ł l ľ l ĺ l ļ l ŀ l
- ñ n ń n ň n ņ n ŉ n ŋ n ò o ó o ô o õ o ö o ø o ō o ő o ŏ o ŏ o œ oek ą q ŕ r ř r ŗ r ś s š s ş s ŝ s ș s ť t ţ t ŧ t ț t ù u ú u û u ü u ū u ů u ű u ŭ u ũ u ų u ŵ w ý y ÿ y ŷ y ž z ż z ź z'.split]
 
-
- # Return the string with words capitalized
+ # @return [String] self, with words capitalized
+ # @example 
+ #   "foo goo hoo".capitalize_words
+ #    => "Foo Goo Hoo"
 
  def capitalize_words
   split(/\b/).map{|word| word.capitalize }.join
  end
 
 
- # Return an array that is the string split into words, i.e. split(\W*\b\*)
+ # @return [Array<String>] an array that is the string split into words, i.e. split(\W*\b\*)
+ # @example
+ #   "foo goo hoo".words
+ #   => ["foo", "goo", "hoo"]
 
  def words
   split(/\W*\b\W*/)
  end
 
 
- # Return an array that is the string split at tabs, i.e. split(/\t/)
+ # @return [Array<String>] an array that is the string split at tabs, i.e. split(/\t/)
+ # @example
+ #   "foo\tgoo\thoo".split_tab
+ #   => ["foo", "goo", "hoo"]
 
  def split_tab
   split(/\t/)
  end
 
 
- # Return an array that is the string split at newlines, then tabs.
  # This is useful to split a TSV (Tab Separated Values) string
  # into an array of rows, and each row into an array of fields.
+ #
+ # @return [Array<String>] an array that is the string split at newlines, then tabs.
+ #
+ # @example
+ #   "foo\tgoo\thoo\n"ioo\tjoo\tkoo\nloo\tmoo\tnoo".split_tsv
+ #   => [["foo", "goo", "hoo"], ["ioo", "joo", "koo"], ["loo", "moo", "noo"]]
 
  def split_tsv
    split(/\n/).map{|line| line.split(/\t/)}
  end
 
 
- # Return the string in lowercase, with any non-word-characters
- # replaced with single underscores (aka low dashes).
+ # @return [String] self in lowercase,
+ #    with any non-word-characters
+ #    replaced with single underscores (aka low dashes).
  #
- # ==Example
+ # @example
  #   'Foo Goo Hoo' => 'foo_goo_hoo'
  #   'Foo***Goo***Hoo' => 'foo_goo_hoo'
 
@@ -50,9 +62,9 @@ class String
  end
 
 
- # Return the string as an XML id, which is the same as #lowcase
+ # @return [String] the string as an XML id, which is the same as #lowcase
  #
- # ==Example
+ # @example
  #   "Foo Hoo Goo" => 'foo_goo_hoo'
  #   "Foo***Goo***Hoo" => 'foo_goo_hoo'
 
@@ -63,6 +75,8 @@ class String
  # Ruby String#to_class method to convert from a String to a class
  #
  # From Mirage at http://infovore.org/archives/2006/08/02/getting-a-class-object-in-ruby-from-a-string-containing-that-classes-name/
+ #
+ # @return [Class] the string converted to a class 
 
  def to_class
   split('::').inject(Kernel) {|scope, const_name| scope.const_get(const_name)}
@@ -71,12 +85,14 @@ class String
 
  # Increment the rightmost natural number 
  #
- # ==Example
+ # @return [String] the string with an incremented rightmost number
+ #
+ # @example
  #   'foo5bar'.increment => 'foo4bar'
  #   'foo5bar'.increment(3) => 'foo8bar'
  #   'foo9bar'.increment => 'foo10bar'
  #
- # - see String#decrement
+ # @see String#decrement
 
  def increment(step=1)
   self=~/\d+/ ? $`+($&.to_i+step).to_s+$' : self
@@ -85,21 +101,23 @@ class String
 
  # Decrement the rightmost natural number
  # 
- # ==Example
+ # @return [String] the string with a decremented rightmost number
+ #
+ # @example
  #   'foo5bar'.decrement => 'foo4bar'
  #   'foo5bar'.decrement(3) => 'foo2bar'
  #   'foo10bar'.derement => 'foo9bar'
  #
- # - see String#increment
+ # @see String#increment
 
  def decrement(step=1)
   self=~/\d+/ ? $`+($&.to_i-step).to_s+$' : self
  end
 
 
- # Return the previous character, with a changed flag and carry flag
+ # @return [String] the previous character, with a changed flag and carry flag
  #
- # ==Examples
+ # @example
  #   String.prev_char('n') => 'm', true, false   # change 
  #   String.prev_char('a') => 'z', true, true    # change & carry
  #   String.prev_char('6') => '5', true, false   # change
@@ -122,16 +140,16 @@ class String
   end
  end
 
- # Return the previous string
+ # @return [String] the previous string
  #
- #  c.f. String#next
+ # @see String#next
  #
- # ==Examples
+ # @example
  #   '888'.prev => '887'
  #   'n'.prev => 'm'
  #   'N'.prev => 'M'
  #
- # ==Examples with carry
+ # @example with carry
  #   '880'.prev => '879'
  #   'nna'.prev => 'nmz'
  #   'NNA'.prev => 'NMZ'
@@ -143,6 +161,8 @@ class String
 
 
  # Do String#prev in place
+ #
+ # @return [String] self
 
  def prev!
   return self if length==0
@@ -156,6 +176,7 @@ class String
    index-=1
    return nil if index<0
   end
+  return self
  end
 
  alias pred  prev   # String#pred : predecessor :: String#succ : successor
@@ -177,15 +198,24 @@ class String
  #
  ##
  
- # Return a random length suitable for a "lorem ipsum" string.
+ # @return [Integer[ a random length suitable for a "lorem ipsum" string.
  #
  # This method uses 1+rand(10)
+ #
+ # @example
+ #    String.lorem_length => 3
+ #    String.lorem_length => 9
+ #    String.lorem_length => 5
 
  def self.lorem_length
   1+rand(10)
  end
 
- # Return a random string suitable for "lorem ipsum" text.
+ # @return [String] a random string suitable for "lorem ipsum" text.
+ #
+ # @example
+ #   String.lorem => "galkjadscals"
+ #   String.lorem(4) => "qtgf"
  #
  # This method chooses from lowercase letters a-z.
  #

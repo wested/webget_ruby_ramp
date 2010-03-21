@@ -28,7 +28,7 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="lib-webget_ruby_ramp-kernel_rb.html">lib/webget_ruby_ramp/kernel.rb</a></td>
-            <td class='right_align'><tt>53</tt></td>
+            <td class='right_align'><tt>85</tt></td>
             <td class='right_align'><tt>19</tt></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
           <div class="percent_graph">
@@ -153,103 +153,103 @@
           
           
           <tr class="inferred">
-            <td><pre><a name="line17">17</a> </pre></td>
+            <td><pre><a name="line17">17</a>   #</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line18">18</a>   # These two methods are always equal:</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line19">19</a>   #   caller_method_name(0) === my_method_name</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line20">20</a>   #</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line21">21</a>   # @example</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line22">22</a>   #   def foo</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line23">23</a>   #     puts my_method_name</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line24">24</a>   #   end</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line25">25</a>   #   foo</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line26">26</a>   #   =&gt; &quot;foo&quot;</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line27">27</a>   #</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line28">28</a>   # @return [String] my method name</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line29">29</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line18">18</a>   def my_method_name</pre></td>
+            <td><pre><a name="line30">30</a>   def my_method_name</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line19">19</a>     caller[0] =~ /`([^']*)'/ and $1</pre></td>
+            <td><pre><a name="line31">31</a>     caller[0] =~ /`([^']*)'/ and $1</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line20">20</a>   end</pre></td>
+            <td><pre><a name="line32">32</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line21">21</a> </pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line22">22</a> </pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line23">23</a>   # See:</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line24">24</a>   # - http://www.ruby-forum.com/topic/75258</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line25">25</a>   # - In 1.9 (Ruby CVS HEAD) there is #__method__ and #__callee__</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line26">26</a>   # - http://eigenclass.org/hiki.rb?Changes+in+Ruby+1.9#l90</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line27">27</a>   #-</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line28">28</a>   # Make this fast because its often doing logging &amp; reporting.</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line29">29</a>   # Inline this and use $1 because it's empirically faster than /1</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line30">30</a> </pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line31">31</a>   def caller_method_name(caller_index=0)</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line32">32</a>     caller[caller_index] =~ /`([^']*)'/ and $1</pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line33">33</a>   end</pre></td>
+            <td><pre><a name="line33">33</a> </pre></td>
           </tr>
         
           
@@ -261,121 +261,313 @@
           
           
           <tr class="inferred">
-            <td><pre><a name="line35">35</a>   </pre></td>
+            <td><pre><a name="line35">35</a>   # See:</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line36">36</a>   # Pretty print to a string.</pre></td>
+            <td><pre><a name="line36">36</a>   # - http://www.ruby-forum.com/topic/75258</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line37">37</a>   # </pre></td>
+            <td><pre><a name="line37">37</a>   # - In 1.9 (Ruby CVS HEAD) there is #__method__ and #__callee__</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line38">38</a>   # Created by Graeme Mathieson.</pre></td>
+            <td><pre><a name="line38">38</a>   # - http://eigenclass.org/hiki.rb?Changes+in+Ruby+1.9#l90</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line39">39</a>   #</pre></td>
+            <td><pre><a name="line39">39</a>   #-</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line40">40</a>   # See http://rha7dotcom.blogspot.com/2008/07/ruby-and-rails-how-to-get-pp-pretty.html</pre></td>
+            <td><pre><a name="line40">40</a>   # Make this fast because its often doing logging &amp; reporting.</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line41">41</a> </pre></td>
+            <td><pre><a name="line41">41</a>   # Inline this and use $1 because it's empirically faster than /1</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line42">42</a>   #</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line43">43</a>   # These two methods are always equal:</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line44">44</a>   #   caller_method_name(0) === my_method_name</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line45">45</a>   #</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line46">46</a>   # @example</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line47">47</a>   #   def foo</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line48">48</a>   #     puts caller_method_name(0)</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line49">49</a>   #     puts caller_method_name(1)</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line50">50</a>   #   end</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line51">51</a>   #   =&gt; </pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line52">52</a>   #   &quot;foo&quot;</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line53">53</a>   #   &quot;irb_binding&quot;</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line54">54</a>   #</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line55">55</a>   # @return [String] the method name of the caller at the index</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line56">56</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line42">42</a>   def pp_s(*objs)  </pre></td>
+            <td><pre><a name="line57">57</a>   def caller_method_name(caller_index=0)</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line43">43</a>     str = StringIO.new  </pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line44">44</a>     objs.each {|obj|  </pre></td>
-          </tr>
-        
-          
-          
-          <tr class="marked">
-            <td><pre><a name="line45">45</a>         PP.pp(obj, str)  </pre></td>
+            <td><pre><a name="line58">58</a>     caller[caller_index] =~ /`([^']*)'/ and $1</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line46">46</a>       }  </pre></td>
+            <td><pre><a name="line59">59</a>   end</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line60">60</a> </pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line61">61</a>   </pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line62">62</a>   # Pretty print to a string.</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line63">63</a>   # </pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line64">64</a>   # Created by Graeme Mathieson.</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line65">65</a>   #</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line66">66</a>   # See http://rha7dotcom.blogspot.com/2008/07/ruby-and-rails-how-to-get-pp-pretty.html</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line67">67</a>   #</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line68">68</a>   # @example</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line69">69</a>   #   pp_s([&quot;foo&quot;,&quot;goo&quot;])</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line70">70</a>   #   =&gt; &quot;[\&quot;foo\&quot;, \&quot;goo\&quot;]\n&quot;</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line71">71</a>   #</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line72">72</a>   # @return [String] a pretty print string of the params</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line73">73</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line47">47</a>       str.rewind  </pre></td>
+            <td><pre><a name="line74">74</a>   def pp_s(*objs)  </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line48">48</a>       str.read  </pre></td>
-          </tr>
-        
-          
-          
-          <tr class="inferred">
-            <td><pre><a name="line49">49</a>   end  </pre></td>
+            <td><pre><a name="line75">75</a>     str = StringIO.new  </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line50">50</a>   module_function :pp_s  </pre></td>
+            <td><pre><a name="line76">76</a>     objs.each {|obj|  </pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line77">77</a>         PP.pp(obj, str)  </pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line51">51</a> </pre></td>
+            <td><pre><a name="line78">78</a>       }  </pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line79">79</a>       str.rewind  </pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line80">80</a>       str.read  </pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line52">52</a> end</pre></td>
+            <td><pre><a name="line81">81</a>   end  </pre></td>
+          </tr>
+        
+          
+          
+          <tr class="marked">
+            <td><pre><a name="line82">82</a>   module_function :pp_s  </pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line53">53</a> </pre></td>
+            <td><pre><a name="line83">83</a> </pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line84">84</a> end</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line85">85</a> </pre></td>
           </tr>
         
       </tbody>
     </table>
 
-    <p>Generated on Fri Mar 05 03:04:54 -0800 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
+    <p>Generated on Sat Mar 20 17:12:56 -0700 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
 
   </body>
 </html>

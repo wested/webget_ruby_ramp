@@ -6,15 +6,16 @@ class Object
 
   # Syntactic sugar for arrays.
   #
-  # ==Definition
+  # Definition:
   #   object.in? array === array.include? object
   #
-  # ==Example
+  # @example
   #   array=['a','b','c']
   #   object='b'
   #   object.in? array 
   #   => true
-  
+  #
+  # @return [Boolean] true iff this object is included in the array.
   def in?(array)
     array.include?(self)
   end

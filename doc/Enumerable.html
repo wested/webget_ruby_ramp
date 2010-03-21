@@ -1,1351 +1,2340 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+<title>Module: Enumerable</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
-	<title>Module: Enumerable</title>
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
-	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (E)</a> &raquo; 
+    
+    
+    <span class="title">Enumerable</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
 
-	<script src="./js/jquery.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="./js/thickbox-compressed.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="./js/quicksearch.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="./js/darkfish.js" type="text/javascript"
-		charset="utf-8"></script>
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
 
-</head>
-<body class="module">
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: Enumerable 
+  
+  
+</h1>
 
-	<div id="metadata">
-		<div id="file-metadata">
-			<div id="file-list-section" class="section">
-				<h3 class="section-header">In Files</h3>
-				<div class="section-body">
-					<ul>
-					
-						<li><a href="./lib/webget_ruby_ramp/enumerable_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="lib/webget_ruby_ramp/enumerable.rb">lib/webget_ruby_ramp/enumerable.rb</a></li>
-					
-					</ul>
-				</div>
-			</div>
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/webget_ruby_ramp/enumerable.rb</dd>
+  
+</dl>
+<div class="clear"></div>
 
-			
-		</div>
-
-		<div id="class-metadata">
-
-			<!-- Parent Class -->
-			
-
-			<!-- Namespace Contents -->
-			
-
-			<!-- Method Quickref -->
-			
-			<div id="method-list-section" class="section">
-				<h3 class="section-header">Methods</h3>
-				<ul class="link-list">
-					
-					<li><a href="#M000081">::cartesian_product</a></li>
-					
-					<li><a href="#M000072">#bisect</a></li>
-					
-					<li><a href="#M000096">#cartesian_product</a></li>
-					
-					<li><a href="#M000020">#hash_by</a></li>
-					
-					<li><a href="#M000019">#index_by</a></li>
-					
-					<li><a href="#M000077">#intersect?</a></li>
-					
-					<li><a href="#M000076">#join</a></li>
-					
-					<li><a href="#M000021">#map_id</a></li>
-					
-					<li><a href="#M000022">#map_to_a</a></li>
-					
-					<li><a href="#M000023">#map_to_f</a></li>
-					
-					<li><a href="#M000024">#map_to_i</a></li>
-					
-					<li><a href="#M000025">#map_to_s</a></li>
-					
-					<li><a href="#M000026">#map_to_sym</a></li>
-					
-					<li><a href="#M000027">#map_with_index</a></li>
-					
-					<li><a href="#M000074">#nitems_until</a></li>
-					
-					<li><a href="#M000073">#nitems_while</a></li>
-					
-					<li><a href="#M000075">#nitems_with_index</a></li>
-					
-					<li><a href="#M000097">#power_set</a></li>
-					
-					<li><a href="#M000068">#select_until</a></li>
-					
-					<li><a href="#M000045">#select_while</a></li>
-					
-					<li><a href="#M000069">#select_with_index</a></li>
-					
-					<li><a href="#M000018">#to_h</a></li>
-					
-				</ul>
-			</div>
-			
-
-			<!-- Included Modules -->
-			
-		</div>
-
-		<div id="project-metadata">
-			
-			
-			<div id="fileindex-section" class="section project-section">
-				<h3 class="section-header">Files</h3>
-				<ul>
-				
-					<li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
-				
-					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
-				
-					<li class="file"><a href="./coverage/index_html.html">index.html</a></li>
-				
-					<li class="file"><a href="./coverage/jquery-1_3_2_min_js.html">jquery-1.3.2.min.js</a></li>
-				
-					<li class="file"><a href="./coverage/jquery_tablesorter_min_js.html">jquery.tablesorter.min.js</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-array_rb_html.html">lib-webget_ruby_ramp-array_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-class_rb_html.html">lib-webget_ruby_ramp-class_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-csv_rb_html.html">lib-webget_ruby_ramp-csv_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-date_rb_html.html">lib-webget_ruby_ramp-date_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-enumerable_rb_html.html">lib-webget_ruby_ramp-enumerable_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-file_rb_html.html">lib-webget_ruby_ramp-file_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-fixnum_rb_html.html">lib-webget_ruby_ramp-fixnum_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-hash_rb_html.html">lib-webget_ruby_ramp-hash_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-integer_rb_html.html">lib-webget_ruby_ramp-integer_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-io_rb_html.html">lib-webget_ruby_ramp-io_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-kernel_rb_html.html">lib-webget_ruby_ramp-kernel_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-math_rb_html.html">lib-webget_ruby_ramp-math_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-nil_rb_html.html">lib-webget_ruby_ramp-nil_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-numeric_rb_html.html">lib-webget_ruby_ramp-numeric_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-object_rb_html.html">lib-webget_ruby_ramp-object_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-process_rb_html.html">lib-webget_ruby_ramp-process_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-string_rb_html.html">lib-webget_ruby_ramp-string_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-symbol_rb_html.html">lib-webget_ruby_ramp-symbol_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-time_rb_html.html">lib-webget_ruby_ramp-time_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-xml_rb_html.html">lib-webget_ruby_ramp-xml_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-yaml_rb_html.html">lib-webget_ruby_ramp-yaml_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp_rb_html.html">lib-webget_ruby_ramp_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/print_css.html">print.css</a></li>
-				
-					<li class="file"><a href="./coverage/rcov_js.html">rcov.js</a></li>
-				
-					<li class="file"><a href="./coverage/screen_css.html">screen.css</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
-				
-					<li class="file"><a href="./webget_ruby_ramp_gemspec.html">webget_ruby_ramp.gemspec</a></li>
-				
-					<li class="file"><a href="./webget_ruby_ramp_sha512_txt.html">webget_ruby_ramp.sha512.txt</a></li>
-				
-				</ul>
-			</div>
-			
-
-			<div id="classindex-section" class="section project-section">
-				<h3 class="section-header">Class Index
-					<span class="search-toggle"><img src="./images/find.png"
-						height="16" width="16" alt="[+]"
-						title="show/hide quicksearch" /></span></h3>
-				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-				<fieldset>
-					<legend>Quicksearch</legend>
-					<input type="text" name="quicksearch" value=""
-						class="quicksearch-field" />
-				</fieldset>
-				</form>
-
-				<ul class="link-list">
-				
-					<li><a href="./REXML.html">REXML</a></li>
-				
-					<li><a href="./REXML/Attributes.html">REXML::Attributes</a></li>
-				
-					<li><a href="./REXML/Document.html">REXML::Document</a></li>
-				
-					<li><a href="./REXML/Element.html">REXML::Element</a></li>
-				
-					<li><a href="./EnumerableTest.html">EnumerableTest</a></li>
-				
-					<li><a href="./Array.html">Array</a></li>
-				
-					<li><a href="./ArrayTest.html">ArrayTest</a></li>
-				
-					<li><a href="./CSV.html">CSV</a></li>
-				
-					<li><a href="./CSVTest.html">CSVTest</a></li>
-				
-					<li><a href="./Class.html">Class</a></li>
-				
-					<li><a href="./ClassTest.html">ClassTest</a></li>
-				
-					<li><a href="./Date.html">Date</a></li>
-				
-					<li><a href="./DateTest.html">DateTest</a></li>
-				
-					<li><a href="./Enumerable.html">Enumerable</a></li>
-				
-					<li><a href="./File.html">File</a></li>
-				
-					<li><a href="./FileTestCase.html">FileTestCase</a></li>
-				
-					<li><a href="./Fixnum.html">Fixnum</a></li>
-				
-					<li><a href="./FixnumTest.html">FixnumTest</a></li>
-				
-					<li><a href="./Hash.html">Hash</a></li>
-				
-					<li><a href="./HashTest.html">HashTest</a></li>
-				
-					<li><a href="./IO.html">IO</a></li>
-				
-					<li><a href="./IOTest.html">IOTest</a></li>
-				
-					<li><a href="./Integer.html">Integer</a></li>
-				
-					<li><a href="./IntegerTest.html">IntegerTest</a></li>
-				
-					<li><a href="./Kernel.html">Kernel</a></li>
-				
-					<li><a href="./KernelTest.html">KernelTest</a></li>
-				
-					<li><a href="./Math.html">Math</a></li>
-				
-					<li><a href="./MathTest.html">MathTest</a></li>
-				
-					<li><a href="./MockRequest.html">MockRequest</a></li>
-				
-					<li><a href="./My.html">My</a></li>
-				
-					<li><a href="./NilClass.html">NilClass</a></li>
-				
-					<li><a href="./NilTest.html">NilTest</a></li>
-				
-					<li><a href="./Numeric.html">Numeric</a></li>
-				
-					<li><a href="./NumericTest.html">NumericTest</a></li>
-				
-					<li><a href="./Object.html">Object</a></li>
-				
-					<li><a href="./ObjectTest.html">ObjectTest</a></li>
-				
-					<li><a href="./Process.html">Process</a></li>
-				
-					<li><a href="./ProcessTest.html">ProcessTest</a></li>
-				
-					<li><a href="./String.html">String</a></li>
-				
-					<li><a href="./StringTest.html">StringTest</a></li>
-				
-					<li><a href="./Symbol.html">Symbol</a></li>
-				
-					<li><a href="./SymbolTest.html">SymbolTest</a></li>
-				
-					<li><a href="./Time.html">Time</a></li>
-				
-					<li><a href="./TimeTest.html">TimeTest</a></li>
-				
-					<li><a href="./XML.html">XML</a></li>
-				
-					<li><a href="./XMLTest.html">XMLTest</a></li>
-				
-					<li><a href="./YAML.html">YAML</a></li>
-				
-					<li><a href="./YAMLTest.html">YAMLTest</a></li>
-				
-				</ul>
-				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
-			</div>
-
-			
-		</div>
-	</div>
-
-	<div id="documentation">
-		<h1 class="module">Enumerable</h1>
-
-		<div id="description">
-			<p>
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
 Enumberable extensions
 </p>
 
-		</div>
 
-		<!-- Constants -->
-		
+  </div>
+</div>
+<div class="tags">
+  
+</div>
 
-		<!-- Attributes -->
-		
 
-		<!-- Methods -->
-		
-		<div id="public-class-method-details" class="method-section section">
-			<h3 class="section-header">Public Class Methods</h3>
+  <h2>Class Method Summary</h2>
 
-		
-			<div id="cartesian-product-method" class="method-detail ">
-				<a name="M000081"></a>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cartesian_product-class_method" title="cartesian_product (class method)">+ (Array) <strong>cartesian_product</strong>(*enums) </a>
+    
 
-				<div class="method-heading">
-				
-					<span class="method-name">cartesian_product</span><span
-						class="method-args">(*enums)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
+    
+  </span>
+  
+  
+  
+  
+  
 
-				<div class="method-description">
-					
-					<p>
-Return the cartesian product of the enumerations. <a
-href="http://en.wikipedia.org/wiki/Cartesian_product">en.wikipedia.org/wiki/Cartesian_product</a>
-</p>
-<p>
-This is the fastest implementation we have found. It returns results in
-typical order.
-</p>
-<p>
-By Thomas Hafner See <a
-href="http://www.ruby-forum.com/topic/95519">www.ruby-forum.com/topic/95519</a>
-</p>
-<p>
-For our benchmarks, we also compared thesk:
-</p>
-<ul>
-<li>By William James, <a
-href="http://www.ruby-forum.com/topic/95519">www.ruby-forum.com/topic/95519</a>
+  
+    <span class="summary_desc">
+The cartesian product of the enumerations.
 
+</span>
+  
 </li>
-<li>By Brian Schröäer, <a
-href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857">blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857</a>
 
+    
+  </ul>
+
+  <h2>Instance Method Summary</h2>
+
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bisect-instance_method" title="#bisect (instance method)">- (Array&lt;Array&lt;Object&gt;] an array of two arrays: the first array is the elements for which block is true, the second array is the elements for which block is false or nil.) <strong>bisect</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Array<Array<Object>] an array of two arrays: the first array is the
+elements for which block is true, the second array is the elements for
+which block is false or nil..
+
+</span>
+  
 </li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cartesian_product-instance_method" title="#cartesian_product (instance method)">- (Object) <strong>cartesian_product</strong>(*enums) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#hash_by-instance_method" title="#hash_by (instance method)">- (Hash&lt;Object,Object&gt;) <strong>hash_by</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Convert the enumerable to a hash by mapping each item to a pair [item, new
+item].
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#index_by-instance_method" title="#index_by (instance method)">- (Hash&lt;Integer,Object&gt;) <strong>index_by</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Convert the enumerable to a hash by mapping each item to a pair [index
+,item].
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#intersect%3F-instance_method" title="#intersect? (instance method)">- (Boolean) <strong>intersect?</strong>(enum) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+True if this <em>enum</em> intersects another <em>enum</em>.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#join-instance_method" title="#join (instance method)">- (String) <strong>join</strong>(*op) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Shortcut to Array#join to concatenate the items into a string.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#map_id-instance_method" title="#map_id (instance method)">- (Enumerable&lt;Object&gt;) <strong>map_id</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Map each item => item.id.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#map_to_a-instance_method" title="#map_to_a (instance method)">- (Enumberable&lt;Array&lt;Object&gt;&gt;) <strong>map_to_a</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Map each item => item.to_a.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#map_to_f-instance_method" title="#map_to_f (instance method)">- (Enumerable&lt;Float&gt;) <strong>map_to_f</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Map each item => item.to_f.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#map_to_i-instance_method" title="#map_to_i (instance method)">- (Enumerable&lt;Integer&gt;) <strong>map_to_i</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Map each item => item.to_i.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#map_to_s-instance_method" title="#map_to_s (instance method)">- (Enumerable&lt;String&gt;) <strong>map_to_s</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Map each item => item.to_s.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#map_to_sym-instance_method" title="#map_to_sym (instance method)">- (Enumerable&lt;Symbol&gt;) <strong>map_to_sym</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Map each item => item.to_sym.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#map_with_index-instance_method" title="#map_with_index (instance method)">- (Enumerable&lt;Object&gt;) <strong>map_with_index</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Map each item and its index => a new output.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#nitems_until-instance_method" title="#nitems_until (instance method)">- (Integer) <strong>nitems_until</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+The number of leading elements for which block is false.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#nitems_while-instance_method" title="#nitems_while (instance method)">- (Integer) <strong>nitems_while</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+The number of leading elements for which block is not false or nil.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#nitems_with_index-instance_method" title="#nitems_with_index (instance method)">- (Integer) <strong>nitems_with_index</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Calls block with two arguments, the item and its index, for each item in
+enum.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#power_set-instance_method" title="#power_set (instance method)">- (Array&lt;Array&lt;Object&gt;&gt;) <strong>power_set</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Calculate the power set.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#select_until-instance_method" title="#select_until (instance method)">- (Array&lt;Object&gt;) <strong>select_until</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+The leading elements for which block is false or nil.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#select_while-instance_method" title="#select_while (instance method)">- (Array&lt;Object&gt;) <strong>select_while</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+The leading elements for which block is not false or nil.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#select_with_index-instance_method" title="#select_with_index (instance method)">- (Array&lt;Object&gt; the leading elements for which block is not false or nil.) <strong>select_with_index</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Calls block with two arguments, the item and its index, for each item in
+enum.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_h-instance_method" title="#to_h (instance method)">- (Hash&lt;Object,Object&gt;) <strong>to_h</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Convert an enumerable to a hash.
+
+</span>
+  
+</li>
+
+    
+  </ul>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="cartesian_product-class_method">
+  
+    + (<tt><a href="Array.html" title="Array (class)">Array</a></tt>) <strong>cartesian_product</strong>(*enums) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The cartesian product of the enumerations.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Array.html" title="Array (class)">Array</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the cartesian product of the enumerations.
+
+
+      
+    </li>
+  
 </ul>
-					
 
-					
-					<div class="method-source-code"
-						id="cartesian-product-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 354</span>
-354:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">cartesian_product</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">enums</span>)
-355:     <span class="ruby-identifier">result</span> = [[]]
-356:     <span class="ruby-keyword kw">while</span> [] <span class="ruby-operator">!=</span> <span class="ruby-identifier">enums</span>
-357:       <span class="ruby-identifier">t</span>, <span class="ruby-identifier">result</span> = <span class="ruby-identifier">result</span>, []
-358:       <span class="ruby-identifier">b</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">enums</span> = <span class="ruby-identifier">enums</span>
-359:       <span class="ruby-identifier">t</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span>
-360:         <span class="ruby-identifier">b</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
-361:           <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">a</span> <span class="ruby-operator">+</span> [<span class="ruby-identifier">n</span>]
-362:         <span class="ruby-keyword kw">end</span>
-363:       <span class="ruby-keyword kw">end</span>
-364:     <span class="ruby-keyword kw">end</span>
-365:     <span class="ruby-identifier">result</span>
-366:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="http://en.wikipedia.org/wiki/Cartesian_product" title="This is the fastest implementation we have found. It returns results in typical order.">This is the fastest implementation we have found. It returns results in typical order.</a></li>
+    
+      <li><a href="http://www.ruby-forum.com/topic/95519" title="For our benchmarks, we also compared these: - By William James, http://www.ruby-forum.com/topic/95519 - By Brian Schr\303\266\303\244er, http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857">For our benchmarks, we also compared these: - By William James, http://www.ruby-forum.com/topic/95519 - By Brian Schröäer, http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857</a></li>
+    
+  </ul>
+<h3>Author:</h3>
+<ul class="author">
+  
+    <li>
+      
+      
+      
+      
+        
+        
+Thomas Hafner
 
-				
-			</div>
 
-		
-		</div>
-	
-		<div id="public-instance-method-details" class="method-section section">
-			<h3 class="section-header">Public Instance Methods</h3>
+      
+    </li>
+  
+</ul>
 
-		
-			<div id="bisect-method" class="method-detail ">
-				<a name="M000072"></a>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-				<div class="method-heading">
-				
-					<span class="method-name">bisect</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
 
-				<div class="method-description">
-					
-					<p>
-enum.bisect {|obj| block} => array of positives, array of negatives Returns
-two arrays: the first contains the elements for which block is true, the
-second contains the elements for which block is false or nil.
-</p>
-					
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 406</span>
 
-					
-					<div class="method-source-code"
-						id="bisect-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 253</span>
-253:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bisect</span>
-254:     <span class="ruby-identifier">accept</span>=[]
-255:     <span class="ruby-identifier">reject</span>=[]
-256:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> 
-257:      <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">item</span>)
-258:       <span class="ruby-identifier">accept</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">item</span>
-259:      <span class="ruby-keyword kw">else</span>
-260:       <span class="ruby-identifier">reject</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">item</span>
-261:      <span class="ruby-keyword kw">end</span>
-262:     }
-263:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">accept</span>,<span class="ruby-identifier">reject</span>
-264:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="cartesian-product-method" class="method-detail ">
-				<a name="M000096"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">cartesian_product</span><span
-						class="method-args">(*enums)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="cartesian-product-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 368</span>
-368:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cartesian_product</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">enums</span>)
-369:     <span class="ruby-constant">Enumerable</span>.<span class="ruby-identifier">cartesian_product</span>(<span class="ruby-keyword kw">self</span>,<span class="ruby-operator">*</span><span class="ruby-identifier">enums</span>)
-370:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="hash-by-method" class="method-detail ">
-				<a name="M000020"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">hash_by</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Convert the enumerable to a hash by mapping each item to a key,value pair.
-</p>
-<h2>Example</h2>
-<pre>
-  strings = [&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;]
-  strings.hash_by{|a| [a.size, a.upcase]}
-  =&gt; {3 =&gt; &quot;RED&quot;, 4 =&gt; &quot;BLUE&quot;, 5 =&gt; &quot;GREEN&quot;}
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='cartesian_product identifier id'>cartesian_product</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='enums identifier id'>enums</span><span class='rparen token'>)</span>
+  <span class='result identifier id'>result</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+  <span class='while while kw'>while</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span> <span class='neq op'>!=</span> <span class='enums identifier id'>enums</span>
+    <span class='t identifier id'>t</span><span class='comma token'>,</span> <span class='result identifier id'>result</span> <span class='assign token'>=</span> <span class='result identifier id'>result</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+    <span class='b identifier id'>b</span><span class='comma token'>,</span> <span class='mult op'>*</span><span class='enums identifier id'>enums</span> <span class='assign token'>=</span> <span class='enums identifier id'>enums</span>
+    <span class='t identifier id'>t</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='a identifier id'>a</span><span class='bitor op'>|</span>
+      <span class='b identifier id'>b</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='n identifier id'>n</span><span class='bitor op'>|</span>
+        <span class='result identifier id'>result</span> <span class='lshft op'>&lt;&lt;</span> <span class='a identifier id'>a</span> <span class='plus op'>+</span> <span class='lbrack token'>[</span><span class='n identifier id'>n</span><span class='rbrack token'>]</span>
+      <span class='end end kw'>end</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+  <span class='result identifier id'>result</span>
+<span class='end end kw'>end</span>
 </pre>
-<p>
-Compare <a href="Enumerable.html#M000019">index_by</a>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="bisect-instance_method">
+  
+    - (<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;] an array of two arrays: the first array is the elements for which block is true</tt>, <tt>the second array is the elements for which block is false or nil.</tt>) <strong>bisect</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Array<Array<Object>] an array of two arrays: the first array is the
+elements for which block is true, the second array is the elements for
+which block is false or nil.
 </p>
-					
 
-					
-					<div class="method-source-code"
-						id="hash-by-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 74</span>
-74:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hash_by</span>
-75:     <span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">item</span>)}.<span class="ruby-identifier">to_h</span>
-76:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
-
-		
-			<div id="index-by-method" class="method-detail ">
-				<a name="M000019"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">index_by</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Convert the enumerable to a hash by mapping each item to a key,item pair.
-</p>
-<h2>Example</h2>
-<pre>
-  strings = [&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;]
-  strings.index_by{|a| a.size]}
-  =&gt; {3 =&gt; &quot;red&quot;, 4 =&gt; &quot;blue&quot;, 5 =&gt; &quot;green&quot;}
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='enum identifier id'>enum</span><span class='dot token'>.</span><span class='bisect identifier id'>bisect</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='obj identifier id'>obj</span><span class='bitor op'>|</span> <span class='block identifier id'>block</span><span class='rbrace token'>}</span>
+  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='array identifier id'>array</span> <span class='of identifier id'>of</span> <span class='positives identifier id'>positives</span><span class='comma token'>,</span> <span class='array identifier id'>array</span> <span class='of identifier id'>of</span> <span class='negatives identifier id'>negatives</span>
 </pre>
-<p>
-Rails has this method.
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;] an array of two arrays: the first array is the elements for which block is true</tt>, <tt>the second array is the elements for which block is false or nil.</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+Array<Array<Object>] an array of two arrays: the first array is the
+elements for which block is true, the second array is the elements for
+which block is false or nil.
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 286</span>
+
+<span class='def def kw'>def</span> <span class='bisect identifier id'>bisect</span>
+  <span class='accept identifier id'>accept</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='reject identifier id'>reject</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> 
+   <span class='if if kw'>if</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span>
+    <span class='accept identifier id'>accept</span> <span class='lshft op'>&lt;&lt;</span> <span class='item identifier id'>item</span>
+   <span class='else else kw'>else</span>
+    <span class='reject identifier id'>reject</span> <span class='lshft op'>&lt;&lt;</span> <span class='item identifier id'>item</span>
+   <span class='end end kw'>end</span>
+  <span class='rbrace token'>}</span>
+  <span class='return return kw'>return</span> <span class='accept identifier id'>accept</span><span class='comma token'>,</span><span class='reject identifier id'>reject</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="cartesian_product-instance_method">
+  
+    - (<tt><a href="Object.html" title="Object (class)">Object</a></tt>) <strong>cartesian_product</strong>(*enums) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+421
+422
+423</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 421</span>
+
+<span class='def def kw'>def</span> <span class='cartesian_product identifier id'>cartesian_product</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='enums identifier id'>enums</span><span class='rparen token'>)</span>
+  <span class='Enumerable constant id'>Enumerable</span><span class='dot token'>.</span><span class='cartesian_product identifier id'>cartesian_product</span><span class='lparen token'>(</span><span class='self self kw'>self</span><span class='comma token'>,</span><span class='mult op'>*</span><span class='enums identifier id'>enums</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="hash_by-instance_method">
+  
+    - (<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="Object.html" title="Object (class)">Object</a>,<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>) <strong>hash_by</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Convert the enumerable to a hash by mapping each item to a pair [item, new
+item]
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='strings identifier id'>strings</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='string val'>&quot;red&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;blue&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;green&quot;</span><span class='rbrack token'>]</span>
+  <span class='strings identifier id'>strings</span><span class='dot token'>.</span><span class='hash_by identifier id'>hash_by</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='a identifier id'>a</span><span class='bitor op'>|</span> <span class='lbrack token'>[</span><span class='a identifier id'>a</span><span class='dot token'>.</span><span class='size identifier id'>size</span><span class='comma token'>,</span> <span class='a identifier id'>a</span><span class='dot token'>.</span><span class='upcase identifier id'>upcase</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span>
+  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='integer val'>3</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;RED&quot;</span><span class='comma token'>,</span> <span class='integer val'>4</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;BLUE&quot;</span><span class='comma token'>,</span> <span class='integer val'>5</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;GREEN&quot;</span><span class='rbrace token'>}</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="Object.html" title="Object (class)">Object</a>,<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a hash of the enumerable&#8217;s items
+
+
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="#index_by-instance_method" title="Enumerable#index_by (method)">#index_by</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 80</span>
+
+<span class='def def kw'>def</span> <span class='hash_by identifier id'>hash_by</span>
+  <span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span><span class='rbrace token'>}</span><span class='dot token'>.</span><span class='to_h identifier id'>to_h</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="index_by-instance_method">
+  
+    - (<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="Integer.html" title="Integer (class)">Integer</a>,<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>) <strong>index_by</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Convert the enumerable to a hash by mapping each item to a pair [index
+,item]
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='strings identifier id'>strings</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='string val'>&quot;red&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;blue&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;green&quot;</span><span class='rbrack token'>]</span>
+  <span class='strings identifier id'>strings</span><span class='dot token'>.</span><span class='index_by identifier id'>index_by</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='a identifier id'>a</span><span class='bitor op'>|</span> <span class='a identifier id'>a</span><span class='dot token'>.</span><span class='size identifier id'>size</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span>
+  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='integer val'>3</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;red&quot;</span><span class='comma token'>,</span> <span class='integer val'>4</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;blue&quot;</span><span class='comma token'>,</span> <span class='integer val'>5</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;green&quot;</span><span class='rbrace token'>}</span>
+
+<span class='Rails constant id'>Rails</span> <span class='has identifier id'>has</span> <span class='this identifier id'>this</span> <span class='method identifier id'>method</span><span class='dot token'>.</span>
+
+<span class='From constant id'>From</span> <span class='http identifier id'>http</span><span class='symbol val'>:/</span><span class='regexp val'>/stackoverflow.com/</span><span class='questions identifier id'>questions</span><span class='div op'>/</span><span class='integer val'>412771</span><span class='div op'>/</span><span class='cleanest identifier id'>cleanest</span><span class='minus op'>-</span><span class='way identifier id'>way</span><span class='minus op'>-</span><span class='to identifier id'>to</span><span class='minus op'>-</span><span class='create identifier id'>create</span><span class='minus op'>-</span><span class='a identifier id'>a</span><span class='minus op'>-</span><span class='hash identifier id'>hash</span><span class='minus op'>-</span><span class='from identifier id'>from</span><span class='minus op'>-</span><span class='an identifier id'>an</span><span class='minus op'>-</span><span class='array identifier id'>array</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="Integer.html" title="Integer (class)">Integer</a>,<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a hash of the enumerable&#8217;s items
+
+
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="#hash_by-instance_method" title="Enumerable#hash_by (method)">#hash_by</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 64</span>
+
+<span class='def def kw'>def</span> <span class='index_by identifier id'>index_by</span>
+  <span class='inject identifier id'>inject</span><span class='lparen token'>(</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='hash identifier id'>hash</span><span class='comma token'>,</span> <span class='elem identifier id'>elem</span><span class='bitor op'>|</span> <span class='hash identifier id'>hash</span><span class='dot token'>.</span><span class='merge! fid id'>merge!</span><span class='lparen token'>(</span><span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='elem identifier id'>elem</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='elem identifier id'>elem</span><span class='rparen token'>)</span> <span class='rbrace token'>}</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="intersect?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>intersect?</strong>(enum) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+True if this <em>enum</em> intersects another <em>enum</em>.
 </p>
 <p>
-From <a
-href="http://stackoverflow.com/questions/412771/cleanest-way-to-create-a-hash-from-an-array">stackoverflow.com/questions/412771/cleanest-way-to-create-a-hash-from-an-array</a>
-</p>
-<p>
-Compare <a href="Enumerable.html#M000020">hash_by</a>
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="index-by-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 60</span>
-60:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">index_by</span>
-61:     <span class="ruby-identifier">inject</span>({}) {<span class="ruby-operator">|</span><span class="ruby-identifier">hash</span>, <span class="ruby-identifier">elem</span><span class="ruby-operator">|</span> <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">elem</span>) =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">elem</span>) }
-62:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="intersect--method" class="method-detail ">
-				<a name="M000077"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">intersect?</span><span
-						class="method-args">(enum)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Returns true if this <em>enum</em> intersects another <em>enum</em>.
-</p>
-<p>
-@nb This implementation uses to_a and array intersection. A developer may
-want to optimize this implementation for other classes, such as detecting
+This implementation uses #to_a and array intersection. A developer may want
+to optimize this implementation for other classes, such as detecting
 whether a range intersects another range simply by comparing the
 ranges&#8217; min/max values.
 </p>
-<h2>Examples</h2>
-<pre>
-  ['a','b','c'].intersect?(['c','d','e'] =&gt; true
-  ['a','b','c'].intersect?(['d','e','f'] =&gt; false
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='lbrack token'>[</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='intersect? fid id'>intersect?</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='string val'>'c'</span><span class='comma token'>,</span><span class='string val'>'d'</span><span class='comma token'>,</span><span class='string val'>'e'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span>
+  <span class='lbrack token'>[</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='intersect? fid id'>intersect?</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='string val'>'d'</span><span class='comma token'>,</span><span class='string val'>'e'</span><span class='comma token'>,</span><span class='string val'>'f'</span><span class='rbrack token'>]</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='false false kw'>false</span>
 </pre>
-					
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+true if this <em>enum</em> intersects another <em>enum</em>.
 
-					
-					<div class="method-source-code"
-						id="intersect--source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 336</span>
-336:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">intersect?</span>(<span class="ruby-identifier">enum</span>)
-337:     <span class="ruby-keyword kw">return</span> ((<span class="ruby-keyword kw">self</span><span class="ruby-operator">===</span><span class="ruby-identifier">enum</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>) <span class="ruby-keyword kw">or</span> ((<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">to_a</span> <span class="ruby-operator">&amp;</span> <span class="ruby-identifier">enum</span>.<span class="ruby-identifier">to_a</span>).<span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>))
-338:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+This implementation uses #to_a and array intersection. A developer may want
+to optimize this implementation for other classes, such as detecting
+whether a range intersects another range simply by comparing the
+ranges&#8217; min/max values.
 
-		
-			<div id="join-method" class="method-detail ">
-				<a name="M000076"></a>
 
-				<div class="method-heading">
-				
-					<span class="method-name">join</span><span
-						class="method-args">(*op)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
+      
+    </li>
+  
+</ul>
 
-				<div class="method-description">
-					
-					<p>
-Shortcut to <a href="Array.html#M000100">Array#join</a> to concatenate the
-items into a string
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+387
+388
+389</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 387</span>
+
+<span class='def def kw'>def</span> <span class='intersect? fid id'>intersect?</span><span class='lparen token'>(</span><span class='enum identifier id'>enum</span><span class='rparen token'>)</span>
+  <span class='return return kw'>return</span> <span class='lparen token'>(</span><span class='lparen token'>(</span><span class='self self kw'>self</span><span class='eqq op'>===</span><span class='enum identifier id'>enum</span> <span class='and and kw'>and</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='to_a identifier id'>to_a</span><span class='dot token'>.</span><span class='size identifier id'>size</span><span class='gt op'>&gt;</span><span class='integer val'>0</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='lparen token'>(</span><span class='lparen token'>(</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='to_a identifier id'>to_a</span> <span class='bitand op'>&amp;</span> <span class='enum identifier id'>enum</span><span class='dot token'>.</span><span class='to_a identifier id'>to_a</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='size identifier id'>size</span><span class='gt op'>&gt;</span><span class='integer val'>0</span><span class='rparen token'>)</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="join-instance_method">
+  
+    - (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>join</strong>(*op) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Shortcut to Array#join to concatenate the items into a string
 </p>
-					
 
-					
-					<div class="method-source-code"
-						id="join-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 313</span>
-313:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">join</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">op</span>)
-314:    <span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">join</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">op</span>)
-315:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='lbrack token'>[</span><span class='string val'>&quot;foo&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;goo&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;hoo&quot;</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='join identifier id'>join</span>
+  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;foogoohoo&quot;</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+concatenated string
 
-		
-			<div id="map-id-method" class="method-detail ">
-				<a name="M000021"></a>
 
-				<div class="method-heading">
-				
-					<span class="method-name">map_id</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
+      
+    </li>
+  
+</ul>
 
-				<div class="method-description">
-					
-					<p>
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="Array.html#join-instance_method" title="Array#join (method)">Array#join</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+364
+365
+366</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 364</span>
+
+<span class='def def kw'>def</span> <span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='op identifier id'>op</span><span class='rparen token'>)</span>
+ <span class='to_a identifier id'>to_a</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='op identifier id'>op</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="map_id-instance_method">
+  
+    - (<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>) <strong>map_id</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
 Map each item => item.id
 </p>
-<h2>Example</h2>
-<pre>
-  users = User.find(:all)
-  users.map_id =&gt; [1,2,3,4,...]
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='users identifier id'>users</span> <span class='assign token'>=</span> <span class='User constant id'>User</span><span class='dot token'>.</span><span class='find identifier id'>find</span><span class='lparen token'>(</span><span class='symbol val'>:all</span><span class='rparen token'>)</span>
+  <span class='users identifier id'>users</span><span class='dot token'>.</span><span class='map_id identifier id'>map_id</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='dot3 op'>...</span><span class='rbrack token'>]</span>
+
+<span class='A constant id'>A</span> <span class='typical identifier id'>typical</span> <span class='use identifier id'>use</span> <span class='is identifier id'>is</span> <span class='to identifier id'>to</span> <span class='convert identifier id'>convert</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='ActiveRecord constant id'>ActiveRecord</span> <span class='items identifier id'>items</span> <span class='to identifier id'>to</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='id identifier id'>id</span> <span class='items identifier id'>items</span><span class='dot token'>.</span>
+
+<span class='This constant id'>This</span> <span class='method identifier id'>method</span> <span class='is identifier id'>is</span> <span class='a identifier id'>a</span> <span class='fast identifier id'>fast</span> <span class='way identifier id'>way</span> <span class='to identifier id'>to</span> <span class='get identifier id'>get</span> <span class='the identifier id'>the</span> <span class='same identifier id'>same</span> <span class='results identifier id'>results</span> <span class='as identifier id'>as</span> <span class='items identifier id'>items</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:id</span><span class='rparen token'>)</span>
 </pre>
-<p>
-A typical use is to convert a list of ActiveRecord items to a list of id
-items.
-</p>
-<p>
-This method is a fast way to get the same results as items.map(&amp;:id)
-</p>
-					
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+an list of each item.id
 
-					
-					<div class="method-source-code"
-						id="map-id-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 97</span>
-97:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map_id</span>
-98:     <span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">id</span>}
-99:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+      
+    </li>
+  
+</ul>
 
-		
-			<div id="map-to-a-method" class="method-detail ">
-				<a name="M000022"></a>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-				<div class="method-heading">
-				
-					<span class="method-name">map_to_a</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
 
-				<div class="method-description">
-					
-					<p>
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 105</span>
+
+<span class='def def kw'>def</span> <span class='map_id identifier id'>map_id</span>
+  <span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='id identifier id'>id</span><span class='rbrace token'>}</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="map_to_a-instance_method">
+  
+    - (<tt>Enumberable&lt;<a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;&gt;</tt>) <strong>map_to_a</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
 Map each item => item.to_a
 </p>
-<h2>Example</h2>
-<pre>
-  set1 = Set.new([:a,:b,:c])
-  set2 = Set.new([:d,:e,:f])
-  set3 = Set.new([:g,:h,:i])
-  sets = [set1, set2, set3]
-  sets.map_to_a =&gt; [[:a, :b, :c], [:d, :e, :f], [:g, :h, :i]]
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='set1 identifier id'>set1</span> <span class='assign token'>=</span> <span class='Set constant id'>Set</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='symbol val'>:a</span><span class='comma token'>,</span><span class='symbol val'>:b</span><span class='comma token'>,</span><span class='symbol val'>:c</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='set2 identifier id'>set2</span> <span class='assign token'>=</span> <span class='Set constant id'>Set</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='symbol val'>:d</span><span class='comma token'>,</span><span class='symbol val'>:e</span><span class='comma token'>,</span><span class='symbol val'>:f</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='set3 identifier id'>set3</span> <span class='assign token'>=</span> <span class='Set constant id'>Set</span><span class='dot token'>.</span><span class='new identifier id'>new</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='symbol val'>:g</span><span class='comma token'>,</span><span class='symbol val'>:h</span><span class='comma token'>,</span><span class='symbol val'>:i</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='sets identifier id'>sets</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='set1 identifier id'>set1</span><span class='comma token'>,</span> <span class='set2 identifier id'>set2</span><span class='comma token'>,</span> <span class='set3 identifier id'>set3</span><span class='rbrack token'>]</span>
+  <span class='sets identifier id'>sets</span><span class='dot token'>.</span><span class='map_to_a identifier id'>map_to_a</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='symbol val'>:a</span><span class='comma token'>,</span> <span class='symbol val'>:b</span><span class='comma token'>,</span> <span class='symbol val'>:c</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='symbol val'>:d</span><span class='comma token'>,</span> <span class='symbol val'>:e</span><span class='comma token'>,</span> <span class='symbol val'>:f</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='symbol val'>:g</span><span class='comma token'>,</span> <span class='symbol val'>:h</span><span class='comma token'>,</span> <span class='symbol val'>:i</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+
+<span class='A constant id'>A</span> <span class='typical identifier id'>typical</span> <span class='use identifier id'>use</span> <span class='is identifier id'>is</span> <span class='to identifier id'>to</span> <span class='convert identifier id'>convert</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='with identifier id'>with</span> <span class='Set constant id'>Set</span> <span class='items identifier id'>items</span> <span class='to identifier id'>to</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='Array constant id'>Array</span> <span class='items identifier id'>items</span><span class='comma token'>,</span>
+<span class='so identifier id'>so</span> <span class='you identifier id'>you</span> <span class='can identifier id'>can</span> <span class='more identifier id'>more</span> <span class='easily identifier id'>easily</span> <span class='iterate identifier id'>iterate</span> <span class='over identifier id'>over</span> <span class='the identifier id'>the</span> <span class='the identifier id'>the</span> <span class='Array constant id'>Array</span> <span class='items identifier id'>items</span><span class='dot token'>.</span>
+
+<span class='See constant id'>See</span> <span class='http identifier id'>http</span><span class='symbol val'>:/</span><span class='regexp val'>/www.ruby-doc.org/</span><span class='core identifier id'>core</span><span class='div op'>/</span><span class='classes identifier id'>classes</span><span class='div op'>/</span><span class='Enumerable constant id'>Enumerable</span><span class='dot token'>.</span><span class='html identifier id'>html</span><span class='comment val'>#M003148</span>
 </pre>
-<p>
-A typical use is to convert a list with Set items to a list of <a
-href="Array.html">Array</a> items, so you can more easily iterate over the
-the <a href="Array.html">Array</a> items.
-</p>
-<p>
-See <a
-href="http://www.ruby-doc.org/core/classes/Enumerable.html#M003148">www.ruby-doc.org/core/classes/Enumerable.html#M003148</a>
-</p>
-					
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Enumberable&lt;<a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a list of each item.to_a
 
-					
-					<div class="method-source-code"
-						id="map-to-a-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 116</span>
-116:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map_to_a</span>
-117:     <span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">item</span>]}
-118:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+      
+    </li>
+  
+</ul>
 
-		
-			<div id="map-to-f-method" class="method-detail ">
-				<a name="M000023"></a>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-				<div class="method-heading">
-				
-					<span class="method-name">map_to_f</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
 
-				<div class="method-description">
-					
-					<p>
+126
+127
+128</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 126</span>
+
+<span class='def def kw'>def</span> <span class='map_to_a identifier id'>map_to_a</span>
+  <span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='lbrack token'>[</span><span class='item identifier id'>item</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="map_to_f-instance_method">
+  
+    - (<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;Float&gt;</tt>) <strong>map_to_f</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
 Map each item => item.to_f
 </p>
-<h2>Example</h2>
-<pre>
-  strings = [&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]
-  strings.map_to_f =&gt; [1.0, 2.0, 3.0]
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='strings identifier id'>strings</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='string val'>&quot;1&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;2&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;3&quot;</span><span class='rbrack token'>]</span>
+  <span class='strings identifier id'>strings</span><span class='dot token'>.</span><span class='map_to_f identifier id'>map_to_f</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='float val'>1.0</span><span class='comma token'>,</span> <span class='float val'>2.0</span><span class='comma token'>,</span> <span class='float val'>3.0</span><span class='rbrack token'>]</span>
+
+<span class='A constant id'>A</span> <span class='typical identifier id'>typical</span> <span class='use identifier id'>use</span> <span class='is identifier id'>is</span> <span class='to identifier id'>to</span> <span class='convert identifier id'>convert</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='String constant id'>String</span> <span class='items identifier id'>items</span> <span class='to identifier id'>to</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='float identifier id'>float</span> <span class='items identifier id'>items</span><span class='dot token'>.</span>
+
+<span class='This constant id'>This</span> <span class='method identifier id'>method</span> <span class='is identifier id'>is</span> <span class='a identifier id'>a</span> <span class='fast identifier id'>fast</span> <span class='way identifier id'>way</span> <span class='to identifier id'>to</span> <span class='get identifier id'>get</span> <span class='the identifier id'>the</span> <span class='same identifier id'>same</span> <span class='results identifier id'>results</span> <span class='as identifier id'>as</span> <span class='items identifier id'>items</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:to_f</span><span class='rparen token'>)</span>
 </pre>
-<p>
-A typical use is to convert a list of <a href="String.html">String</a>
-items to a list of float items.
-</p>
-<p>
-This method is a fast way to get the same results as items.map(&amp;:to_f)
-</p>
-					
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;Float&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a list of each item.to_f
 
-					
-					<div class="method-source-code"
-						id="map-to-f-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 131</span>
-131:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map_to_f</span>
-132:     <span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">to_f</span>}
-133:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+      
+    </li>
+  
+</ul>
 
-		
-			<div id="map-to-i-method" class="method-detail ">
-				<a name="M000024"></a>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-				<div class="method-heading">
-				
-					<span class="method-name">map_to_i</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
 
-				<div class="method-description">
-					
-					<p>
+143
+144
+145</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 143</span>
+
+<span class='def def kw'>def</span> <span class='map_to_f identifier id'>map_to_f</span>
+  <span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='to_f identifier id'>to_f</span><span class='rbrace token'>}</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="map_to_i-instance_method">
+  
+    - (<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="Integer.html" title="Integer (class)">Integer</a>&gt;</tt>) <strong>map_to_i</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
 Map each item => item.to_i
 </p>
-<h2>Example</h2>
-<pre>
-  strings = [&quot;1&quot;,&quot;2&quot;,&quot;3&quot;]
-  strings.map_to_i =&gt; [1, 2, 3]
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='strings identifier id'>strings</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='string val'>&quot;1&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;2&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;3&quot;</span><span class='rbrack token'>]</span>
+  <span class='strings identifier id'>strings</span><span class='dot token'>.</span><span class='map_to_i identifier id'>map_to_i</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span> <span class='integer val'>2</span><span class='comma token'>,</span> <span class='integer val'>3</span><span class='rbrack token'>]</span>  
+
+<span class='A constant id'>A</span> <span class='typical identifier id'>typical</span> <span class='use identifier id'>use</span> <span class='is identifier id'>is</span> <span class='to identifier id'>to</span> <span class='convert identifier id'>convert</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='String constant id'>String</span> <span class='items identifier id'>items</span> <span class='to identifier id'>to</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='integer identifier id'>integer</span> <span class='items identifier id'>items</span><span class='dot token'>.</span>
+
+<span class='This constant id'>This</span> <span class='method identifier id'>method</span> <span class='is identifier id'>is</span> <span class='a identifier id'>a</span> <span class='fast identifier id'>fast</span> <span class='way identifier id'>way</span> <span class='to identifier id'>to</span> <span class='get identifier id'>get</span> <span class='the identifier id'>the</span> <span class='same identifier id'>same</span> <span class='results identifier id'>results</span> <span class='as identifier id'>as</span> <span class='items identifier id'>items</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:to_i</span><span class='rparen token'>)</span>
 </pre>
-<p>
-A typical use is to convert a list of <a href="String.html">String</a>
-items to a list of integer items.
-</p>
-<p>
-This method is a fast way to get the same results as items.map(&amp;:to_i)
-</p>
-					
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="Integer.html" title="Integer (class)">Integer</a>&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a list of each item.to_i
 
-					
-					<div class="method-source-code"
-						id="map-to-i-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 146</span>
-146:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map_to_i</span>
-147:     <span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">to_i</span>}
-148:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+      
+    </li>
+  
+</ul>
 
-		
-			<div id="map-to-s-method" class="method-detail ">
-				<a name="M000025"></a>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-				<div class="method-heading">
-				
-					<span class="method-name">map_to_s</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
 
-				<div class="method-description">
-					
-					<p>
+160
+161
+162</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 160</span>
+
+<span class='def def kw'>def</span> <span class='map_to_i identifier id'>map_to_i</span>
+  <span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='to_i identifier id'>to_i</span><span class='rbrace token'>}</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="map_to_s-instance_method">
+  
+    - (<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="String.html" title="String (class)">String</a>&gt;</tt>) <strong>map_to_s</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
 Map each item => item.to_s
 </p>
-<h2>Example</h2>
-<pre>
-  numbers = [1, 2, 3]
-  numbers.map_to_s =&gt; [&quot;1&quot;, &quot;2&quot;, &quot;3&quot;]
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='numbers identifier id'>numbers</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span> <span class='integer val'>2</span><span class='comma token'>,</span> <span class='integer val'>3</span><span class='rbrack token'>]</span>
+  <span class='numbers identifier id'>numbers</span><span class='dot token'>.</span><span class='map_to_s identifier id'>map_to_s</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>&quot;1&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;2&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;3&quot;</span><span class='rbrack token'>]</span>  
+
+<span class='A constant id'>A</span> <span class='typical identifier id'>typical</span> <span class='use identifier id'>use</span> <span class='is identifier id'>is</span> <span class='to identifier id'>to</span> <span class='convert identifier id'>convert</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='Numeric constant id'>Numeric</span> <span class='items identifier id'>items</span> <span class='to identifier id'>to</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='String constant id'>String</span> <span class='items identifier id'>items</span><span class='dot token'>.</span>
+
+<span class='This constant id'>This</span> <span class='method identifier id'>method</span> <span class='is identifier id'>is</span> <span class='a identifier id'>a</span> <span class='fast identifier id'>fast</span> <span class='way identifier id'>way</span> <span class='to identifier id'>to</span> <span class='get identifier id'>get</span> <span class='the identifier id'>the</span> <span class='same identifier id'>same</span> <span class='results identifier id'>results</span> <span class='as identifier id'>as</span> <span class='items identifier id'>items</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:to_s</span><span class='rparen token'>)</span>
 </pre>
-<p>
-A typical use is to convert a list of <a href="Numeric.html">Numeric</a>
-items to a list of <a href="String.html">String</a> items.
-</p>
-<p>
-This method is a fast way to get the same results as items.map(&amp;:to_s)
-</p>
-					
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="String.html" title="String (class)">String</a>&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a list of each item.to_s
 
-					
-					<div class="method-source-code"
-						id="map-to-s-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 161</span>
-161:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map_to_s</span>
-162:     <span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">to_s</span>}
-163:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+      
+    </li>
+  
+</ul>
 
-		
-			<div id="map-to-sym-method" class="method-detail ">
-				<a name="M000026"></a>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-				<div class="method-heading">
-				
-					<span class="method-name">map_to_sym</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
 
-				<div class="method-description">
-					
-					<p>
+177
+178
+179</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 177</span>
+
+<span class='def def kw'>def</span> <span class='map_to_s identifier id'>map_to_s</span>
+  <span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='rbrace token'>}</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="map_to_sym-instance_method">
+  
+    - (<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="Symbol.html" title="Symbol (class)">Symbol</a>&gt;</tt>) <strong>map_to_sym</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
 Map each item => item.to_sym
 </p>
-<h2>Example</h2>
-<pre>
-  strings = [&quot;foo&quot;, &quot;goo&quot;, &quot;hoo&quot;]
-  strings.map_to_sym =&gt; [:foo, :goo, :hoo]
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='strings identifier id'>strings</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='string val'>&quot;foo&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;goo&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;hoo&quot;</span><span class='rbrack token'>]</span>
+  <span class='strings identifier id'>strings</span><span class='dot token'>.</span><span class='map_to_sym identifier id'>map_to_sym</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='symbol val'>:foo</span><span class='comma token'>,</span> <span class='symbol val'>:goo</span><span class='comma token'>,</span> <span class='symbol val'>:hoo</span><span class='rbrack token'>]</span>
+
+<span class='A constant id'>A</span> <span class='typical identifier id'>typical</span> <span class='use identifier id'>use</span> <span class='is identifier id'>is</span> <span class='to identifier id'>to</span> <span class='convert identifier id'>convert</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='Object constant id'>Object</span> <span class='items identifier id'>items</span> <span class='to identifier id'>to</span> <span class='a identifier id'>a</span> <span class='list identifier id'>list</span> <span class='of identifier id'>of</span> <span class='Symbol constant id'>Symbol</span> <span class='items identifier id'>items</span><span class='dot token'>.</span>
+
+<span class='This constant id'>This</span> <span class='method identifier id'>method</span> <span class='is identifier id'>is</span> <span class='a identifier id'>a</span> <span class='fast identifier id'>fast</span> <span class='way identifier id'>way</span> <span class='to identifier id'>to</span> <span class='get identifier id'>get</span> <span class='the identifier id'>the</span> <span class='same identifier id'>same</span> <span class='results identifier id'>results</span> <span class='as identifier id'>as</span> <span class='items identifier id'>items</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:to_sym</span><span class='rparen token'>)</span>
 </pre>
-<p>
-A typical use is to convert a list of <a href="Object.html">Object</a>
-items to a list of <a href="Symbol.html">Symbol</a> items.
-</p>
-<p>
-This method is a fast way to get the same results as
-items.map(&amp;:to_sym)
-</p>
-					
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="Symbol.html" title="Symbol (class)">Symbol</a>&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a list of each item.to_sym
 
-					
-					<div class="method-source-code"
-						id="map-to-sym-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 176</span>
-176:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map_to_sym</span>
-177:     <span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">to_sym</span>}
-178:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+      
+    </li>
+  
+</ul>
 
-		
-			<div id="map-with-index-method" class="method-detail ">
-				<a name="M000027"></a>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-				<div class="method-heading">
-				
-					<span class="method-name">map_with_index</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
 
-				<div class="method-description">
-					
-					<p>
+194
+195
+196</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 194</span>
+
+<span class='def def kw'>def</span> <span class='map_to_sym identifier id'>map_to_sym</span>
+  <span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='to_sym identifier id'>to_sym</span><span class='rbrace token'>}</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="map_with_index-instance_method">
+  
+    - (<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>) <strong>map_with_index</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
 Map each item and its index => a new output
 </p>
-<p>
-cf. Enumerable#map, Enumerable#each_with_index
-</p>
-<h2>Example</h2>
-<pre>
-  strings = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
-  strings.map_with_index{|string,index| &quot;#{string}#{index}&quot;}
-   =&gt; [&quot;a0, &quot;b1&quot;, &quot;c3&quot;]
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='strings identifier id'>strings</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='string val'>&quot;a&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;b&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;c&quot;</span><span class='rbrack token'>]</span>
+  <span class='strings identifier id'>strings</span><span class='dot token'>.</span><span class='map_with_index identifier id'>map_with_index</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='string identifier id'>string</span><span class='comma token'>,</span><span class='index identifier id'>index</span><span class='bitor op'>|</span> <span class='dstring node'>&quot;#{string}#{index}&quot;</span><span class='rbrace token'>}</span>
+   <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>&quot;a0, &quot;</span><span class='b1 identifier id'>b1</span><span class='string val'>&quot;, &quot;</span><span class='c3 identifier id'>c3</span><span class='string val'>&quot;]
+</span></pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Enumerable (module)">Enumerable</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+an list of each item transformed by the block
+
+
+      
+    </li>
+  
+</ul>
+
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li>Enumerable#map</li>
+    
+      <li>Enumerable#each_with_index</li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+210
+211
+212
+213</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 210</span>
+
+<span class='def def kw'>def</span> <span class='map_with_index identifier id'>map_with_index</span>
+  <span class='index identifier id'>index</span><span class='assign token'>=</span><span class='integer val'>-1</span>
+  <span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='index identifier id'>index</span><span class='opasgn op'>+=</span><span class='integer val'>1</span><span class='semicolon token'>;</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='comma token'>,</span><span class='index identifier id'>index</span><span class='rparen token'>)</span><span class='rbrace token'>}</span>
+<span class='end end kw'>end</span>
 </pre>
-					
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="nitems_until-instance_method">
+  
+    - (<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>) <strong>nitems_until</strong> 
+  
 
-					
-					<div class="method-source-code"
-						id="map-with-index-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 191</span>
-191:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">map_with_index</span>
-192:     <span class="ruby-identifier">index</span>=<span class="ruby-value">-1</span>
-193:     <span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">index</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>; <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">item</span>,<span class="ruby-identifier">index</span>)}
-194:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="nitems-until-method" class="method-detail ">
-				<a name="M000074"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">nitems_until</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-enum.nitems_until {| obj | block } => number of items Returns the number of
-leading elements for which block is false.
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The number of leading elements for which block is false.
 </p>
-					
 
-					
-					<div class="method-source-code"
-						id="nitems-until-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 287</span>
-287:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nitems_until</span>
-288:     <span class="ruby-identifier">num</span> = <span class="ruby-value">0</span>
-289:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span>
-290:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">item</span>) 
-291:         <span class="ruby-keyword kw">break</span>
-292:       <span class="ruby-keyword kw">else</span>
-293:         <span class="ruby-identifier">num</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
-294:       <span class="ruby-keyword kw">end</span>
-295:     }
-296:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">num</span>
-297:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
-
-		
-			<div id="nitems-while-method" class="method-detail ">
-				<a name="M000073"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">nitems_while</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-enum.nitems_while {| obj | block } => number of items Returns the number of
-leading elements for which block is not false or nil.
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="nitems-while-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 277</span>
-277:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nitems_while</span>
-278:     <span class="ruby-identifier">num</span> = <span class="ruby-value">0</span>
-279:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">item</span>) <span class="ruby-operator">?</span> (<span class="ruby-identifier">num</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword kw">break</span>}
-280:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">num</span>
-281:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="nitems-with-index-method" class="method-detail ">
-				<a name="M000075"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">nitems_with_index</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-enum.nitems_with_index {|obj,i| block } => number of items Calls block with
-two arguments, the item and its index, for each item in enum. Returns the
-number of leading elements for which block is true.
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="nitems-with-index-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 304</span>
-304:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">nitems_with_index</span>
-305:     <span class="ruby-identifier">index</span> = <span class="ruby-value">0</span>
-306:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">item</span>,<span class="ruby-identifier">index</span>) <span class="ruby-operator">?</span> (<span class="ruby-identifier">index</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword kw">break</span>}
-307:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">index</span>
-308:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="power-set-method" class="method-detail ">
-				<a name="M000097"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">power_set</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Return the power set: an array with all subsets of the enum&#8217;s
-elements. <a
-href="http://en.wikipedia.org/wiki/Power_set">en.wikipedia.org/wiki/Power_set</a>
-</p>
-<p>
-This implementation is from <a
-href="http://johncarrino.net/blog/2006/08/11/powerset-in-ruby">johncarrino.net/blog/2006/08/11/powerset-in-ruby</a>/
-</p>
-<h2>Example</h2>
-<pre>
-  [1,2,3].power_set.sort
-  =&gt;  [[], [1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3]]
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='enum identifier id'>enum</span><span class='dot token'>.</span><span class='nitems_until identifier id'>nitems_until</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span> <span class='obj identifier id'>obj</span> <span class='bitor op'>|</span> <span class='block identifier id'>block</span> <span class='rbrace token'>}</span>
+  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='number identifier id'>number</span> <span class='of identifier id'>of</span> <span class='items identifier id'>items</span>
 </pre>
-					
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the number of leading elements for which block is false.
 
-					
-					<div class="method-source-code"
-						id="power-set-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 383</span>
-383:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">power_set</span>
-384:     <span class="ruby-identifier">inject</span>([[]]){<span class="ruby-operator">|</span><span class="ruby-identifier">c</span>,<span class="ruby-identifier">y</span><span class="ruby-operator">|</span><span class="ruby-identifier">r</span>=[];<span class="ruby-identifier">c</span>.<span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">&lt;&lt;</span><span class="ruby-identifier">i</span>;<span class="ruby-identifier">r</span><span class="ruby-operator">&lt;&lt;</span><span class="ruby-identifier">i</span><span class="ruby-operator">+</span>[<span class="ruby-identifier">y</span>]};<span class="ruby-identifier">r</span>}
-385:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+      
+    </li>
+  
+</ul>
 
-		
-			<div id="select-until-method" class="method-detail ">
-				<a name="M000068"></a>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-				<div class="method-heading">
-				
-					<span class="method-name">select_until</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
 
-				<div class="method-description">
-					
-					<p>
-enum.select_until {|obj| block } => array Returns an array containing the
-leading elements for which block is false or nil.
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 326</span>
+
+<span class='def def kw'>def</span> <span class='nitems_until identifier id'>nitems_until</span>
+  <span class='num identifier id'>num</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span>
+    <span class='if if kw'>if</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span> 
+      <span class='break break kw'>break</span>
+    <span class='else else kw'>else</span>
+      <span class='num identifier id'>num</span><span class='opasgn op'>+=</span><span class='integer val'>1</span>
+    <span class='end end kw'>end</span>
+  <span class='rbrace token'>}</span>
+  <span class='return return kw'>return</span> <span class='num identifier id'>num</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="nitems_while-instance_method">
+  
+    - (<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>) <strong>nitems_while</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The number of leading elements for which block is not false or nil.
 </p>
-					
 
-					
-					<div class="method-source-code"
-						id="select-until-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 217</span>
-217:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">select_until</span>
-218:     <span class="ruby-identifier">arr</span> = []
-219:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">item</span>) <span class="ruby-operator">?</span> <span class="ruby-keyword kw">break</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">arr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">item</span>)}
-220:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">arr</span>
-221:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='enum identifier id'>enum</span><span class='dot token'>.</span><span class='nitems_while identifier id'>nitems_while</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span> <span class='obj identifier id'>obj</span> <span class='bitor op'>|</span> <span class='block identifier id'>block</span> <span class='rbrace token'>}</span>
+   <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='number identifier id'>number</span> <span class='of identifier id'>of</span> <span class='items identifier id'>items</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the number of leading elements for which block is not false or nil.
 
-		
-			<div id="select-while-method" class="method-detail ">
-				<a name="M000045"></a>
 
-				<div class="method-heading">
-				
-					<span class="method-name">select_while</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
+      
+    </li>
+  
+</ul>
 
-				<div class="method-description">
-					
-					<p>
-enum.select_while {|obj| block } => array Returns an array containing the
-leading elements for which block is not false or nil.
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+313
+314
+315
+316
+317</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 313</span>
+
+<span class='def def kw'>def</span> <span class='nitems_while identifier id'>nitems_while</span>
+  <span class='num identifier id'>num</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='lparen token'>(</span><span class='num identifier id'>num</span><span class='opasgn op'>+=</span><span class='integer val'>1</span><span class='rparen token'>)</span> <span class='colon op'>:</span> <span class='break break kw'>break</span><span class='rbrace token'>}</span>
+  <span class='return return kw'>return</span> <span class='num identifier id'>num</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="nitems_with_index-instance_method">
+  
+    - (<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>) <strong>nitems_with_index</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Calls block with two arguments, the item and its index, for each item in
+enum.
 </p>
-					
 
-					
-					<div class="method-source-code"
-						id="select-while-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 207</span>
-207:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">select_while</span>
-208:     <span class="ruby-identifier">arr</span> = []
-209:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">item</span>) <span class="ruby-operator">?</span> (<span class="ruby-identifier">arr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">item</span>) <span class="ruby-operator">:</span> <span class="ruby-keyword kw">break</span>}
-210:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">arr</span>
-211:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='enum identifier id'>enum</span><span class='dot token'>.</span><span class='nitems_with_index identifier id'>nitems_with_index</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='obj identifier id'>obj</span><span class='comma token'>,</span><span class='i identifier id'>i</span><span class='bitor op'>|</span> <span class='block identifier id'>block</span> <span class='rbrace token'>}</span>
+   <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='number identifier id'>number</span> <span class='of identifier id'>of</span> <span class='items identifier id'>items</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Integer.html" title="Integer (class)">Integer</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the number of leading elements for which block is true.
 
-		
-			<div id="select-with-index-method" class="method-detail ">
-				<a name="M000069"></a>
 
-				<div class="method-heading">
-				
-					<span class="method-name">select_with_index</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
+      
+    </li>
+  
+</ul>
 
-				<div class="method-description">
-					
-					<p>
-enum.select_with_index {|obj,i| block } => array Calls block with two
-arguments, the item and its index, for each item in enum. Returns an array
-containing the leading elements for which block is not false or nil.
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+347
+348
+349
+350
+351</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 347</span>
+
+<span class='def def kw'>def</span> <span class='nitems_with_index identifier id'>nitems_with_index</span>
+  <span class='index identifier id'>index</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='comma token'>,</span><span class='index identifier id'>index</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='lparen token'>(</span><span class='index identifier id'>index</span><span class='opasgn op'>+=</span><span class='integer val'>1</span><span class='rparen token'>)</span> <span class='colon op'>:</span> <span class='break break kw'>break</span><span class='rbrace token'>}</span>
+  <span class='return return kw'>return</span> <span class='index identifier id'>index</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="power_set-instance_method">
+  
+    - (<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;&gt;</tt>) <strong>power_set</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Calculate the power set.
 </p>
-					
 
-					
-					<div class="method-source-code"
-						id="select-with-index-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 228</span>
-228:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">select_with_index</span>
-229:     <span class="ruby-identifier">index</span> = <span class="ruby-value">0</span>
-230:     <span class="ruby-identifier">arr</span> = []
-231:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> 
-232:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">yield</span>(<span class="ruby-identifier">item</span>,<span class="ruby-identifier">index</span>)
-233:         <span class="ruby-identifier">arr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">item</span>
-234:         <span class="ruby-identifier">index</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
-235:       <span class="ruby-keyword kw">else</span>
-236:         <span class="ruby-keyword kw">break</span>
-237:       <span class="ruby-keyword kw">end</span>
-238:     }
-239:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">arr</span>
-240:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='power_set identifier id'>power_set</span><span class='dot token'>.</span><span class='sort identifier id'>sort</span>
+  <span class='assign token'>=</span><span class='gt op'>&gt;</span>  <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span> <span class='integer val'>2</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span> <span class='integer val'>2</span><span class='comma token'>,</span> <span class='integer val'>3</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span> <span class='integer val'>3</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>2</span><span class='comma token'>,</span> <span class='integer val'>3</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='lbrack token'>[</span><span class='integer val'>3</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the power set: an array with all subsets of the enum&#8217;s elements.
 
-		
-			<div id="to-h-method" class="method-detail ">
-				<a name="M000018"></a>
 
-				<div class="method-heading">
-				
-					<span class="method-name">to_h</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
+      
+    </li>
+  
+</ul>
 
-				<div class="method-description">
-					
-					<p>
+  <h3>See Also:</h3>
+  <ul class="see">
+    
+      <li><a href="http://en.wikipedia.org/wiki/Power_set" title="This implementation is from the blog post below:">This implementation is from the blog post below:</a></li>
+    
+      <li><a href="http://johncarrino.net/blog/2006/08/11/powerset-in-ruby/" title="http://johncarrino.net/blog/2006/08/11/powerset-in-ruby/">http://johncarrino.net/blog/2006/08/11/powerset-in-ruby/</a></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+438
+439
+440</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 438</span>
+
+<span class='def def kw'>def</span> <span class='power_set identifier id'>power_set</span>
+  <span class='inject identifier id'>inject</span><span class='lparen token'>(</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span><span class='rparen token'>)</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='c identifier id'>c</span><span class='comma token'>,</span><span class='y identifier id'>y</span><span class='bitor op'>|</span><span class='r identifier id'>r</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='semicolon token'>;</span><span class='c identifier id'>c</span><span class='dot token'>.</span><span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='i identifier id'>i</span><span class='bitor op'>|</span><span class='r identifier id'>r</span><span class='lshft op'>&lt;&lt;</span><span class='i identifier id'>i</span><span class='semicolon token'>;</span><span class='r identifier id'>r</span><span class='lshft op'>&lt;&lt;</span><span class='i identifier id'>i</span><span class='plus op'>+</span><span class='lbrack token'>[</span><span class='y identifier id'>y</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span><span class='semicolon token'>;</span><span class='r identifier id'>r</span><span class='rbrace token'>}</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="select_until-instance_method">
+  
+    - (<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>) <strong>select_until</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The leading elements for which block is false or nil.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='enum identifier id'>enum</span><span class='dot token'>.</span><span class='select_until identifier id'>select_until</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='obj identifier id'>obj</span><span class='bitor op'>|</span> <span class='block identifier id'>block</span> <span class='rbrace token'>}</span>
+   <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='array identifier id'>array</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the leading elements for which block is false or nil.
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+242
+243
+244
+245
+246</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 242</span>
+
+<span class='def def kw'>def</span> <span class='select_until identifier id'>select_until</span>
+  <span class='arr identifier id'>arr</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='break break kw'>break</span> <span class='colon op'>:</span> <span class='lparen token'>(</span><span class='arr identifier id'>arr</span> <span class='lshft op'>&lt;&lt;</span> <span class='item identifier id'>item</span><span class='rparen token'>)</span><span class='rbrace token'>}</span>
+  <span class='return return kw'>return</span> <span class='arr identifier id'>arr</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="select_while-instance_method">
+  
+    - (<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>) <strong>select_while</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The leading elements for which block is not false or nil.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='enum identifier id'>enum</span><span class='dot token'>.</span><span class='select_while identifier id'>select_while</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='obj identifier id'>obj</span><span class='bitor op'>|</span> <span class='block identifier id'>block</span> <span class='rbrace token'>}</span>
+   <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='array identifier id'>array</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the leading elements for which block is not false or nil.
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+229
+230
+231
+232
+233</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 229</span>
+
+<span class='def def kw'>def</span> <span class='select_while identifier id'>select_while</span>
+  <span class='arr identifier id'>arr</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='rparen token'>)</span> <span class='question op'>?</span> <span class='lparen token'>(</span><span class='arr identifier id'>arr</span> <span class='lshft op'>&lt;&lt;</span> <span class='item identifier id'>item</span><span class='rparen token'>)</span> <span class='colon op'>:</span> <span class='break break kw'>break</span><span class='rbrace token'>}</span>
+  <span class='return return kw'>return</span> <span class='arr identifier id'>arr</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="select_with_index-instance_method">
+  
+    - (<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt; the leading elements for which block is not false or nil.</tt>) <strong>select_with_index</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Calls block with two arguments, the item and its index, for each item in
+enum.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='enum identifier id'>enum</span><span class='dot token'>.</span><span class='select_with_index identifier id'>select_with_index</span> <span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='obj identifier id'>obj</span><span class='comma token'>,</span><span class='i identifier id'>i</span><span class='bitor op'>|</span> <span class='block identifier id'>block</span> <span class='rbrace token'>}</span> 
+  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='array identifier id'>array</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Array.html" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt; the leading elements for which block is not false or nil.</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+Array<Object> the leading elements for which block is not false or nil.
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 257</span>
+
+<span class='def def kw'>def</span> <span class='select_with_index identifier id'>select_with_index</span>
+  <span class='index identifier id'>index</span> <span class='assign token'>=</span> <span class='integer val'>0</span>
+  <span class='arr identifier id'>arr</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> 
+    <span class='if if kw'>if</span> <span class='yield yield kw'>yield</span><span class='lparen token'>(</span><span class='item identifier id'>item</span><span class='comma token'>,</span><span class='index identifier id'>index</span><span class='rparen token'>)</span>
+      <span class='arr identifier id'>arr</span> <span class='lshft op'>&lt;&lt;</span> <span class='item identifier id'>item</span>
+      <span class='index identifier id'>index</span><span class='opasgn op'>+=</span><span class='integer val'>1</span>
+    <span class='else else kw'>else</span>
+      <span class='break break kw'>break</span>
+    <span class='end end kw'>end</span>
+  <span class='rbrace token'>}</span>
+  <span class='return return kw'>return</span> <span class='arr identifier id'>arr</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="to_h-instance_method">
+  
+    - (<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="Object.html" title="Object (class)">Object</a>,<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>) <strong>to_h</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
 Convert an enumerable to a hash.
 </p>
-<h2>Example</h2>
-<pre>
-  array=[[:a, :b],[:c, :d],[:e, :f]]
-  array.to_h =&gt; {:a=&gt;:b, :c=&gt;:d, :e=&gt;:f}
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='array identifier id'>array</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='symbol val'>:a</span><span class='comma token'>,</span> <span class='symbol val'>:b</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='symbol val'>:c</span><span class='comma token'>,</span> <span class='symbol val'>:d</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='symbol val'>:e</span><span class='comma token'>,</span> <span class='symbol val'>:f</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+  <span class='array identifier id'>array</span><span class='dot token'>.</span><span class='to_h identifier id'>to_h</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='symbol val'>:a=</span><span class='gt op'>&gt;</span><span class='symbol val'>:b</span><span class='comma token'>,</span> <span class='symbol val'>:c=</span><span class='gt op'>&gt;</span><span class='symbol val'>:d</span><span class='comma token'>,</span> <span class='symbol val'>:e=</span><span class='gt op'>&gt;</span><span class='symbol val'>:f</span><span class='rbrace token'>}</span>
+
+<span class='If constant id'>If</span> <span class='a identifier id'>a</span> <span class='key identifier id'>key</span> <span class='occurs identifier id'>occurs</span> <span class='more identifier id'>more</span> <span class='than identifier id'>than</span> <span class='once identifier id'>once</span><span class='comma token'>,</span> <span class='then then kw'>then</span> <span class='this identifier id'>this</span> <span class='will identifier id'>will</span> <span class='automatically identifier id'>automatically</span> 
+<span class='convert identifier id'>convert</span> <span class='the identifier id'>the</span> <span class='value identifier id'>value</span> <span class='to identifier id'>to</span> <span class='an identifier id'>an</span> <span class='array identifier id'>array</span> <span class='of identifier id'>of</span> <span class='the identifier id'>the</span> <span class='keys identifier id'>keys</span><span class='string val'>' values.
+</span></pre>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='array identifier id'>array</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='symbol val'>:a</span><span class='comma token'>,</span><span class='symbol val'>:b</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='symbol val'>:a</span><span class='comma token'>,</span><span class='symbol val'>:c</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='symbol val'>:a</span><span class='comma token'>,</span><span class='symbol val'>:d</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+  <span class='array identifier id'>array</span><span class='dot token'>.</span><span class='to_h identifier id'>to_h</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='symbol val'>:a=</span><span class='gt op'>&gt;</span><span class='lbrack token'>[</span><span class='symbol val'>:b</span><span class='comma token'>,</span> <span class='symbol val'>:c</span><span class='comma token'>,</span> <span class='symbol val'>:d</span><span class='rbrack token'>]</span><span class='rbrace token'>}</span>
 </pre>
-<p>
-If a key occurs more than once, then this will automatically convert the
-value to an array of the keys&#8217; values.
-</p>
-<h2>Example</h2>
-<pre>
-  array=[[:a,:b],[:a,:c],[:a,:d]]
-  array.to_h =&gt; {:a=&gt;[:b, :c, :d]}
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Hash.html" title="Hash (class)">Hash</a>&lt;<a href="Object.html" title="Object (class)">Object</a>,<a href="Object.html" title="Object (class)">Object</a>&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a hash of the enumerable&#8217;s items
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/enumerable.rb', line 29</span>
+
+<span class='def def kw'>def</span> <span class='to_h identifier id'>to_h</span>
+  <span class='hash identifier id'>hash</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='dupe identifier id'>dupe</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span>
+  <span class='each identifier id'>each</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='key identifier id'>key</span><span class='comma token'>,</span><span class='val identifier id'>val</span><span class='bitor op'>|</span>
+    <span class='if if kw'>if</span> <span class='hash identifier id'>hash</span><span class='dot token'>.</span><span class='key? fid id'>key?</span> <span class='key identifier id'>key</span>
+      <span class='if if kw'>if</span> <span class='dupe identifier id'>dupe</span><span class='dot token'>.</span><span class='key? fid id'>key?</span> <span class='key identifier id'>key</span>
+        <span class='hash identifier id'>hash</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='val identifier id'>val</span>
+      <span class='else else kw'>else</span>
+        <span class='hash identifier id'>hash</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='hash identifier id'>hash</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+        <span class='hash identifier id'>hash</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span> <span class='lshft op'>&lt;&lt;</span> <span class='val identifier id'>val</span>
+        <span class='dupe identifier id'>dupe</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span><span class='assign token'>=</span><span class='true true kw'>true</span>
+      <span class='end end kw'>end</span>
+    <span class='else else kw'>else</span>
+      <span class='hash identifier id'>hash</span><span class='lbrack token'>[</span><span class='key identifier id'>key</span><span class='rbrack token'>]</span><span class='assign token'>=</span><span class='val identifier id'>val</span>
+    <span class='end end kw'>end</span>
+  <span class='rbrace token'>}</span>
+  <span class='return return kw'>return</span> <span class='hash identifier id'>hash</span>
+<span class='end end kw'>end</span>
 </pre>
-					
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
-					
-					<div class="method-source-code"
-						id="to-h-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/enumerable.rb, line 27</span>
-27:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_h</span>
-28:     <span class="ruby-identifier">hash</span>={}
-29:     <span class="ruby-identifier">dupe</span>={}
-30:     <span class="ruby-identifier">each</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
-31:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">key?</span> <span class="ruby-identifier">key</span>
-32:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">dupe</span>.<span class="ruby-identifier">key?</span> <span class="ruby-identifier">key</span>
-33:           <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">val</span>
-34:         <span class="ruby-keyword kw">else</span>
-35:           <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>]=[<span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>]]
-36:           <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">val</span>
-37:           <span class="ruby-identifier">dupe</span>[<span class="ruby-identifier">key</span>]=<span class="ruby-keyword kw">true</span>
-38:         <span class="ruby-keyword kw">end</span>
-39:       <span class="ruby-keyword kw">else</span>
-40:         <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>]=<span class="ruby-identifier">val</span>
-41:       <span class="ruby-keyword kw">end</span>
-42:     }
-43:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">hash</span>
-44:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
+</div>
+    
+    <div id="footer">
+  Generated on Sat Mar 20 17:19:04 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
+  0.5.3 (ruby-1.8.7).
+</div>
 
-				
-			</div>
-
-		
-		</div>
-	
-
-	</div>
-
-
-	<div id="rdoc-debugging-section-dump" class="debugging-section">
-	
-		<p>Disabled; run with --debug to generate this.</p>
-	
-	</div>
-
-	<div id="validator-badges">
-		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-			Rdoc Generator</a> 1.1.6</small>.</p>
-	</div>
-
-</body>
+  </body>
 </html>
-

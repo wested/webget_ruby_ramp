@@ -14,15 +14,17 @@ class Array
 
   # Concatenate the items into a string by join.
   #
-  # ==Typical Array#join with infix
+  # @return [String] concatenated string
+  #
+  # @example Typical Array#join with infix
   #   list=['a','b','c']
   #   list.join("*") => "a*b*c"
   #
-  # ==Improved join with infix, prefix, suffix
+  # @example Improved join with infix, prefix, suffix
   #   list=['a','b','c']
   #   list.join("*","[","]") => "[a]*[b]*[c]"
   #
-  # ==Improved join with just prefix and suffix
+  # @example Improved join with just prefix and suffix
   #   list=['a','b','c']
   #   list.join("[","]") => "[a][b][c]"
 
@@ -48,9 +50,9 @@ class Array
   end
 
 
-  # Return true if size > 0
+  # @return [Boolean] true if size > 0
   #
-  # ==Examples
+  # @example
   #   [1,2,3].size? => true
   #   [].size? => false
 
@@ -61,12 +63,12 @@ class Array
 
   # Move the first item to the last by using Array#shift and Array#push
   #
-  # ==Examples
+  # @example
   #   [1,2,3,4].rotate! => [2,3,4,1]
   #   ['a','b','c'].rotate! => ['b','c','a']
   #   [].rotate! => []
   #
-  # Return self
+  # @return [Array] self
   
   def rotate!
     if size>0
@@ -76,9 +78,9 @@ class Array
   end
 
   
-  # Return a random item from the array
+  # @return [Object] a random item from the array
   #
-  # ==Examples
+  # @example
   #   [1,2,3,4].choice => 2
   #   [1,2,3,4].choice => 4
   #   [1,2,3,4].choice => 3
@@ -90,9 +92,9 @@ class Array
   end
 
 
-  # Return a new array filled with _count_ calls to choice
+  # @return [Array] a new array filled with _count_ calls to choice
   #
-  # ==Examples
+  # @example
   #   [1,2,3,4].choices(2) => [3,1]
   #   [1,2,3,4].choices(3) => [4,2,3]
   
@@ -103,10 +105,10 @@ class Array
   end
 
 
-  # Return a hash of this array's items as keys
-  # mapped onto another array's items as values.
+  # @return [Hash] a hash of this array's items as keys,
+  #   mapped onto another array's items as values.
   #
-  # ==Example
+  # @example
   #   foo=[:a,:b,:c]
   #   goo=[:x,:y,:z]
   #   foo.onto(goo) => {:a=>:x, :b=>:y, :c=>:z}
@@ -126,15 +128,17 @@ class Array
   ##############################################################
 
 
-  # Return items in groups of _n_ items (aka slices)
+  # Slice the array.
   #
-  # ==Examples
+  # @return [Array<Array<Object>>] items in groups of _n_ items (aka slices)
+  #
+  # @example
   #   [1,2,3,4,5,6,7,8].slices(2) => [[1,2],[3,4],[5,6],[7,8]]
   #   [1,2,3,4,5,6,7,8].slices(4) => [[1,2,3,4],[5,6,7,8]]
   #
   # If the slices don't divide evenly, then the last is smaller.
   #
-  # ==Examples
+  # @example
   #   [1,2,3,4,5,6,7,8].slices(3) => [[1,2,3],[4,5,6],[7,8]] 
   #   [1,2,3,4,5,6,7,8].slices(5) => [[1,2,3,4,5],[6,7,8]] 
 
@@ -153,12 +157,14 @@ class Array
 
   # Divvy the array, like a pie, into _n_ number of slices.
   #
+  # @return [Array<Array<Object>>] items grouped into _n_ slices
+  #
   # If the array divides evenly, then each slice has size/n items.
   #
   # Otherwise, divvy makes a best attempt by rounding up to give
   # earlier slices one more item, which makes the last slice smaller:
   #
-  # ==Examples
+  # @example
   #   [1,2,3,4,5].divvy(2) => [[1,2,3],[4,5]]
   #   [1,2,3,4,5,6,7].divvy(3) => [[1,2,3],[4,5,6],[7]]
   #
@@ -166,7 +172,7 @@ class Array
   # no mathematical way to _n_ slices, then divvy will return
   # as many slices as it can.
   #
-  # ==Examples
+  # @example
   #   [1,2,3,4,5,6].divvy(4) => [[1,2],[3,4],[5,6]]
 
   def divvy(number_of_slices)
@@ -183,18 +189,19 @@ class Array
   ##############################################################
 
   
-  # Return the union of the array's items.
+  # @return [Array] the union of the array's items.
+  #
   # In typical use, each item is an array.
   #
-  # ==Example using Ruby Array pipe
+  # @example using Ruby Array pipe
   #   arr=[[1,2,3,4],[3,4,5,6]]
   #   arr.union => [1,2,3,4,5,6]
   #
-  # ==Examples with proc
+  # @example with proc
   #   arr.map(&:foo).union
   #   => foos that are in any of the array items
   #
-  # ==Example with nil
+  # @example with nil
   #   [].union => []
 
   def union
@@ -202,19 +209,20 @@ class Array
   end
 
 
-  # Return the intersection of the array's items.
+  # @return [Array] the intersection of the array's items.
+  #
   # In typical usage, each item is an array.
   #
-  # ==Examples
+  # @example
   #   arr=[[1,2,3,4],[3,4,5,6]]
   #   arr.intersect
   #   => [3,4]
   #
-  # ==Examples with proc
+  # @example with proc
   #   arr.map(&:foo).intersect
   #   => foos that are in all of the array items
   #
-  # ==Example with nil
+  # @example with nil
   #   [].intersect => []
 
   def intersect
@@ -229,14 +237,14 @@ class Array
   #
   ##############################################################
 
-  # Returns the rest of the items of self, after a shift.
+  # @return [Array] the rest of the items of self, after a shift.
   #
-  # ==Example
+  # @example
   #   list=['a','b','c']
   #   list.shift => 'a'
   #   list.shifted => ['b','c']
   #
-  # ==Example with length
+  # @example with length
   #   list.shifted(0) => ['a','b','c']
   #   list.shifted(1) => ['b','c']
   #   list.shifted(2) => ['c']
@@ -262,14 +270,16 @@ class Array
   alias :rest :shifted
 
 
-  # Delete the first _number_of_items_ items. Returns the array, not the deleted items.
+  # Delete the first _number_of_items_ items.
+  #
+  # @return [Array] the array, minus the deleted items.
   # 
-  # ==Example
+  # @example
   #   list=['a','b','c']
   #   list.shifted!
   #   list => ['b','c']
   #
-  # ==Example with length:
+  # @example with length:
   #   list=['a','b','c']
   #   list.shifted!(2)
   #   list => ['c']
@@ -289,10 +299,12 @@ class Array
 
   # Randomly arrange the array items.
   #
+  # @return [Array] the array, with its items shuffled.
+  #
   # This implementation is optimized for speed, not for memory use.
   # See http://codeidol.com/other/rubyckbk/Arrays/Shuffling-an-Array/
   #
-  # ==Example
+  # @example
   #   list=
   #   list=['a','b','c']
   #   list.shuffle!
@@ -305,12 +317,13 @@ class Array
     end
   end
 
-  # Return the array items in random order.
+
+  # @return [Array] a new array with the items shuffled.
   #
   # This implementation is optimized for speed, not for memory use.
   # See http://codeidol.com/other/rubyckbk/Arrays/Shuffling-an-Array/
   #
-  # ==Example
+  # @example
   #   list=
   #   list=['a','b','c']
   #   list.shuffle!
@@ -327,17 +340,17 @@ class Array
   #
   ##############################################################
 
-  # Returns a CSV (Comma Separated Value) string of this array.
+  # @return [String] a CSV (Comma Separated Value) string of this array.
   #
-  # ==Example of a one-dimensional array
+  # @example of a one-dimensional array
   #
   #   [1,2,3].to_csv => "1,2,3\n"
   #
-  # ==Example of a multi-dimensional array
+  # @example of a multi-dimensional array
   #
   #   [[1,2,3],[4,5,6]] => "1,2,3\n4,5,6\n"
   #
-  # ==Example of a blank array
+  # @example of a blank array
   #   
   #   [].to_csv => ""
   #
@@ -366,12 +379,12 @@ class Array
   end
 
 
-  # Returns a TSV (Tab Separated Value) string
-  # representation of a multi-dimensional array.
+  # @return [String] a TSV (Tab Separated Value) string
+  #   representation of a multi-dimensional array.
   #
   # Each subarray becomes one 'line' in the output.
   #
-  # ==Example of a blank array
+  # @example of a blank array
   #   
   #   [].to_csv => ""
 

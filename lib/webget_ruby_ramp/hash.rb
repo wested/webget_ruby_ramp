@@ -7,7 +7,8 @@ require 'yaml'
 class Hash
 
 
-  # Return true if size > 0
+  # @return [Boolean] true if size > 0
+
   def size?
     size>0
   end
@@ -17,13 +18,13 @@ class Hash
   #
   # The keys are sorted.
   #
-  # ==Example
+  # @example
   #   h = { "xyz" => "123", "abc" => "789" }
   #   h.each_sort {|key, val| ... }
   #   => calls the block with "abc" => "789", then with "xyz" => "123"
 
   def each_sort
-   keys.sort.each{|key| yield key,self[key] }
+    keys.sort.each{|key| yield key,self[key] }
   end
 
 
@@ -31,12 +32,12 @@ class Hash
   # passing the key as a parameter,
   # and updating it in place.
   #
-  # ==Example
+  # @example
   #   h = { "a" => "b", "c" => "d" }
   #   h.each_key! {|key| key.upcase }
   #   h => { "A" => "b", "C" => "d" }
   #
-  # Return self.
+  # @return self
 
   def each_key!
     each_pair{|key,value|
@@ -48,19 +49,21 @@ class Hash
         self[key2]=value
       end
     }
+    return self
   end
+
 
 
   # Calls block once for each key in hsh,
   # passing the key and value as parameters,
   # and updated them in place.
   #
-  # ==Example
+  # @example
   #   h = { "a" => "b", "c" => "d" }
   #   h.each_pair! {|key,value| key.upcase, value.upcase }
   #   h => { "A" => "B", "C" => "D" }
   #
-  # Return self.
+  # @return self.
 
   def each_pair!
     each_pair{|key,value|
@@ -84,12 +87,12 @@ class Hash
   # passing the value as a parameter, 
   # and updating it in place.
   #
-  # ==Example
+  # @example
   #   h = { "a" => "b", "c" => "d" }
   #   h.each_value! {|value| value.upcase }
   #   h => { "a" => "B", "c" => "d" }
   #
-  # Return self.
+  # @return self.
 
   def each_value!
     each_pair{|key,value| 
@@ -107,7 +110,7 @@ class Hash
   # Calls block once for each key-value pair in hsh,
   # passing the key and value as paramters to the block.
   #
-  # ==Example
+  # @example
   #   h = {"a"=>"b", "c"=>"d", "e"=>"f" }
   #   h.map_pair{|key,value| key+value }
   #   => ["ab","cd","ef"]
@@ -121,7 +124,7 @@ class Hash
   #
   # From http://snippets.dzone.com/tag/yaml
   #
-  # ==Example
+  # @example
   #   h = {"a"=>"b", "c"=>"d", "e"=>"f" }
   #   h.to_yaml_sort
   #   => "--- \na: b\nc: d\ne: f\n"
@@ -179,13 +182,13 @@ class Hash
   #
   # The pivot method is especially useful for calculating subtotals.
   #
-  # ==Example
+  # @example
   #   r = h.pivot(:keys)
   #   r['a'].sum => 6
   #   r['b'].sum => 15
   #   r['c'].sum => 24
   #
-  # ==Example
+  # @example
   #   r=h.pivot(:vals)
   #   r['x'].sum => 12
   #   r['y'].sum => 15
@@ -195,12 +198,12 @@ class Hash
   #
   # You can provide a block that will be called for the pivot items.
   #
-  # ==Examples
+  # @example
   #   h.pivot(:keys){|items| items.max } => {"a"=>3,"b"=>6,"c"=>9}
   #   h.pivot(:keys){|items| items.join("/") } => {"a"=>"1/2/3","b"=>"4/5/6","c"=>"7/8/9"}
   #   h.pivot(:keys){|items| items.inject{|sum,x| sum+=x } } => {"a"=>6,"b"=>15,"c"=>24}
   #
-  # ==Examples
+  # @example
   #   h.pivot(:vals){|items| items.max } => {"a"=>7,"b"=>8,"c"=>9}
   #   h.pivot(:vals){|items| items.join("-") } => {"a"=>"1-4-7","b"=>"2-5-8","c"=>"3-6-9"}
   #   h.pivot(:vals){|items| items.inject{|sum,x| sum+=x } } => {"a"=>12,"b"=>15,"c"=>18}   

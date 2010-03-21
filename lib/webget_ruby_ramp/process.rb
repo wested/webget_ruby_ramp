@@ -23,6 +23,13 @@ module Process
   # Get the 'ps' command as one long text string.
   #
   # This is typically useful for logging to a text file.
+  #
+  # @example
+  #   pid = 100
+  #   Process.ps(pid)
+  #   => "0.0 bfd86194 21:14:51 ..."
+  #
+  # @return [String] lots of data about the process
 
   def self.ps(pid=Process.pid)
     `#{self.ps_command} #{pid.to_i}`
@@ -30,6 +37,13 @@ module Process
 
 
   # Get the 'ps' command as a hash of keys and values.
+  #
+  # @return [Hash<String,String>] the ps command options as keys and values
+  #
+  # @example
+  #   pid = 100
+  #   Process.pss(pid)
+  #   => {"cp"=>0.0, "esp"=>"bfd86194", "etime"=>"21:14:51", ...  }
   # -
   # OPTIMIZE: add dates, times
 
@@ -60,9 +74,16 @@ module Process
     return h
   end
 
+
   # Get the list of process alias keywords as typically defined by the shell.
   #
   # For example, a shell may consider "%cpu" and "pcpu" to be identical.
+  #
+  # @example
+  #   Process::PS_ALIASES_DEFAULT
+  #   => {"%cpu"=>"pcpu", "sigmask"=>"blocked", "cls"=>"policy", ... }
+  #
+  # @return [Hash<String,String>] process keyword aliases
 
   PS_ALIASES_DEFAULT={
     '%cpu'=>'pcpu',
@@ -106,6 +127,12 @@ module Process
   # Get the list of process alias keywords as typically defined by the shell.
   #
   # For example, a shell may consider "%cpu" and "pcpu" to be identical.
+  #
+  # @example                                                                          
+  #   Process.ps_aliases
+  #   => {"%cpu"=>"pcpu", "sigmask"=>"blocked", "cls"=>"policy", ... }                                   
+  #                                                                                                                
+  # @return [Hash<String,String>] process keyword aliases 
 
   def self.ps_aliases
     @@ps_aliases||=PS_ALIASES_DEFAULT
@@ -115,6 +142,13 @@ module Process
   # Set the list of process alias keywords.
   #
   # For example, a shell may consider "%cpu" and "pcpu" to be identical.
+  #
+  # @example                                                                          
+  #   Process::ps_aliases={ {"%cpu"=>"pcpu", "sigmask"=>"blocked", "cls"=>"policy" }
+  #   => {"%cpu"=>"pcpu", "sigmask"=>"blocked", "cls"=>"policy"}     
+  #        
+  # @param [Hash<String,String>] aliases                                 
+  # @return [Hash<String,String>] aliases
 
   def self.ps_aliases=(aliases)
     @@ps_aliases=aliases
@@ -128,8 +162,12 @@ module Process
 
   # Get the list of process keywords.
   #
-  # ==Example
-  #   Process.ps_keys => ["blocked","group","pending","size"]
+  # @example
+  #   Process.ps_keys
+  #   => ["blocked","group","pending","size"]
+  #
+  # @return [Array<String>] the list of process keywords.
+
 
   def self.ps_keys
     @@ps_keys||=PS_KEYS_DEFAULT
@@ -138,8 +176,11 @@ module Process
  
   # Set the list of process keywords.
   #
-  # ==Example 
+  # @example 
   #   Process.ps_keys = ["blocked","group","pending","size"]
+  #
+  # @param [Array<String>] keywords
+  # @return [Array<String>] keywords
 
   def self.ps_keys=(keys)
     @@ps_keys=keys
@@ -153,8 +194,11 @@ module Process
 
   # Get the process command, i.e. what the sytem will call for the "ps" command.
   #
-  # ==Example
-  #   Process.ps_command => "ps h ww -o blocked,group,pending,size"
+  # @example
+  #   Process.ps_command
+  #   => "ps h ww -o blocked,group,pending,size"
+  #
+  # @return [String] the process command
  
   def self.ps_command
     @@ps_command||=PS_COMMAND_DEFAULT
@@ -163,9 +207,12 @@ module Process
 
   # Set the process command, i.e. what the sytem will call for the "ps" command.
   #
-  # ==Example
+  # @example
   #   Process.ps_command = "ps h ww -o blocked,group,pending,size"
- 
+  #
+  # @param [String] the process command
+  # @return [String] the process command 
+
   def self.ps_command=(command)
     @@ps_command=command
   end

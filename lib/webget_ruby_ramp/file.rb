@@ -4,9 +4,9 @@
 
 class File
 
-  # Return File.join(File.dirname(dirname),strings)
+  # @return [String] File.join(File.dirname(dirname),strings)
   #
-  # ==Example
+  # @example
   #   File.joindir(__FILE__,'foo.txt')
   #   => '/home/john/foo.txt'
 

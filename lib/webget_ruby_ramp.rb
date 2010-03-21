@@ -93,7 +93,7 @@ Testing:
 
 == Integer
 
-* maps: syntactic sugar to yield n times to a block, returning an array of any results (e.g. 3.maps{rand} => [0.4351325,0.7778625,0.158613534])
+* maps: syntactic sugar to yield n times to a block, returning an array of any results
 * odd?: is the number odd?
 
 
@@ -124,7 +124,6 @@ Testing:
 
 * if: returns 0 if the passed flag is any of: nil, false, 0, [], {} and otherwise returns self
 * unless: returns 0 unless the passed flag is any of: nil, false, 0, [], {} and otherwise returns self
-* peta, tera, giga, mega, kilo, hecto, deka, deci, centi, milli, micro, nano: multiply/divide by powers of ten
 
 
 == Object
@@ -199,6 +198,7 @@ Extensions that help debug Ruby programs.
 
 == Changes
 
+- 1.8.2 Refactored Numeric metric names into their own methods
 - 1.8.0 100% rcov coverage
 - 1.7.8 Add rcov testing
 - 1.7.4 Add Class#publicize_methods, Integer#even?, Integer#odd?

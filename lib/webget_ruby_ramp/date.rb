@@ -6,9 +6,9 @@ require 'date'
 
 class Date
 
-  # Return true if the date is a weekday: Mon, Tue, Wed, Thu, Fri
+  # @return [Boolean] true if the date is a weekday: Mon, Tue, Wed, Thu, Fri
   #
-  # ==Example
+  # @example
   #   d = Date.parse('2008-01-01')
   #   d.wday => 2
   #   d.weekday? => true
@@ -18,9 +18,9 @@ class Date
   end
 
 
-  # Return true if the date is a weekend: Sat, Sun
+  # @return [Boolean] true if the date is a weekend: Sat, Sun
   #
-  # ==Example
+  # @example
   #   d = Date.parse('2008-01-05')
   #   d.wday => 6
   #   d.weekend? => true
@@ -30,9 +30,9 @@ class Date
   end
 
 
-  # Return a random date between min & max
+  # @return [Date] a random date between min & max
   #
-  # ==Example
+  # @example
   #   d1= Date.parse('2008-01-01')
   #   d2= Date.parse('2009-01-01')
   #   Date.between(d1,d3) => Date 2008-11-22
@@ -42,9 +42,9 @@ class Date
   end
 
 
-  # Return date in a sql format: YYYY-MM-DD
+  # @return [String] date in a sql format: YYYY-MM-DD
   #
-  # ==Example
+  # @example
   #   d=Date.today
   #   d.to_sql => "2007-12-31"
 
@@ -53,14 +53,14 @@ class Date
   end
 
 
-  # Return the age in years for a given date.
+  # @return [Integer] the age in years for a given date.
   #
-  # ==Example
+  # @example
   #
   #   birthdate=Date.new(1980,10,31)
   #   birthdate.age_years => 28 (where 28 is the correct age for today)
   #
-  # ==Example of custom dates
+  # @example of custom dates
   #
   #   birthdate=Date.new(1980,10,31)
   #
@@ -82,7 +82,7 @@ class Date
   end
 
 
-  # Return the age in days for a given date.
+  # @return [Integer] the age in days for a given date.
 
   def age_days(compare_date=Date.today)
     (compare_date.is_a? Date) or raise ArgumentError, "compare_date must be a date"

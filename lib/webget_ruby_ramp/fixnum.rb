@@ -5,9 +5,9 @@
 class Fixnum
 
 
-  # Return true if the number is even
+  # @return true if the number is even
   #
-  # ==Example
+  # @example
   #   2.even? => true
   #   3.even? => false
   #
@@ -18,14 +18,11 @@ class Fixnum
   end
 
 
-  # Return true if the number is odd
+  # @return true if the number is odd
   #
-  # ==Example
+  # @example
   #   2.odd? => false
   #   3.odd? => true
-  #
-  # n.b. we test to see if this method already exists,
-  # because this method is defined in Ruby 1.8.7 onward.
   #
   # From http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-core/4516
   

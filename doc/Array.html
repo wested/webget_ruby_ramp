@@ -1,1377 +1,1906 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <head>
+    <meta name="Content-Type" content="text/html; charset=UTF-8" />
+<title>Class: Array</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
 
-	<title>Class: Array</title>
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
 
-	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (A)</a> &raquo; 
+    
+    
+    <span class="title">Array</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
 
-	<script src="./js/jquery.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="./js/thickbox-compressed.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="./js/quicksearch.js" type="text/javascript"
-		charset="utf-8"></script>
-	<script src="./js/darkfish.js" type="text/javascript"
-		charset="utf-8"></script>
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
 
-</head>
-<body class="class">
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Array 
+  
+  
+</h1>
 
-	<div id="metadata">
-		<div id="file-metadata">
-			<div id="file-list-section" class="section">
-				<h3 class="section-header">In Files</h3>
-				<div class="section-body">
-					<ul>
-					
-						<li><a href="./lib/webget_ruby_ramp/array_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="lib/webget_ruby_ramp/array.rb">lib/webget_ruby_ramp/array.rb</a></li>
-					
-						<li><a href="./test/webget_ruby_ramp/class_test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="test/webget_ruby_ramp/class_test.rb">test/webget_ruby_ramp/class_test.rb</a></li>
-					
-					</ul>
-				</div>
-			</div>
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><a href="Object.html" title="Object (class)">Object</a></span>
+      
+        <ul class="fullTree">
+          <li><a href="Object.html" title="Object (class)">Object</a></li>
+          
+            <li class="next">Array</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/webget_ruby_ramp/array.rb</dd>
+  
+</dl>
+<div class="clear"></div>
 
-			
-		</div>
-
-		<div id="class-metadata">
-
-			<!-- Parent Class -->
-			
-			<div id="parent-class-section" class="section">
-				<h3 class="section-header">Parent</h3>
-				
-				<p class="link"><a href="Object.html">Object</a></p>
-				
-			</div>
-			
-
-			<!-- Namespace Contents -->
-			
-
-			<!-- Method Quickref -->
-			
-			<div id="method-list-section" class="section">
-				<h3 class="section-header">Methods</h3>
-				<ul class="link-list">
-					
-					<li><a href="#M000122">#cdr</a></li>
-					
-					<li><a href="#M000125">#cdr!</a></li>
-					
-					<li><a href="#M000114">#choice</a></li>
-					
-					<li><a href="#M000115">#choices</a></li>
-					
-					<li><a href="#M000118">#divvy</a></li>
-					
-					<li><a href="#M000348">#grep_sort_to_s</a></li>
-					
-					<li><a href="#M000120">#intersect</a></li>
-					
-					<li><a href="#M000100">#join</a></li>
-					
-					<li><a href="#M000116">#onto</a></li>
-					
-					<li><a href="#M000123">#rest</a></li>
-					
-					<li><a href="#M000126">#rest!</a></li>
-					
-					<li><a href="#M000113">#rotate!</a></li>
-					
-					<li><a href="#M000101">#ruby_join</a></li>
-					
-					<li><a href="#M000121">#shifted</a></li>
-					
-					<li><a href="#M000124">#shifted!</a></li>
-					
-					<li><a href="#M000128">#shuffle</a></li>
-					
-					<li><a href="#M000127">#shuffle!</a></li>
-					
-					<li><a href="#M000111">#size?</a></li>
-					
-					<li><a href="#M000117">#slices</a></li>
-					
-					<li><a href="#M000129">#to_csv</a></li>
-					
-					<li><a href="#M000131">#to_tdf</a></li>
-					
-					<li><a href="#M000130">#to_tsv</a></li>
-					
-					<li><a href="#M000119">#union</a></li>
-					
-				</ul>
-			</div>
-			
-
-			<!-- Included Modules -->
-			
-		</div>
-
-		<div id="project-metadata">
-			
-			
-			<div id="fileindex-section" class="section project-section">
-				<h3 class="section-header">Files</h3>
-				<ul>
-				
-					<li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
-				
-					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
-				
-					<li class="file"><a href="./coverage/index_html.html">index.html</a></li>
-				
-					<li class="file"><a href="./coverage/jquery-1_3_2_min_js.html">jquery-1.3.2.min.js</a></li>
-				
-					<li class="file"><a href="./coverage/jquery_tablesorter_min_js.html">jquery.tablesorter.min.js</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-array_rb_html.html">lib-webget_ruby_ramp-array_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-class_rb_html.html">lib-webget_ruby_ramp-class_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-csv_rb_html.html">lib-webget_ruby_ramp-csv_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-date_rb_html.html">lib-webget_ruby_ramp-date_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-enumerable_rb_html.html">lib-webget_ruby_ramp-enumerable_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-file_rb_html.html">lib-webget_ruby_ramp-file_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-fixnum_rb_html.html">lib-webget_ruby_ramp-fixnum_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-hash_rb_html.html">lib-webget_ruby_ramp-hash_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-integer_rb_html.html">lib-webget_ruby_ramp-integer_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-io_rb_html.html">lib-webget_ruby_ramp-io_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-kernel_rb_html.html">lib-webget_ruby_ramp-kernel_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-math_rb_html.html">lib-webget_ruby_ramp-math_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-nil_rb_html.html">lib-webget_ruby_ramp-nil_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-numeric_rb_html.html">lib-webget_ruby_ramp-numeric_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-object_rb_html.html">lib-webget_ruby_ramp-object_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-process_rb_html.html">lib-webget_ruby_ramp-process_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-string_rb_html.html">lib-webget_ruby_ramp-string_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-symbol_rb_html.html">lib-webget_ruby_ramp-symbol_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-time_rb_html.html">lib-webget_ruby_ramp-time_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-xml_rb_html.html">lib-webget_ruby_ramp-xml_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp-yaml_rb_html.html">lib-webget_ruby_ramp-yaml_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/lib-webget_ruby_ramp_rb_html.html">lib-webget_ruby_ramp_rb.html</a></li>
-				
-					<li class="file"><a href="./coverage/print_css.html">print.css</a></li>
-				
-					<li class="file"><a href="./coverage/rcov_js.html">rcov.js</a></li>
-				
-					<li class="file"><a href="./coverage/screen_css.html">screen.css</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/io_test_txt.html">io_test.txt</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_1_xml.html">xml_test_1.xml</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_2_xml.html">xml_test_2.xml</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_clean_html.html">xml_test_msword_clean.html</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/xml_test_msword_dirty_html.html">xml_test_msword_dirty.html</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_1_yml.html">yaml_test_1.yml</a></li>
-				
-					<li class="file"><a href="./test/webget_ruby_ramp/yaml_test_2_yml.html">yaml_test_2.yml</a></li>
-				
-					<li class="file"><a href="./webget_ruby_ramp_gemspec.html">webget_ruby_ramp.gemspec</a></li>
-				
-					<li class="file"><a href="./webget_ruby_ramp_sha512_txt.html">webget_ruby_ramp.sha512.txt</a></li>
-				
-				</ul>
-			</div>
-			
-
-			<div id="classindex-section" class="section project-section">
-				<h3 class="section-header">Class Index
-					<span class="search-toggle"><img src="./images/find.png"
-						height="16" width="16" alt="[+]"
-						title="show/hide quicksearch" /></span></h3>
-				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-				<fieldset>
-					<legend>Quicksearch</legend>
-					<input type="text" name="quicksearch" value=""
-						class="quicksearch-field" />
-				</fieldset>
-				</form>
-
-				<ul class="link-list">
-				
-					<li><a href="./REXML.html">REXML</a></li>
-				
-					<li><a href="./REXML/Attributes.html">REXML::Attributes</a></li>
-				
-					<li><a href="./REXML/Document.html">REXML::Document</a></li>
-				
-					<li><a href="./REXML/Element.html">REXML::Element</a></li>
-				
-					<li><a href="./EnumerableTest.html">EnumerableTest</a></li>
-				
-					<li><a href="./Array.html">Array</a></li>
-				
-					<li><a href="./ArrayTest.html">ArrayTest</a></li>
-				
-					<li><a href="./CSV.html">CSV</a></li>
-				
-					<li><a href="./CSVTest.html">CSVTest</a></li>
-				
-					<li><a href="./Class.html">Class</a></li>
-				
-					<li><a href="./ClassTest.html">ClassTest</a></li>
-				
-					<li><a href="./Date.html">Date</a></li>
-				
-					<li><a href="./DateTest.html">DateTest</a></li>
-				
-					<li><a href="./Enumerable.html">Enumerable</a></li>
-				
-					<li><a href="./File.html">File</a></li>
-				
-					<li><a href="./FileTestCase.html">FileTestCase</a></li>
-				
-					<li><a href="./Fixnum.html">Fixnum</a></li>
-				
-					<li><a href="./FixnumTest.html">FixnumTest</a></li>
-				
-					<li><a href="./Hash.html">Hash</a></li>
-				
-					<li><a href="./HashTest.html">HashTest</a></li>
-				
-					<li><a href="./IO.html">IO</a></li>
-				
-					<li><a href="./IOTest.html">IOTest</a></li>
-				
-					<li><a href="./Integer.html">Integer</a></li>
-				
-					<li><a href="./IntegerTest.html">IntegerTest</a></li>
-				
-					<li><a href="./Kernel.html">Kernel</a></li>
-				
-					<li><a href="./KernelTest.html">KernelTest</a></li>
-				
-					<li><a href="./Math.html">Math</a></li>
-				
-					<li><a href="./MathTest.html">MathTest</a></li>
-				
-					<li><a href="./MockRequest.html">MockRequest</a></li>
-				
-					<li><a href="./My.html">My</a></li>
-				
-					<li><a href="./NilClass.html">NilClass</a></li>
-				
-					<li><a href="./NilTest.html">NilTest</a></li>
-				
-					<li><a href="./Numeric.html">Numeric</a></li>
-				
-					<li><a href="./NumericTest.html">NumericTest</a></li>
-				
-					<li><a href="./Object.html">Object</a></li>
-				
-					<li><a href="./ObjectTest.html">ObjectTest</a></li>
-				
-					<li><a href="./Process.html">Process</a></li>
-				
-					<li><a href="./ProcessTest.html">ProcessTest</a></li>
-				
-					<li><a href="./String.html">String</a></li>
-				
-					<li><a href="./StringTest.html">StringTest</a></li>
-				
-					<li><a href="./Symbol.html">Symbol</a></li>
-				
-					<li><a href="./SymbolTest.html">SymbolTest</a></li>
-				
-					<li><a href="./Time.html">Time</a></li>
-				
-					<li><a href="./TimeTest.html">TimeTest</a></li>
-				
-					<li><a href="./XML.html">XML</a></li>
-				
-					<li><a href="./XMLTest.html">XMLTest</a></li>
-				
-					<li><a href="./YAML.html">YAML</a></li>
-				
-					<li><a href="./YAMLTest.html">YAMLTest</a></li>
-				
-				</ul>
-				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
-			</div>
-
-			
-		</div>
-	</div>
-
-	<div id="documentation">
-		<h1 class="class">Array</h1>
-
-		<div id="description">
-			<p>
-<a href="Array.html">Array</a> extensions
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Array extensions
 </p>
 
-		</div>
 
-		<!-- Constants -->
-		
+  </div>
+</div>
+<div class="tags">
+  
+</div>
 
-		<!-- Attributes -->
-		
 
-		<!-- Methods -->
-		
-		<div id="public-instance-method-details" class="method-section section">
-			<h3 class="section-header">Public Instance Methods</h3>
+  <h2>Instance Method Summary</h2>
 
-		
-			<div id="cdr-method" class="method-detail method-alias">
-				<a name="M000122"></a>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#choice-instance_method" title="#choice (instance method)">- (Object) <strong>choice</strong> </a>
+    
 
-				<div class="method-heading">
-				
-					<span class="method-name">cdr</span><span
-						class="method-args">(number_of_items=1)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
+    
+  </span>
+  
+  
+  
+  
+  
 
-				<div class="method-description">
-					
-					<p>
-Alias for <a href="Array.html#M000121">shifted</a>
+  
+    <span class="summary_desc">
+A random item from the array.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#choices-instance_method" title="#choices (instance method)">- (Array) <strong>choices</strong>(count) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+A new array filled with <em>count</em> calls to choice.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#divvy-instance_method" title="#divvy (instance method)">- (Array&lt;Array&lt;Object&gt;&gt;) <strong>divvy</strong>(number_of_slices) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Divvy the array, like a pie, into <em>n</em> number of slices.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#intersect-instance_method" title="#intersect (instance method)">- (Array) <strong>intersect</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+The intersection of the array&#8217;s items.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#join-instance_method" title="#join (instance method)">- (String) <strong>join</strong>(*fixes) </a>
+    
+
+    
+      (also: #ruby_join)
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Concatenate the items into a string by join.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#onto-instance_method" title="#onto (instance method)">- (Hash) <strong>onto</strong>(values) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+A hash of this array&#8217;s items as keys, mapped onto another
+array&#8217;s items as values.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rotate%21-instance_method" title="#rotate! (instance method)">- (Array) <strong>rotate!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Move the first item to the last by using Array#shift and Array#push.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shifted-instance_method" title="#shifted (instance method)">- (Array) <strong>shifted</strong>(number_of_items = 1) </a>
+    
+
+    
+      (also: #rest, #cdr)
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+The rest of the items of self, after a shift.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shifted%21-instance_method" title="#shifted! (instance method)">- (Array) <strong>shifted!</strong>(number_of_items = 1) </a>
+    
+
+    
+      (also: #rest!, #cdr!)
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Delete the first <em>number_of_items</em> items.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shuffle-instance_method" title="#shuffle (instance method)">- (Array) <strong>shuffle</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+A new array with the items shuffled.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shuffle%21-instance_method" title="#shuffle! (instance method)">- (Array) <strong>shuffle!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Randomly arrange the array items.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#size%3F-instance_method" title="#size? (instance method)">- (Boolean) <strong>size?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+True if size > 0.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#slices-instance_method" title="#slices (instance method)">- (Array&lt;Array&lt;Object&gt;&gt;) <strong>slices</strong>(slice_length) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+Slice the array.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_csv-instance_method" title="#to_csv (instance method)">- (String) <strong>to_csv</strong>(ops = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+A CSV (Comma Separated Value) string of this array.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_tsv-instance_method" title="#to_tsv (instance method)">- (String) <strong>to_tsv</strong>(ops = {}) </a>
+    
+
+    
+      (also: #to_tdf)
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+A TSV (Tab Separated Value) string representation of a multi-dimensional
+array.
+
+</span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#union-instance_method" title="#union (instance method)">- (Array) <strong>union</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc">
+The union of the array&#8217;s items.
+
+</span>
+  
+</li>
+
+    
+  </ul>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="choice-instance_method">
+  
+    - (<tt><a href="Object.html" title="Object (class)">Object</a></tt>) <strong>choice</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A random item from the array
 </p>
-					
 
-					
-				</div>
 
-				
-			</div>
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='choice identifier id'>choice</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>2</span>
+  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='choice identifier id'>choice</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>4</span>
+  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='choice identifier id'>choice</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>3</span>
 
-		
-			<div id="cdr--method" class="method-detail method-alias">
-				<a name="M000125"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">cdr!</span><span
-						class="method-args">(number_of_items=1)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Alias for <a href="Array.html#M000124">shifted!</a>
-</p>
-					
-
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="choice-method" class="method-detail ">
-				<a name="M000114"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">choice</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Return a random item from the array
-</p>
-<h2>Examples</h2>
-<pre>
-  [1,2,3,4].choice =&gt; 2
-  [1,2,3,4].choice =&gt; 4
-  [1,2,3,4].choice =&gt; 3
+<span class='Implemented constant id'>Implemented</span> <span class='in in kw'>in</span> <span class='Ruby constant id'>Ruby</span> <span class='float val'>1.9</span>
 </pre>
-<p>
-Implemented in Ruby 1.9
-</p>
-					
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Object.html" title="Object (class)">Object</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a random item from the array
 
-					
-					<div class="method-source-code"
-						id="choice-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/array.rb, line 88</span>
-88:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">choice</span>
-89:     <span class="ruby-keyword kw">self</span>[<span class="ruby-constant">Kernel</span>.<span class="ruby-identifier">rand</span>(<span class="ruby-identifier">size</span>)]
-90:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+      
+    </li>
+  
+</ul>
 
-		
-			<div id="choices-method" class="method-detail ">
-				<a name="M000115"></a>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-				<div class="method-heading">
-				
-					<span class="method-name">choices</span><span
-						class="method-args">(count)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
 
-				<div class="method-description">
-					
-					<p>
-Return a new array filled with <em>count</em> calls to choice
-</p>
-<h2>Examples</h2>
-<pre>
-  [1,2,3,4].choices(2) =&gt; [3,1]
-  [1,2,3,4].choices(3) =&gt; [4,2,3]
+90
+91
+92</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/array.rb', line 90</span>
+
+<span class='def def kw'>def</span> <span class='choice identifier id'>choice</span>
+  <span class='self self kw'>self</span><span class='lbrack token'>[</span><span class='Kernel constant id'>Kernel</span><span class='dot token'>.</span><span class='rand identifier id'>rand</span><span class='lparen token'>(</span><span class='size identifier id'>size</span><span class='rparen token'>)</span><span class='rbrack token'>]</span>
+<span class='end end kw'>end</span>
 </pre>
-					
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="choices-instance_method">
+  
+    - (<tt><a href="" title="Array (class)">Array</a></tt>) <strong>choices</strong>(count) 
+  
 
-					
-					<div class="method-source-code"
-						id="choices-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/array.rb, line 99</span>
- 99:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">choices</span>(<span class="ruby-identifier">count</span>)
-100:     <span class="ruby-identifier">arr</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
-101:     <span class="ruby-identifier">count</span>.<span class="ruby-identifier">times</span> { <span class="ruby-identifier">arr</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">choice</span> }
-102:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">arr</span>
-103:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new array filled with <em>count</em> calls to choice
+</p>
 
-				
-			</div>
 
-		
-			<div id="divvy-method" class="method-detail ">
-				<a name="M000118"></a>
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='choices identifier id'>choices</span><span class='lparen token'>(</span><span class='integer val'>2</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>1</span><span class='rbrack token'>]</span>
+  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='choices identifier id'>choices</span><span class='lparen token'>(</span><span class='integer val'>3</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='rbrack token'>]</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Array (class)">Array</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new array filled with <em>count</em> calls to choice
 
-				<div class="method-heading">
-				
-					<span class="method-name">divvy</span><span
-						class="method-args">(number_of_slices)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
 
-				<div class="method-description">
-					
-					<p>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+101
+102
+103
+104
+105</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/array.rb', line 101</span>
+
+<span class='def def kw'>def</span> <span class='choices identifier id'>choices</span><span class='lparen token'>(</span><span class='count identifier id'>count</span><span class='rparen token'>)</span>
+  <span class='arr identifier id'>arr</span> <span class='assign token'>=</span> <span class='Array constant id'>Array</span><span class='dot token'>.</span><span class='new identifier id'>new</span>
+  <span class='count identifier id'>count</span><span class='dot token'>.</span><span class='times identifier id'>times</span> <span class='lbrace token'>{</span> <span class='arr identifier id'>arr</span> <span class='lshft op'>&lt;&lt;</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='choice identifier id'>choice</span> <span class='rbrace token'>}</span>
+  <span class='return return kw'>return</span> <span class='arr identifier id'>arr</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="divvy-instance_method">
+  
+    - (<tt><a href="" title="Array (class)">Array</a>&lt;<a href="" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;&gt;</tt>) <strong>divvy</strong>(number_of_slices) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
 Divvy the array, like a pie, into <em>n</em> number of slices.
 </p>
-<p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>5</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='divvy identifier id'>divvy</span><span class='lparen token'>(</span><span class='integer val'>2</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>5</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>5</span><span class='comma token'>,</span><span class='integer val'>6</span><span class='comma token'>,</span><span class='integer val'>7</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='divvy identifier id'>divvy</span><span class='lparen token'>(</span><span class='integer val'>3</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>5</span><span class='comma token'>,</span><span class='integer val'>6</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>7</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+
+<span class='If constant id'>If</span> <span class='the identifier id'>the</span> <span class='array identifier id'>array</span> <span class='size identifier id'>size</span> <span class='so identifier id'>so</span> <span class='small identifier id'>small</span> <span class='compared identifier id'>compared</span> <span class='to identifier id'>to</span> <span class='_n_ identifier id'>_n_</span> <span class='that identifier id'>that</span> <span class='there identifier id'>there</span> <span class='is identifier id'>is</span>
+<span class='no identifier id'>no</span> <span class='mathematical identifier id'>mathematical</span> <span class='way identifier id'>way</span> <span class='to identifier id'>to</span> <span class='_n_ identifier id'>_n_</span> <span class='slices identifier id'>slices</span><span class='comma token'>,</span> <span class='then then kw'>then</span> <span class='divvy identifier id'>divvy</span> <span class='will identifier id'>will</span> <span class='return return kw'>return</span>
+<span class='as identifier id'>as</span> <span class='many identifier id'>many</span> <span class='slices identifier id'>slices</span> <span class='as identifier id'>as</span> <span class='it identifier id'>it</span> <span class='can identifier id'>can</span><span class='dot token'>.</span>
+</pre>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>5</span><span class='comma token'>,</span><span class='integer val'>6</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='divvy identifier id'>divvy</span><span class='lparen token'>(</span><span class='integer val'>4</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>5</span><span class='comma token'>,</span><span class='integer val'>6</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Array (class)">Array</a>&lt;<a href="" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+items grouped into <em>n</em> slices
+
+
 If the array divides evenly, then each slice has size/n items.
-</p>
-<p>
+
+
 Otherwise, divvy makes a best attempt by rounding up to give earlier slices
 one more item, which makes the last slice smaller:
-</p>
-<h2>Examples</h2>
-<pre>
-  [1,2,3,4,5].divvy(2) =&gt; [[1,2,3],[4,5]]
-  [1,2,3,4,5,6,7].divvy(3) =&gt; [[1,2,3],[4,5,6],[7]]
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+178
+179
+180
+181
+182</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/array.rb', line 178</span>
+
+<span class='def def kw'>def</span> <span class='divvy identifier id'>divvy</span><span class='lparen token'>(</span><span class='number_of_slices identifier id'>number_of_slices</span><span class='rparen token'>)</span>
+  <span class='lparen token'>(</span><span class='number_of_slices identifier id'>number_of_slices</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span> <span class='Integer constant id'>Integer</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='lparen token'>(</span><span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;number_of_slices must be an integer&quot;</span><span class='rparen token'>)</span>
+  <span class='lparen token'>(</span><span class='number_of_slices identifier id'>number_of_slices</span> <span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='lparen token'>(</span><span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;number_of_slices must be &gt; 0&quot;</span><span class='rparen token'>)</span>
+  <span class='return return kw'>return</span> <span class='slices identifier id'>slices</span><span class='lparen token'>(</span><span class='lparen token'>(</span><span class='length identifier id'>length</span><span class='dot token'>.</span><span class='to_f identifier id'>to_f</span><span class='div op'>/</span><span class='number_of_slices identifier id'>number_of_slices</span><span class='dot token'>.</span><span class='to_f identifier id'>to_f</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='ceil identifier id'>ceil</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
 </pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="intersect-instance_method">
+  
+    - (<tt><a href="" title="Array (class)">Array</a></tt>) <strong>intersect</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The intersection of the array&#8217;s items.
+</p>
 <p>
-If the array size so small compared to <em>n</em> that there is no
-mathematical way to <em>n</em> slices, then divvy will return as many
-slices as it can.
+In typical usage, each item is an array.
 </p>
-<h2>Examples</h2>
-<pre>
-  [1,2,3,4,5,6].divvy(4) =&gt; [[1,2],[3,4],[5,6]]
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='arr identifier id'>arr</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>5</span><span class='comma token'>,</span><span class='integer val'>6</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+  <span class='arr identifier id'>arr</span><span class='dot token'>.</span><span class='intersect identifier id'>intersect</span>
+  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='rbrack token'>]</span>
 </pre>
-					
+    
+      <h4>
+with proc
 
-					
-					<div class="method-source-code"
-						id="divvy-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/array.rb, line 172</span>
-172:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">divvy</span>(<span class="ruby-identifier">number_of_slices</span>)
-173:     (<span class="ruby-identifier">number_of_slices</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Integer</span>) <span class="ruby-keyword kw">or</span> (<span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;number_of_slices must be an integer&quot;</span>)
-174:     (<span class="ruby-identifier">number_of_slices</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>) <span class="ruby-keyword kw">or</span> (<span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;number_of_slices must be &gt; 0&quot;</span>)
-175:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">slices</span>((<span class="ruby-identifier">length</span>.<span class="ruby-identifier">to_f</span><span class="ruby-operator">/</span><span class="ruby-identifier">number_of_slices</span>.<span class="ruby-identifier">to_f</span>).<span class="ruby-identifier">ceil</span>)
-176:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="grep-sort-to-s-method" class="method-detail ">
-				<a name="M000348"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">grep_sort_to_s</span><span
-						class="method-args">(regexp)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p class="missing-docs">(Not documented)</p>
-					
-
-					
-					<div class="method-source-code"
-						id="grep-sort-to-s-source">
-<pre>
-    <span class="ruby-comment cmt"># File test/webget_ruby_ramp/class_test.rb, line 35</span>
-35:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">grep_sort_to_s</span>(<span class="ruby-identifier">regexp</span>)
-36:     <span class="ruby-identifier">grep</span>(<span class="ruby-identifier">regexp</span>).<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_s</span>}
-37:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="intersect-method" class="method-detail ">
-				<a name="M000120"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">intersect</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Return the intersection of the array&#8217;s items. In typical usage, each
-item is an array.
-</p>
-<h2>Examples</h2>
-<pre>
-  arr=[[1,2,3,4],[3,4,5,6]]
-  arr.intersect
-  =&gt; [3,4]
+</h4>
+      <pre class="example code">  <span class='arr identifier id'>arr</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:foo</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='intersect identifier id'>intersect</span>
+  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='foos identifier id'>foos</span> <span class='that identifier id'>that</span> <span class='are identifier id'>are</span> <span class='in in kw'>in</span> <span class='all identifier id'>all</span> <span class='of identifier id'>of</span> <span class='the identifier id'>the</span> <span class='array identifier id'>array</span> <span class='items identifier id'>items</span>
 </pre>
-<h2>Examples with proc</h2>
-<pre>
-  arr.map(&amp;:foo).intersect
-  =&gt; foos that are in all of the array items
+    
+      <h4>
+with nil
+
+</h4>
+      <pre class="example code">  <span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='intersect identifier id'>intersect</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
 </pre>
-<h2>Example with nil</h2>
-<pre>
-  [].intersect =&gt; []
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Array (class)">Array</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the intersection of the array&#8217;s items.
+
+
+In typical usage, each item is an array.
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+228
+229
+230</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/array.rb', line 228</span>
+
+<span class='def def kw'>def</span> <span class='intersect identifier id'>intersect</span>
+  <span class='inject identifier id'>inject</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='inj identifier id'>inj</span><span class='comma token'>,</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='inj identifier id'>inj</span> <span class='bitand op'>&amp;</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='to_a identifier id'>to_a</span> <span class='rbrace token'>}</span> <span class='orop op'>||</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+<span class='end end kw'>end</span>
 </pre>
-					
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="join-instance_method">
+  
+    - (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>join</strong>(*fixes) 
+  
 
-					
-					<div class="method-source-code"
-						id="intersect-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/array.rb, line 220</span>
-220:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">intersect</span>
-221:     <span class="ruby-identifier">inject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">inj</span>,<span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">inj</span> <span class="ruby-operator">&amp;</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">to_a</span> } <span class="ruby-operator">||</span> []
-222:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="join-method" class="method-detail ">
-				<a name="M000100"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">join</span><span
-						class="method-args">(*fixes)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='ruby_join-instance_method'>ruby_join</span></span>
+    </span>
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
 Concatenate the items into a string by join.
 </p>
-<h2>Typical <a href="Array.html#M000100">Array#join</a> with infix</h2>
-<pre>
-  list=['a','b','c']
-  list.join(&quot;*&quot;) =&gt; &quot;a*b*c&quot;
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4>
+Typical Array#join with infix
+
+</h4>
+      <pre class="example code">  <span class='list identifier id'>list</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
+  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot;*&quot;</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;a*b*c&quot;</span>
 </pre>
-<h2>Improved join with infix, prefix, suffix</h2>
-<pre>
-  list=['a','b','c']
-  list.join(&quot;*&quot;,&quot;[&quot;,&quot;]&quot;) =&gt; &quot;[a]*[b]*[c]&quot;
+    
+      <h4>
+Improved join with infix, prefix, suffix
+
+</h4>
+      <pre class="example code">  <span class='list identifier id'>list</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
+  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot;*&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;[&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;]&quot;</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;[a]*[b]*[c]&quot;</span>
 </pre>
-<h2>Improved join with just prefix and suffix</h2>
-<pre>
-  list=['a','b','c']
-  list.join(&quot;[&quot;,&quot;]&quot;) =&gt; &quot;[a][b][c]&quot;
+    
+      <h4>
+Improved join with just prefix and suffix
+
+</h4>
+      <pre class="example code">  <span class='list identifier id'>list</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
+  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot;[&quot;</span><span class='comma token'>,</span><span class='string val'>&quot;]&quot;</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;[a][b][c]&quot;</span>
 </pre>
-					
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+concatenated string
 
-					
-					<div class="method-source-code"
-						id="join-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/array.rb, line 29</span>
-29:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">join</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">fixes</span>)
-30:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">fixes</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>) <span class="ruby-keyword kw">then</span> <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ruby_join</span>(<span class="ruby-identifier">fixes</span>) <span class="ruby-keyword kw">end</span>
-31:     <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">fixes</span>.<span class="ruby-identifier">size</span>
-32:     <span class="ruby-keyword kw">when</span> <span class="ruby-value">0</span>
-33:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ruby_join</span>()
-34:     <span class="ruby-keyword kw">when</span> <span class="ruby-value">1</span>
-35:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ruby_join</span>(<span class="ruby-identifier">fixes</span>[<span class="ruby-value">0</span>])
-36:     <span class="ruby-keyword kw">when</span> <span class="ruby-value">2</span>
-37:       <span class="ruby-identifier">prefix</span>=<span class="ruby-identifier">fixes</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">to_s</span>
-38:       <span class="ruby-identifier">suffix</span>=<span class="ruby-identifier">fixes</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_s</span>
-39:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">suffix</span>}.<span class="ruby-identifier">ruby_join</span>()
-40:     <span class="ruby-keyword kw">when</span> <span class="ruby-value">3</span>
-41:       <span class="ruby-identifier">infix</span> =<span class="ruby-identifier">fixes</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">to_s</span>
-42:       <span class="ruby-identifier">prefix</span>=<span class="ruby-identifier">fixes</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">to_s</span>
-43:       <span class="ruby-identifier">suffix</span>=<span class="ruby-identifier">fixes</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">to_s</span>
-44:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">prefix</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">suffix</span>}.<span class="ruby-identifier">ruby_join</span>(<span class="ruby-identifier">infix</span>)
-45:     <span class="ruby-keyword kw">else</span>
-46:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;join() takes 0-3 arguments; you gave #{fixes.size}]&quot;</span>
-47:     <span class="ruby-keyword kw">end</span>
-48:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-				<div class="aliases">
-					Also aliased as: <a href="Array.html#M000101">ruby_join</a>
-				</div>
-				
-			</div>
+      
+    </li>
+  
+</ul>
 
-		
-			<div id="onto-method" class="method-detail ">
-				<a name="M000116"></a>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-				<div class="method-heading">
-				
-					<span class="method-name">onto</span><span
-						class="method-args">(values)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
 
-				<div class="method-description">
-					
-					<p>
-Return a hash of this array&#8217;s items as keys mapped onto another
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/array.rb', line 31</span>
+
+<span class='def def kw'>def</span> <span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='mult op'>*</span><span class='fixes identifier id'>fixes</span><span class='rparen token'>)</span>
+  <span class='if if kw'>if</span> <span class='fixes identifier id'>fixes</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span><span class='lparen token'>(</span><span class='String constant id'>String</span><span class='rparen token'>)</span> <span class='then then kw'>then</span> <span class='return return kw'>return</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='ruby_join identifier id'>ruby_join</span><span class='lparen token'>(</span><span class='fixes identifier id'>fixes</span><span class='rparen token'>)</span> <span class='end end kw'>end</span>
+  <span class='case case kw'>case</span> <span class='fixes identifier id'>fixes</span><span class='dot token'>.</span><span class='size identifier id'>size</span>
+  <span class='when when kw'>when</span> <span class='integer val'>0</span>
+    <span class='return return kw'>return</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='ruby_join identifier id'>ruby_join</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='when when kw'>when</span> <span class='integer val'>1</span>
+    <span class='return return kw'>return</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='ruby_join identifier id'>ruby_join</span><span class='lparen token'>(</span><span class='fixes identifier id'>fixes</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='when when kw'>when</span> <span class='integer val'>2</span>
+    <span class='prefix identifier id'>prefix</span><span class='assign token'>=</span><span class='fixes identifier id'>fixes</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span>
+    <span class='suffix identifier id'>suffix</span><span class='assign token'>=</span><span class='fixes identifier id'>fixes</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span>
+    <span class='return return kw'>return</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='prefix identifier id'>prefix</span> <span class='plus op'>+</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span> <span class='plus op'>+</span> <span class='suffix identifier id'>suffix</span><span class='rbrace token'>}</span><span class='dot token'>.</span><span class='ruby_join identifier id'>ruby_join</span><span class='lparen token'>(</span><span class='rparen token'>)</span>
+  <span class='when when kw'>when</span> <span class='integer val'>3</span>
+    <span class='infix identifier id'>infix</span> <span class='assign token'>=</span><span class='fixes identifier id'>fixes</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span>
+    <span class='prefix identifier id'>prefix</span><span class='assign token'>=</span><span class='fixes identifier id'>fixes</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span>
+    <span class='suffix identifier id'>suffix</span><span class='assign token'>=</span><span class='fixes identifier id'>fixes</span><span class='lbrack token'>[</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span>
+    <span class='return return kw'>return</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='prefix identifier id'>prefix</span> <span class='plus op'>+</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span> <span class='plus op'>+</span> <span class='suffix identifier id'>suffix</span><span class='rbrace token'>}</span><span class='dot token'>.</span><span class='ruby_join identifier id'>ruby_join</span><span class='lparen token'>(</span><span class='infix identifier id'>infix</span><span class='rparen token'>)</span>
+  <span class='else else kw'>else</span>
+    <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='dstring node'>&quot;join() takes 0-3 arguments; you gave #{fixes.size}]&quot;</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="onto-instance_method">
+  
+    - (<tt><a href="Hash.html" title="Hash (class)">Hash</a></tt>) <strong>onto</strong>(values) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A hash of this array&#8217;s items as keys, mapped onto another
 array&#8217;s items as values.
 </p>
-<h2>Example</h2>
-<pre>
-  foo=[:a,:b,:c]
-  goo=[:x,:y,:z]
-  foo.onto(goo) =&gt; {:a=&gt;:x, :b=&gt;:y, :c=&gt;:z}
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='foo identifier id'>foo</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='symbol val'>:a</span><span class='comma token'>,</span><span class='symbol val'>:b</span><span class='comma token'>,</span><span class='symbol val'>:c</span><span class='rbrack token'>]</span>
+  <span class='goo identifier id'>goo</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='symbol val'>:x</span><span class='comma token'>,</span><span class='symbol val'>:y</span><span class='comma token'>,</span><span class='symbol val'>:z</span><span class='rbrack token'>]</span>
+  <span class='foo identifier id'>foo</span><span class='dot token'>.</span><span class='onto identifier id'>onto</span><span class='lparen token'>(</span><span class='goo identifier id'>goo</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrace token'>{</span><span class='symbol val'>:a=</span><span class='gt op'>&gt;</span><span class='symbol val'>:x</span><span class='comma token'>,</span> <span class='symbol val'>:b=</span><span class='gt op'>&gt;</span><span class='symbol val'>:y</span><span class='comma token'>,</span> <span class='symbol val'>:c=</span><span class='gt op'>&gt;</span><span class='symbol val'>:z</span><span class='rbrace token'>}</span>
+
+<span class='This constant id'>This</span> <span class='is identifier id'>is</span> <span class='identical identifier id'>identical</span> <span class='to identifier id'>to</span> <span class='calling identifier id'>calling</span> <span class='foo identifier id'>foo</span><span class='dot token'>.</span><span class='zip identifier id'>zip</span><span class='lparen token'>(</span><span class='values identifier id'>values</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_h identifier id'>to_h</span>
 </pre>
-<p>
-This is identical to calling foo.zip(values).to_h
-</p>
-					
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="Hash.html" title="Hash (class)">Hash</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a hash of this array&#8217;s items as keys, mapped onto another
+array&#8217;s items as values.
 
-					
-					<div class="method-source-code"
-						id="onto-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/array.rb, line 116</span>
-116:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">onto</span>(<span class="ruby-identifier">values</span>)
-117:     <span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-identifier">values</span>.<span class="ruby-identifier">size</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Array size #{size} must match values size #{size}&quot;</span> 
-118:     <span class="ruby-identifier">zip</span>(<span class="ruby-identifier">values</span>).<span class="ruby-identifier">to_h</span>
-119:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+      
+    </li>
+  
+</ul>
 
-		
-			<div id="rest-method" class="method-detail method-alias">
-				<a name="M000123"></a>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-				<div class="method-heading">
-				
-					<span class="method-name">rest</span><span
-						class="method-args">(number_of_items=1)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
 
-				<div class="method-description">
-					
-					<p>
-Alias for <a href="Array.html#M000121">shifted</a>
-</p>
-					
+118
+119
+120
+121</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/array.rb', line 118</span>
 
-					
-				</div>
+<span class='def def kw'>def</span> <span class='onto identifier id'>onto</span><span class='lparen token'>(</span><span class='values identifier id'>values</span><span class='rparen token'>)</span>
+  <span class='size identifier id'>size</span><span class='eq op'>==</span><span class='values identifier id'>values</span><span class='dot token'>.</span><span class='size identifier id'>size</span> <span class='or or kw'>or</span> <span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='dstring node'>&quot;Array size #{size} must match values size #{size}&quot;</span> 
+  <span class='zip identifier id'>zip</span><span class='lparen token'>(</span><span class='values identifier id'>values</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_h identifier id'>to_h</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="rotate!-instance_method">
+  
+    - (<tt><a href="" title="Array (class)">Array</a></tt>) <strong>rotate!</strong> 
+  
 
-				
-			</div>
-
-		
-			<div id="rest--method" class="method-detail method-alias">
-				<a name="M000126"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">rest!</span><span
-						class="method-args">(number_of_items=1)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Alias for <a href="Array.html#M000124">shifted!</a>
-</p>
-					
-
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="rotate--method" class="method-detail ">
-				<a name="M000113"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">rotate!</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
 Move the first item to the last by using Array#shift and Array#push
 </p>
-<h2>Examples</h2>
-<pre>
-  [1,2,3,4].rotate! =&gt; [2,3,4,1]
-  ['a','b','c'].rotate! =&gt; ['b','c','a']
-  [].rotate! =&gt; []
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rotate! fid id'>rotate!</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>1</span><span class='rbrack token'>]</span>
+  <span class='lbrack token'>[</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rotate! fid id'>rotate!</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='comma token'>,</span><span class='string val'>'a'</span><span class='rbrack token'>]</span>
+  <span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='rotate! fid id'>rotate!</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
 </pre>
-<p>
-Return self
-</p>
-					
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Array (class)">Array</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+self
 
-					
-					<div class="method-source-code"
-						id="rotate--source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/array.rb, line 71</span>
-71:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">rotate!</span>
-72:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>
-73:       <span class="ruby-identifier">push</span> <span class="ruby-identifier">item</span>=<span class="ruby-identifier">shift</span>
-74:     <span class="ruby-keyword kw">end</span>
-75:     <span class="ruby-keyword kw">self</span>
-76:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+      
+    </li>
+  
+</ul>
 
-		
-			<div id="ruby-join-method" class="method-detail method-alias">
-				<a name="M000101"></a>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-				<div class="method-heading">
-				
-					<span class="method-name">ruby_join</span><span
-						class="method-args">(*fixes)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
 
-				<div class="method-description">
-					
-					<p>
-Alias for <a href="Array.html#M000100">join</a>
-</p>
-					
+73
+74
+75
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/array.rb', line 73</span>
 
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="shifted-method" class="method-detail ">
-				<a name="M000121"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">shifted</span><span
-						class="method-args">(number_of_items=1)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Returns the rest of the items of self, after a shift.
-</p>
-<h2>Example</h2>
-<pre>
-  list=['a','b','c']
-  list.shift =&gt; 'a'
-  list.shifted =&gt; ['b','c']
+<span class='def def kw'>def</span> <span class='rotate! fid id'>rotate!</span>
+  <span class='if if kw'>if</span> <span class='size identifier id'>size</span><span class='gt op'>&gt;</span><span class='integer val'>0</span>
+    <span class='push identifier id'>push</span> <span class='item identifier id'>item</span><span class='assign token'>=</span><span class='shift identifier id'>shift</span>
+  <span class='end end kw'>end</span>
+  <span class='self self kw'>self</span>
+<span class='end end kw'>end</span>
 </pre>
-<h2>Example with length</h2>
-<pre>
-  list.shifted(0) =&gt; ['a','b','c']
-  list.shifted(1) =&gt; ['b','c']
-  list.shifted(2) =&gt; ['c']
-  list.shifted(3) =&gt; []
-</pre>
-<p>
-Ruby programmers may prefer this alias wording:
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="shifted-instance_method">
+  
+    - (<tt><a href="" title="Array (class)">Array</a></tt>) <strong>shifted</strong>(number_of_items = 1) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='rest-instance_method'>rest</span>, <span id='cdr-instance_method'>cdr</span></span>
+    </span>
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The rest of the items of self, after a shift.
 </p>
-<pre>
-  list.first =&gt; 'a'
-  list.rest =&gt; ['b','c']
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='list identifier id'>list</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
+  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='shift identifier id'>shift</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'a'</span>
+  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='shifted identifier id'>shifted</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
 </pre>
-<p>
-LISP programmers may prefer this alias wording:
+    
+      <h4>
+with length
+
+</h4>
+      <pre class="example code">  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='shifted identifier id'>shifted</span><span class='lparen token'>(</span><span class='integer val'>0</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
+  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='shifted identifier id'>shifted</span><span class='lparen token'>(</span><span class='integer val'>1</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
+  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='shifted identifier id'>shifted</span><span class='lparen token'>(</span><span class='integer val'>2</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
+  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='shifted identifier id'>shifted</span><span class='lparen token'>(</span><span class='integer val'>3</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+
+<span class='Ruby constant id'>Ruby</span> <span class='programmers identifier id'>programmers</span> <span class='may identifier id'>may</span> <span class='prefer identifier id'>prefer</span> <span class='this identifier id'>this</span> <span class='alias alias kw'>alias</span> <span class='wording identifier id'>wording</span><span class='colon op'>:</span>
+  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='first identifier id'>first</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'a'</span>
+  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='rest identifier id'>rest</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
+
+<span class='LISP constant id'>LISP</span> <span class='programmers identifier id'>programmers</span> <span class='may identifier id'>may</span> <span class='prefer identifier id'>prefer</span> <span class='this identifier id'>this</span> <span class='alias alias kw'>alias</span> <span class='wording identifier id'>wording</span><span class='colon op'>:</span>
+  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='car identifier id'>car</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>'a'</span>
+  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='cdr identifier id'>cdr</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Array (class)">Array</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the rest of the items of self, after a shift.
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+262
+263
+264
+265
+266</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/array.rb', line 262</span>
+
+<span class='def def kw'>def</span> <span class='shifted identifier id'>shifted</span><span class='lparen token'>(</span><span class='number_of_items identifier id'>number_of_items</span><span class='assign token'>=</span><span class='integer val'>1</span><span class='rparen token'>)</span>
+  <span class='lparen token'>(</span><span class='number_of_items identifier id'>number_of_items</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span> <span class='Integer constant id'>Integer</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='lparen token'>(</span><span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;number_of_items must be an integer&quot;</span><span class='rparen token'>)</span>
+  <span class='lparen token'>(</span><span class='number_of_items identifier id'>number_of_items</span> <span class='geq op'>&gt;=</span> <span class='integer val'>0</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='lparen token'>(</span><span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;number_of_items must be &gt;= 0&quot;</span><span class='rparen token'>)</span>
+  <span class='slice identifier id'>slice</span><span class='lparen token'>(</span><span class='number_of_items identifier id'>number_of_items</span><span class='comma token'>,</span><span class='self self kw'>self</span><span class='dot token'>.</span><span class='length identifier id'>length</span><span class='minus op'>-</span><span class='number_of_items identifier id'>number_of_items</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="shifted!-instance_method">
+  
+    - (<tt><a href="" title="Array (class)">Array</a></tt>) <strong>shifted!</strong>(number_of_items = 1) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='rest!-instance_method'>rest!</span>, <span id='cdr!-instance_method'>cdr!</span></span>
+    </span>
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Delete the first <em>number_of_items</em> items.
 </p>
-<pre>
-  list.car =&gt; 'a'
-  list.cdr =&gt; ['b','c']
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='list identifier id'>list</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
+  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='shifted! fid id'>shifted!</span>
+  <span class='list identifier id'>list</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
 </pre>
-					
+    
+      <h4>
+with length:
 
-					
-					<div class="method-source-code"
-						id="shifted-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/array.rb, line 254</span>
-254:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">shifted</span>(<span class="ruby-identifier">number_of_items</span>=<span class="ruby-value">1</span>)
-255:     (<span class="ruby-identifier">number_of_items</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Integer</span>) <span class="ruby-keyword kw">or</span> (<span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;number_of_items must be an integer&quot;</span>)
-256:     (<span class="ruby-identifier">number_of_items</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span>) <span class="ruby-keyword kw">or</span> (<span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;number_of_items must be &gt;= 0&quot;</span>)
-257:     <span class="ruby-identifier">slice</span>(<span class="ruby-identifier">number_of_items</span>,<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-identifier">number_of_items</span>)
-258:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
+</h4>
+      <pre class="example code">  <span class='list identifier id'>list</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
+  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='shifted! fid id'>shifted!</span><span class='lparen token'>(</span><span class='integer val'>2</span><span class='rparen token'>)</span>
+  <span class='list identifier id'>list</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
 
-				
-				<div class="aliases">
-					Also aliased as: <a href="Array.html#M000122">cdr</a>, <a href="Array.html#M000123">rest</a>
-				</div>
-				
-			</div>
-
-		
-			<div id="shifted--method" class="method-detail ">
-				<a name="M000124"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">shifted!</span><span
-						class="method-args">(number_of_items=1)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Delete the first <em>number_of_items</em> items. Returns the array, not the
-deleted items.
-</p>
-<h2>Example</h2>
-<pre>
-  list=['a','b','c']
-  list.shifted!
-  list =&gt; ['b','c']
+<span class='If constant id'>If</span> <span class='_n_ identifier id'>_n_</span> <span class='is identifier id'>is</span> <span class='greater identifier id'>greater</span> <span class='than identifier id'>than</span> <span class='the identifier id'>the</span> <span class='array identifier id'>array</span> <span class='size identifier id'>size</span><span class='comma token'>,</span> <span class='then then kw'>then</span> <span class='return return kw'>return</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
 </pre>
-<h2>Example with length:</h2>
-<pre>
-  list=['a','b','c']
-  list.shifted!(2)
-  list =&gt; ['c']
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Array (class)">Array</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the array, minus the deleted items.
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+289
+290
+291
+292
+293
+294</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/array.rb', line 289</span>
+
+<span class='def def kw'>def</span> <span class='shifted! fid id'>shifted!</span><span class='lparen token'>(</span><span class='number_of_items identifier id'>number_of_items</span><span class='assign token'>=</span><span class='integer val'>1</span><span class='rparen token'>)</span>
+  <span class='lparen token'>(</span><span class='number_of_items identifier id'>number_of_items</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span> <span class='Integer constant id'>Integer</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='lparen token'>(</span><span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;number_of_items must be an integer&quot;</span><span class='rparen token'>)</span>
+  <span class='lparen token'>(</span><span class='number_of_items identifier id'>number_of_items</span> <span class='geq op'>&gt;=</span> <span class='integer val'>0</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='lparen token'>(</span><span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;number_of_items must be &gt;= 0&quot;</span><span class='rparen token'>)</span>
+  <span class='slice! fid id'>slice!</span><span class='lparen token'>(</span><span class='integer val'>0</span><span class='comma token'>,</span><span class='number_of_items identifier id'>number_of_items</span><span class='rparen token'>)</span>
+  <span class='return return kw'>return</span> <span class='self self kw'>self</span>
+<span class='end end kw'>end</span>
 </pre>
-<p>
-If <em>n</em> is greater than the array size, then return []
-</p>
-					
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="shuffle-instance_method">
+  
+    - (<tt><a href="" title="Array (class)">Array</a></tt>) <strong>shuffle</strong> 
+  
 
-					
-					<div class="method-source-code"
-						id="shifted--source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/array.rb, line 279</span>
-279:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">shifted!</span>(<span class="ruby-identifier">number_of_items</span>=<span class="ruby-value">1</span>)
-280:     (<span class="ruby-identifier">number_of_items</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Integer</span>) <span class="ruby-keyword kw">or</span> (<span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;number_of_items must be an integer&quot;</span>)
-281:     (<span class="ruby-identifier">number_of_items</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span>) <span class="ruby-keyword kw">or</span> (<span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;number_of_items must be &gt;= 0&quot;</span>)
-282:     <span class="ruby-identifier">slice!</span>(<span class="ruby-value">0</span>,<span class="ruby-identifier">number_of_items</span>)
-283:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
-284:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-				<div class="aliases">
-					Also aliased as: <a href="Array.html#M000125">cdr!</a>, <a href="Array.html#M000126">rest!</a>
-				</div>
-				
-			</div>
-
-		
-			<div id="shuffle-method" class="method-detail ">
-				<a name="M000128"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">shuffle</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Return the array items in random order.
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new array with the items shuffled.
 </p>
 <p>
 This implementation is optimized for speed, not for memory use. See <a
 href="http://codeidol.com/other/rubyckbk/Arrays/Shuffling-an-Array">codeidol.com/other/rubyckbk/Arrays/Shuffling-an-Array</a>/
 </p>
-<h2>Example</h2>
-<pre>
-  list=
-  list=['a','b','c']
-  list.shuffle!
-  list =&gt; ['c','a','b']
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='list identifier id'>list</span><span class='assign token'>=</span>
+  <span class='list identifier id'>list</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
+  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='shuffle! fid id'>shuffle!</span>
+  <span class='list identifier id'>list</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>'c'</span><span class='comma token'>,</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='rbrack token'>]</span>
 </pre>
-					
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Array (class)">Array</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a new array with the items shuffled.
 
-					
-					<div class="method-source-code"
-						id="shuffle-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/array.rb, line 319</span>
-319:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">shuffle</span>  
-320:     <span class="ruby-identifier">dup</span>.<span class="ruby-identifier">shuffle!</span>  
-321:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+This implementation is optimized for speed, not for memory use. See <a
+href="http://codeidol.com/other/rubyckbk/Arrays/Shuffling-an-Array">codeidol.com/other/rubyckbk/Arrays/Shuffling-an-Array</a>/
 
-		
-			<div id="shuffle--method" class="method-detail ">
-				<a name="M000127"></a>
 
-				<div class="method-heading">
-				
-					<span class="method-name">shuffle!</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
+      
+    </li>
+  
+</ul>
 
-				<div class="method-description">
-					
-					<p>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+332
+333
+334</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/array.rb', line 332</span>
+
+<span class='def def kw'>def</span> <span class='shuffle identifier id'>shuffle</span>  
+  <span class='dup identifier id'>dup</span><span class='dot token'>.</span><span class='shuffle! fid id'>shuffle!</span>  
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="shuffle!-instance_method">
+  
+    - (<tt><a href="" title="Array (class)">Array</a></tt>) <strong>shuffle!</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
 Randomly arrange the array items.
 </p>
-<p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='list identifier id'>list</span><span class='assign token'>=</span>
+  <span class='list identifier id'>list</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='comma token'>,</span><span class='string val'>'c'</span><span class='rbrack token'>]</span>
+  <span class='list identifier id'>list</span><span class='dot token'>.</span><span class='shuffle! fid id'>shuffle!</span>
+  <span class='list identifier id'>list</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>'c'</span><span class='comma token'>,</span><span class='string val'>'a'</span><span class='comma token'>,</span><span class='string val'>'b'</span><span class='rbrack token'>]</span>
+</pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Array (class)">Array</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the array, with its items shuffled.
+
+
 This implementation is optimized for speed, not for memory use. See <a
 href="http://codeidol.com/other/rubyckbk/Arrays/Shuffling-an-Array">codeidol.com/other/rubyckbk/Arrays/Shuffling-an-Array</a>/
-</p>
-<h2>Example</h2>
-<pre>
-  list=
-  list=['a','b','c']
-  list.shuffle!
-  list =&gt; ['c','a','b']
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+313
+314
+315
+316
+317
+318</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/array.rb', line 313</span>
+
+<span class='def def kw'>def</span> <span class='shuffle! fid id'>shuffle!</span>  
+  <span class='each_index identifier id'>each_index</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='i identifier id'>i</span><span class='bitor op'>|</span> 
+    <span class='j identifier id'>j</span> <span class='assign token'>=</span> <span class='rand identifier id'>rand</span><span class='lparen token'>(</span><span class='length identifier id'>length</span><span class='minus op'>-</span><span class='i identifier id'>i</span><span class='rparen token'>)</span> <span class='plus op'>+</span> <span class='i identifier id'>i</span>
+    <span class='self self kw'>self</span><span class='lbrack token'>[</span><span class='j identifier id'>j</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='self self kw'>self</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='rbrack token'>]</span> <span class='assign token'>=</span> <span class='self self kw'>self</span><span class='lbrack token'>[</span><span class='i identifier id'>i</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='self self kw'>self</span><span class='lbrack token'>[</span><span class='j identifier id'>j</span><span class='rbrack token'>]</span>  
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
 </pre>
-					
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="size?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>size?</strong> 
+  
 
-					
-					<div class="method-source-code"
-						id="shuffle--source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/array.rb, line 301</span>
-301:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">shuffle!</span>  
-302:     <span class="ruby-identifier">each_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> 
-303:       <span class="ruby-identifier">j</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-identifier">length</span><span class="ruby-operator">-</span><span class="ruby-identifier">i</span>) <span class="ruby-operator">+</span> <span class="ruby-identifier">i</span>
-304:       <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">j</span>], <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">i</span>] = <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">i</span>], <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">j</span>]  
-305:     <span class="ruby-keyword kw">end</span>
-306:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="size--method" class="method-detail ">
-				<a name="M000111"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">size?</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Return true if size > 0
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+True if size > 0
 </p>
-<h2>Examples</h2>
-<pre>
-  [1,2,3].size? =&gt; true
-  [].size? =&gt; false
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='size? fid id'>size?</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='true true kw'>true</span>
+  <span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='size? fid id'>size?</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='false false kw'>false</span>
 </pre>
-					
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+true if size > 0
 
-					
-					<div class="method-source-code"
-						id="size--source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/array.rb, line 57</span>
-57:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">size?</span>
-58:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span>
-59:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-			</div>
+      
+    </li>
+  
+</ul>
 
-		
-			<div id="slices-method" class="method-detail ">
-				<a name="M000117"></a>
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
 
-				<div class="method-heading">
-				
-					<span class="method-name">slices</span><span
-						class="method-args">(slice_length)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
 
-				<div class="method-description">
-					
-					<p>
-Return items in groups of <em>n</em> items (aka slices)
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/array.rb', line 59</span>
+
+<span class='def def kw'>def</span> <span class='size? fid id'>size?</span>
+  <span class='return return kw'>return</span> <span class='size identifier id'>size</span><span class='gt op'>&gt;</span><span class='integer val'>0</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="slices-instance_method">
+  
+    - (<tt><a href="" title="Array (class)">Array</a>&lt;<a href="" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;&gt;</tt>) <strong>slices</strong>(slice_length) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Slice the array.
 </p>
-<h2>Examples</h2>
-<pre>
-  [1,2,3,4,5,6,7,8].slices(2) =&gt; [[1,2],[3,4],[5,6],[7,8]]
-  [1,2,3,4,5,6,7,8].slices(4) =&gt; [[1,2,3,4],[5,6,7,8]]
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>5</span><span class='comma token'>,</span><span class='integer val'>6</span><span class='comma token'>,</span><span class='integer val'>7</span><span class='comma token'>,</span><span class='integer val'>8</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='slices identifier id'>slices</span><span class='lparen token'>(</span><span class='integer val'>2</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>5</span><span class='comma token'>,</span><span class='integer val'>6</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>7</span><span class='comma token'>,</span><span class='integer val'>8</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>5</span><span class='comma token'>,</span><span class='integer val'>6</span><span class='comma token'>,</span><span class='integer val'>7</span><span class='comma token'>,</span><span class='integer val'>8</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='slices identifier id'>slices</span><span class='lparen token'>(</span><span class='integer val'>4</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>5</span><span class='comma token'>,</span><span class='integer val'>6</span><span class='comma token'>,</span><span class='integer val'>7</span><span class='comma token'>,</span><span class='integer val'>8</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+
+<span class='If constant id'>If</span> <span class='the identifier id'>the</span> <span class='slices identifier id'>slices</span> <span class='don identifier id'>don</span><span class='string val'>'t divide evenly, then the last is smaller.
+</span></pre>
+    
+      <h4></h4>
+      <pre class="example code">  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>5</span><span class='comma token'>,</span><span class='integer val'>6</span><span class='comma token'>,</span><span class='integer val'>7</span><span class='comma token'>,</span><span class='integer val'>8</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='slices identifier id'>slices</span><span class='lparen token'>(</span><span class='integer val'>3</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>5</span><span class='comma token'>,</span><span class='integer val'>6</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>7</span><span class='comma token'>,</span><span class='integer val'>8</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> 
+  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>5</span><span class='comma token'>,</span><span class='integer val'>6</span><span class='comma token'>,</span><span class='integer val'>7</span><span class='comma token'>,</span><span class='integer val'>8</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='slices identifier id'>slices</span><span class='lparen token'>(</span><span class='integer val'>5</span><span class='rparen token'>)</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>5</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>6</span><span class='comma token'>,</span><span class='integer val'>7</span><span class='comma token'>,</span><span class='integer val'>8</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> 
 </pre>
-<p>
-If the slices don&#8217;t divide evenly, then the last is smaller.
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Array (class)">Array</a>&lt;<a href="" title="Array (class)">Array</a>&lt;<a href="Object.html" title="Object (class)">Object</a>&gt;&gt;</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+items in groups of <em>n</em> items (aka slices)
+
+
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/array.rb', line 145</span>
+
+<span class='def def kw'>def</span> <span class='slices identifier id'>slices</span><span class='lparen token'>(</span><span class='slice_length identifier id'>slice_length</span><span class='rparen token'>)</span>
+  <span class='lparen token'>(</span><span class='slice_length identifier id'>slice_length</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span> <span class='Integer constant id'>Integer</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='lparen token'>(</span><span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;slice_length must be an integer&quot;</span><span class='rparen token'>)</span>
+  <span class='lparen token'>(</span><span class='slice_length identifier id'>slice_length</span> <span class='gt op'>&gt;</span> <span class='integer val'>0</span><span class='rparen token'>)</span> <span class='or or kw'>or</span> <span class='lparen token'>(</span><span class='raise identifier id'>raise</span> <span class='ArgumentError constant id'>ArgumentError</span><span class='comma token'>,</span> <span class='string val'>&quot;slice_length must be &gt; 0&quot;</span><span class='rparen token'>)</span>
+  <span class='arr identifier id'>arr</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='index identifier id'>index</span><span class='assign token'>=</span><span class='integer val'>0</span>
+  <span class='while while kw'>while</span> <span class='index identifier id'>index</span><span class='lt op'>&lt;</span><span class='length identifier id'>length</span>
+    <span class='arr identifier id'>arr</span><span class='dot token'>.</span><span class='push identifier id'>push</span> <span class='self self kw'>self</span><span class='lbrack token'>[</span><span class='index identifier id'>index</span><span class='dot3 op'>...</span><span class='lparen token'>(</span><span class='index identifier id'>index</span><span class='plus op'>+</span><span class='slice_length identifier id'>slice_length</span><span class='rparen token'>)</span><span class='rbrack token'>]</span>
+    <span class='index identifier id'>index</span><span class='opasgn op'>+=</span><span class='slice_length identifier id'>slice_length</span>
+  <span class='end end kw'>end</span>
+  <span class='return return kw'>return</span> <span class='arr identifier id'>arr</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="to_csv-instance_method">
+  
+    - (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>to_csv</strong>(ops = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A CSV (Comma Separated Value) string of this array.
 </p>
-<h2>Examples</h2>
-<pre>
-  [1,2,3,4,5,6,7,8].slices(3) =&gt; [[1,2,3],[4,5,6],[7,8]]
-  [1,2,3,4,5,6,7,8].slices(5) =&gt; [[1,2,3,4,5],[6,7,8]]
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4>
+of a one-dimensional array
+
+</h4>
+      <pre class="example code">
+  <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_csv identifier id'>to_csv</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;1,2,3\n&quot;</span>
 </pre>
-					
+    
+      <h4>
+of a multi-dimensional array
 
-					
-					<div class="method-source-code"
-						id="slices-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/array.rb, line 141</span>
-141:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">slices</span>(<span class="ruby-identifier">slice_length</span>)
-142:     (<span class="ruby-identifier">slice_length</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Integer</span>) <span class="ruby-keyword kw">or</span> (<span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;slice_length must be an integer&quot;</span>)
-143:     (<span class="ruby-identifier">slice_length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>) <span class="ruby-keyword kw">or</span> (<span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;slice_length must be &gt; 0&quot;</span>)
-144:     <span class="ruby-identifier">arr</span>=[]
-145:     <span class="ruby-identifier">index</span>=<span class="ruby-value">0</span>
-146:     <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">index</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">length</span>
-147:       <span class="ruby-identifier">arr</span>.<span class="ruby-identifier">push</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">index</span><span class="ruby-operator">...</span>(<span class="ruby-identifier">index</span><span class="ruby-operator">+</span><span class="ruby-identifier">slice_length</span>)]
-148:       <span class="ruby-identifier">index</span><span class="ruby-operator">+=</span><span class="ruby-identifier">slice_length</span>
-149:     <span class="ruby-keyword kw">end</span>
-150:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">arr</span>
-151:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
+</h4>
+      <pre class="example code">
+  <span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>5</span><span class='comma token'>,</span><span class='integer val'>6</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;1,2,3\n4,5,6\n&quot;</span>
+</pre>
+    
+      <h4>
+of a blank array
 
-				
-			</div>
+</h4>
+      <pre class="example code">
+  <span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_csv identifier id'>to_csv</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
 
-		
-			<div id="to-csv-method" class="method-detail ">
-				<a name="M000129"></a>
+<span class='N constant id'>N</span><span class='dot token'>.</span><span class='b identifier id'>b</span><span class='dot token'>.</span> <span class='this identifier id'>this</span> <span class='method identifier id'>method</span> <span class='uses identifier id'>uses</span> <span class='the identifier id'>the</span> <span class='multi identifier id'>multi</span><span class='minus op'>-</span><span class='dimensional identifier id'>dimensional</span> <span class='if if_mod kw'>if</span> <span class='the identifier id'>the</span>
+<span class='array identifier id'>array</span><span class='string val'>'s first item is also an array.
+</span></pre>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a CSV (Comma Separated Value) string of this array.
 
-				<div class="method-heading">
-				
-					<span class="method-name">to_csv</span><span
-						class="method-args">(ops={})</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
 
-				<div class="method-description">
-					
-					<p>
-Returns a <a href="CSV.html">CSV</a> (Comma Separated Value) string of this
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/array.rb', line 360</span>
+
+<span class='def def kw'>def</span> <span class='to_csv identifier id'>to_csv</span><span class='lparen token'>(</span><span class='ops identifier id'>ops</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+
+  <span class='return return kw'>return</span> <span class='string val'>&quot;&quot;</span> <span class='if if_mod kw'>if</span> <span class='size identifier id'>size</span><span class='eq op'>==</span><span class='integer val'>0</span>
+
+  <span class='generator identifier id'>generator</span> <span class='assign token'>=</span> <span class='RUBY_VERSION constant id'>RUBY_VERSION</span> <span class='geq op'>&gt;=</span> <span class='string val'>&quot;1.9&quot;</span> <span class='question op'>?</span> <span class='CSV constant id'>CSV</span> <span class='colon op'>:</span> <span class='CSV constant id'>CSV</span><span class='colon2 op'>::</span><span class='Writer constant id'>Writer</span>
+
+  <span class='str identifier id'>str</span><span class='assign token'>=</span><span class='string val'>''</span>
+  <span class='if if kw'>if</span> <span class='size identifier id'>size</span><span class='gt op'>&gt;</span><span class='integer val'>0</span> <span class='and and kw'>and</span> <span class='self self kw'>self</span><span class='lbrack token'>[</span><span class='integer val'>0</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='is_a? fid id'>is_a?</span><span class='Array constant id'>Array</span>
+    <span class='generator identifier id'>generator</span><span class='dot token'>.</span><span class='generate identifier id'>generate</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='rparen token'>)</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='csv identifier id'>csv</span><span class='bitor op'>|</span>
+      <span class='self self kw'>self</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='row identifier id'>row</span><span class='bitor op'>|</span>
+        <span class='csv identifier id'>csv</span> <span class='lshft op'>&lt;&lt;</span> <span class='row identifier id'>row</span>
+      <span class='end end kw'>end</span>
+    <span class='end end kw'>end</span>
+  <span class='else else kw'>else</span>
+    <span class='generator identifier id'>generator</span><span class='dot token'>.</span><span class='generate identifier id'>generate</span><span class='lparen token'>(</span><span class='str identifier id'>str</span><span class='rparen token'>)</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='csv identifier id'>csv</span><span class='bitor op'>|</span>
+      <span class='csv identifier id'>csv</span> <span class='lshft op'>&lt;&lt;</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='rbrace token'>}</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+  <span class='return return kw'>return</span> <span class='str identifier id'>str</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="to_tsv-instance_method">
+  
+    - (<tt><a href="String.html" title="String (class)">String</a></tt>) <strong>to_tsv</strong>(ops = {}) 
+  
+
+  
+    <span class="aliases">Also known as:
+    <span class="names"><span id='to_tdf-instance_method'>to_tdf</span></span>
+    </span>
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A TSV (Tab Separated Value) string representation of a multi-dimensional
 array.
-</p>
-<h2>Example of a one-dimensional array</h2>
-<pre>
-  [1,2,3].to_csv =&gt; &quot;1,2,3\n&quot;
-</pre>
-<h2>Example of a multi-dimensional array</h2>
-<pre>
-  [[1,2,3],[4,5,6]] =&gt; &quot;1,2,3\n4,5,6\n&quot;
-</pre>
-<h2>Example of a blank array</h2>
-<pre>
-  [].to_csv =&gt; &quot;&quot;
-</pre>
-<p>
-N.b. this method uses the multi-dimensional if the array&#8217;s first item
-is also an array.
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="to-csv-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/array.rb, line 347</span>
-347:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_csv</span>(<span class="ruby-identifier">ops</span>={})
-348: 
-349:     <span class="ruby-keyword kw">return</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">size</span><span class="ruby-operator">==</span><span class="ruby-value">0</span>
-350: 
-351:     <span class="ruby-identifier">generator</span> = <span class="ruby-constant">RUBY_VERSION</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value str">&quot;1.9&quot;</span> <span class="ruby-operator">?</span> <span class="ruby-constant">CSV</span> <span class="ruby-operator">:</span> <span class="ruby-constant">CSV</span><span class="ruby-operator">::</span><span class="ruby-constant">Writer</span>
-352: 
-353:     <span class="ruby-identifier">str</span>=<span class="ruby-value str">''</span>
-354:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">size</span><span class="ruby-operator">&gt;</span><span class="ruby-value">0</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">is_a?</span><span class="ruby-constant">Array</span>
-355:       <span class="ruby-identifier">generator</span>.<span class="ruby-identifier">generate</span>(<span class="ruby-identifier">str</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">csv</span><span class="ruby-operator">|</span>
-356:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
-357:           <span class="ruby-identifier">csv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">row</span>
-358:         <span class="ruby-keyword kw">end</span>
-359:       <span class="ruby-keyword kw">end</span>
-360:     <span class="ruby-keyword kw">else</span>
-361:       <span class="ruby-identifier">generator</span>.<span class="ruby-identifier">generate</span>(<span class="ruby-identifier">str</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">csv</span><span class="ruby-operator">|</span>
-362:         <span class="ruby-identifier">csv</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">to_s</span>}
-363:       <span class="ruby-keyword kw">end</span>
-364:     <span class="ruby-keyword kw">end</span>
-365:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">str</span>
-366:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="to-tdf-method" class="method-detail method-alias">
-				<a name="M000131"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">to_tdf</span><span
-						class="method-args">(ops={})</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Alias for <a href="Array.html#M000130">to_tsv</a>
-</p>
-					
-
-					
-				</div>
-
-				
-			</div>
-
-		
-			<div id="to-tsv-method" class="method-detail ">
-				<a name="M000130"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">to_tsv</span><span
-						class="method-args">(ops={})</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Returns a TSV (Tab Separated Value) string representation of a
-multi-dimensional array.
 </p>
 <p>
 Each subarray becomes one &#8216;line&#8217; in the output.
 </p>
-<h2>Example of a blank array</h2>
-<pre>
-  [].to_csv =&gt; &quot;&quot;
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4>
+of a blank array
+
+</h4>
+      <pre class="example code">
+  <span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='to_csv identifier id'>to_csv</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;&quot;</span>
 </pre>
-					
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="String.html" title="String (class)">String</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+a TSV (Tab Separated Value) string representation of a multi-dimensional
+array.
 
-					
-					<div class="method-source-code"
-						id="to-tsv-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/array.rb, line 378</span>
-378:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_tsv</span>(<span class="ruby-identifier">ops</span>={})
-379:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span> <span class="ruby-identifier">row</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\t&quot;</span>)<span class="ruby-operator">+</span><span class="ruby-value str">&quot;\n&quot;</span>}.<span class="ruby-identifier">join</span>
-380:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
 
-				
-				<div class="aliases">
-					Also aliased as: <a href="Array.html#M000131">to_tdf</a>
-				</div>
-				
-			</div>
+Each subarray becomes one &#8216;line&#8217; in the output.
 
-		
-			<div id="union-method" class="method-detail ">
-				<a name="M000119"></a>
 
-				<div class="method-heading">
-				
-					<span class="method-name">union</span><span
-						class="method-args">()</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
+      
+    </li>
+  
+</ul>
 
-				<div class="method-description">
-					
-					<p>
-Return the union of the array&#8217;s items. In typical use, each item is
-an array.
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+391
+392
+393</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/array.rb', line 391</span>
+
+<span class='def def kw'>def</span> <span class='to_tsv identifier id'>to_tsv</span><span class='lparen token'>(</span><span class='ops identifier id'>ops</span><span class='assign token'>=</span><span class='lbrace token'>{</span><span class='rbrace token'>}</span><span class='rparen token'>)</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='row identifier id'>row</span><span class='bitor op'>|</span> <span class='row identifier id'>row</span><span class='dot token'>.</span><span class='join identifier id'>join</span><span class='lparen token'>(</span><span class='string val'>&quot;\t&quot;</span><span class='rparen token'>)</span><span class='plus op'>+</span><span class='string val'>&quot;\n&quot;</span><span class='rbrace token'>}</span><span class='dot token'>.</span><span class='join identifier id'>join</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="union-instance_method">
+  
+    - (<tt><a href="" title="Array (class)">Array</a></tt>) <strong>union</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+The union of the array&#8217;s items.
 </p>
-<h2>Example using Ruby <a href="Array.html">Array</a> pipe</h2>
-<pre>
-  arr=[[1,2,3,4],[3,4,5,6]]
-  arr.union =&gt; [1,2,3,4,5,6]
+<p>
+In typical use, each item is an array.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4>
+using Ruby Array pipe
+
+</h4>
+      <pre class="example code">  <span class='arr identifier id'>arr</span><span class='assign token'>=</span><span class='lbrack token'>[</span><span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='rbrack token'>]</span><span class='comma token'>,</span><span class='lbrack token'>[</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>5</span><span class='comma token'>,</span><span class='integer val'>6</span><span class='rbrack token'>]</span><span class='rbrack token'>]</span>
+  <span class='arr identifier id'>arr</span><span class='dot token'>.</span><span class='union identifier id'>union</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='integer val'>1</span><span class='comma token'>,</span><span class='integer val'>2</span><span class='comma token'>,</span><span class='integer val'>3</span><span class='comma token'>,</span><span class='integer val'>4</span><span class='comma token'>,</span><span class='integer val'>5</span><span class='comma token'>,</span><span class='integer val'>6</span><span class='rbrack token'>]</span>
 </pre>
-<h2>Examples with proc</h2>
-<pre>
-  arr.map(&amp;:foo).union
-  =&gt; foos that are in any of the array items
+    
+      <h4>
+with proc
+
+</h4>
+      <pre class="example code">  <span class='arr identifier id'>arr</span><span class='dot token'>.</span><span class='map identifier id'>map</span><span class='lparen token'>(</span><span class='bitand op'>&amp;</span><span class='symbol val'>:foo</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='union identifier id'>union</span>
+  <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='foos identifier id'>foos</span> <span class='that identifier id'>that</span> <span class='are identifier id'>are</span> <span class='in in kw'>in</span> <span class='any identifier id'>any</span> <span class='of identifier id'>of</span> <span class='the identifier id'>the</span> <span class='array identifier id'>array</span> <span class='items identifier id'>items</span>
 </pre>
-<h2>Example with nil</h2>
-<pre>
-  [].union =&gt; []
+    
+      <h4>
+with nil
+
+</h4>
+      <pre class="example code">  <span class='lbrack token'>[</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='union identifier id'>union</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
 </pre>
-					
-
-					
-					<div class="method-source-code"
-						id="union-source">
-<pre>
-     <span class="ruby-comment cmt"># File lib/webget_ruby_ramp/array.rb, line 200</span>
-200:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">union</span>
-201:     <span class="ruby-identifier">inject</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">inj</span>,<span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-identifier">inj</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">item</span>.<span class="ruby-identifier">to_a</span> } <span class="ruby-operator">||</span> []
-202:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-			</div>
-
-		
-		</div>
-	
-
-	</div>
+    
+  </div>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><a href="" title="Array (class)">Array</a></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        
+the union of the array&#8217;s items.
 
 
-	<div id="rdoc-debugging-section-dump" class="debugging-section">
-	
-		<p>Disabled; run with --debug to generate this.</p>
-	
-	</div>
+In typical use, each item is an array.
 
-	<div id="validator-badges">
-		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-			Rdoc Generator</a> 1.1.6</small>.</p>
-	</div>
 
-</body>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+207
+208
+209</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/webget_ruby_ramp/array.rb', line 207</span>
+
+<span class='def def kw'>def</span> <span class='union identifier id'>union</span>
+  <span class='inject identifier id'>inject</span><span class='lbrace token'>{</span><span class='bitor op'>|</span><span class='inj identifier id'>inj</span><span class='comma token'>,</span><span class='item identifier id'>item</span><span class='bitor op'>|</span> <span class='inj identifier id'>inj</span> <span class='bitor op'>|</span> <span class='item identifier id'>item</span><span class='dot token'>.</span><span class='to_a identifier id'>to_a</span> <span class='rbrace token'>}</span> <span class='orop op'>||</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Sat Mar 20 17:19:00 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool">yard</a>
+  0.5.3 (ruby-1.8.7).
+</div>
+
+  </body>
 </html>
-

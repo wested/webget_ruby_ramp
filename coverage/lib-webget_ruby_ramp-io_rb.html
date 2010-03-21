@@ -28,7 +28,7 @@
         <tbody>
           <tr>
             <td class="left_align"><a href="lib-webget_ruby_ramp-io_rb.html">lib/webget_ruby_ramp/io.rb</a></td>
-            <td class='right_align'><tt>67</tt></td>
+            <td class='right_align'><tt>71</tt></td>
             <td class='right_align'><tt>12</tt></td>
             <td class="left_align"><div class="percent_graph_legend"><tt class=''>100.00%</tt></div>
           <div class="percent_graph">
@@ -117,61 +117,61 @@
           
           
           <tr class="inferred">
-            <td><pre><a name="line11">11</a>   # ==Example</pre></td>
+            <td><pre><a name="line11">11</a>   # @return [Array&lt;Array&lt;String&gt;&gt;] an array of rows, where each row is an array of fields.</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line12">12</a>   #   IO.readrows(&quot;my.tsv&quot;)</pre></td>
+            <td><pre><a name="line12">12</a>   #</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line13">13</a>   #    =&gt; [[&quot;A1&quot;,&quot;B1&quot;,&quot;C1&quot;],[&quot;A2&quot;,&quot;B2&quot;,&quot;C2&quot;],[&quot;A3&quot;,&quot;B3&quot;,&quot;C3&quot;]]</pre></td>
+            <td><pre><a name="line13">13</a>   # @example</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line14">14</a>   #</pre></td>
+            <td><pre><a name="line14">14</a>   #   IO.readrows(&quot;my.tsv&quot;)</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line15">15</a>   # ==Options</pre></td>
+            <td><pre><a name="line15">15</a>   #    =&gt; [[&quot;A1&quot;,&quot;B1&quot;,&quot;C1&quot;],[&quot;A2&quot;,&quot;B2&quot;,&quot;C2&quot;],[&quot;A3&quot;,&quot;B3&quot;,&quot;C3&quot;]]</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line16">16</a>   # - Rows are separated by _row_ option, which defaults to Ruby's record separator $/ or &quot;\n&quot; </pre></td>
+            <td><pre><a name="line16">16</a>   #</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line17">17</a>   # - Cols are separated by _col_ option, which defaults to Ruby's string split separator $; or &quot;\t&quot;</pre></td>
+            <td><pre><a name="line17">17</a>   # @param [String] filename</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line18">18</a>   #</pre></td>
+            <td><pre><a name="line18">18</a>   # @param [Hash] options</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line19">19</a>   # ==Example with options suitable for a file using TSV (Tab Separated Values)</pre></td>
+            <td><pre><a name="line19">19</a>   #   - Rows are separated by _row_ option, which defaults to Ruby's record separator $/ or &quot;\n&quot; </pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line20">20</a>   #   IO.readrows(&quot;my.tsv&quot;, :row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;) </pre></td>
+            <td><pre><a name="line20">20</a>   #   - Cols are separated by _col_ option, which defaults to Ruby's string split separator $; or &quot;\t&quot;</pre></td>
           </tr>
         
           
@@ -183,283 +183,307 @@
           
           
           <tr class="inferred">
-            <td><pre><a name="line22">22</a>   # Note: the col option is sent along to String#split, so can be a string or a regexp.</pre></td>
+            <td><pre><a name="line22">22</a>   # @example with options suitable for a file using TSV (Tab Separated Values)</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line23">23</a>   #</pre></td>
+            <td><pre><a name="line23">23</a>   #   IO.readrows(&quot;my.tsv&quot;, :row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;) </pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line24">24</a>   # See:</pre></td>
+            <td><pre><a name="line24">24</a>   #</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line25">25</a>   # - File#readline</pre></td>
+            <td><pre><a name="line25">25</a>   # Note: the col option is sent along to String#split, so can be a string or a regexp.</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line26">26</a>   # - File#readlines</pre></td>
+            <td><pre><a name="line26">26</a>   #</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line27">27</a>   # - File#readrow</pre></td>
+            <td><pre><a name="line27">27</a>   # @see</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line28">28</a> </pre></td>
+            <td><pre><a name="line28">28</a>   # - File#readline</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line29">29</a>   # - File#readlines</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line30">30</a>   # - File#readrow</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line31">31</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line29">29</a>   def IO.readrows(name, options={})</pre></td>
+            <td><pre><a name="line32">32</a>   def IO.readrows(filename, options={})</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line30">30</a>     row_sep||=options[:row]||$/||&quot;\n&quot;</pre></td>
+            <td><pre><a name="line33">33</a>     row_sep||=options[:row]||$/||&quot;\n&quot;</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line31">31</a>     col_sep||=options[:col]||$;||&quot;\t&quot;</pre></td>
+            <td><pre><a name="line34">34</a>     col_sep||=options[:col]||$;||&quot;\t&quot;</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line32">32</a>     return IO.readlines(name, row_sep).map{|line| line.chomp(row_sep).split(col_sep)}</pre></td>
+            <td><pre><a name="line35">35</a>     return IO.readlines(filename, row_sep).map{|line| line.chomp(row_sep).split(col_sep)}</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line33">33</a>   end</pre></td>
+            <td><pre><a name="line36">36</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line34">34</a> </pre></td>
+            <td><pre><a name="line37">37</a> </pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line35">35</a> </pre></td>
+            <td><pre><a name="line38">38</a> </pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line36">36</a>   # Read a line as with IO#readline and return the line as a row of fields.</pre></td>
+            <td><pre><a name="line39">39</a>   # Read a line as with IO#readline and return the line as a row of fields.</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line37">37</a>   #</pre></td>
+            <td><pre><a name="line40">40</a>   #</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line38">38</a>   # ==Example</pre></td>
+            <td><pre><a name="line41">41</a>   # Note: the col option is sent along to String#split, so can be a string or a regexp.</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line39">39</a>   #   file = File.new(&quot;my.tsv&quot;)</pre></td>
+            <td><pre><a name="line42">42</a>   #</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line40">40</a>   #   file.readrow() =&gt; [&quot;A1&quot;,&quot;B1&quot;,&quot;C1&quot;]</pre></td>
+            <td><pre><a name="line43">43</a>   # @return [Array&lt;String&gt;] fields</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line41">41</a>   #   file.readrow() =&gt; [&quot;A2&quot;,&quot;B2&quot;,&quot;C2&quot;]</pre></td>
+            <td><pre><a name="line44">44</a>   #</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line42">42</a>   #   file.readrow() =&gt; [&quot;A3&quot;,&quot;B3&quot;,&quot;C3&quot;]]</pre></td>
+            <td><pre><a name="line45">45</a>   # @param [Hash] options</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line43">43</a>   #</pre></td>
+            <td><pre><a name="line46">46</a>   # - Rows are separated by _row_ option, which defaults to Ruby's record separator $/ or &quot;\n&quot; </pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line44">44</a>   # ==Options</pre></td>
+            <td><pre><a name="line47">47</a>   # - Cols are separated by _col_ option, which defaults to Ruby's string split separator $; or &quot;\t&quot;</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line45">45</a>   # - Rows are separated by _row_ option, which defaults to Ruby's record separator $/ or &quot;\n&quot; </pre></td>
+            <td><pre><a name="line48">48</a>   #</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line46">46</a>   # - Cols are separated by _col_ option, which defaults to Ruby's string split separator $; or &quot;\t&quot;</pre></td>
+            <td><pre><a name="line49">49</a>   # @example</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line47">47</a>   #</pre></td>
+            <td><pre><a name="line50">50</a>   #   file = File.new(&quot;my.tsv&quot;)</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line48">48</a>   # ==Example with options suitable for a file using TSV (Tab Separated Values)</pre></td>
+            <td><pre><a name="line51">51</a>   #   file.readrow() =&gt; [&quot;A1&quot;,&quot;B1&quot;,&quot;C1&quot;]</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line49">49</a>   #   file = File.new(&quot;my.tsv&quot;)</pre></td>
+            <td><pre><a name="line52">52</a>   #   file.readrow() =&gt; [&quot;A2&quot;,&quot;B2&quot;,&quot;C2&quot;]</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line50">50</a>   #   file.readrow(:row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;) =&gt; [&quot;A1&quot;,&quot;B1&quot;,&quot;C1&quot;] </pre></td>
+            <td><pre><a name="line53">53</a>   #   file.readrow() =&gt; [&quot;A3&quot;,&quot;B3&quot;,&quot;C3&quot;]]</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line51">51</a>   #   file.readrow(:row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;) =&gt; [&quot;A2&quot;,&quot;B2&quot;,&quot;C2&quot;] </pre></td>
+            <td><pre><a name="line54">54</a>   #</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line52">52</a>   #   file.readrow(:row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;) =&gt; [&quot;A3&quot;,&quot;B3&quot;,&quot;C3&quot;] </pre></td>
+            <td><pre><a name="line55">55</a>   # @example with options suitable for a file using TSV (Tab Separated Values)</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line53">53</a>   #</pre></td>
+            <td><pre><a name="line56">56</a>   #   file = File.new(&quot;my.tsv&quot;)</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line54">54</a>   # Note: the col option is sent along to String#split, so can be a string or a regexp.</pre></td>
+            <td><pre><a name="line57">57</a>   #   file.readrow(:row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;) =&gt; [&quot;A1&quot;,&quot;B1&quot;,&quot;C1&quot;] </pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line55">55</a>   #</pre></td>
+            <td><pre><a name="line58">58</a>   #   file.readrow(:row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;) =&gt; [&quot;A2&quot;,&quot;B2&quot;,&quot;C2&quot;] </pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line56">56</a>   # See:</pre></td>
+            <td><pre><a name="line59">59</a>   #   file.readrow(:row=&gt;&quot;\n&quot;, :col=&gt;&quot;\t&quot;) =&gt; [&quot;A3&quot;,&quot;B3&quot;,&quot;C3&quot;] </pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line57">57</a>   # - File#readline</pre></td>
+            <td><pre><a name="line60">60</a>   #</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line58">58</a>   # - File#readlines</pre></td>
+            <td><pre><a name="line61">61</a>   # @see File#readline</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line59">59</a>   # - File#readrows</pre></td>
+            <td><pre><a name="line62">62</a>   # @see File#readlines</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line60">60</a> </pre></td>
+            <td><pre><a name="line63">63</a>   # @see File#readrows</pre></td>
+          </tr>
+        
+          
+          
+          <tr class="inferred">
+            <td><pre><a name="line64">64</a> </pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line61">61</a>   def readrow(options={})</pre></td>
+            <td><pre><a name="line65">65</a>   def readrow(options={})</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line62">62</a>     row_sep||=options[:row]||$/||&quot;\n&quot;</pre></td>
+            <td><pre><a name="line66">66</a>     row_sep||=options[:row]||$/||&quot;\n&quot;</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line63">63</a>     col_sep||=options[:col]||$;||&quot;\t&quot;</pre></td>
+            <td><pre><a name="line67">67</a>     col_sep||=options[:col]||$;||&quot;\t&quot;</pre></td>
           </tr>
         
           
           
           <tr class="marked">
-            <td><pre><a name="line64">64</a>    return readline(row_sep).chomp(row_sep).split(col_sep)</pre></td>
+            <td><pre><a name="line68">68</a>    return readline(row_sep).chomp(row_sep).split(col_sep)</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line65">65</a>   end</pre></td>
+            <td><pre><a name="line69">69</a>   end</pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line66">66</a> </pre></td>
+            <td><pre><a name="line70">70</a> </pre></td>
           </tr>
         
           
           
           <tr class="inferred">
-            <td><pre><a name="line67">67</a> end</pre></td>
+            <td><pre><a name="line71">71</a> end</pre></td>
           </tr>
         
       </tbody>
     </table>
 
-    <p>Generated on Fri Mar 05 03:04:54 -0800 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
+    <p>Generated on Sat Mar 20 17:12:56 -0700 2010 with <a href="http://github.com/relevance/rcov">rcov 0.9.2.1</a></p>
 
   </body>
 </html>

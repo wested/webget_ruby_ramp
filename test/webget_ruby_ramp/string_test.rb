@@ -5,11 +5,6 @@ require 'webget_ruby_ramp'
 class StringTest < Test::Unit::TestCase
 
 
-  def test_accents
-    assert(String::ACCENTS.is_a?Hash)
-  end
-
-
   def test_capitalize_words
     assert_equal("Foo Goo Hoo","foo goo hoo".capitalize_words)
   end

@@ -11,12 +11,12 @@ module XML
   #
   # See [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
   #
-  # ==Example
+  # @example To load xml documents
   #   XML.load_dir('/tmp/*.xml'){|xml_document|
   #     #...whatever you want to do with each xml document
   #   }
   #
-  # ==Example to load xml documents in files beginning in "foo" or "bar"
+  # @example To load xml documents in files beginning in "foo" or "bar"
   #   XML.load_dir('/tmp/foo*.yaml','/tmp/bar*.xml','){|xml_document|
   #     #...whatever you want to do with the xml document
   #   }
@@ -36,7 +36,7 @@ module XML
 
   # Sugar to load elements from a file.
   #
-  # ==Example
+  # @example
   #   XML.load_attributes('config.xml','userlist/user'){|element| pp element.attributes['first_name'] }
 
   def XML.load_elements(dirpath,xpath)
@@ -50,7 +50,7 @@ module XML
 
   # Sugar to load attributes from a file.
   #
-  # ==Example
+  # @example
   #   XML.load_attributes('config.xml','userlist/user'){|attributes| pp attributes['first_name'] }
 
   def XML.load_attributes(dirpath,xpath)
@@ -61,7 +61,7 @@ module XML
 
   # Sugar to load attributes hash from a file.
   #
-  # ==Example
+  # @example
   #   XML.load_attributes('config.xml','userlist/user'){|attributes| pp attributes['first_name'] }
 
   def XML.load_attributes_hash(dirpath,xpath)
@@ -75,16 +75,18 @@ module XML
   # comments, and generally anything else we might need
   # to enable the XML parser to handle a dirty document.
   #
-  # ==Example 
-  #   # This example shows curly braces instead of angle braces because of HTML formatting
-  #   s="{foo a=b c=d}{!--comment--}Hello{!-[if bar]}Microsoft{![endif]}World{/foo}"
-  #   XML.strip_all(s) => "{foo}HelloWorld{/foo}"
-  #
   # This method calls these in order:
   #   - XML.strip_unprintables
   #   - XML.strip_microsoft
   #   - XML.strip_comments
   #   - XML.strip_attributes
+  #
+  # @example 
+  #   # This example shows curly braces instead of angle braces because of HTML formatting
+  #   s="{foo a=b c=d}{!--comment--}Hello{!-[if bar]}Microsoft{![endif]}World{/foo}"
+  #   XML.strip_all(s) => "{foo}HelloWorld{/foo}"
+  #
+  # @return [String] the text, stripped of unprintables, Microsoft markup, comments, and attributes
 
   def XML.strip_all(xml_text)
     return XML.strip_attributes(XML.strip_comments(XML.strip_microsoft(XML.strip_unprintables(xml_text))))
@@ -93,9 +95,11 @@ module XML
 
   # Strip out all attributes from the xml text's tags.
   #
-  # ==Example
+  # @example
   #   s="<foo a=b c=d e=f>Hello</foo>"
   #   XML.strip_attributes(s) => "<foo>Hello</foo>"
+  #
+  # @return [String] the text, stripped of attributes
 
   def XML.strip_attributes(xml_text)
     return xml_text.gsub(/<(\/?\w+).*?>/im){"<#{$1}>"}  # delete attributes
@@ -104,10 +108,12 @@ module XML
 
   # Strip out all comments from the xml text.
   #
-  # ==Example
+  # @example
   #   # This example shows curly braces instead of angle braces because of HTML formatting
   #   s="Hello{!--comment--}World"
   #   XML.strip_comments(s) => "HelloWorld"
+  #
+  # @return [String] the text, stripped of comments
 
   def XML.strip_comments(xml_text)
     return xml_text.gsub(/<!.*?>/im,'')  
@@ -116,9 +122,11 @@ module XML
 
   # Strip out all microsoft proprietary codes.
   #
-  # ==Example
+  # @example
   #   s="Hello<!-[if foo]>Microsoft<![endif]->World"
   #   XML.strip_microsoft(s) => "HelloWorld"
+  #
+  # @return [String] the text, stripped of Microsoft markup
 
   def XML.strip_microsoft(xml_text)
     return xml_text.gsub(/<!-*\[if\b.*?<!\[endif\]-*>/im,'')
@@ -127,9 +135,11 @@ module XML
 
   # Strip out all unprintable characters from the input string.
   #
-  # ==Example
+  # @example
   #   s="Hello\XXXWorld" # where XXX is unprintable
   #   XML.strip_unprintables(s) => "HelloWorld"
+  #
+  # @return [String] the text, stripped of unprintables
 
   def XML.strip_unprintables(xml_text)
     return xml_text.gsub(/[^[:print:]]/, "")
@@ -142,9 +152,9 @@ end
 
 class REXML::Attributes
 
-  # Return a new hash of the attribute keys and values.
+  # @return a new hash of the attribute keys and values.
   #
-  # ==Example
+  # @example
   #   attributes.to_hash => {"src"=>"pic.jpg", "height" => "100", "width" => "200"} 
 
   def to_hash
@@ -162,9 +172,9 @@ class REXML::Document
 
   # Remove all attributes from the document's elements.
   # 
-  # Return the document.
+  # @return the document.
   #
-  # cf. Element#remove_attributes
+  # @see Element#remove_attributes
 
   def remove_attributes
     self.elements.each("//") { |elem| elem.attributes.each_attribute{|attribute| attribute.remove }}
@@ -180,9 +190,9 @@ class REXML::Element
 
   # Remove all attributes from the element.
   #
-  # Return the element.
+  # @return the element.
   #
-  # cf. Document#remove_attributes
+  # @see Document#remove_attributes
 
   def remove_attributes
     self.attributes.each_attribute{|attribute| attribute.remove }

@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
 
   s.name              = "webget_ruby_ramp"
   s.summary           = "WebGet Ruby Gem: Ramp gem provides base extensions to ruby classes and rails classes."
-  s.version           = "1.8.0"
+  s.version           = "1.8.2"
   s.author            = "WebGet"
   s.email             = "webget@webget.com"
   s.homepage          = "http://webget.com/"

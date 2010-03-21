@@ -5,12 +5,15 @@
 
 class NilClass
 
- # Same as Rails
+ # @return [true]
+ 
  def blank?
   return true
  end
 
- # Return false
+
+ # @return [false]
+
  def size?
   return false
  end

@@ -6,17 +6,18 @@ require 'yaml'
 
 module YAML
 
+
   # Specify one or more directory patterns and pass each YAML file in the matching directories to a block.
   #
-  # See [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
+  # @see [Dir#glob](http://www.ruby-doc.org/core/classes/Dir.html#M002347) for pattern details.
   #
-  # ==Example
+  # @example To load documents in files ending in ".yaml"
   #   YAML.load_dir('/tmp/*.yaml'){|yaml_document|
   #     #...whatever you want to do with each yaml document
   #   }
   #
-  # ==Example to load documents in files ending in ".yaml" and ".yml"
-  #   YAML.load_dir('/tmp/*.yaml','/tmp/*.yml','){|yaml_document|
+  # @example To load documents in files beginning in "foo" or "bar"
+  #   YAML.load_dir('/tmp/foo*.yaml','/tmp/bar*.yaml','){|yaml_document|
   #     #...whatever you want to do with the yaml document
   #   }
   

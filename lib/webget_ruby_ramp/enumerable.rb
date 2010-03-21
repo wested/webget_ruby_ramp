@@ -13,14 +13,16 @@ module Enumerable
 
   # Convert an enumerable to a hash.
   #
-  # ==Example
+  # @return [Hash<Object,Object>] a hash of the enumerable's items
+  #
+  # @example
   #   array=[[:a, :b],[:c, :d],[:e, :f]]
   #   array.to_h => {:a=>:b, :c=>:d, :e=>:f}
   #
   # If a key occurs more than once, then this will automatically 
   # convert the value to an array of the keys' values.
   #
-  # ==Example
+  # @example
   #   array=[[:a,:b],[:a,:c],[:a,:d]]
   #   array.to_h => {:a=>[:b, :c, :d]}
 
@@ -44,9 +46,11 @@ module Enumerable
   end
 
 
-  # Convert the enumerable to a hash by mapping each item to a key,item pair.
+  # Convert the enumerable to a hash by mapping each item to a pair [index ,item]
   #
-  # ==Example
+  # @return [Hash<Integer,Object>] a hash of the enumerable's items
+  #
+  # @example
   #   strings = ["red","blue","green"]
   #   strings.index_by{|a| a.size]}
   #   => {3 => "red", 4 => "blue", 5 => "green"}
@@ -55,21 +59,23 @@ module Enumerable
   #
   # From http://stackoverflow.com/questions/412771/cleanest-way-to-create-a-hash-from-an-array
   #
-  # Compare #hash_by
+  # @see #hash_by
 
   def index_by
     inject({}) {|hash, elem| hash.merge!(yield(elem) => elem) }
   end
 
 
-  # Convert the enumerable to a hash by mapping each item to a key,value pair.
+  # Convert the enumerable to a hash by mapping each item to a pair [item, new item]
   #
-  # ==Example
+  # @return [Hash<Object,Object>] a hash of the enumerable's items
+  # 
+  # @example
   #   strings = ["red","blue","green"]
   #   strings.hash_by{|a| [a.size, a.upcase]}
   #   => {3 => "RED", 4 => "BLUE", 5 => "GREEN"}
   #
-  # Compare #index_by
+  # @see #index_by
 
   def hash_by
     map{|item| yield(item)}.to_h
@@ -86,7 +92,9 @@ module Enumerable
 
   # Map each item => item.id
   #
-  # ==Example
+  # @return [Enumerable<Object>] an list of each item.id
+  #
+  # @example
   #   users = User.find(:all)
   #   users.map_id => [1,2,3,4,...]
   #
@@ -101,7 +109,9 @@ module Enumerable
 
   # Map each item => item.to_a
   #
-  # ==Example
+  # @return [Enumberable<Array<Object>>] a list of each item.to_a
+  #
+  # @example
   #   set1 = Set.new([:a,:b,:c])
   #   set2 = Set.new([:d,:e,:f])
   #   set3 = Set.new([:g,:h,:i])
@@ -120,7 +130,9 @@ module Enumerable
 
   # Map each item => item.to_f
   #
-  # ==Example
+  # @return [Enumerable<Float>] a list of each item.to_f
+  #
+  # @example
   #   strings = ["1","2","3"]
   #   strings.map_to_f => [1.0, 2.0, 3.0]
   #
@@ -135,7 +147,9 @@ module Enumerable
 
   # Map each item => item.to_i
   #
-  # ==Example
+  # @return [Enumerable<Integer>] a list of each item.to_i
+  #
+  # @example
   #   strings = ["1","2","3"]
   #   strings.map_to_i => [1, 2, 3]  
   #
@@ -150,7 +164,9 @@ module Enumerable
 
   # Map each item => item.to_s
   #
-  # ==Example
+  # @return [Enumerable<String>] a list of each item.to_s
+  #
+  # @example
   #   numbers = [1, 2, 3]
   #   numbers.map_to_s => ["1", "2", "3"]  
   #
@@ -165,7 +181,9 @@ module Enumerable
 
   # Map each item => item.to_sym
   #
-  # ==Example
+  # @return [Enumerable<Symbol>] a list of each item.to_sym
+  #
+  # @example
   #   strings = ["foo", "goo", "hoo"]
   #   strings.map_to_sym => [:foo, :goo, :hoo]
   #
@@ -180,10 +198,11 @@ module Enumerable
 
   # Map each item and its index => a new output
   #
-  # cf. Enumerable#map, Enumerable#each_with_index
+  # @return [Enumerable<Object>] an list of each item transformed by the block
+  # @see Enumerable#map
+  # @see Enumerable#each_with_index
   #
-  # ==Example
-  #
+  # @example
   #   strings = ["a", "b", "c"]
   #   strings.map_with_index{|string,index| "#{string}#{index}"}
   #    => ["a0, "b1", "c3"]
@@ -201,8 +220,11 @@ module Enumerable
   ########################################################################
   
   
-  # enum.select_while {|obj| block } => array
-  # Returns an array containing the leading elements for which block is not false or nil.
+  # @example
+  #   enum.select_while {|obj| block }
+  #    => array
+  #
+  # @return [Array<Object>] the leading elements for which block is not false or nil.
 
   def select_while
     arr = []
@@ -211,8 +233,11 @@ module Enumerable
   end
 
 
-  # enum.select_until {|obj| block } => array
-  # Returns an array containing the leading elements for which block is false or nil.
+  # @example
+  #   enum.select_until {|obj| block }
+  #    => array
+  #
+  # @return [Array<Object>] the leading elements for which block is false or nil.
 
   def select_until
     arr = []
@@ -221,9 +246,13 @@ module Enumerable
   end
 
 
-  # enum.select_with_index {|obj,i| block } => array
   # Calls block with two arguments, the item and its index, for each item in enum.
-  # Returns an array containing the leading elements for which block is not false or nil.
+  #
+  # @example
+  #   enum.select_with_index {|obj,i| block } 
+  #   => array
+  #
+  # @return [Array<Object> the leading elements for which block is not false or nil.
 
   def select_with_index
     index = 0
@@ -246,9 +275,13 @@ module Enumerable
   #  
   ########################################################################
 
-  # enum.bisect {|obj| block} => array of positives, array of negatives
-  # Returns two arrays: the first contains the elements for which block is
-  # true, the second contains the elements for which block is false or nil.
+  # @example
+  #   enum.bisect {|obj| block}
+  #   => array of positives, array of negatives
+  # 
+  # @return [Array<Array<Object>] an array of two arrays:
+  #    the first array is the elements for which block is true,
+  #    the second array is the elements for which block is false or nil.
 
   def bisect
     accept=[]
@@ -271,8 +304,11 @@ module Enumerable
   ########################################################################
   
   
-  # enum.nitems_while {| obj | block } => number of items
-  # Returns the number of leading elements for which block is not false or nil.
+  # @example
+  #   enum.nitems_while {| obj | block }
+  #    => number of items
+  # 
+  # @return [Integer] the number of leading elements for which block is not false or nil.
 
   def nitems_while
     num = 0
@@ -281,8 +317,11 @@ module Enumerable
   end
 
 
-  # enum.nitems_until {| obj | block } => number of items
-  # Returns the number of leading elements for which block is false.
+  # @example
+  #   enum.nitems_until {| obj | block }
+  #   => number of items
+  #
+  # @return [Integer] the number of leading elements for which block is false.
 
   def nitems_until
     num = 0
@@ -297,9 +336,13 @@ module Enumerable
   end
 
 
-  # enum.nitems_with_index {|obj,i| block } => number of items
   # Calls block with two arguments, the item and its index, for each item in enum.
-  # Returns the number of leading elements for which block is true.
+  #
+  # @example
+  #   enum.nitems_with_index {|obj,i| block }
+  #    => number of items
+  #
+  # @return [Integer] the number of leading elements for which block is true.
 
   def nitems_with_index
     index = 0
@@ -309,6 +352,14 @@ module Enumerable
 
 
   # Shortcut to Array#join to concatenate the items into a string
+  #
+  # @example
+  #   ["foo", "goo", "hoo"].join
+  #   => "foogoohoo"
+  #
+  # @return [String] concatenated string
+  #
+  # @see Array#join
 
   def join(*op)
    to_a.join(*op)
@@ -322,14 +373,14 @@ module Enumerable
   ########################################################################
 
 
-  # Returns true if this  _enum_ intersects another _enum_.
+  # @return [Boolean] true if this  _enum_ intersects another _enum_.
   #
-  # @nb This implementation uses #to_a and array intersection.
+  # This implementation uses #to_a and array intersection.
   # A developer may want to optimize this implementation for
   # other classes, such as detecting whether a range intersects
   # another range simply by comparing the ranges' min/max values.
   #
-  # ==Examples
+  # @example
   #   ['a','b','c'].intersect?(['c','d','e'] => true
   #   ['a','b','c'].intersect?(['d','e','f'] => false
 
@@ -338,19 +389,20 @@ module Enumerable
   end
 
 
-  # Return the cartesian product of the enumerations.
-  # http://en.wikipedia.org/wiki/Cartesian_product
+  # @return [Array] the cartesian product of the enumerations.
+  #
+  # @see http://en.wikipedia.org/wiki/Cartesian_product
   #
   # This is the fastest implementation we have found.
   # It returns results in typical order.
   #
-  # By Thomas Hafner
-  # See http://www.ruby-forum.com/topic/95519
+  # @author Thomas Hafner
+  # @see http://www.ruby-forum.com/topic/95519
   #
-  # For our benchmarks, we also compared thesk:
+  # For our benchmarks, we also compared these:
   # - By William James, http://www.ruby-forum.com/topic/95519
   # - By Brian Schröäer, http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/151857
-
+ 
   def self.cartesian_product(*enums)
     result = [[]]
     while [] != enums
@@ -365,18 +417,21 @@ module Enumerable
     result
   end
 
+
   def cartesian_product(*enums)
     Enumerable.cartesian_product(self,*enums)
   end
 
 
-  # Return the power set: an array with all subsets of the enum's elements.
-  # http://en.wikipedia.org/wiki/Power_set
+  # Calculate the power set.
   #
-  # This implementation is from
-  # http://johncarrino.net/blog/2006/08/11/powerset-in-ruby/
+  # @return [Array<Array<Object>>] the power set: an array with all subsets of the enum's elements.
+  # @see http://en.wikipedia.org/wiki/Power_set
   #
-  # ==Example
+  # This implementation is from the blog post below:
+  # @see http://johncarrino.net/blog/2006/08/11/powerset-in-ruby/
+  #
+  # @example
   #   [1,2,3].power_set.sort
   #   =>  [[], [1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3]]
 
